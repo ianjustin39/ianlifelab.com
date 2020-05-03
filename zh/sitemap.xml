@@ -18,11 +18,6 @@
   </url>
   
   <url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/blog/</loc>
-    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ianjustin39.github.io/ianlife/categories/</loc>
     <lastmod>2020-05-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -75,6 +70,11 @@
                 hreflang="zh"
                 href="https://ianjustin39.github.io/ianlife/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/categories/%E5%BB%BA%E7%BD%AE%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99/</loc>
+    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
