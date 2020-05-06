@@ -3,23 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ianjustin39.github.io/ianlife/blog/20200502_deploy_hugo_on_github/</loc>
-    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+    <loc>https://ianjustin39.github.io/ianlife/blog/20200506_build_photograph_in_hugo/</loc>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/blog/</loc>
-    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/blog/</loc>
-    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+    <loc>https://ianjustin39.github.io/ianlife/tags/bootstrap/</loc>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/categories/</loc>
-    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -33,23 +33,18 @@
   </url>
   
   <url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/github/</loc>
-    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ianjustin39.github.io/ianlife/tags/hugo/</loc>
-    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/categories/hugo%E6%9E%B6%E8%A8%ADwebsite/</loc>
-    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/</loc>
-    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -63,8 +58,18 @@
   </url>
   
   <url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/magnific-popup/</loc>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/masonry/</loc>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ianjustin39.github.io/ianlife/tags/</loc>
-    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -75,6 +80,21 @@
                 hreflang="zh"
                 href="https://ianjustin39.github.io/ianlife/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/blog/20200502_deploy_hugo_on_github/</loc>
+    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/blog/</loc>
+    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/github/</loc>
+    <lastmod>2020-05-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -90,6 +110,26 @@
   <url>
     <loc>https://ianjustin39.github.io/ianlife/blog/20200430_get_started_hugo/</loc>
     <lastmod>2020-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/photograph/20191212-flower/</loc>
+    <lastmod>2019-12-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/photograph/20191010-japan/</loc>
+    <lastmod>2019-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/photograph/20191009-japan/</loc>
+    <lastmod>2019-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/photograph/20180603-penghu/</loc>
+    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>

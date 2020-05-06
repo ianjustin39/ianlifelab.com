@@ -6,10 +6,19 @@
     <description>Recent content in Blog on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 02 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Blog]用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿</title>
+      <link>https://ianjustin39.github.io/ianlife/blog/20200506_build_photograph_in_hugo/</link>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/blog/20200506_build_photograph_in_hugo/</guid>
+      <description>&lt;p&gt;剛開始架設網站時就決定要在網站內架一個相簿，這篇會分享如何用Bootstrap+Masonry+magnificPopup建構屬於你自己的相片牆&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>[Blog]部署Hugo個人網頁至GitHub</title>
