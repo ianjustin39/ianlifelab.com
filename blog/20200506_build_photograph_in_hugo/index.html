@@ -30,7 +30,7 @@
 <meta itemprop="description" content="剛開始架設網站時就決定要在網站內架一個相簿，這篇會分享如何用Bootstrap&#43;Masonry&#43;magnificPopup建構屬於你自己的相片牆">
 <meta itemprop="datePublished" content="2020-05-06T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-05-06T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="300">
+<meta itemprop="wordCount" content="301">
 <meta itemprop="image" content="https://ppt.cc/fqGC2x">
 
 
@@ -384,7 +384,7 @@ cover = &quot;image_url&quot;
 <h4 id="5-套用magnific-popup">5. 套用magnific Popup</h4>
 <p>回到<code>photo-signle.html</code>，最下面加上一段script，然後在最外層的<code>div</code>加上<code>class=&quot;parent-container&quot;</code>。</p>
 <p>為了讓圖片有連結，所以在<code>img</code>外加上<code>&lt;a&gt;</code>作為可點擊的連結。</p>
-<p>最後為增添一點解釋所以在加入<code>title</code>的<code>div</code>。</p>
+<p>最後為增添一點效果所以在加入<code>title</code>的<code>div</code>。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;parent-container&#34;</span>&gt;
     &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Params.cover }}&#34;</span>&gt;&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Params.cover }}&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;img-responsive&#34;</span>&gt;&lt;/<span style="color:#f92672">a</span>&gt;
     &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text-align:center; padding: 15px;&#34;</span>&gt;{{ .Params.Title }}&lt;/<span style="color:#f92672">div</span>&gt;
@@ -400,6 +400,8 @@ cover = &quot;image_url&quot;
 </code></pre></div><p>最後呈現的效果</p>
 <p><img src="https://ppt.cc/fqGC2x" alt="範例3">
 <img src="https://ppt.cc/fTuHhx" alt="範例4"></p>
+<hr>
+<p>為了相簿花了一段時間研究，可能某些部分有些遺漏，有問題都歡迎討論，也希望想要在自己網頁上建立相片牆的人，這篇可以幫助到你！！</p>
 <hr>
 <h4 id="references">References:</h4>
 <ul>
