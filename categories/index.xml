@@ -6,9 +6,19 @@
     <description>Recent content in Categories on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
+    <lastBuildDate>Wed, 06 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo架設website</title>
+      <link>https://ianjustin39.github.io/ianlife/categories/hugo%E6%9E%B6%E8%A8%ADwebsite/</link>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/categories/hugo%E6%9E%B6%E8%A8%ADwebsite/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
