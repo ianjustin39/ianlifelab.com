@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
   <link rel="stylesheet" href="../css/magnific-popup.css">
+  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="../js/jquery.magnific-popup.js"></script>
   <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
@@ -9,6 +10,20 @@
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+  <script>
+  (function(){
+    let plantumlPrefix = "language-plantuml";
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
+      let image = document.createElement("IMG");
+      image.loading = 'lazy'; 
+      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+      code.parentNode.insertBefore(image, code);
+      code.style.display = 'none';
+    });
+  })();
+  </script>
   
   
 <script type="application/javascript">
@@ -50,7 +65,7 @@ if (!doNotTrack) {
 <meta name="twitter:title" content="Categories"/>
 <meta name="twitter:description" content=""/>
 <meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.46b343935a1638006ad07aef480d21a3c387e808256e35534ef50be63c255038.css" integrity="sha256-RrNDk1oWOABq0HrvSA0ho8OH6AglbjVTTvUL5jwlUDg=">
+<link rel="stylesheet" href="/ianlife/css/bundle.min.8f9866ed9a613c2a41f478cf8ea61577244e7de1cb49bd3978fc92763dcac5f6.css" integrity="sha256-j5hm7ZphPCpB9HjPjqYVdyROfeHLSb05ePySdj3KxfY=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
@@ -132,13 +147,6 @@ if (!doNotTrack) {
     </section>
     
     
-
-    <section id="mini-bio">
-      <header>
-        <h1>recommend website</h1>
-      </header>
-      <p><a href="https://jumperc2p.github.io/InformisTry/" target="_blank">InformisTry - Hank Lee</a></p>
-    </section>
   </section>
 </section>
       <main id="site-main">
@@ -162,6 +170,7 @@ if (!doNotTrack) {
       
       <footer id="site-footer">
   
+  <p class="copyright"><a href="https://jumperc2p.github.io/InformisTry/" target="_blank">＊ 澳洲工程師日記 - Hank Lee</a></p>
   <p class="copyright">
     
       &copy; 1
