@@ -2120,7 +2120,7 @@
   
           this._element.removeAttribute('aria-hidden');
   
-          this._element.scrollTop = 0;
+          this._element.scrollTop = 20;
   
           if (transition) {
             Util.reflow(this._element);
