@@ -19,7 +19,7 @@ $.smoothScroll({
 });
 
 // var url = "./jquery.smooth - scroll.min.js";
-var url = "http://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js";
+var url = "https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js";
 
 // Bind the hashchange event listener
 $.getScript( url, function() {
