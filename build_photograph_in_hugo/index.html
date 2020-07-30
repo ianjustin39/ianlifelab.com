@@ -265,12 +265,12 @@ if (!doNotTrack) {
 <p>那我們就開始吧！</p>
 <p><em>以下都以我這個主題為例子，中間會給一些註解方便大家閱讀</em></p>
 <hr>
-<h3 id="事前準備">事前準備</h3>
+<h3 id=_事前準備>事前準備
 <p>因為我們是建立在Hugo的網站上，所以我們得先把這個相簿的連結按鈕、content資料夾及html layout準備好</p>
 <br>
-<h4 id="0-1-連結按鈕">0-1. 連結按鈕</h4>
+<h4 id=_0-1-連結按鈕>0-1. 連結按鈕
 <p>連結的部分就不在多說，去header裡面複製一個就可以了，按自己喜好做設定！</p>
-<h4 id="0-2-content-folder">0-2. content folder</h4>
+<h4 id=_0-2-content-folder>0-2. content folder
 <p>複製about的資料夾，裡面會有一個<code>_index.md</code>的檔案。</p>
 <p><em>若沒有about，可以找一個適合的複製來使用</em></p>
 <pre><code>.
@@ -282,7 +282,7 @@ if (!doNotTrack) {
         |- _index.md (new)
 
 (只列出會用到的資料夾路徑)
-</code></pre><h4 id="0-3-html-layout">0-3. html layout</h4>
+</code></pre><h4 id=_0-3-html-layout>0-3. html layout
 <p>以我的為例子，我是將about的layout複製一份，改名叫photograph，然後一樣放到layout的資料夾下，與about同層，
 啟動server後你會發現photograph跟about頁面會一樣，這樣就算準備完成了。</p>
 <pre><code>.
@@ -299,7 +299,7 @@ if (!doNotTrack) {
 (只列出會用到的資料夾路徑)
 </code></pre><hr>
 <p>**基本上about是一頁式的網頁，但我們想要的可以用不同的md檔去呈現不同篇的照片，所以這個部分需要做改寫。</p>
-<h4 id="0-新增測試照片的markdown">0. 新增測試照片的markdown</h4>
+<h4 id=_0-新增測試照片的markdown>0. 新增測試照片的markdown
 <p>在<code>photograph/</code>底下新增幾個markdown的檔案作為等等要呈現的照片範例，參數設定如下（可以行更改）</p>
 <pre><code>+++
 title = &quot;日本 明治神宮&quot;
@@ -307,8 +307,8 @@ date = &quot;2017-10-09&quot;
 cover = &quot;image_url&quot;
 +++
 
-</code></pre><h3 id="開始製作">開始製作</h3>
-<h4 id="1-_partialsheadhtml引入js-css">1. _partials/head.html引入js, css</h4>
+</code></pre><h3 id=_開始製作>開始製作
+<h4 id=_1-_partialsheadhtml引入js-css>1. _partials/head.html引入js, css
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  &lt;<span style="color:#ff79c6">link</span> <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stylesheet&#34;</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;../css/magnific-popup.css&#34;</span>&gt;
   &lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;https://code.jquery.com/jquery-3.3.1.slim.min.js&#34;</span> <span style="color:#50fa7b">integrity</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo&#34;</span> <span style="color:#50fa7b">crossorigin</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;anonymous&#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt;
   &lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;../js/jquery.magnific-popup.js&#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt;
@@ -317,7 +317,7 @@ cover = &quot;image_url&quot;
   &lt;<span style="color:#ff79c6">link</span> <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stylesheet&#34;</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&#34;</span> <span style="color:#50fa7b">integrity</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&#34;</span> <span style="color:#50fa7b">crossorigin</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;anonymous&#34;</span>&gt;
   &lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js&#34;</span> <span style="color:#50fa7b">integrity</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1&#34;</span> <span style="color:#50fa7b">crossorigin</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;anonymous&#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt;
 </code></pre></div><p>magnific的js, css可以到<a href="https://github.com/dimsemenov/Magnific-Popup" target="_blank">here</a>下載</p>
-<h4 id="2-改寫photographlisthtml">2. 改寫photograph/list.html</h4>
+<h4 id=_2-改寫photographlisthtml>2. 改寫photograph/list.html
 <p>找到<code>&lt;div id=&quot;content&quot;&gt;</code>，這裡面就是連接<code>/content/photograph/_index.md</code>的內文所呈現的區塊</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">main</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;site-main&#34;</span>&gt;
     &lt;<span style="color:#ff79c6">article</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;post&#34;</span>&gt;
@@ -355,7 +355,7 @@ cover = &quot;image_url&quot;
 &lt;/<span style="color:#ff79c6">div</span>&gt;
 </code></pre></div><p><em>註1：這行事hugo的語法，抓取所有photpgraph下的.md檔案。（Section就是content內的分類）</em></p>
 <p><em>註2：.Render為將頁面倒到指定頁面，但一定要在<code>layout/_default</code>路徑下的頁面才有作用</em></p>
-<h4 id="3-撰寫photo-singlehtml">3. 撰寫photo-single.html</h4>
+<h4 id=_3-撰寫photo-singlehtml>3. 撰寫photo-single.html
 <p>寫入</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">div</span>&gt;
     &lt;<span style="color:#ff79c6">img</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ .Params.cover }}&#34;</span> <span style="color:#50fa7b">alt</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;img-responsive&#34;</span>&gt; <span style="color:#6272a4">&lt;!-- 註3 --&gt;</span>
@@ -363,7 +363,7 @@ cover = &quot;image_url&quot;
 </code></pre></div><p><em>註1：.Params.cover就是對應到第0步驟的參數</em></p>
 <p>到這步驟頁面應該會呈現如下</p>
 <p><img src="https://ppt.cc/fpUEVx" alt="範例1"></p>
-<h4 id="4-套用masonry">4. 套用masonry</h4>
+<h4 id=_4-套用masonry>4. 套用masonry
 <p>在photograph/list.html最下面加上這段script</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js&#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt; <span style="color:#6272a4">&lt;!-- 這如果剛剛有引入就不需要寫 --&gt;</span>
 &lt;<span style="color:#ff79c6">script</span>&gt;
@@ -387,7 +387,7 @@ cover = &quot;image_url&quot;
 &lt;/<span style="color:#ff79c6">div</span>&gt;
 </code></pre></div><p>更改完後再看一次效果</p>
 <p><img src="https://ppt.cc/f6H9Qx" alt="範例2"></p>
-<h4 id="5-套用magnific-popup">5. 套用magnific Popup</h4>
+<h4 id=_5-套用magnific-popup>5. 套用magnific Popup
 <p>回到<code>photo-signle.html</code>，最下面加上一段script，然後在最外層的<code>div</code>加上<code>class=&quot;parent-container&quot;</code>。</p>
 <p>為了讓圖片有連結，所以在<code>img</code>外加上<code>&lt;a&gt;</code>作為可點擊的連結。</p>
 <p>最後為增添一點效果所以在加入<code>title</code>的<code>div</code>。</p>
@@ -409,7 +409,7 @@ cover = &quot;image_url&quot;
 <hr>
 <p>為了相簿花了一段時間研究，可能某些部分有些遺漏，有問題都歡迎討論，也希望想要在自己網頁上建立相片牆的人，這篇可以幫助到你！！</p>
 <hr>
-<h3 id="references">References</h3>
+<h3 id=_references>References
 <ul>
 <li><a href="https://dimsemenov.com/plugins/magnific-popup/documentation.html" target="_blank">Magnific Popup Documentation</a></li>
 <li><a href="https://www.minwt.com/webdesign-dev/html/16943.html" target="_blank">Bootstrap+Masonry」讓網格系統也支援瀑布流排版</a></li>
@@ -555,7 +555,7 @@ cover = &quot;image_url&quot;
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e4%ba%8b%e5%89%8d%e6%ba%96%e5%82%99">
+						 					<a class="nav-link" href="#_%e4%ba%8b%e5%89%8d%e6%ba%96%e5%82%99">
 												 事前準備
 											</a>
 										</li>
@@ -583,7 +583,7 @@ cover = &quot;image_url&quot;
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#0-1-%e9%80%a3%e7%b5%90%e6%8c%89%e9%88%95">
+						 					<a class="nav-link" href="#_0-1-%e9%80%a3%e7%b5%90%e6%8c%89%e9%88%95">
 												 0-1. 連結按鈕
 											</a>
 										</li>
@@ -613,7 +613,7 @@ cover = &quot;image_url&quot;
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#0-2-content-folder">
+						 					<a class="nav-link" href="#_0-2-content-folder">
 												 0-2. content folder
 											</a>
 										</li>
@@ -643,7 +643,7 @@ cover = &quot;image_url&quot;
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#0-3-html-layout">
+						 					<a class="nav-link" href="#_0-3-html-layout">
 												 0-3. html layout
 											</a>
 										</li>
@@ -673,7 +673,7 @@ cover = &quot;image_url&quot;
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#0-%e6%96%b0%e5%a2%9e%e6%b8%ac%e8%a9%a6%e7%85%a7%e7%89%87%e7%9a%84markdown">
+						 					<a class="nav-link" href="#_0-%e6%96%b0%e5%a2%9e%e6%b8%ac%e8%a9%a6%e7%85%a7%e7%89%87%e7%9a%84markdown">
 												 0. 新增測試照片的markdown
 											</a>
 										</li>
@@ -701,7 +701,7 @@ cover = &quot;image_url&quot;
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e9%96%8b%e5%a7%8b%e8%a3%bd%e4%bd%9c">
+						 					<a class="nav-link" href="#_%e9%96%8b%e5%a7%8b%e8%a3%bd%e4%bd%9c">
 												 開始製作
 											</a>
 										</li>
@@ -729,7 +729,7 @@ cover = &quot;image_url&quot;
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#1-_partialsheadhtml%e5%bc%95%e5%85%a5js-css">
+						 					<a class="nav-link" href="#_1-_partialsheadhtml%e5%bc%95%e5%85%a5js-css">
 												 1. _partials/head.html引入js, css
 											</a>
 										</li>
@@ -759,7 +759,7 @@ cover = &quot;image_url&quot;
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#2-%e6%94%b9%e5%af%abphotographlisthtml">
+						 					<a class="nav-link" href="#_2-%e6%94%b9%e5%af%abphotographlisthtml">
 												 2. 改寫photograph/list.html
 											</a>
 										</li>
@@ -789,7 +789,7 @@ cover = &quot;image_url&quot;
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#3-%e6%92%b0%e5%af%abphoto-singlehtml">
+						 					<a class="nav-link" href="#_3-%e6%92%b0%e5%af%abphoto-singlehtml">
 												 3. 撰寫photo-single.html
 											</a>
 										</li>
@@ -819,7 +819,7 @@ cover = &quot;image_url&quot;
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#4-%e5%a5%97%e7%94%a8masonry">
+						 					<a class="nav-link" href="#_4-%e5%a5%97%e7%94%a8masonry">
 												 4. 套用masonry
 											</a>
 										</li>
@@ -849,7 +849,7 @@ cover = &quot;image_url&quot;
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#5-%e5%a5%97%e7%94%a8magnific-popup">
+						 					<a class="nav-link" href="#_5-%e5%a5%97%e7%94%a8magnific-popup">
 												 5. 套用magnific Popup
 											</a>
 										</li>
@@ -877,7 +877,7 @@ cover = &quot;image_url&quot;
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#references">
+						 					<a class="nav-link" href="#_references">
 												 References
 											</a>
 										</li>
