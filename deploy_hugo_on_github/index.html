@@ -97,7 +97,7 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="部署Hugo個人網頁至GitHub">
+<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="部署Hugo個人網頁至GitHub">
 <meta itemprop="description" content="之前用Hugo架設個人網站，但架設完成後還是需要部署到一個平台，才有辦法瀏覽，
 這篇就來分享如何將網頁部署到GitHub以及途中遇到的一些問題">
 <meta itemprop="datePublished" content="2020-05-02T00:00:00&#43;00:00" />
@@ -283,15 +283,15 @@ Project Pages
 my_account.github.io(用自己的帳號)      放要部署的網頁程式
 </code></pre><p>這邊要記得，my_account.github.io這個建立時要選public，若不小心選到private的話可以依照這路徑去更改
 <code>Setting &gt; Danger Zone &gt; Make this repository public</code></p>
-<h4 id=_2-建立部署網頁的資料public>2. 建立部署網頁的資料(/public)
+<h4 id="2-建立部署網頁的資料public">2. 建立部署網頁的資料(/public)</h4>
 <p>回到根目錄，輸入</p>
 <pre><code>hugo
 </code></pre><p>根目錄下面就會產生一個public的資料夾，裡面有自動產出的html，這是等等要部署到GitHub的頁面</p>
 <p><em>如果你在執行這步驟時，有開啟server，記得要先關閉在執行</em></p>
-<h4 id=_2-1-設定pages-source>2-1. 設定pages source
+<h4 id="2-1-設定pages-source">2-1. 設定pages source</h4>
 <p>當你部署完成後，需要將Setting內GitHub Pages的Source指定到master，這樣待會測試時才會有網頁出現
 <img src="https://ppt.cc/fu5JAx" alt="GITHUB PAGE" title="GITHUB PAGE"></p>
-<h4 id=_3-連接public及my_accountgithubio>3. 連接public及my_account.github.io
+<h4 id="3-連接public及my_accountgithubio">3. 連接public及my_account.github.io</h4>
 <pre><code>cd public
 git init
 git remote add blog &lt;my_account.github.io_repository&gt; #註1
@@ -300,7 +300,7 @@ git commit -m &quot;first commit&quot;
 git push blog master
 </code></pre><p>git的部分就不在多做贅述，若有不清楚的可以點<a href="https://git-scm.com/docs" target="_blank">here</a>看看</p>
 <p><em>註1：這邊remote name不用origin是因為另一個repo的remote name也會用origin，當初兩個都用一樣，在更新文章(下面會提到)時遇到不少問題，所以索性就用不一樣的名稱，這樣也比較好辨識，這可以照自己的習慣命名。</em></p>
-<h4 id=_4-將hugo資料夾連接到my_project>4. 將Hugo資料夾連接到my_project
+<h4 id="4-將hugo資料夾連接到my_project">4. 將Hugo資料夾連接到my_project</h4>
 <pre><code>cd ..
 git init
 git remote add origin &lt;my_project_repository&gt;
@@ -319,21 +319,21 @@ git push origin master
 <pre><code>baseurl                 = &quot;https://my_account.github.io/my_page/&quot; #my_page為等等要建立的repo name，可自行命名
 DefaultContentLanguage  = &quot;zh&quot;
 title                   = &quot;Ian Blog&quot;
-</code></pre><h4 id=_1-github建立兩個repository-1>1. GitHub建立兩個repository
+</code></pre><h4 id="1-github建立兩個repository-1">1. GitHub建立兩個repository</h4>
 <p>首先要先建立兩個repository</p>
 <pre><code>my_blog(可自行命名)                   放你原始Hugo程式
 my_page(要對應config內的baseurl)      放要部署的網頁程式
 </code></pre><p>這邊ㄧ樣要記得，my_page這個建立時要選public，若不小心選到private的話可以依照這路徑去更改</p>
 <p><code>Setting &gt; Danger Zone &gt; Make this repository public</code></p>
-<h4 id=_2-建立部署網頁的資料public-1>2. 建立部署網頁的資料(/public)
+<h4 id="2-建立部署網頁的資料public-1">2. 建立部署網頁的資料(/public)</h4>
 <p>回到根目錄，輸入</p>
 <pre><code>hugo
 </code></pre><p>根目錄下面就會產生一個public的資料夾，裡面有自動產出的html，這是等等要部署到GitHub的頁面</p>
 <p><em>如果你在執行這步驟時，有開啟server，記得要先關閉在執行</em></p>
-<h4 id=_2-1-設定pages-source-1>2-1. 設定pages source
+<h4 id="2-1-設定pages-source-1">2-1. 設定pages source</h4>
 <p>當你部署完成後，需要將Setting內GitHub Pages的Source指定到master，這樣待會測試時才會有網頁出現
 <img src="https://ppt.cc/fu5JAx" alt="GITHUB PAGE" title="GITHUB PAGE"></p>
-<h4 id=_3-連接public及my_accountgithubio-1>3. 連接public及my_account.github.io
+<h4 id="3-連接public及my_accountgithubio-1">3. 連接public及my_account.github.io</h4>
 <pre><code>cd public
 git init
 git remote add blog &lt;my_account.github.io_repository&gt; #註1
@@ -342,7 +342,7 @@ git commit -m &quot;first commit&quot;
 git push blog master
 </code></pre><p>git的部分就不在多做贅述，若有不清楚的可以點<a href="https://git-scm.com/docs" target="_blank">here</a>看看</p>
 <p><em>註1：這邊remote name不用origin是因為另一個repo的remote name也會用origin，當初兩個都用一樣，在更新文章(下面會提到)時遇到不少問題，所以索性就用不一樣的名稱，這樣也比較好辨識，這可以照自己的習慣命名。</em></p>
-<h4 id=_4-將hugo資料夾連接到my_project-1>4. 將Hugo資料夾連接到my_project
+<h4 id="4-將hugo資料夾連接到my_project-1">4. 將Hugo資料夾連接到my_project</h4>
 <pre><code>cd ..
 git init
 git remote add origin &lt;my_project_repository&gt;
@@ -359,9 +359,9 @@ git push origin master
 </ul>
 <p>部署成功後的，當然就是開始寫自己的blog拉！</p>
 <p>但如果每次發佈都要打一堆指令，個人會覺得很累，所以就來寫個腳本吧ＸＤ</p>
-<h4 id=_1-建立deploysh>1. 建立deploy.sh
+<h4 id="1-建立deploysh">1. 建立deploy.sh</h4>
 <p>在你的根目錄下建立deploy.sh的檔案，然後打開terminal，輸入<code>chmod +x deploy.sh</code>讓他變成可執行的檔案</p>
-<h4 id=_2-撰寫deploysh>2. 撰寫deploy.sh
+<h4 id="2-撰寫deploysh">2. 撰寫deploy.sh</h4>
 <pre><code>#!/bin/sh
 
 set -e
@@ -381,7 +381,7 @@ git commit -m &quot;$msg&quot;
 git push blog master #註2
 
 </code></pre><p><em>註2：這邊就會遇到剛提到的remote的問題，如果兩個remote name都叫origin，那在這邊執行時就會有問題，因為原本的repo已經被第二個蓋掉了，所以這邊才用不同的remote去做分類</em></p>
-<h4 id=_3-更新文章>3. 更新文章
+<h4 id="3-更新文章">3. 更新文章</h4>
 <p>假設現在已經寫好文章要更新了
 在根目錄下</p>
 <pre><code>git add .
