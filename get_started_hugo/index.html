@@ -274,25 +274,25 @@ if (!doNotTrack) {
 那就開始介紹吧！！！</p>
 <ul>
 <li>
-<h3 id="開始之前">開始之前</h3>
+<h3 id=_開始之前>開始之前
 </li>
 </ul>
 <p>首先我們可以先去<a href="https://themes.gohugo.io/" target="_blank">HUGO</a>的官網選擇喜歡的template，我覺得很重要，畢竟是自己要用的，自己喜歡才有動力做下去！！</p>
 <hr>
 <ul>
 <li>
-<h3 id="開始搭建你的網站">開始搭建你的網站</h3>
+<h3 id=_開始搭建你的網站>開始搭建你的網站
 </li>
 </ul>
-<h4 id="1-打開你的terminal安裝hugo輸入">1. 打開你的terminal，安裝hugo，輸入：</h4>
+<h4 id=_1-打開你的terminal安裝hugo輸入>1. 打開你的terminal，安裝hugo，輸入：
 <pre><code>brew install hugo
 </code></pre><p><em>brew 是mac的管理套件 如果沒裝過的話 可以去<a href="https://brew.sh/index_zh-tw" target="_blank">這裏</a>看看或是複製以下程式碼到你的terminal執行</em></p>
 <pre><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;
-</code></pre><h4 id="2-建立新網站">2. 建立新網站</h4>
+</code></pre><h4 id=_2-建立新網站>2. 建立新網站
 <pre><code>hugo new site project-name
 cd project-name
 </code></pre><p>project-name可以自訂，看你喜歡叫什麼都行！</p>
-<h4 id="2-1-資料夾結構">2-1. 資料夾結構</h4>
+<h4 id=_2-1-資料夾結構>2-1. 資料夾結構
 <p>建立好網站以後，來看看一下結構，這邊當矇逼滿久的，想說就順便記錄比較清楚</p>
 <pre><code>project
 ├── archetypes
@@ -302,27 +302,27 @@ cd project-name
 ├── themes # 等等template要clone下來住的家
 </code></pre><p>就先把大項目列出來，他的行距實在太大，我覺得很醜，但目前找不到方法只好先加減用了ＱＱ</p>
 <p>（之後來研究一下Markdown好了</p>
-<h4 id="3-新增themehttpsthemesgohugoio-我是用hugo-future-imperfect-slimhttpsthemesgohugoiohugo-future-imperfect-slim">3. 新增<a href="https://themes.gohugo.io/">Theme</a>: 我是用<a href="https://themes.gohugo.io/hugo-future-imperfect-slim/">Hugo Future Imperfect Slim</a></h4>
+<h4 id=_3-新增themehttpsthemesgohugoio-我是用hugo-future-imperfect-slimhttpsthemesgohugoiohugo-future-imperfect-slim>3. 新增<a href="https://themes.gohugo.io/">Theme</a>: 我是用<a href="https://themes.gohugo.io/hugo-future-imperfect-slim/">Hugo Future Imperfect Slim</a>
 <pre><code>cd themes
 git clone https://github.com/pacollins/hugo-future-imperfect-slim.git
 </code></pre><p>要等待一下下，完成後你就可以到你的themes內看看你選擇的template的資料有些啥</p>
-<h4 id="4-將指定資料取代根目錄資料">4. 將指定資料取代根目錄資料</h4>
+<h4 id=_4-將指定資料取代根目錄資料>4. 將指定資料取代根目錄資料
 <p>這邊就要將你載下來的一些檔案取代你原本空的檔案</p>
 <pre><code>themes/layouts 取代原本的 layouts
 themes/exampleSite/static 取代原本的 static
 themes/exampleSite/content 這些範例文章可以放到content內
 themes/exampleSite/config.toml 取代原本的config.toml
 </code></pre><p>這樣基本上你的模板就完成了</p>
-<h4 id="4-1-設定configtoml">4-1. 設定config.toml</h4>
+<h4 id=_4-1-設定configtoml>4-1. 設定config.toml
 <p>基本上整個網站的參數設定都在這，隨著每個網站的不同，設置方式會有差異，這邊就說一個最基本的設定</p>
 <pre><code>baseurl                 = &quot;https://github_account.github.io/&quot;
 DefaultContentLanguage  = &quot;zh&quot;
 title                   = &quot;Ian Blog&quot;
 </code></pre><p>因為我們之後要部署到github，所以baseurl就先把他設定好，一定要用github的帳號，才連接的上去</p>
-<h4 id="5-新增文章">5. 新增文章</h4>
+<h4 id=_5-新增文章>5. 新增文章
 <pre><code>hugo new content/blog/first-post.md
 </code></pre><p>新增的路徑依照你的主題不同會有不同的路徑，新增完後就可以開始寫你的文章了，而文章是用Markdown語法去寫</p>
-<h4 id="6-啟動server">6. 啟動server</h4>
+<h4 id=_6-啟動server>6. 啟動server
 <p>回到你的根目錄，然後輸入：</p>
 <pre><code>hugo server
 </code></pre><p>跑完後你會看到一行http://localhost:1313/，點下去看看，若有頁面顯示，<strong>恭喜你</strong>已經完成了你的網站了！！！</p>
@@ -332,7 +332,7 @@ title                   = &quot;Ian Blog&quot;
 <hr>
 <ul>
 <li>
-<h3 id="references">References</h3>
+<h3 id=_references>References
 </li>
 <li>
 <p><a href="https://gohugo.io/getting-started/quick-start/" target="_blank">HUGO Doc</a> 感謝官方文件大力贊助播出</p>
