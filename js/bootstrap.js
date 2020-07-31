@@ -3357,6 +3357,7 @@
       var DATA_API_KEY = '.data-api';
       var JQUERY_NO_CONFLICT = $$$1.fn[NAME];
       var Default = {
+        // offset: 10,
         offset: 10,
         method: 'auto',
         target: ''

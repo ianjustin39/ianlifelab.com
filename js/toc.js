@@ -22,41 +22,41 @@ $.smoothScroll({
 var url = "https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js";
 
 // Bind the hashchange event listener
-$.getScript( url, function() {
+$.getScript(url, function () {
   $(window).bind('hashchange', function (event) {
     $.smoothScroll({
-        // Replace '#/' with '#' to go to the correct target
-        offset: $("body").attr("data-offset")? -$("body").attr("data-offset") - 70 : -70 ,
-        // offset: -30,
-        scrollTarget: decodeURI(location.hash.replace(/^\#\/?/, '#'))
-        
-      });
+      // Replace '#/' with '#' to go to the correct target
+      offset: $("body").attr("data-offset") ? -$("body").attr("data-offset") + 50 : -70,
+      // offset: -10,
+      // offset: -70,
+      scrollTarget: decodeURI(location.hash.replace(/^\#\/?/, '#'))
+    });
   });
 
-// $(".smooth-scroll").on('click', "a", function() {
-$('a[href*="#"]')
-  .bind('click', function (event) {    
-  // Remove '#' from the hash.
-  var hash = this.hash.replace(/^#/, '')
-  if (this.pathname === location.pathname && hash) {
-      event.preventDefault();
-      // Change '#' (removed above) to '#/' so it doesn't jump without the smooth scrolling
-      location.hash = '#/' + hash;
+  // $(".smooth-scroll").on('click', "a", function() {
+  $('a[href*="#"]')
+    .bind('click', function (event) {
+      // Remove '#' from the hash.
+      var hash = this.hash.replace(/^#/, '')
+      if (this.pathname === location.pathname && hash) {
+        event.preventDefault();
+        // Change '#' (removed above) to '#/' so it doesn't jump without the smooth scrolling
+        location.hash = '#/' + hash;
+      }
+    });
+
+  // Trigger hashchange event on page load if there is a hash in the URL.
+  if (location.hash) {
+    $(window).trigger('hashchange');
   }
-});
-
-// Trigger hashchange event on page load if there is a hash in the URL.
-if (location.hash) {
-  $(window).trigger('hashchange');
-}
 
 });
 
-// // $('[data-spy="scroll"]').each(function () {
-// //     var $spy = $(this).scrollspy('refresh')
-// //   })
+$('[data-spy="scroll"]').each(function () {
+    var $spy = $(this).scrollspy('refresh')
+  })
 
-// $('[data-spy="scroll"]').on('activate.bs.scrollspy', function () {
-//     // do something…
-//     var offset = $('[data-spy="scroll"]').attr("data-offset")
-//   })
+$('[data-spy="scroll"]').on('activate.bs.scrollspy', function () {
+    // do something…
+    var offset = $('[data-spy="scroll"]').attr("data-offset")
+  })
