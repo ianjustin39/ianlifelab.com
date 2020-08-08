@@ -6,10 +6,19 @@
     <description>Recent content in Blog on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 06 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>單一職責原則 - Single Responsibility Principle</title>
+      <link>https://ianjustin39.github.io/ianlife/single_responsibility_principle/</link>
+      <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/single_responsibility_principle/</guid>
+      <description>Design Pattern 系列文章導讀    Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從各種design pattern、Anti-patterns以及MVC pattern 到Design Principles介紹下去，讓我們可以更了解各種pattern的使用時機與場合， 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE來跑範例程式碼。      新手村  什麼是Design Pattern? Design Pattern的類型與原則    Design Principles  SingleResponsibility Principle Open/Closed Principle Dependency Inversion Principle Liskov Substitution Principle Interface Segregation Principle Composing Objects Principle Law of Demeter    Creational Patterns  Singleton Pattern Factory Pattern Abstract Factory Pattern Builder Pattern Prototype Pattern    Structural Patterns  Adapter Pattern Bridge Pattern Composite Pattern Decorator Pattern Facade Pattern Flyweight Pattern Proxy Pattern    Behavioural Patterns  Chain of Responsibility Pattern Command Pattern Interpreter Pattern Iterator Pattern Mediator Pattern Memento Pattern Observer Pattern State Pattern Strategy Pattern Template Pattern Visitor Pattern    場外下注區  MVC Pattern Anti-Patterns &amp; Code Smells Design Pattern VS 演算法       Single Responsibility Principle ?</description>
+    </item>
     
     <item>
       <title>用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿</title>

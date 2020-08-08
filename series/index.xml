@@ -6,10 +6,19 @@
     <description>Recent content in Series on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 06 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/series/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Design Pattern - 設計模式</title>
+      <link>https://ianjustin39.github.io/ianlife/series/design-pattern-%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/series/design-pattern-%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Blog - 建立屬於自己的網站</title>
