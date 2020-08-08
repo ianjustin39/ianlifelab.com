@@ -4,92 +4,7 @@
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/blog/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ianjustin39.github.io/ianlife/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ianjustin39.github.io/ianlife/categories/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/design-pattern/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/series/design-pattern-%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/design-principle/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ianjustin39.github.io/ianlife/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ianjustin39.github.io/ianlife/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/series/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ianjustin39.github.io/ianlife/en/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ianjustin39.github.io/ianlife/series/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ianjustin39.github.io/ianlife/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ianjustin39.github.io/ianlife/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/thec/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/dependence_inversion_principle/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -108,8 +23,38 @@
   </url>
   
   <url>
+    <loc>https://ianjustin39.github.io/ianlife/categories/</loc>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianjustin39.github.io/ianlife/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianjustin39.github.io/ianlife/categories/"
+                />
+  </url>
+  
+  <url>
     <loc>https://ianjustin39.github.io/ianlife/tags/hugo/</loc>
     <lastmod>2020-05-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/</loc>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianjustin39.github.io/ianlife/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianjustin39.github.io/ianlife/"
+                />
   </url>
   
   <url>
@@ -119,6 +64,41 @@
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/tags/masonry/</loc>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/series/</loc>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianjustin39.github.io/ianlife/en/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianjustin39.github.io/ianlife/series/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/</loc>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianjustin39.github.io/ianlife/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianjustin39.github.io/ianlife/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/categories/thec/</loc>
     <lastmod>2020-05-06T00:00:00+00:00</lastmod>
   </url>
   
