@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="../js/jquery.magnific-popup.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="http://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+  <script>
+  (function(){
+    let plantumlPrefix = "language-plantuml";
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
+      let image = document.createElement("IMG");
+      image.loading = 'lazy'; 
+      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+      code.parentNode.insertBefore(image, code);
+      code.style.display = 'none';
+    });
+  })();
+  </script>
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta charset="utf-8">
+<title>使用Hugo建立個人網頁 - Ian Tsai </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="使用Hugo建立個人網頁">
+<meta itemprop="description" content="一直有想要寫一些文章記錄生活，身為一個工程師，難免會有想要自己架設的靈魂（？，
+最近發現hugo可以快速架站，除了有template以外也可以自己更改裡面的配置
+，對於一個前端小菜鳥來說，算是一大福音ＸＤ，於是開始了這條漫漫長路～">
+<meta itemprop="datePublished" content="2020-04-30T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-04-30T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="117">
+<meta itemprop="image" content="https://ppt.cc/fZheux">
+
+
+
+<meta itemprop="keywords" content="hugo,blog," /><meta property="og:title" content="使用Hugo建立個人網頁" />
+<meta property="og:description" content="一直有想要寫一些文章記錄生活，身為一個工程師，難免會有想要自己架設的靈魂（？，
+最近發現hugo可以快速架站，除了有template以外也可以自己更改裡面的配置
+，對於一個前端小菜鳥來說，算是一大福音ＸＤ，於是開始了這條漫漫長路～" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/blog/technology/build_blog/get_started_hugo/" />
+<meta property="og:image" content="https://ppt.cc/fZheux" />
+<meta property="article:published_time" content="2020-04-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-30T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ppt.cc/fZheux"/>
+
+<meta name="twitter:title" content="使用Hugo建立個人網頁"/>
+<meta name="twitter:description" content="一直有想要寫一些文章記錄生活，身為一個工程師，難免會有想要自己架設的靈魂（？，
+最近發現hugo可以快速架站，除了有template以外也可以自己更改裡面的配置
+，對於一個前端小菜鳥來說，算是一大福音ＸＤ，於是開始了這條漫漫長路～"/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/ianlife/css/bundle.min.09767371588189d255a01aa3dd9878ce5f0f94fb5eaa5423a27cf396d637eba0.css" integrity="sha256-CXZzcViBidJVoBqj3Zh4zl8PlPteqlQjonzzltY366A=">
+        <link rel="stylesheet" href="/ianlife/css/add-on.css">
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ianlife/">
+        
+          Life Story
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/photograph/" class="link"><i class='far fa-images'></i> Photograph</a>
+          
+        
+      
+      
+      
+
+    </menu>
+    
+
+    
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-sidebar">
+  <section id="site-intro" >
+    <a href="/ianlife/"><img src="https://lh3.googleusercontent.com/oBxmIY5uloDqDQftTGdRtsXCB_WpmkvZqVSYrCeVdqGfCKG0hWDrUjX-dNZb57m_FpGzj2sYSCveJUJYnYq_VyUPCAf9-rWQc8ZkNsKYv1AL5BQKJ5JfQradyyIaKrTbT-_fPWlglBQ7K1ZVL-Rqk8G7ciYxz70twPN2TJjtEHXzbcpGz9Qwc7PKqPVAvf-qBKsYEIP2w0Evt2My8zhkr_buLfGb9SMvDRSpUzkel2X5AKlGLAPFNY-C29_UolLnEq1opwlkEC9JbKo_fohKL1w5vefeoCDL7RJVxw6DqAnUU9UPvsmobA2qErmoesl_lwyD92k-PPTLco-J86v6kRJhbNxQL0B-q2tc6o3Bx4c52Hc8U9sPjYcnigAUgJvwCm9w2i8_4ozGF3xNb7aIkIg7IeOS0HaTt8Obd5PmvAHfY4zItfPZWGGLfrUIRy2FQu9KbLH0Ob_HbyQq1XZ6uAU10zUV12HGf-9Ptrw59nQthnFOprw9Q8f40CVWFMdFsBPl6AyddRBTcXyOj7yRuDMu3UQBY6BhmOwoIhF-ROej9QCcayOtwF0NdXm__8B02dRPGbYries56f35UUckaHKRyqRWjD2dS4mkLDKx3pLwjez-56lbhmGD115ZgWL6psVZ4p2iqTckO5oLs5uj6HDjICVWQk2S0lI5C0h1OByKVttccY4fxLNLVXkjBdBQ1M-grwAhQ6_GyW2CcZHCHhzl0NRTgWyzIj7JA3SrEkn-K2cCk91276A=s120-no" class="circle" width="" alt="Hugo Future Imperfect Slim" /></a>
+    <header>
+      <h1>Ian 化學系軟體工程師</h1>
+    </header>
+    <main>
+      <p>學習, 攝影, 健身, 吃吃喝喝, 記錄生活</p>
+    </main>
+  </br>
+    
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p> If you’re afraid to fail, then you’re probably going to fail.</p>
+      <footer>
+        <a href="/ianlife/about" class="button">Learn More</a>
+      </footer>
+    </section>
+    
+    
+  </section>
+</section>
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    <p>Blog</p>
+    
+    <h2><a href="/ianlife/blog/technology/build_blog/get_started_hugo/">使用Hugo建立個人網頁</a></h2>
+    
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2020-04-30 00:00:00 &#43;0000 UTC">
+      April 30, 2020
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>1 minute read</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=%e4%bd%bf%e7%94%a8Hugo%e5%bb%ba%e7%ab%8b%e5%80%8b%e4%ba%ba%e7%b6%b2%e9%a0%81&amp;url=https%3a%2f%2fianjustin39.github.io%2fianlife%2fblog%2ftechnology%2fbuild_blog%2fget_started_hugo%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fianjustin39.github.io%2fianlife%2fblog%2ftechnology%2fbuild_blog%2fget_started_hugo%2f" target="_blank" rel="noopener" class="share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fianjustin39.github.io%2fianlife%2fblog%2ftechnology%2fbuild_blog%2fget_started_hugo%2f&amp;title=%e4%bd%bf%e7%94%a8Hugo%e5%bb%ba%e7%ab%8b%e5%80%8b%e4%ba%ba%e7%b6%b2%e9%a0%81" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fianjustin39.github.io%2fianlife%2fblog%2ftechnology%2fbuild_blog%2fget_started_hugo%2f&amp;title=%e4%bd%bf%e7%94%a8Hugo%e5%bb%ba%e7%ab%8b%e5%80%8b%e4%ba%ba%e7%b6%b2%e9%a0%81" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fianjustin39.github.io%2fianlife%2fblog%2ftechnology%2fbuild_blog%2fget_started_hugo%2f&amp;description=%e4%bd%bf%e7%94%a8Hugo%e5%bb%ba%e7%ab%8b%e5%80%8b%e4%ba%ba%e7%b6%b2%e9%a0%81" target="_blank" rel="noopener" class="share-btn pinterest">
+          <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Ian%20Tsai&amp;body=https%3a%2f%2fianjustin39.github.io%2fianlife%2fblog%2ftechnology%2fbuild_blog%2fget_started_hugo%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+  </section>
+  
+  <a href="/ianlife/blog/technology/build_blog/get_started_hugo/" class="image featured">
+    
+      <img src="https://ppt.cc/fZheux" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <p>一直有想要寫一些文章記錄生活，身為一個工程師，難免會有想要自己架設的靈魂（？，
+最近發現hugo可以快速架站，除了有template以外也可以自己更改裡面的配置
+，對於一個前端小菜鳥來說，算是一大福音ＸＤ，於是開始了這條漫漫長路～</p>
+<p>&mdash;我是短分隔線&mdash;</p>
+<p>以下紀錄是我花了幾天時間估狗各種網站＋自己一直鬼打牆後的一些心得，希望也可以讓大家少踩點雷ＸＤ
+然後我是用mac的系統，所以就先介紹mac架設的方法
+那就開始介紹吧！！！</p>
+<h2 id="開始之前">開始之前</h2>
+<p>首先我們可以先去<a href="https://themes.gohugo.io/" target="_blank">HUGO</a>的官網選擇喜歡的template，我覺得很重要，畢竟是自己要用的，自己喜歡才有動力做下去！！</p>
+<hr>
+<h2 id="開始搭建你的網站">開始搭建你的網站</h2>
+<h4 id="1-打開你的terminal安裝hugo輸入">1. 打開你的terminal，安裝hugo，輸入：</h4>
+<pre><code>brew install hugo
+</code></pre><p><em>brew 是mac的管理套件 如果沒裝過的話 可以去<a href="https://brew.sh/index_zh-tw" target="_blank">這裏</a>看看或是複製以下程式碼到你的terminal執行</em></p>
+<pre><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;
+</code></pre><h4 id="2-建立新網站">2. 建立新網站</h4>
+<pre><code>hugo new site project-name
+cd project-name
+</code></pre><p>project-name可以自訂，看你喜歡叫什麼都行！</p>
+<h4 id="2-1-資料夾結構">2-1. 資料夾結構</h4>
+<p>建立好網站以後，來看看一下結構，這邊當矇逼滿久的，想說就順便記錄比較清楚</p>
+<pre><code>project
+├── archetypes
+├── content # 文章的家
+├── layout # html的家
+├── static # js, css 的家
+├── themes # 等等template要clone下來住的家
+</code></pre><p>就先把大項目列出來，他的行距實在太大，我覺得很醜，但目前找不到方法只好先加減用了ＱＱ</p>
+<p>（之後來研究一下Markdown好了</p>
+<h4 id="3-新增themehttpsthemesgohugoio-我是用hugo-future-imperfect-slimhttpsthemesgohugoiohugo-future-imperfect-slim">3. 新增<a href="https://themes.gohugo.io/">Theme</a>: 我是用<a href="https://themes.gohugo.io/hugo-future-imperfect-slim/">Hugo Future Imperfect Slim</a></h4>
+<pre><code>cd themes
+git clone https://github.com/pacollins/hugo-future-imperfect-slim.git
+</code></pre><p>要等待一下下，完成後你就可以到你的themes內看看你選擇的template的資料有些啥</p>
+<h4 id="4-將指定資料取代根目錄資料">4. 將指定資料取代根目錄資料</h4>
+<p>這邊就要將你載下來的一些檔案取代你原本空的檔案</p>
+<pre><code>themes/layouts 取代原本的 layouts
+themes/exampleSite/static 取代原本的 static
+themes/exampleSite/content 這些範例文章可以放到content內
+themes/exampleSite/config.toml 取代原本的config.toml
+</code></pre><p>這樣基本上你的模板就完成了</p>
+<h4 id="4-1-設定configtoml">4-1. 設定config.toml</h4>
+<p>基本上整個網站的參數設定都在這，隨著每個網站的不同，設置方式會有差異，這邊就說一個最基本的設定</p>
+<pre><code>baseurl                 = &quot;https://github_account.github.io/&quot;
+DefaultContentLanguage  = &quot;zh&quot;
+title                   = &quot;Ian Blog&quot;
+</code></pre><p>因為我們之後要部署到github，所以baseurl就先把他設定好，一定要用github的帳號，才連接的上去</p>
+<h4 id="5-新增文章">5. 新增文章</h4>
+<pre><code>hugo new content/blog/first-post.md
+</code></pre><p>新增的路徑依照你的主題不同會有不同的路徑，新增完後就可以開始寫你的文章了，而文章是用Markdown語法去寫</p>
+<h4 id="6-啟動server">6. 啟動server</h4>
+<p>回到你的根目錄，然後輸入：</p>
+<pre><code>hugo server
+</code></pre><p>跑完後你會看到一行http://localhost:1313/，點下去看看，若有頁面顯示，<strong>恭喜你</strong>已經完成了你的網站了！！！</p>
+<hr>
+<p>剛開始分享可能有些不清楚的地方，自己的網站也還沒說非常完整，不過就把它當做成就一步一步解，也是頗有成就感！</p>
+<p>本來想要把部署github也寫在一起，但好像篇幅會有點長，所以就下一篇再來分享怎麼把自己的hugo推到github上吧！!</p>
+<hr>
+<h4 id="references">References:</h4>
+<ul>
+<li><a href="https://gohugo.io/getting-started/quick-start/" target="_blank">HUGO Doc</a> 感謝官方文件大力贊助播出</li>
+</ul>
+<hr>
+  </div>
+  <br>
+  <br>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/categories/thec">THEC</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/hugo">hugo</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/blog">blog</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+<div class="pagination">
+  
+  
+    <a href="/ianlife/blog/technology/build_blog/deploy_hugo_on_github/" class="button"><div class="next"><div>部署Hugo個人網頁至GitHub</div></div></a>
+  
+</div>
+
+
+        <div class="disqus markdown">
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+      </main>
+      
+      <footer id="site-footer">
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <section id="mini-bio">
+    <div id="tag-cloud" class="copyright" style="padding: 5px 25px">
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/blog" style="font-size:1.292481250360578rem">blog</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/bootstrap" style="font-size:0.5rem">bootstrap</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/github" style="font-size:0.5rem">github</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/hugo" style="font-size:1.292481250360578rem">hugo</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/magnific-popup" style="font-size:0.5rem">magnific-popup</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/masonry" style="font-size:0.5rem">masonry</a>&nbsp;&nbsp;
+        
+    </div>
+  </section>
+  
+  <br>
+  <p class="copyright"><a href="https://jumperc2p.github.io/InformisTry/" target="_blank">＊ 澳洲工程師日記 - Hank Lee</a></p>
+  <p class="copyright">
+    
+      &copy; 2020
+      
+        Ian Tsai
+      
+    . <br>
+    IAN 化學系軟體工程師 Powered by <a href='https://gohugo.io/' title='0.69.2' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/ianlife/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script src="/ianlife/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </div>
+  </body>
+</html>

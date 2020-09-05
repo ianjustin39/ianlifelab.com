@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="../js/jquery.magnific-popup.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="http://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta charset="utf-8">
+<title>部署Hugo個人網頁至GitHub - Ian Tsai </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="部署Hugo個人網頁至GitHub">
+<meta itemprop="description" content="之前用Hugo架設個人網站，但架設完成後還是需要部署到一個平台，才有辦法瀏覽，
+這篇就來分享如何將網頁部署到GitHub以及途中遇到的一些問題">
+<meta itemprop="datePublished" content="2020-05-02T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-05-02T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="256">
+<meta itemprop="image" content="https://ppt.cc/fZheux">
+
+
+
+<meta itemprop="keywords" content="blog,github,hugo," /><meta property="og:title" content="部署Hugo個人網頁至GitHub" />
+<meta property="og:description" content="之前用Hugo架設個人網站，但架設完成後還是需要部署到一個平台，才有辦法瀏覽，
+這篇就來分享如何將網頁部署到GitHub以及途中遇到的一些問題" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/post/deploy_hugo_on_github/" />
+<meta property="og:image" content="https://ppt.cc/fZheux" />
+<meta property="article:published_time" content="2020-05-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ppt.cc/fZheux"/>
+
+<meta name="twitter:title" content="部署Hugo個人網頁至GitHub"/>
+<meta name="twitter:description" content="之前用Hugo架設個人網站，但架設完成後還是需要部署到一個平台，才有辦法瀏覽，
+這篇就來分享如何將網頁部署到GitHub以及途中遇到的一些問題"/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/ianlife/css/bundle.min.46b343935a1638006ad07aef480d21a3c387e808256e35534ef50be63c255038.css" integrity="sha256-RrNDk1oWOABq0HrvSA0ho8OH6AglbjVTTvUL5jwlUDg=">
+        <link rel="stylesheet" href="/ianlife/css/add-on.css">
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ianlife/">
+        
+          Life Story
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/photograph/" class="link"><i class='far fa-images'></i> Photograph</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/ianlife/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+      
+      
+
+    </menu>
+    
+
+    
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-sidebar">
+  <section id="site-intro" >
+    <a href="/ianlife/"><img src="https://lh3.googleusercontent.com/oBxmIY5uloDqDQftTGdRtsXCB_WpmkvZqVSYrCeVdqGfCKG0hWDrUjX-dNZb57m_FpGzj2sYSCveJUJYnYq_VyUPCAf9-rWQc8ZkNsKYv1AL5BQKJ5JfQradyyIaKrTbT-_fPWlglBQ7K1ZVL-Rqk8G7ciYxz70twPN2TJjtEHXzbcpGz9Qwc7PKqPVAvf-qBKsYEIP2w0Evt2My8zhkr_buLfGb9SMvDRSpUzkel2X5AKlGLAPFNY-C29_UolLnEq1opwlkEC9JbKo_fohKL1w5vefeoCDL7RJVxw6DqAnUU9UPvsmobA2qErmoesl_lwyD92k-PPTLco-J86v6kRJhbNxQL0B-q2tc6o3Bx4c52Hc8U9sPjYcnigAUgJvwCm9w2i8_4ozGF3xNb7aIkIg7IeOS0HaTt8Obd5PmvAHfY4zItfPZWGGLfrUIRy2FQu9KbLH0Ob_HbyQq1XZ6uAU10zUV12HGf-9Ptrw59nQthnFOprw9Q8f40CVWFMdFsBPl6AyddRBTcXyOj7yRuDMu3UQBY6BhmOwoIhF-ROej9QCcayOtwF0NdXm__8B02dRPGbYries56f35UUckaHKRyqRWjD2dS4mkLDKx3pLwjez-56lbhmGD115ZgWL6psVZ4p2iqTckO5oLs5uj6HDjICVWQk2S0lI5C0h1OByKVttccY4fxLNLVXkjBdBQ1M-grwAhQ6_GyW2CcZHCHhzl0NRTgWyzIj7JA3SrEkn-K2cCk91276A=s120-no" class="circle" width="" alt="Hugo Future Imperfect Slim" /></a>
+    <header>
+      <h1>Ian 化學系軟體工程師</h1>
+    </header>
+    <main>
+      <p>學習, 攝影, 健身, 吃吃喝喝, 記錄生活</p>
+    </main>
+  </br>
+    
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p> If you’re afraid to fail, then you’re probably going to fail.</p>
+      <footer>
+        <a href="/ianlife/about" class="button">Learn More</a>
+      </footer>
+    </section>
+    
+    
+
+    <section id="mini-bio">
+      <header>
+        <h1>recommend website</h1>
+      </header>
+      <p><a href="https://jumperc2p.github.io/InformisTry/" target="_blank">InformisTry - Hank Lee</a></p>
+    </section>
+  </section>
+</section>
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+    <h2><a href="/ianlife/post/deploy_hugo_on_github/">[Blog] </br> 部署Hugo個人網頁至GitHub</a></h2>
+    
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2020-05-02 00:00:00 &#43;0000 UTC">
+      May 2, 2020
+    </time>
+    <span class="author">Ian</span>
+    
+    <p>2 minute read</p>
+    
+  </div>
+</header>
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=%e9%83%a8%e7%bd%b2Hugo%e5%80%8b%e4%ba%ba%e7%b6%b2%e9%a0%81%e8%87%b3GitHub&amp;url=https%3a%2f%2fianjustin39.github.io%2fianlife%2fpost%2fdeploy_hugo_on_github%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fianjustin39.github.io%2fianlife%2fpost%2fdeploy_hugo_on_github%2f" target="_blank" rel="noopener" class="share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fianjustin39.github.io%2fianlife%2fpost%2fdeploy_hugo_on_github%2f&amp;title=%e9%83%a8%e7%bd%b2Hugo%e5%80%8b%e4%ba%ba%e7%b6%b2%e9%a0%81%e8%87%b3GitHub" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fianjustin39.github.io%2fianlife%2fpost%2fdeploy_hugo_on_github%2f&amp;title=%e9%83%a8%e7%bd%b2Hugo%e5%80%8b%e4%ba%ba%e7%b6%b2%e9%a0%81%e8%87%b3GitHub" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fianjustin39.github.io%2fianlife%2fpost%2fdeploy_hugo_on_github%2f&amp;description=%e9%83%a8%e7%bd%b2Hugo%e5%80%8b%e4%ba%ba%e7%b6%b2%e9%a0%81%e8%87%b3GitHub" target="_blank" rel="noopener" class="share-btn pinterest">
+          <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Ian&amp;body=https%3a%2f%2fianjustin39.github.io%2fianlife%2fpost%2fdeploy_hugo_on_github%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+  </section>
+  
+  <a href="/ianlife/post/deploy_hugo_on_github/" class="image featured">
+    
+      <img src="https://ppt.cc/fZheux" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <p>之前用Hugo架設個人網站，但架設完成後還是需要部署到一個平台，才有辦法瀏覽，
+這篇就來分享如何將網頁部署到GitHub以及途中遇到的一些問題</p>
+<p>如果還不知道怎麼架設個人頁面的可以參考 <strong><a href="../20200430_get_started_hugo/">使用HUGO建立個人網頁</a></strong></p>
+<p>讓我們繼續看下去!</p>
+<p><strong><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" target="_blank">Hugo GitHub</a></strong>上有兩個方法，這邊兩種都會介紹！</p>
+<pre><code>User/Organization Pages
+(https://&lt;USERNAME|ORGANIZATION&gt;.github.io/)
+
+Project Pages
+(https://&lt;USERNAME|ORGANIZATION&gt;.github.io/&lt;PROJECT&gt;/)
+</code></pre><h3 id="userorganization-pages">User/Organization Pages</h3>
+<h4 id="1-github建立兩個repository">1. GitHub建立兩個repository</h4>
+<p>首先要先建立兩個repository</p>
+<pre><code>my_blog(可自行命名)                     放你原始Hugo程式
+my_account.github.io(用自己的帳號)      放要部署的網頁程式
+</code></pre><p>這邊要記得，my_account.github.io這個建立時要選public，若不小心選到private的話可以依照這路徑去更改
+<code>Setting &gt; Danger Zone &gt; Make this repository public</code></p>
+<h4 id="2-建立部署網頁的資料public">2. 建立部署網頁的資料(/public)</h4>
+<p>回到根目錄，輸入</p>
+<pre><code>hugo
+</code></pre><p>根目錄下面就會產生一個public的資料夾，裡面有自動產出的html，這是等等要部署到GitHub的頁面</p>
+<p><em>如果你在執行這步驟時，有開啟server，記得要先關閉在執行</em></p>
+<h4 id="2-1-設定pages-source">2-1. 設定pages source</h4>
+<p>當你部署完成後，需要將Setting內GitHub Pages的Source指定到master，這樣待會測試時才會有網頁出現
+<img src="https://ppt.cc/fu5JAx" alt="GITHUB PAGE" title="GITHUB PAGE"></p>
+<h4 id="3-連接public及my_accountgithubio">3. 連接public及my_account.github.io</h4>
+<pre><code>cd public
+git init
+git remote add blog &lt;my_account.github.io_repository&gt; #註1
+git add .
+git commit -m &quot;first commit&quot;
+git push blog master
+</code></pre><p>git的部分就不在多做贅述，若有不清楚的可以點<a href="https://git-scm.com/docs" target="_blank">here</a>看看</p>
+<p><em>註1：這邊remote name不用origin是因為另一個repo的remote name也會用origin，當初兩個都用一樣，在更新文章(下面會提到)時遇到不少問題，所以索性就用不一樣的名稱，這樣也比較好辨識，這可以照自己的習慣命名。</em></p>
+<h4 id="4-將hugo資料夾連接到my_project">4. 將Hugo資料夾連接到my_project</h4>
+<pre><code>cd ..
+git init
+git remote add origin &lt;my_project_repository&gt;
+git add .
+git commit -m &quot;first commit&quot;
+git push origin master
+</code></pre><p>等待一下，然後輸入https://my_account.github.io/顯示出你的網頁就代表成功囉！</p>
+<hr>
+<h4 id="project-pages">Project Pages</h4>
+<h4 id="0-設定configtoml">0. 設定config.toml</h4>
+<p>這邊要先更新config內的baseurl</p>
+<pre><code>baseurl                 = &quot;https://my_account.github.io/my_page/&quot; #my_page為等等要建立的repo name，可自行命名
+DefaultContentLanguage  = &quot;zh&quot;
+title                   = &quot;Ian Blog&quot;
+</code></pre><h4 id="1-github建立兩個repository-1">1. GitHub建立兩個repository</h4>
+<p>首先要先建立兩個repository</p>
+<pre><code>my_blog(可自行命名)                   放你原始Hugo程式
+my_page(要對應config內的baseurl)      放要部署的網頁程式
+</code></pre><p>這邊ㄧ樣要記得，my_page這個建立時要選public，若不小心選到private的話可以依照這路徑去更改</p>
+<p><code>Setting &gt; Danger Zone &gt; Make this repository public</code></p>
+<h4 id="2-建立部署網頁的資料public-1">2. 建立部署網頁的資料(/public)</h4>
+<p>回到根目錄，輸入</p>
+<pre><code>hugo
+</code></pre><p>根目錄下面就會產生一個public的資料夾，裡面有自動產出的html，這是等等要部署到GitHub的頁面</p>
+<p><em>如果你在執行這步驟時，有開啟server，記得要先關閉在執行</em></p>
+<h4 id="2-1-設定pages-source-1">2-1. 設定pages source</h4>
+<p>當你部署完成後，需要將Setting內GitHub Pages的Source指定到master，這樣待會測試時才會有網頁出現
+<img src="https://ppt.cc/fu5JAx" alt="GITHUB PAGE" title="GITHUB PAGE"></p>
+<h4 id="3-連接public及my_accountgithubio-1">3. 連接public及my_account.github.io</h4>
+<pre><code>cd public
+git init
+git remote add blog &lt;my_account.github.io_repository&gt; #註1
+git add .
+git commit -m &quot;first commit&quot;
+git push blog master
+</code></pre><p>git的部分就不在多做贅述，若有不清楚的可以點<a href="https://git-scm.com/docs" target="_blank">here</a>看看</p>
+<p><em>註1：這邊remote name不用origin是因為另一個repo的remote name也會用origin，當初兩個都用一樣，在更新文章(下面會提到)時遇到不少問題，所以索性就用不一樣的名稱，這樣也比較好辨識，這可以照自己的習慣命名。</em></p>
+<h4 id="4-將hugo資料夾連接到my_project-1">4. 將Hugo資料夾連接到my_project</h4>
+<pre><code>cd ..
+git init
+git remote add origin &lt;my_project_repository&gt;
+git add .
+git commit -m &quot;first commit&quot;
+git push origin master
+</code></pre><p>等待一下，然後輸入https://my_account.github.io/顯示出你的網頁就代表成功囉！！</p>
+<p><img src="https://ppt.cc/fKMGJx" alt="page" title="apge"></p>
+<hr>
+<h4 id="寫自動化腳本">寫自動化腳本</h4>
+<p>部署成功後的，當然就是開始寫自己的blog拉！</p>
+<p>但如果每次發佈都要打一堆指令，個人會覺得很累，所以就來寫個腳本吧ＸＤ</p>
+<h4 id="1-建立deploysh">1. 建立deploy.sh</h4>
+<p>在你的根目錄下建立deploy.sh的檔案，然後打開terminal，輸入<code>chmod +x deploy.sh</code>讓他變成可執行的檔案</p>
+<h4 id="2-撰寫deploysh">2. 撰寫deploy.sh</h4>
+<pre><code>#!/bin/sh
+
+set -e
+
+hugo 
+
+cd public
+
+git add .
+
+msg=&quot;rebuilding site $(date)&quot;
+if [ -n &quot;$*&quot; ]; then
+	msg=&quot;$*&quot;
+fi
+git commit -m &quot;$msg&quot;
+
+git push blog master #註2
+
+</code></pre><p><em>註2：這邊就會遇到剛提到的remote的問題，如果兩個remote name都叫origin，那在這邊執行時就會有問題，因為原本的repo已經被第二個蓋掉了，所以這邊才用不同的remote去做分類</em></p>
+<h4 id="3-更新文章">3. 更新文章</h4>
+<p>假設現在已經寫好文章要更新了
+在根目錄下</p>
+<pre><code>git add .
+git commit -m &quot;update new post&quot; # 在更新前一定要將你的文章commit才可以往下執行
+
+./depoly.sh
+</code></pre><p>這樣就完成拉！！
+也不用像一開始打一長串的指令，快速方便又好用！！</p>
+<hr>
+<h4 id="references">References:</h4>
+<ul>
+<li><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" target="_blank">Host on GitHub</a> 再次感謝官方文件大力贊助播出</li>
+</ul>
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/categories/hugo%E6%9E%B6%E8%A8%ADwebsite">Hugo架設website</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/blog">blog</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/github">github</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/hugo">hugo</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+<div class="pagination">
+  
+    <a href="/ianlife/post/get_started_hugo/" class="button"><div class="previous"><div>使用Hugo建立個人網頁</div></div></a>
+  
+  
+    <a href="/ianlife/post/build_photograph_in_hugo/" class="button"><div class="next"><div>用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿</div></div></a>
+  
+</div>
+
+
+        <div class="disqus markdown">
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+      </main>
+      <section id="site-sidebar">
+  
+  <section id="mini-bio">
+    <header>
+      <h1>About</h1>
+    </header>
+    <p> If you’re afraid to fail, then you’re probably going to fail.</p>
+    <footer>
+      <a href="/ianlife/about" class="button">Learn More</a>
+    </footer>
+  </section>
+  
+
+  
+
+  <section id="mini-bio">
+    <header>
+      <h1>recommend website</h1>
+    </header>
+    <ul>
+      <li>
+        <a href="https://jumperc2p.github.io/InformisTry/" target="_blank">澳洲工程師日記 - Hank Lee</a>
+      </li>
+    </ul>
+  </section>
+</section>
+
+      <footer id="site-footer">
+  
+  <p class="copyright">
+    
+      &copy; 2020
+      
+        Ian Tsai
+      
+    . <br>
+    IAN 化學系軟體工程師 Powered by <a href='https://gohugo.io/' title='0.69.2' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/ianlife/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script src="/ianlife/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </div>
+  </body>
+</html>
