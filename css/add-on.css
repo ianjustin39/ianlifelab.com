@@ -1,0 +1,8 @@
+/*
+  This css file is for individual users to restyle items for their personal site,
+  or for the implementation of features specifically for their site. Anything that
+  is an official part of the theme (ex. Pull Requests) should be included in main.css
+  and follow the formatting and style given.
+*/
+
+body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;}
