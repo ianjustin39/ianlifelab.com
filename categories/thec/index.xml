@@ -6,7 +6,7 @@
     <description>Recent content in THEC on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 08 Sep 2020 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/categories/thec/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>什麼是Design Pattern?</title>
       <link>https://ianjustin39.github.io/ianlife/what_is_design_pattern/</link>
-      <pubDate>Tue, 08 Sep 2020 00:00:00 +0800</pubDate>
+      <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://ianjustin39.github.io/ianlife/what_is_design_pattern/</guid>
       <description>&lt;p&gt;自從當上了工程師後，大多數時間都負責後端的程式開發，從最一開始設計api到現在sdk的經驗中，了解到一個好的程式架構及設計，不只可以讓後續維運成本降低，往後要擴充也會相對容易許多。&lt;/p&gt;</description>
