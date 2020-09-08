@@ -13,19 +13,19 @@
     
     <item>
       <title>Design Pattern的類型與原則</title>
-      <link>https://ianjustin39.github.io/ianlife/design-patterns-and-principle/</link>
+      <link>https://ianjustin39.github.io/ianlife/design-pattern/design-patterns-and-principle/</link>
       <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-patterns-and-principle/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/design-pattern/design-patterns-and-principle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>什麼是Design Pattern?</title>
-      <link>https://ianjustin39.github.io/ianlife/what_is_design_pattern/</link>
+      <link>https://ianjustin39.github.io/ianlife/design-pattern/what_is_design_pattern/</link>
       <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/what_is_design_pattern/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/design-pattern/what_is_design_pattern/</guid>
       <description>&lt;p&gt;自從當上了工程師後，大多數時間都負責後端的程式開發，從最一開始設計api到現在sdk的經驗中，了解到一個好的程式架構及設計，不只可以讓後續維運成本降低，往後要擴充也會相對容易許多。&lt;/p&gt;</description>
     </item>
     
