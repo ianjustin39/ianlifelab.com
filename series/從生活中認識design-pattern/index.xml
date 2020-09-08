@@ -6,10 +6,19 @@
     <description>Recent content in 從生活中認識Design Pattern on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 08 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Design Pattern的類型與原則</title>
+      <link>https://ianjustin39.github.io/ianlife/design-patterns-and-principle/</link>
+      <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/design-patterns-and-principle/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>什麼是Design Pattern?</title>

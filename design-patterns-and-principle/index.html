@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh">
   <head>
-  <meta content="Design Pattern, 設計模式" name="keywords">
+  <meta content="Design Pattern, Design Principle, 設計模式, 五大基本原則, 六大基本原則, 七大基本原則" name="keywords">
   <link rel="stylesheet" href="../css/magnific-popup.css">
   <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
@@ -56,7 +56,7 @@ if (!doNotTrack) {
 
   
   <meta charset="utf-8">
-<title>什麼是Design Pattern? - Ian Tsai </title>
+<title>Design Pattern的類型與原則 - Ian Tsai </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -72,28 +72,28 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="什麼是Design Pattern?">
-<meta itemprop="description" content="Design Pattern是解決問題的一種方案">
-<meta itemprop="datePublished" content="2020-09-08T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-09-08T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="180">
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="Design Pattern的類型與原則">
+<meta itemprop="description" content="使用Design Pattern要先了解他的原則及分類，才能在實作中找到匹配的Pattern。">
+<meta itemprop="datePublished" content="2020-09-09T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-09-09T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="298">
 <meta itemprop="image" content="https://ppt.cc/fRZXrx">
 
 
 
-<meta itemprop="keywords" content="Design Pattern," /><meta property="og:title" content="什麼是Design Pattern?" />
-<meta property="og:description" content="Design Pattern是解決問題的一種方案" />
+<meta itemprop="keywords" content="Design Pattern," /><meta property="og:title" content="Design Pattern的類型與原則" />
+<meta property="og:description" content="使用Design Pattern要先了解他的原則及分類，才能在實作中找到匹配的Pattern。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/what_is_design_pattern/" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-patterns-and-principle/" />
 <meta property="og:image" content="https://ppt.cc/fRZXrx" />
-<meta property="article:published_time" content="2020-09-08T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-09-08T00:00:00+00:00" />
+<meta property="article:published_time" content="2020-09-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-09T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://ppt.cc/fRZXrx"/>
 
-<meta name="twitter:title" content="什麼是Design Pattern?"/>
-<meta name="twitter:description" content="Design Pattern是解決問題的一種方案"/>
+<meta name="twitter:title" content="Design Pattern的類型與原則"/>
+<meta name="twitter:description" content="使用Design Pattern要先了解他的原則及分類，才能在實作中找到匹配的Pattern。"/>
 <meta name="twitter:site" content="@example"/>
 <link rel="stylesheet" href="/ianlife/css/bundle.min.2cdb9a7c971ac2ee9f10dfc3a882b2a62caae6da0ca0f0b297ece19deafaab9a.css" integrity="sha256-LNuafJcawu6fEN/DqIKypiyq5toMoPCyl&#43;zhner6q5o=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
@@ -164,20 +164,20 @@ if (!doNotTrack) {
   <div class="title">
     <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern"><p>Design Pattern</p></a>
     
-    <h2><a href="/ianlife/what_is_design_pattern/">什麼是Design Pattern?</a></h2>
+    <h2><a href="/ianlife/design-patterns-and-principle/">Design Pattern的類型與原則</a></h2>
     
     
-    <p>Design Pattern是解決問題的一種方案</p>
+    <p>使用Design Pattern要先了解他的原則及分類，才能在實作中找到匹配的Pattern。</p>
     
   </div>
   <div class="meta">
-    <time class="published" datetime="2020-09-08 00:00:00 &#43;0000 UTC">
-      September 8, 2020
+    <time class="published" datetime="2020-09-09 00:00:00 &#43;0000 UTC">
+      September 9, 2020
     </time>
     
     <span class="author">Ian Tsai</span>
     
-    <p>1 minute read</p>
+    <p>2 minute read</p>
     
   </div>
 </header>
@@ -186,7 +186,7 @@ if (!doNotTrack) {
     
   </section>
   
-  <a href="/ianlife/what_is_design_pattern/" class="image featured">
+  <a href="/ianlife/design-patterns-and-principle/" class="image featured">
     
       <img src="https://ppt.cc/fRZXrx" alt="">
     
@@ -194,9 +194,7 @@ if (!doNotTrack) {
 
 
   <div class="content">
-    <p>自從當上了工程師後，大多數時間都負責後端的程式開發，從最一開始設計api到現在sdk的經驗中，了解到一個好的程式架構及設計，不只可以讓後續維運成本降低，往後要擴充也會相對容易許多。</p>
-<p>而對於程式架構，我認為沒有所為最好的架構，每個project都有適合自己的架構及設計，像遊戲的設計跟電商網站就不會一樣，所以選擇適合的工具是很重要的！</p>
-</br>
+    </br>
 <div>
     <div>
         <h3 id=_Design-Pattern-Post-List>Design Pattern 系列文章導讀</h3>
@@ -287,52 +285,127 @@ if (!doNotTrack) {
 
 <br>
 <br>
-<ul>
-<li>
-<h3 id=_什麼是design-pattern>什麼是Design Pattern？</h3>
-</li>
-</ul>
-<hr>
-<p>在程式設計中，經常遇到相同的設計問題，許多設計可以解決這些重複出現的問題，但隨著時間推進，某些設計因為更加的靈活，而優於了其他的設計。而這些設計被整理歸類，進而發展出了Design Pattern。Design Pattern即是針對這些反覆出現的問題而提出的解決方案。</p>
-<p><strong>Design Pattern</strong>一書中介紹了 23 種模式，依照不同的狀況，使用不同的模式，解決不同的問題。而所謂的Design Pattern並非一組source code，他為一個概念。我們可以舉一個例子 - 西洋棋。</p>
-<p>西洋棋的棋子有很多種類，每種棋子都有屬於自己的能力，新手棋士可能知道每個棋子基本怎麼使用，但有經驗的棋士不但知道每個棋子的基本用法，更知道了棋子間如何互相配合使用，在特定狀況使用特定的戰術可以更容易贏得比賽。</p>
-<p>初學者開發人員就好比新手棋士，他們知道for loop、if-else&hellip;等等方法，但透過經驗的累積，他們開始知道如何搭配各種方法來建構及設計程式，讓程式不但可以重複使用也更加的靈活。</p>
-<h5 id="為什麼會說特定">為什麼會說特定？</h5>
-<p>這邊並不是說只能在特定狀況下贏，而是如同剛剛講到的，依照不同的狀況，使用不同的模式，解決不同的問題。</p>
-<br>
 <br>
 <ul>
 <li>
-<h3 id=_為什麼要使用design-pattern>為什麼要使用Design Pattern？</h3>
+<h3 id=_design-principle>Design Principle</h3>
 </li>
 </ul>
 <hr>
-<p>Design Pattern為一些專家，歷經無數的錯誤及試驗而得到的結果。</p>
-<p>我們舉一個例子，小學我們都學過如何把1加到100。我們可以怎麼做？？</p>
-<p>方法一：土法煉鋼直接從頭加</p>
-<pre><code>1+2+3...+100
-</code></pre><p>方法二：已知的數學公式</p>
-<pre><code>n(n+1)/2
-</code></pre><p>很明顯，方法二已經有一個“公式”可以幫助我們快速的解決問題，不但簡化過程也節省了時間。
-但只是節省過程與時間嗎？？</p>
-<p>我們把問題再做延伸，假設今天需要更改成相加1000個數字，那我們該怎麼辦？？</p>
-<p>方法一依舊要從1加到1000，但方法二只需要把n改成1000。</p>
-<p>這樣的差距，就很像我們在程式開發過程中，突然有需要做變更或是新增需求，如果有使用合適的design pattern，便可輕鬆解決很複雜的問題。</p>
-<p>所以使用Design Pattern目的，除了建立良好的軟體系統外，不管在未來維護程式或是新增需求，都可以大大節省我們的時間及精力。</p>
+<p>關於Design Principle，相信大家上網查都可以查到五大基本原則SOLID。但隨著時代的進步，技術及理論也會跟著進步及更新。現在查Design Principle，可能會有五大原則、六大原則甚至是七大原則。這裡會讓大家先初步認識七個Design Principle並舉一些簡單的例子，接下來幾篇會再詳細介紹每個Principle的內容。</p>
+<table>
+<thead>
+<tr>
+<th align="left">縮寫</th>
+<th align="left">名稱</th>
+<th align="left">翻譯年糕</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">SRP</td>
+<td align="left">Single Responsibility Principle</td>
+<td align="left">單一職責原則</td>
+</tr>
+<tr>
+<td align="left">OCP</td>
+<td align="left">Open Closed Principle</td>
+<td align="left">開閉原則</td>
+</tr>
+<tr>
+<td align="left">LSP</td>
+<td align="left">Liskov Substitution Principle</td>
+<td align="left">里氏替換原則</td>
+</tr>
+<tr>
+<td align="left">ISP</td>
+<td align="left">Interface Segregation Principles</td>
+<td align="left">介面隔離原則</td>
+</tr>
+<tr>
+<td align="left">DIP</td>
+<td align="left">Dependency Inversion Principle</td>
+<td align="left">依賴反轉原則</td>
+</tr>
+<tr>
+<td align="left">CARP</td>
+<td align="left">Composite/Aggregate Reuse Principle</td>
+<td align="left">合成/聚合複用原則</td>
+</tr>
+<tr>
+<td align="left">LKP</td>
+<td align="left">Least Knowledge Principle</td>
+<td align="left">最少知識原則</td>
+</tr>
+</tbody>
+</table>
+<br>
+<h4 id=_單一職責原則single-responsibility-principle>單一職責原則(Single Responsibility Principle)</h4>
+<p>一個類別專注做一件事，不應該將不相關的功能放在同一個程式碼內，使整體程式碼中的每個部分都與自己實作的功能相關。比如說購物車內有確認訂購內容、確認訂購人資料以及付款。很明顯付款跟與其他兩者的功能不同，所以不應該放在同一組程式碼內。</p>
+<br>
+<h4 id=_開閉原則open-closed-principle->開閉原則(Open Closed Principle )</h4>
+<p>系統需要被擴充時，應該藉由新增新的程式碼來擴充新功能，而非修改原本的程式碼來擴充新功能。如銀行付款系統，從以前金融卡、信用卡到現在電子支付的付款方式。每當增加新的付款方式，應該要新增的類別來實作，而不是在原本的程式碼內做新增。</p>
+<br>
+<h4 id=_里氏替換原則liskov-substitution-principle>里氏替換原則(Liskov Substitution Principle)</h4>
+<p>子類別可以擴充套件父類別的功能,但不改變父類別原有的功能。如同老鷹跟企鵝都是鳥，但老鷹會飛，企鵝不會。若鳥類中有一個fly的方法，而企鵝繼承後卻不能使用，因為企鵝不會飛。所以要需要覆寫fly，而這樣就違反了此原則。應該再分成會飛的鳥及不會飛的鳥來替代覆寫。</p>
+<br>
+<h4 id=_介面隔離原則interface-segregation-principles>介面隔離原則(Interface Segregation Principles)</h4>
+<p>類別不應該強迫依賴他們不使用的方法。一位資深工程師，他需要寫程式，也需要做報告。這是這間公司期待資深工程師所需要具備的技能。但一般工程師只會寫程式，並不會寫報告。所以應該要將技能分成工程技能及其他技能。讓對應的工程是去實作相對應的技能，而不是將他不會的事情強制依賴給他。</p>
+<br>
+<h4 id=_依賴反轉原則dependency-inversion-principle>依賴反轉原則(Dependency Inversion Principle)</h4>
+<p>高層模組不應該依賴低層模組，兩者皆應依賴於抽象;抽象不應該依賴細節，細節應該依賴於抽象。高低層模組好比呼叫者與被呼叫者關係，細節就是抽象類的實作。拿剛剛舉的付款的例子：用信用卡付款，程式內不應該將信用卡綁死在付款方法內，而是應該寫一個抽象的付款方法提供信用卡實作，再將抽象類別放入付款內。如此一來未來增加付款項目便不需要更動付款行為的內部邏輯，只需要增加付款項目的實作。</p>
+<br>
+<h4 id=_合成聚合複用原則compositeaggregate-reuse-principle>合成/聚合複用原則(Composite/Aggregate Reuse Principle)</h4>
+<p>在軟體開發中，一定會遇到套件重複使用的問題。而應該先考慮使用組合/聚合的方式，其次才是繼承。若要使用繼承，則須符合里氏替換原則。如汽車有汽油車及電動車，其中又有黑色及白色。若用繼承的方式會產生黑汽油車、白汽油車、黑電動車、白電動車。若再增加顏色，則類別會更多，耦合性會更高。所以應該將顏色抽出，這樣只需要選好車種後，再將顏色帶入，降低整體耦合及提高程式靈活性。</p>
+<br>
+<h4 id=_最少知識原則least-knowledge-principle>最少知識原則(Least Knowledge Principle)</h4>
+<p><strong>迪米特法則(Law of Demeter)</strong> 又稱最少知識原則(Least Knowledge Principle)。只與自己直接有關係的類別溝通。如同老師想要清點班級的人數，他只需要問班長現在班上有幾個人，不需要直接去班上一個一個看。</p>
 <br>
 <br>
 <ul>
 <li>
-<h3 id=_小結>小結</h3>
+<h3 id=_design-pattern的分類>Design Pattern的分類</h3>
 </li>
 </ul>
 <hr>
-<h5 id="所以什麼是design-pattern">所以什麼是Design Pattern？</h5>
-<pre><code>Design Pattern並不直接用來完成程式碼的編寫，而是描述在各種不同情況下，要怎麼解決問題的一種**方案**
-</code></pre>
-<h5 id="為什麼要使用design-pattern-1">為什麼要使用Design Pattern？</h5>
-<pre><code>為了建立一個方便維護及擴充的軟體系統。
-</code></pre>
+<p>Design Pattern分類有兩種，一種是常見的分類，也就是根據使用目的來分，可分成創建型模式（Creational Patterns）、結構型模式（Structural Patterns）以及行為型模式（Behavioural Patterns）。而依照作用範圍來劃分的話，則可分成類別模式（Class Patterns）以及物件模式（Object Patterns）兩種。而這系列文會用一班常見的三種分類來區分介紹。</p>
+<p><em>註：Object Patterns翻譯是對象模式，但個人覺得用物件講起來比較順。</em></p>
+<br>
+<h5 id="1-依照使用目的分類">1. 依照使用目的分類</h5>
+<p>創建型模式：<strong>如何建立物件</strong>，它的特點在於是<strong>將物件的建立與使用分開</strong>。</p>
+<p>結構型模式：關注於整體最終的結構，如何將類別及物件通過繼承和組合，構建出更加複雜的結構。</p>
+<p>行為型模式：類別與物件之間如何分職責以及合作完成單一物件無法獨立完成的任務。</p>
+<br>
+<h5 id="2-依照作用範圍的分類">2. 依照作用範圍的分類</h5>
+<p>類別模式：處理父類別與子類別間的關係，此關係藉由繼承建立，為靜態，在編譯時即確定。</p>
+<p>物件模式：處理物件之間的關係，此關係藉由合成或聚合來實現，執行時可以變化，動態性高。</p>
+<br>
+<table>
+<thead>
+<tr>
+<th align="left">Type</th>
+<th align="left">Creational Patterns</th>
+<th align="left">Structural Patterns</th>
+<th align="left">Behavioural Patterns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Class Patterns</td>
+<td align="left">Factory Method Pattern</td>
+<td align="left">Adapter Pattern</td>
+<td align="left">Template Pattern <br> Interpreter Pattern</td>
+</tr>
+<tr>
+<td align="left">Object Patterns</td>
+<td align="left">Singleton Pattern <br> Abstract Factory Pattern <br> Builder Pattern <br> Prototype Pattern</td>
+<td align="left">Bridge Pattern <br> Composite Pattern <br> Decorator Pattern <br> Facade Pattern <br> Flyweight Pattern <br> Proxy Pattern</td>
+<td align="left">Chain of Responsibility Pattern <br> Command Pattern<br> Iterator Pattern <br> Mediator Pattern <br> Memento Pattern <br> Observer Pattern <br> State Pattern <br> Strategy Pattern <br> Visitor Pattern</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>而其中的23種Design Pattern就會在後面的文章詳細介紹，就先不在這邊贅述。</p>
 <br>
 <br>
 <ul>
@@ -342,7 +415,8 @@ if (!doNotTrack) {
 </ul>
 <hr>
 <ul>
-<li><a href="https://zh.wikipedia.org/wiki/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_(%E8%AE%A1%E7%AE%97%E6%9C%BA)" target="_blank">設計模式</a></li>
+<li><a href="http://www.andrewchen.tw/2017/04/09/20170409_NOTE_%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F%E4%BA%94%E5%A4%A7%E5%9F%BA%E6%9C%AC%E5%8E%9F%E5%89%87SOLID/" target="_blank">設計模式五大基本原則 SOLID</a></li>
+<li><a href="http://c.biancheng.net/view/1317.html" target="_blank">软件设计模式概述</a></li>
 </ul>
   </div>
   <br>
@@ -409,10 +483,8 @@ if (!doNotTrack) {
 
 <div class="pagination">
   
-    <a href="/ianlife/build_photograph_in_hugo/" class="button"><div class="previous"><div>用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿</div></div></a>
+    <a href="/ianlife/what_is_design_pattern/" class="button"><div class="previous"><div>什麼是Design Pattern?</div></div></a>
   
-  
-    <a href="/ianlife/design-patterns-and-principle/" class="button"><div class="next"><div>Design Pattern的類型與原則</div></div></a>
   
 </div>
 
@@ -500,8 +572,8 @@ if (!doNotTrack) {
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e4%bb%80%e9%ba%bc%e6%98%afdesign-pattern">
-												 什麼是Design Pattern？
+						 					<a class="nav-link" href="#_design-principle">
+												 Design Principle
 											</a>
 										</li>
 						 
@@ -523,15 +595,199 @@ if (!doNotTrack) {
 								
 									<ul class="nav">
 								
+									<ul class="nav">
+								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e7%82%ba%e4%bb%80%e9%ba%bc%e8%a6%81%e4%bd%bf%e7%94%a8design-pattern">
-												 為什麼要使用Design Pattern？
+						 					<a class="nav-link" href="#_%e5%96%ae%e4%b8%80%e8%81%b7%e8%b2%ac%e5%8e%9f%e5%89%87single-responsibility-principle">
+												 單一職責原則(Single Responsibility Principle)
 											</a>
 										</li>
 						 
 								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e9%96%8b%e9%96%89%e5%8e%9f%e5%89%87open-closed-principle-">
+												 開閉原則(Open Closed Principle )
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e9%87%8c%e6%b0%8f%e6%9b%bf%e6%8f%9b%e5%8e%9f%e5%89%87liskov-substitution-principle">
+												 里氏替換原則(Liskov Substitution Principle)
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e4%bb%8b%e9%9d%a2%e9%9a%94%e9%9b%a2%e5%8e%9f%e5%89%87interface-segregation-principles">
+												 介面隔離原則(Interface Segregation Principles)
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e4%be%9d%e8%b3%b4%e5%8f%8d%e8%bd%89%e5%8e%9f%e5%89%87dependency-inversion-principle">
+												 依賴反轉原則(Dependency Inversion Principle)
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%90%88%e6%88%90%e8%81%9a%e5%90%88%e8%a4%87%e7%94%a8%e5%8e%9f%e5%89%87compositeaggregate-reuse-principle">
+												 合成/聚合複用原則(Composite/Aggregate Reuse Principle)
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e6%9c%80%e5%b0%91%e7%9f%a5%e8%ad%98%e5%8e%9f%e5%89%87least-knowledge-principle">
+												 最少知識原則(Least Knowledge Principle)
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
 								
 									</ul>
 								
@@ -552,8 +808,8 @@ if (!doNotTrack) {
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%b0%8f%e7%b5%90">
-												 小結
+						 					<a class="nav-link" href="#_design-pattern%e7%9a%84%e5%88%86%e9%a1%9e">
+												 Design Pattern的分類
 											</a>
 										</li>
 						 
