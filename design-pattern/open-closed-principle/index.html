@@ -299,7 +299,7 @@ if (!doNotTrack) {
 <p><strong>Software entities like classes, modules and functions should be open for extension but closed for modifications.</strong></p>
 <p><em>翻譯年糕：軟體實體像是類別、模組和函式，應該只對延展開放，但對修改關閉。</em></p>
 <p>簡單來說，就是當系統需要被擴充時，應該藉由新增新的程式碼來擴充新功能，而非修改原本的程式碼來擴充新功能。</p>
-<p>舉個例子，我們以前到百貨公司買東西，可以刷信用卡付錢，也可以刷金融卡付錢（兩者的差別在於金融卡帳戶有錢才能刷）。對於銀行而言他們會判斷你用的是哪種卡，而去做扣款的動作。</p>
+<p>先來看個例子，我們以前到百貨公司買東西，可以刷信用卡付錢，也可以刷金融卡付錢（兩者的差別在於金融卡帳戶有錢才能刷）。對於銀行而言他們會判斷你用的是哪種卡，而去做扣款的動作。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">PayMent</span> <span style="color:#ff79c6">{</span>
     <span style="color:#8be9fd;font-style:italic">private</span> String msg<span style="color:#ff79c6">;</span>
     <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(){</span>
@@ -345,7 +345,7 @@ if (!doNotTrack) {
 <span style="color:#ff79c6">}</span>
 </code></pre></div><p><strong>output</strong></p>
 <pre><code>選擇信用卡付錢！！
-</code></pre><p>這樣我們也就增加了悠遊卡以及電子支付的方法進Payment內了！但這並不是一個好方法，如果再擴充的時候，把原本的方法改錯了，這樣會造成系統的問題。所以我們讓系統方便擴充，但同時又不能影響到原本的程式邏輯。</p>
+</code></pre><p>程式經過修改後，增加了悠遊卡以及電子支付的方法進Payment內了！但這顯然不是一個好方法。如果再擴充的時候，把原本的方法改錯了，這樣會造成系統的問題。所以我們需要一個讓系統方便擴充，但同時又不能影響到原本的程式方法。</p>
 <br>
 <br>
 <ul>
@@ -364,7 +364,7 @@ if (!doNotTrack) {
 </li>
 </ul>
 <hr>
-<p>現在我們知道了不能在<code>既有</code>的程式碼做修改，也知道了業務邏輯與附加邏輯間的差異，那我們就可以對剛剛的付款範例進行OCP的修改！</p>
+<p>現在我們知道了不能在<code>既有</code>的程式碼做修改，也知道了業務邏輯與附加邏輯間的差異，那我們就可以開始對剛剛的付款範例進行OCP的修改！</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Payment</span> <span style="color:#ff79c6">{</span>
     <span style="color:#8be9fd;font-style:italic">private</span> String msg<span style="color:#ff79c6">;</span>
     <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(){</span>
