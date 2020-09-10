@@ -77,7 +77,7 @@ if (!doNotTrack) {
 <meta itemprop="description" content="擴充系統時，應該由新增程式碼代替修改程式碼。如同電鑽，可以換各種不同的鑽頭，而電鑽本身並不需要被改造。">
 <meta itemprop="datePublished" content="2020-09-11T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-09-11T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="390">
+<meta itemprop="wordCount" content="391">
 <meta itemprop="image" content="https://ppt.cc/f8vwZx">
 
 
@@ -200,7 +200,9 @@ if (!doNotTrack) {
 
 
   <div class="content">
-    </br>
+    <p><strong><a href="https://ithelp.ithome.com.tw/articles/10235421" target="_blank">本系列文章同步分享於IT邦幫忙第12屆鐵人賽</a></strong></p>
+<br>
+</br>
 <div>
     <div>
         <h3 id=_Design-Pattern-Post-List>Design Pattern 系列文章導讀</h3>
@@ -230,7 +232,7 @@ if (!doNotTrack) {
             <h5><a>Design Principles</a></h5>
             <ul>
                 <li><a href="../single-responsibility-principle">我的購物車 - 單一職責原則 | Single Responsibility Principle</a></li>
-                <li><a href="">支付系統 - 開閉原則 | Open/Closed Principle</a></li>
+                <li><a href="../open-closed-principle">支付系統 - 開閉原則 | Open/Closed Principle</a></li>
                 <li><a href="">里氏替換原則 - Liskov Substitution Principle</a></li>
                 <li><a href="">介面隔離原則 - Interface Segregation Principle</a></li>
                 <li><a href="">依賴反轉原則 - Dependency Inversion Principle</a></li>
@@ -300,7 +302,7 @@ if (!doNotTrack) {
 <p><em>翻譯年糕：軟體實體像是類別、模組和函式，應該只對延展開放，但對修改關閉。</em></p>
 <p>簡單來說，就是當系統需要被擴充時，應該藉由新增新的程式碼來擴充新功能，而非修改原本的程式碼來擴充新功能。</p>
 <p>先來看個例子，我們以前到百貨公司買東西，可以刷信用卡付錢，也可以刷金融卡付錢（兩者的差別在於金融卡帳戶有錢才能刷）。對於銀行而言他們會判斷你用的是哪種卡，而去做扣款的動作。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">PayMent</span> <span style="color:#ff79c6">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Payment</span> <span style="color:#ff79c6">{</span>
     <span style="color:#8be9fd;font-style:italic">private</span> String msg<span style="color:#ff79c6">;</span>
     <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(){</span>
         System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>msg<span style="color:#ff79c6">);</span>
