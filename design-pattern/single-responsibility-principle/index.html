@@ -72,11 +72,11 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="單一職責原則 - Single Responsibility Principle">
+<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="單一職責原則 - Single Responsibility Principle">
 <meta itemprop="description" content="一個類別只能有一個改變的原因。你做你該做的事，我做我該做的事。你我互不干擾，這就是SRP。">
 <meta itemprop="datePublished" content="2020-09-10T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-09-10T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="357">
+<meta itemprop="wordCount" content="359">
 <meta itemprop="image" content="https://ppt.cc/fIlinx">
 
 
@@ -286,7 +286,7 @@ if (!doNotTrack) {
 <br>
 <ul>
 <li>
-<h3 id=_single-responsibility-principle->Single Responsibility Principle ?</h3>
+<h3 id=_定義>定義</h3>
 </li>
 </ul>
 <hr>
@@ -348,7 +348,14 @@ IShoppingCart : +paid();
 <br>
 <br>
 <br>
-<p>這是我們在購物會經過的流程。可以發現，shoppingCart內包含了兩個職責，<code>確認資料</code>以及<code>付費</code>。確認訂單、確認聯絡資料與確認收貨地點都是在檢查這筆訂單的資訊是否正確。而付費則是繳清這筆訂單所需的金額，很明顯地與其他三者的職責不同。若購物車需要有更多元的付費方法，比方說加入電子支付，又或是確認資料的功能要做更改，都會需要更動到整個interface，這樣可能會影響到其他不需要更動的功能。而一開始我們提到 <code>一個類別只能有一個改變的原因。</code>，也就是說我們只希望這個interface只因為一個原因（例如：異動付款相關功能）才做異動，所以我們就將這兩個職責劃分成兩類：</p>
+<p>這是我們在購物會經過的流程。可以發現，shoppingCart內包含了兩個職責，<code>確認資料</code>以及<code>付費</code>。確認訂單、確認聯絡資料與確認收貨地點都是在檢查這筆訂單的資訊是否正確。而付費則是繳清這筆訂單所需的金額，很明顯地與其他三者的職責不同。若購物車需要有更多元的付費方法，比方說加入電子支付，又或是確認資料的功能要做更改，都會需要更動到整個interface，這樣可能會影響到其他不需要更動的功能。</p>
+<ul>
+<li>
+<h3 id=_使用-single-responsibility-principle>使用 Single Responsibility Principle</h3>
+</li>
+</ul>
+<hr>
+<p>一開始我們提到 <code>一個類別只能有一個改變的原因。</code>，也就是說我們只希望這個interface只因為一個原因（例如：異動付款相關功能）才做異動，所以我們就將這兩個職責劃分成兩類：</p>
 <br>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">CheckData</span><span style="color:#ff79c6">{</span>
     <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">checkOrder</span><span style="color:#ff79c6">();</span>
@@ -626,8 +633,34 @@ ISP則是注重在客戶端層面，認為只需要呈現客戶端所需要的�
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_single-responsibility-principle-">
-												 Single Responsibility Principle ?
+						 					<a class="nav-link" href="#_%e5%ae%9a%e7%be%a9">
+												 定義
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e4%bd%bf%e7%94%a8-single-responsibility-principle">
+												 使用 Single Responsibility Principle
 											</a>
 										</li>
 						 
