@@ -4,7 +4,102 @@
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/blog/</loc>
-    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/categories/</loc>
+    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianjustin39.github.io/ianlife/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianjustin39.github.io/ianlife/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/design-pattern/</loc>
+    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/design-principle/</loc>
+    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/</loc>
+    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianjustin39.github.io/ianlife/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianjustin39.github.io/ianlife/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/series/</loc>
+    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianjustin39.github.io/ianlife/en/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianjustin39.github.io/ianlife/series/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/</loc>
+    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianjustin39.github.io/ianlife/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianjustin39.github.io/ianlife/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/categories/thec/</loc>
+    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/design-pattern/single-responsibility-principle/</loc>
+    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern/</loc>
+    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/design-pattern/design-patterns-and-principle/</loc>
+    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/design-pattern/what_is_design_pattern/</loc>
+    <lastmod>2020-09-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -23,38 +118,8 @@
   </url>
   
   <url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/</loc>
-    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ianjustin39.github.io/ianlife/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ianjustin39.github.io/ianlife/categories/"
-                />
-  </url>
-  
-  <url>
     <loc>https://ianjustin39.github.io/ianlife/tags/hugo/</loc>
     <lastmod>2020-05-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/</loc>
-    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ianjustin39.github.io/ianlife/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ianjustin39.github.io/ianlife/"
-                />
   </url>
   
   <url>
@@ -64,41 +129,6 @@
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/tags/masonry/</loc>
-    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/series/</loc>
-    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ianjustin39.github.io/ianlife/en/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ianjustin39.github.io/ianlife/series/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/</loc>
-    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ianjustin39.github.io/ianlife/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ianjustin39.github.io/ianlife/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/thec/</loc>
     <lastmod>2020-05-06T00:00:00+00:00</lastmod>
   </url>
   

@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+  <meta content="Design Pattern, Design Principle, 設計模式, 五大基本原則, 六大基本原則, 七大基本原則" name="keywords">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  
+  
+  
+  
+  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
+  <script src="/ianlife/js/bootstrap.js"></script>
+  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
+  
+  
+  
+  
+  <script src="/ianlife/js/jquery.magnific-popup.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="/ianlife/js/toc.js"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+  <script>
+   window.onload = function () {
+    let plantumlPrefix = "language-plantuml";
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
+      let image = document.createElement("IMG");
+      image.loading = 'lazy'; 
+      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
+      code.parentNode.insertBefore(image, code);
+      code.style.display = 'none';
+    });
+  };
+  </script>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta charset="utf-8">
+<title>Design Pattern的類型與原則 - Ian Tsai </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="Design Pattern的類型與原則">
+<meta itemprop="description" content="使用Design Pattern要先了解他的原則及分類，才能在實作中找到匹配的Pattern。">
+<meta itemprop="datePublished" content="2020-09-09T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-09-09T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="298">
+<meta itemprop="image" content="https://ppt.cc/fRZXrx">
+
+
+
+<meta itemprop="keywords" content="Design Pattern,Design Principle," /><meta property="og:title" content="Design Pattern的類型與原則" />
+<meta property="og:description" content="使用Design Pattern要先了解他的原則及分類，才能在實作中找到匹配的Pattern。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/design-patterns-and-principle/" />
+<meta property="og:image" content="https://ppt.cc/fRZXrx" />
+<meta property="article:published_time" content="2020-09-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-09T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ppt.cc/fRZXrx"/>
+
+<meta name="twitter:title" content="Design Pattern的類型與原則"/>
+<meta name="twitter:description" content="使用Design Pattern要先了解他的原則及分類，才能在實作中找到匹配的Pattern。"/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/ianlife/css/bundle.min.0c037ee5e40837985628b373e9760ef0820aaf44cb90ccc6dc34c45603970f2c.css" integrity="sha256-DAN&#43;5eQIN5hWKLNz6XYO8IIKr0TLkMzG3DTEVgOXDyw=">
+        <link rel="stylesheet" href="/ianlife/css/add-on.css">
+</head>
+
+  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
+  
+  
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ianlife/">
+        
+          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/photograph/" class="link"><i class='far fa-images'></i> Photograph</a>
+          
+        
+      
+      
+      
+
+    </menu>
+    
+
+    
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+</header>
+
+    <div id="wrapper">
+      
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    
+    <h2><a href="/ianlife/design-pattern/design-patterns-and-principle/">Design Pattern的類型與原則</a></h2>
+    
+    
+    <p>使用Design Pattern要先了解他的原則及分類，才能在實作中找到匹配的Pattern。</p>
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2020-09-09 00:00:00 &#43;0000 UTC">
+      September 9, 2020
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>2 minute read</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+  </section>
+  
+  <a href="/ianlife/design-pattern/design-patterns-and-principle/" class="image featured">
+    
+      <img src="https://ppt.cc/fRZXrx" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    </br>
+<div>
+    <div>
+        <h3 id=_Design-Pattern-Post-List>Design Pattern 系列文章導讀</h3>
+    </div>
+    <hr>
+    <div>
+        <br>
+            Design Pattern可以說是開發上大家都會遇到的一個課題，
+            這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns & Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。
+            預計目標主題如下，若有哪部分不熟的章節可以直接點進去看
+
+            <br>
+
+            註：可以利用<a href="https://www.jdoodle.com/online-java-compiler/" target="_blank">Online Java Compiler IDE</a>來跑範例程式碼。
+        </span>
+    </div>
+</br>
+    <ol>
+        <li>
+            <h5><a>新手村</a></h5>
+            <ul>
+                <li><a href="../what_is_design_pattern">什麼是Design Pattern?</a></li>
+                <li><a href="../design-patterns-and-principle">Design Pattern的類型與原則</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>Design Principles</a></h5>
+            <ul>
+                <li><a href="../single-responsibility-principle">單一職責原則 - Single Responsibility Principle</a></li>
+                <li><a href="">開閉原則 - Open/Closed Principle</a></li>
+                <li><a href="">里氏替換原則 - Liskov Substitution Principle</a></li>
+                <li><a href="">介面隔離原則 - Interface Segregation Principle</a></li>
+                <li><a href="">依賴反轉原則 - Dependency Inversion Principle</a></li>
+                <li><a href="">合成/聚合複用原則 - Composite/Aggregate Reuse Principle</a></li>
+                <li><a href="">迪米特法則 - Law of Demeter</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>Creational Patterns</a></h5>
+            <ul>
+                <li><a href="">超市與送貨員 - Singleton Pattern</a></li>
+                <li><a href="">開餐廳 - Factory Pattern</a></li>
+                <li><a href="">台式餐廳 & 義式餐廳 - Abstract Factory Pattern</a></li>
+                <li><a href="">組一台電腦 - Builder Pattern</a></li>
+                <li><a href="">Prototype Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>Structural Patterns</a></h5>
+            <ul>
+                <li><a href="">Adapter Pattern</a></li>
+                <li><a href="">Bridge Pattern</a></li>
+                <li><a href="">Composite Pattern</a></li>
+                <li><a href="">Decorator Pattern</a></li>
+                <li><a href="">Facade Pattern</a></li>
+                <li><a href="">Flyweight Pattern</a></li>
+                <li><a href="">Proxy Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>Behavioural Patterns</a></h5>
+            <ul>
+                <li><a href="">Chain of Responsibility Pattern</a></li>
+                <li><a href="">Command Pattern</a></li>
+                <li><a href="">Interpreter Pattern</a></li>
+                <li><a href="">Iterator Pattern</a></li>
+                <li><a href="">Mediator Pattern</a></li>
+                <li><a href="">Memento Pattern</a></li>
+                <li><a href="">Observer Pattern</a></li>
+                <li><a href="">State Pattern</a></li>
+                <li><a href="">Strategy Pattern</a></li>
+                <li><a href="">Template Pattern</a></li>
+                <li><a href="">Visitor Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>場外下注區</a></h5>
+            <ul>
+                <li><a href="">MVC Pattern</a></li>
+                <li><a href="">Anti-Patterns & Code Smells</a></li>
+                <li><a href="">Design Pattern VS 演算法</a></li>
+            </ul>
+        </li>
+    </ol>
+</div>
+
+<br>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_design-principle>Design Principle</h3>
+</li>
+</ul>
+<hr>
+<p>關於Design Principle，相信大家上網查都可以查到五大基本原則SOLID。但隨著時代的進步，技術及理論也會跟著進步及更新。現在查Design Principle，可能會有五大原則、六大原則甚至是七大原則。這裡會讓大家先初步認識七個Design Principle並舉一些簡單的例子，接下來幾篇會再詳細介紹每個Principle的內容。</p>
+<table>
+<thead>
+<tr>
+<th align="left">縮寫</th>
+<th align="left">名稱</th>
+<th align="left">翻譯年糕</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">SRP</td>
+<td align="left">Single Responsibility Principle</td>
+<td align="left">單一職責原則</td>
+</tr>
+<tr>
+<td align="left">OCP</td>
+<td align="left">Open Closed Principle</td>
+<td align="left">開閉原則</td>
+</tr>
+<tr>
+<td align="left">LSP</td>
+<td align="left">Liskov Substitution Principle</td>
+<td align="left">里氏替換原則</td>
+</tr>
+<tr>
+<td align="left">ISP</td>
+<td align="left">Interface Segregation Principles</td>
+<td align="left">介面隔離原則</td>
+</tr>
+<tr>
+<td align="left">DIP</td>
+<td align="left">Dependency Inversion Principle</td>
+<td align="left">依賴反轉原則</td>
+</tr>
+<tr>
+<td align="left">CARP</td>
+<td align="left">Composite/Aggregate Reuse Principle</td>
+<td align="left">合成/聚合複用原則</td>
+</tr>
+<tr>
+<td align="left">LKP</td>
+<td align="left">Least Knowledge Principle</td>
+<td align="left">最少知識原則</td>
+</tr>
+</tbody>
+</table>
+<br>
+<h4 id=_單一職責原則single-responsibility-principle>單一職責原則(Single Responsibility Principle)</h4>
+<p>一個類別專注做一件事，不應該將不相關的功能放在同一個程式碼內，使整體程式碼中的每個部分都與自己實作的功能相關。比如說購物車內有確認訂購內容、確認訂購人資料以及付款。很明顯付款跟與其他兩者的功能不同，所以不應該放在同一組程式碼內。</p>
+<br>
+<h4 id=_開閉原則open-closed-principle->開閉原則(Open Closed Principle )</h4>
+<p>系統需要被擴充時，應該藉由新增新的程式碼來擴充新功能，而非修改原本的程式碼來擴充新功能。如銀行付款系統，從以前金融卡、信用卡到現在電子支付的付款方式。每當增加新的付款方式，應該要新增的類別來實作，而不是在原本的程式碼內做新增。</p>
+<br>
+<h4 id=_里氏替換原則liskov-substitution-principle>里氏替換原則(Liskov Substitution Principle)</h4>
+<p>子類別可以擴充套件父類別的功能,但不改變父類別原有的功能。如同老鷹跟企鵝都是鳥，但老鷹會飛，企鵝不會。若鳥類中有一個fly的方法，而企鵝繼承後卻不能使用，因為企鵝不會飛。所以要需要覆寫fly，而這樣就違反了此原則。應該再分成會飛的鳥及不會飛的鳥來替代覆寫。</p>
+<br>
+<h4 id=_介面隔離原則interface-segregation-principles>介面隔離原則(Interface Segregation Principles)</h4>
+<p>類別不應該強迫依賴他們不使用的方法。一位資深工程師，他需要寫程式，也需要做報告。這是這間公司期待資深工程師所需要具備的技能。但一般工程師只會寫程式，並不會寫報告。所以應該要將技能分成工程技能及其他技能。讓對應的工程是去實作相對應的技能，而不是將他不會的事情強制依賴給他。</p>
+<br>
+<h4 id=_依賴反轉原則dependency-inversion-principle>依賴反轉原則(Dependency Inversion Principle)</h4>
+<p>高層模組不應該依賴低層模組，兩者皆應依賴於抽象;抽象不應該依賴細節，細節應該依賴於抽象。高低層模組好比呼叫者與被呼叫者關係，細節就是抽象類的實作。拿剛剛舉的付款的例子：用信用卡付款，程式內不應該將信用卡綁死在付款方法內，而是應該寫一個抽象的付款方法提供信用卡實作，再將抽象類別放入付款內。如此一來未來增加付款項目便不需要更動付款行為的內部邏輯，只需要增加付款項目的實作。</p>
+<br>
+<h4 id=_合成聚合複用原則compositeaggregate-reuse-principle>合成/聚合複用原則(Composite/Aggregate Reuse Principle)</h4>
+<p>在軟體開發中，一定會遇到套件重複使用的問題。而應該先考慮使用組合/聚合的方式，其次才是繼承。若要使用繼承，則須符合里氏替換原則。如汽車有汽油車及電動車，其中又有黑色及白色。若用繼承的方式會產生黑汽油車、白汽油車、黑電動車、白電動車。若再增加顏色，則類別會更多，耦合性會更高。所以應該將顏色抽出，這樣只需要選好車種後，再將顏色帶入，降低整體耦合及提高程式靈活性。</p>
+<br>
+<h4 id=_最少知識原則least-knowledge-principle>最少知識原則(Least Knowledge Principle)</h4>
+<p><strong>迪米特法則(Law of Demeter)</strong> 又稱最少知識原則(Least Knowledge Principle)。只與自己直接有關係的類別溝通。如同老師想要清點班級的人數，他只需要問班長現在班上有幾個人，不需要直接去班上一個一個看。</p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_design-pattern的分類>Design Pattern的分類</h3>
+</li>
+</ul>
+<hr>
+<p>Design Pattern分類有兩種，一種是常見的分類，也就是根據使用目的來分，可分成創建型模式（Creational Patterns）、結構型模式（Structural Patterns）以及行為型模式（Behavioural Patterns）。而依照作用範圍來劃分的話，則可分成類別模式（Class Patterns）以及物件模式（Object Patterns）兩種。而這系列文會用一班常見的三種分類來區分介紹。</p>
+<p><em>註：Object Patterns翻譯是對象模式，但個人覺得用物件講起來比較順。</em></p>
+<br>
+<h5 id="1-依照使用目的分類">1. 依照使用目的分類</h5>
+<p>創建型模式：<strong>如何建立物件</strong>，它的特點在於是<strong>將物件的建立與使用分開</strong>。</p>
+<p>結構型模式：關注於整體最終的結構，如何將類別及物件通過繼承和組合，構建出更加複雜的結構。</p>
+<p>行為型模式：類別與物件之間如何分職責以及合作完成單一物件無法獨立完成的任務。</p>
+<br>
+<h5 id="2-依照作用範圍的分類">2. 依照作用範圍的分類</h5>
+<p>類別模式：處理父類別與子類別間的關係，此關係藉由繼承建立，為靜態，在編譯時即確定。</p>
+<p>物件模式：處理物件之間的關係，此關係藉由合成或聚合來實現，執行時可以變化，動態性高。</p>
+<br>
+<table>
+<thead>
+<tr>
+<th align="left">Type</th>
+<th align="left">Creational Patterns</th>
+<th align="left">Structural Patterns</th>
+<th align="left">Behavioural Patterns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Class Patterns</td>
+<td align="left">Factory Method Pattern</td>
+<td align="left">Adapter Pattern</td>
+<td align="left">Template Pattern <br> Interpreter Pattern</td>
+</tr>
+<tr>
+<td align="left">Object Patterns</td>
+<td align="left">Singleton Pattern <br> Abstract Factory Pattern <br> Builder Pattern <br> Prototype Pattern</td>
+<td align="left">Bridge Pattern <br> Composite Pattern <br> Decorator Pattern <br> Facade Pattern <br> Flyweight Pattern <br> Proxy Pattern</td>
+<td align="left">Chain of Responsibility Pattern <br> Command Pattern<br> Iterator Pattern <br> Mediator Pattern <br> Memento Pattern <br> Observer Pattern <br> State Pattern <br> Strategy Pattern <br> Visitor Pattern</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>而其中的23種Design Pattern就會在後面的文章詳細介紹，就先不在這邊贅述。</p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_references>References</h3>
+</li>
+</ul>
+<hr>
+<ul>
+<li><a href="http://www.andrewchen.tw/2017/04/09/20170409_NOTE_%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F%E4%BA%94%E5%A4%A7%E5%9F%BA%E6%9C%AC%E5%8E%9F%E5%89%87SOLID/" target="_blank">設計模式五大基本原則 SOLID</a></li>
+<li><a href="http://c.biancheng.net/view/1317.html" target="_blank">软件设计模式概述</a></li>
+</ul>
+  </div>
+  <br>
+  <br>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern">從生活中認識Design Pattern</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-pattern">Design Pattern</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-principle">Design Principle</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+<div class="pagination">
+  
+    <a href="/ianlife/design-pattern/what_is_design_pattern/" class="button"><div class="previous"><div>什麼是Design Pattern?</div></div></a>
+  
+  
+    <a href="/ianlife/design-pattern/single-responsibility-principle/" class="button"><div class="next"><div>單一職責原則 - Single Responsibility Principle</div></div></a>
+  
+</div>
+
+
+        <div class="disqus markdown">
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+      </main>
+      
+      <div id="page-sidebar">
+        
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div>
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_Design-Pattern-Post-List">
+												 Design Pattern 系列文章導讀
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_design-principle">
+												 Design Principle
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%96%ae%e4%b8%80%e8%81%b7%e8%b2%ac%e5%8e%9f%e5%89%87single-responsibility-principle">
+												 單一職責原則(Single Responsibility Principle)
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e9%96%8b%e9%96%89%e5%8e%9f%e5%89%87open-closed-principle-">
+												 開閉原則(Open Closed Principle )
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e9%87%8c%e6%b0%8f%e6%9b%bf%e6%8f%9b%e5%8e%9f%e5%89%87liskov-substitution-principle">
+												 里氏替換原則(Liskov Substitution Principle)
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e4%bb%8b%e9%9d%a2%e9%9a%94%e9%9b%a2%e5%8e%9f%e5%89%87interface-segregation-principles">
+												 介面隔離原則(Interface Segregation Principles)
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e4%be%9d%e8%b3%b4%e5%8f%8d%e8%bd%89%e5%8e%9f%e5%89%87dependency-inversion-principle">
+												 依賴反轉原則(Dependency Inversion Principle)
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%90%88%e6%88%90%e8%81%9a%e5%90%88%e8%a4%87%e7%94%a8%e5%8e%9f%e5%89%87compositeaggregate-reuse-principle">
+												 合成/聚合複用原則(Composite/Aggregate Reuse Principle)
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e6%9c%80%e5%b0%91%e7%9f%a5%e8%ad%98%e5%8e%9f%e5%89%87least-knowledge-principle">
+												 最少知識原則(Least Knowledge Principle)
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_design-pattern%e7%9a%84%e5%88%86%e9%a1%9e">
+												 Design Pattern的分類
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_references">
+												 References
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+        <script src="/ianlife/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.75db2f45ac90858cf062e97bf111d0898f38a1aa55929a1baa5ba16e75aa292e.js" integrity="sha256-ddsvRayQhYzwYul78RHQiY84oapVkpobqluhbnWqKS4="></script>
+    <script src="/ianlife/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+      </div>
+    </div>
+    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+  </body>
+</html>

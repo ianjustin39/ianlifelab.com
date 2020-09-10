@@ -4,6 +4,7 @@
   <meta content="" name="keywords">
   <link rel="stylesheet" href="../css/magnific-popup.css">
   <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
   
   
   
@@ -24,21 +25,22 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   
+  
   <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
   <script>
-  (function(){
+   window.onload = function () {
     let plantumlPrefix = "language-plantuml";
     Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
       let image = document.createElement("IMG");
       image.loading = 'lazy'; 
       image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
       code.parentNode.insertBefore(image, code);
       code.style.display = 'none';
     });
-  })();
-  
-
+  };
   </script>
+  
   
   
 <script type="application/javascript">
@@ -99,7 +101,7 @@ if (!doNotTrack) {
 最近發現hugo可以快速架站，除了有template以外也可以自己更改裡面的配置
 ，對於一個前端小菜鳥來說，算是一大福音ＸＤ，於是開始了這條漫漫長路～"/>
 <meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.2cdb9a7c971ac2ee9f10dfc3a882b2a62caae6da0ca0f0b297ece19deafaab9a.css" integrity="sha256-LNuafJcawu6fEN/DqIKypiyq5toMoPCyl&#43;zhner6q5o=">
+<link rel="stylesheet" href="/ianlife/css/bundle.min.0c037ee5e40837985628b373e9760ef0820aaf44cb90ccc6dc34c45603970f2c.css" integrity="sha256-DAN&#43;5eQIN5hWKLNz6XYO8IIKr0TLkMzG3DTEVgOXDyw=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
@@ -186,48 +188,6 @@ if (!doNotTrack) {
 
   <section id="socnet-share">
     
-
-
-
-
-  
-    
-    <a href="//twitter.com/share?text=%e4%bd%bf%e7%94%a8Hugo%e5%bb%ba%e7%ab%8b%e5%80%8b%e4%ba%ba%e7%b6%b2%e9%a0%81&amp;url=https%3a%2f%2fianjustin39.github.io%2fianlife%2fget_started_hugo%2f" target="_blank" rel="noopener" class="share-btn twitter">
-        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
-      </a>
-  
-
-  
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fianjustin39.github.io%2fianlife%2fget_started_hugo%2f" target="_blank" rel="noopener" class="share-btn facebook">
-        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
-        </a>
-  
-
-  
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fianjustin39.github.io%2fianlife%2fget_started_hugo%2f&amp;title=%e4%bd%bf%e7%94%a8Hugo%e5%bb%ba%e7%ab%8b%e5%80%8b%e4%ba%ba%e7%b6%b2%e9%a0%81" target="_blank" rel="noopener" class="share-btn reddit">
-          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
-        </a>
-  
-
-  
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fianjustin39.github.io%2fianlife%2fget_started_hugo%2f&amp;title=%e4%bd%bf%e7%94%a8Hugo%e5%bb%ba%e7%ab%8b%e5%80%8b%e4%ba%ba%e7%b6%b2%e9%a0%81" target="_blank" rel="noopener" class="share-btn linkedin">
-            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
-          </a>
-  
-
-  
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fianjustin39.github.io%2fianlife%2fget_started_hugo%2f&amp;description=%e4%bd%bf%e7%94%a8Hugo%e5%bb%ba%e7%ab%8b%e5%80%8b%e4%ba%ba%e7%b6%b2%e9%a0%81" target="_blank" rel="noopener" class="share-btn pinterest">
-          <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
-        </a>
-  
-
-  
-        <a href="mailto:?subject=Check%20out%20this%20post%20by Ian%20Tsai&amp;body=https%3a%2f%2fianjustin39.github.io%2fianlife%2fget_started_hugo%2f" target="_blank" class="share-btn email" data-proofer-ignore>
-          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
-        </a>
-  
-
-
   </section>
   
   <a href="/ianlife/get_started_hugo/" class="image featured">
@@ -321,6 +281,7 @@ title                   = &quot;Ian Blog&quot;
     
     
       <li class="categories">
+        <i class="fas fa-folder"></i>
         <ul>
           
             
@@ -335,6 +296,7 @@ title                   = &quot;Ian Blog&quot;
     
     
       <li class="tags">
+        <i class="fas fa-tags"></i>
         <ul>
           
             
@@ -758,7 +720,7 @@ title                   = &quot;Ian Blog&quot;
 		
 	
         <script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.75db2f45ac90858cf062e97bf111d0898f38a1aa55929a1baa5ba16e75aa292e.js" integrity="sha256-ddsvRayQhYzwYul78RHQiY84oapVkpobqluhbnWqKS4="></script>
     <script src="/ianlife/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;
