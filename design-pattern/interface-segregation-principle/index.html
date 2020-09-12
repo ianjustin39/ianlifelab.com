@@ -428,7 +428,7 @@ JuniorEngineer work
 </code></pre><p>重新設計後，Senior和Junior所應該要會的技能已經被分類，Junior不在需要實作他不會的技能，他只需要專心的做她份內的事。未來若<strong>OtherSkill</strong>內需要增加其他工作時也不會影響JuniorEngineer的工作！！！</p>
 <p>我們來看看UML了解一下兩者結構上的差異：</p>
 <br>
-<img src='https://g.gravizo.com/svg?
+<p><img src='https://g.gravizo.com/svg?
 @startuml;
 interface Skill;
 SeniorEngineer -up-|> Skill;
@@ -437,11 +437,12 @@ Skill : +coding();
 Skill : +debug();
 Skill : +prepareSlides();
 @enduml
-'>
+'></p>
 <br>
 <p>上圖表示為我們原本的設計，如果把所有的技能都放在同一個interface的話，這樣被迫class都要實作每一個技能，但並不是每個技能都須要實作。所以我們把結構改成下圖：</p>
 <br>
-<img src='https://g.gravizo.com/svg?
+<br>
+<p><img src='https://g.gravizo.com/svg?
 @startuml;
 interface TechSkill;
 interface OtherSkill;
@@ -452,10 +453,11 @@ TechSkill : +coding();
 TechSkill : +debug();
 OtherSkill : +prepareSlides();
 @enduml
-'>
+'></p>
 <br>
 <p>可以發現，遵守ISP原則後，JuniorEngineer不再強迫要實作prepareSlides的function，他只需要做好TechSkill內的function即可。</p>
 <p>現在我們理解在一個interface內不需要將所有的功能都包在其中，應該挑出對應的需求放入，減低interface肥大的問題，也不需要煩惱class實作不需要的function問題，減少class間的耦合性。</p>
+<br>
 <br>
 <p><strong><a href="../single-responsibility-principle">SRP</a>與ISP的差異</strong></p>
 <p>看完這SRP與IRP兩篇的人可能會覺得，SRP跟IRP不都是拆分interface嗎？那有什麼不同？</p>
