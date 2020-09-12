@@ -244,7 +244,7 @@ if (!doNotTrack) {
             <h5><a>Creational Patterns</a></h5>
             <ul>
                 <li><a href="">超市與送貨員 - Singleton Pattern</a></li>
-                <li><a href="">開餐廳 - Factory Pattern</a></li>
+                <li><a href="">開一間餐廳 - Factory Pattern</a></li>
                 <li><a href="">台式餐廳 & 義式餐廳 - Abstract Factory Pattern</a></li>
                 <li><a href="">組一台電腦 - Builder Pattern</a></li>
                 <li><a href="">影分身之術 - Prototype Pattern</a></li>
@@ -420,13 +420,12 @@ Payment : +paid();
 <br>
 <p>這樣的設計就達到了一個interface只有一個職責的原則。需要增加付款方式就改動Payment，需要更改確認資料內容就更改CheckData。如此一來就符合SRP的目標<code>一個類別只能有一個改變的原因。</code></p>
 <br>
-<p><strong>SRP與ISP的差異：(補網址)</strong></p>
-<pre><code>看完這SRP與IRP兩篇的人可能會覺得，SRP跟IRP不都是拆分interface嗎？那有什麼不同？
-SRP的目的在於一個模組只能有承擔一個責任，
+<p><strong>SRP與<a href="../interface-segregation-principle">ISP</a>的差異</strong></p>
+<p>看完這SRP與IRP兩篇的人可能會覺得，SRP跟IRP不都是拆分interface嗎？那有什麼不同？</p>
+<pre><code>SRP的目的在於一個模組只能有承擔一個責任。
 ISP的目的在於不強迫實作的類別實作不需要的function。
-
-我們可以用不同的角度去看這件事。
-SRP注重的是設計層面，如何劃分功能的歸類，讓程式方便維護及擴充。
+</code></pre><p>我們可以用不同的角度去看這件事。</p>
+<pre><code>SRP注重的是設計層面，如何劃分功能的歸類，讓程式方便維護及擴充。
 ISP則是注重在客戶端層面，認為只需要呈現客戶端所需要的功能即可。
 </code></pre><br>
 <br>
