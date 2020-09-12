@@ -6,10 +6,20 @@
     <description>Recent content on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 12 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>公司內的工程師 - 介面隔離原則 | Interface Segregation Principle</title>
+      <link>https://ianjustin39.github.io/ianlife/design-pattern/interface-segregation-principle/</link>
+      <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/design-pattern/interface-segregation-principle/</guid>
+      <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
+   Design Pattern 系列文章導讀    Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE來跑範例程式碼。      新手村  什麼是Design Pattern? Design Pattern的類型與原則    Design Principles  我的購物車 - 單一職責原則 | Single Responsibility Principle 支付系統 - 開閉原則 | Open/Closed Principle 老鷹與企鵝 - 里氏替換原則 | Liskov Substitution Principle 公司內的工程師 - 介面隔離原則 | Interface Segregation Principle 銀行付款系統 - 依賴反轉原則 | Dependency Inversion Principle 汽油車 &amp; 電動車 - 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 與BillGates握手 - 迪米特法則 | Law of Demeter    Creational Patterns  超市與送貨員 - Singleton Pattern 開一間餐廳 - Factory Pattern 台式餐廳 &amp; 義式餐廳 - Abstract Factory Pattern 組一台電腦 - Builder Pattern 影分身之術 - Prototype Pattern    Structural Patterns  小紅帽與大野狼 - Adapter Pattern Bridge Pattern Composite Pattern Decorator Pattern Facade Pattern Flyweight Pattern Proxy Pattern    Behavioural Patterns  Chain of Responsibility Pattern Command Pattern Interpreter Pattern Iterator Pattern Mediator Pattern Memento Pattern Observer Pattern State Pattern Strategy Pattern Template Pattern Visitor Pattern    場外下注區  MVC Pattern Anti-Patterns &amp; Code Smells Design Pattern VS 演算法       定義    Clients should not be forced to depend on methods that they do not use.</description>
+    </item>
     
     <item>
       <title>老鷹與企鵝 - 里氏替換原則 | Liskov Substitution Principle</title>
