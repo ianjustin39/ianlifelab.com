@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>鐵人賽 on Life Story</title>
+    <link>https://ianjustin39.github.io/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD/</link>
+    <description>Recent content in 鐵人賽 on Life Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 15 Sep 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://ianjustin39.github.io/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>汽油車 &amp; 電動車 - 合成/聚合複用原則 | Composite/Aggregate Reuse Principle</title>
+      <link>https://ianjustin39.github.io/ianlife/design-pattern/composite-aggregate-reuse-principle/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/design-pattern/composite-aggregate-reuse-principle/</guid>
+      <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
+   Design Pattern 系列文章導讀     Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE來跑範例程式碼。      新手村  什麼是Design Pattern? Design Pattern的類型與原則    Design Principles  我的購物車 - 單一職責原則 | Single Responsibility Principle 支付系統 - 開閉原則 | Open/Closed Principle 老鷹與企鵝 - 里氏替換原則 | Liskov Substitution Principle 公司內的工程師 - 介面隔離原則 | Interface Segregation Principle 銀行付款系統 - 依賴反轉原則 | Dependency Inversion Principle 汽油車 &amp; 電動車 - 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 與BillGates握手 - 迪米特法則 | Law of Demeter    Creational Patterns  超市與送貨員 - Singleton Pattern 開一間餐廳 - Factory Pattern 台式餐廳 &amp; 義式餐廳 - Abstract Factory Pattern 組一台電腦 - Builder Pattern 影分身之術 - Prototype Pattern    Structural Patterns  小紅帽與大野狼 - Adapter Pattern Bridge Pattern Composite Pattern Decorator Pattern Facade Pattern Flyweight Pattern Proxy Pattern    Behavioural Patterns  Chain of Responsibility Pattern Command Pattern Interpreter Pattern Iterator Pattern Mediator Pattern Memento Pattern Observer Pattern State Pattern Strategy Pattern Template Pattern Visitor Pattern    場外下注區  MVC Pattern Anti-Patterns &amp; Code Smells Design Pattern VS 演算法       定義    盡量使用組合(contains-a)/聚合(has-a)方式來代替繼承(is-a)來達到重複使用的目的</description>
+    </item>
+    
+    <item>
+      <title>銀行付款系統 - 依賴反轉原則 | Dependency Inversion Principle</title>
+      <link>https://ianjustin39.github.io/ianlife/design-pattern/dependence-inversion-principle/</link>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/design-pattern/dependence-inversion-principle/</guid>
+      <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
+   Design Pattern 系列文章導讀     Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE來跑範例程式碼。      新手村  什麼是Design Pattern? Design Pattern的類型與原則    Design Principles  我的購物車 - 單一職責原則 | Single Responsibility Principle 支付系統 - 開閉原則 | Open/Closed Principle 老鷹與企鵝 - 里氏替換原則 | Liskov Substitution Principle 公司內的工程師 - 介面隔離原則 | Interface Segregation Principle 銀行付款系統 - 依賴反轉原則 | Dependency Inversion Principle 汽油車 &amp; 電動車 - 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 與BillGates握手 - 迪米特法則 | Law of Demeter    Creational Patterns  超市與送貨員 - Singleton Pattern 開一間餐廳 - Factory Pattern 台式餐廳 &amp; 義式餐廳 - Abstract Factory Pattern 組一台電腦 - Builder Pattern 影分身之術 - Prototype Pattern    Structural Patterns  小紅帽與大野狼 - Adapter Pattern Bridge Pattern Composite Pattern Decorator Pattern Facade Pattern Flyweight Pattern Proxy Pattern    Behavioural Patterns  Chain of Responsibility Pattern Command Pattern Interpreter Pattern Iterator Pattern Mediator Pattern Memento Pattern Observer Pattern State Pattern Strategy Pattern Template Pattern Visitor Pattern    場外下注區  MVC Pattern Anti-Patterns &amp; Code Smells Design Pattern VS 演算法       定義    依賴反轉原則(DIP)的定義有兩點：</description>
+    </item>
+    
+    <item>
+      <title>公司內的工程師 - 介面隔離原則 | Interface Segregation Principle</title>
+      <link>https://ianjustin39.github.io/ianlife/design-pattern/interface-segregation-principle/</link>
+      <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/design-pattern/interface-segregation-principle/</guid>
+      <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
+   Design Pattern 系列文章導讀     Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE來跑範例程式碼。      新手村  什麼是Design Pattern? Design Pattern的類型與原則    Design Principles  我的購物車 - 單一職責原則 | Single Responsibility Principle 支付系統 - 開閉原則 | Open/Closed Principle 老鷹與企鵝 - 里氏替換原則 | Liskov Substitution Principle 公司內的工程師 - 介面隔離原則 | Interface Segregation Principle 銀行付款系統 - 依賴反轉原則 | Dependency Inversion Principle 汽油車 &amp; 電動車 - 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 與BillGates握手 - 迪米特法則 | Law of Demeter    Creational Patterns  超市與送貨員 - Singleton Pattern 開一間餐廳 - Factory Pattern 台式餐廳 &amp; 義式餐廳 - Abstract Factory Pattern 組一台電腦 - Builder Pattern 影分身之術 - Prototype Pattern    Structural Patterns  小紅帽與大野狼 - Adapter Pattern Bridge Pattern Composite Pattern Decorator Pattern Facade Pattern Flyweight Pattern Proxy Pattern    Behavioural Patterns  Chain of Responsibility Pattern Command Pattern Interpreter Pattern Iterator Pattern Mediator Pattern Memento Pattern Observer Pattern State Pattern Strategy Pattern Template Pattern Visitor Pattern    場外下注區  MVC Pattern Anti-Patterns &amp; Code Smells Design Pattern VS 演算法       定義    Clients should not be forced to depend on methods that they do not use.</description>
+    </item>
+    
+    <item>
+      <title>老鷹與企鵝 - 里氏替換原則 | Liskov Substitution Principle</title>
+      <link>https://ianjustin39.github.io/ianlife/design-pattern/liskov-substitution-principle/</link>
+      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/design-pattern/liskov-substitution-principle/</guid>
+      <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
+   Design Pattern 系列文章導讀     Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE來跑範例程式碼。      新手村  什麼是Design Pattern? Design Pattern的類型與原則    Design Principles  我的購物車 - 單一職責原則 | Single Responsibility Principle 支付系統 - 開閉原則 | Open/Closed Principle 老鷹與企鵝 - 里氏替換原則 | Liskov Substitution Principle 公司內的工程師 - 介面隔離原則 | Interface Segregation Principle 銀行付款系統 - 依賴反轉原則 | Dependency Inversion Principle 汽油車 &amp; 電動車 - 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 與BillGates握手 - 迪米特法則 | Law of Demeter    Creational Patterns  超市與送貨員 - Singleton Pattern 開一間餐廳 - Factory Pattern 台式餐廳 &amp; 義式餐廳 - Abstract Factory Pattern 組一台電腦 - Builder Pattern 影分身之術 - Prototype Pattern    Structural Patterns  小紅帽與大野狼 - Adapter Pattern Bridge Pattern Composite Pattern Decorator Pattern Facade Pattern Flyweight Pattern Proxy Pattern    Behavioural Patterns  Chain of Responsibility Pattern Command Pattern Interpreter Pattern Iterator Pattern Mediator Pattern Memento Pattern Observer Pattern State Pattern Strategy Pattern Template Pattern Visitor Pattern    場外下注區  MVC Pattern Anti-Patterns &amp; Code Smells Design Pattern VS 演算法       定義    If for each object o1 of type S there is an object o2 of type T such that for all programs P defined in terms of T, the behavior of P is unchanged when o1 is substituted for o2 then S is a subtype of T.</description>
+    </item>
+    
+    <item>
+      <title>支付系統 - 開閉原則 | Open/Closed Principle</title>
+      <link>https://ianjustin39.github.io/ianlife/design-pattern/open-closed-principle/</link>
+      <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/design-pattern/open-closed-principle/</guid>
+      <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
+   Design Pattern 系列文章導讀     Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE來跑範例程式碼。      新手村  什麼是Design Pattern? Design Pattern的類型與原則    Design Principles  我的購物車 - 單一職責原則 | Single Responsibility Principle 支付系統 - 開閉原則 | Open/Closed Principle 老鷹與企鵝 - 里氏替換原則 | Liskov Substitution Principle 公司內的工程師 - 介面隔離原則 | Interface Segregation Principle 銀行付款系統 - 依賴反轉原則 | Dependency Inversion Principle 汽油車 &amp; 電動車 - 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 與BillGates握手 - 迪米特法則 | Law of Demeter    Creational Patterns  超市與送貨員 - Singleton Pattern 開一間餐廳 - Factory Pattern 台式餐廳 &amp; 義式餐廳 - Abstract Factory Pattern 組一台電腦 - Builder Pattern 影分身之術 - Prototype Pattern    Structural Patterns  小紅帽與大野狼 - Adapter Pattern Bridge Pattern Composite Pattern Decorator Pattern Facade Pattern Flyweight Pattern Proxy Pattern    Behavioural Patterns  Chain of Responsibility Pattern Command Pattern Interpreter Pattern Iterator Pattern Mediator Pattern Memento Pattern Observer Pattern State Pattern Strategy Pattern Template Pattern Visitor Pattern    場外下注區  MVC Pattern Anti-Patterns &amp; Code Smells Design Pattern VS 演算法       定義    Software entities like classes, modules and functions should be open for extension but closed for modifications.</description>
+    </item>
+    
+    <item>
+      <title>我的購物車 - 單一職責原則 | Single Responsibility Principle</title>
+      <link>https://ianjustin39.github.io/ianlife/design-pattern/single-responsibility-principle/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/design-pattern/single-responsibility-principle/</guid>
+      <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
+   Design Pattern 系列文章導讀     Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE來跑範例程式碼。      新手村  什麼是Design Pattern? Design Pattern的類型與原則    Design Principles  我的購物車 - 單一職責原則 | Single Responsibility Principle 支付系統 - 開閉原則 | Open/Closed Principle 老鷹與企鵝 - 里氏替換原則 | Liskov Substitution Principle 公司內的工程師 - 介面隔離原則 | Interface Segregation Principle 銀行付款系統 - 依賴反轉原則 | Dependency Inversion Principle 汽油車 &amp; 電動車 - 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 與BillGates握手 - 迪米特法則 | Law of Demeter    Creational Patterns  超市與送貨員 - Singleton Pattern 開一間餐廳 - Factory Pattern 台式餐廳 &amp; 義式餐廳 - Abstract Factory Pattern 組一台電腦 - Builder Pattern 影分身之術 - Prototype Pattern    Structural Patterns  小紅帽與大野狼 - Adapter Pattern Bridge Pattern Composite Pattern Decorator Pattern Facade Pattern Flyweight Pattern Proxy Pattern    Behavioural Patterns  Chain of Responsibility Pattern Command Pattern Interpreter Pattern Iterator Pattern Mediator Pattern Memento Pattern Observer Pattern State Pattern Strategy Pattern Template Pattern Visitor Pattern    場外下注區  MVC Pattern Anti-Patterns &amp; Code Smells Design Pattern VS 演算法       定義    There should never be more than one reason for a class to change.</description>
+    </item>
+    
+    <item>
+      <title>Design Pattern的類型與原則</title>
+      <link>https://ianjustin39.github.io/ianlife/design-pattern/design-patterns-and-principle/</link>
+      <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/design-pattern/design-patterns-and-principle/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ithelp.ithome.com.tw/articles/10235045&#34; target=&#34;_blank&#34;&gt;本系列文章同步分享於IT邦幫忙第12屆鐵人賽&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;br&gt;</description>
+    </item>
+    
+    <item>
+      <title>什麼是Design Pattern?</title>
+      <link>https://ianjustin39.github.io/ianlife/design-pattern/what_is_design_pattern/</link>
+      <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/design-pattern/what_is_design_pattern/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ithelp.ithome.com.tw/articles/10234830&#34; target=&#34;_blank&#34;&gt;本系列文章同步分享於IT邦幫忙第12屆鐵人賽&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;自從當上了工程師後，大多數時間都負責後端的程式開發，從最一開始設計api到現在sdk的經驗中，了解到一個好的程式架構及設計，不只可以讓後續維運成本降低，往後要擴充也會相對容易許多。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
