@@ -235,8 +235,8 @@ if (!doNotTrack) {
                 <li><a href="../liskov-substitution-principle">老鷹與企鵝 - 里氏替換原則 | Liskov Substitution Principle</a></li>
                 <li><a href="../interface-segregation-principle">公司內的工程師 - 介面隔離原則 | Interface Segregation Principle</a></li>
                 <li><a href="../dependence-inversion-principle">銀行付款系統 - 依賴反轉原則 | Dependency Inversion Principle</a></li>
-                <li><a href="">汽油車 & 電動車 - 合成/聚合複用原則 | Composite/Aggregate Reuse Principle</a></li>
-                <li><a href="">與BillGates握手 - 迪米特法則 | Law of Demeter</a></li>
+                <li><a href="../composite-aggregate-reuse-principle">汽油車 & 電動車 - 合成/聚合複用原則 | Composite/Aggregate Reuse Principle</a></li>
+                <li><a href="../law-of-demeter">與BillGates握手 - 迪米特法則 | Law of Demeter</a></li>
             </ul>
         </li>
         <li>
@@ -308,7 +308,7 @@ if (!doNotTrack) {
 </ul>
 <hr>
 <p>在使用LoF時，除了知道了定義以外，還要了解LoF中的四層含義</p>
-<h5 id="1-只和朋友交流">1. 只和朋友交流</h5>
+<h4 id=_1-只和朋友交流>1. 只和朋友交流</h4>
 <p>LoD有一段英文的解釋，<code>Only talk to your immediate friends; 只與直接的朋友講話</code>。什麼是朋友？兩個物件只要有耦合，就會成為朋友。好比說：合成、聚合及依賴。
 例如：老師要班長清點班上人數，就清點這件事來說，老師只需要跟班長有耦合，不需要跟班級有耦合。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Clazz</span> <span style="color:#ff79c6">{</span>
@@ -345,7 +345,7 @@ if (!doNotTrack) {
 </code></pre></div><p><strong>output</strong></p>
 <pre><code>共30人！！
 </code></pre><br>
-<h5 id="2-朋友間也應該有距離">2. 朋友間也應該有距離</h5>
+<h4 id=_2-朋友間也應該有距離>2. 朋友間也應該有距離</h4>
 <p>就算是朋友，也不可能什麼都知道。一個公開類別的public屬性或方法越多，修改時的風險也會跟著提高，所以在系統在設計時應該反覆衡量以下幾點：</p>
 <pre><code>1. 是否還可以再减少public方法和屬性,
 2. 是否可以修改為private、package、protected等權限,
@@ -447,7 +447,7 @@ if (!doNotTrack) {
 </code></pre><br>
 <p>現在JavaJDK類別內的安裝的步驟downloadJDK和setEnv變成private，開放了一個install()供外部呼叫。如此一來即使要修改JAVA類別內安裝的步驟或邏輯，也不會影響到其他類別。</p>
 <br>
-<h5 id="3-是自己的就是自己的">3. 是自己的就是自己的</h5>
+<h4 id=_3-是自己的就是自己的>3. 是自己的就是自己的</h4>
 <p>一個方法，放在本類別沒問題，但放在其他類別也不會出錯。checkVer</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#ff79c6">import</span> java.util.Random<span style="color:#ff79c6">;</span>
 
@@ -510,7 +510,7 @@ if (!doNotTrack) {
 </code></pre></div><br>
 <p>將第二點的範例做了一下更改，發現isInstalledJava()放在InstallSoftware類別內或是JavaJDK類別內都不會有問題。所以這個原則的意思就是：如果一個方法放在本類中，不增加類別間關係，也不對本類產生負面影響，那就可以放到本類中。</p>
 <br>
-<h5 id="4-謹慎使用serializable">4. 謹慎使用Serializable</h5>
+<h4 id=_4-謹慎使用serializable>4. 謹慎使用Serializable</h4>
 <p>若使用不當，未來修改屬性，序列化時會拋異常NotSerializableException。</p>
 <p>詳細可以參考這篇<strong><a href="https://www.jyt0532.com/2017/09/29/implement-serializable-judiciously/" target="_blank">謹慎實現Serializable介面</a></strong>
 <br>
@@ -839,6 +839,126 @@ BillGates跟Me握手！！
 										</li>
 						 
 								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_1-%e5%8f%aa%e5%92%8c%e6%9c%8b%e5%8f%8b%e4%ba%a4%e6%b5%81">
+												 1. 只和朋友交流
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_2-%e6%9c%8b%e5%8f%8b%e9%96%93%e4%b9%9f%e6%87%89%e8%a9%b2%e6%9c%89%e8%b7%9d%e9%9b%a2">
+												 2. 朋友間也應該有距離
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_3-%e6%98%af%e8%87%aa%e5%b7%b1%e7%9a%84%e5%b0%b1%e6%98%af%e8%87%aa%e5%b7%b1%e7%9a%84">
+												 3. 是自己的就是自己的
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_4-%e8%ac%b9%e6%85%8e%e4%bd%bf%e7%94%a8serializable">
+												 4. 謹慎使用Serializable
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
 								
 									</ul>
 								
