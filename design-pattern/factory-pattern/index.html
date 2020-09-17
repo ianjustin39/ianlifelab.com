@@ -441,7 +441,7 @@ if (!doNotTrack) {
 <h4 id=_sample-factory-pattern-實作>Sample Factory Pattern 實作</h4>
 <p>在現實生活中，餐廳會跟肉廠叫肉，肉送到餐廳後再進行烹煮。這邊也是一樣，我們將建立食材物件的邏輯額外拉出來，取名叫做mealFactory，這裡面就是放置上述if-else的邏輯：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MealFactory</span><span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createＭeal</span><span style="color:#ff79c6">(</span>String mealType<span style="color:#ff79c6">){</span>
+  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(</span>String mealType<span style="color:#ff79c6">){</span>
     CookMeal meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">;</span>
 
     <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Steak&#34;</span><span style="color:#ff79c6">)){</span>
@@ -454,7 +454,7 @@ if (!doNotTrack) {
     <span style="color:#ff79c6">return</span> meal<span style="color:#ff79c6">;</span>
   <span style="color:#ff79c6">}</span>
 <span style="color:#ff79c6">}</span>
-</code></pre></div><p>mealFactory我們稱做factory class，裡面有一個createＭeal的方法，由這個方法去決定產出哪些食材，也就是說統一在這個工廠內生產食材物件。</p>
+</code></pre></div><p>mealFactory我們稱做factory class，裡面有一個createMeal的方法，由這個方法去決定產出哪些食材，也就是說統一在這個工廠內生產食材物件。</p>
 <p>接著因為餐廳不在由自己產生食材，變成統一由工廠送來餐廳，所以我們逮來整裡餐廳（Restaurant.class）：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Restaurant</span><span style="color:#ff79c6">{</span>
   <span style="color:#8be9fd;font-style:italic">private</span> MealFactory factory<span style="color:#ff79c6">;</span>
@@ -466,7 +466,7 @@ if (!doNotTrack) {
   <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">(</span>String mealType<span style="color:#ff79c6">){</span>
     CookMeal meal<span style="color:#ff79c6">;</span>
 
-    meal <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">.</span><span style="color:#50fa7b">createＭeal</span><span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">);</span>
+    meal <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">.</span><span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">);</span>
 
     meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
     meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
@@ -475,7 +475,7 @@ if (!doNotTrack) {
   <span style="color:#ff79c6">}</span>
 
 <span style="color:#ff79c6">}</span>
-</code></pre></div><p>factory就是餐廳與工廠合作的管道，只要將指定的食材名稱傳入工廠的createＭeal，工廠就會生產食材物件給餐廳，供餐廳烹煮，如同我們一開始講的：</p>
+</code></pre></div><p>factory就是餐廳與工廠合作的管道，只要將指定的食材名稱傳入工廠的createMeal，工廠就會生產食材物件給餐廳，供餐廳烹煮，如同我們一開始講的：</p>
 <p><code>藉由定義一個class來負責建立其他class的instance，被建立的instance通常都具有共同的super class</code></p>
 <p>經過上述的例子，相信大家對sample factory pattern有了初步的認識，接下來我們來看一下UML來比較有用pattern以及沒有用pattern的差異。</p>
 <br>
@@ -503,7 +503,7 @@ Chicken -up-|> CookMeal;
 Pork -up-|> CookMeal;
 Restaurant : CookMeal;
 Restaurant : +mealOrder%28%29;
-MealFactory : +createＭeal%28%29;
+MealFactory : +createMeal%28%29;
 CookMeal : +cook%28%29;
 CookMeal : +delivery%28%29;
 @enduml
@@ -617,7 +617,7 @@ CookMeal : +delivery%28%29;
   <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">(</span>String mealType<span style="color:#ff79c6">){</span>
     CookMeal meal<span style="color:#ff79c6">;</span>
 
-    meal <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">.</span><span style="color:#50fa7b">createＭeal</span><span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">);</span>
+    meal <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">.</span><span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">);</span>
 
     meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
     meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
@@ -627,7 +627,7 @@ CookMeal : +delivery%28%29;
 <span style="color:#ff79c6">}</span>
 
 <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MealFactory</span><span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createＭeal</span><span style="color:#ff79c6">(</span>String mealType<span style="color:#ff79c6">){</span>
+  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(</span>String mealType<span style="color:#ff79c6">){</span>
     CookMeal meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">;</span>
 
     <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Steak&#34;</span><span style="color:#ff79c6">)){</span>
@@ -644,20 +644,20 @@ CookMeal : +delivery%28%29;
 <h4 id=_factory-method-pattern-實作>Factory Method Pattern 實作</h4>
 <br>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">MealFactory</span><span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createＭeal</span><span style="color:#ff79c6">();</span>
+  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">();</span>
 <span style="color:#ff79c6">}</span>
 <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SteakFactory</span> <span style="color:#8be9fd;font-style:italic">implements</span> MealFactory<span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createＭeal</span><span style="color:#ff79c6">(){</span>
+  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(){</span>
     <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> Steak<span style="color:#ff79c6">();</span>
   <span style="color:#ff79c6">}</span>
 <span style="color:#ff79c6">}</span>
 <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ChickenFactory</span> <span style="color:#8be9fd;font-style:italic">implements</span> MealFactory<span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createＭeal</span><span style="color:#ff79c6">(){</span>
+  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(){</span>
     <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> Chicken<span style="color:#ff79c6">();</span>
   <span style="color:#ff79c6">}</span>
 <span style="color:#ff79c6">}</span>
 <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">PorkFactory</span> <span style="color:#8be9fd;font-style:italic">implements</span> MealFactory<span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createＭeal</span><span style="color:#ff79c6">(){</span>
+  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(){</span>
     <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> Pork<span style="color:#ff79c6">();</span>
   <span style="color:#ff79c6">}</span>
 <span style="color:#ff79c6">}</span>
@@ -673,7 +673,7 @@ CookMeal : +delivery%28%29;
   <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">(){</span>
     CookMeal meal<span style="color:#ff79c6">;</span>
 
-    meal <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">.</span><span style="color:#50fa7b">createＭeal</span><span style="color:#ff79c6">();</span>
+    meal <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">.</span><span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">();</span>
 
     meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
     meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
@@ -713,7 +713,7 @@ ChickenFactory -up-|> MealFactory;
 SteakFactory -up-|> MealFactory;
 Restaurant : CookMeal;
 Restaurant : +mealOrder%28%29;
-MealFactory : +createＭeal%28%29;
+MealFactory : +createMeal%28%29;
 CookMeal : +cook%28%29;
 CookMeal : +delivery%28%29;
 @enduml
