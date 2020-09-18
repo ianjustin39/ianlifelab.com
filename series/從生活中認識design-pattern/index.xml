@@ -6,10 +6,19 @@
     <description>Recent content in 從生活中認識Design Pattern on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 18 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>台式餐廳 &amp; 義式餐廳 - 抽象工廠模式 | Abstract Factory Pattern</title>
+      <link>https://ianjustin39.github.io/ianlife/design-pattern/abstract-factory-pattern/</link>
+      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/design-pattern/abstract-factory-pattern/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>開一間餐廳 - 工廠模式 | Factory Pattern</title>
