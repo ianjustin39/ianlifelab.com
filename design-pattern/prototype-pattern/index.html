@@ -1,0 +1,977 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+  <meta content="Design Pattern, Creational Pattern, Prototype Pattern, 原型模式" name="keywords">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  
+  
+  
+  
+  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
+  <script src="/ianlife/js/bootstrap.js"></script>
+  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
+  
+  
+  
+  
+  <script src="/ianlife/js/jquery.magnific-popup.js"></script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="/ianlife/js/toc.js"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+  <script>
+   window.onload = function () {
+    let plantumlPrefix = "language-plantuml";
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
+      let image = document.createElement("IMG");
+      image.loading = 'lazy'; 
+      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
+      code.parentNode.insertBefore(image, code);
+      code.style.display = 'none';
+    });
+  };
+  </script>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta charset="utf-8">
+<title>影分身之術 - 原型模式 | Prototype Pattern - Ian Tsai </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="影分身之術 - 原型模式 | Prototype Pattern">
+<meta itemprop="description" content="建立原型物件，透過複製的方式建立大量物件，而非傳統的建立方式。這為原型模式主張的目標，不但能提升效能，也隱藏了創建新物件的復雜性。">
+<meta itemprop="datePublished" content="2020-09-21T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-09-21T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="830">
+<meta itemprop="image" content="https://ppt.cc/fITDDx">
+
+
+
+<meta itemprop="keywords" content="Design Pattern,Creational Patterns,鐵人賽," /><meta property="og:title" content="影分身之術 - 原型模式 | Prototype Pattern" />
+<meta property="og:description" content="建立原型物件，透過複製的方式建立大量物件，而非傳統的建立方式。這為原型模式主張的目標，不但能提升效能，也隱藏了創建新物件的復雜性。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/prototype-pattern/" />
+<meta property="og:image" content="https://ppt.cc/fITDDx" />
+<meta property="article:published_time" content="2020-09-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-21T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ppt.cc/fITDDx"/>
+
+<meta name="twitter:title" content="影分身之術 - 原型模式 | Prototype Pattern"/>
+<meta name="twitter:description" content="建立原型物件，透過複製的方式建立大量物件，而非傳統的建立方式。這為原型模式主張的目標，不但能提升效能，也隱藏了創建新物件的復雜性。"/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/ianlife/css/bundle.min.0c037ee5e40837985628b373e9760ef0820aaf44cb90ccc6dc34c45603970f2c.css" integrity="sha256-DAN&#43;5eQIN5hWKLNz6XYO8IIKr0TLkMzG3DTEVgOXDyw=">
+        <link rel="stylesheet" href="/ianlife/css/add-on.css">
+</head>
+
+  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
+  
+  
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ianlife/">
+        
+          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/photograph/" class="link"><i class='far fa-images'></i> Photograph</a>
+          
+        
+      
+      
+      
+
+    </menu>
+    
+
+    
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+</header>
+
+    <div id="wrapper">
+      
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    
+    <h2><a href="/ianlife/design-pattern/prototype-pattern/">影分身之術 - 原型模式 | Prototype Pattern</a></h2>
+    
+    
+    <p>建立原型物件，透過複製的方式建立大量物件，而非傳統的建立方式。這為原型模式主張的目標，不但能提升效能，也隱藏了創建新物件的復雜性。</p>
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2020-09-21 00:00:00 &#43;0000 UTC">
+      September 21, 2020
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>4 minute read</p>
+    
+    <p>
+      <span id="busuanzi_container_page_pv">
+        PV: <span id="busuanzi_value_page_pv"></span>
+      </span>
+    </p>
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+  </section>
+  
+  <a href="/ianlife/design-pattern/prototype-pattern/" class="image featured">
+    
+      <img src="https://ppt.cc/fITDDx" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <p><strong><a href="" target="_blank">本系列文章同步分享於IT邦幫忙第12屆鐵人賽</a></strong></p>
+</br>
+<div>
+    <div>
+        <h3 id=_Design-Pattern-Post-List>Design Pattern 系列文章導讀</h3>
+    </div>
+    <hr>
+    <div>
+        <span>
+            Design Pattern可以說是開發上大家都會遇到的一個課題，
+            這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns & Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。
+            預計目標主題如下，若有哪部分不熟的章節可以直接點進去看
+
+            <br>
+
+            註：可以利用<a href="https://www.jdoodle.com/online-java-compiler/" target="_blank">Online Java Compiler IDE</a>來跑範例程式碼。
+        </span>
+    </div>
+</br>
+    <ol>
+        <li>
+            <h5><a>設計模式 - 入門篇</a></h5>
+            <ul>
+                <li><a href="../what_is_design_pattern">什麼是Design Pattern?</a></li>
+                <li><a href="../design-patterns-and-principle">Design Pattern的類型與原則</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 原則篇 | Design Principles</a></h5>
+            <ul>
+                <li><a href="../single-responsibility-principle">我的購物車 - 單一職責原則 | Single Responsibility Principle</a></li>
+                <li><a href="../open-closed-principle">支付系統 - 開閉原則 | Open/Closed Principle</a></li>
+                <li><a href="../liskov-substitution-principle">老鷹與企鵝 - 里氏替換原則 | Liskov Substitution Principle</a></li>
+                <li><a href="../interface-segregation-principle">公司內的工程師 - 介面隔離原則 | Interface Segregation Principle</a></li>
+                <li><a href="../dependence-inversion-principle">銀行付款系統 - 依賴反轉原則 | Dependency Inversion Principle</a></li>
+                <li><a href="../composite-aggregate-reuse-principle">汽油車 & 電動車 - 合成/聚合複用原則 | Composite/Aggregate Reuse Principle</a></li>
+                <li><a href="../law-of-demeter">與BillGates握手 - 迪米特法則 | Law of Demeter</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 創建型模型篇 | Creational Patterns</a></h5>
+            <ul>
+                <li><a href="../singleton-pattern">超市與送貨員 - 單例模式 | Singleton Pattern</a></li>
+                <li><a href="../factory-pattern">開一間餐廳 - 工廠模式 | Factory Pattern</a></li>
+                <li><a href="../abstract-factory-pattern">台式餐廳 & 義式餐廳 - 抽象工廠模式 | Abstract Factory Pattern</a></li>
+                <li><a href="../builder-pattern">組一台電腦 - 生成器模式 | Builder Pattern</a></li>
+                <li><a href="">影分身之術 - 原型模式 | Prototype Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 結構型模型篇 | Structural Patterns</a></h5>
+            <ul>
+                <li><a href="">小紅帽與大野狼 - 適配器模式 | Adapter Pattern</a></li>
+                <li><a href="">女朋友的LV包包 - 橋接模式 | Bridge Pattern</a></li>
+                <li><a href="">中秋烤肉 - 组合模式 | Composite Pattern</a></li>
+                <li><a href="">I am Optimus Prime - 裝飾者模式 | Decorator Pattern</a></li>
+                <li><a href="">銀行貸款 - 外觀模式 | Facade Pattern</a></li>
+                <li><a href="">Flyweight Pattern</a></li>
+                <li><a href="">Proxy Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 行為型模型篇 | Behavioural Patterns</a></h5>
+            <ul>
+                <li><a href="">Chain of Responsibility Pattern</a></li>
+                <li><a href="">Command Pattern</a></li>
+                <li><a href="">Interpreter Pattern</a></li>
+                <li><a href="">Iterator Pattern</a></li>
+                <li><a href="">Mediator Pattern</a></li>
+                <li><a href="">Memento Pattern</a></li>
+                <li><a href="">Observer Pattern</a></li>
+                <li><a href="">State Pattern</a></li>
+                <li><a href="">Strategy Pattern</a></li>
+                <li><a href="">Template Pattern</a></li>
+                <li><a href="">Visitor Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 番外篇</a></h5>
+            <ul>
+                <li><a href="">Anti-Patterns</a></li>
+                <li><a href="">Code Smells</a></li>
+                <li><a href="">Design Pattern VS 演算法</a></li>
+            </ul>
+        </li>
+    </ol>
+</div>
+
+<br>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_定義>定義</h3>
+</li>
+</ul>
+<hr>
+<p><code>用原型例項指定建立物件的種類，並且通過拷貝這些原型建立新的物件。</code></p>
+<p>看完這個定義，大概可以猜到，這個模式的用途是讓我們可以透過複製的方式產生一個新物件。也許有人會說，我要建立物件，new一個不就好了？沒錯，是可以用new的方式建立一個新的物件。但是建立物件這件事是相當耗資源的。而如果在系統中，又需要重複建立相同的物件，勢必會給系統造成很大的負擔。</p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_prototype-pattern-三巨頭>Prototype Pattern 三巨頭</h3>
+</li>
+</ul>
+<p>－－－</p>
+<p>老樣子，在使用Prototype Pattern之前，還是得先認識其中的成員</p>
+<table>
+<thead>
+<tr>
+<th align="left">成員</th>
+<th align="left">功用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Prototype</td>
+<td align="left">定義實體原型物件必須實作的介面。</td>
+</tr>
+<tr>
+<td align="left">ConcretePrototype</td>
+<td align="left">實作抽象介面的clone()方法，為可被複製的對象。</td>
+</tr>
+<tr>
+<td align="left">Client</td>
+<td align="left">使用ConcretePrototype中的clone()來複製新的物件。</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>Java中就帶有Prototype在的interface Cloneable，效能上比new更加的優良。ConcretePrototype會去實作Prototype的clone()，其中分成淺複製及深複製兩種。最後由Client使用ConcretePrototype完成複製物件的行為。</p>
+<br>
+<p><img src='https://g.gravizo.com/svg?
+@startuml;
+skinparam linetype ortho;
+interface Prototype;
+ConcretePrototype1 -up-> Prototype;
+ConcretePrototype2 -up-> Prototype;
+Client -right- Prototype;
+note "return copy of self" as N1;
+note "return copy of self" as N2;
+note "p = prototype.clone()" as CN;
+ConcretePrototype1 .down. N1;
+ConcretePrototype2 .down. N2;
+Client .down. CN;
+Prototype : +clone();
+ConcretePrototype1 : +clone();
+ConcretePrototype2 : +clone();
+Client : +operation(); 
+@enduml
+'></p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_淺複製--深複製>淺複製 &amp; 深複製</h3>
+</li>
+</ul>
+<hr>
+<p>要實作Prototype Pattern有兩種方法，淺複製(Shallow Clone)和深複製(Deep Clone)。而在複製的資料類型中，又分為基本資料類型（int、double、byte、boolean&hellip;等）以及引用類型（class、interface&hellip;等）。</p>
+<h5 id="淺複製shallow-clone">淺複製（Shallow Clone）</h5>
+<pre><code>如果原型物件的成員變數為基本資料類型，將複製一份給新的物件；
+如果原型物件的成員變數為引用類型，則只將原本的物件位址複製給新的物件。
+也就是原型物件和複製物件的成員變數指向相同的内存位址。
+
+意思就是，淺複製中，只複製了自己本身以及基本資料類型的成員，而引用類型的成員並沒有被複製。
+</code></pre>
+<br>
+<p><img src='https://g.gravizo.com/svg?
+@startuml;
+%28原・引用類型成員變數%29 as c;
+note right: 複製位址;
+[原・原型物件] as p1;
+[新・原型物件] as p2;
+p1 .right.> p2: 複製;
+%28原・基本資料類型成員變數%29 as v1;
+%28新・基本資料類型成員變數%29 as v2;
+v1 .right.> v2: 複製;
+c-down- p1;
+c -down- p2;
+v1 -up- p1;
+v2 -up- p2;
+@enduml;
+'></p>
+<br>    
+<h5 id="深複製deep-clone">深複製（Deep Clone）</h5>
+<pre><code>如果原型物件的成員變數不管是基本資料類型或是引用類型，都會複製給新的物件。
+
+簡單來說，深複製中，除了自己被複製，所有的變數也被複製給新的物件。
+</code></pre>
+<br>
+<p><img src='https://g.gravizo.com/svg?
+@startuml;
+[原・原型物件] as p1;
+[新・原型物件] as p2;
+p1 .right.> p2: 複製;
+%28原・引用類型成員變數%29 as c1;
+%28新・引用類型成員變數%29 as c2;
+c1 .right.> c2: 複製;
+%28原・基本資料類型成員變數%29 as v1;
+%28新・基本資料類型成員變數%29 as v2;
+v1 .right.> v2: 複製;
+c1 -down- p1;
+c2 -down- p2;
+v1 -up- p1;
+v2 -up- p2;
+@enduml;
+'></p>
+<br>
+<p>若對兩種複製方式還有興趣可以點<a href="https://www.cnblogs.com/Qian123/p/5710533.html#_label2" target="_blank">這裏</a>參考。</p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_prototype-pattern-實作>Prototype Pattern 實作</h3>
+</li>
+</ul>
+<hr>
+<p><code>多重影分身之術～～～～</code></p>
+<p>相信大家都有看過火影忍者，沒看過的話，可以看一下ＸＤ</p>
+<p>個人主觀認為，影分身拿來舉這個例子應該滿適合的。鳴人（以下稱拿嚕頭）使用影分身，複製出多個拿嚕頭。藉由影分身修煉的經驗值回到本體身上。他身上的查克拉就很像基本數據類型；而經驗值則是引用類型。所以我們來看看拿嚕頭到底是怎樣使用影分身的。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">NARUTO</span> <span style="color:#8be9fd;font-style:italic">implements</span> Cloneable <span style="color:#ff79c6">{</span>
+    NARUTO<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO create success！&#34;</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">clone</span><span style="color:#ff79c6">()</span> <span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException<span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO clone success&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">(</span>NARUTO<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SHADOW_CLONE_JUTSU</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException
+    <span style="color:#ff79c6">{</span>
+        NARUTO naruto <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> NARUTO<span style="color:#ff79c6">();</span>
+        NARUTO cloneNaruto<span style="color:#ff79c6">=(</span>NARUTO<span style="color:#ff79c6">)</span>naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO == clone NARUTO : &#34;</span> <span style="color:#ff79c6">+</span> <span style="color:#ff79c6">(</span>naruto<span style="color:#ff79c6">==</span>cloneNaruto<span style="color:#ff79c6">));</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p><strong>output</strong></p>
+<pre><code>NARUTO create success
+NARUTO clone success
+NARUTO == clone NARUTO : false
+</code></pre><p>class NARUTO先實作Cloneable（java.lang.Cloneable，這邊就不多做解釋），然後複寫其內部的clone()。接著clinet將拿嚕頭建立起來後，還需要多個拿嚕頭。就使用NARUTO內的clone，就會有許多的拿嚕頭被複製出來。而這些拿嚕頭在經過比對後，都是一個獨立的物件，並非同一個。</p>
+<p>而現在我們要讓影分身也有個地方住，所以我們增加了一個Address的類別。並將那方到NARUTO類別內。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Address</span>  <span style="color:#ff79c6">{</span>  
+    <span style="color:#8be9fd;font-style:italic">private</span> String addr<span style="color:#ff79c6">;</span>  
+    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">get</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>  
+        <span style="color:#ff79c6">return</span> addr<span style="color:#ff79c6">;</span>  
+    <span style="color:#ff79c6">}</span>  
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span>String addr<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>  
+        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">addr</span> <span style="color:#ff79c6">=</span> addr<span style="color:#ff79c6">;</span>  
+    <span style="color:#ff79c6">}</span>  
+<span style="color:#ff79c6">}</span> 
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">NARUTO</span> <span style="color:#8be9fd;font-style:italic">implements</span> Cloneable <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> Address addr<span style="color:#ff79c6">;</span>  
+
+    NARUTO<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO create success！&#34;</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> Address <span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>  
+        <span style="color:#ff79c6">return</span> addr<span style="color:#ff79c6">;</span>  
+    <span style="color:#ff79c6">}</span>  
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setAddr</span><span style="color:#ff79c6">(</span>Address addr<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>  
+        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">addr</span> <span style="color:#ff79c6">=</span> addr<span style="color:#ff79c6">;</span>  
+    <span style="color:#ff79c6">}</span>  
+    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">clone</span><span style="color:#ff79c6">()</span> <span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException<span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO clone success&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">(</span>NARUTO<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SHADOW_CLONE_JUTSU</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException
+    <span style="color:#ff79c6">{</span>
+        Address addr <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Address<span style="color:#ff79c6">();</span>
+        addr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Konohagakure&#34;</span><span style="color:#ff79c6">);</span>
+        NARUTO naruto <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> NARUTO<span style="color:#ff79c6">();</span>
+        naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setAddr</span><span style="color:#ff79c6">(</span>addr<span style="color:#ff79c6">);</span>
+        NARUTO cloneNaruto<span style="color:#ff79c6">=(</span>NARUTO<span style="color:#ff79c6">)</span>naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO address : &#34;</span> <span style="color:#ff79c6">+</span> naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;cloneNaruto address : &#34;</span> <span style="color:#ff79c6">+</span> cloneNaruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p><strong>output</strong></p>
+<pre><code>NARUTO create success！
+NARUTO clone success
+NARUTO address : Konohagakure
+cloneNaruto address : Konohagakure
+</code></pre><p>一樣我們使用了影分身。乍看之下，好像沒啥不對勁。那如果今天拿嚕頭本體要搬家，他想住到台北。於是我們新增addr.set(&ldquo;Taipei&rdquo;);</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SHADOW_CLONE_JUTSU</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException
+    <span style="color:#ff79c6">{</span>
+        Address addr <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Address<span style="color:#ff79c6">();</span>
+        addr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Konohagakure&#34;</span><span style="color:#ff79c6">);</span>
+        NARUTO naruto <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> NARUTO<span style="color:#ff79c6">();</span>
+        naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setAddr</span><span style="color:#ff79c6">(</span>addr<span style="color:#ff79c6">);</span>
+        NARUTO cloneNaruto<span style="color:#ff79c6">=(</span>NARUTO<span style="color:#ff79c6">)</span>naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO address : &#34;</span> <span style="color:#ff79c6">+</span> naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;cloneNaruto address : &#34;</span> <span style="color:#ff79c6">+</span> cloneNaruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+        addr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Taipei&#34;</span><span style="color:#ff79c6">);</span>   <span style="color:#6272a4">// 新增
+</span><span style="color:#6272a4"></span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO address : &#34;</span> <span style="color:#ff79c6">+</span> naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;cloneNaruto address : &#34;</span> <span style="color:#ff79c6">+</span> cloneNaruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p><strong>output</strong></p>
+<pre><code>NARUTO create success！
+NARUTO clone success
+NARUTO address : Konohagakure
+cloneNaruto address : Konohagakure
+NARUTO address : Taipei
+cloneNaruto address : Taipei
+</code></pre><p>印出來發現，怎們分身也搬到台北了？原因是因為剛剛做的都是淺複製。之前有提到，淺複製對於引用類型不會複製一個到新的物件中。而Address是一個類別，為引用類型，所以如果按照上述的需求，我們必須要用深複製才可以達到目的。</p>
+<p>我們先將Address的內容變得可複製，並修改clone內部的實作如下。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Address</span> <span style="color:#8be9fd;font-style:italic">implements</span> Cloneable <span style="color:#ff79c6">{</span>   <span style="color:#6272a4">// 修改：實作Cloneable
+</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">private</span> String addr<span style="color:#ff79c6">;</span>  
+    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">get</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>  
+        <span style="color:#ff79c6">return</span> addr<span style="color:#ff79c6">;</span>  
+    <span style="color:#ff79c6">}</span>  
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span>String addr<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>  
+        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">addr</span> <span style="color:#ff79c6">=</span> addr<span style="color:#ff79c6">;</span>  
+    <span style="color:#ff79c6">}</span>  
+    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">clone</span><span style="color:#ff79c6">()</span> <span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException<span style="color:#ff79c6">{</span>  <span style="color:#6272a4">// 新增：複寫clone
+</span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">(</span>Address<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span> 
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">NARUTO</span> <span style="color:#8be9fd;font-style:italic">implements</span> Cloneable <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> Address addr<span style="color:#ff79c6">;</span>  
+
+    NARUTO<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO create success！&#34;</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> Address <span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>  
+        <span style="color:#ff79c6">return</span> addr<span style="color:#ff79c6">;</span>  
+    <span style="color:#ff79c6">}</span>  
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setAddr</span><span style="color:#ff79c6">(</span>Address addr<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>  
+        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">addr</span> <span style="color:#ff79c6">=</span> addr<span style="color:#ff79c6">;</span>  
+    <span style="color:#ff79c6">}</span>  
+    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">clone</span><span style="color:#ff79c6">()</span> <span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException<span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO clone success&#34;</span><span style="color:#ff79c6">);</span>
+        NARUTO naruto <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">(</span>NARUTO<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
+        naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">addr</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">(</span>Address<span style="color:#ff79c6">)</span>addr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span> <span style="color:#6272a4">// 新增addr的clone
+</span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">return</span> naruto<span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SHADOW_CLONE_JUTSU</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException
+    <span style="color:#ff79c6">{</span>
+        Address addr <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Address<span style="color:#ff79c6">();</span>
+        addr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Konohagakure&#34;</span><span style="color:#ff79c6">);</span>
+        NARUTO naruto <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> NARUTO<span style="color:#ff79c6">();</span>
+        naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setAddr</span><span style="color:#ff79c6">(</span>addr<span style="color:#ff79c6">);</span>
+        NARUTO cloneNaruto<span style="color:#ff79c6">=(</span>NARUTO<span style="color:#ff79c6">)</span>naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO address : &#34;</span> <span style="color:#ff79c6">+</span> naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;cloneNaruto address : &#34;</span> <span style="color:#ff79c6">+</span> cloneNaruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+        addr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Taipei&#34;</span><span style="color:#ff79c6">);</span>   
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO address : &#34;</span> <span style="color:#ff79c6">+</span> naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;cloneNaruto address : &#34;</span> <span style="color:#ff79c6">+</span> cloneNaruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p><strong>output</strong></p>
+<pre><code>NARUTO create success！
+NARUTO clone success
+NARUTO address : Konohagakure
+cloneNaruto address : Konohagakure
+NARUTO address : Taipei
+cloneNaruto address : Konohagakure
+</code></pre><p>執行後可以發現，本體搬到了台北，分身依舊在木葉。這樣就符合了我們的需求了！！</p>
+<p>看完例子覺得，哇！rototypr Pattern好神！！！但他還是存在著一些缺點：
+1. 每個類別都需要有clone的方法
+2. clone位於類別的內部，當需要做更新時，會直接異動到該類別，違反了OCP</p>
+<ul>
+<li>
+<h3 id=_小結>小結</h3>
+</li>
+</ul>
+<hr>
+<h5 id="prototype-pattern的目標">Prototype Pattern的目標</h5>
+<pre><code>建立原型物件，透過複製的方式建立大量物件，而非傳統的建立方式。
+</code></pre>
+<h5 id="prototype-pattern的成員">Prototype Pattern的成員</h5>
+<pre><code>Prototype : 定義實體原型物件必須實作的介面。
+ConcretePrototype : 實作抽象介面的clone()方法，為可被複製的對象。
+Client :  使用ConcretePrototype中的clone()來複製新的物件。
+</code></pre>
+<h5 id="prototype-pattern的優缺點">Prototype Pattern的優缺點</h5>
+<pre><code>優點
+1. 效能較佳
+2. 隱藏了創建新物件的復雜性
+缺點
+1. 每個類別都需要有clone的方法
+2. clone位於類別的內部，當需要做更新時，會直接異動到該類別，違反了OCP
+</code></pre>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_範例程式碼>範例程式碼</h3>
+</li>
+</ul>
+<hr>
+<p><em><a href="https://www.jdoodle.com/embed/v0/2i7a" target="_blank">範例1：Shallow Clone</a></em></p>
+<p><em><a href="https://www.jdoodle.com/embed/v0/2i7E" target="_blank">範例2：Deep Clone</a></em></p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_references>References</h3>
+</li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://www.cnblogs.com/Qian123/p/5710533.html#_label2" target="_blank">Java提高篇——对象克隆（复制）</a></li>
+<li><a href="http://c.biancheng.net/view/1343.html" target="_blank">原型模式（原型设计模式）详解</a></li>
+<li><a href="http://corrupt003-design-pattern.blogspot.com/2017/02/prototype-pattern.html" target="_blank">原型模式 (Prototype Pattern)</a></li>
+</ul>
+
+  </div>
+  <br>
+  <br>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern">從生活中認識Design Pattern</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-pattern">Design Pattern</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/creational-patterns">Creational Patterns</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD">鐵人賽</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+<div class="pagination">
+  
+    <a href="/ianlife/design-pattern/builder-pattern/" class="button"><div class="previous"><div>組一台電腦 - 生成器模式 | Builder Pattern</div></div></a>
+  
+  
+</div>
+
+
+        <div class="disqus markdown">
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+      </main>
+      
+      <div id="page-sidebar">
+        
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div>
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_Design-Pattern-Post-List">
+												 Design Pattern 系列文章導讀
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%ae%9a%e7%be%a9">
+												 定義
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_prototype-pattern-%e4%b8%89%e5%b7%a8%e9%a0%ad">
+												 Prototype Pattern 三巨頭
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e6%b7%ba%e8%a4%87%e8%a3%bd--%e6%b7%b1%e8%a4%87%e8%a3%bd">
+												 淺複製 &amp; 深複製
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_prototype-pattern-%e5%af%a6%e4%bd%9c">
+												 Prototype Pattern 實作
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%b0%8f%e7%b5%90">
+												 小結
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e7%af%84%e4%be%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc">
+												 範例程式碼
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_references">
+												 References
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+        <script src="/ianlife/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.75db2f45ac90858cf062e97bf111d0898f38a1aa55929a1baa5ba16e75aa292e.js" integrity="sha256-ddsvRayQhYzwYul78RHQiY84oapVkpobqluhbnWqKS4="></script>
+    <script src="/ianlife/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+      </div>
+    </div>
+    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+  </body>
+</html>
