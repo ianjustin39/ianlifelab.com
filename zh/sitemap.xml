@@ -4,12 +4,12 @@
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/blog/</loc>
-    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/categories/</loc>
-    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -24,12 +24,12 @@
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/tags/design-pattern/</loc>
-    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/</loc>
-    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -44,7 +44,7 @@
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/series/</loc>
-    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -59,12 +59,12 @@
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/tags/structural-patterns/</loc>
-    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/tags/</loc>
-    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -79,21 +79,26 @@
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/categories/thec/</loc>
-    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/adapter-pattern/</loc>
-    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+    <loc>https://ianjustin39.github.io/ianlife/design-pattern/bridge-pattern/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern/</loc>
-    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD/</loc>
+    <lastmod>2020-09-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/design-pattern/adapter-pattern/</loc>
     <lastmod>2020-09-22T00:00:00+00:00</lastmod>
   </url>
   

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh">
   <head>
-  <meta content="Design Pattern, Design Principle, Dependency Inversion Principle, DIP, 依賴反轉原則" name="keywords">
+  <meta content="Design Pattern, Structural Patterns, Bridge Pattern, 橋接模式" name="keywords">
   <link rel="stylesheet" href="../css/magnific-popup.css">
   <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
@@ -57,7 +57,7 @@ if (!doNotTrack) {
 
   
   <meta charset="utf-8">
-<title>銀行付款系統 - 依賴反轉原則 | Dependency Inversion Principle - Ian Tsai </title>
+<title>女朋友的LV包包 - 橋接模式 | Bridge Pattern - Ian Tsai </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -73,28 +73,28 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="銀行付款系統 - 依賴反轉原則 | Dependency Inversion Principle">
-<meta itemprop="description" content="高層模組不應該依賴低層模組，是兩者都應該依賴抽象；而抽相不應該依賴細節，應該是細節應該依賴於抽象，這是依賴反轉原則的目的。他不但可以減低類別間的耦合，也提高了系統的可讀性及可維護性。">
-<meta itemprop="datePublished" content="2020-09-14T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-09-14T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="412">
-<meta itemprop="image" content="https://ppt.cc/fuNydx">
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="女朋友的LV包包 - 橋接模式 | Bridge Pattern">
+<meta itemprop="description" content="橋接模式是將抽象部分與實現部分分離，使它們都可以獨立的變化。即用合成關係代替繼承關係。如同合成/聚合複用原則。">
+<meta itemprop="datePublished" content="2020-09-23T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-09-23T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="433">
+<meta itemprop="image" content="https://ppt.cc/fU4kjx">
 
 
 
-<meta itemprop="keywords" content="Design Pattern,Design Principle,鐵人賽," /><meta property="og:title" content="銀行付款系統 - 依賴反轉原則 | Dependency Inversion Principle" />
-<meta property="og:description" content="高層模組不應該依賴低層模組，是兩者都應該依賴抽象；而抽相不應該依賴細節，應該是細節應該依賴於抽象，這是依賴反轉原則的目的。他不但可以減低類別間的耦合，也提高了系統的可讀性及可維護性。" />
+<meta itemprop="keywords" content="Design Pattern,Structural Patterns,鐵人賽," /><meta property="og:title" content="女朋友的LV包包 - 橋接模式 | Bridge Pattern" />
+<meta property="og:description" content="橋接模式是將抽象部分與實現部分分離，使它們都可以獨立的變化。即用合成關係代替繼承關係。如同合成/聚合複用原則。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/dependence-inversion-principle/" />
-<meta property="og:image" content="https://ppt.cc/fuNydx" />
-<meta property="article:published_time" content="2020-09-14T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-09-14T00:00:00+00:00" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/bridge-pattern/" />
+<meta property="og:image" content="https://ppt.cc/fU4kjx" />
+<meta property="article:published_time" content="2020-09-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-23T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://ppt.cc/fuNydx"/>
+<meta name="twitter:image" content="https://ppt.cc/fU4kjx"/>
 
-<meta name="twitter:title" content="銀行付款系統 - 依賴反轉原則 | Dependency Inversion Principle"/>
-<meta name="twitter:description" content="高層模組不應該依賴低層模組，是兩者都應該依賴抽象；而抽相不應該依賴細節，應該是細節應該依賴於抽象，這是依賴反轉原則的目的。他不但可以減低類別間的耦合，也提高了系統的可讀性及可維護性。"/>
+<meta name="twitter:title" content="女朋友的LV包包 - 橋接模式 | Bridge Pattern"/>
+<meta name="twitter:description" content="橋接模式是將抽象部分與實現部分分離，使它們都可以獨立的變化。即用合成關係代替繼承關係。如同合成/聚合複用原則。"/>
 <meta name="twitter:site" content="@example"/>
 <link rel="stylesheet" href="/ianlife/css/bundle.min.0c037ee5e40837985628b373e9760ef0820aaf44cb90ccc6dc34c45603970f2c.css" integrity="sha256-DAN&#43;5eQIN5hWKLNz6XYO8IIKr0TLkMzG3DTEVgOXDyw=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
@@ -165,20 +165,20 @@ if (!doNotTrack) {
   <div class="title">
     <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
     
-    <h2><a href="/ianlife/design-pattern/dependence-inversion-principle/">銀行付款系統 - 依賴反轉原則 | Dependency Inversion Principle</a></h2>
+    <h2><a href="/ianlife/design-pattern/bridge-pattern/">女朋友的LV包包 - 橋接模式 | Bridge Pattern</a></h2>
     
     
-    <p>高層模組不應該依賴低層模組，是兩者都應該依賴抽象；而抽相不應該依賴細節，應該是細節應該依賴於抽象，這是依賴反轉原則的目的。他不但可以減低類別間的耦合，也提高了系統的可讀性及可維護性。</p>
+    <p>橋接模式是將抽象部分與實現部分分離，使它們都可以獨立的變化。即用合成關係代替繼承關係。如同合成/聚合複用原則。</p>
     
   </div>
   <div class="meta">
-    <time class="published" datetime="2020-09-14 00:00:00 &#43;0000 UTC">
-      September 14, 2020
+    <time class="published" datetime="2020-09-23 00:00:00 &#43;0000 UTC">
+      September 23, 2020
     </time>
     
     <span class="author">Ian Tsai</span>
     
-    <p>2 minute read</p>
+    <p>3 minute read</p>
     
     <p>
       <span id="busuanzi_container_page_pv">
@@ -192,15 +192,15 @@ if (!doNotTrack) {
     
   </section>
   
-  <a href="/ianlife/design-pattern/dependence-inversion-principle/" class="image featured">
+  <a href="/ianlife/design-pattern/bridge-pattern/" class="image featured">
     
-      <img src="https://ppt.cc/fuNydx" alt="">
+      <img src="https://ppt.cc/fU4kjx" alt="">
     
   </a>
 
 
   <div class="content">
-    <p><strong><a href="https://ithelp.ithome.com.tw/articles/10236359" target="_blank">本系列文章同步分享於IT邦幫忙第12屆鐵人賽</a></strong></p>
+    <p><strong><a href="" target="_blank">本系列文章同步分享於IT邦幫忙第12屆鐵人賽</a></strong></p>
 </br>
 <div>
     <div>
@@ -297,102 +297,145 @@ if (!doNotTrack) {
 </li>
 </ul>
 <hr>
-<p>依賴反轉原則(DIP)的定義有兩點：</p>
-<p><strong>1. High-level modules should not depend on low-level modules. Both should depend on abstractions.</strong></p>
-<p><em>翻譯年糕：高層模組不應該依賴低層模組，兩者皆應依賴於抽象。</em></p>
-<p><strong>2. Abstractions should not depend on details. Details should depend on abstractions.</strong></p>
-<p><em>翻譯年糕：抽象不應該依賴細節，細節應該依賴於抽象。</em></p>
-<p>高層低層是相對關係，其實也就是呼叫者與被呼叫者。而細節指的是具體的實作，相較於抽象的穩定，細節的變化較多。</p>
-<p>比如說，到賣場消費要付款時，我使用信用卡付款：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Payment</span><span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(</span>CreditCard creditCard<span style="color:#ff79c6">){</span>
-        creditCard<span style="color:#ff79c6">.</span><span style="color:#50fa7b">pay</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">CreditCard</span><span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;信用卡付款&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bank</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
-      Payment p <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Payment<span style="color:#ff79c6">();</span>
-      p<span style="color:#ff79c6">.</span><span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(</span><span style="color:#ff79c6">new</span> CreditCard<span style="color:#ff79c6">());</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>信用卡付款
-</code></pre><br>
-<p><img src='https://g.gravizo.com/svg?
+<p><code>將抽象部分與實現部分分離，使它們都可以獨立的變化。</code></p>
+<p>橋接模式（Bridge Pattern）是用<code>合成關係代替繼承關係</code>，進而降低抽象和實作的合度。</p>
+<p>註：若對合成聚合原則不熟，可以點擊<a href="../composite-aggregate-reuse-principle" target="_blank">合成/聚合複用原則（Composite/Aggregate Reuse Principle）</a>研究。</p>
+<p>舉一個買包包的例子。女朋友想要買LV包包，LV包包的款式又那麼多（<a href="https://tw.louisvuitton.com/zht-tw/women/gifts-for-women/women-gifts-inspirations/_/N-ebmj1l" target="_blank">若有人不知道，這邊貼心的給個連結ＸＤ</a>），如果使用繼承的方式，包包種類有背包和皮包；包包的顏色有白色及黑色。我們用簡單的結構圖來看看繼承會長什麼樣子：</p>
+<br>
+<img src='https://g.gravizo.com/svg?
 @startuml;
-Payment ..> CreditCard;
-CreditCard : +pay();
-Payment : +pay();
+abstract Bag;
+Backpack -up-> Bag;
+Wallet -up-> Bag;
+BlackBackpack -up-> Backpack;
+WhiteBackpack -up-> Backpack;
+BlackWallet -up-> Wallet;
+WhiteWallet -up-> Wallet;
 @enduml
-'></p>
+'>
 <br>
 <br>
-<p>依照上面的程式碼，就順利的使用信用卡完成了付款了！信用卡即是低層次模組，而付款這個行為就是高層次模組。可以發現付款這個行為跟信用卡有直接的關係。想想我們從以前用現金、金融卡、信用卡到現在電子支付甚至虛擬貨幣&hellip;等等。隨著時代的進步，會有更多的付款方式出現，但如果照著上面的方式去撰寫系統的話，每當出現一個新的付款方式，就要去更動一次程式，這不是個理想的狀態。</p>
+<p>可以發現，一種顏色的一種包，就需要建立一個類別。類別間的耦合性相當的高，不管是要維護或是修改都非常的不容易。</p>
+<br>
+<br>
 <ul>
 <li>
-<h3 id=_dependency-inversion-principle>Dependency Inversion Principle</h3>
+<h3 id=_bridge-pattern-成員>Bridge Pattern 成員</h3>
 </li>
 </ul>
 <hr>
-<p>上述提到，付款依附著信用卡，並不是我們想看到的。於是我們可以將付款行為抽出：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">IPayment</span><span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">pay</span><span style="color:#ff79c6">();</span>
-<span style="color:#ff79c6">}</span>
-
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">CreditCard</span> <span style="color:#8be9fd;font-style:italic">implements</span> IPayment<span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;信用卡付款&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">QRCode</span> <span style="color:#8be9fd;font-style:italic">implements</span> IPayment<span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;QRCode付款&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Payment</span><span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(</span>IPayment iPayment<span style="color:#ff79c6">){</span>
-        iPayment<span style="color:#ff79c6">.</span><span style="color:#50fa7b">pay</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bank</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
-      Payment p <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Payment<span style="color:#ff79c6">();</span>
-      p<span style="color:#ff79c6">.</span><span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(</span><span style="color:#ff79c6">new</span> CreditCard<span style="color:#ff79c6">());</span>
-      p<span style="color:#ff79c6">.</span><span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(</span><span style="color:#ff79c6">new</span> QRCode<span style="color:#ff79c6">());</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>信用卡付款
-QRCode付款
-</code></pre><br>
+<table>
+<thead>
+<tr>
+<th align="left">成員</th>
+<th align="left">功用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Abstraction</td>
+<td align="left">抽象類別，定義抽象的接口，該接口包含實現具體行爲、具體特徵的Implementor接口。</td>
+</tr>
+<tr>
+<td align="left">RefinedAbstraction</td>
+<td align="left">繼承並實作Abstraction內的方法，透過合成關係呼叫Implementor內的方法。</td>
+</tr>
+<tr>
+<td align="left">Implementor</td>
+<td align="left">抽象介面，定義具體行爲、具體特徵的應用接口。</td>
+</tr>
+<tr>
+<td align="left">ConcreteImplementor</td>
+<td align="left">實作Implementor並給出接口。</td>
+</tr>
+</tbody>
+</table>
+<p>Abstraction就好比包包，他裡面定義了一些方法提供RefinedAbstraction去實作，且藉由合成的方式將Implementor引入。而RefinedAbstraction就是背包或是錢包類別。Implementor則是顏色，由ConcreteImplementor實作提供真正的顏色，再經由Abstraction去呼叫使用。</p>
+<br>
+<br>
 <p><img src='https://g.gravizo.com/svg?
 @startuml;
-interface IPayment;
-Payment -right-> IPayment;
-CreditCard -up-|> IPayment;
-QRCode -up-|> IPayment;
-QRCode : +pay();
-CreditCard : +pay();
-Payment : +pay();
-IPayment : +pay();
+skinparam linetype ortho;
+abstract Abstraction;
+interface Implementor;
+RefinedAbstraction -up-> Abstraction;
+Abstraction o-right- Implementor;
+ConcreteImplementor -up-> Implementor;
+@enduml
+'></p>
+<br>
+<p>我們把剛剛LV的例子帶入UML內，就會變成下圖：</p>
+<br>
+<p><img src='https://g.gravizo.com/svg?
+@startuml;
+skinparam linetype ortho;
+abstract Bag;
+interface Color;
+Backpack -up-> Bag;
+Wallet -up-> Bag;
+Bag o-right- Color;
+White -up-> Color;
+Black -up-> Color;
 @enduml
 '></p>
 <br>
 <br>
-<p>經過以上的修改，抽出了一個IPaymeny作為interface，付款方式CreditCard和QRCode去實作IPayment，而Payment只要將只要將IPayment引入即可。在實作前他不需要知道付款方式是什麼，在實作時把對應的方式放入即可。如此一來，假設未來要增加虛擬貨幣的付款，只需要新增一個blockchain的class即可，不需要再動到Payment。</p>
-<br>
-<p>剛剛我們一直在解釋定義的第一點，而第二點<code>抽象不應該依賴細節，細節應該依賴於抽象</code>又是什麼意思呢？我們可以把信用卡以及QRCode看成付款的細節（變化度高），而這兩個付款方式應該依照著抽象類別（穩定度高）IPayment去實作，而不是IPayment去照著信用卡或是QRCode的方向走。</p>
+<h3 id=_bridge-pattern-實作>Bridge Pattern 實作</h3>
+<hr>
+<p>剛剛看完Bridge Pattern的定義及介紹，相信都有了一些理解。現在我們把當當的範例寫成程式碼看看會長什麼樣子。</p>
+<p>首先先建立Implementor並定義好其中的方法，待會讓ConcreteImplementor實作。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Color</span> <span style="color:#ff79c6">{</span>
+    String <span style="color:#50fa7b">getColor</span><span style="color:#ff79c6">();</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>ConcreteImplementor實作Implementor內的方法。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">White</span> <span style="color:#8be9fd;font-style:italic">implements</span> Color <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">getColor</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#34;White&#34;</span><span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Black</span> <span style="color:#8be9fd;font-style:italic">implements</span> Color <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">getColor</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#34;Black&#34;</span><span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>建立Abstraction類別，並將Color合成進來。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bag</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">protected</span> Color color<span style="color:#ff79c6">;</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setColor</span><span style="color:#ff79c6">(</span>Color color<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">color</span><span style="color:#ff79c6">=</span>color<span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">}</span>   
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> String <span style="color:#50fa7b">getName</span><span style="color:#ff79c6">();</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>RefinedAbstraction繼承Abstraction，並實作其中的getName。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Backpack</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bag<span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">getName</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">return</span> color<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getColor</span><span style="color:#ff79c6">()+</span><span style="color:#f1fa8c">&#34;Backpack&#34;</span><span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">}</span>   
+<span style="color:#ff79c6">}</span>
+
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Wallet</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bag <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">getName</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">return</span> color<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getColor</span><span style="color:#ff79c6">()+</span><span style="color:#f1fa8c">&#34;Wallet&#34;</span><span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">}</span>   
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>最後只需要把對應的物件建立組裝即可，不需要建立不同顏色的同種商品。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LVBag</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+        Color white <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> White<span style="color:#ff79c6">();</span>
+        
+        Bag backpack <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Backpack<span style="color:#ff79c6">();</span>
+        backpack<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setColor</span><span style="color:#ff79c6">(</span>white<span style="color:#ff79c6">);</span>
+        backpack<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getName</span><span style="color:#ff79c6">();</span>
+        
+        Bag wallet <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Wallet<span style="color:#ff79c6">();</span>
+        wallet<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setColor</span><span style="color:#ff79c6">(</span>white<span style="color:#ff79c6">);</span>
+        wallet<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getName</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p><strong>output</strong></p>
+<pre><code>White Backpack
+White Wallet
+</code></pre><p>藉由套用Bridge Pattern，我們解決了繼承需要產生大量類別的問題，也提升了程式整體的彈性。未來若包包種類擴充，或是顏色種類增加，只需要建立新的種類即可，不需要去影響到其他的類別。</p>
 <br>
 <br>
 <ul>
@@ -401,15 +444,24 @@ IPayment : +pay();
 </li>
 </ul>
 <hr>
-<h5 id="dip的優點">DIP的優點</h5>
-<pre><code>1. 减少class間的耦合性，提高系统的穩定性
-2. 降低開發時的風險
-3. 提高系統可讀及維護性
+<h5 id="bridge-pattern的目標">Bridge Pattern的目標</h5>
+<p><code>將抽象部分與實現部分分離，使它們都可以獨立的變化。即用合成關係代替繼承關係。</code></p>
+<br>
+<h5 id="bridge-pattern的成員">Bridge Pattern的成員</h5>
+<pre><code>Abstraction：抽象類別，定義抽象的接口，該接口包含實現具體行爲、具體特徵的Implementor接口。
+RefinedAbstraction：繼承並實作Abstraction內的方法，透過合成關係呼叫Implementor內的方法。
+Implementor：抽象介面，定義具體行爲、具體特徵的應用接口。
+ConcreteImplementor：實作Implementor並給出接口。
 </code></pre>
 <br>
-<h5 id="dip的目標">DIP的目標</h5>
-<p><code>高層模組(Payment)不應該依賴低層模組(CreditCard)，兩者皆應依賴於抽象(IPayment)</code></p>
-<p><code>抽象(IPayment)不應該依賴細節(CreditCard)，細節(CreditCard)應該依賴於抽象(IPayment)</code></p>
+<h5 id="bridge-pattern的優缺點">Bridge Pattern的優缺點</h5>
+<pre><code>優點
+1. 抽象和實現的分離，提高了比繼承更好的解決方案；
+2. 優秀的擴充套件能力，在兩個變化維度中任意擴充套件一個維度，都不需要修改原有系統；
+3. 實現細節對客戶透明，可以對使用者隱藏實現細節。
+缺點
+增加系統的理解與設計難度，由於合成關聯關係建立在抽象層，要求開發者針對抽象進行設計與程式設計。
+</code></pre>
 <br>
 <br>
 <ul>
@@ -418,8 +470,7 @@ IPayment : +pay();
 </li>
 </ul>
 <hr>
-<p><em><a href="https://www.jdoodle.com/embed/v0/2iM4" target="_blank">範例1:未使用DIP</a></em></p>
-<p><em><a href="https://www.jdoodle.com/embed/v0/2iM5" target="_blank">範例2:使用DIP</a></em></p>
+<p><em><a href="https://www.jdoodle.com/embed/v0/2iZ2" target="_blank">範例：使用Bridge Pattern</a></em></p>
 <br>
 <br>
 <ul>
@@ -429,11 +480,9 @@ IPayment : +pay();
 </ul>
 <hr>
 <ul>
-<li><a href="https://notfalse.net/1/dip#i" target="_blank">依賴倒置原則 (Dependency-Inversion Principle, DIP)</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E4%BE%9D%E8%B5%96%E5%8F%8D%E8%BD%AC%E5%8E%9F%E5%88%99" target="_blank">依賴反轉原則</a></li>
-<li><a href="https://medium.com/@f40507777/%E4%BE%9D%E8%B3%B4%E5%8F%8D%E8%BD%89%E5%8E%9F%E5%89%87-dependency-inversion-principle-dip-bc0ba2e3a388" target="_blank">依賴反轉原則 Dependency Inversion Principle (DIP)</a></li>
-<li><a href="https://dustinhsiao21.github.io/dp/solid-dependency-inversion-principle/" target="_blank">SOLID 原則 - Dependency Inversion Principle(依賴反轉原則)</a></li>
-<li><a href="https://geek-docs.com/design-pattern/design-principle/dependence-inversion-principle.html" target="_blank">依赖倒置原则DIP</a></li>
+<li><a href="http://c.biancheng.net/view/1364.html" target="_blank">桥接模式（Bridge模式）详解</a></li>
+<li><a href="https://www.itread01.com/content/1541723044.html" target="_blank">重走Java設計模式——橋接模式（Bridge Pattern）</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E6%A9%8B%E6%8E%A5%E6%A8%A1%E5%BC%8F" target="_blank">橋接模式</a></li>
 </ul>
 
   </div>
@@ -441,18 +490,12 @@ IPayment : +pay();
   <br>
   <div class="pagination">
   
-    <a href="/ianlife/design-pattern/interface-segregation-principle/" class="button">
+    <a href="/ianlife/design-pattern/adapter-pattern/" class="button">
       <div class="previous">
-        <div>公司內的工程師 - 介面隔離原則 | Interface Segregation Principle</div>
+        <div>小紅帽與大野狼 - 適配器模式 | Adapter Pattern</div>
       </div>
     </a>
   
-  
-    <a href="/ianlife/design-pattern/composite-aggregate-reuse-principle/" class="button">
-      <div class="next">
-        <div>汽油車 &amp; 電動車 - 合成/聚合複用原則 | Composite/Aggregate Reuse Principle</div>
-      </div>
-    </a>
   
 </div>
 
@@ -484,7 +527,7 @@ IPayment : +pay();
             <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-pattern">Design Pattern</a></li>
           
             
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-principle">Design Principle</a></li>
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/structural-patterns">Structural Patterns</a></li>
           
             
             <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD">鐵人賽</a></li>
@@ -634,8 +677,34 @@ IPayment : +pay();
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_dependency-inversion-principle">
-												 Dependency Inversion Principle
+						 					<a class="nav-link" href="#_bridge-pattern-%e6%88%90%e5%93%a1">
+												 Bridge Pattern 成員
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_bridge-pattern-%e5%af%a6%e4%bd%9c">
+												 Bridge Pattern 實作
 											</a>
 										</li>
 						 
