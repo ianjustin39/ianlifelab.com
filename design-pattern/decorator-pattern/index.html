@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh">
   <head>
-  <meta content="Design Pattern, Structural Patterns, Bridge Pattern, 橋接模式" name="keywords">
+  <meta content="Design Pattern, Structural Patterns, Decorator Pattern, 裝飾者模式" name="keywords">
   <link rel="stylesheet" href="../css/magnific-popup.css">
   <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
@@ -57,7 +57,7 @@ if (!doNotTrack) {
 
   
   <meta charset="utf-8">
-<title>女朋友的LV包包 - 橋接模式 | Bridge Pattern - Ian Tsai </title>
+<title>I am Optimus Prime - 裝飾者模式 | Decorator Pattern - Ian Tsai </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -73,28 +73,28 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="女朋友的LV包包 - 橋接模式 | Bridge Pattern">
-<meta itemprop="description" content="橋接模式是將抽象部分與實現部分分離，使它們都可以獨立的變化。即用合成關係代替繼承關係。如同合成/聚合複用原則。">
-<meta itemprop="datePublished" content="2020-09-23T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-09-23T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="438">
-<meta itemprop="image" content="https://ppt.cc/fU4kjx">
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="I am Optimus Prime - 裝飾者模式 | Decorator Pattern">
+<meta itemprop="description" content="裝飾者模式可以想成買了一間房子不需要因為要裝潢，而改變整體結構。只需要在既有的結構上，加上要裝潢的材料即可。即動態將責任附加在物件上，若要擴展功能上，裝飾者提供比繼承更有彈性的替代方案。">
+<meta itemprop="datePublished" content="2020-09-25T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-09-25T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="532">
+<meta itemprop="image" content="https://ianjustin39.github.io/ianlife/">
 
 
 
-<meta itemprop="keywords" content="Design Pattern,Structural Patterns,鐵人賽," /><meta property="og:title" content="女朋友的LV包包 - 橋接模式 | Bridge Pattern" />
-<meta property="og:description" content="橋接模式是將抽象部分與實現部分分離，使它們都可以獨立的變化。即用合成關係代替繼承關係。如同合成/聚合複用原則。" />
+<meta itemprop="keywords" content="Design Pattern,Structural Patterns," /><meta property="og:title" content="I am Optimus Prime - 裝飾者模式 | Decorator Pattern" />
+<meta property="og:description" content="裝飾者模式可以想成買了一間房子不需要因為要裝潢，而改變整體結構。只需要在既有的結構上，加上要裝潢的材料即可。即動態將責任附加在物件上，若要擴展功能上，裝飾者提供比繼承更有彈性的替代方案。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/bridge-pattern/" />
-<meta property="og:image" content="https://ppt.cc/fU4kjx" />
-<meta property="article:published_time" content="2020-09-23T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-09-23T00:00:00+00:00" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/decorator-pattern/" />
+<meta property="og:image" content="https://ianjustin39.github.io/ianlife/" />
+<meta property="article:published_time" content="2020-09-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-25T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://ppt.cc/fU4kjx"/>
+<meta name="twitter:image" content="https://ianjustin39.github.io/ianlife/"/>
 
-<meta name="twitter:title" content="女朋友的LV包包 - 橋接模式 | Bridge Pattern"/>
-<meta name="twitter:description" content="橋接模式是將抽象部分與實現部分分離，使它們都可以獨立的變化。即用合成關係代替繼承關係。如同合成/聚合複用原則。"/>
+<meta name="twitter:title" content="I am Optimus Prime - 裝飾者模式 | Decorator Pattern"/>
+<meta name="twitter:description" content="裝飾者模式可以想成買了一間房子不需要因為要裝潢，而改變整體結構。只需要在既有的結構上，加上要裝潢的材料即可。即動態將責任附加在物件上，若要擴展功能上，裝飾者提供比繼承更有彈性的替代方案。"/>
 <meta name="twitter:site" content="@example"/>
 <link rel="stylesheet" href="/ianlife/css/bundle.min.0c037ee5e40837985628b373e9760ef0820aaf44cb90ccc6dc34c45603970f2c.css" integrity="sha256-DAN&#43;5eQIN5hWKLNz6XYO8IIKr0TLkMzG3DTEVgOXDyw=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
@@ -165,15 +165,15 @@ if (!doNotTrack) {
   <div class="title">
     <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
     
-    <h2><a href="/ianlife/design-pattern/bridge-pattern/">女朋友的LV包包 - 橋接模式 | Bridge Pattern</a></h2>
+    <h2><a href="/ianlife/design-pattern/decorator-pattern/">I am Optimus Prime - 裝飾者模式 | Decorator Pattern</a></h2>
     
     
-    <p>橋接模式是將抽象部分與實現部分分離，使它們都可以獨立的變化。即用合成關係代替繼承關係。如同合成/聚合複用原則。</p>
+    <p>裝飾者模式可以想成買了一間房子不需要因為要裝潢，而改變整體結構。只需要在既有的結構上，加上要裝潢的材料即可。即動態將責任附加在物件上，若要擴展功能上，裝飾者提供比繼承更有彈性的替代方案。</p>
     
   </div>
   <div class="meta">
-    <time class="published" datetime="2020-09-23 00:00:00 &#43;0000 UTC">
-      September 23, 2020
+    <time class="published" datetime="2020-09-25 00:00:00 &#43;0000 UTC">
+      September 25, 2020
     </time>
     
     <span class="author">Ian Tsai</span>
@@ -192,15 +192,15 @@ if (!doNotTrack) {
     
   </section>
   
-  <a href="/ianlife/design-pattern/bridge-pattern/" class="image featured">
+  <a href="/ianlife/design-pattern/decorator-pattern/" class="image featured">
     
-      <img src="https://ppt.cc/fU4kjx" alt="">
+      <img src="/ianlife/" alt="">
     
   </a>
 
 
   <div class="content">
-    <p><strong><a href="https://ithelp.ithome.com.tw/articles/10242349" target="_blank">本系列文章同步分享於IT邦幫忙第12屆鐵人賽</a></strong></p>
+    <p><strong><a href="" target="_blank">本系列文章同步分享於IT邦幫忙第12屆鐵人賽</a></strong></p>
 </br>
 <div>
     <div>
@@ -299,31 +299,13 @@ if (!doNotTrack) {
 </li>
 </ul>
 <hr>
-<p><code>將抽象部分與實現部分分離，使它們都可以獨立的變化。</code></p>
-<p>橋接模式（Bridge Pattern）是用<code>合成關係代替繼承關係</code>，進而降低抽象和實作的合度。</p>
-<p>註：若對合成聚合原則不熟，可以點擊<a href="../composite-aggregate-reuse-principle" target="_blank">合成/聚合複用原則（Composite/Aggregate Reuse Principle）</a>研究。</p>
-<p>在現實生活中，有些類別是具有兩個維度或多個維度的變化。如不同顏色的包包。顏色跟包包就是兩個維度。</p>
-<p>而剛剛提到合成代替繼承關係，舉一個買包包的例子。女朋友想要買LV包包，LV包包的款式又那麼多（<a href="https://tw.louisvuitton.com/zht-tw/women/gifts-for-women/women-gifts-inspirations/_/N-ebmj1l" target="_blank">若有人不知道，這邊貼心的給個連結ＸＤ</a>），如果使用繼承的方式，包包種類有背包和皮包；包包的顏色有白色及黑色。我們用簡單的結構圖來看看繼承會長什麼樣子：</p>
-<br>
-<img src='https://g.gravizo.com/svg?
-@startuml;
-abstract Bag;
-Backpack -up-> Bag;
-Wallet -up-> Bag;
-BlackBackpack -up-> Backpack;
-WhiteBackpack -up-> Backpack;
-BlackWallet -up-> Wallet;
-WhiteWallet -up-> Wallet;
-@enduml
-'>
-<br>
-<br>
-<p>可以發現，一種顏色的一種包，就需要建立一個類別。類別間的耦合性相當的高，不管是要維護或是修改都非常的不容易。</p>
-<br>
+<p><code>裝飾模式動態將責任附加在物件上，若要擴展功能上，裝飾者提供比繼承更有彈性的替代方案。</code></p>
+<p>拿生活來說，我買了一棟三房兩廳兩衛沒裝潢的房子。由於房子過於老舊，我想要把一間房間裝潢成書房、一間裝潢成嬰兒房、最後一間裝潢成主臥。對於整體結構來說，房子不需要因為我要裝潢，而改變整體結構。只需要在既有的結構上，加上要裝潢的材料即可。又或是有一張相片，我想給相片加上項匡，而它本質還是一個相片。</p>
+<p>而在系統上，通常要擴充功能，我們會用繼承的方式。但由於繼承耦合度高，且隨著擴充功能增加，子類別會越多，不易於維護。若使用組合關係的話，則可保持原本結構，且同時達到擴充的目的，這則是裝飾者模式的目標。</p>
 <br>
 <ul>
 <li>
-<h3 id=_bridge-pattern-成員>Bridge Pattern 成員</h3>
+<h3 id=_decorator-pattern-成員>Decorator Pattern 成員</h3>
 </li>
 </ul>
 <hr>
@@ -336,109 +318,154 @@ WhiteWallet -up-> Wallet;
 </thead>
 <tbody>
 <tr>
-<td align="left">Abstraction</td>
-<td align="left">抽象類別，定義抽象的接口，該接口包含實現具體行爲、具體特徵的Implementor接口。</td>
+<td align="left">Component</td>
+<td align="left">定義一個物件的介面,可以給物件動態增加職責。</td>
 </tr>
 <tr>
-<td align="left">RefinedAbstraction</td>
-<td align="left">繼承並實作Abstraction內的方法，透過合成關係呼叫Implementor內的方法。</td>
+<td align="left">ConcreteComponent</td>
+<td align="left">定義一個物件,可以給這個物件增加一些職責。（將ConcreteDecorator裝飾到他身上）</td>
 </tr>
 <tr>
-<td align="left">Implementor</td>
-<td align="left">抽象介面，定義具體行爲、具體特徵的應用接口。</td>
+<td align="left">Decorator</td>
+<td align="left">維持一個指向Component物件的指標,並定義一個與Component介面一致的介面(可以直接實現Component介面)。</td>
 </tr>
 <tr>
-<td align="left">ConcreteImplementor</td>
-<td align="left">實作Implementor並給出接口。</td>
+<td align="left">ConcreteDecorator</td>
+<td align="left">元件新增的職責</td>
 </tr>
 </tbody>
 </table>
-<p>Abstraction就好比包包，他裡面定義了一些方法提供RefinedAbstraction去實作，且藉由合成的方式將Implementor引入。而RefinedAbstraction就是背包或是錢包類別。Implementor則是顏色，由ConcreteImplementor實作提供真正的顏色，再經由Abstraction去呼叫使用。</p>
-<br>
-<br>
-<p><img src='https://g.gravizo.com/svg?
-@startuml;
-skinparam linetype ortho;
-abstract Abstraction;
-interface Implementor;
-RefinedAbstraction -up-> Abstraction;
-Abstraction o-right- Implementor;
-ConcreteImplementor -up-> Implementor;
-@enduml
-'></p>
-<br>
-<p>我們把剛剛LV的例子帶入UML內，就會變成下圖：</p>
+<p><em>註：這邊的職責，個人覺得用功能會比較好理解一點。</em></p>
 <br>
 <p><img src='https://g.gravizo.com/svg?
 @startuml;
 skinparam linetype ortho;
-abstract Bag;
-interface Color;
-Backpack -up-> Bag;
-Wallet -up-> Bag;
-Bag o-right- Color;
-White -up-> Color;
-Black -up-> Color;
+interface Component;
+ConcreteComponent -up-|> Component;
+Decorator -up-|> Component;
+Component --o Decorator;
+ConcreteDecorator1 -up-> Decorator;
+ConcreteDecorator2 -up-> Decorator;
+Component : +operation();
+ConcreteComponent : +operation();
+Decorator : -component:Component;
+Decorator : +Decorator(Component component);
+Decorator : +operation();
+ConcreteDecorator1 : +operation();
+ConcreteDecorator1 : +addedFunction();
+ConcreteDecorator2 : +operation();
+ConcreteDecorator2 : +addedFunction();
 @enduml
 '></p>
 <br>
 <br>
-<h3 id=_bridge-pattern-實作>Bridge Pattern 實作</h3>
+<p>可以看到上面的UML圖，先將Component介面定義出來，分別由被裝飾者ConcreteComponent以及裝飾者Decorator去實作。接著Decorator再由其他要裝飾的方法去繼承，這樣就可以不更動原本的程式碼，也能擴充新的功能了。
+<br>
+<br></p>
+<ul>
+<li>
+<h3 id=_decorator-pattern-實作>Decorator Pattern 實作</h3>
+</li>
+</ul>
 <hr>
-<p>剛剛看完Bridge Pattern的定義及介紹，相信都有了一些理解。現在我們把剛剛的範例寫成程式碼看看會長什麼樣子。</p>
-<p>首先先建立Implementor並定義好其中的方法，待會讓ConcreteImplementor實作。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Color</span> <span style="color:#ff79c6">{</span>
-    String <span style="color:#50fa7b">getColor</span><span style="color:#ff79c6">();</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>ConcreteImplementor實作Implementor內的方法。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">White</span> <span style="color:#8be9fd;font-style:italic">implements</span> Color <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">getColor</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#34;White&#34;</span><span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Black</span> <span style="color:#8be9fd;font-style:italic">implements</span> Color <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">getColor</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#34;Black&#34;</span><span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>建立Abstraction類別，並將Color合成進來。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bag</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">protected</span> Color color<span style="color:#ff79c6">;</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setColor</span><span style="color:#ff79c6">(</span>Color color<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">color</span><span style="color:#ff79c6">=</span>color<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>   
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> String <span style="color:#50fa7b">getName</span><span style="color:#ff79c6">();</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>RefinedAbstraction繼承Abstraction，並實作其中的getName。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Backpack</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bag<span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">getName</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">return</span> color<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getColor</span><span style="color:#ff79c6">()+</span><span style="color:#f1fa8c">&#34;Backpack&#34;</span><span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>   
+<p>知道了Decorator Pattern的四個成員後，現在我們要來一一實作每一個成員。我們用變形金剛來舉例：假設變形金剛裡的柯博文，他戰鬥時只有拳頭。而我們為了增強他的戰鬥能力，所以給他加了槍砲及劍的武器在他身上。首先要先將被裝飾者柯博文（ConcreteComponent）以及裝飾者武器（Decorator）的介面（Component）建立起來</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Transformers</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">startUp</span><span style="color:#ff79c6">();</span>
 <span style="color:#ff79c6">}</span>
 
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Wallet</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bag <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">getName</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">return</span> color<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getColor</span><span style="color:#ff79c6">()+</span><span style="color:#f1fa8c">&#34;Wallet&#34;</span><span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>   
+</code></pre></div><p>這個介面定義一個startUp()的方法供大家實作。接下來就是把柯博文給建立起來。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">OptimusPrime</span> <span style="color:#8be9fd;font-style:italic">implements</span> Transformers <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">OptimusPrime</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;I am Optimus Prime!! &#34;</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">startUp</span><span style="color:#ff79c6">(){</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Autobot !! Let&#39;s Go!!&#34;</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
 <span style="color:#ff79c6">}</span>
-</code></pre></div><p>最後只需要把對應的物件建立組裝即可，不需要建立不同顏色的同種商品。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LVBag</span> <span style="color:#ff79c6">{</span>
+
+</code></pre></div><p>這樣柯博文成功的實作了Transformers內的方法。然後我們需要建立一個Weapon的Decorator。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Weapon</span> <span style="color:#8be9fd;font-style:italic">implements</span> Transformers <span style="color:#ff79c6">{</span>
+    Transformers tf<span style="color:#ff79c6">;</span>
+
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Weapon</span><span style="color:#ff79c6">(</span>Transformers tf<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">tf</span> <span style="color:#ff79c6">=</span> tf<span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">}</span>   
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">startUp</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        tf<span style="color:#ff79c6">.</span><span style="color:#50fa7b">startUp</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>再來就是建立武器庫了。這裡建立槍和劍的類別。其中增加一個新的方法setWeapon()，這就是為了強化柯博文而新增的功能。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Sword</span> <span style="color:#8be9fd;font-style:italic">extends</span> Weapon <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Sword</span><span style="color:#ff79c6">(</span>Transformers tf<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">(</span>tf<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span> 
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">startUp</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        setWeapon<span style="color:#ff79c6">();</span>
+        tf<span style="color:#ff79c6">.</span><span style="color:#50fa7b">startUp</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setWeapon</span><span style="color:#ff79c6">(){</span>
+       System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;I get a Sword!&#34;</span><span style="color:#ff79c6">);</span>  
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Gun</span> <span style="color:#8be9fd;font-style:italic">extends</span> Weapon <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Gun</span><span style="color:#ff79c6">(</span>Transformers tf<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">(</span>tf<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span> 
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">startUp</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        setWeapon<span style="color:#ff79c6">();</span>
+        tf<span style="color:#ff79c6">.</span><span style="color:#50fa7b">startUp</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setWeapon</span><span style="color:#ff79c6">(){</span>
+       System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;I get a Gun!&#34;</span><span style="color:#ff79c6">);</span>  
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>最後來執行</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Autobot</span> <span style="color:#ff79c6">{</span>
     <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
-        Color white <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> White<span style="color:#ff79c6">();</span>
-        
-        Bag backpack <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Backpack<span style="color:#ff79c6">();</span>
-        backpack<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setColor</span><span style="color:#ff79c6">(</span>white<span style="color:#ff79c6">);</span>
-        backpack<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getName</span><span style="color:#ff79c6">();</span>
-        
-        Bag wallet <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Wallet<span style="color:#ff79c6">();</span>
-        wallet<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setColor</span><span style="color:#ff79c6">(</span>white<span style="color:#ff79c6">);</span>
-        wallet<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getName</span><span style="color:#ff79c6">();</span>
+        Transformers op1 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> OptimusPrime<span style="color:#ff79c6">();</span>
+        op1<span style="color:#ff79c6">.</span><span style="color:#50fa7b">startUp</span><span style="color:#ff79c6">();</span> 
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;-----&#34;</span><span style="color:#ff79c6">);</span>  
+        Transformers op2 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Sword<span style="color:#ff79c6">(</span>op1<span style="color:#ff79c6">);</span>
+        op2<span style="color:#ff79c6">.</span><span style="color:#50fa7b">startUp</span><span style="color:#ff79c6">();</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;-----&#34;</span><span style="color:#ff79c6">);</span>  
+        Transformers op3 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Gun<span style="color:#ff79c6">(</span>op1<span style="color:#ff79c6">);</span>
+        op3<span style="color:#ff79c6">.</span><span style="color:#50fa7b">startUp</span><span style="color:#ff79c6">();</span>
     <span style="color:#ff79c6">}</span>
 <span style="color:#ff79c6">}</span>
 </code></pre></div><p><strong>output</strong></p>
-<pre><code>White Backpack
-White Wallet
-</code></pre><p>藉由套用Bridge Pattern，我們解決了繼承需要產生大量類別的問題，也提升了程式整體的彈性。未來若包包種類擴充，或是顏色種類增加，只需要建立新的種類即可，不需要去影響到其他的類別。</p>
+<pre><code>I am Optimus Prime!! 
+Autobot !! Let's Go!!
+-----
+I get a Sword!
+Autobot !! Let's Go!!
+-----
+I get a Gun!
+Autobot !! Let's Go!!
+</code></pre><p>就程式碼來看，新增武器，並不需要更動到柯博文的類別。若是未來要增加飛行裝置，或是恐龍坐騎，都只需要新增一個類別就可以，不需要異動到原始的程式碼。若把程式碼的角色套入剛剛的UML，就會如下圖所示。</p>
+<p><img src='https://g.gravizo.com/svg?
+@startuml;
+skinparam linetype ortho;
+interface Transformers;
+OptimusPrime -up-|> Transformers;
+Weapon -up-|> Transformers;
+Transformers --o Weapon;
+Sword -up-> Weapon;
+Gun -up-> Weapon;
+Transformers : +startUp();
+OptimusPrime : +startUp();
+Weapon : -transformers:Transformers;
+Weapon : +Weapon(Transformers transformers);
+Weapon : +startUp();
+Sword : +startUp();
+Sword : +setWeapon();
+Gun : +startUp();
+Gun : +setWeapon();
+@enduml
+'></p>
 <br>
 <br>
 <ul>
@@ -447,25 +474,28 @@ White Wallet
 </li>
 </ul>
 <hr>
-<h5 id="bridge-pattern的目標">Bridge Pattern的目標</h5>
-<p><code>將抽象部分與實現部分分離，使它們都可以獨立的變化。即用合成關係代替繼承關係。</code></p>
+<h5 id="decorator-pattern的目標">Decorator Pattern的目標</h5>
+<p><code>動態地給一個物件新增一些額外的職責</code></p>
 <br>
-<h5 id="bridge-pattern的成員">Bridge Pattern的成員</h5>
-<pre><code>Abstraction：抽象類別，定義抽象的接口，該接口包含實現具體行爲、具體特徵的Implementor接口。
-RefinedAbstraction：繼承並實作Abstraction內的方法，透過合成關係呼叫Implementor內的方法。
-Implementor：抽象介面，定義具體行爲、具體特徵的應用接口。
-ConcreteImplementor：實作Implementor並給出接口。
+<h5 id="decorator-pattern的成員">Decorator Pattern的成員</h5>
+<pre><code>Component：定義裝飾者與被裝飾者要實作的介面。
+ConcreteComponent：被裝飾者
+Decorator：裝飾者的父類別。
+ConcreteDecorator：裝飾者。
 </code></pre>
 <br>
-<h5 id="bridge-pattern的優缺點">Bridge Pattern的優缺點</h5>
+<h5 id="decorator-pattern的優缺點">Decorator Pattern的優缺點</h5>
 <pre><code>優點
-1. 抽象和實現的分離，提高了比繼承更好的解決方案；
-2. 優秀的擴充套件能力，在兩個變化維度中任意擴充套件一個維度，都不需要修改原有系統；
-3. 實現細節對客戶透明，可以對使用者隱藏實現細節。
+1. 裝飾類以及被裝飾類可獨立發展，不會互相耦合。
+2. 相較於繼承，整體擴充彈性較大。
 缺點
-增加系統的理解與設計難度，由於合成關聯關係建立在抽象層，要求開發者針對抽象進行設計與程式設計。
+子類別眾多，若使用不當會是系統變得相當複雜。
 </code></pre>
 <br>
+<h5 id="decorator-pattern的使用時機">Decorator Pattern的使用時機</h5>
+<pre><code>1. 需要在不影響元件物件的情況下，以動態、透明的方式給物件新增職責。
+2. 當不能採用繼承的方式對系統進行擴充或者採用繼承不利於系統擴充套件和維護時可以考慮使用裝飾類。
+</code></pre>
 <br>
 <ul>
 <li>
@@ -473,7 +503,7 @@ ConcreteImplementor：實作Implementor並給出接口。
 </li>
 </ul>
 <hr>
-<p><em><a href="https://www.jdoodle.com/embed/v0/2iZ2" target="_blank">範例：使用Bridge Pattern</a></em></p>
+<p><em><a href="https://www.jdoodle.com/embed/v0/2jRK" target="_blank">範例：Decorator Pattern 實作</a></em></p>
 <br>
 <br>
 <ul>
@@ -483,9 +513,9 @@ ConcreteImplementor：實作Implementor並給出接口。
 </ul>
 <hr>
 <ul>
-<li><a href="http://c.biancheng.net/view/1364.html" target="_blank">桥接模式（Bridge模式）详解</a></li>
-<li><a href="https://www.itread01.com/content/1541723044.html" target="_blank">重走Java設計模式——橋接模式（Bridge Pattern）</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E6%A9%8B%E6%8E%A5%E6%A8%A1%E5%BC%8F" target="_blank">橋接模式</a></li>
+<li><a href="http://c.biancheng.net/view/1366.html" target="_blank">装饰模式（装饰设计模式）详解</a></li>
+<li><a href="https://www.runoob.com/design-pattern/decorator-pattern.html" target="_blank">装饰器模式</a></li>
+<li><a href="https://codertw.com/%e7%a8%8b%e5%bc%8f%e8%aa%9e%e8%a8%80/104894/" target="_blank">裝飾模式（Decorator Pattern）</a></li>
 </ul>
 
   </div>
@@ -493,18 +523,12 @@ ConcreteImplementor：實作Implementor並給出接口。
   <br>
   <div class="pagination">
   
-    <a href="/ianlife/design-pattern/adapter-pattern/" class="button">
-      <div class="previous">
-        <div>小紅帽與大野狼 - 適配器模式 | Adapter Pattern</div>
-      </div>
-    </a>
-  
-  
     <a href="/ianlife/design-pattern/composite-pattern/" class="button">
-      <div class="next">
+      <div class="previous">
         <div>中秋節烤肉節 - 组合模式 | Composite Pattern</div>
       </div>
     </a>
+  
   
 </div>
 
@@ -537,9 +561,6 @@ ConcreteImplementor：實作Implementor並給出接口。
           
             
             <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/structural-patterns">Structural Patterns</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD">鐵人賽</a></li>
           
         </ul>
       </li>
@@ -686,8 +707,8 @@ ConcreteImplementor：實作Implementor並給出接口。
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_bridge-pattern-%e6%88%90%e5%93%a1">
-												 Bridge Pattern 成員
+						 					<a class="nav-link" href="#_decorator-pattern-%e6%88%90%e5%93%a1">
+												 Decorator Pattern 成員
 											</a>
 										</li>
 						 
@@ -712,8 +733,8 @@ ConcreteImplementor：實作Implementor並給出接口。
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_bridge-pattern-%e5%af%a6%e4%bd%9c">
-												 Bridge Pattern 實作
+						 					<a class="nav-link" href="#_decorator-pattern-%e5%af%a6%e4%bd%9c">
+												 Decorator Pattern 實作
 											</a>
 										</li>
 						 
