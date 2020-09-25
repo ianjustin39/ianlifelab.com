@@ -77,7 +77,7 @@ if (!doNotTrack) {
 <meta itemprop="description" content="外觀模式為子系統中的一組接口提供一個統一的高層接口，使得子系統更容易使用。比方說，當要找銀行貸款時，我們只需要找專員，而專員把我們的資料拿到後，要回銀行各部門跑流程，最後才能核貸給我們。行員就是接口，銀行各部門就是子系統。">
 <meta itemprop="datePublished" content="2020-09-26T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-09-26T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="467">
+<meta itemprop="wordCount" content="473">
 <meta itemprop="image" content="https://ppt.cc/fJFabx">
 
 
@@ -265,17 +265,17 @@ if (!doNotTrack) {
         <li>
             <h5><a>設計模式 - 行為型模型篇 | Behavioural Patterns</a></h5>
             <ul>
-                <li><a href="">Chain of Responsibility Pattern</a></li>
+                <li><a href="">責任鏈模式 | Chain of Responsibility Pattern</a></li>
                 <li><a href="">命令模式 | Command Pattern</a></li>
-                <li><a href="">Iterator Pattern</a></li>
-                <li><a href="">Interpreter Pattern</a></li>
-                <li><a href="">Mediator Pattern</a></li>
+                <li><a href="">迭代器模式 | Iterator Pattern</a></li>
+                <li><a href="">中介者模式 | Mediator Pattern</a></li>
                 <li><a href="">Memento Pattern</a></li>
                 <li><a href="">Observer Pattern</a></li>
                 <li><a href="">State Pattern</a></li>
                 <li><a href="">Strategy Pattern</a></li>
                 <li><a href="">Template Pattern</a></li>
                 <li><a href="">Visitor Pattern</a></li>
+                <li><a href="">Interpreter Pattern</a></li>
             </ul>
         </li>
         <li>
@@ -413,7 +413,7 @@ Department_D : +method4();
 <br>
 <br>
 <p>這就是Facade Pattern實作後的程式碼。UML可以看出，由專員處理一切事務，我們只需要對應專員即可，不需要知道銀行各部門到底在幹嘛。這看起來很簡單，但如果沒使用的話會長怎樣呢？</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">PCHome</span> <span style="color:#ff79c6">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bank</span> <span style="color:#ff79c6">{</span>
     <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
         Department_A obj1 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Department_A<span style="color:#ff79c6">();</span>
         Department_B obj2 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Department_B<span style="color:#ff79c6">();</span>
