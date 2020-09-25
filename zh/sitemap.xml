@@ -28,11 +28,6 @@
   </url>
   
   <url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/decorator-pattern/</loc>
-    <lastmod>2020-09-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ianjustin39.github.io/ianlife/</loc>
     <lastmod>2020-09-25T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -89,6 +84,11 @@
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern/</loc>
+    <lastmod>2020-09-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/design-pattern/decorator-pattern/</loc>
     <lastmod>2020-09-25T00:00:00+00:00</lastmod>
   </url>
   
