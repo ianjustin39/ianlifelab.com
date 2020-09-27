@@ -1,0 +1,1066 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+  <meta content="Design Pattern, Structural Patterns, Flyweight Pattern, 享元模式" name="keywords">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  
+  
+  
+  
+  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
+  <script src="/ianlife/js/bootstrap.js"></script>
+  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
+  
+  
+  
+  
+  <script src="/ianlife/js/jquery.magnific-popup.js"></script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="/ianlife/js/toc.js"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+  <script>
+   window.onload = function () {
+    let plantumlPrefix = "language-plantuml";
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
+      let image = document.createElement("IMG");
+      image.loading = 'lazy'; 
+      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
+      code.parentNode.insertBefore(image, code);
+      code.style.display = 'none';
+    });
+  };
+  </script>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta charset="utf-8">
+<title>享元模式 | Flyweight Pattern - Ian Tsai </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="享元模式 | Flyweight Pattern">
+<meta itemprop="description" content="享元模式是運用共享技術有效地支持大量細粒度的物件。他可以避免大量相似類的開銷，在軟體開發中如果需要生成大量細粒度的類別實體來表示數據，如果這些實體除了幾個參數外基本上都是相同的，這時候就可以使用享元模式來大幅度減少需要實體化類的數量。">
+<meta itemprop="datePublished" content="2020-09-27T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-09-27T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="732">
+<meta itemprop="image" content="https://ppt.cc/f0uiIx">
+
+
+
+<meta itemprop="keywords" content="Design Pattern,Structural Patterns," /><meta property="og:title" content="享元模式 | Flyweight Pattern" />
+<meta property="og:description" content="享元模式是運用共享技術有效地支持大量細粒度的物件。他可以避免大量相似類的開銷，在軟體開發中如果需要生成大量細粒度的類別實體來表示數據，如果這些實體除了幾個參數外基本上都是相同的，這時候就可以使用享元模式來大幅度減少需要實體化類的數量。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/flyweight-pattern/" />
+<meta property="og:image" content="https://ppt.cc/f0uiIx" />
+<meta property="article:published_time" content="2020-09-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-27T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ppt.cc/f0uiIx"/>
+
+<meta name="twitter:title" content="享元模式 | Flyweight Pattern"/>
+<meta name="twitter:description" content="享元模式是運用共享技術有效地支持大量細粒度的物件。他可以避免大量相似類的開銷，在軟體開發中如果需要生成大量細粒度的類別實體來表示數據，如果這些實體除了幾個參數外基本上都是相同的，這時候就可以使用享元模式來大幅度減少需要實體化類的數量。"/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/ianlife/css/bundle.min.0c037ee5e40837985628b373e9760ef0820aaf44cb90ccc6dc34c45603970f2c.css" integrity="sha256-DAN&#43;5eQIN5hWKLNz6XYO8IIKr0TLkMzG3DTEVgOXDyw=">
+        <link rel="stylesheet" href="/ianlife/css/add-on.css">
+</head>
+
+  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
+  
+  
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ianlife/">
+        
+          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/photograph/" class="link"><i class='far fa-images'></i> Photograph</a>
+          
+        
+      
+      
+      
+
+    </menu>
+    
+
+    
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+</header>
+
+    <div id="wrapper">
+      
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    
+    <h2><a href="/ianlife/design-pattern/flyweight-pattern/">享元模式 | Flyweight Pattern</a></h2>
+    
+    
+    <p>享元模式是運用共享技術有效地支持大量細粒度的物件。他可以避免大量相似類的開銷，在軟體開發中如果需要生成大量細粒度的類別實體來表示數據，如果這些實體除了幾個參數外基本上都是相同的，這時候就可以使用享元模式來大幅度減少需要實體化類的數量。</p>
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2020-09-27 00:00:00 &#43;0000 UTC">
+      September 27, 2020
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>4 minute read</p>
+    
+    <p>
+      <span id="busuanzi_container_page_pv">
+        PV: <span id="busuanzi_value_page_pv"></span>
+      </span>
+    </p>
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+  </section>
+  
+  <a href="/ianlife/design-pattern/flyweight-pattern/" class="image featured">
+    
+      <img src="https://ppt.cc/f0uiIx" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    </br>
+<div>
+    <div>
+        <h3 id=_Design-Pattern-Post-List>Design Pattern 系列文章導讀</h3>
+    </div>
+    <hr>
+    <div>
+        <span>
+            Design Pattern可以說是開發上大家都會遇到的一個課題，
+            這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns & Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。
+            預計目標主題如下，若有哪部分不熟的章節可以直接點進去看
+
+            <br>
+
+            註：可以利用<a href="https://www.jdoodle.com/online-java-compiler/" target="_blank">Online Java Compiler IDE</a>
+            
+        </span>
+    </div>
+</br>
+    <ol>
+        <li>
+            <h5><a>設計模式 - 入門篇</a></h5>
+            <ul>
+                <li><a href="../what_is_design_pattern">什麼是Design Pattern?</a></li>
+                <li><a href="../design-patterns-and-principle">Design Pattern的類型與原則</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 原則篇 | Design Principles</a></h5>
+            <ul>
+                <li><a href="../single-responsibility-principle">單一職責原則 | Single Responsibility Principle</a></li>
+                <li><a href="../open-closed-principle">開閉原則 | Open/Closed Principle</a></li>
+                <li><a href="../liskov-substitution-principle">里氏替換原則 | Liskov Substitution Principle</a></li>
+                <li><a href="../interface-segregation-principle">介面隔離原則 | Interface Segregation Principle</a></li>
+                <li><a href="../dependence-inversion-principle">依賴反轉原則 | Dependency Inversion Principle</a></li>
+                <li><a href="../composite-aggregate-reuse-principle">合成/聚合複用原則 | Composite/Aggregate Reuse Principle</a></li>
+                <li><a href="../law-of-demeter">迪米特法則 | Law of Demeter</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 創建型模型篇 | Creational Patterns</a></h5>
+            <ul>
+                <li><a href="../singleton-pattern">單例模式 | Singleton Pattern</a></li>
+                <li><a href="../factory-pattern">工廠模式 | Factory Pattern</a></li>
+                <li><a href="../abstract-factory-pattern">抽象工廠模式 | Abstract Factory Pattern</a></li>
+                <li><a href="../builder-pattern">生成器模式 | Builder Pattern</a></li>
+                <li><a href="../prototype-pattern">原型模式 | Prototype Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 結構型模型篇 | Structural Patterns</a></h5>
+            <ul>
+                <li><a href="../adapter-pattern">適配器模式 | Adapter Pattern</a></li>
+                <li><a href="../bridge-pattern">橋接模式 | Bridge Pattern</a></li>
+                <li><a href="../composite-pattern">组合模式 | Composite Pattern</a></li>
+                <li><a href="../decorator-pattern">裝飾者模式 | Decorator Pattern</a></li>
+                <li><a href="../facede-pattern">外觀模式 | Facade Pattern</a></li>
+                <li><a href="">享元模式 | Flyweight Pattern</a></li>
+                <li><a href="">代理模式 | Proxy Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 行為型模型篇 | Behavioural Patterns</a></h5>
+            <ul>
+                <li><a href="">責任鏈模式 | Chain of Responsibility Pattern</a></li>
+                <li><a href="">命令模式 | Command Pattern</a></li>
+                <li><a href="">迭代器模式 | Iterator Pattern</a></li>
+                <li><a href="">中介者模式 | Mediator Pattern</a></li>
+                <li><a href="">Memento Pattern</a></li>
+                <li><a href="">Observer Pattern</a></li>
+                <li><a href="">State Pattern</a></li>
+                <li><a href="">Strategy Pattern</a></li>
+                <li><a href="">Template Pattern</a></li>
+                <li><a href="">Visitor Pattern</a></li>
+                <li><a href="">Interpreter Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 番外篇</a></h5>
+            <ul>
+                <li><a href="">Anti-Patterns</a></li>
+                <li><a href="">Code Smells</a></li>
+                <li><a href="">Design Pattern VS 演算法</a></li>
+            </ul>
+        </li>
+    </ol>
+</div>
+
+<br>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_定義>定義</h3>
+</li>
+</ul>
+<hr>
+<p><code>運用共享技術有效地支持大量細粒度的物件。</code></p>
+<p>享元模式是運用共享技術有效地支持大量細粒度的物件。他可以避免大量相似類的開銷，在軟體開發中如果需要生成大量細粒度的類別實體來表示數據，如果這些實體除了幾個參數外基本上都是相同的，這時候就可以使用享元模式來大幅度減少需要實體化類的數量。如果能把這些參數（指的這些類別實體不同的參數）移動類別實體外面，在方法調用時將他們傳遞進來，這樣就可以通過共享大幅度地減少單個實體的數目（這個也是享元模式的實現要領）。然而我們把類實體外面的參數稱為享元物件的外部狀態，把在享元物件內部定義稱為內部狀態。</p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_內部狀態-vs-外部狀態>內部狀態 v.s. 外部狀態</h3>
+</li>
+</ul>
+<hr>
+<h5 id="內部狀態">內部狀態</h5>
+<p><code>不會隨著環境改變而產生變化，所以內部狀態是可以共享的部分。</code></p>
+<h5 id="外部狀態">外部狀態</h5>
+<p><code>會隨著環境改變而產生變化的部分，故這部分不可共享。</code></p>
+<p>享元物件的外部狀態必須由Client保存。享元物件建立之後，在需要使用時將其傳入享元物件的內部。外部狀態之間是互相獨立的。</p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_flyweight-pattern-成員>Flyweight Pattern 成員</h3>
+</li>
+</ul>
+<hr>
+<table>
+<thead>
+<tr>
+<th align="left">成員</th>
+<th align="left">功用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Flyweight</td>
+<td align="left">為介面或抽象類別的接口，其中定義ConcreteFlyweight的方法，非享元的外部狀態以參數的形式通過方法傳入。</td>
+</tr>
+<tr>
+<td align="left">ConcreteFlyweight</td>
+<td align="left">實現Flyweight</td>
+</tr>
+<tr>
+<td align="left">UnsharableFlyweight</td>
+<td align="left">稱作複合享元物件，不可共享。但可分解成多個單純享元物件，則可共享。</td>
+</tr>
+<tr>
+<td align="left">FlyweightFactory</td>
+<td align="left">負責建立及管理享元物件。當Client呼叫享元物件時，FlyweightFactory檢查是否存在符合要求的物件，存在則提供，不存在建立新的享元物件。</td>
+</tr>
+</tbody>
+</table>
+<br>
+<img src='https://g.gravizo.com/svg?
+@startuml;
+skinparam linetype ortho;
+interface Flyweight;
+FlyweightFactory o-down- Flyweight;
+UnsharableFlyweight .up.> Flyweight;
+ConcreteFlyweight1 .up.> Flyweight;
+ConcreteFlyweight2 .up.> Flyweight;
+@enduml
+'>
+<br>
+<br>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_單純享元模式-vs-複合享元模式>單純享元模式 v.s. 複合享元模式</h3>
+</li>
+</ul>
+<hr>
+<p>剛剛在介紹成員時有提到可以共享與不可以共享的部分，因為這樣，在實作中享元模式又分成單純享元模式以及複合享元模式。</p>
+<h5 id="單純享元模式">單純享元模式</h5>
+<p>所有實體享元物件都是可以共享的，不存在UnsharableFlyweight。</p>
+<br>
+<img src='https://g.gravizo.com/svg?
+@startuml;
+skinparam linetype ortho;
+interface Flyweight;
+FlyweightFactory o-down- Flyweight;
+ConcreteFlyweight1 .up.> Flyweight;
+ConcreteFlyweight2 .up.> Flyweight;
+@enduml
+'>
+<br>
+<br>
+<br>
+<h5 id="複合享元模式">複合享元模式</h5>
+<p>將單純享元物件使用組合形成複合享元物件，此物件不可共享。但若將其分解成單純享元物件，則可以。複合享元物件可對多個單純享元物件設定相同的外部狀態。</p>
+<br>
+<img src='https://g.gravizo.com/svg?
+@startuml;
+skinparam linetype ortho;
+interface Flyweight;
+FlyweightFactory o-down- Flyweight;
+ConcreteFlyweight .up.> Flyweight;
+UnsharableFlyweight .up.> Flyweight;
+UnsharableFlyweight o-down- Flyweight;
+@enduml
+'>
+<br>
+<br>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_flyweight-pattern-實作>Flyweight Pattern 實作</h3>
+</li>
+</ul>
+<hr>
+<p>看完了一堆定義以及解釋，現在來實作看看。在一間公司內，在錄取之後都會有員工資訊，也會有名片。假設名片是個類別，分別需要CTO、CEO以及COO的名片。而每個名片的實體，也只有資訊不一樣而已，這時就可以套用享元模式。</p>
+<h4 id=_單純享元模式-1>單純享元模式</h4>
+<p>首先先建立抽象享元，將方法先定義好。而show()傳入的參數則是外部狀態。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">//抽象享元角色
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">NameCard</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#6272a4">// 外部狀態 msg
+</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">show</span><span style="color:#ff79c6">(</span>String msg<span style="color:#ff79c6">);</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>而實體享元角色則實作抽象享元，在實體享元內的參數key則是可以共用的內部狀態。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">//實體享元角色
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ConcreteNameCard</span> <span style="color:#8be9fd;font-style:italic">implements</span> NameCard <span style="color:#ff79c6">{</span>
+    <span style="color:#6272a4">// 內部狀態key
+</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">private</span> String key<span style="color:#ff79c6">;</span>
+    ConcreteNameCard<span style="color:#ff79c6">(</span>String key<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">key</span><span style="color:#ff79c6">=</span>key<span style="color:#ff79c6">;</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Create &#34;</span> <span style="color:#ff79c6">+</span> key <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;NameCard!!&#34;</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">show</span><span style="color:#ff79c6">(</span>String msg<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">print</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Hello!! I am &#34;</span> <span style="color:#ff79c6">+</span> key <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;. &#34;</span><span style="color:#ff79c6">);</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>msg<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>享元工廠內則管理各種享元元件。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">//享元工廠角色
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">NameCardFactory</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd;font-style:italic">static</span> NameCardFactory FACTORY <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> NameCardFactory<span style="color:#ff79c6">();</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> HashMap<span style="color:#ff79c6">&lt;</span>String<span style="color:#ff79c6">,</span> NameCard<span style="color:#ff79c6">&gt;</span> nameCards<span style="color:#ff79c6">=</span><span style="color:#ff79c6">new</span> HashMap<span style="color:#ff79c6">&lt;</span>String<span style="color:#ff79c6">,</span> NameCard<span style="color:#ff79c6">&gt;();</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> NameCardFactory <span style="color:#50fa7b">getInstance</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">return</span> FACTORY<span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> NameCard <span style="color:#50fa7b">getNameCard</span><span style="color:#ff79c6">(</span>String key<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        NameCard nameCard <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">(</span>NameCard<span style="color:#ff79c6">)</span>nameCards<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(</span>key<span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span>nameCard <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;ConcreteNameCard &#34;</span> <span style="color:#ff79c6">+</span> key <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34; is exist!!&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">}</span>
+        <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+            nameCard <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ConcreteNameCard<span style="color:#ff79c6">(</span>key<span style="color:#ff79c6">);</span>
+            nameCards<span style="color:#ff79c6">.</span><span style="color:#50fa7b">put</span><span style="color:#ff79c6">(</span>key<span style="color:#ff79c6">,</span> nameCard<span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">}</span>
+        <span style="color:#ff79c6">return</span> nameCard<span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>最後Client經由享元工廠來使用享元元件。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">FlyweightPattern</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        NameCardFactory factory <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> NameCardFactory<span style="color:#ff79c6">();</span>
+        NameCard ceo <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getNameCard</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;CEO&#34;</span><span style="color:#ff79c6">);</span>       
+        ceo<span style="color:#ff79c6">.</span><span style="color:#50fa7b">show</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;This is my NameCard&#34;</span><span style="color:#ff79c6">);</span>
+        NameCard ceo2 <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getNameCard</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;CEO&#34;</span><span style="color:#ff79c6">);</span>
+        ceo2<span style="color:#ff79c6">.</span><span style="color:#50fa7b">show</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;This is my NameCard&#34;</span><span style="color:#ff79c6">);</span>
+        NameCard coo <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getNameCard</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;COO&#34;</span><span style="color:#ff79c6">);</span>
+        coo<span style="color:#ff79c6">.</span><span style="color:#50fa7b">show</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Nice to meet you!!&#34;</span><span style="color:#ff79c6">);</span>
+        
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p><strong>output</strong></p>
+<pre><code>Create CEONameCard!!
+Hello!! I am CEO. This is my NameCard
+ConcreteNameCard CEO is exist!!
+Hello!! I am CEO. This is my NameCard
+Create COONameCard!!
+Hello!! I am COO. Nice to meet you!!
+</code></pre><h4 id=_複合享元模式-1>複合享元模式</h4>
+<p>複合享元模式的抽象享元以及實體享元和單純享元一樣。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">//抽象享元角色
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">NameCard</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#6272a4">// 外部狀態 msg
+</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">show</span><span style="color:#ff79c6">(</span>String msg<span style="color:#ff79c6">);</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#6272a4">//實體享元角色
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ConcreteNameCard</span> <span style="color:#8be9fd;font-style:italic">implements</span> NameCard <span style="color:#ff79c6">{</span>
+    <span style="color:#6272a4">//內部狀態 key
+</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">private</span> String key<span style="color:#ff79c6">;</span>
+    
+    ConcreteNameCard<span style="color:#ff79c6">(</span>String key<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">key</span><span style="color:#ff79c6">=</span>key<span style="color:#ff79c6">;</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Create &#34;</span> <span style="color:#ff79c6">+</span> key <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;NameCard!!&#34;</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">show</span><span style="color:#ff79c6">(</span>String msg<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">print</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Hello!! I am &#34;</span> <span style="color:#ff79c6">+</span> key <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;. &#34;</span><span style="color:#ff79c6">);</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>msg<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>複合享元多了一個複合享元角色，他將會由多個單純享元物件組成，不可共享。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">//複合實體享元角色
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">CompositeConcreteNameCard</span> <span style="color:#8be9fd;font-style:italic">implements</span> NameCard <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> Map<span style="color:#ff79c6">&lt;</span>String<span style="color:#ff79c6">,</span> NameCard<span style="color:#ff79c6">&gt;</span> nameCards <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> HashMap<span style="color:#ff79c6">&lt;&gt;();</span>
+    @Override
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">show</span><span style="color:#ff79c6">(</span>String msg<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">for</span> <span style="color:#ff79c6">(</span>Map<span style="color:#ff79c6">.</span><span style="color:#50fa7b">Entry</span><span style="color:#ff79c6">&lt;</span>String<span style="color:#ff79c6">,</span> NameCard<span style="color:#ff79c6">&gt;</span> entry <span style="color:#ff79c6">:</span> nameCards<span style="color:#ff79c6">.</span><span style="color:#50fa7b">entrySet</span><span style="color:#ff79c6">())</span> <span style="color:#ff79c6">{</span>
+            entry<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getValue</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">show</span><span style="color:#ff79c6">(</span>msg<span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">}</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>String key<span style="color:#ff79c6">,</span> NameCard nameCard<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        nameCards<span style="color:#ff79c6">.</span><span style="color:#50fa7b">put</span><span style="color:#ff79c6">(</span>key<span style="color:#ff79c6">,</span> nameCard<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>String type<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        nameCards<span style="color:#ff79c6">.</span><span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>享元工廠內也新增了複合享元getNameCard()的方法，傳入參數從String改成List<String>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">//享元工廠角色
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">NameCardFactory</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd;font-style:italic">static</span> NameCardFactory FACTORY <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> NameCardFactory<span style="color:#ff79c6">();</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> HashMap<span style="color:#ff79c6">&lt;</span>String<span style="color:#ff79c6">,</span> NameCard<span style="color:#ff79c6">&gt;</span> nameCards<span style="color:#ff79c6">=</span><span style="color:#ff79c6">new</span> HashMap<span style="color:#ff79c6">&lt;</span>String<span style="color:#ff79c6">,</span> NameCard<span style="color:#ff79c6">&gt;();</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> NameCardFactory <span style="color:#50fa7b">getInstance</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">return</span> FACTORY<span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#6272a4">// 單純享元模式
+</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">public</span> NameCard <span style="color:#50fa7b">getNameCard</span><span style="color:#ff79c6">(</span>String key<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        NameCard nameCard <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">(</span>NameCard<span style="color:#ff79c6">)</span>nameCards<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(</span>key<span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span>nameCard <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;ConcreteNameCard &#34;</span> <span style="color:#ff79c6">+</span> key <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34; is exist!!&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">}</span>
+        <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+            nameCard <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ConcreteNameCard<span style="color:#ff79c6">(</span>key<span style="color:#ff79c6">);</span>
+            nameCards<span style="color:#ff79c6">.</span><span style="color:#50fa7b">put</span><span style="color:#ff79c6">(</span>key<span style="color:#ff79c6">,</span> nameCard<span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">}</span>
+        <span style="color:#ff79c6">return</span> nameCard<span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#6272a4">// 複合享元模式
+</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">public</span> NameCard <span style="color:#50fa7b">getNameCard</span><span style="color:#ff79c6">(</span>List<span style="color:#ff79c6">&lt;</span>String<span style="color:#ff79c6">&gt;</span> keyList<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        CompositeConcreteNameCard nameCard <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> CompositeConcreteNameCard<span style="color:#ff79c6">();</span>
+        <span style="color:#ff79c6">for</span> <span style="color:#ff79c6">(</span>String key <span style="color:#ff79c6">:</span> keyList<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+            nameCard<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>key<span style="color:#ff79c6">,</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">getNameCard</span><span style="color:#ff79c6">(</span>key<span style="color:#ff79c6">));</span>
+        <span style="color:#ff79c6">}</span>
+        <span style="color:#ff79c6">return</span> nameCard<span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>Client端先將要建立的名片放到一個List內，然後將這List放到工廠內新建立的getNameCard()內，則可取得名片。而複合享元物件不可以共用，在最後可以看到我們建立一個先的複合享元物件，他並不等於第一個。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">FlyweightPattern</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        NameCardFactory factory <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> NameCardFactory<span style="color:#ff79c6">();</span>
+        
+        List<span style="color:#ff79c6">&lt;</span>String<span style="color:#ff79c6">&gt;</span> keyList <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ArrayList<span style="color:#ff79c6">&lt;&gt;();</span>
+        keyList<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;CTO&#34;</span><span style="color:#ff79c6">);</span>
+        keyList<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;COO&#34;</span><span style="color:#ff79c6">);</span>
+        keyList<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;CEO&#34;</span><span style="color:#ff79c6">);</span>
+        
+        NameCard member <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getNameCard</span><span style="color:#ff79c6">(</span>keyList<span style="color:#ff79c6">);</span>    
+        member<span style="color:#ff79c6">.</span><span style="color:#50fa7b">show</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;This is my NameCard&#34;</span><span style="color:#ff79c6">);</span>    
+        
+        NameCard member2 <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getNameCard</span><span style="color:#ff79c6">(</span>keyList<span style="color:#ff79c6">);</span>   
+        <span style="color:#6272a4">// 不相等，複合享元模式的物件不可共享
+</span><span style="color:#6272a4"></span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>member <span style="color:#ff79c6">==</span> member2<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p><strong>output</strong></p>
+<pre><code>Create CTONameCard!!
+Create COONameCard!!
+Create CEONameCard!!
+Hello!! I am COO. This is my NameCard
+Hello!! I am CEO. This is my NameCard
+Hello!! I am CTO. This is my NameCard
+ConcreteNameCard CTO is exist!!
+ConcreteNameCard COO is exist!!
+ConcreteNameCard CEO is exist!!
+false
+</code></pre><br>
+<br>
+<ul>
+<li>
+<h3 id=_小結>小結</h3>
+</li>
+</ul>
+<hr>
+<h5 id="flyweight-pattern的目標">Flyweight Pattern的目標</h5>
+<p><code>藉由共享來實現重用大量细粒度，減少需要建立的物件數量、避免大量類似物件的創建，進而提高資源使用率。</code></p>
+<br>
+<h5 id="flyweight-pattern的成員">Flyweight Pattern的成員</h5>
+<p>Flyweight：為介面或抽象類別的接口，其中定義ConcreteFlyweight的方法，非享元的外部狀態以參數的形式通過方法傳入。
+ConcreteFlyweight：實體享元物件。
+UnsharableFlyweight：複合享元物件，不可共享。可分解成多個單純享元物件，則可共享。
+FlyweightFactory：負責建立及管理享元物件。當Client呼叫享元物件時，FlyweightFactory檢查是否存在符合要求的物件，存在則提供，不存在建立新的享元物件。</p>
+<br>
+<h5 id="flyweight-pattern的優缺點">Flyweight Pattern的優缺點</h5>
+<pre><code>優點
+1. 相同的物件只需要保存一份，降低了系統中的物件數量，也跟著降低系統細顆粒度物件對記憶體的壓力。
+2. 享元模式的物件狀態相對是獨立的，不會影響到內部狀態，讓享元物件可在不同的環境被共享，。
+缺點
+1. 享元模式需要分離內部及外部狀態，這讓系統邏輯變得複雜化。
+2. 為了是可以共享，享元模式需要將享元物件的部分狀態外部化，而讀取外部狀態使得執行時間拉長。
+</code></pre>
+<br>
+<h5 id="flyweight-pattern的應用">Flyweight Pattern的應用</h5>
+<pre><code>1. 一個系統中有大量的物件，這些物件耗費大量的記憶體。
+2. 大部分物件可照內部狀態分組，且可將不同部分外部化，讓每一組只需保存一個內部狀態。
+</code></pre>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_範例程式碼>範例程式碼</h3>
+</li>
+</ul>
+<hr>
+<p><em><a href="https://www.jdoodle.com/embed/v0/2kOn" target="_blank">範例1：單純享元模式</a></em></p>
+<p><em><a href="https://www.jdoodle.com/embed/v0/2kOq" target="_blank">範例2：複合享元模式</a></em></p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_references>References</h3>
+</li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://juejin.im/post/6844903992858787848" target="_blank">23种设计模式之享元（Flyweight）模式</a></li>
+<li><a href="http://c.biancheng.net/view/1371.html" target="_blank">享元模式（详解版）</a></li>
+<li><a href="https://www.shuzhiduo.com/A/n2d99qPgdD/" target="_blank">设计模式21&mdash;设计模式之享元模式（Flyweight）（结构型）</a></li>
+</ul>
+
+  </div>
+  <br>
+  <br>
+  <div class="pagination">
+  
+    <a href="/ianlife/design-pattern/facede-pattern/" class="button">
+      <div class="previous">
+        <div>外觀模式 | Facade Pattern</div>
+      </div>
+    </a>
+  
+  
+</div>
+
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern">從生活中認識Design Pattern</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-pattern">Design Pattern</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/structural-patterns">Structural Patterns</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+
+        <div class="disqus markdown">
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+      </main>
+      
+      <div id="page-sidebar">
+        
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div>
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_Design-Pattern-Post-List">
+												 Design Pattern 系列文章導讀
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%ae%9a%e7%be%a9">
+												 定義
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%85%a7%e9%83%a8%e7%8b%80%e6%85%8b-vs-%e5%a4%96%e9%83%a8%e7%8b%80%e6%85%8b">
+												 內部狀態 v.s. 外部狀態
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_flyweight-pattern-%e6%88%90%e5%93%a1">
+												 Flyweight Pattern 成員
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%96%ae%e7%b4%94%e4%ba%ab%e5%85%83%e6%a8%a1%e5%bc%8f-vs-%e8%a4%87%e5%90%88%e4%ba%ab%e5%85%83%e6%a8%a1%e5%bc%8f">
+												 單純享元模式 v.s. 複合享元模式
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_flyweight-pattern-%e5%af%a6%e4%bd%9c">
+												 Flyweight Pattern 實作
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%96%ae%e7%b4%94%e4%ba%ab%e5%85%83%e6%a8%a1%e5%bc%8f-1">
+												 單純享元模式
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e8%a4%87%e5%90%88%e4%ba%ab%e5%85%83%e6%a8%a1%e5%bc%8f-1">
+												 複合享元模式
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%b0%8f%e7%b5%90">
+												 小結
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e7%af%84%e4%be%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc">
+												 範例程式碼
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_references">
+												 References
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+        <script src="/ianlife/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.75db2f45ac90858cf062e97bf111d0898f38a1aa55929a1baa5ba16e75aa292e.js" integrity="sha256-ddsvRayQhYzwYul78RHQiY84oapVkpobqluhbnWqKS4="></script>
+    <script src="/ianlife/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+      </div>
+    </div>
+    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+  </body>
+</html>
