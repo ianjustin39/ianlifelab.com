@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+  <meta content="Design Pattern, Structural Patterns, Proxy Pattern, 代理模式" name="keywords">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  
+  
+  
+  
+  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
+  <script src="/ianlife/js/bootstrap.js"></script>
+  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
+  
+  
+  
+  
+  <script src="/ianlife/js/jquery.magnific-popup.js"></script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="/ianlife/js/toc.js"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+  <script>
+   window.onload = function () {
+    let plantumlPrefix = "language-plantuml";
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
+      let image = document.createElement("IMG");
+      image.loading = 'lazy'; 
+      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
+      code.parentNode.insertBefore(image, code);
+      code.style.display = 'none';
+    });
+  };
+  </script>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta charset="utf-8">
+<title>代理模式 | Proxy Pattern - Ian Tsai </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="代理模式 | Proxy Pattern">
+<meta itemprop="description" content="Design Pattern 系列文章導讀     Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns & Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE      設計模式 - 入門篇  什麼是Design Pattern? Design Pattern的類型與原則    設計模式 - 原則篇 | Design Principles  單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter    設計模式 - 創建型模型篇 | Creational Patterns  單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern    設計模式 - 結構型模型篇 | Structural Patterns  適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern    設計模式 - 行為型模型篇 | Behavioural Patterns  責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern Memento Pattern Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern    設計模式 - 番外篇  Anti-Patterns Code Smells Design Pattern VS 演算法       定義    爲其他物件提供一種代理以控制對這個物件的訪問。">
+<meta itemprop="datePublished" content="2020-09-28T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-09-28T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="400">
+<meta itemprop="image" content="https://ppt.cc/f4cKxx">
+
+
+
+<meta itemprop="keywords" content="Design Pattern,Structural Patterns," /><meta property="og:title" content="代理模式 | Proxy Pattern" />
+<meta property="og:description" content="Design Pattern 系列文章導讀     Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns & Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE      設計模式 - 入門篇  什麼是Design Pattern? Design Pattern的類型與原則    設計模式 - 原則篇 | Design Principles  單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter    設計模式 - 創建型模型篇 | Creational Patterns  單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern    設計模式 - 結構型模型篇 | Structural Patterns  適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern    設計模式 - 行為型模型篇 | Behavioural Patterns  責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern Memento Pattern Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern    設計模式 - 番外篇  Anti-Patterns Code Smells Design Pattern VS 演算法       定義    爲其他物件提供一種代理以控制對這個物件的訪問。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/proxy-pattern/" />
+<meta property="og:image" content="https://ppt.cc/f4cKxx" />
+<meta property="article:published_time" content="2020-09-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-28T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ppt.cc/f4cKxx"/>
+
+<meta name="twitter:title" content="代理模式 | Proxy Pattern"/>
+<meta name="twitter:description" content="Design Pattern 系列文章導讀     Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns & Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE      設計模式 - 入門篇  什麼是Design Pattern? Design Pattern的類型與原則    設計模式 - 原則篇 | Design Principles  單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter    設計模式 - 創建型模型篇 | Creational Patterns  單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern    設計模式 - 結構型模型篇 | Structural Patterns  適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern    設計模式 - 行為型模型篇 | Behavioural Patterns  責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern Memento Pattern Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern    設計模式 - 番外篇  Anti-Patterns Code Smells Design Pattern VS 演算法       定義    爲其他物件提供一種代理以控制對這個物件的訪問。"/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/ianlife/css/bundle.min.0c037ee5e40837985628b373e9760ef0820aaf44cb90ccc6dc34c45603970f2c.css" integrity="sha256-DAN&#43;5eQIN5hWKLNz6XYO8IIKr0TLkMzG3DTEVgOXDyw=">
+        <link rel="stylesheet" href="/ianlife/css/add-on.css">
+</head>
+
+  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
+  
+  
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ianlife/">
+        
+          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/photograph/" class="link"><i class='far fa-images'></i> Photograph</a>
+          
+        
+      
+      
+      
+
+    </menu>
+    
+
+    
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+</header>
+
+    <div id="wrapper">
+      
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    
+    <h2><a href="/ianlife/design-pattern/proxy-pattern/">代理模式 | Proxy Pattern</a></h2>
+    
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2020-09-28 00:00:00 &#43;0000 UTC">
+      September 28, 2020
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>2 minute read</p>
+    
+    <p>
+      <span id="busuanzi_container_page_pv">
+        PV: <span id="busuanzi_value_page_pv"></span>
+      </span>
+    </p>
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+  </section>
+  
+  <a href="/ianlife/design-pattern/proxy-pattern/" class="image featured">
+    
+      <img src="https://ppt.cc/f4cKxx" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    </br>
+<div>
+    <div>
+        <h3 id=_Design-Pattern-Post-List>Design Pattern 系列文章導讀</h3>
+    </div>
+    <hr>
+    <div>
+        <span>
+            Design Pattern可以說是開發上大家都會遇到的一個課題，
+            這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns & Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。
+            預計目標主題如下，若有哪部分不熟的章節可以直接點進去看
+
+            <br>
+
+            註：可以利用<a href="https://www.jdoodle.com/online-java-compiler/" target="_blank">Online Java Compiler IDE</a>
+            
+        </span>
+    </div>
+</br>
+    <ol>
+        <li>
+            <h5><a>設計模式 - 入門篇</a></h5>
+            <ul>
+                <li><a href="../what_is_design_pattern">什麼是Design Pattern?</a></li>
+                <li><a href="../design-patterns-and-principle">Design Pattern的類型與原則</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 原則篇 | Design Principles</a></h5>
+            <ul>
+                <li><a href="../single-responsibility-principle">單一職責原則 | Single Responsibility Principle</a></li>
+                <li><a href="../open-closed-principle">開閉原則 | Open/Closed Principle</a></li>
+                <li><a href="../liskov-substitution-principle">里氏替換原則 | Liskov Substitution Principle</a></li>
+                <li><a href="../interface-segregation-principle">介面隔離原則 | Interface Segregation Principle</a></li>
+                <li><a href="../dependence-inversion-principle">依賴反轉原則 | Dependency Inversion Principle</a></li>
+                <li><a href="../composite-aggregate-reuse-principle">合成/聚合複用原則 | Composite/Aggregate Reuse Principle</a></li>
+                <li><a href="../law-of-demeter">迪米特法則 | Law of Demeter</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 創建型模型篇 | Creational Patterns</a></h5>
+            <ul>
+                <li><a href="../singleton-pattern">單例模式 | Singleton Pattern</a></li>
+                <li><a href="../factory-pattern">工廠模式 | Factory Pattern</a></li>
+                <li><a href="../abstract-factory-pattern">抽象工廠模式 | Abstract Factory Pattern</a></li>
+                <li><a href="../builder-pattern">生成器模式 | Builder Pattern</a></li>
+                <li><a href="../prototype-pattern">原型模式 | Prototype Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 結構型模型篇 | Structural Patterns</a></h5>
+            <ul>
+                <li><a href="../adapter-pattern">適配器模式 | Adapter Pattern</a></li>
+                <li><a href="../bridge-pattern">橋接模式 | Bridge Pattern</a></li>
+                <li><a href="../composite-pattern">组合模式 | Composite Pattern</a></li>
+                <li><a href="../decorator-pattern">裝飾者模式 | Decorator Pattern</a></li>
+                <li><a href="../facede-pattern">外觀模式 | Facade Pattern</a></li>
+                <li><a href="../flyweight-pattern">享元模式 | Flyweight Pattern</a></li>
+                <li><a href="">代理模式 | Proxy Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 行為型模型篇 | Behavioural Patterns</a></h5>
+            <ul>
+                <li><a href="">責任鏈模式 | Chain of Responsibility Pattern</a></li>
+                <li><a href="">命令模式 | Command Pattern</a></li>
+                <li><a href="">迭代器模式 | Iterator Pattern</a></li>
+                <li><a href="">中介者模式 | Mediator Pattern</a></li>
+                <li><a href="">狀態模式 | State Pattern</a></li>
+                <li><a href="">Memento Pattern</a></li>
+                <li><a href="">Observer Pattern</a></li>
+                <li><a href="">Strategy Pattern</a></li>
+                <li><a href="">Template Pattern</a></li>
+                <li><a href="">Visitor Pattern</a></li>
+                <li><a href="">Interpreter Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 番外篇</a></h5>
+            <ul>
+                <li><a href="">Anti-Patterns</a></li>
+                <li><a href="">Code Smells</a></li>
+                <li><a href="">Design Pattern VS 演算法</a></li>
+            </ul>
+        </li>
+    </ol>
+</div>
+
+<br>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_定義>定義</h3>
+</li>
+</ul>
+<hr>
+<p><code>爲其他物件提供一種代理以控制對這個物件的訪問。</code></p>
+<p>代理模式是一種物件結構型模式。在代理模式中引入了一個新的代理物件，代理物件在客戶端物件和目標物件之間起到中介的作用，它去掉客戶不能看到的內容和服務或者增添客戶需要的額外的新服務。我想要買日本的藥妝產品，但我無法自己跑去日本買，這時就有代購出現了。於是我就委託他去日本幫忙買我要的商品，不需要自己飛一趟日本。</p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_proxy-pattern-成員>Proxy Pattern 成員</h3>
+</li>
+</ul>
+<hr>
+<table>
+<thead>
+<tr>
+<th align="left">成員</th>
+<th align="left">功用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Subject</td>
+<td align="left">定義RealSubject和Proxy實作的業務方法，可是介面或抽象類別。</td>
+</tr>
+<tr>
+<td align="left">RealSubject</td>
+<td align="left">實作Subject中的方法，為最終要引用的物件。</td>
+</tr>
+<tr>
+<td align="left">Proxy</td>
+<td align="left">提供與RealSubject相同的接口，內部引用RealSubject，可以訪問、控制或擴充RealSubject的工能。</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<img src='https://g.gravizo.com/svg?
+@startuml;
+interface Subject;
+RealSubject .up.|> Subject;
+Proxy .up.|> Subject;
+RealSubject -left-o Proxy;
+Subject : +request();
+RealSubject : +request();
+Proxy : +request();
+Proxy : +preRequest();
+Proxy : +postRequest();
+Proxy : -RealSubject;
+@enduml
+'>
+<br>
+<br>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_proxy-pattern-應用>Proxy Pattern 應用</h3>
+</li>
+</ul>
+<hr>
+<p>Proxy Pattern有很多種方式可以用，但他不像別的Pattern是不同的Pattern方法，他比較像不同的應用。</p>
+<h5 id="1-遠端代理">1. 遠端代理：</h5>
+<p>讓一個位於不同地址的物件，提供一個區域的代表物件。如可以將美國地區的服務通過代理模式變成台灣地區服務的一部分。</p>
+<h5 id="2-虛擬代理">2. 虛擬代理：</h5>
+<p>將一個需要消耗很大資源或者比較複雜的物件延遲到真正需要時才建立。如載入圖片時，圖檔過大，先用小檔圖片Proxy來代替真正的圖片。</p>
+<h5 id="3-保護代理">3. 保護代理：</h5>
+<p>這種代理通常用於控制不同類的Client對RealSubject的訪問權限。例如：論壇的會員等級。</p>
+<h5 id="4-智慧代理">4. 智慧代理：</h5>
+<p>用於調用目標物件時，代理附加一些額外的功能。比如：紀錄訪問的流量。</p>
+<h5 id="5-延遲載入">5. 延遲載入：</h5>
+<p>為了提高系統性能，而言直對目標的載入。如：Hibernate中屬性的延遲載入。</p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_proxy-pattern-實作>Proxy Pattern 實作</h3>
+</li>
+</ul>
+<hr>
+<p>一開始有提到，想要買日本的藥妝品，無法自己飛過去只能請代購的例子，現在我們就來實作。</p>
+<p>首先先將Subject建立起來：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">IPurchasing</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">Request</span><span style="color:#ff79c6">();</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>接著需要一個真正的類別RealSubject，他來實作Subject，主要就是在日本買東西：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Purchasing</span> <span style="color:#8be9fd;font-style:italic">implements</span> IPurchasing <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">Request</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Shopping in japan&#34;</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>然後建立代購的人Proxy，Proxy內除了有Request以外，還可以增加一些方法。preRequest()含有確認品項以及記錄到底有多少人需要代購兩個邏輯；而postRequest()則是ㄧ買完回來要把東西寄給買家。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ProxyBuyer</span> <span style="color:#8be9fd;font-style:italic">implements</span> IPurchasing <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> Purchasing purchasing<span style="color:#ff79c6">;</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">Request</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>purchasing <span style="color:#ff79c6">==</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+            purchasing <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Purchasing<span style="color:#ff79c6">();</span>
+        <span style="color:#ff79c6">}</span>
+        preRequest<span style="color:#ff79c6">();</span>
+        purchasing<span style="color:#ff79c6">.</span><span style="color:#50fa7b">Request</span><span style="color:#ff79c6">();</span>
+        postRequest<span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">preRequest</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Confirm shopping items&#34;</span><span style="color:#ff79c6">);</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Record the number of purchasers&#34;</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">postRequest</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;delivery&#34;</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>最後身為買家的我，只要呼叫ProxyBuyer就可以請他幫我買到日本的藥妝了。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyClass</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+        ProxyBuyer proxy <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ProxyBuyer<span style="color:#ff79c6">();</span>
+        proxy<span style="color:#ff79c6">.</span><span style="color:#50fa7b">Request</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><br>
+<br>
+<img src='https://g.gravizo.com/svg?
+@startuml;
+interface IPurchasing;
+Purchasing .up.|> IPurchasing;
+ProxyBuyer .up.|> IPurchasing;
+Purchasing -left-o ProxyBuyer;
+IPurchasing : +request();
+Purchasing : +request();
+ProxyBuyer : +request();
+ProxyBuyer : +preRequest();
+ProxyBuyer : +postRequest();
+ProxyBuyer : -Purchasing;
+@enduml
+'>
+<br>
+<br>
+<br>
+<p>其實這也就是一個生活化的例子，可以把它想成服務在日本並不在台灣，我們藉由遠端代理的方式，將日本的服務包裝在proxy內，供台灣系統使用。使用者只需要知道從proxy就可以使用到服務，不需要知道服務在哪邊。而在proxy內有一個紀錄代購人數的地方，就像用智慧代理一樣，每當proxy被調用時，就會有紀錄，就可以追蹤一個時段內有多少人使用了這個服務。</p>
+<br>
+<ul>
+<li>
+<h3 id=_小結>小結</h3>
+</li>
+</ul>
+<hr>
+<h5 id="proxy-pattern的目標">Proxy Pattern的目標</h5>
+<p><code>爲其他物件提供一種代理以控制對這個物件的訪問。</code></p>
+<br>
+<h5 id="proxy-pattern的成員">Proxy Pattern的成員</h5>
+<pre><code>Subject：定義代理的方法。
+RealSubject：被代理者。
+Proxy：代理者。
+</code></pre>
+<br>
+<h5 id="proxy-pattern的優缺點">Proxy Pattern的優缺點</h5>
+<pre><code>優點
+1. 代理物件可以擴充目標物件的功能
+2. 代理模式可以將Client跟目標物件分離，降低系統的耦合，增加程式的可擴充性。
+3. 代理模式有中介及保護目標物件的作用。
+缺點
+1. 會增加系統設計中類別的數量。
+2. Client和目標物件中增加了一個代理物件，會增造成請求處理速度變慢。
+3. 增加了系統的複雜度。
+</code></pre>
+<br>
+<h5 id="proxy-pattern的應用">Proxy Pattern的應用</h5>
+<pre><code>1. 遠端代理
+2. 虛擬代理
+3. 保護代理
+4. 智慧代理
+5. 延遲載入
+</code></pre>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_範例程式碼>範例程式碼</h3>
+</li>
+</ul>
+<hr>
+<p><em><a href="https://www.jdoodle.com/embed/v0/2kwA" target="_blank">範例：實作Proxy Pattern</a></em></p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_references>References</h3>
+</li>
+</ul>
+<hr>
+<ul>
+<li><a href="http://c.biancheng.net/view/1359.html" target="_blank">代理模式（代理设计模式）详解</a></li>
+<li><a href="https://www.itread01.com/content/1550014204.html" target="_blank">代理模式(Proxy Pattern)(一)：代理模式介紹</a></li>
+<li><a href="https://www.runoob.com/design-pattern/proxy-pattern.html" target="_blank">代理模式</a></li>
+</ul>
+
+  </div>
+  <br>
+  <br>
+  <div class="pagination">
+  
+    <a href="/ianlife/design-pattern/flyweight-pattern/" class="button">
+      <div class="previous">
+        <div>享元模式 | Flyweight Pattern</div>
+      </div>
+    </a>
+  
+  
+</div>
+
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern">從生活中認識Design Pattern</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-pattern">Design Pattern</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/structural-patterns">Structural Patterns</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+
+        <div class="disqus markdown">
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+      </main>
+      
+      <div id="page-sidebar">
+        
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div>
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_Design-Pattern-Post-List">
+												 Design Pattern 系列文章導讀
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%ae%9a%e7%be%a9">
+												 定義
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_proxy-pattern-%e6%88%90%e5%93%a1">
+												 Proxy Pattern 成員
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_proxy-pattern-%e6%87%89%e7%94%a8">
+												 Proxy Pattern 應用
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_proxy-pattern-%e5%af%a6%e4%bd%9c">
+												 Proxy Pattern 實作
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%b0%8f%e7%b5%90">
+												 小結
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e7%af%84%e4%be%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc">
+												 範例程式碼
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_references">
+												 References
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+        <script src="/ianlife/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.75db2f45ac90858cf062e97bf111d0898f38a1aa55929a1baa5ba16e75aa292e.js" integrity="sha256-ddsvRayQhYzwYul78RHQiY84oapVkpobqluhbnWqKS4="></script>
+    <script src="/ianlife/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+      </div>
+    </div>
+    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+  </body>
+</html>
