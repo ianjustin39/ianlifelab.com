@@ -77,7 +77,7 @@ if (!doNotTrack) {
 <meta itemprop="description" content="享元模式是運用共享技術有效地支持大量細粒度的物件。他可以避免大量相似類的開銷，在軟體開發中如果需要生成大量細粒度的類別實體來表示數據，如果這些實體除了幾個參數外基本上都是相同的，這時候就可以使用享元模式來大幅度減少需要實體化類的數量。">
 <meta itemprop="datePublished" content="2020-09-27T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-09-27T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="732">
+<meta itemprop="wordCount" content="733">
 <meta itemprop="image" content="https://ppt.cc/f0uiIx">
 
 
@@ -200,7 +200,8 @@ if (!doNotTrack) {
 
 
   <div class="content">
-    </br>
+    <p><strong><a href="https://ithelp.ithome.com.tw/articles/10245053" target="_blank">本系列文章同步分享於IT邦幫忙第12屆鐵人賽</a></strong></p>
+</br>
 <div>
     <div>
         <h3 id=_Design-Pattern-Post-List>Design Pattern 系列文章導讀</h3>
@@ -576,10 +577,11 @@ false
 <p><code>藉由共享來實現重用大量细粒度，減少需要建立的物件數量、避免大量類似物件的創建，進而提高資源使用率。</code></p>
 <br>
 <h5 id="flyweight-pattern的成員">Flyweight Pattern的成員</h5>
-<p>Flyweight：為介面或抽象類別的接口，其中定義ConcreteFlyweight的方法，非享元的外部狀態以參數的形式通過方法傳入。
+<pre><code>Flyweight：為介面或抽象類別的接口，其中定義ConcreteFlyweight的方法，非享元的外部狀態以參數的形式通過方法傳入。
 ConcreteFlyweight：實體享元物件。
 UnsharableFlyweight：複合享元物件，不可共享。可分解成多個單純享元物件，則可共享。
-FlyweightFactory：負責建立及管理享元物件。當Client呼叫享元物件時，FlyweightFactory檢查是否存在符合要求的物件，存在則提供，不存在建立新的享元物件。</p>
+FlyweightFactory：負責建立及管理享元物件。當Client呼叫享元物件時，FlyweightFactory檢查是否存在符合要求的物件，存在則提供，不存在建立新的享元物件。
+</code></pre>
 <br>
 <h5 id="flyweight-pattern的優缺點">Flyweight Pattern的優缺點</h5>
 <pre><code>優點
