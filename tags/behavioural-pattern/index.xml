@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Behavioural Pattern on Life Story</title>
+    <link>https://ianjustin39.github.io/ianlife/tags/behavioural-pattern/</link>
+    <description>Recent content in Behavioural Pattern on Life Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 29 Sep 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://ianjustin39.github.io/ianlife/tags/behavioural-pattern/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>責任鏈模式 | Chain of Responsibility Pattern</title>
+      <link>https://ianjustin39.github.io/ianlife/design-pattern/chain-of-responsibility/</link>
+      <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/design-pattern/chain-of-responsibility/</guid>
+      <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
+   Design Pattern 系列文章導讀     Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE      設計模式 - 入門篇  什麼是Design Pattern? Design Pattern的類型與原則    設計模式 - 原則篇 | Design Principles  單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter    設計模式 - 創建型模型篇 | Creational Patterns  單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern    設計模式 - 結構型模型篇 | Structural Patterns  適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern    設計模式 - 行為型模型篇 | Behavioural Patterns  責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern Memento Pattern Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern    設計模式 - 番外篇  Anti-Patterns Code Smells Design Pattern VS 演算法       定義    將多個物件連成一條鏈，沿著這條鏈傳遞至每一個物件並處理請求。</description>
+    </item>
+    
+  </channel>
+</rss>

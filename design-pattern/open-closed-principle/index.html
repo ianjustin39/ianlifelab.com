@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+  <meta content="Design Pattern, Design Principle, Open/Closed Principle, OCP, 開閉原則" name="keywords">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  
+  
+  
+  
+  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
+  <script src="/ianlife/js/bootstrap.js"></script>
+  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
+  
+  
+  
+  
+  <script src="/ianlife/js/jquery.magnific-popup.js"></script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="/ianlife/js/toc.js"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+  <script>
+   window.onload = function () {
+    let plantumlPrefix = "language-plantuml";
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
+      let image = document.createElement("IMG");
+      image.loading = 'lazy'; 
+      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
+      code.parentNode.insertBefore(image, code);
+      code.style.display = 'none';
+    });
+  };
+  </script>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta charset="utf-8">
+<title>開閉原則 | Open/Closed Principle - Ian Tsai </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="開閉原則 | Open/Closed Principle">
+<meta itemprop="description" content="擴充系統時，應該由新增程式碼代替修改程式碼。如同電鑽，可以換各種不同的鑽頭，而電鑽本身並不需要被改造，就符合開閉原則。">
+<meta itemprop="datePublished" content="2020-09-11T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-09-11T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="428">
+<meta itemprop="image" content="https://ppt.cc/f8vwZx">
+
+
+
+<meta itemprop="keywords" content="Design Pattern,Design Principle,鐵人賽," /><meta property="og:title" content="開閉原則 | Open/Closed Principle" />
+<meta property="og:description" content="擴充系統時，應該由新增程式碼代替修改程式碼。如同電鑽，可以換各種不同的鑽頭，而電鑽本身並不需要被改造，就符合開閉原則。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/open-closed-principle/" />
+<meta property="og:image" content="https://ppt.cc/f8vwZx" />
+<meta property="article:published_time" content="2020-09-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-11T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ppt.cc/f8vwZx"/>
+
+<meta name="twitter:title" content="開閉原則 | Open/Closed Principle"/>
+<meta name="twitter:description" content="擴充系統時，應該由新增程式碼代替修改程式碼。如同電鑽，可以換各種不同的鑽頭，而電鑽本身並不需要被改造，就符合開閉原則。"/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/ianlife/css/bundle.min.0c037ee5e40837985628b373e9760ef0820aaf44cb90ccc6dc34c45603970f2c.css" integrity="sha256-DAN&#43;5eQIN5hWKLNz6XYO8IIKr0TLkMzG3DTEVgOXDyw=">
+        <link rel="stylesheet" href="/ianlife/css/add-on.css">
+</head>
+
+  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
+  
+  
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ianlife/">
+        
+          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/photograph/" class="link"><i class='far fa-images'></i> Photograph</a>
+          
+        
+      
+      
+      
+
+    </menu>
+    
+
+    
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+</header>
+
+    <div id="wrapper">
+      
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    
+    <h2><a href="/ianlife/design-pattern/open-closed-principle/">開閉原則 | Open/Closed Principle</a></h2>
+    
+    
+    <p>擴充系統時，應該由新增程式碼代替修改程式碼。如同電鑽，可以換各種不同的鑽頭，而電鑽本身並不需要被改造，就符合開閉原則。</p>
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2020-09-11 00:00:00 &#43;0000 UTC">
+      September 11, 2020
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>3 minute read</p>
+    
+    <p>
+      <span id="busuanzi_container_page_pv">
+        PV: <span id="busuanzi_value_page_pv"></span>
+      </span>
+    </p>
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+  </section>
+  
+  <a href="/ianlife/design-pattern/open-closed-principle/" class="image featured">
+    
+      <img src="https://ppt.cc/f8vwZx" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <p><strong><a href="https://ithelp.ithome.com.tw/articles/10235421" target="_blank">本系列文章同步分享於IT邦幫忙第12屆鐵人賽</a></strong></p>
+<br>
+</br>
+<div>
+    <div>
+        <h3 id=_Design-Pattern-Post-List>Design Pattern 系列文章導讀</h3>
+    </div>
+    <hr>
+    <div>
+        <span>
+            Design Pattern可以說是開發上大家都會遇到的一個課題，
+            這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns & Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。
+            預計目標主題如下，若有哪部分不熟的章節可以直接點進去看
+
+            <br>
+
+            註：可以利用<a href="https://www.jdoodle.com/online-java-compiler/" target="_blank">Online Java Compiler IDE</a>
+            
+        </span>
+    </div>
+</br>
+    <ol>
+        <li>
+            <h5><a>設計模式 - 入門篇</a></h5>
+            <ul>
+                <li><a href="../what_is_design_pattern">什麼是Design Pattern?</a></li>
+                <li><a href="../design-patterns-and-principle">Design Pattern的類型與原則</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 原則篇 | Design Principles</a></h5>
+            <ul>
+                <li><a href="../single-responsibility-principle">單一職責原則 | Single Responsibility Principle</a></li>
+                <li><a href="../open-closed-principle">開閉原則 | Open/Closed Principle</a></li>
+                <li><a href="../liskov-substitution-principle">里氏替換原則 | Liskov Substitution Principle</a></li>
+                <li><a href="../interface-segregation-principle">介面隔離原則 | Interface Segregation Principle</a></li>
+                <li><a href="../dependence-inversion-principle">依賴反轉原則 | Dependency Inversion Principle</a></li>
+                <li><a href="../composite-aggregate-reuse-principle">合成/聚合複用原則 | Composite/Aggregate Reuse Principle</a></li>
+                <li><a href="../law-of-demeter">迪米特法則 | Law of Demeter</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 創建型模型篇 | Creational Patterns</a></h5>
+            <ul>
+                <li><a href="../singleton-pattern">單例模式 | Singleton Pattern</a></li>
+                <li><a href="../factory-pattern">工廠模式 | Factory Pattern</a></li>
+                <li><a href="../abstract-factory-pattern">抽象工廠模式 | Abstract Factory Pattern</a></li>
+                <li><a href="../builder-pattern">生成器模式 | Builder Pattern</a></li>
+                <li><a href="../prototype-pattern">原型模式 | Prototype Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 結構型模型篇 | Structural Patterns</a></h5>
+            <ul>
+                <li><a href="../adapter-pattern">適配器模式 | Adapter Pattern</a></li>
+                <li><a href="../bridge-pattern">橋接模式 | Bridge Pattern</a></li>
+                <li><a href="../composite-pattern">组合模式 | Composite Pattern</a></li>
+                <li><a href="../decorator-pattern">裝飾者模式 | Decorator Pattern</a></li>
+                <li><a href="../facede-pattern">外觀模式 | Facade Pattern</a></li>
+                <li><a href="../flyweight-pattern">享元模式 | Flyweight Pattern</a></li>
+                <li><a href="../proxy-pattern">代理模式 | Proxy Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 行為型模型篇 | Behavioural Patterns</a></h5>
+            <ul>
+                <li><a href="../chain-of-responsibility">責任鏈模式 | Chain of Responsibility Pattern</a></li>
+                <li><a href="">命令模式 | Command Pattern</a></li>
+                <li><a href="">迭代器模式 | Iterator Pattern</a></li>
+                <li><a href="">中介者模式 | Mediator Pattern</a></li>
+                <li><a href="">狀態模式 | State Pattern</a></li>
+                <li><a href="">Memento Pattern</a></li>
+                <li><a href="">Observer Pattern</a></li>
+                <li><a href="">Strategy Pattern</a></li>
+                <li><a href="">Template Pattern</a></li>
+                <li><a href="">Visitor Pattern</a></li>
+                <li><a href="">Interpreter Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 番外篇</a></h5>
+            <ul>
+                <li><a href="">Anti-Patterns</a></li>
+                <li><a href="">Code Smells</a></li>
+                <li><a href="">Design Pattern VS 演算法</a></li>
+            </ul>
+        </li>
+    </ol>
+</div>
+
+<br>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_定義>定義</h3>
+</li>
+</ul>
+<hr>
+<p><strong>Software entities like classes, modules and functions should be open for extension but closed for modifications.</strong></p>
+<p><em>翻譯年糕：軟體實體像是類別、模組和函式，應該只對延展開放，但對修改關閉。</em></p>
+<p>簡單來說，就是當系統需要被擴充時，應該藉由新增新的程式碼來擴充新功能，而非修改原本的程式碼來擴充新功能。</p>
+<p>先來看個例子，我們以前到百貨公司買東西，可以刷信用卡付錢，也可以刷金融卡付錢（兩者的差別在於金融卡帳戶有錢才能刷）。對於銀行而言他們會判斷你用的是哪種卡，而去做扣款的動作。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Payment</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> String msg<span style="color:#ff79c6">;</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(){</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>msg<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setPaymentType</span><span style="color:#ff79c6">(</span>String type<span style="color:#ff79c6">){</span>
+        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;creditCard&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">{</span>
+            msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;選擇信用卡付錢！！&#34;</span><span style="color:#ff79c6">;</span>
+        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;debitCard&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">{</span>
+            msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;選擇金融卡付錢！！&#34;</span><span style="color:#ff79c6">;</span>
+        <span style="color:#ff79c6">}</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>如上述程式，銀行判斷是刷哪種卡，在用該類的進行付款。但隨著科技越來越進步，現在不只這兩種付費方式。電子支付、悠遊卡&hellip;等等都是現在可以選擇的付費方式。如果銀行要跟著時代進步，勢必也要增加付款的功能才行。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Payment</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> String msg<span style="color:#ff79c6">;</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(){</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>msg<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setPaymentType</span><span style="color:#ff79c6">(</span>String type<span style="color:#ff79c6">){</span>
+        String msg<span style="color:#ff79c6">;</span>
+        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;creditCard&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">{</span>
+            msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;選擇信用卡付錢！！&#34;</span><span style="color:#ff79c6">;</span>
+        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;debitCard&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">{</span>
+            msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;選擇金融卡付錢！！&#34;</span><span style="color:#ff79c6">;</span>
+        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;easyCard&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">{</span>
+            msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;選擇悠遊卡付錢！！&#34;</span><span style="color:#ff79c6">;</span>
+        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;electronicPayment&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">{</span>
+            msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;選擇電子支付！！&#34;</span><span style="color:#ff79c6">;</span>
+        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+            msg <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;不支援付款選項&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">}</span>
+        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">msg</span> <span style="color:#ff79c6">=</span> msg<span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+
+<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bank</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+     Payment p <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Payment<span style="color:#ff79c6">();</span>
+     p<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setPaymentType</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;creditCard&#34;</span><span style="color:#ff79c6">);</span>
+     p<span style="color:#ff79c6">.</span><span style="color:#50fa7b">pay</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p><strong>output</strong></p>
+<pre><code>選擇信用卡付錢！！
+</code></pre><p>程式經過修改後，增加了悠遊卡以及電子支付的方法進Payment內了！但這顯然不是一個好方法。如果再擴充的時候，把原本的方法改錯了，這樣會造成系統的問題。所以我們需要一個讓系統方便擴充，但同時又不能影響到原本的程式方法。</p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_業務邏輯附加邏輯>業務邏輯？附加邏輯？</h3>
+</li>
+</ul>
+<hr>
+<p>剛剛有提到，我們不能在既有的程式碼內做擴充，因為存在著風險。那我們要如何去擴充程式？首先我們要先分清楚業務邏輯以及附加邏輯。</p>
+<p>業務邏輯為程式的核心邏輯，基本上系統可能有80%以上是圍繞著它，如同上述程式碼中的<code>pay()</code>。不管你選擇怎樣付款，會後都會進行<code>pay()</code>的動作進行付款。而剩下20%就是附加邏輯。附加邏輯會隨著新需求而增加，如同<code>setPaymentType()</code>內選擇付款方式從兩種變四種。</p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_應用-openclosed-principle>應用 Open/Closed Principle</h3>
+</li>
+</ul>
+<hr>
+<p>現在我們知道了不能在<code>既有</code>的程式碼做修改，也知道了業務邏輯與附加邏輯間的差異，那我們就可以開始對剛剛的付款範例進行OCP的修改！</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Payment</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> String msg<span style="color:#ff79c6">;</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(){</span>
+        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">msg</span> <span style="color:#ff79c6">=</span> setPaymentType<span style="color:#ff79c6">();</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>msg<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> String <span style="color:#50fa7b">setPaymentType</span><span style="color:#ff79c6">();</span>
+<span style="color:#ff79c6">}</span>
+
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">CreditCard</span> <span style="color:#8be9fd;font-style:italic">extends</span> Payment <span style="color:#ff79c6">{</span>
+    @Override
+    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">setPaymentType</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#34;選擇信用卡付錢！！&#34;</span><span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">};</span>
+<span style="color:#ff79c6">}</span>
+
+<span style="color:#6272a4">// 其他三種略...
+</span><span style="color:#6272a4"></span>
+<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bank</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+     CreditCard cc <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> CreditCard<span style="color:#ff79c6">();</span>
+     cc<span style="color:#ff79c6">.</span><span style="color:#50fa7b">pay</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><br>
+<img src='https://g.gravizo.com/svg?
+@startuml;
+abstract Payment;
+CreditCard -up-> Payment;
+DebitCard -up-> Payment;
+EasyCard -up-> Payment;
+Payment : +msg;
+Payment : +pay();
+Payment : +setPaymentType();
+CreditCard : +setPaymentType() ;
+DebitCard : +setPaymentType() ;
+EasyCard : +setPaymentType() ;
+@enduml
+'>
+<br>
+<br>
+<p>現在我們將原本的Paymant業務邏輯獨立出來一個abstract class，並把setPaymentType定義為抽象方法讓繼承的類別去實作他。接著把每個付款項目各自建立一個class繼承Payment，並且Override setPaymentType()。這樣若未來銀行想要增加虛擬貨幣付款，就不需要更動Payment的內容（符合修改封閉），直接建立一個新的class並繼承Payment即可（符合擴充開放）。</p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_小結>小結</h3>
+</li>
+</ul>
+<hr>
+<h5 id="ocp的優點">OCP的優點</h5>
+<pre><code>1. 降低耦合
+2. 增加擴展性
+3. 易於維護
+</code></pre>
+<br>
+<h5 id="ocp目標">OCP目標</h5>
+<p><code>擴充新功能應藉由新增新的程式碼，而非修改原本的程式碼</code></p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_範例程式碼>範例程式碼</h3>
+</li>
+</ul>
+<hr>
+<p><em><a href="https://www.jdoodle.com/embed/v0/2hQV" target="_blank">範例1：未使用OCP</a></em></p>
+<p><em><a href="https://www.jdoodle.com/embed/v0/2hQY" target="_blank">範例2：使用OCP</a></em></p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_references>References</h3>
+</li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://ithelp.ithome.com.tw/articles/10229362?sc=rss.qu" target="_blank">物件導向設計原則：開放封閉原則，定義、解析與實踐</a></li>
+<li><a href="https://danielkjchen.wordpress.com/2016/01/21/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%E9%96%8B%E6%94%BE%E5%B0%81%E9%96%89%E5%8E%9F%E5%89%87openclosed-principle/" target="_blank">[物件導向]開放封閉原則(Open/closed principle)</a></li>
+<li><a href="http://programmerrueinotes.blogspot.com/2015/10/ocpopen-closed-principle.html" target="_blank">[ 設計原則 ] - 開放封閉原則（OCP，Open-Closed Principle）</a></li>
+</ul>
+
+  </div>
+  <br>
+  <br>
+  <div class="pagination">
+  
+    <a href="/ianlife/design-pattern/single-responsibility-principle/" class="button">
+      <div class="previous">
+        <div>單一職責原則 | Single Responsibility Principle</div>
+      </div>
+    </a>
+  
+  
+    <a href="/ianlife/design-pattern/liskov-substitution-principle/" class="button">
+      <div class="next">
+        <div>里氏替換原則 | Liskov Substitution Principle</div>
+      </div>
+    </a>
+  
+</div>
+
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern">從生活中認識Design Pattern</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-pattern">Design Pattern</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-principle">Design Principle</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD">鐵人賽</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+
+        <div class="disqus markdown">
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+      </main>
+      
+      <div id="page-sidebar">
+        
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div>
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_Design-Pattern-Post-List">
+												 Design Pattern 系列文章導讀
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%ae%9a%e7%be%a9">
+												 定義
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e6%a5%ad%e5%8b%99%e9%82%8f%e8%bc%af%e9%99%84%e5%8a%a0%e9%82%8f%e8%bc%af">
+												 業務邏輯？附加邏輯？
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e6%87%89%e7%94%a8-openclosed-principle">
+												 應用 Open/Closed Principle
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%b0%8f%e7%b5%90">
+												 小結
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e7%af%84%e4%be%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc">
+												 範例程式碼
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_references">
+												 References
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+        <script src="/ianlife/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.75db2f45ac90858cf062e97bf111d0898f38a1aa55929a1baa5ba16e75aa292e.js" integrity="sha256-ddsvRayQhYzwYul78RHQiY84oapVkpobqluhbnWqKS4="></script>
+    <script src="/ianlife/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+      </div>
+    </div>
+    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+  </body>
+</html>

@@ -6,24 +6,60 @@
     <description>Recent content in Tags on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 10 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Behavioural Pattern</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/behavioural-pattern/</link>
+      <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/behavioural-pattern/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Design Pattern</title>
       <link>https://ianjustin39.github.io/ianlife/tags/design-pattern/</link>
-      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://ianjustin39.github.io/ianlife/tags/design-pattern/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Structural Pattern</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/structural-pattern/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/structural-pattern/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>鐵人賽</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD/</link>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Creational Pattern</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/creational-pattern/</link>
+      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/creational-pattern/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Design Principle</title>
       <link>https://ianjustin39.github.io/ianlife/tags/design-principle/</link>
-      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 16 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://ianjustin39.github.io/ianlife/tags/design-principle/</guid>
       <description></description>

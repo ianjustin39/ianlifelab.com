@@ -1,0 +1,1112 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+  <meta content="Design Pattern, Design Principle, Law of Demeter, LoD, Least Knowledge Principle, LKP, 迪米特法則, 最少知識原則" name="keywords">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  
+  
+  
+  
+  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
+  <script src="/ianlife/js/bootstrap.js"></script>
+  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
+  
+  
+  
+  
+  <script src="/ianlife/js/jquery.magnific-popup.js"></script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="/ianlife/js/toc.js"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+  <script>
+   window.onload = function () {
+    let plantumlPrefix = "language-plantuml";
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
+      let image = document.createElement("IMG");
+      image.loading = 'lazy'; 
+      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
+      code.parentNode.insertBefore(image, code);
+      code.style.display = 'none';
+    });
+  };
+  </script>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta charset="utf-8">
+<title>迪米特法則 | Law of Demeter - Ian Tsai </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="迪米特法則 | Law of Demeter">
+<meta itemprop="description" content="迪米特法則，又稱最少知識原則。其定義為各單元對其他單元所知應當有限：只瞭解與目前單元最相關之單元。意思就是，只跟你熟的朋友聊天，不要跟陌生人講話。">
+<meta itemprop="datePublished" content="2020-09-16T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-09-16T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="830">
+<meta itemprop="image" content="https://ppt.cc/fwn1Ex">
+
+
+
+<meta itemprop="keywords" content="Design Pattern,Design Principle,鐵人賽," /><meta property="og:title" content="迪米特法則 | Law of Demeter" />
+<meta property="og:description" content="迪米特法則，又稱最少知識原則。其定義為各單元對其他單元所知應當有限：只瞭解與目前單元最相關之單元。意思就是，只跟你熟的朋友聊天，不要跟陌生人講話。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/law-of-demeter/" />
+<meta property="og:image" content="https://ppt.cc/fwn1Ex" />
+<meta property="article:published_time" content="2020-09-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-16T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ppt.cc/fwn1Ex"/>
+
+<meta name="twitter:title" content="迪米特法則 | Law of Demeter"/>
+<meta name="twitter:description" content="迪米特法則，又稱最少知識原則。其定義為各單元對其他單元所知應當有限：只瞭解與目前單元最相關之單元。意思就是，只跟你熟的朋友聊天，不要跟陌生人講話。"/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/ianlife/css/bundle.min.0c037ee5e40837985628b373e9760ef0820aaf44cb90ccc6dc34c45603970f2c.css" integrity="sha256-DAN&#43;5eQIN5hWKLNz6XYO8IIKr0TLkMzG3DTEVgOXDyw=">
+        <link rel="stylesheet" href="/ianlife/css/add-on.css">
+</head>
+
+  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
+  
+  
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ianlife/">
+        
+          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/photograph/" class="link"><i class='far fa-images'></i> Photograph</a>
+          
+        
+      
+      
+      
+
+    </menu>
+    
+
+    
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+</header>
+
+    <div id="wrapper">
+      
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    
+    <h2><a href="/ianlife/design-pattern/law-of-demeter/">迪米特法則 | Law of Demeter</a></h2>
+    
+    
+    <p>迪米特法則，又稱最少知識原則。其定義為各單元對其他單元所知應當有限：只瞭解與目前單元最相關之單元。意思就是，只跟你熟的朋友聊天，不要跟陌生人講話。</p>
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2020-09-16 00:00:00 &#43;0000 UTC">
+      September 16, 2020
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>4 minute read</p>
+    
+    <p>
+      <span id="busuanzi_container_page_pv">
+        PV: <span id="busuanzi_value_page_pv"></span>
+      </span>
+    </p>
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+  </section>
+  
+  <a href="/ianlife/design-pattern/law-of-demeter/" class="image featured">
+    
+      <img src="https://ppt.cc/fwn1Ex" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <p><strong><a href="https://ithelp.ithome.com.tw/articles/10237285" target="_blank">本系列文章同步分享於IT邦幫忙第12屆鐵人賽</a></strong></p>
+</br>
+<div>
+    <div>
+        <h3 id=_Design-Pattern-Post-List>Design Pattern 系列文章導讀</h3>
+    </div>
+    <hr>
+    <div>
+        <span>
+            Design Pattern可以說是開發上大家都會遇到的一個課題，
+            這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns & Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。
+            預計目標主題如下，若有哪部分不熟的章節可以直接點進去看
+
+            <br>
+
+            註：可以利用<a href="https://www.jdoodle.com/online-java-compiler/" target="_blank">Online Java Compiler IDE</a>
+            
+        </span>
+    </div>
+</br>
+    <ol>
+        <li>
+            <h5><a>設計模式 - 入門篇</a></h5>
+            <ul>
+                <li><a href="../what_is_design_pattern">什麼是Design Pattern?</a></li>
+                <li><a href="../design-patterns-and-principle">Design Pattern的類型與原則</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 原則篇 | Design Principles</a></h5>
+            <ul>
+                <li><a href="../single-responsibility-principle">單一職責原則 | Single Responsibility Principle</a></li>
+                <li><a href="../open-closed-principle">開閉原則 | Open/Closed Principle</a></li>
+                <li><a href="../liskov-substitution-principle">里氏替換原則 | Liskov Substitution Principle</a></li>
+                <li><a href="../interface-segregation-principle">介面隔離原則 | Interface Segregation Principle</a></li>
+                <li><a href="../dependence-inversion-principle">依賴反轉原則 | Dependency Inversion Principle</a></li>
+                <li><a href="../composite-aggregate-reuse-principle">合成/聚合複用原則 | Composite/Aggregate Reuse Principle</a></li>
+                <li><a href="../law-of-demeter">迪米特法則 | Law of Demeter</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 創建型模型篇 | Creational Patterns</a></h5>
+            <ul>
+                <li><a href="../singleton-pattern">單例模式 | Singleton Pattern</a></li>
+                <li><a href="../factory-pattern">工廠模式 | Factory Pattern</a></li>
+                <li><a href="../abstract-factory-pattern">抽象工廠模式 | Abstract Factory Pattern</a></li>
+                <li><a href="../builder-pattern">生成器模式 | Builder Pattern</a></li>
+                <li><a href="../prototype-pattern">原型模式 | Prototype Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 結構型模型篇 | Structural Patterns</a></h5>
+            <ul>
+                <li><a href="../adapter-pattern">適配器模式 | Adapter Pattern</a></li>
+                <li><a href="../bridge-pattern">橋接模式 | Bridge Pattern</a></li>
+                <li><a href="../composite-pattern">组合模式 | Composite Pattern</a></li>
+                <li><a href="../decorator-pattern">裝飾者模式 | Decorator Pattern</a></li>
+                <li><a href="../facede-pattern">外觀模式 | Facade Pattern</a></li>
+                <li><a href="../flyweight-pattern">享元模式 | Flyweight Pattern</a></li>
+                <li><a href="../proxy-pattern">代理模式 | Proxy Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 行為型模型篇 | Behavioural Patterns</a></h5>
+            <ul>
+                <li><a href="../chain-of-responsibility">責任鏈模式 | Chain of Responsibility Pattern</a></li>
+                <li><a href="">命令模式 | Command Pattern</a></li>
+                <li><a href="">迭代器模式 | Iterator Pattern</a></li>
+                <li><a href="">中介者模式 | Mediator Pattern</a></li>
+                <li><a href="">狀態模式 | State Pattern</a></li>
+                <li><a href="">Memento Pattern</a></li>
+                <li><a href="">Observer Pattern</a></li>
+                <li><a href="">Strategy Pattern</a></li>
+                <li><a href="">Template Pattern</a></li>
+                <li><a href="">Visitor Pattern</a></li>
+                <li><a href="">Interpreter Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 番外篇</a></h5>
+            <ul>
+                <li><a href="">Anti-Patterns</a></li>
+                <li><a href="">Code Smells</a></li>
+                <li><a href="">Design Pattern VS 演算法</a></li>
+            </ul>
+        </li>
+    </ol>
+</div>
+
+<br>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_定義>定義</h3>
+</li>
+</ul>
+<hr>
+<p><strong>各單元對其他單元所知應當有限：只瞭解與目前單元最相關之單元</strong></p>
+<p><em>白話文年糕：別太好奇，跟你朋友聊天就好。</em></p>
+<p>迪米特法則，又稱<em>最少知識原則</em>。就是一個類別，對自己需要呼叫或耦合的類別不需要知道的太多，只需要知道該類別提供的public方法，不需要知道內部的實作。</p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_lod的四層含義>LoD的四層含義</h3>
+</li>
+</ul>
+<hr>
+<p>在使用LoF時，除了知道了定義以外，還要了解LoF中的四層含義</p>
+<h4 id=_1-只和朋友交流>1. 只和朋友交流</h4>
+<p>LoD有一段英文的解釋，<code>Only talk to your immediate friends; 只與直接的朋友講話</code>。什麼是朋友？兩個物件只要有耦合，就會成為朋友。好比說：合成、聚合及依賴。
+例如：老師要班長清點班上人數，就清點這件事來說，老師只需要跟班長有耦合，不需要跟班級有耦合。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Clazz</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">getInfo</span><span style="color:#ff79c6">(){</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;共30人！！&#34;</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ClassLeader</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> Clazz c<span style="color:#ff79c6">;</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">getClazz</span><span style="color:#ff79c6">(){</span>
+        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">c</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Clazz<span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">getClassInfo</span><span style="color:#ff79c6">(){</span>
+		<span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">getClazz</span><span style="color:#ff79c6">();</span>
+		<span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">c</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">getInfo</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Teacher</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> ClassLeader cl<span style="color:#ff79c6">;</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">getClassLeader</span><span style="color:#ff79c6">(){</span>
+        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">cl</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ClassLeader<span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">getClassInfo</span><span style="color:#ff79c6">(){</span>
+        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">getClassLeader</span><span style="color:#ff79c6">();</span>
+        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">cl</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">getClassInfo</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyClass</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+      Teacher t <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Teacher<span style="color:#ff79c6">();</span>
+      t<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getClassInfo</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p><strong>output</strong></p>
+<pre><code>共30人！！
+</code></pre><br>
+<h4 id=_2-朋友間也應該有距離>2. 朋友間也應該有距離</h4>
+<p>就算是朋友，也不可能什麼都知道。一個公開類別的public屬性或方法越多，修改時的風險也會跟著提高，所以在系統在設計時應該反覆衡量以下幾點：</p>
+<pre><code>1. 是否還可以再减少public方法和屬性,
+2. 是否可以修改為private、package、protected等權限,
+3. 是否可以加上final關鍵字。
+</code></pre>
+<p>可以用安裝java sdk來舉例，一般安裝要先下載JDK，然後設定環境變數，最後確認是否安裝。可以這樣呈現：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#ff79c6">import</span> java.util.Random<span style="color:#ff79c6">;</span>
+
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">JavaJDK</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> Random rand <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Random<span style="color:#ff79c6">(</span>System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">currentTimeMillis</span><span style="color:#ff79c6">());</span>
+
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">downloadJDK</span><span style="color:#ff79c6">(){</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;下載JAVA JDK&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span> <span style="color:#6272a4">// 先用隨機數字的狀態表示狀態
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">setEnv</span><span style="color:#ff79c6">(){</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;設定JAVA環境變數&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">(){</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;確認JAVA版本&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">InstallSoftware</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">installJava</span><span style="color:#ff79c6">(){</span>
+        JavaJDK j <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> JavaJDK<span style="color:#ff79c6">();</span>
+        <span style="color:#8be9fd">int</span> jdkStatus <span style="color:#ff79c6">=</span> j<span style="color:#ff79c6">.</span><span style="color:#50fa7b">downloadJDK</span><span style="color:#ff79c6">();</span>
+        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>jdkStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+            <span style="color:#8be9fd">int</span> envStatus <span style="color:#ff79c6">=</span> j<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setEnv</span><span style="color:#ff79c6">();</span>
+            <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>envStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+                <span style="color:#8be9fd">int</span> verStatus <span style="color:#ff79c6">=</span> j<span style="color:#ff79c6">.</span><span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">();</span>
+                <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>verStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+                    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;安裝完成！！&#34;</span><span style="color:#ff79c6">);</span>
+                <span style="color:#ff79c6">}</span>
+            <span style="color:#ff79c6">}</span>
+        <span style="color:#ff79c6">}</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyComputer</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+        InstallSoftware i <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> InstallSoftware<span style="color:#ff79c6">();</span>
+        i<span style="color:#ff79c6">.</span><span style="color:#50fa7b">installJava</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p><strong>output</strong></p>
+<pre><code>下載JAVA JDK
+設定JAVA環境變數
+確認JAVA版本
+安裝完成！！
+</code></pre><p>這程式跑起來很正常，卻也存在著一些問題。JavaJDK類別開放太多的public方法給InstallJava了。若今天回傳的int型別要變成boolean，也要修改InstallJava，這就會有一些風險產生。所以我們需要優化一下程式：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#ff79c6">import</span> java.util.Random<span style="color:#ff79c6">;</span>
+
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">JavaJDK</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> Random rand <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Random<span style="color:#ff79c6">(</span>System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">currentTimeMillis</span><span style="color:#ff79c6">());</span>
+
+    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">downloadJDK</span><span style="color:#ff79c6">(){</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;下載JAVA JDK&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span> <span style="color:#6272a4">// 先用隨機數字的狀態表示狀態
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">setEnv</span><span style="color:#ff79c6">(){</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;設定JAVA環境變數&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">(){</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;確認JAVA版本&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">install</span><span style="color:#ff79c6">(){</span>
+        <span style="color:#8be9fd">int</span> jdkStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">downloadJDK</span><span style="color:#ff79c6">();</span>
+        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>jdkStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+            <span style="color:#8be9fd">int</span> envStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">setEnv</span><span style="color:#ff79c6">();</span>
+            <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>envStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+                <span style="color:#8be9fd">int</span> verStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">();</span>
+                <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>verStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+                    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;安裝完成！！&#34;</span><span style="color:#ff79c6">);</span>
+                <span style="color:#ff79c6">}</span>
+            <span style="color:#ff79c6">}</span>
+        <span style="color:#ff79c6">}</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">InstallSoftware</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">installJava</span><span style="color:#ff79c6">(){</span>
+        JavaJDK j <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> JavaJDK<span style="color:#ff79c6">();</span>
+        j<span style="color:#ff79c6">.</span><span style="color:#50fa7b">install</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyComputer</span><span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+        InstallSoftware i <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> InstallSoftware<span style="color:#ff79c6">();</span>
+        i<span style="color:#ff79c6">.</span><span style="color:#50fa7b">installJava</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p><strong>output</strong></p>
+<pre><code>下載JAVA JDK
+設定JAVA環境變數
+確認JAVA版本
+安裝完成！！
+</code></pre><br>
+<p>現在JavaJDK類別內的安裝的步驟downloadJDK和setEnv變成private，開放了一個install()供外部呼叫。如此一來即使要修改JAVA類別內安裝的步驟或邏輯，也不會影響到其他類別。</p>
+<br>
+<h4 id=_3-是自己的就是自己的>3. 是自己的就是自己的</h4>
+<p>一個方法，放在本類別沒問題，但放在其他類別也不會出錯。checkVer</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#ff79c6">import</span> java.util.Random<span style="color:#ff79c6">;</span>
+
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">JavaJDK</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> Random rand <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Random<span style="color:#ff79c6">(</span>System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">currentTimeMillis</span><span style="color:#ff79c6">());</span>
+
+    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">downloadJDK</span><span style="color:#ff79c6">(){</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;下載JAVA JDK&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span> <span style="color:#6272a4">// 先用隨機數字的狀態表示狀態
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">setEnv</span><span style="color:#ff79c6">(){</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;設定JAVA環境變數&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">(){</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;確認JAVA版本&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">install</span><span style="color:#ff79c6">(){</span>
+        <span style="color:#8be9fd">int</span> jdkStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">downloadJDK</span><span style="color:#ff79c6">();</span>
+        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>jdkStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+            <span style="color:#8be9fd">int</span> envStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">setEnv</span><span style="color:#ff79c6">();</span>
+            <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>envStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+                <span style="color:#8be9fd">int</span> verStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">();</span>
+                <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>verStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+                    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;安裝完成！！&#34;</span><span style="color:#ff79c6">);</span>
+                <span style="color:#ff79c6">}</span>
+            <span style="color:#ff79c6">}</span>
+        <span style="color:#ff79c6">}</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">isInstalledJava</span><span style="color:#ff79c6">(){</span>
+        <span style="color:#8be9fd">int</span> verStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">();</span>
+        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>verStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Java已安裝！！&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Java未完成！！&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">}</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">InstallSoftware</span> <span style="color:#ff79c6">{</span>
+    JavaJDK j <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> JavaJDK<span style="color:#ff79c6">();</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">installJava</span><span style="color:#ff79c6">(){</span>
+        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">j</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">install</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">isInstalledJava</span><span style="color:#ff79c6">(){</span>
+        <span style="color:#8be9fd">int</span> verStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">j</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">();</span>
+        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>verStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Java已安裝！！&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Java未完成！！&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">}</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyComputer</span><span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+        InstallSoftware i <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> InstallSoftware<span style="color:#ff79c6">();</span>
+        i<span style="color:#ff79c6">.</span><span style="color:#50fa7b">isInstalledJava</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><br>
+<p>將第二點的範例做了一下更改，發現isInstalledJava()放在InstallSoftware類別內或是JavaJDK類別內都不會有問題。所以這個原則的意思就是：如果一個方法放在本類中，不增加類別間關係，也不對本類產生負面影響，那就可以放到本類中。</p>
+<br>
+<h4 id=_4-謹慎使用serializable>4. 謹慎使用Serializable</h4>
+<p>若使用不當，未來修改屬性，序列化時會拋異常NotSerializableException。</p>
+<p>詳細可以參考這篇<strong><a href="https://www.jyt0532.com/2017/09/29/implement-serializable-judiciously/" target="_blank">謹慎實現Serializable介面</a></strong>
+<br>
+<br></p>
+<ul>
+<li>
+<h3 id=_使用law-of-demeter>使用Law of Demeter</h3>
+</li>
+</ul>
+<hr>
+<p>看完了有關LoD的解釋，這時來舉個例子讓我們更熟悉這個法則。</p>
+<p><strong>六度人脈空間</strong>這個名詞大家應該很熟悉，意指你和任何一個陌生人之間，只有六個人的距離。也就是說如果我想聯繫比爾蓋茲，我只要找到我與他之間的六個人，然後藉由這六個人的介紹，我就可以順利的聯繫到比爾蓋茲！！</p>
+<p>這跟LoD有什麼關係？假設有一件事情我沒辦法獨力完成，我需要別人的幫助，而我周遭的朋友也沒有這個能力幫助我。但其中一個朋友認識比爾蓋茲，他剛好可以幫忙解決這件事。於是我就藉由我朋友中間牽的線，讓比爾蓋茲幫助我完成這件事。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Me</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> String name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Me&#34;</span><span style="color:#ff79c6">;</span>
+	<span style="color:#8be9fd;font-style:italic">public</span> MyFriend <span style="color:#50fa7b">getMyFriend</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+		<span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> MyFriend<span style="color:#ff79c6">();</span>
+	<span style="color:#ff79c6">}</span>
+	<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">work</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+		MyFriend mf <span style="color:#ff79c6">=</span> getMyFriend<span style="color:#ff79c6">();</span>
+		mf<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getBillGates</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">work</span><span style="color:#ff79c6">(</span>name<span style="color:#ff79c6">);</span>
+	<span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyFriend</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> BillGates <span style="color:#50fa7b">getBillGates</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;MyFriend介紹BillGates！！&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> BillGates<span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">BillGates</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">work</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+		System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;BillGates跟&#34;</span> <span style="color:#ff79c6">+</span> name <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;握手！！&#34;</span><span style="color:#ff79c6">);</span>
+	<span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyWorke</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+        Me me <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Me<span style="color:#ff79c6">();</span>
+        me<span style="color:#ff79c6">.</span><span style="color:#50fa7b">work</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p><strong>output</strong></p>
+<pre><code>MyFriend介紹BillGates！！
+BillGates跟Me握手！！
+</code></pre><br>
+<p>最後比爾蓋茲確實幫我完成了一件事。但在class Me內，卻直接呼叫BillGates的work方法，這並不符合LoD。應該藉由MyFriend這個類別去呼叫BillGates做事才對。所以我們需要做一些更動</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Me</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> String name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Me&#34;</span><span style="color:#ff79c6">;</span>
+	<span style="color:#8be9fd;font-style:italic">public</span> MyFriend <span style="color:#50fa7b">getMyFriend</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+		<span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> MyFriend<span style="color:#ff79c6">();</span>
+	<span style="color:#ff79c6">}</span>
+	<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">work</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+		MyFriend mf <span style="color:#ff79c6">=</span> getMyFriend<span style="color:#ff79c6">();</span>
+		mf<span style="color:#ff79c6">.</span><span style="color:#50fa7b">work</span><span style="color:#ff79c6">(</span>name<span style="color:#ff79c6">);</span>
+	<span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyFriend</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> BillGates <span style="color:#50fa7b">getBillGates</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> BillGates<span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">work</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+		BillGates bg <span style="color:#ff79c6">=</span> getBillGates<span style="color:#ff79c6">();</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;MyFriend介紹BillGates！！&#34;</span><span style="color:#ff79c6">);</span>
+		bg<span style="color:#ff79c6">.</span><span style="color:#50fa7b">work</span><span style="color:#ff79c6">(</span>name<span style="color:#ff79c6">);</span>
+	<span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">BillGates</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">work</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+		System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;BillGates跟&#34;</span> <span style="color:#ff79c6">+</span> name <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;握手！！&#34;</span><span style="color:#ff79c6">);</span>
+	<span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyWorke</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+        Me me <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Me<span style="color:#ff79c6">();</span>
+        me<span style="color:#ff79c6">.</span><span style="color:#50fa7b">work</span><span style="color:#ff79c6">();</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p><strong>output</strong></p>
+<pre><code>MyFriend介紹BillGates！！
+BillGates跟Me握手！！
+</code></pre><p>經過修改後，我與比爾蓋茲沒有直接的關係，只需要跟MyFriend溝通，請他跟蓋茲牽線，就可以完成事情。</p>
+<p>迪米特法則核心觀念就是解耦、弱耦合，只有弱耦合後，類別的複用率才可以提高。但解耦和也是要有限度的，過度的解耦會造成系統的複雜度提高，維護困難。</p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_小結>小結</h3>
+</li>
+</ul>
+<hr>
+<h5 id="lod定義">LoD定義</h5>
+<pre><code>各單元對其他單元所知應當有限：只瞭解與目前單元最相關之單元
+</code></pre>
+<br>
+<h5 id="lod核心觀念">LoD核心觀念</h5>
+<pre><code>解耦、弱耦合，提升類別複用率
+</code></pre>
+<br>
+<h5 id="lod的優缺點">LoD的優缺點</h5>
+<pre><code>優點
+1. 類別間的耦合度低
+2. 提高模組獨立性
+3. 提高類別的重複使用頻率及系統的擴張性
+缺點
+1. 產生大量的中介類別，系統複雜性提升
+</code></pre>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_範例程式碼>範例程式碼</h3>
+</li>
+</ul>
+<hr>
+<p><em><a href="https://www.jdoodle.com/embed/v0/2jhH" target="_blank">範例1：只和朋友交流</a></em></p>
+<p><em><a href="https://www.jdoodle.com/embed/v0/2jhJ" target="_blank">範例2：朋友間也應該有距離1</a></em></p>
+<p><em><a href="https://www.jdoodle.com/embed/v0/2jhP" target="_blank">範例3：朋友間也應該有距離2</a></em></p>
+<p><em><a href="https://www.jdoodle.com/embed/v0/2jhR" target="_blank">範例4：是自己的就是自己的</a></em></p>
+<p><em><a href="https://www.jdoodle.com/embed/v0/2jkF" target="_blank">範例5：未使用LoD</a></em></p>
+<p><em><a href="https://www.jdoodle.com/embed/v0/2jkH" target="_blank">範例6：使用LoD</a></em></p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_references>References</h3>
+</li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/634600/" target="_blank">軟體設計原則（六）迪米特法則 -Law of Demeter</a></li>
+<li><a href="https://tianweili.github.io/2015/02/12/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99-%E8%BF%AA%E7%B1%B3%E7%89%B9%E6%B3%95%E5%88%99/" target="_blank">设计模式六大原则 - 迪米特法则</a></li>
+<li><a href="https://www.jianshu.com/p/fe7f61c3525c" target="_blank">迪米特法则</a></li>
+<li><a href="https://www.twblogs.net/a/5e5143cebd9eee2117c0ad58" target="_blank">設計模式6大原則（5）：迪米特法則</a></li>
+</ul>
+
+  </div>
+  <br>
+  <br>
+  <div class="pagination">
+  
+    <a href="/ianlife/design-pattern/composite-aggregate-reuse-principle/" class="button">
+      <div class="previous">
+        <div>合成/聚合複用原則 | Composite/Aggregate Reuse Principle</div>
+      </div>
+    </a>
+  
+  
+    <a href="/ianlife/design-pattern/singleton-pattern/" class="button">
+      <div class="next">
+        <div>單例模式 | Singleton Pattern</div>
+      </div>
+    </a>
+  
+</div>
+
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern">從生活中認識Design Pattern</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-pattern">Design Pattern</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-principle">Design Principle</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD">鐵人賽</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+
+        <div class="disqus markdown">
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+      </main>
+      
+      <div id="page-sidebar">
+        
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div>
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_Design-Pattern-Post-List">
+												 Design Pattern 系列文章導讀
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%ae%9a%e7%be%a9">
+												 定義
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_lod%e7%9a%84%e5%9b%9b%e5%b1%a4%e5%90%ab%e7%be%a9">
+												 LoD的四層含義
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_1-%e5%8f%aa%e5%92%8c%e6%9c%8b%e5%8f%8b%e4%ba%a4%e6%b5%81">
+												 1. 只和朋友交流
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_2-%e6%9c%8b%e5%8f%8b%e9%96%93%e4%b9%9f%e6%87%89%e8%a9%b2%e6%9c%89%e8%b7%9d%e9%9b%a2">
+												 2. 朋友間也應該有距離
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_3-%e6%98%af%e8%87%aa%e5%b7%b1%e7%9a%84%e5%b0%b1%e6%98%af%e8%87%aa%e5%b7%b1%e7%9a%84">
+												 3. 是自己的就是自己的
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_4-%e8%ac%b9%e6%85%8e%e4%bd%bf%e7%94%a8serializable">
+												 4. 謹慎使用Serializable
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e4%bd%bf%e7%94%a8law-of-demeter">
+												 使用Law of Demeter
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%b0%8f%e7%b5%90">
+												 小結
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e7%af%84%e4%be%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc">
+												 範例程式碼
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_references">
+												 References
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+        <script src="/ianlife/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.75db2f45ac90858cf062e97bf111d0898f38a1aa55929a1baa5ba16e75aa292e.js" integrity="sha256-ddsvRayQhYzwYul78RHQiY84oapVkpobqluhbnWqKS4="></script>
+    <script src="/ianlife/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+      </div>
+    </div>
+    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+  </body>
+</html>
