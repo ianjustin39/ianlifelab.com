@@ -77,7 +77,7 @@ if (!doNotTrack) {
 <meta itemprop="description" content="命令模式將一個請求封裝成一個物件，讓你可用不同的請求對客戶進行參數化、對請求排隊或記錄請求日誌，以及支援可取消的操作。">
 <meta itemprop="datePublished" content="2020-09-30T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-09-30T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="666">
+<meta itemprop="wordCount" content="680">
 <meta itemprop="image" content="https://i.imgur.com/Y7aoXzg.png">
 
 
@@ -557,7 +557,12 @@ destroy B;
 </span><span style="color:#6272a4"></span>        secretary<span style="color:#ff79c6">.</span><span style="color:#50fa7b">executeCommand</span><span style="color:#ff79c6">();</span>
     <span style="color:#ff79c6">}</span>
 <span style="color:#ff79c6">}</span>
-</code></pre></div><p>如此一來老闆就不需要盯著每一個員工做事，他只需要將事情交代給秘書，由秘書去叫員工把事情做好即可。</p>
+</code></pre></div><p><strong>output</strong></p>
+<pre><code>Boss call Secretary  ...
+Secretary call Receiver
+Employee do PrepareSlideCommand
+Employee do MeetingCommand
+</code></pre><p>如此一來老闆就不需要盯著每一個員工做事，他只需要將事情交代給秘書，由秘書去叫員工把事情做好即可。</p>
 <br>
 <br>
 <ul>
@@ -601,7 +606,7 @@ destroy B;
 </li>
 </ul>
 <hr>
-<p><em><a href="" target="_blank">範例：Command Pattern 實作</a></em></p>
+<p><em><a href="http://jdoodle.com/a/2nfu" target="_blank">範例：Command Pattern 實作</a></em></p>
 <br>
 <br>
 <ul>
