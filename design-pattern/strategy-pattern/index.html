@@ -78,7 +78,7 @@ if (!doNotTrack) {
    Design Pattern 系列文章導讀     Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns & Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE      設計模式 - 入門篇  什麼是Design Pattern? Design Pattern的類型與原則    設計模式 - 原則篇 | Design Principles  單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter    設計模式 - 創建型模型篇 | Creational Patterns  單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern    設計模式 - 結構型模型篇 | Structural Patterns  適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern    設計模式 - 行為型模型篇 | Behavioural Patterns  責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern    設計模式 - 番外篇  Anti-Patterns Code Smells Design Pattern VS 演算法       定義    定義一系列演算法，並將其封裝起來，使他們可以相互替換，演算法的變換不影響使用。">
 <meta itemprop="datePublished" content="2020-10-06T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-10-06T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="231">
+<meta itemprop="wordCount" content="505">
 <meta itemprop="image" content="https://ianjustin39.github.io/ianlife/">
 
 
@@ -179,7 +179,7 @@ if (!doNotTrack) {
     
     <span class="author">Ian Tsai</span>
     
-    <p>2 minute read</p>
+    <p>3 minute read</p>
     
     <p>
       <span id="busuanzi_container_page_pv">
@@ -327,14 +327,29 @@ if (!doNotTrack) {
 <td align="left">保存發起人的內部狀態，在需要的時候提供給發起人。</td>
 </tr>
 <tr>
-<td align="left">Context(環境))</td>
+<td align="left">Context(環境)</td>
 <td align="left">管理、保存及讀取備忘錄的功能，但不能對備忘錄的內容進行訪問及修改。</td>
 </tr>
 </tbody>
 </table>
-<p>抽象策略（Strategy）类：定义了一个公共接口，各种不同的算法以不同的方式实现这个接口，环境角色使用这个接口调用不同的算法，一般使用接口或抽象类实现。
-具体策略（Concrete Strategy）类：实现了抽象策略定义的接口，提供具体的算法实现。
-环境（Context类：持有一个策略类的引用，最终给客户端调用。</p>
+<br>
+<img src='https://g.gravizo.com/svg?
+@startuml;
+interface Strategy;
+ConcreteStrategyA .up.|> Strategy;
+ConcreteStrategyB .up.|> Strategy;
+Strategy -left-o Context;
+Strategy : +strategyMethod():void;
+ConcreteStrategyA : +strategyMethod():void;
+ConcreteStrategyB : +strategyMethod():void;
+Context : -strategy:Strategy;
+Context : +setStrategy(Strategy strategy):void;
+Context : +getStrategy():Strategy;
+Context : +strategyMethod():void;
+@enduml
+'>
+<br>
+<br>
 <br>
 <br>
 <ul>
@@ -343,8 +358,117 @@ if (!doNotTrack) {
 </li>
 </ul>
 <hr>
+<p>一開始有講到連假出遊，可以選擇開車、搭高鐵、坐飛機等不同的方式。而玩剪刀石頭布也是策略的一種，先將抽象策略建立起來，再分別建立剪刀石頭布的類別實作抽象策略。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#8be9fd;font-style:italic">enum</span> Type <span style="color:#ff79c6">{</span> <span style="color:#6272a4">// 建立一個列舉方便等等程式使用
+</span><span style="color:#6272a4"></span>    PAPER<span style="color:#ff79c6">,</span> SCISSORS<span style="color:#ff79c6">,</span> STONE
+<span style="color:#ff79c6">}</span>
+
+<span style="color:#6272a4">//抽象策略 
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Strategy</span> <span style="color:#ff79c6">{</span>   
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">strategyMethod</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">);</span>    <span style="color:#6272a4">//策略方法
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">}</span>
+<span style="color:#6272a4">//實體策略：布
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Paper</span> <span style="color:#8be9fd;font-style:italic">implements</span> Strategy <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">strategyMethod</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">){</span>
+            <span style="color:#ff79c6">case</span> PAPER<span style="color:#ff79c6">:</span>
+                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;敵人出布，我出布 =&gt; 平手&#34;</span><span style="color:#ff79c6">);</span>
+                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+            <span style="color:#ff79c6">case</span> SCISSORS<span style="color:#ff79c6">:</span>
+                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;敵人出剪刀，我出布 =&gt; 輸&#34;</span><span style="color:#ff79c6">);</span>
+                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+            <span style="color:#ff79c6">case</span> STONE<span style="color:#ff79c6">:</span>
+                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;敵人出石頭，我出布 =&gt; 贏&#34;</span><span style="color:#ff79c6">);</span>
+                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+        <span style="color:#ff79c6">}</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#6272a4">//實體策略：剪刀
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Scissors</span> <span style="color:#8be9fd;font-style:italic">implements</span> Strategy <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">strategyMethod</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">){</span>
+            <span style="color:#ff79c6">case</span> PAPER<span style="color:#ff79c6">:</span>
+                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;敵人出布，我出剪刀 =&gt; 贏&#34;</span><span style="color:#ff79c6">);</span>
+                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+            <span style="color:#ff79c6">case</span> SCISSORS<span style="color:#ff79c6">:</span>
+                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;敵人出剪刀，我出剪刀 =&gt; 平手&#34;</span><span style="color:#ff79c6">);</span>
+                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+            <span style="color:#ff79c6">case</span> STONE<span style="color:#ff79c6">:</span>
+                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;敵人出石頭，我出剪刀 =&gt; 輸&#34;</span><span style="color:#ff79c6">);</span>
+                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+        <span style="color:#ff79c6">}</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#6272a4">//實體策略：石頭
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Stone</span> <span style="color:#8be9fd;font-style:italic">implements</span> Strategy <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">strategyMethod</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">){</span>
+            <span style="color:#ff79c6">case</span> PAPER<span style="color:#ff79c6">:</span>
+                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;敵人出布，我出石頭 =&gt; 輸&#34;</span><span style="color:#ff79c6">);</span>
+                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+            <span style="color:#ff79c6">case</span> SCISSORS<span style="color:#ff79c6">:</span>
+                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;敵人出剪刀，我出石頭 =&gt; 贏&#34;</span><span style="color:#ff79c6">);</span>
+                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+            <span style="color:#ff79c6">case</span> STONE<span style="color:#ff79c6">:</span>
+                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;敵人出石頭，我出石頭 =&gt; 平手&#34;</span><span style="color:#ff79c6">);</span>
+                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+        <span style="color:#ff79c6">}</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>接著將環境建立起來，並在內部實作設定策略及執行策略的方法。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">//環境
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Context</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> Strategy strategy<span style="color:#ff79c6">;</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> Strategy <span style="color:#50fa7b">getStrategy</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">return</span> strategy<span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setStrategy</span><span style="color:#ff79c6">(</span>Strategy strategy<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">strategy</span> <span style="color:#ff79c6">=</span> strategy<span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">strategyMethod</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        strategy<span style="color:#ff79c6">.</span><span style="color:#50fa7b">strategyMethod</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+
+</code></pre></div><p>最後我們用Scanner選擇猜拳要出什麼。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#ff79c6">import</span> java.util.*<span style="color:#ff79c6">;</span>
+
+<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">StrategyPattern</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        Context c <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Context<span style="color:#ff79c6">();</span> <span style="color:#6272a4">// 建立環境
+</span><span style="color:#6272a4"></span>        Strategy paper <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Paper<span style="color:#ff79c6">();</span> <span style="color:#6272a4">// 建立剪刀石頭布
+</span><span style="color:#6272a4"></span>        Strategy scissors <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Scissors<span style="color:#ff79c6">();</span>
+        Strategy stone <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Stone<span style="color:#ff79c6">();</span>
+        Type<span style="color:#ff79c6">[]</span> arr <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">{</span>Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">PAPER</span><span style="color:#ff79c6">,</span> Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">SCISSORS</span><span style="color:#ff79c6">,</span> Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">STONE</span><span style="color:#ff79c6">};</span>  
+        Scanner scanner <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Scanner<span style="color:#ff79c6">(</span>System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">in</span><span style="color:#ff79c6">);</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;剪刀石頭布！！！&#34;</span><span style="color:#ff79c6">);</span>
+        Random ran <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Random<span style="color:#ff79c6">();</span>
+        <span style="color:#ff79c6">while</span><span style="color:#ff79c6">(</span><span style="color:#ff79c6">true</span><span style="color:#ff79c6">){</span>
+            <span style="color:#8be9fd">int</span> num <span style="color:#ff79c6">=</span> ran<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>3<span style="color:#ff79c6">)+</span>1<span style="color:#ff79c6">;</span>
+            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;請出拳（1：剪刀；2：石頭；3：布）：&#34;</span><span style="color:#ff79c6">);</span>
+            <span style="color:#8be9fd">int</span> input <span style="color:#ff79c6">=</span> scanner<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">();</span>
+            <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">(</span>input<span style="color:#ff79c6">){</span>  <span style="color:#6272a4">// 根據輸入不同的數字選擇不同策略
+</span><span style="color:#6272a4"></span>                <span style="color:#ff79c6">case</span> 1<span style="color:#ff79c6">:</span>
+                    c<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setStrategy</span><span style="color:#ff79c6">(</span>scissors<span style="color:#ff79c6">);</span>
+                    <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+                <span style="color:#ff79c6">case</span> 2<span style="color:#ff79c6">:</span>
+                    c<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setStrategy</span><span style="color:#ff79c6">(</span>stone<span style="color:#ff79c6">);</span>
+                    <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+                <span style="color:#ff79c6">case</span> 3<span style="color:#ff79c6">:</span>
+                    c<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setStrategy</span><span style="color:#ff79c6">(</span>paper<span style="color:#ff79c6">);</span>
+                    <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+            <span style="color:#ff79c6">}</span>
+            c<span style="color:#ff79c6">.</span><span style="color:#50fa7b">strategyMethod</span><span style="color:#ff79c6">(</span>arr<span style="color:#ff79c6">[</span>num <span style="color:#ff79c6">-</span> 1<span style="color:#ff79c6">]);</span>
+            
+            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;-----------------&#34;</span><span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">}</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p><img src="https://i.imgur.com/LAPMi35.gif" alt="output">
 <br>
-<br>
+<br></p>
 <ul>
 <li>
 <h3 id=_小結>小結</h3>
@@ -352,8 +476,13 @@ if (!doNotTrack) {
 </ul>
 <hr>
 <h5 id="strategy-pattern的目標">Strategy Pattern的目標</h5>
+<p><code>定義一系列演算法，並將其封裝起來，使他們可以相互替換，演算法的變換不影響使用。</code></p>
 <br>
 <h5 id="strategy-pattern的成員">Strategy Pattern的成員</h5>
+<pre><code>Strategy(抽象策略)：紀錄目前的內部狀態，提供建立備忘錄及回復備忘錄狀態的功能，可以訪問備忘錄內所有訊息。
+ConcreteStrategy(實體策略)：保存發起人的內部狀態，在需要的時候提供給發起人。
+Context(環境)：管理、保存及讀取備忘錄的功能，但不能對備忘錄的內容進行訪問及修改。
+</code></pre>
 <br>
 <h5 id="strategy-pattern的優缺點">Strategy Pattern的優缺點</h5>
 <pre><code>優點
@@ -375,15 +504,21 @@ if (!doNotTrack) {
 <br>
 <ul>
 <li>
+<h3 id=_範例程式碼>範例程式碼</h3>
+</li>
+</ul>
+<hr>
+<p><em><a href="https://onlinegdb.com/SJEtecd8P" target="_blank">Strategy Pattern 實作</a></em></p>
+<br>
+<br>
+<ul>
+<li>
 <h3 id=_references>References</h3>
 </li>
 </ul>
 <hr>
 <ul>
-<li><a href="" target="_blank"></a></li>
-<li><a href="" target="_blank"></a></li>
-<li><a href="" target="_blank"></a></li>
-<li><a href="" target="_blank"></a></li>
+<li><a href="http://c.biancheng.net/view/1378.html" target="_blank">策略模式（策略设计模式）</a></li>
 </ul>
 
   </div>
@@ -391,9 +526,9 @@ if (!doNotTrack) {
   <br>
   <div class="pagination">
   
-    <a href="/ianlife/design-pattern/memento-pattern/" class="button">
+    <a href="/ianlife/design-pattern/observer-pattern/" class="button">
       <div class="previous">
-        <div>備忘錄模式 | Memento Pattern</div>
+        <div>觀察者模式 | Observer Pattern</div>
       </div>
     </a>
   
@@ -626,6 +761,32 @@ if (!doNotTrack) {
 										<li class="nav-item">
 						 					<a class="nav-link" href="#_%e5%b0%8f%e7%b5%90">
 												 小結
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e7%af%84%e4%be%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc">
+												 範例程式碼
 											</a>
 										</li>
 						 
