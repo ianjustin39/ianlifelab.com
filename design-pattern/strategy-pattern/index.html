@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh">
   <head>
-  <meta content="Design Pattern, Behavioural Pattern, Memento Pattern, 備忘錄模式" name="keywords">
+  <meta content="" name="keywords">
   <link rel="stylesheet" href="../css/magnific-popup.css">
   <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
@@ -57,7 +57,7 @@ if (!doNotTrack) {
 
   
   <meta charset="utf-8">
-<title>備忘錄模式 | Memento Pattern - Ian Tsai </title>
+<title>策略模式 | Strategy Pattern - Ian Tsai </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -73,28 +73,31 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="備忘錄模式 | Memento Pattern">
-<meta itemprop="description" content="備忘錄模式在不破壞封裝的前提下，儲存一個物件的某個狀態，以便於需要的時候將物件恢復到原先儲存的狀態。例如：後悔藥。">
-<meta itemprop="datePublished" content="2020-10-04T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-10-04T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="436">
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="策略模式 | Strategy Pattern">
+<meta itemprop="description" content="本系列文章同步分享於IT邦幫忙第12屆鐵人賽
+   Design Pattern 系列文章導讀     Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns & Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE      設計模式 - 入門篇  什麼是Design Pattern? Design Pattern的類型與原則    設計模式 - 原則篇 | Design Principles  單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter    設計模式 - 創建型模型篇 | Creational Patterns  單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern    設計模式 - 結構型模型篇 | Structural Patterns  適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern    設計模式 - 行為型模型篇 | Behavioural Patterns  責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern    設計模式 - 番外篇  Anti-Patterns Code Smells Design Pattern VS 演算法       定義    定義一系列演算法，並將其封裝起來，使他們可以相互替換，演算法的變換不影響使用。">
+<meta itemprop="datePublished" content="2020-10-06T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-10-06T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="231">
 <meta itemprop="image" content="https://ianjustin39.github.io/ianlife/">
 
 
 
-<meta itemprop="keywords" content="Design Pattern,Behavioural Pattern," /><meta property="og:title" content="備忘錄模式 | Memento Pattern" />
-<meta property="og:description" content="備忘錄模式在不破壞封裝的前提下，儲存一個物件的某個狀態，以便於需要的時候將物件恢復到原先儲存的狀態。例如：後悔藥。" />
+<meta itemprop="keywords" content="Design Pattern," /><meta property="og:title" content="策略模式 | Strategy Pattern" />
+<meta property="og:description" content="本系列文章同步分享於IT邦幫忙第12屆鐵人賽
+   Design Pattern 系列文章導讀     Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns & Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE      設計模式 - 入門篇  什麼是Design Pattern? Design Pattern的類型與原則    設計模式 - 原則篇 | Design Principles  單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter    設計模式 - 創建型模型篇 | Creational Patterns  單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern    設計模式 - 結構型模型篇 | Structural Patterns  適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern    設計模式 - 行為型模型篇 | Behavioural Patterns  責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern    設計模式 - 番外篇  Anti-Patterns Code Smells Design Pattern VS 演算法       定義    定義一系列演算法，並將其封裝起來，使他們可以相互替換，演算法的變換不影響使用。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/memento-pattern/" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/strategy-pattern/" />
 <meta property="og:image" content="https://ianjustin39.github.io/ianlife/" />
-<meta property="article:published_time" content="2020-10-04T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-10-04T00:00:00+00:00" />
+<meta property="article:published_time" content="2020-10-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-10-06T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://ianjustin39.github.io/ianlife/"/>
 
-<meta name="twitter:title" content="備忘錄模式 | Memento Pattern"/>
-<meta name="twitter:description" content="備忘錄模式在不破壞封裝的前提下，儲存一個物件的某個狀態，以便於需要的時候將物件恢復到原先儲存的狀態。例如：後悔藥。"/>
+<meta name="twitter:title" content="策略模式 | Strategy Pattern"/>
+<meta name="twitter:description" content="本系列文章同步分享於IT邦幫忙第12屆鐵人賽
+   Design Pattern 系列文章導讀     Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns & Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE      設計模式 - 入門篇  什麼是Design Pattern? Design Pattern的類型與原則    設計模式 - 原則篇 | Design Principles  單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter    設計模式 - 創建型模型篇 | Creational Patterns  單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern    設計模式 - 結構型模型篇 | Structural Patterns  適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern    設計模式 - 行為型模型篇 | Behavioural Patterns  責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern    設計模式 - 番外篇  Anti-Patterns Code Smells Design Pattern VS 演算法       定義    定義一系列演算法，並將其封裝起來，使他們可以相互替換，演算法的變換不影響使用。"/>
 <meta name="twitter:site" content="@example"/>
 <link rel="stylesheet" href="/ianlife/css/bundle.min.0c037ee5e40837985628b373e9760ef0820aaf44cb90ccc6dc34c45603970f2c.css" integrity="sha256-DAN&#43;5eQIN5hWKLNz6XYO8IIKr0TLkMzG3DTEVgOXDyw=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
@@ -165,20 +168,18 @@ if (!doNotTrack) {
   <div class="title">
     <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
     
-    <h2><a href="/ianlife/design-pattern/memento-pattern/">備忘錄模式 | Memento Pattern</a></h2>
+    <h2><a href="/ianlife/design-pattern/strategy-pattern/">策略模式 | Strategy Pattern</a></h2>
     
-    
-    <p>備忘錄模式在不破壞封裝的前提下，儲存一個物件的某個狀態，以便於需要的時候將物件恢復到原先儲存的狀態。例如：後悔藥。</p>
     
   </div>
   <div class="meta">
-    <time class="published" datetime="2020-10-04 00:00:00 &#43;0000 UTC">
-      October 4, 2020
+    <time class="published" datetime="2020-10-06 00:00:00 &#43;0000 UTC">
+      October 6, 2020
     </time>
     
     <span class="author">Ian Tsai</span>
     
-    <p>3 minute read</p>
+    <p>2 minute read</p>
     
     <p>
       <span id="busuanzi_container_page_pv">
@@ -192,7 +193,7 @@ if (!doNotTrack) {
     
   </section>
   
-  <a href="/ianlife/design-pattern/memento-pattern/" class="image featured">
+  <a href="/ianlife/design-pattern/strategy-pattern/" class="image featured">
     
       <img src="/ianlife/" alt="">
     
@@ -298,13 +299,14 @@ if (!doNotTrack) {
 </li>
 </ul>
 <hr>
-<p><code>在不破壞封裝的前提下，儲存一個物件的某個狀態，以便於需要的時候將物件恢復到原先儲存的狀態。</code></p>
-<p>如果人生有後悔藥多好。其實生活中也有許多類似備忘錄模式的案例，如工作時，誤刪了一筆資料，可以使用<code>ctrl+z</code>拯救被刪除的資料。又或是玩遊戲要都會存擋，這樣死了就不需要重頭玩。備忘錄模式就是紀錄一個物件的內部狀態，當後悔時可以撤銷現在的操作，回復到先前的狀態。備忘錄模式是一個可以記錄物件內部狀態，當需要使用時取消目前的操作，回復到原先狀態的一種模式。</p>
+<p><code>定義一系列演算法，並將其封裝起來，使他們可以相互替換，演算法的變換不影響使用。</code></p>
+<p>可以把策略想做成多種選項，依照適合的情況選擇適合的項目。比方說連假出遊，可以開車、坐高鐵、坐火車或坐飛機等選項可選。而在程式中也有，如排序法有冒泡排序、插入排序、選擇排序等等選擇。</p>
+<p>策略模式通過對演算法的封裝，把使用演算法的責任以及演算法的實作給分開來，並委派不同的物件管理這些演算法。若使用if-else來判斷策略，若策略一多會讓程式變得複雜，在若要對新增刪除或更改演算法，就得異動到原始程式碼，違反了開閉原則。</p>
 <br>
 <br>
 <ul>
 <li>
-<h3 id=_memento-pattern-成員>Memento Pattern 成員</h3>
+<h3 id=_strategy-pattern-成員>Strategy Pattern 成員</h3>
 </li>
 </ul>
 <hr>
@@ -317,114 +319,31 @@ if (!doNotTrack) {
 </thead>
 <tbody>
 <tr>
-<td align="left">Originator(發起人)</td>
+<td align="left">Strategy(抽象策略)</td>
 <td align="left">紀錄目前的內部狀態，提供建立備忘錄及回復備忘錄狀態的功能，可以訪問備忘錄內所有訊息。</td>
 </tr>
 <tr>
-<td align="left">Memento(備忘錄)</td>
+<td align="left">ConcreteStrategy(實體策略)</td>
 <td align="left">保存發起人的內部狀態，在需要的時候提供給發起人。</td>
 </tr>
 <tr>
-<td align="left">Caretaker(管理者)</td>
+<td align="left">Context(環境))</td>
 <td align="left">管理、保存及讀取備忘錄的功能，但不能對備忘錄的內容進行訪問及修改。</td>
 </tr>
 </tbody>
 </table>
-<br>
-<br>
-<img src='https://g.gravizo.com/svg?
-@startuml;
-skinparam linetype ortho;
-Client .right.> Originator;
-Client .down.> Caretaker;
-Originator -down-> Memento;
-Caretaker o-right- Memento;
-Originator : -state:String;
-Originator : +setState(String state):void;
-Originator : +getState():String;
-Originator : +createMemento():Memento;
-Originator : +restoreMemento(Memento m):void;
-Memento : -state:String;
-Memento : +Memento(String state);
-Memento : +setState(String state):void;
-Memento : +getState():String;
-Caretaker : +setMemento(Memento m):void;
-Caretaker : +getMemento():Memento;
-@enduml
-'>
-<br>
+<p>抽象策略（Strategy）类：定义了一个公共接口，各种不同的算法以不同的方式实现这个接口，环境角色使用这个接口调用不同的算法，一般使用接口或抽象类实现。
+具体策略（Concrete Strategy）类：实现了抽象策略定义的接口，提供具体的算法实现。
+环境（Context类：持有一个策略类的引用，最终给客户端调用。</p>
 <br>
 <br>
 <ul>
 <li>
-<h3 id=_memento-pattern-實作>Memento Pattern 實作</h3>
+<h3 id=_strategy-pattern-實作>Strategy Pattern 實作</h3>
 </li>
 </ul>
 <hr>
-<p>相信大部分男性都有當兵的經驗，大家最常聽到的一句話： <strong>回復上一動。</strong> 我們就用班長的回復上一動來實作備忘錄模式。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">// 備忘錄，有保存狀態及取出狀態兩個方法。
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Memento</span> <span style="color:#ff79c6">{</span> 
-    <span style="color:#8be9fd;font-style:italic">private</span> String state<span style="color:#ff79c6">;</span> 
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Memento</span><span style="color:#ff79c6">(</span>String state<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">state</span> <span style="color:#ff79c6">=</span> state<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>     
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setState</span><span style="color:#ff79c6">(</span>String state<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">state</span> <span style="color:#ff79c6">=</span> state<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">getState</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span> 
-        <span style="color:#ff79c6">return</span> state<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#6272a4">// 發起人，也就是班長，負責對部隊發號司令。
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Originator</span> <span style="color:#ff79c6">{</span> 
-    <span style="color:#8be9fd;font-style:italic">private</span> String state<span style="color:#ff79c6">;</span>     
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setState</span><span style="color:#ff79c6">(</span>String state<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>state <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;！&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">state</span> <span style="color:#ff79c6">=</span> state<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">getState</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span> 
-        <span style="color:#ff79c6">return</span> state<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> Memento <span style="color:#50fa7b">createMemento</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>  <span style="color:#6272a4">// 建立備忘錄
-</span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> Memento<span style="color:#ff79c6">(</span>state<span style="color:#ff79c6">);</span> 
-    <span style="color:#ff79c6">}</span> 
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">restoreMemento</span><span style="color:#ff79c6">(</span>Memento m<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>  <span style="color:#6272a4">// 回復上一個狀態
-</span><span style="color:#6272a4"></span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;班長：幹什麼！回復上一動！&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">setState</span><span style="color:#ff79c6">(</span>m<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getState</span><span style="color:#ff79c6">());</span> 
-    <span style="color:#ff79c6">}</span> 
-<span style="color:#ff79c6">}</span>
-<span style="color:#6272a4">// 管理者，保存備忘錄及取得備忘錄
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Caretaker</span> <span style="color:#ff79c6">{</span> 
-    <span style="color:#8be9fd;font-style:italic">private</span> Memento memento<span style="color:#ff79c6">;</span>       
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setMemento</span><span style="color:#ff79c6">(</span>Memento m<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
-        memento <span style="color:#ff79c6">=</span> m<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> Memento <span style="color:#50fa7b">getMemento</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span> 
-        <span style="color:#ff79c6">return</span> memento<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MementoPattern</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        Originator or <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Originator<span style="color:#ff79c6">();</span>
-        Caretaker cr <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Caretaker<span style="color:#ff79c6">();</span>       
-        or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setState</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;稍息！！&#34;</span><span style="color:#ff79c6">);</span> 
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;---初始狀態:&#34;</span> <span style="color:#ff79c6">+</span> or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getState</span><span style="color:#ff79c6">());</span>           
-        cr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setMemento</span><span style="color:#ff79c6">(</span>or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">createMemento</span><span style="color:#ff79c6">());</span> <span style="color:#6272a4">//保存      
-</span><span style="color:#6272a4"></span>        or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setState</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;置板凳！！&#34;</span><span style="color:#ff79c6">);</span> 
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;---新的狀態:&#34;</span> <span style="color:#ff79c6">+</span> or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getState</span><span style="color:#ff79c6">());</span>     
-        or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">restoreMemento</span><span style="color:#ff79c6">(</span>cr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getMemento</span><span style="color:#ff79c6">());</span> <span style="color:#6272a4">//回復
-</span><span style="color:#6272a4"></span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;---回復狀態:&#34;</span> <span style="color:#ff79c6">+</span> or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getState</span><span style="color:#ff79c6">());</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>稍息！！！
----初始狀態:稍息！！
-置板凳！！！
----新的狀態:置板凳！！
-班長：幹什麼！回復上一動！
-稍息！！！
----回復狀態:稍息！！
-</code></pre><br>
+<br>
 <br>
 <ul>
 <li>
@@ -432,38 +351,26 @@ Caretaker : +getMemento():Memento;
 </li>
 </ul>
 <hr>
-<h5 id="memento-pattern的目標">Memento Pattern的目標</h5>
-<p><code>在不破壞封裝的前提下，儲存一個物件的某個狀態，以便於需要的時候將物件恢復到原先儲存的狀態。</code></p>
+<h5 id="strategy-pattern的目標">Strategy Pattern的目標</h5>
 <br>
-<h5 id="memento-pattern的成員">Memento Pattern的成員</h5>
-<pre><code>Originator(發起人)：紀錄目前的內部狀態，提供建立備忘錄及回復備忘錄狀態的功能，可以訪問備忘錄內所有訊息。
-Memento(備忘錄)：保存發起人的內部狀態，在需要的時候提供給發起人。
-Caretaker(管理者)：管理、保存及讀取備忘錄的功能，但不能對備忘錄的內容進行訪問及修改。
-</code></pre>
+<h5 id="strategy-pattern的成員">Strategy Pattern的成員</h5>
 <br>
-<h5 id="memento-pattern的優缺點">Memento Pattern的優缺點</h5>
+<h5 id="strategy-pattern的優缺點">Strategy Pattern的優缺點</h5>
 <pre><code>優點
-1. 提供可回復的機制，用戶可以將狀態回復到以前某的狀態。
-2. 實現內部狀態的封裝，除了建立的發起人，其於物劍不可以訪問。
-3. 簡化發起人，不需要管理及保存撞奈的備份，所有的訊息都由管理者管理，符合單一職責原則。
+1. 提供一系列可重複使用的演算法，適當的使用繼承可把共用程式碼轉移到父類別內，避免重複。
+2. 提供相同行為不同實作方式，可以根據不同時間空間選擇適當的策略。
+3. 在不修改原始程式碼的情況下，增加新的演算法，符合開閉原則。
+4. 演算法的使用放到環境類別，演算法的實作放到具體類別，讓兩者分離。
 缺點
-1. 資源消耗大。 
+1. Client必須了解所有演算法區別，才能適當使用。
+2. 產生很多的策略類別。
 </code></pre>
 <br>
-<h5 id="memento-pattern的使用時機">Memento Pattern的使用時機</h5>
-<pre><code>1. 需要保存及回覆的時候，如遊戲存擋。
-2. 需要可以回復操作，如Ctrl+Z 。
+<h5 id="strategy-pattern的使用時機">Strategy Pattern的使用時機</h5>
+<pre><code>1. 當系統需要動態的選擇策略時。
+2. 一個類別定義多種行為，且這些行為在這個類別中有多個條件(if-else)語法形式出現時。
+3. 系統演算法獨立，且要求對client隱藏實作細節時。
 </code></pre>
-<br>
-<br>
-<br>
-<ul>
-<li>
-<h3 id=_範例程式碼>範例程式碼</h3>
-</li>
-</ul>
-<hr>
-<p><em><a href="https://www.jdoodle.com/a/2nIs" target="_blank">範例：Memento Pattern 實作</a></em></p>
 <br>
 <br>
 <ul>
@@ -473,8 +380,10 @@ Caretaker(管理者)：管理、保存及讀取備忘錄的功能，但不能對
 </ul>
 <hr>
 <ul>
-<li><a href="https://medium.com/@Bear_/%E5%82%99%E5%BF%98%E9%8C%84%E6%A8%A1%E5%BC%8F-memento-6f20fde63e37" target="_blank">備忘錄模式 Memento</a></li>
-<li><a href="http://c.biancheng.net/view/1400.html" target="_blank">备忘录模式（详解版）</a></li>
+<li><a href="" target="_blank"></a></li>
+<li><a href="" target="_blank"></a></li>
+<li><a href="" target="_blank"></a></li>
+<li><a href="" target="_blank"></a></li>
 </ul>
 
   </div>
@@ -482,18 +391,12 @@ Caretaker(管理者)：管理、保存及讀取備忘錄的功能，但不能對
   <br>
   <div class="pagination">
   
-    <a href="/ianlife/design-pattern/state-pattern/" class="button">
+    <a href="/ianlife/design-pattern/memento-pattern/" class="button">
       <div class="previous">
-        <div>狀態模式 | State Pattern</div>
+        <div>備忘錄模式 | Memento Pattern</div>
       </div>
     </a>
   
-  
-    <a href="/ianlife/design-pattern/strategy-pattern/" class="button">
-      <div class="next">
-        <div>策略模式 | Strategy Pattern</div>
-      </div>
-    </a>
   
 </div>
 
@@ -523,9 +426,6 @@ Caretaker(管理者)：管理、保存及讀取備忘錄的功能，但不能對
           
             
             <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-pattern">Design Pattern</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/behavioural-pattern">Behavioural Pattern</a></li>
           
         </ul>
       </li>
@@ -672,8 +572,8 @@ Caretaker(管理者)：管理、保存及讀取備忘錄的功能，但不能對
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_memento-pattern-%e6%88%90%e5%93%a1">
-												 Memento Pattern 成員
+						 					<a class="nav-link" href="#_strategy-pattern-%e6%88%90%e5%93%a1">
+												 Strategy Pattern 成員
 											</a>
 										</li>
 						 
@@ -698,8 +598,8 @@ Caretaker(管理者)：管理、保存及讀取備忘錄的功能，但不能對
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_memento-pattern-%e5%af%a6%e4%bd%9c">
-												 Memento Pattern 實作
+						 					<a class="nav-link" href="#_strategy-pattern-%e5%af%a6%e4%bd%9c">
+												 Strategy Pattern 實作
 											</a>
 										</li>
 						 
@@ -726,32 +626,6 @@ Caretaker(管理者)：管理、保存及讀取備忘錄的功能，但不能對
 										<li class="nav-item">
 						 					<a class="nav-link" href="#_%e5%b0%8f%e7%b5%90">
 												 小結
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e7%af%84%e4%be%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc">
-												 範例程式碼
 											</a>
 										</li>
 						 
