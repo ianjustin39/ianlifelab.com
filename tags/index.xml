@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 06 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 23 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>好書推薦</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>讀書心得</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Design Pattern</title>
