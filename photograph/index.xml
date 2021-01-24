@@ -11,5 +11,14 @@
 	<atom:link href="https://ianjustin39.github.io/ianlife/photograph/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>嘉明湖</title>
+      <link>https://ianjustin39.github.io/ianlife/photograph/20201117-jiaminglake/</link>
+      <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/photograph/20201117-jiaminglake/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
