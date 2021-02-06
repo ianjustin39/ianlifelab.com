@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh">
   <head>
-  <meta content="" name="keywords">
+  <meta content="Design Pattern, Behavioural Pattern, Strategy Pattern, 策略模式" name="keywords">
   <link rel="stylesheet" href="../css/magnific-popup.css">
   <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
@@ -74,8 +74,7 @@ if (!doNotTrack) {
   <meta name="theme-color" content="#ffffff">
 
 <meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="策略模式 | Strategy Pattern">
-<meta itemprop="description" content="本系列文章同步分享於IT邦幫忙第12屆鐵人賽
-   Design Pattern 系列文章導讀     Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns & Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE      設計模式 - 入門篇  什麼是Design Pattern? Design Pattern的類型與原則    設計模式 - 原則篇 | Design Principles  單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter    設計模式 - 創建型模型篇 | Creational Patterns  單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern    設計模式 - 結構型模型篇 | Structural Patterns  適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern    設計模式 - 行為型模型篇 | Behavioural Patterns  責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern    設計模式 - 番外篇  Anti-Patterns Code Smells Design Pattern VS 演算法       定義    定義一系列演算法，並將其封裝起來，使他們可以相互替換，演算法的變換不影響使用。">
+<meta itemprop="description" content="定義一系列演算法，並將其封裝起來，使他們可以相互替換，演算法的變換不影響使用。">
 <meta itemprop="datePublished" content="2020-10-06T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-10-06T00:00:00&#43;00:00" />
 <meta itemprop="wordCount" content="505">
@@ -83,9 +82,8 @@ if (!doNotTrack) {
 
 
 
-<meta itemprop="keywords" content="Design Pattern," /><meta property="og:title" content="策略模式 | Strategy Pattern" />
-<meta property="og:description" content="本系列文章同步分享於IT邦幫忙第12屆鐵人賽
-   Design Pattern 系列文章導讀     Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns & Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE      設計模式 - 入門篇  什麼是Design Pattern? Design Pattern的類型與原則    設計模式 - 原則篇 | Design Principles  單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter    設計模式 - 創建型模型篇 | Creational Patterns  單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern    設計模式 - 結構型模型篇 | Structural Patterns  適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern    設計模式 - 行為型模型篇 | Behavioural Patterns  責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern    設計模式 - 番外篇  Anti-Patterns Code Smells Design Pattern VS 演算法       定義    定義一系列演算法，並將其封裝起來，使他們可以相互替換，演算法的變換不影響使用。" />
+<meta itemprop="keywords" content="Design Pattern,Behavioural Pattern," /><meta property="og:title" content="策略模式 | Strategy Pattern" />
+<meta property="og:description" content="定義一系列演算法，並將其封裝起來，使他們可以相互替換，演算法的變換不影響使用。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/strategy-pattern/" />
 <meta property="og:image" content="https://ianjustin39.github.io/ianlife/" />
@@ -96,8 +94,7 @@ if (!doNotTrack) {
 <meta name="twitter:image" content="https://ianjustin39.github.io/ianlife/"/>
 
 <meta name="twitter:title" content="策略模式 | Strategy Pattern"/>
-<meta name="twitter:description" content="本系列文章同步分享於IT邦幫忙第12屆鐵人賽
-   Design Pattern 系列文章導讀     Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns & Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE      設計模式 - 入門篇  什麼是Design Pattern? Design Pattern的類型與原則    設計模式 - 原則篇 | Design Principles  單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter    設計模式 - 創建型模型篇 | Creational Patterns  單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern    設計模式 - 結構型模型篇 | Structural Patterns  適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern    設計模式 - 行為型模型篇 | Behavioural Patterns  責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern    設計模式 - 番外篇  Anti-Patterns Code Smells Design Pattern VS 演算法       定義    定義一系列演算法，並將其封裝起來，使他們可以相互替換，演算法的變換不影響使用。"/>
+<meta name="twitter:description" content="定義一系列演算法，並將其封裝起來，使他們可以相互替換，演算法的變換不影響使用。"/>
 <meta name="twitter:site" content="@example"/>
 <link rel="stylesheet" href="/ianlife/css/bundle.min.0c037ee5e40837985628b373e9760ef0820aaf44cb90ccc6dc34c45603970f2c.css" integrity="sha256-DAN&#43;5eQIN5hWKLNz6XYO8IIKr0TLkMzG3DTEVgOXDyw=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
@@ -170,6 +167,8 @@ if (!doNotTrack) {
     
     <h2><a href="/ianlife/design-pattern/strategy-pattern/">策略模式 | Strategy Pattern</a></h2>
     
+    
+    <p>定義一系列演算法，並將其封裝起來，使他們可以相互替換，演算法的變換不影響使用。</p>
     
   </div>
   <div class="meta">
@@ -567,6 +566,9 @@ Context(環境)：管理、保存及讀取備忘錄的功能，但不能對備�
           
             
             <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-pattern">Design Pattern</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/behavioural-pattern">Behavioural Pattern</a></li>
           
         </ul>
       </li>
