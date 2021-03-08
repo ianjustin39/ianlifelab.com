@@ -6,10 +6,20 @@
     <description>Recent content in Blog on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 21 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>二分搜尋演算法 (Binary search algorithm) - 終極密碼</title>
+      <link>https://ianjustin39.github.io/ianlife/algorithms/binary_search/</link>
+      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/algorithms/binary_search/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.geeksforgeeks.org/binary-search/&#34; target=&#34;_blank&#34;&gt;圖片來源&lt;/a&gt;
+&lt;br&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>為了遇見40歲更好的自己</title>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>algorithm on Life Story</title>
+    <link>https://ianjustin39.github.io/ianlife/tags/algorithm/</link>
+    <description>Recent content in algorithm on Life Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://ianjustin39.github.io/ianlife/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>二分搜尋演算法 (Binary search algorithm) - 終極密碼</title>
+      <link>https://ianjustin39.github.io/ianlife/algorithms/binary_search/</link>
+      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/algorithms/binary_search/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.geeksforgeeks.org/binary-search/&#34; target=&#34;_blank&#34;&gt;圖片來源&lt;/a&gt;
+&lt;br&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
