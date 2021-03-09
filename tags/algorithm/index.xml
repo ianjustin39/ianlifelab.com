@@ -6,10 +6,19 @@
     <description>Recent content in algorithm on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>字典樹 - Trie</title>
+      <link>https://ianjustin39.github.io/ianlife/algorithms/tries/</link>
+      <pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/algorithms/tries/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>二分搜尋演算法 (Binary search algorithm) - 終極密碼</title>
