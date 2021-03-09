@@ -78,7 +78,7 @@ if (!doNotTrack) {
 ">
 <meta itemprop="datePublished" content="2021-03-07T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-03-07T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="329">
+<meta itemprop="wordCount" content="336">
 <meta itemprop="image" content="https://i.imgur.com/RVPOINs.png">
 
 
@@ -291,22 +291,19 @@ index:   1   2   3
              ＾
              mid
 </code></pre><p>最後比對發現<code>16=16</code>，找到了目標值。</p>
-<p>經過這個範例，一共比對了三次才找到<code>16</code>，就是對半分三次，即<code>1/2 * 1/2 * 1/2 = (1/2)^3</code>。</p>
+<p>經過這個範例，一共比對了三次才找到<code>16</code>，就是對半分三次，即 <strong>1/2 * 1/2 * 1/2 = (1/2)^3</strong>。</p>
 <p>全部有 12 個資料，所以是 <code>12 * (1/2)^3 = 1</code>，而現在可以做以下的運算：</p>
-<pre><code>12 * (1/2)^3 = 1
-
-// 若有 n 個元素，則要對半 k 次
-n * (1/2)^k = 1
-
-// 上面等於下面
-n * 1/2^k = 1
-
-// 同乘 2^k
-2k * n/2k = 2k
-
-// 變成
-n = 2k
-</code></pre><p>所以以 2 為底 n 的<a href="https://zh.wikipedia.org/wiki/%E5%AF%B9%E6%95%B0" target="_blank">對數</a>是 log<sub>2</sub>(n) = k， 所以 k 就是 log<sub>2</sub>(n)，也就是在最糟情況下，要從 n 個元素中搜尋到某一個元素，則要折半比對的次數為 k 次，就是 log<sub>2</sub>(n) 次。</p>
+<p><strong>step 0:</strong></p>
+<p>12 * (1/2)<sup>3</sup> = 1</p>
+<p><strong>step 1: 若有 n 個元素，則要對半 k 次</strong></p>
+<p>n * (1/2)<sup>k</sup> = 1</p>
+<p><strong>step 2: 上面等於下面</strong></p>
+<p>n * 1/2<sup>k</sup> = 1</p>
+<p><strong>step 3: 同乘 2<sup>k</sup></strong></p>
+<p>2<sup>k</sup> * n/2<sup>k</sup> = 2<sup>k</sup></p>
+<p><strong>step 4: 變成</strong></p>
+<p>n = 2k</p>
+<p>所以以 2 為底 n 的<a href="https://zh.wikipedia.org/wiki/%E5%AF%B9%E6%95%B0" target="_blank">對數</a>是 log<sub>2</sub>(n) = k， 所以 k 就是 log<sub>2</sub>(n)，也就是在最糟情況下，要從 n 個元素中搜尋到某一個元素，則要折半比對的次數為 k 次，就是 log<sub>2</sub>(n) 次。</p>
 <pre><code>Binary search 的時間複雜度是多少？ O(log n)
 </code></pre><br>
 <br>
@@ -316,7 +313,7 @@ n = 2k
 <h2 id=_resource>Resource</h2>
 <hr>
 <ul>
-<li><a href="https://www.django-rest-framework.org/" target="_blank">為什麼Binary Search 二元搜索法的時間複雜度是O(log(n))</a></li>
+<li><a href="https://matthung0807.blogspot.com/2018/04/binary-search-ologn.html" target="_blank">為什麼Binary Search 二元搜索法的時間複雜度是O(log(n))</a></li>
 <li><a href="https://pjchender.blogspot.com/2017/09/big-o-notation-time-complexity.html" target="_blank">[演算法] Big O Notation &amp; Time Complexity</a></li>
 <li>Udacity Data Structures and Algorithms Class</li>
 </ul>
