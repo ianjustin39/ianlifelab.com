@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+  <meta content="" name="keywords">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  
+  
+  
+  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
+  <script src="/ianlife/js/bootstrap.js"></script>
+  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
+  
+  
+  
+  <script src="../js/jquery.magnific-popup.js"></script>
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="/ianlife/js/toc.js"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+  <script>
+   window.onload = function () {
+    let plantumlPrefix = "language-plantuml";
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
+      let image = document.createElement("IMG");
+      image.loading = 'lazy'; 
+      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
+      code.parentNode.insertBefore(image, code);
+      code.style.display = 'none';
+    });
+  };
+  </script>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta charset="utf-8">
+<title>TECH - Ian Tsai </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="TECH">
+<meta itemprop="description" content=""><meta property="og:title" content="TECH" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/categories/tech/" />
+<meta property="og:updated_time" content="2021-03-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="TECH"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/ianlife/css/bundle.min.0c037ee5e40837985628b373e9760ef0820aaf44cb90ccc6dc34c45603970f2c.css" integrity="sha256-DAN&#43;5eQIN5hWKLNz6XYO8IIKr0TLkMzG3DTEVgOXDyw=">
+        <link rel="stylesheet" href="/ianlife/css/add-on.css">
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ianlife/">
+        
+          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/life" class="link"><i class='fa fa-plane'></i> Life</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/reading" class="link"><i class='fa fa-book'></i> Reading</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/tech" class="link"><i class='fa fa-laptop'></i> Tech</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/photograph/" class="link"><i class='far fa-images'></i> Photograph</a>
+          
+        
+      
+      
+      
+
+    </menu>
+    
+
+    
+    
+    <a href="#site-nav-menu" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-sidebar">
+  <section id="site-intro" >
+    <a href="/ianlife/"><img src="https://lh3.googleusercontent.com/oBxmIY5uloDqDQftTGdRtsXCB_WpmkvZqVSYrCeVdqGfCKG0hWDrUjX-dNZb57m_FpGzj2sYSCveJUJYnYq_VyUPCAf9-rWQc8ZkNsKYv1AL5BQKJ5JfQradyyIaKrTbT-_fPWlglBQ7K1ZVL-Rqk8G7ciYxz70twPN2TJjtEHXzbcpGz9Qwc7PKqPVAvf-qBKsYEIP2w0Evt2My8zhkr_buLfGb9SMvDRSpUzkel2X5AKlGLAPFNY-C29_UolLnEq1opwlkEC9JbKo_fohKL1w5vefeoCDL7RJVxw6DqAnUU9UPvsmobA2qErmoesl_lwyD92k-PPTLco-J86v6kRJhbNxQL0B-q2tc6o3Bx4c52Hc8U9sPjYcnigAUgJvwCm9w2i8_4ozGF3xNb7aIkIg7IeOS0HaTt8Obd5PmvAHfY4zItfPZWGGLfrUIRy2FQu9KbLH0Ob_HbyQq1XZ6uAU10zUV12HGf-9Ptrw59nQthnFOprw9Q8f40CVWFMdFsBPl6AyddRBTcXyOj7yRuDMu3UQBY6BhmOwoIhF-ROej9QCcayOtwF0NdXm__8B02dRPGbYries56f35UUckaHKRyqRWjD2dS4mkLDKx3pLwjez-56lbhmGD115ZgWL6psVZ4p2iqTckO5oLs5uj6HDjICVWQk2S0lI5C0h1OByKVttccY4fxLNLVXkjBdBQ1M-grwAhQ6_GyW2CcZHCHhzl0NRTgWyzIj7JA3SrEkn-K2cCk91276A=s120-no" class="circle" width="" alt="Hugo Future Imperfect Slim" /></a>
+    <header>
+      <h1>Ian 化學系軟體工程師</h1>
+    </header>
+    <main>
+      <p>學習, 攝影, 健身, 吃吃喝喝, 記錄生活</p>
+    </main>
+  </br>
+    
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p> If you’re afraid to fail, then you’re probably going to fail.</p>
+      <footer>
+        <a href="/ianlife/about" class="button">Learn More</a>
+      </footer>
+    </section>
+    
+    
+  </section>
+</section>
+      <main id="site-main">
+        
+        
+          <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    
+    <h3><a href="/ianlife/design-pattern/what_is_design_pattern/">什麼是Design Pattern?</a></h3>
+    
+    
+    <p style="margin-top: 0px;">Design Pattern是解決問題的一種方案。</p>
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2020-09-08 00:00:00 &#43;0000 UTC">
+      September 8, 2020
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>2 minute read</p>
+    
+  </div>
+</header>
+
+  
+  <a href="/ianlife/design-pattern/what_is_design_pattern/" class="image featured">
+    
+      <img src="https://i.imgur.com/gKWpPyS.jpg" alt="">
+    
+  </a>
+
+
+  
+  <footer>
+    <a href="/ianlife/design-pattern/what_is_design_pattern/" class="button big">Read more</a>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern">從生活中認識Design Pattern</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-pattern">Design Pattern</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD">鐵人賽</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+        
+          <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84blog"><p>Blog</p></a>
+    
+    <h3><a href="/ianlife/build_photograph_in_hugo/">用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿</a></h3>
+    
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2020-05-06 00:00:00 &#43;0000 UTC">
+      May 6, 2020
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>2 minute read</p>
+    
+  </div>
+</header>
+
+  
+  <a href="/ianlife/build_photograph_in_hugo/" class="image featured">
+    
+      <img src="https://i.imgur.com/SXMIgzm.png" alt="">
+    
+  </a>
+
+
+  
+  <footer>
+    <a href="/ianlife/build_photograph_in_hugo/" class="button big">Read more</a>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84blog">建立自己的Blog</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/blog">Blog</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/hugo">Hugo</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/bootstrap">Bootstrap</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/masonry">Masonry</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/magnific-popup">magnific Popup</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+        
+          <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84blog"><p>Blog</p></a>
+    
+    <h3><a href="/ianlife/deploy_hugo_on_github/">部署Hugo個人網頁至GitHub</a></h3>
+    
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2020-05-02 00:00:00 &#43;0000 UTC">
+      May 2, 2020
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>2 minute read</p>
+    
+  </div>
+</header>
+
+  
+  <a href="/ianlife/deploy_hugo_on_github/" class="image featured">
+    
+      <img src="https://i.imgur.com/zqEvTP9.png" alt="">
+    
+  </a>
+
+
+  
+  <footer>
+    <a href="/ianlife/deploy_hugo_on_github/" class="button big">Read more</a>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84blog">建立自己的Blog</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/blog">blog</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/github">github</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/hugo">hugo</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+        
+          <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84blog"><p>Blog</p></a>
+    
+    <h3><a href="/ianlife/get_started_hugo/">使用Hugo建立個人網頁</a></h3>
+    
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2020-04-30 00:00:00 &#43;0000 UTC">
+      April 30, 2020
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>1 minute read</p>
+    
+  </div>
+</header>
+
+  
+  <a href="/ianlife/get_started_hugo/" class="image featured">
+    
+      <img src="https://i.imgur.com/zqEvTP9.png" alt="">
+    
+  </a>
+
+
+  
+  <footer>
+    <a href="/ianlife/get_started_hugo/" class="button big">Read more</a>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84blog">建立自己的Blog</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/hugo">hugo</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/blog">blog</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+        
+        
+<div class="pagination">
+  
+    <a href="/ianlife/categories/tech/page/2/" class="button big previous"><i class="fas fa-angle-left"></i></a>
+  
+  
+    <a href="#" class="disabled button big next"><i class="fas fa-angle-right"></i></a>
+  
+</div>
+
+      </main>
+       
+      <footer id="site-footer">
+    <p class="copyright">
+      <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span></span> |
+      <span id="busuanzi_container_site_uv">UV: <span id="busuanzi_value_site_uv"></span></span>
+    </p>
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <section id="mini-bio">
+    <div id="tag-cloud" class="copyright" style="padding: 5px 25px">
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/algorithm" style="font-size:0.7037950470905061rem">algorithm</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/behavioural-pattern" style="font-size:1.1113851412715186rem">behavioural-pattern</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/blog" style="font-size:0.8230075074711545rem">blog</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/bootstrap" style="font-size:0.5rem">bootstrap</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/creational-pattern" style="font-size:0.9731974454383393rem">creational-pattern</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/data-structures" style="font-size:0.5rem">data-structures</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/design-pattern" style="font-size:1.4900324656668076rem">design-pattern</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/design-principle" style="font-size:1.1113851412715186rem">design-principle</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/github" style="font-size:0.5rem">github</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/hugo" style="font-size:0.8230075074711545rem">hugo</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/magnific-popup" style="font-size:0.5rem">magnific-popup</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/masonry" style="font-size:0.5rem">masonry</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/structural-pattern" style="font-size:1.0721250285404937rem">structural-pattern</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6" style="font-size:0.5rem">好書推薦</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97" style="font-size:0.7037950470905061rem">讀書心得</a>&nbsp;&nbsp;
+        
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD" style="font-size:1.333004682213307rem">鐵人賽</a>&nbsp;&nbsp;
+        
+    </div>
+  </section>
+  
+  <br>
+  <p class="copyright"><a href="https://jumperc2p.github.io/InformisTry/" target="_blank">＊ 澳洲工程師日記 - Hank Lee</a></p>
+  <p class="copyright">
+    
+      &copy; 2021
+      
+        Ian Tsai
+      
+    . <br>
+    IAN 化學系軟體工程師 Powered by <a href='https://gohugo.io/' title='0.69.2' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/ianlife/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script src="/ianlife/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </div>
+  </body>
+</html>
