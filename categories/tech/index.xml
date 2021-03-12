@@ -339,10 +339,10 @@
     
     <item>
       <title>使用Hugo建立個人網頁</title>
-      <link>https://ianjustin39.github.io/ianlife/get_started_hugo/</link>
+      <link>https://ianjustin39.github.io/ianlife/build-blog/get_started_hugo/</link>
       <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/get_started_hugo/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/build-blog/get_started_hugo/</guid>
       <description>&lt;p&gt;一直有想要寫一些文章記錄生活，身為一個工程師，難免會有想要自己架設的靈魂（？，
 最近發現hugo可以快速架站，除了有template以外也可以自己更改裡面的配置
 ，對於一個前端小菜鳥來說，算是一大福音ＸＤ，於是開始了這條漫漫長路～&lt;/p&gt;</description>

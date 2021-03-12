@@ -59,7 +59,7 @@ if (!doNotTrack) {
 
   
   <meta charset="utf-8">
-<title>部署Hugo個人網頁至GitHub - Ian Tsai </title>
+<title>使用Hugo建立個人網頁 - Ian Tsai </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -75,31 +75,34 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="部署Hugo個人網頁至GitHub">
-<meta itemprop="description" content="之前用Hugo架設個人網站，但架設完成後還是需要部署到一個平台，才有辦法瀏覽，
-這篇就來分享如何將網頁部署到GitHub以及途中遇到的一些問題">
-<meta itemprop="datePublished" content="2020-05-02T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-05-02T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="256">
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="使用Hugo建立個人網頁">
+<meta itemprop="description" content="一直有想要寫一些文章記錄生活，身為一個工程師，難免會有想要自己架設的靈魂（？，
+最近發現hugo可以快速架站，除了有template以外也可以自己更改裡面的配置
+，對於一個前端小菜鳥來說，算是一大福音ＸＤ，於是開始了這條漫漫長路～">
+<meta itemprop="datePublished" content="2020-04-30T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-04-30T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="117">
 <meta itemprop="image" content="https://i.imgur.com/zqEvTP9.png">
 
 
 
-<meta itemprop="keywords" content="blog,github,hugo," /><meta property="og:title" content="部署Hugo個人網頁至GitHub" />
-<meta property="og:description" content="之前用Hugo架設個人網站，但架設完成後還是需要部署到一個平台，才有辦法瀏覽，
-這篇就來分享如何將網頁部署到GitHub以及途中遇到的一些問題" />
+<meta itemprop="keywords" content="hugo,blog," /><meta property="og:title" content="使用Hugo建立個人網頁" />
+<meta property="og:description" content="一直有想要寫一些文章記錄生活，身為一個工程師，難免會有想要自己架設的靈魂（？，
+最近發現hugo可以快速架站，除了有template以外也可以自己更改裡面的配置
+，對於一個前端小菜鳥來說，算是一大福音ＸＤ，於是開始了這條漫漫長路～" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/build-blog/deploy_hugo_on_github/" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/build-blog/get_started_hugo/" />
 <meta property="og:image" content="https://i.imgur.com/zqEvTP9.png" />
-<meta property="article:published_time" content="2020-05-02T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-05-02T00:00:00+00:00" />
+<meta property="article:published_time" content="2020-04-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-30T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.imgur.com/zqEvTP9.png"/>
 
-<meta name="twitter:title" content="部署Hugo個人網頁至GitHub"/>
-<meta name="twitter:description" content="之前用Hugo架設個人網站，但架設完成後還是需要部署到一個平台，才有辦法瀏覽，
-這篇就來分享如何將網頁部署到GitHub以及途中遇到的一些問題"/>
+<meta name="twitter:title" content="使用Hugo建立個人網頁"/>
+<meta name="twitter:description" content="一直有想要寫一些文章記錄生活，身為一個工程師，難免會有想要自己架設的靈魂（？，
+最近發現hugo可以快速架站，除了有template以外也可以自己更改裡面的配置
+，對於一個前端小菜鳥來說，算是一大福音ＸＤ，於是開始了這條漫漫長路～"/>
 <meta name="twitter:site" content="@example"/>
 <link rel="stylesheet" href="/ianlife/css/bundle.min.c1dab21d49772dc014ac5cdad486b0c24b232de173fab0b453929c139d487d93.css" integrity="sha256-wdqyHUl3LcAUrFza1IawwksjLeFz&#43;rC0U5KcE51IfZM=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
@@ -237,18 +240,18 @@ if (!doNotTrack) {
   <div class="title">
     <a href="/ianlife/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84blog"><p>Blog</p></a>
     
-    <h3><a href="/ianlife/build-blog/deploy_hugo_on_github/">部署Hugo個人網頁至GitHub</a></h3>
+    <h3><a href="/ianlife/build-blog/get_started_hugo/">使用Hugo建立個人網頁</a></h3>
     
     
   </div>
   <div class="meta">
-    <time class="published" datetime="2020-05-02 00:00:00 &#43;0000 UTC">
-      May 2, 2020
+    <time class="published" datetime="2020-04-30 00:00:00 &#43;0000 UTC">
+      April 30, 2020
     </time>
     
     <span class="author">Ian Tsai</span>
     
-    <p>2 minute read</p>
+    <p>1 minute read</p>
     
     <p>
       <span id="busuanzi_container_page_pv">
@@ -262,7 +265,7 @@ if (!doNotTrack) {
     
   </section>
   
-  <a href="/ianlife/build-blog/deploy_hugo_on_github/" class="image featured">
+  <a href="/ianlife/build-blog/get_started_hugo/" class="image featured">
     
       <img src="https://i.imgur.com/zqEvTP9.png" alt="">
     
@@ -270,134 +273,70 @@ if (!doNotTrack) {
 
 
   <div class="content">
-    <p>之前用Hugo架設個人網站，但架設完成後還是需要部署到一個平台，才有辦法瀏覽，
-這篇就來分享如何將網頁部署到GitHub以及途中遇到的一些問題</p>
-<p>如果還不知道怎麼架設個人頁面的可以參考 <strong><a href="../get_started_hugo">使用HUGO建立個人網頁</a></strong></p>
-<p>讓我們繼續看下去!</p>
-<p><strong><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" target="_blank">Hugo GitHub</a></strong>上有兩個方法，這邊兩種都會介紹！</p>
-<pre><code>User/Organization Pages
-(https://&lt;USERNAME|ORGANIZATION&gt;.github.io/)
-
-Project Pages
-(https://&lt;USERNAME|ORGANIZATION&gt;.github.io/&lt;PROJECT&gt;/)
-</code></pre><ul>
+    <p>一直有想要寫一些文章記錄生活，身為一個工程師，難免會有想要自己架設的靈魂（？，
+最近發現hugo可以快速架站，除了有template以外也可以自己更改裡面的配置
+，對於一個前端小菜鳥來說，算是一大福音ＸＤ，於是開始了這條漫漫長路～</p>
+<p>&mdash;我是短分隔線&mdash;</p>
+<p>以下紀錄是我花了幾天時間估狗各種網站＋自己一直鬼打牆後的一些心得，希望也可以讓大家少踩點雷ＸＤ
+然後我是用mac的系統，所以就先介紹mac架設的方法
+那就開始介紹吧！！！</p>
+<ul>
 <li>
-<h3 id=_userorganization-pages>User/Organization Pages</h3>
+<h3 id=_開始之前>開始之前</h3>
 </li>
 </ul>
-<h4 id=_1-github建立兩個repository>1. GitHub建立兩個repository</h4>
-<p>首先要先建立兩個repository</p>
-<pre><code>my_blog(可自行命名)                     放你原始Hugo程式
-my_account.github.io(用自己的帳號)      放要部署的網頁程式
-</code></pre><p>這邊要記得，my_account.github.io這個建立時要選public，若不小心選到private的話可以依照這路徑去更改
-<code>Setting &gt; Danger Zone &gt; Make this repository public</code></p>
-<h4 id=_2-建立部署網頁的資料public>2. 建立部署網頁的資料(/public)</h4>
-<p>回到根目錄，輸入</p>
-<pre><code>hugo
-</code></pre><p>根目錄下面就會產生一個public的資料夾，裡面有自動產出的html，這是等等要部署到GitHub的頁面</p>
-<p><em>如果你在執行這步驟時，有開啟server，記得要先關閉在執行</em></p>
-<h4 id=_2-1-設定pages-source>2-1. 設定pages source</h4>
-<p>當你部署完成後，需要將Setting內GitHub Pages的Source指定到master，這樣待會測試時才會有網頁出現
-<img src="https://i.imgur.com/bBzIKlJ.png" alt="GITHUB PAGE" title="GITHUB PAGE"></p>
-<h4 id=_3-連接public及my_accountgithubio>3. 連接public及my_account.github.io</h4>
-<pre><code>cd public
-git init
-git remote add blog &lt;my_account.github.io_repository&gt; #註1
-git add .
-git commit -m &quot;first commit&quot;
-git push blog master
-</code></pre><p>git的部分就不在多做贅述，若有不清楚的可以點<a href="https://git-scm.com/docs" target="_blank">here</a>看看</p>
-<p><em>註1：這邊remote name不用origin是因為另一個repo的remote name也會用origin，當初兩個都用一樣，在更新文章(下面會提到)時遇到不少問題，所以索性就用不一樣的名稱，這樣也比較好辨識，這可以照自己的習慣命名。</em></p>
-<h4 id=_4-將hugo資料夾連接到my_project>4. 將Hugo資料夾連接到my_project</h4>
-<pre><code>cd ..
-git init
-git remote add origin &lt;my_project_repository&gt;
-git add .
-git commit -m &quot;first commit&quot;
-git push origin master
-</code></pre><p>等待一下，然後輸入https://my_account.github.io/顯示出你的網頁就代表成功囉！</p>
+<p>首先我們可以先去<a href="https://themes.gohugo.io/" target="_blank">HUGO</a>的官網選擇喜歡的template，我覺得很重要，畢竟是自己要用的，自己喜歡才有動力做下去！！</p>
 <hr>
 <ul>
 <li>
-<h3 id=_project-pages>Project Pages</h3>
+<h3 id=_開始搭建你的網站>開始搭建你的網站</h3>
 </li>
 </ul>
-<h4 id=_0-設定configtoml>0. 設定config.toml</h4>
-<p>這邊要先更新config內的baseurl</p>
-<pre><code>baseurl                 = &quot;https://my_account.github.io/my_page/&quot; #my_page為等等要建立的repo name，可自行命名
+<h4 id=_1-打開你的terminal安裝hugo輸入>1. 打開你的terminal，安裝hugo，輸入：</h4>
+<pre><code>brew install hugo
+</code></pre><p><em>brew 是mac的管理套件 如果沒裝過的話 可以去<a href="https://brew.sh/index_zh-tw" target="_blank">這裏</a>看看或是複製以下程式碼到你的terminal執行</em></p>
+<pre><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;
+</code></pre><h4 id=_2-建立新網站>2. 建立新網站</h4>
+<pre><code>hugo new site project-name
+cd project-name
+</code></pre><p>project-name可以自訂，看你喜歡叫什麼都行！</p>
+<h4 id=_2-1-資料夾結構>2-1. 資料夾結構</h4>
+<p>建立好網站以後，來看看一下結構，這邊當矇逼滿久的，想說就順便記錄比較清楚</p>
+<pre><code>project
+├── archetypes
+├── content # 文章的家
+├── layout # html的家
+├── static # js, css 的家
+├── themes # 等等template要clone下來住的家
+</code></pre><p>就先把大項目列出來，他的行距實在太大，我覺得很醜，但目前找不到方法只好先加減用了ＱＱ</p>
+<p>（之後來研究一下Markdown好了</p>
+<h4 id=_3-新增themehttpsthemesgohugoio-我是用hugo-future-imperfect-slimhttpsthemesgohugoiohugo-future-imperfect-slim>3. 新增<a href="https://themes.gohugo.io/">Theme</a>: 我是用<a href="https://themes.gohugo.io/hugo-future-imperfect-slim/">Hugo Future Imperfect Slim</a></h4>
+<pre><code>cd themes
+git clone https://github.com/pacollins/hugo-future-imperfect-slim.git
+</code></pre><p>要等待一下下，完成後你就可以到你的themes內看看你選擇的template的資料有些啥</p>
+<h4 id=_4-將指定資料取代根目錄資料>4. 將指定資料取代根目錄資料</h4>
+<p>這邊就要將你載下來的一些檔案取代你原本空的檔案</p>
+<pre><code>themes/layouts 取代原本的 layouts
+themes/exampleSite/static 取代原本的 static
+themes/exampleSite/content 這些範例文章可以放到content內
+themes/exampleSite/config.toml 取代原本的config.toml
+</code></pre><p>這樣基本上你的模板就完成了</p>
+<h4 id=_4-1-設定configtoml>4-1. 設定config.toml</h4>
+<p>基本上整個網站的參數設定都在這，隨著每個網站的不同，設置方式會有差異，這邊就說一個最基本的設定</p>
+<pre><code>baseurl                 = &quot;https://github_account.github.io/&quot;
 DefaultContentLanguage  = &quot;zh&quot;
 title                   = &quot;Ian Blog&quot;
-</code></pre><h4 id=_1-github建立兩個repository-1>1. GitHub建立兩個repository</h4>
-<p>首先要先建立兩個repository</p>
-<pre><code>my_blog(可自行命名)                   放你原始Hugo程式
-my_page(要對應config內的baseurl)      放要部署的網頁程式
-</code></pre><p>這邊ㄧ樣要記得，my_page這個建立時要選public，若不小心選到private的話可以依照這路徑去更改</p>
-<p><code>Setting &gt; Danger Zone &gt; Make this repository public</code></p>
-<h4 id=_2-建立部署網頁的資料public-1>2. 建立部署網頁的資料(/public)</h4>
-<p>回到根目錄，輸入</p>
-<pre><code>hugo
-</code></pre><p>根目錄下面就會產生一個public的資料夾，裡面有自動產出的html，這是等等要部署到GitHub的頁面</p>
-<p><em>如果你在執行這步驟時，有開啟server，記得要先關閉在執行</em></p>
-<h4 id=_2-1-設定pages-source-1>2-1. 設定pages source</h4>
-<p>當你部署完成後，需要將Setting內GitHub Pages的Source指定到master，這樣待會測試時才會有網頁出現
-<img src="https://i.imgur.com/bBzIKlJ.png" alt="GITHUB PAGE" title="GITHUB PAGE"></p>
-<h4 id=_3-連接public及my_accountgithubio-1>3. 連接public及my_account.github.io</h4>
-<pre><code>cd public
-git init
-git remote add blog &lt;my_account.github.io_repository&gt; #註1
-git add .
-git commit -m &quot;first commit&quot;
-git push blog master
-</code></pre><p>git的部分就不在多做贅述，若有不清楚的可以點<a href="https://git-scm.com/docs" target="_blank">here</a>看看</p>
-<p><em>註1：這邊remote name不用origin是因為另一個repo的remote name也會用origin，當初兩個都用一樣，在更新文章(下面會提到)時遇到不少問題，所以索性就用不一樣的名稱，這樣也比較好辨識，這可以照自己的習慣命名。</em></p>
-<h4 id=_4-將hugo資料夾連接到my_project-1>4. 將Hugo資料夾連接到my_project</h4>
-<pre><code>cd ..
-git init
-git remote add origin &lt;my_project_repository&gt;
-git add .
-git commit -m &quot;first commit&quot;
-git push origin master
-</code></pre><p>等待一下，然後輸入https://my_account.github.io/顯示出你的網頁就代表成功囉！！</p>
-<p><img src="https://i.imgur.com/ErxnUyk.png" alt="page" title="apge"></p>
+</code></pre><p>因為我們之後要部署到github，所以baseurl就先把他設定好，一定要用github的帳號，才連接的上去</p>
+<h4 id=_5-新增文章>5. 新增文章</h4>
+<pre><code>hugo new content/blog/first-post.md
+</code></pre><p>新增的路徑依照你的主題不同會有不同的路徑，新增完後就可以開始寫你的文章了，而文章是用Markdown語法去寫</p>
+<h4 id=_6-啟動server>6. 啟動server</h4>
+<p>回到你的根目錄，然後輸入：</p>
+<pre><code>hugo server
+</code></pre><p>跑完後你會看到一行http://localhost:1313/，點下去看看，若有頁面顯示，<strong>恭喜你</strong>已經完成了你的網站了！！！</p>
 <hr>
-<ul>
-<li>
-<h3 id=_寫自動化腳本>寫自動化腳本</h3>
-</li>
-</ul>
-<p>部署成功後的，當然就是開始寫自己的blog拉！</p>
-<p>但如果每次發佈都要打一堆指令，個人會覺得很累，所以就來寫個腳本吧ＸＤ</p>
-<h4 id=_1-建立deploysh>1. 建立deploy.sh</h4>
-<p>在你的根目錄下建立deploy.sh的檔案，然後打開terminal，輸入<code>chmod +x deploy.sh</code>讓他變成可執行的檔案</p>
-<h4 id=_2-撰寫deploysh>2. 撰寫deploy.sh</h4>
-<pre><code>#!/bin/sh
-
-set -e
-
-hugo 
-
-cd public
-
-git add .
-
-msg=&quot;rebuilding site $(date)&quot;
-if [ -n &quot;$*&quot; ]; then
-	msg=&quot;$*&quot;
-fi
-git commit -m &quot;$msg&quot;
-
-git push blog master #註2
-
-</code></pre><p><em>註2：這邊就會遇到剛提到的remote的問題，如果兩個remote name都叫origin，那在這邊執行時就會有問題，因為原本的repo已經被第二個蓋掉了，所以這邊才用不同的remote去做分類</em></p>
-<h4 id=_3-更新文章>3. 更新文章</h4>
-<p>假設現在已經寫好文章要更新了
-在根目錄下</p>
-<pre><code>git add .
-git commit -m &quot;update new post&quot; # 在更新前一定要將你的文章commit才可以往下執行
-
-./depoly.sh
-</code></pre><p>這樣就完成拉！！
-也不用像一開始打一長串的指令，快速方便又好用！！</p>
+<p>剛開始分享可能有些不清楚的地方，自己的網站也還沒說非常完整，不過就把它當做成就一步一步解，也是頗有成就感！</p>
+<p>本來想要把部署github也寫在一起，但好像篇幅會有點長，所以就下一篇再來分享怎麼把自己的hugo推到github上吧！!</p>
 <hr>
 <ul>
 <li>
@@ -405,23 +344,18 @@ git commit -m &quot;update new post&quot; # 在更新前一定要將你的文章
 </li>
 </ul>
 <ul>
-<li><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" target="_blank">Host on GitHub</a> 再次感謝官方文件大力贊助播出</li>
+<li><a href="https://gohugo.io/getting-started/quick-start/" target="_blank">HUGO Doc</a> 感謝官方文件大力贊助播出</li>
 </ul>
+<hr>
   </div>
   <br>
   <br>
   <div class="pagination">
   
-    <a href="/ianlife/build-blog/get_started_hugo/" class="button">
-      <div class="previous">
-        <div>使用Hugo建立個人網頁</div>
-      </div>
-    </a>
   
-  
-    <a href="/ianlife/build-blog/build_photograph_in_hugo/" class="button">
+    <a href="/ianlife/build-blog/deploy_hugo_on_github/" class="button">
       <div class="next">
-        <div>用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿</div>
+        <div>部署Hugo個人網頁至GitHub</div>
       </div>
     </a>
   
@@ -452,13 +386,10 @@ git commit -m &quot;update new post&quot; # 在更新前一定要將你的文章
         <ul>
           
             
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/blog">blog</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/github">github</a></li>
-          
-            
             <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/hugo">hugo</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/blog">blog</a></li>
           
         </ul>
       </li>
@@ -553,8 +484,34 @@ git commit -m &quot;update new post&quot; # 在更新前一定要將你的文章
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_userorganization-pages">
-												 User/Organization Pages
+						 					<a class="nav-link" href="#_%e9%96%8b%e5%a7%8b%e4%b9%8b%e5%89%8d">
+												 開始之前
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e9%96%8b%e5%a7%8b%e6%90%ad%e5%bb%ba%e4%bd%a0%e7%9a%84%e7%b6%b2%e7%ab%99">
+												 開始搭建你的網站
 											</a>
 										</li>
 						 
@@ -581,68 +538,8 @@ git commit -m &quot;update new post&quot; # 在更新前一定要將你的文章
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_1-github%e5%bb%ba%e7%ab%8b%e5%85%a9%e5%80%8brepository">
-												 1. GitHub建立兩個repository
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_2-%e5%bb%ba%e7%ab%8b%e9%83%a8%e7%bd%b2%e7%b6%b2%e9%a0%81%e7%9a%84%e8%b3%87%e6%96%99public">
-												 2. 建立部署網頁的資料(/public)
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_2-1-%e8%a8%ad%e5%ae%9apages-source">
-												 2-1. 設定pages source
+						 					<a class="nav-link" href="#_1-%e6%89%93%e9%96%8b%e4%bd%a0%e7%9a%84terminal%e5%ae%89%e8%a3%9dhugo%e8%bc%b8%e5%85%a5">
+												 1. 打開你的terminal，安裝hugo，輸入：
 											</a>
 										</li>
 						 
@@ -671,8 +568,8 @@ git commit -m &quot;update new post&quot; # 在更新前一定要將你的文章
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_3-%e9%80%a3%e6%8e%a5public%e5%8f%8amy_accountgithubio">
-												 3. 連接public及my_account.github.io
+						 					<a class="nav-link" href="#_2-%e5%bb%ba%e7%ab%8b%e6%96%b0%e7%b6%b2%e7%ab%99">
+												 2. 建立新網站
 											</a>
 										</li>
 						 
@@ -701,64 +598,8 @@ git commit -m &quot;update new post&quot; # 在更新前一定要將你的文章
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_4-%e5%b0%87hugo%e8%b3%87%e6%96%99%e5%a4%be%e9%80%a3%e6%8e%a5%e5%88%b0my_project">
-												 4. 將Hugo資料夾連接到my_project
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_project-pages">
-												 Project Pages
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_0-%e8%a8%ad%e5%ae%9aconfigtoml">
-												 0. 設定config.toml
+						 					<a class="nav-link" href="#_2-1-%e8%b3%87%e6%96%99%e5%a4%be%e7%b5%90%e6%a7%8b">
+												 2-1. 資料夾結構
 											</a>
 										</li>
 						 
@@ -787,8 +628,8 @@ git commit -m &quot;update new post&quot; # 在更新前一定要將你的文章
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_1-github%e5%bb%ba%e7%ab%8b%e5%85%a9%e5%80%8brepository-1">
-												 1. GitHub建立兩個repository
+						 					<a class="nav-link" href="#_3-%e6%96%b0%e5%a2%9ethemehttpsthemesgohugoio-%e6%88%91%e6%98%af%e7%94%a8hugo-future-imperfect-slimhttpsthemesgohugoiohugo-future-imperfect-slim">
+												 3. 新增Theme: 我是用Hugo Future Imperfect Slim
 											</a>
 										</li>
 						 
@@ -817,8 +658,8 @@ git commit -m &quot;update new post&quot; # 在更新前一定要將你的文章
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_2-%e5%bb%ba%e7%ab%8b%e9%83%a8%e7%bd%b2%e7%b6%b2%e9%a0%81%e7%9a%84%e8%b3%87%e6%96%99public-1">
-												 2. 建立部署網頁的資料(/public)
+						 					<a class="nav-link" href="#_4-%e5%b0%87%e6%8c%87%e5%ae%9a%e8%b3%87%e6%96%99%e5%8f%96%e4%bb%a3%e6%a0%b9%e7%9b%ae%e9%8c%84%e8%b3%87%e6%96%99">
+												 4. 將指定資料取代根目錄資料
 											</a>
 										</li>
 						 
@@ -847,8 +688,8 @@ git commit -m &quot;update new post&quot; # 在更新前一定要將你的文章
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_2-1-%e8%a8%ad%e5%ae%9apages-source-1">
-												 2-1. 設定pages source
+						 					<a class="nav-link" href="#_4-1-%e8%a8%ad%e5%ae%9aconfigtoml">
+												 4-1. 設定config.toml
 											</a>
 										</li>
 						 
@@ -877,8 +718,8 @@ git commit -m &quot;update new post&quot; # 在更新前一定要將你的文章
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_3-%e9%80%a3%e6%8e%a5public%e5%8f%8amy_accountgithubio-1">
-												 3. 連接public及my_account.github.io
+						 					<a class="nav-link" href="#_5-%e6%96%b0%e5%a2%9e%e6%96%87%e7%ab%a0">
+												 5. 新增文章
 											</a>
 										</li>
 						 
@@ -907,124 +748,8 @@ git commit -m &quot;update new post&quot; # 在更新前一定要將你的文章
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_4-%e5%b0%87hugo%e8%b3%87%e6%96%99%e5%a4%be%e9%80%a3%e6%8e%a5%e5%88%b0my_project-1">
-												 4. 將Hugo資料夾連接到my_project
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%af%ab%e8%87%aa%e5%8b%95%e5%8c%96%e8%85%b3%e6%9c%ac">
-												 寫自動化腳本
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_1-%e5%bb%ba%e7%ab%8bdeploysh">
-												 1. 建立deploy.sh
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_2-%e6%92%b0%e5%af%abdeploysh">
-												 2. 撰寫deploy.sh
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_3-%e6%9b%b4%e6%96%b0%e6%96%87%e7%ab%a0">
-												 3. 更新文章
+						 					<a class="nav-link" href="#_6-%e5%95%9f%e5%8b%95server">
+												 6. 啟動server
 											</a>
 										</li>
 						 
