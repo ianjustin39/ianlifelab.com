@@ -390,19 +390,19 @@
     
     <item>
       <title>用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿</title>
-      <link>https://ianjustin39.github.io/ianlife/build_photograph_in_hugo/</link>
+      <link>https://ianjustin39.github.io/ianlife/build-blog/build_photograph_in_hugo/</link>
       <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/build_photograph_in_hugo/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/build-blog/build_photograph_in_hugo/</guid>
       <description>&lt;p&gt;剛開始架設網站時就決定要在網站內架一個相簿，這篇會分享如何用Bootstrap+Masonry+magnificPopup建構屬於你自己的相片牆&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>部署Hugo個人網頁至GitHub</title>
-      <link>https://ianjustin39.github.io/ianlife/deploy_hugo_on_github/</link>
+      <link>https://ianjustin39.github.io/ianlife/build-blog/deploy_hugo_on_github/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/deploy_hugo_on_github/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/build-blog/deploy_hugo_on_github/</guid>
       <description>&lt;p&gt;之前用Hugo架設個人網站，但架設完成後還是需要部署到一個平台，才有辦法瀏覽，
 這篇就來分享如何將網頁部署到GitHub以及途中遇到的一些問題&lt;/p&gt;</description>
     </item>
