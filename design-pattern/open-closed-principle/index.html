@@ -98,7 +98,7 @@ if (!doNotTrack) {
 <meta name="twitter:title" content="開閉原則 | Open/Closed Principle"/>
 <meta name="twitter:description" content="擴充系統時，應該由新增程式碼代替修改程式碼。如同電鑽，可以換各種不同的鑽頭，而電鑽本身並不需要被改造，就符合開閉原則。"/>
 <meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.0c037ee5e40837985628b373e9760ef0820aaf44cb90ccc6dc34c45603970f2c.css" integrity="sha256-DAN&#43;5eQIN5hWKLNz6XYO8IIKr0TLkMzG3DTEVgOXDyw=">
+<link rel="stylesheet" href="/ianlife/css/bundle.min.c817d986aee3676aae2cf3b6d276a550a30b65eadb6c86d2de9d9991d5b4117c.css" integrity="sha256-yBfZhq7jZ2quLPO20nalUKMLZerbbIbS3p2ZkdW0EXw=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
@@ -170,7 +170,7 @@ if (!doNotTrack) {
       
 
       <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
-        <span id="searchGlyph" class="glyphicon glyphicon-search"></span></a>
+        <span id="searchGlyph" class="glyphicon glyphicon-search"><i class="fas fa-search"></i></span></a>
     </menu>
     
 
@@ -188,8 +188,7 @@ if (!doNotTrack) {
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Search blog.qikqiak.com</h4>
+        <h4 class="modal-title">文章搜尋</h4><button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
         <div class="aa-input-container" id="aa-input-container">
@@ -207,7 +206,7 @@ if (!doNotTrack) {
   var index = client.initIndex("blog");
   autocomplete('#aa-search-input',
     { hint: false }, {
-    source: autocomplete.sources.hits(index, { hitsPerPage: 8 }),
+    source: autocomplete.sources.hits(index, { hitsPerPage: 20 }),
     displayKey: 'name',
     templates: {
       suggestion: function (suggestion) {
@@ -222,9 +221,7 @@ if (!doNotTrack) {
 </script>
 
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
-      </div>
+      
     </div>
   </div>
 </div>
