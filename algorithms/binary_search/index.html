@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+  <meta content="演算法, algorithm, Binary search" name="keywords">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  
+  
+  
+  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
+  <script src="/ianlife/js/bootstrap.js"></script>
+  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
+  
+  
+  
+  <script src="../js/jquery.magnific-popup.js"></script>
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="/ianlife/js/toc.js"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+  <script>
+   window.onload = function () {
+    let plantumlPrefix = "language-plantuml";
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
+      let image = document.createElement("IMG");
+      image.loading = 'lazy'; 
+      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
+      code.parentNode.insertBefore(image, code);
+      code.style.display = 'none';
+    });
+  };
+  </script>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta charset="utf-8">
+<title>二分搜尋演算法 (Binary search algorithm) - 終極密碼 - Ian Tsai </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="二分搜尋演算法 (Binary search algorithm) - 終極密碼">
+<meta itemprop="description" content="圖片來源
+">
+<meta itemprop="datePublished" content="2021-03-07T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-03-07T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="336">
+<meta itemprop="image" content="https://i.imgur.com/RVPOINs.png">
+
+
+
+<meta itemprop="keywords" content="algorithm,演算法," /><meta property="og:title" content="二分搜尋演算法 (Binary search algorithm) - 終極密碼" />
+<meta property="og:description" content="圖片來源
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/algorithms/binary_search/" />
+<meta property="og:image" content="https://i.imgur.com/RVPOINs.png" />
+<meta property="article:published_time" content="2021-03-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-07T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://i.imgur.com/RVPOINs.png"/>
+
+<meta name="twitter:title" content="二分搜尋演算法 (Binary search algorithm) - 終極密碼"/>
+<meta name="twitter:description" content="圖片來源
+"/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/ianlife/css/bundle.min.0c037ee5e40837985628b373e9760ef0820aaf44cb90ccc6dc34c45603970f2c.css" integrity="sha256-DAN&#43;5eQIN5hWKLNz6XYO8IIKr0TLkMzG3DTEVgOXDyw=">
+        <link rel="stylesheet" href="/ianlife/css/add-on.css">
+</head>
+
+  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
+  
+  
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ianlife/">
+        
+          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/photograph/" class="link"><i class='far fa-images'></i> Photograph</a>
+          
+        
+      
+      
+      
+
+    </menu>
+    
+
+    
+    
+    <a href="#site-nav-menu" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+</header>
+
+    <div id="wrapper">
+      
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/data-structures-and-algorithms"><p>Data Structures and Algorithms</p></a>
+    
+    <h2><a href="/ianlife/algorithms/binary_search/">二分搜尋演算法 (Binary search algorithm) - 終極密碼</a></h2>
+    
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2021-03-07 00:00:00 &#43;0000 UTC">
+      March 7, 2021
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>2 minute read</p>
+    
+    <p>
+      <span id="busuanzi_container_page_pv">
+        PV: <span id="busuanzi_value_page_pv"></span>
+      </span>
+    </p>
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+  </section>
+  
+  <a href="/ianlife/algorithms/binary_search/" class="image featured">
+    
+      <img src="https://i.imgur.com/RVPOINs.png" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <p><a href="https://www.geeksforgeeks.org/binary-search/" target="_blank">圖片來源</a>
+<br></p>
+<h2 id=_終極密碼>終極密碼</h2>
+<hr>
+<p>再進入 Binary search 之前，先來玩一段小程式（可以點 <strong><a href="https://onlinegdb.com/r1FwI5mQO" target="_blank">這裏</a></strong> 試玩）：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">import</span> random
+
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">guess_the_number</span>(total_tries, start_range, end_range):
+    <span style="color:#ff79c6">if</span> start_range <span style="color:#ff79c6">&gt;</span> end_range:
+        start_range, end_range <span style="color:#ff79c6">=</span> end_range, start_range
+        
+    random_number <span style="color:#ff79c6">=</span> random<span style="color:#ff79c6">.</span>randint(start_range, end_range)
+    try_count <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+    success_message <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;答對了！！&#34;</span>
+    failure_message <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;遊戲結束！！&#34;</span>
+    miss_message <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;答錯囉！！&#34;</span>
+    
+    num_tries <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+    <span style="color:#ff79c6">while</span> num_tries <span style="color:#ff79c6">&lt;</span> total_tries:
+        attempt <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;輸入數字: &#34;</span>))
+        
+        <span style="color:#ff79c6">if</span> attempt <span style="color:#ff79c6">==</span> random_number:
+            <span style="color:#ff79c6">print</span>(success_message)
+            <span style="color:#ff79c6">return</span>
+        <span style="color:#ff79c6">print</span>(miss_message)
+        <span style="color:#ff79c6">if</span> attempt <span style="color:#ff79c6">&lt;</span> random_number:
+            <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;再高一點!&#34;</span>)
+        <span style="color:#ff79c6">else</span>:
+            <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;再低一點!&#34;</span>)
+        num_tries <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+    <span style="color:#ff79c6">print</span>(failure_message)
+    <span style="color:#ff79c6">print</span>(random_number)
+
+total_tries <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5</span>
+start_range <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
+end_range <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">100</span>
+guess_the_number(total_tries, start_range, end_range)
+</code></pre></div><p>這其實就是以前常玩的猜數字（終極密碼）的遊戲。猜一個數字看是否正確，不正確的話是比正確數字大還是小，然後繼續猜另一半，雖然帶有一點隨機性，不過概念就跟 Binary search 相似。</p>
+<p>但在再更進一步了解 Binary search 之前，先來了解一下 Linear search。</p>
+<br>
+<br>
+<h2 id=_linear-search>Linear search</h2>
+<hr>
+<p>假設有一本字典，我們要從字典裡面找到一個單字。但這本字典編輯的很爛，它並沒有按照字母順序排列，那我們該如何找到這個單字？</p>
+<p>看起來我們只能從第一頁開始逐個字的看，直到找到為止。這就是 Linear search。</p>
+<pre><code>Linear search 的時間複雜度是多少？ O(n)
+</code></pre><br>
+<br>
+<h2 id=_binary-search>Binary search</h2>
+<hr>
+<p>因為上一本字典太爛，所以現在我們去買一本字母是按照順序排列的字典。那我們該如何找到這個單字？</p>
+<p>一般來說（撇除我們知道字母在哪，從頭或是尾巴開始找），會先翻到中間，然後，我們會執行以下操作：</p>
+<ul>
+<li>將目標單詞與該頁面上的單詞進行比較。</li>
+<li>如果目標單字排在前面（按照字母順序），那麼我們將丟棄本書的右半部分。從現在開始，將只搜索左半部分。</li>
+<li>同樣，如果該單字在本頁上的單字的後面，則我們將本書的左半部分丟棄。從現在開始，將只搜索右半部分。</li>
+</ul>
+<p>如此一來，便可以確保在第一步時，就已經過濾掉一半的搜索空間，並重複以上步驟，就可以找到目標單字。這就是 <strong>Binary search</strong> 。</p>
+<p><em>注意：在這裡 <strong>Binary</strong> 的意思是<strong>具有兩個部分</strong>，且 Binary search 的資料需要經過排序</em></p>
+<p>總而言之 Binary search ：</p>
+<ul>
+<li>Binary search 是通過搜索中間值與目標值來進行比較來找到目標的位置。</li>
+<li>若中間值等於目標值，即找到位置。</li>
+<li>若目標值在中間值之前，則繼續找尋左半邊部分，反之則找尋右半部分。</li>
+<li>重複上述步驟，直到找到目標值為止。</li>
+</ul>
+<br>
+<br>
+<h2 id=_efficiency-of-binary-search>Efficiency of Binary Search</h2>
+<hr>
+<p>現在我們知道了 Binary Search 的運作原理，也知道了使用 Binary Search 的資料必須是經過排序的資料。那它的時間複雜度該如何計算？
+我們再來看一個範例，現在有一個經過排序的陣列如下：</p>
+<pre><code>data:   [1, 2, 4, 5, 6, 7, 8, 13, 14, 15, 16, 18]
+index:   1  2  3  4  5  6  7  8   9   10  11  12
+</code></pre><p>如果我現在要找<code>16</code>在 array 中的哪個位置，就開始從中間搜尋:</p>
+<pre><code>data:   [1, 2, 4, 5, 6, 7, 8, 13, 14, 15, 16, 18]
+index:   1  2  3  4  5  6  7  8   9   10  11  12
+                        ＾
+                        mid
+</code></pre><p>比對發現<code>7&lt;16</code>，所以要繼續搜索 array 的右半邊。</p>
+<pre><code>data:   [8, 13, 14, 15, 16, 18]
+index:   1  2   3   4   5   6 
+                ＾
+                mid
+</code></pre><p>再比對發現<code>14&lt;16</code>，所以要繼續搜索 array 的右半邊。</p>
+<pre><code>data:   [15, 16, 18]
+index:   1   2   3 
+             ＾
+             mid
+</code></pre><p>最後比對發現<code>16=16</code>，找到了目標值。</p>
+<p>經過這個範例，一共比對了三次才找到<code>16</code>，就是對半分三次，即 <strong>1/2 * 1/2 * 1/2 = (1/2)^3</strong>。</p>
+<p>全部有 12 個資料，所以是 <code>12 * (1/2)^3 = 1</code>，而現在可以做以下的運算：</p>
+<p><strong>step 0:</strong></p>
+<p>12 * (1/2)<sup>3</sup> = 1</p>
+<p><strong>step 1: 若有 n 個元素，則要對半 k 次</strong></p>
+<p>n * (1/2)<sup>k</sup> = 1</p>
+<p><strong>step 2: 上面等於下面</strong></p>
+<p>n * 1/2<sup>k</sup> = 1</p>
+<p><strong>step 3: 同乘 2<sup>k</sup></strong></p>
+<p>2<sup>k</sup> * n/2<sup>k</sup> = 2<sup>k</sup></p>
+<p><strong>step 4: 變成</strong></p>
+<p>n = 2k</p>
+<p>所以以 2 為底 n 的<a href="https://zh.wikipedia.org/wiki/%E5%AF%B9%E6%95%B0" target="_blank">對數</a>是 log<sub>2</sub>(n) = k， 所以 k 就是 log<sub>2</sub>(n)，也就是在最糟情況下，要從 n 個元素中搜尋到某一個元素，則要折半比對的次數為 k 次，就是 log<sub>2</sub>(n) 次。</p>
+<pre><code>Binary search 的時間複雜度是多少？ O(log n)
+</code></pre><br>
+<br>
+<h2 id=_練習程式碼>練習程式碼</h2>
+<hr>
+<p>可以到 clone <a href="https://github.com/ianjustin39/Data-Structures-and-Algorithms/tree/master/Algorithms/Binary%20Search" target="_blank">github</a> 的程式碼練習（01, 02），或是把程式碼複製到 <a href="https://www.onlinegdb.com/online_python_compiler#" target="_blank">online_python_compiler</a> 練習也可以。</p>
+<h2 id=_resource>Resource</h2>
+<hr>
+<ul>
+<li><a href="https://matthung0807.blogspot.com/2018/04/binary-search-ologn.html" target="_blank">為什麼Binary Search 二元搜索法的時間複雜度是O(log(n))</a></li>
+<li><a href="https://pjchender.blogspot.com/2017/09/big-o-notation-time-complexity.html" target="_blank">[演算法] Big O Notation &amp; Time Complexity</a></li>
+<li>Udacity Data Structures and Algorithms Class</li>
+</ul>
+  </div>
+  <br>
+  <br>
+  <div class="pagination">
+  
+    <a href="/ianlife/read/40-years-old/" class="button">
+      <div class="previous">
+        <div>為了遇見40歲更好的自己</div>
+      </div>
+    </a>
+  
+  
+    <a href="/ianlife/algorithms/tries/" class="button">
+      <div class="next">
+        <div>字典樹 - Trie</div>
+      </div>
+    </a>
+  
+</div>
+
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/data-structures-and-algorithms">Data Structures and Algorithms</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/algorithm">algorithm</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E6%BC%94%E7%AE%97%E6%B3%95">演算法</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+
+        <div class="disqus markdown">
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+      </main>
+      
+      <div id="page-sidebar">
+        
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div>
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e7%b5%82%e6%a5%b5%e5%af%86%e7%a2%bc">
+												 終極密碼
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_linear-search">
+												 Linear search
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_binary-search">
+												 Binary search
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_efficiency-of-binary-search">
+												 Efficiency of Binary Search
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e7%b7%b4%e7%bf%92%e7%a8%8b%e5%bc%8f%e7%a2%bc">
+												 練習程式碼
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_resource">
+												 Resource
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+        <script src="/ianlife/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script src="/ianlife/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+      </div>
+    </div>
+    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+  </body>
+</html>
