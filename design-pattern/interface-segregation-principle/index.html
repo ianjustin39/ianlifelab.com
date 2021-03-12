@@ -2,10 +2,11 @@
 <html lang="zh">
   <head>
   <meta content="Design Pattern, Design Principle, Interface Segregation Principle, ISP, 介面隔離原則" name="keywords">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   <link rel="stylesheet" href="../css/magnific-popup.css">
   <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   
   
   
@@ -15,8 +16,8 @@
   
   
   
+  <script src="../js/jquery.magnific-popup.js"></script>
   
-  <script src="/ianlife/js/jquery.magnific-popup.js"></script>
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
   <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
@@ -77,7 +78,7 @@ if (!doNotTrack) {
 <meta itemprop="description" content="介面隔離原則目的在於客戶不應該被強迫依賴他們不使用的方法。如同一個公司有一般工程師及資深工程師。資深工程師可能還要囊括一些報告的工作，但一般工程師不用，這時工程師的技能分類就很重要了。">
 <meta itemprop="datePublished" content="2020-09-13T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-09-13T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="475">
+<meta itemprop="wordCount" content="479">
 <meta itemprop="image" content="https://i.imgur.com/nMWVtGw.png">
 
 
@@ -125,7 +126,28 @@ if (!doNotTrack) {
         
           
           
-            <a href="/ianlife/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+            <a href="/ianlife/blog/" class="link"><i class='fas fa-pencil-alt'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/life" class="link"><i class='fa fa-plane'></i> Life</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/reading" class="link"><i class='fa fa-book'></i> Reading</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/tech" class="link"><i class='fa fa-laptop'></i> Tech</a>
           
         
       
@@ -151,7 +173,7 @@ if (!doNotTrack) {
 
     
     
-    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+    <a href="#site-nav-menu" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
   </nav>
   
   
@@ -266,12 +288,12 @@ if (!doNotTrack) {
             <h5><a>設計模式 - 行為型模型篇 | Behavioural Patterns</a></h5>
             <ul>
                 <li><a href="../chain-of-responsibility">責任鏈模式 | Chain of Responsibility Pattern</a></li>
-                <li><a href="">命令模式 | Command Pattern</a></li>
-                <li><a href="">迭代器模式 | Iterator Pattern</a></li>
-                <li><a href="">中介者模式 | Mediator Pattern</a></li>
-                <li><a href="">狀態模式 | State Pattern</a></li>
-                <li><a href="">Memento Pattern</a></li>
-                <li><a href="">Observer Pattern</a></li>
+                <li><a href="../command-pattern">命令模式 | Command Pattern</a></li>
+                <li><a href="../iterator-pattern">迭代器模式 | Iterator Pattern</a></li>
+                <li><a href="../mediator-pattern">中介者模式 | Mediator Pattern</a></li>
+                <li><a href="../state-pattern">狀態模式 | State Pattern</a></li>
+                <li><a href="../memento-pattern">備忘錄模式 | Memento Pattern</a></li>
+                <li><a href="../observer-pattern">觀察者模式 | Observer Pattern</a></li>
                 <li><a href="">Strategy Pattern</a></li>
                 <li><a href="">Template Pattern</a></li>
                 <li><a href="">Visitor Pattern</a></li>
@@ -802,8 +824,17 @@ ISP則是注重在客戶端層面，認為只需要呈現客戶端所需要的�
 		</div>
 		
 	
-        <script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.75db2f45ac90858cf062e97bf111d0898f38a1aa55929a1baa5ba16e75aa292e.js" integrity="sha256-ddsvRayQhYzwYul78RHQiY84oapVkpobqluhbnWqKS4="></script>
+        <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    docsearch({
+    apiKey: "2e16477f048bc4528b166dfd1eb4804d",
+    indexName: "blog",
+    appId: "WTW32P5SNJ",
+    inputSelector: '.docsearch-input',
+    debug: false,
+    });
+</script><script src="/ianlife/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
     <script src="/ianlife/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

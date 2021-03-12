@@ -6,17 +6,35 @@
     <description>Recent content in Categories on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 29 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>THEC</title>
-      <link>https://ianjustin39.github.io/ianlife/categories/thec/</link>
-      <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
+      <title>LIFE</title>
+      <link>https://ianjustin39.github.io/ianlife/categories/life/</link>
+      <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/categories/thec/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/categories/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TECH</title>
+      <link>https://ianjustin39.github.io/ianlife/categories/tech/</link>
+      <pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/categories/tech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reading</title>
+      <link>https://ianjustin39.github.io/ianlife/categories/reading/</link>
+      <pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/categories/reading/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,1014 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+  <meta content="Design Pattern, Behavioural Pattern, Mediator Pattern, 中介者模式" name="keywords">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  
+  
+  
+  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
+  <script src="/ianlife/js/bootstrap.js"></script>
+  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
+  
+  
+  
+  <script src="../js/jquery.magnific-popup.js"></script>
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="/ianlife/js/toc.js"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+  <script>
+   window.onload = function () {
+    let plantumlPrefix = "language-plantuml";
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
+      let image = document.createElement("IMG");
+      image.loading = 'lazy'; 
+      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
+      code.parentNode.insertBefore(image, code);
+      code.style.display = 'none';
+    });
+  };
+  </script>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta charset="utf-8">
+<title>中介者模式 | Mediator Pattern - Ian Tsai </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="中介者模式 | Mediator Pattern">
+<meta itemprop="description" content="定義一個 Mediator 物件用來封裝一組物件的互動方式。Mediator 藉由避免物件間相互直接的引用，從而降低它們之間的耦合程度，並且可以讓我們獨立地改變這些物件間的互動方式。">
+<meta itemprop="datePublished" content="2020-10-02T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-10-02T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="797">
+<meta itemprop="image" content="https://ianjustin39.github.io/ianlife/">
+
+
+
+<meta itemprop="keywords" content="Design Pattern,Behavioural Pattern," /><meta property="og:title" content="中介者模式 | Mediator Pattern" />
+<meta property="og:description" content="定義一個 Mediator 物件用來封裝一組物件的互動方式。Mediator 藉由避免物件間相互直接的引用，從而降低它們之間的耦合程度，並且可以讓我們獨立地改變這些物件間的互動方式。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/mediator-pattern/" />
+<meta property="og:image" content="https://ianjustin39.github.io/ianlife/" />
+<meta property="article:published_time" content="2020-10-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-10-02T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ianjustin39.github.io/ianlife/"/>
+
+<meta name="twitter:title" content="中介者模式 | Mediator Pattern"/>
+<meta name="twitter:description" content="定義一個 Mediator 物件用來封裝一組物件的互動方式。Mediator 藉由避免物件間相互直接的引用，從而降低它們之間的耦合程度，並且可以讓我們獨立地改變這些物件間的互動方式。"/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/ianlife/css/bundle.min.0c037ee5e40837985628b373e9760ef0820aaf44cb90ccc6dc34c45603970f2c.css" integrity="sha256-DAN&#43;5eQIN5hWKLNz6XYO8IIKr0TLkMzG3DTEVgOXDyw=">
+        <link rel="stylesheet" href="/ianlife/css/add-on.css">
+</head>
+
+  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
+  
+  
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ianlife/">
+        
+          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/blog/" class="link"><i class='fas fa-pencil-alt'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/life" class="link"><i class='fa fa-plane'></i> Life</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/reading" class="link"><i class='fa fa-book'></i> Reading</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/tech" class="link"><i class='fa fa-laptop'></i> Tech</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/photograph/" class="link"><i class='far fa-images'></i> Photograph</a>
+          
+        
+      
+      
+      
+
+    </menu>
+    
+
+    
+    
+    <a href="#site-nav-menu" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+</header>
+
+    <div id="wrapper">
+      
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    
+    <h2><a href="/ianlife/design-pattern/mediator-pattern/">中介者模式 | Mediator Pattern</a></h2>
+    
+    
+    <p>定義一個 Mediator 物件用來封裝一組物件的互動方式。Mediator 藉由避免物件間相互直接的引用，從而降低它們之間的耦合程度，並且可以讓我們獨立地改變這些物件間的互動方式。</p>
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2020-10-02 00:00:00 &#43;0000 UTC">
+      October 2, 2020
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>4 minute read</p>
+    
+    <p>
+      <span id="busuanzi_container_page_pv">
+        PV: <span id="busuanzi_value_page_pv"></span>
+      </span>
+    </p>
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+  </section>
+  
+  <a href="/ianlife/design-pattern/mediator-pattern/" class="image featured">
+    
+      <img src="/ianlife/" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <p><strong><a href="https://ithelp.ithome.com.tw/articles/10247722" target="_blank">本系列文章同步分享於IT邦幫忙第12屆鐵人賽</a></strong></p>
+</br>
+<div>
+    <div>
+        <h3 id=_Design-Pattern-Post-List>Design Pattern 系列文章導讀</h3>
+    </div>
+    <hr>
+    <div>
+        <span>
+            Design Pattern可以說是開發上大家都會遇到的一個課題，
+            這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns & Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。
+            預計目標主題如下，若有哪部分不熟的章節可以直接點進去看
+
+            <br>
+
+            註：可以利用<a href="https://www.jdoodle.com/online-java-compiler/" target="_blank">Online Java Compiler IDE</a>
+            
+        </span>
+    </div>
+</br>
+    <ol>
+        <li>
+            <h5><a>設計模式 - 入門篇</a></h5>
+            <ul>
+                <li><a href="../what_is_design_pattern">什麼是Design Pattern?</a></li>
+                <li><a href="../design-patterns-and-principle">Design Pattern的類型與原則</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 原則篇 | Design Principles</a></h5>
+            <ul>
+                <li><a href="../single-responsibility-principle">單一職責原則 | Single Responsibility Principle</a></li>
+                <li><a href="../open-closed-principle">開閉原則 | Open/Closed Principle</a></li>
+                <li><a href="../liskov-substitution-principle">里氏替換原則 | Liskov Substitution Principle</a></li>
+                <li><a href="../interface-segregation-principle">介面隔離原則 | Interface Segregation Principle</a></li>
+                <li><a href="../dependence-inversion-principle">依賴反轉原則 | Dependency Inversion Principle</a></li>
+                <li><a href="../composite-aggregate-reuse-principle">合成/聚合複用原則 | Composite/Aggregate Reuse Principle</a></li>
+                <li><a href="../law-of-demeter">迪米特法則 | Law of Demeter</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 創建型模型篇 | Creational Patterns</a></h5>
+            <ul>
+                <li><a href="../singleton-pattern">單例模式 | Singleton Pattern</a></li>
+                <li><a href="../factory-pattern">工廠模式 | Factory Pattern</a></li>
+                <li><a href="../abstract-factory-pattern">抽象工廠模式 | Abstract Factory Pattern</a></li>
+                <li><a href="../builder-pattern">生成器模式 | Builder Pattern</a></li>
+                <li><a href="../prototype-pattern">原型模式 | Prototype Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 結構型模型篇 | Structural Patterns</a></h5>
+            <ul>
+                <li><a href="../adapter-pattern">適配器模式 | Adapter Pattern</a></li>
+                <li><a href="../bridge-pattern">橋接模式 | Bridge Pattern</a></li>
+                <li><a href="../composite-pattern">组合模式 | Composite Pattern</a></li>
+                <li><a href="../decorator-pattern">裝飾者模式 | Decorator Pattern</a></li>
+                <li><a href="../facede-pattern">外觀模式 | Facade Pattern</a></li>
+                <li><a href="../flyweight-pattern">享元模式 | Flyweight Pattern</a></li>
+                <li><a href="../proxy-pattern">代理模式 | Proxy Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 行為型模型篇 | Behavioural Patterns</a></h5>
+            <ul>
+                <li><a href="../chain-of-responsibility">責任鏈模式 | Chain of Responsibility Pattern</a></li>
+                <li><a href="../command-pattern">命令模式 | Command Pattern</a></li>
+                <li><a href="../iterator-pattern">迭代器模式 | Iterator Pattern</a></li>
+                <li><a href="../mediator-pattern">中介者模式 | Mediator Pattern</a></li>
+                <li><a href="../state-pattern">狀態模式 | State Pattern</a></li>
+                <li><a href="../memento-pattern">備忘錄模式 | Memento Pattern</a></li>
+                <li><a href="../observer-pattern">觀察者模式 | Observer Pattern</a></li>
+                <li><a href="">Strategy Pattern</a></li>
+                <li><a href="">Template Pattern</a></li>
+                <li><a href="">Visitor Pattern</a></li>
+                <li><a href="">Interpreter Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 番外篇</a></h5>
+            <ul>
+                <li><a href="">Anti-Patterns</a></li>
+                <li><a href="">Code Smells</a></li>
+                <li><a href="">Design Pattern VS 演算法</a></li>
+            </ul>
+        </li>
+    </ol>
+</div>
+
+<br>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_定義>定義</h3>
+</li>
+</ul>
+<hr>
+<p><code>定義一個 Mediator 物件用來封裝一組物件的互動方式。Mediator 藉由避免物件間相互直接的引用，從而降低它們之間的耦合程度，並且可以讓我們獨立地改變這些物件間的互動方式。</code></p>
+<p>在生活上有許多事情會有複雜的關係，例如一間軟體公司產品，需要開發團隊、設計團隊、行銷團隊、客服團隊等等才能有一個較完善的產品團隊。而開發跟設計可能需要協調產品頁面，行銷也要跟開發討論產品功能如何符合市場，客服也會跟設計反應哪些流程需要改善。如此一來團隊之間的關係就會非常的複雜，如下圖：</p>
+<p><img src="https://dotblogsfile.blob.core.windows.net/user/bda605/695f4029-e1bd-4cd6-85c8-ca7d03d6139f/1597983144.png" alt="網狀結構">
+網狀結構
+<br>
+<br></p>
+<p>每個團隊自己去跟不同團隊有關係，我們稱這結構叫網狀結構。但很明顯這樣的一個結夠並不是很理想，所以產品需要一個產品經理，也就是中介者。由產品經理來處理所有團隊的，結構就會變成下圖：</p>
+<br>
+<br>
+<p><img src="https://dotblogsfile.blob.core.windows.net/user/bda605/695f4029-e1bd-4cd6-85c8-ca7d03d6139f/1597983443.png" alt="星狀結構">
+星狀結構</p>
+<br>
+<p>這種結構稱作星狀結構，現在每個團隊都經由產品經理去跟其他團隊溝通，團隊間的相依性就降低了許多。</p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_mediator-pattern-成員>Mediator Pattern 成員</h3>
+</li>
+</ul>
+<hr>
+<table>
+<thead>
+<tr>
+<th align="left">成員</th>
+<th align="left">功用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Mediator</td>
+<td align="left">抽象中介者。主要為中介者接口，提供同事物件方法。</td>
+</tr>
+<tr>
+<td align="left">ConcreteMediator</td>
+<td align="left">實體中介者。實作抽象中介者，定義一個集合來管理同事物件，處理個同事間的關係，所以她依賴於同事。</td>
+</tr>
+<tr>
+<td align="left">Colleague</td>
+<td align="left">抽象同事類。定義同事類別的接口，保存中介者物件，提供同事物件抽象方法。</td>
+</tr>
+<tr>
+<td align="left">ConcreteColleague</td>
+<td align="left">實體同事類。實作抽象同事，當需要與其他同事物件工作時，需要由中介者物件負責後續的接洽。</td>
+</tr>
+</tbody>
+</table>
+<br>
+<img src='https://g.gravizo.com/svg?
+@startuml;
+skinparam linetype ortho;
+Mediator -left-o Colleague;
+ConcreteMediator -up-|> Mediator;
+Colleague --o ConcreteMediator;
+ConcreteColleague1 -up-|> Colleague;
+ConcreteColleague2 -up-|> Colleague;
+@enduml
+'>
+<br>
+<br>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_mediator-pattern-實作>Mediator Pattern 實作</h3>
+</li>
+</ul>
+<hr>
+<p>剛剛有提到，一個產品需要工程、設計、客服、行銷團隊，而團隊之間的溝通則交由產品經理去做。所以我們首先要先定義抽象中介者給產品經理實作。</p>
+<hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#ff79c6">import</span> java.util.*<span style="color:#ff79c6">;</span>
+
+<span style="color:#8be9fd;font-style:italic">enum</span> Type <span style="color:#ff79c6">{</span> <span style="color:#6272a4">// 建立一個列舉方便等等程式使用
+</span><span style="color:#6272a4"></span>    ENGINEERING<span style="color:#ff79c6">,</span> DESIGN<span style="color:#ff79c6">,</span> SERVICE<span style="color:#ff79c6">,</span> MARKETING
+<span style="color:#ff79c6">}</span>
+
+<span style="color:#6272a4">//抽象中介者
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Mediator</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">register</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">,</span> Colleague colleague<span style="color:#ff79c6">);</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">relay</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">,</span> String msg<span style="color:#ff79c6">);</span> <span style="color:#6272a4">//轉發
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">}</span>
+</code></pre></div><p>再來產品經理需要實作抽象中介者。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">//實體中介者
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ProductManager</span> <span style="color:#8be9fd;font-style:italic">extends</span> Mediator <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> Map<span style="color:#ff79c6">&lt;</span>Type<span style="color:#ff79c6">,</span> Colleague<span style="color:#ff79c6">&gt;</span> colleagues <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> HashMap<span style="color:#ff79c6">&lt;</span>Type<span style="color:#ff79c6">,</span> Colleague<span style="color:#ff79c6">&gt;();</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">register</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">,</span> Colleague colleague<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        colleague<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setMedium</span><span style="color:#ff79c6">(</span><span style="color:#ff79c6">this</span><span style="color:#ff79c6">);</span>
+        colleagues<span style="color:#ff79c6">.</span><span style="color:#50fa7b">put</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">,</span> colleague<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">relay</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">,</span> String msg<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        Colleague toCl <span style="color:#ff79c6">=</span> colleagues<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">);</span>
+        
+        toCl<span style="color:#ff79c6">.</span><span style="color:#50fa7b">receive</span><span style="color:#ff79c6">(</span>msg<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>再來定義個團隊的抽象類別，有設定中介者的方法以及發送接收的抽象方法。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">//抽象同事類
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Colleague</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">protected</span> Mediator mediator<span style="color:#ff79c6">;</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setMedium</span><span style="color:#ff79c6">(</span>Mediator mediator<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">mediator</span> <span style="color:#ff79c6">=</span> mediator<span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">}</span>   
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">receive</span><span style="color:#ff79c6">(</span>String msg<span style="color:#ff79c6">);</span>   
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">send</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">,</span> String msg<span style="color:#ff79c6">);</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>接著再依照不同的團隊，實作不同的邏輯在繼承的方法內。而在send最後會由中介者去轉發這個訊息到對應的同事類別內。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">//實體同事類
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">EngineeringTeam</span> <span style="color:#8be9fd;font-style:italic">extends</span> Colleague <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">receive</span><span style="color:#ff79c6">(</span>String msg<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;工程團隊收到請求: &#34;</span> <span style="color:#ff79c6">+</span> msg <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;。&#34;</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>   
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">send</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">,</span> String msg<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;工程團隊發出請求: &#34;</span> <span style="color:#ff79c6">+</span> msg <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;。&#34;</span><span style="color:#ff79c6">);</span>
+        mediator<span style="color:#ff79c6">.</span><span style="color:#50fa7b">relay</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">,</span> msg<span style="color:#ff79c6">);</span> <span style="color:#6272a4">//請中介者轉發
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#6272a4">//實體同事類
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">DesignTeam</span> <span style="color:#8be9fd;font-style:italic">extends</span> Colleague <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">receive</span><span style="color:#ff79c6">(</span>String msg<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;設計團隊收到請求: &#34;</span> <span style="color:#ff79c6">+</span> msg <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;。&#34;</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>   
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">send</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">,</span> String msg<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;設計團隊發出請求: &#34;</span> <span style="color:#ff79c6">+</span> msg <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;。&#34;</span><span style="color:#ff79c6">);</span>
+        mediator<span style="color:#ff79c6">.</span><span style="color:#50fa7b">relay</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">,</span> msg<span style="color:#ff79c6">);</span> <span style="color:#6272a4">//請中介者轉發
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#6272a4">//實體同事類
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MarketingTeam</span> <span style="color:#8be9fd;font-style:italic">extends</span> Colleague <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">receive</span><span style="color:#ff79c6">(</span>String msg<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;行銷團隊收到請求: &#34;</span> <span style="color:#ff79c6">+</span> msg <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;。&#34;</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>   
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">send</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">,</span> String msg<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;行銷團隊發出請求: &#34;</span> <span style="color:#ff79c6">+</span> msg <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;。&#34;</span><span style="color:#ff79c6">);</span>
+        mediator<span style="color:#ff79c6">.</span><span style="color:#50fa7b">relay</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">,</span> msg<span style="color:#ff79c6">);</span> <span style="color:#6272a4">//請中介者轉發
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#6272a4">//實體同事類
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">CustomerService</span> <span style="color:#8be9fd;font-style:italic">extends</span> Colleague <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">receive</span><span style="color:#ff79c6">(</span>String msg<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;客服團隊收到請求: &#34;</span> <span style="color:#ff79c6">+</span> msg <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;。&#34;</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>   
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">send</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">,</span> String msg<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;客服團隊發出請求: &#34;</span> <span style="color:#ff79c6">+</span> msg <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;。&#34;</span><span style="color:#ff79c6">);</span>
+        mediator<span style="color:#ff79c6">.</span><span style="color:#50fa7b">relay</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">,</span> msg<span style="color:#ff79c6">);</span> <span style="color:#6272a4">//請中介者轉發
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>最後在Client端，先將各種團隊的物件建立起來，並都傳到中介者pm內。然後若某一個團隊有問題，只要將問題種類及問題發送出去，對應的團隊就會收到訊息。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MediatorPattern</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">){</span>
+        ProductManager pm <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ProductManager<span style="color:#ff79c6">();</span>
+        Colleague c1<span style="color:#ff79c6">,</span> c2<span style="color:#ff79c6">,</span> c3<span style="color:#ff79c6">,</span> c4<span style="color:#ff79c6">;</span>
+        c1 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> DesignTeam<span style="color:#ff79c6">();</span>
+        c2 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> MarketingTeam<span style="color:#ff79c6">();</span>
+        c3 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> CustomerService<span style="color:#ff79c6">();</span>
+        c4 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> EngineeringTeam<span style="color:#ff79c6">();</span>
+        pm<span style="color:#ff79c6">.</span><span style="color:#50fa7b">register</span><span style="color:#ff79c6">(</span>Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">DESIGN</span><span style="color:#ff79c6">,</span> c1<span style="color:#ff79c6">);</span>
+        pm<span style="color:#ff79c6">.</span><span style="color:#50fa7b">register</span><span style="color:#ff79c6">(</span>Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">MARKETING</span><span style="color:#ff79c6">,</span> c2<span style="color:#ff79c6">);</span>
+        pm<span style="color:#ff79c6">.</span><span style="color:#50fa7b">register</span><span style="color:#ff79c6">(</span>Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">SERVICE</span><span style="color:#ff79c6">,</span> c3<span style="color:#ff79c6">);</span>
+        pm<span style="color:#ff79c6">.</span><span style="color:#50fa7b">register</span><span style="color:#ff79c6">(</span>Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">ENGINEERING</span><span style="color:#ff79c6">,</span> c4<span style="color:#ff79c6">);</span>
+        c1<span style="color:#ff79c6">.</span><span style="color:#50fa7b">send</span><span style="color:#ff79c6">(</span>Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">SERVICE</span><span style="color:#ff79c6">,</span> <span style="color:#f1fa8c">&#34;設計有問題&#34;</span><span style="color:#ff79c6">);</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;-------------&#34;</span><span style="color:#ff79c6">);</span>
+        c1<span style="color:#ff79c6">.</span><span style="color:#50fa7b">send</span><span style="color:#ff79c6">(</span>Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">ENGINEERING</span><span style="color:#ff79c6">,</span> <span style="color:#f1fa8c">&#34;軟體設計有問題&#34;</span><span style="color:#ff79c6">);</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;-------------&#34;</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p><strong>output</strong></p>
+<pre><code>設計團隊發出請求: 設計有問題。
+客服團隊收到請求: 設計有問題。
+-------------
+設計團隊發出請求: 軟體設計有問題。
+工程團隊收到請求: 軟體設計有問題。
+-------------
+</code></pre><br>
+<br>
+<ul>
+<li>
+<h3 id=_mediator-pattern-簡化>Mediator Pattern 簡化</h3>
+</li>
+</ul>
+<hr>
+<p>而在開發中我們也可以簡化中介者模式：
+1. 不定義中介者接口，將實體中介者物件創建成單例。
+2. 同事物件不持有中介者，而是在需要的時候直接取得中介者物件並使用。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#ff79c6">import</span> java.util.*<span style="color:#ff79c6">;</span>
+<span style="color:#8be9fd;font-style:italic">enum</span> Type <span style="color:#ff79c6">{</span>
+    ENGINEERING<span style="color:#ff79c6">,</span> DESIGN<span style="color:#ff79c6">,</span> SERVICE<span style="color:#ff79c6">,</span> MARKETING
+<span style="color:#ff79c6">}</span>
+<span style="color:#6272a4">// 簡單單例中介者
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SimpleProductManager</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd;font-style:italic">static</span> SimpleProductManager spm <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> SimpleProductManager<span style="color:#ff79c6">();</span>   
+    <span style="color:#8be9fd;font-style:italic">private</span> Map<span style="color:#ff79c6">&lt;</span>Type<span style="color:#ff79c6">,</span> SimpleColleague<span style="color:#ff79c6">&gt;</span> colleagues <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> HashMap<span style="color:#ff79c6">&lt;</span>Type<span style="color:#ff79c6">,</span> SimpleColleague<span style="color:#ff79c6">&gt;();</span>
+    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#50fa7b">SimpleProductManager</span><span style="color:#ff79c6">(){}</span>   
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> SimpleProductManager <span style="color:#50fa7b">getMedium</span><span style="color:#ff79c6">(){</span>    <span style="color:#6272a4">// 讓同事物件取得中介者物件
+</span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>spm<span style="color:#ff79c6">);</span>   
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">register</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">,</span> SimpleColleague colleague<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        colleagues<span style="color:#ff79c6">.</span><span style="color:#50fa7b">put</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">,</span> colleague<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">relay</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">,</span> String msg<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        SimpleColleague toCl <span style="color:#ff79c6">=</span> colleagues<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">);</span>
+        toCl<span style="color:#ff79c6">.</span><span style="color:#50fa7b">receive</span><span style="color:#ff79c6">(</span>msg<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+
+<span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">SimpleColleague</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">receive</span><span style="color:#ff79c6">(</span>String msg<span style="color:#ff79c6">);</span>   
+    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">send</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">,</span> String msg<span style="color:#ff79c6">);</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#6272a4">// 實體同事類
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SimpleEngineeringTeam</span> <span style="color:#8be9fd;font-style:italic">implements</span> SimpleColleague <span style="color:#ff79c6">{</span>
+    SimpleEngineeringTeam<span style="color:#ff79c6">(){</span>
+        SimpleProductManager spm <span style="color:#ff79c6">=</span> SimpleProductManager<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getMedium</span><span style="color:#ff79c6">();</span> <span style="color:#6272a4">// 需要使用時直接取得
+</span><span style="color:#6272a4"></span>        spm<span style="color:#ff79c6">.</span><span style="color:#50fa7b">register</span><span style="color:#ff79c6">(</span>Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">ENGINEERING</span><span style="color:#ff79c6">,</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">);</span> <span style="color:#6272a4">// 並使用
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">receive</span><span style="color:#ff79c6">(</span>String msg<span style="color:#ff79c6">){</span>    
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;工程團隊收到請求: &#34;</span> <span style="color:#ff79c6">+</span> msg <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;。&#34;</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>   
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">send</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">,</span> String msg<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        SimpleProductManager spm <span style="color:#ff79c6">=</span> SimpleProductManager<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getMedium</span><span style="color:#ff79c6">();</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;工程團隊發出請求: &#34;</span> <span style="color:#ff79c6">+</span> msg <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;。&#34;</span><span style="color:#ff79c6">);</span>
+        spm<span style="color:#ff79c6">.</span><span style="color:#50fa7b">relay</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">,</span> msg<span style="color:#ff79c6">);</span> <span style="color:#6272a4">// 中介者轉發
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#6272a4">//實體同事類
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SimpleDesignTeam</span> <span style="color:#8be9fd;font-style:italic">implements</span> SimpleColleague <span style="color:#ff79c6">{</span>
+    SimpleDesignTeam<span style="color:#ff79c6">(){</span>
+        SimpleProductManager spm <span style="color:#ff79c6">=</span> SimpleProductManager<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getMedium</span><span style="color:#ff79c6">();</span>
+        spm<span style="color:#ff79c6">.</span><span style="color:#50fa7b">register</span><span style="color:#ff79c6">(</span>Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">DESIGN</span><span style="color:#ff79c6">,</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">receive</span><span style="color:#ff79c6">(</span>String msg<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>    
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;設計團隊收到請求: &#34;</span> <span style="color:#ff79c6">+</span> msg <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;。&#34;</span><span style="color:#ff79c6">);</span>   
+    <span style="color:#ff79c6">}</span>   
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">send</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">,</span> String msg<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        SimpleProductManager spm <span style="color:#ff79c6">=</span> SimpleProductManager<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getMedium</span><span style="color:#ff79c6">();</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;設計團隊發出請求: &#34;</span> <span style="color:#ff79c6">+</span> msg <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;。&#34;</span><span style="color:#ff79c6">);</span>
+        spm<span style="color:#ff79c6">.</span><span style="color:#50fa7b">relay</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">,</span> msg<span style="color:#ff79c6">);</span> <span style="color:#6272a4">// 中介者轉發
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SimpleMediatorPattern</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        SimpleColleague c1<span style="color:#ff79c6">,</span>c2<span style="color:#ff79c6">;</span>
+        c1 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> SimpleEngineeringTeam<span style="color:#ff79c6">();</span>
+        c2 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> SimpleDesignTeam<span style="color:#ff79c6">();</span>
+        c1<span style="color:#ff79c6">.</span><span style="color:#50fa7b">send</span><span style="color:#ff79c6">(</span>Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">DESIGN</span><span style="color:#ff79c6">,</span> <span style="color:#f1fa8c">&#34;設計有問題&#34;</span><span style="color:#ff79c6">);</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;-------------&#34;</span><span style="color:#ff79c6">);</span>
+        c1<span style="color:#ff79c6">.</span><span style="color:#50fa7b">send</span><span style="color:#ff79c6">(</span>Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">DESIGN</span><span style="color:#ff79c6">,</span> <span style="color:#f1fa8c">&#34;UX設計有問題&#34;</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+
+</code></pre></div><p><strong>output</strong></p>
+<pre><code>工程團隊發出請求: 設計有問題。
+設計團隊收到請求: 設計有問題。
+-------------
+工程團隊發出請求: UX設計有問題。
+設計團隊收到請求: UX設計有問題。
+</code></pre><br>
+<br>
+<p>以上就是中介者模式以及中介者模式的簡化，藉由使用中介者模式，可以降低物件之間的耦合，也可增加物件的獨立性。</p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_小結>小結</h3>
+</li>
+</ul>
+<hr>
+<h5 id="mediator-pattern-目標">Mediator Pattern 目標</h5>
+<p><code>定義一個中介者物件來處理其餘物件的互動，藉此降低物件之間的耦合性。</code>
+<br></p>
+<h5 id="mediator-pattern-成員-1">Mediator Pattern 成員</h5>
+<pre><code>Mediator：抽象中介者。主要為中介者接口，提供同事物件方法。
+ConcreteMediator：實體中介者。實作抽象中介者，定義一個集合來管理同事物件，處理個同事間的關係，所以她依賴於同事。
+Colleague：抽象同事類。定義同事類別的接口，保存中介者物件，提供同事物件抽象方法。
+ConcreteColleague：實體同事類。實作抽象同事，當需要與其他同事物件工作時，需要由中介者物件負責後續的接洽。
+</code></pre>
+<br>
+<h5 id="mediator-pattern-優缺點">Mediator Pattern 優缺點</h5>
+<pre><code>優點
+1. 降低物件之間的耦合性，讓物件容易重複使用。
+2. 物件之間一對多的關聯性變成一對一，提高系統靈活性，也是整體容易維護及擴充。
+缺點
+1. 同事類別過多時，中介者責任很大，會使系統提升一定程度的複雜性，
+</code></pre>
+<br>
+<h5 id="iterator-pattern的使用時機">Iterator Pattern的使用時機</h5>
+<pre><code>1. 需要集合物件提供多種遍歷方法。
+2. 需要遍歷不同的集合結構而提供統一的接口時。
+</code></pre>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_範例程式碼>範例程式碼</h3>
+</li>
+</ul>
+<hr>
+<p><em><a href="https://www.jdoodle.com/a/2mIx" target="_blank">範例1：實作中介者模式</a></em></p>
+<p><em><a href="https://www.jdoodle.com/a/2mJ2" target="_blank">範例2：實作簡單單例中介者</a></em></p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_references>References</h3>
+</li>
+</ul>
+<hr>
+<ul>
+<li><a href="http://c.biancheng.net/view/1393.html" target="_blank">中介者模式（详解版）</a></li>
+<li><a href="https://xyz.cinc.biz/2013/07/mediator-pattern.html" target="_blank">設計模式：中介者模式 (Mediator Pattern)</a></li>
+<li><a href="http://corrupt003-design-pattern.blogspot.com/2017/01/mediator-pattern.html" target="_blank">中介者模式 (Mediator Pattern)</a></li>
+</ul>
+<p>圖片來源：</p>
+<ul>
+<li><a href="https://dotblogsfile.blob.core.windows.net/user/bda605/695f4029-e1bd-4cd6-85c8-ca7d03d6139f/1597983144.png" target="_blank">網狀結構</a></li>
+<li><a href="https://dotblogsfile.blob.core.windows.net/user/bda605/695f4029-e1bd-4cd6-85c8-ca7d03d6139f/1597983443.png" target="_blank">星狀結構</a></li>
+</ul>
+
+  </div>
+  <br>
+  <br>
+  <div class="pagination">
+  
+    <a href="/ianlife/design-pattern/iterator-pattern/" class="button">
+      <div class="previous">
+        <div>迭代器模式 | Iterator Pattern</div>
+      </div>
+    </a>
+  
+  
+    <a href="/ianlife/design-pattern/state-pattern/" class="button">
+      <div class="next">
+        <div>狀態模式 | State Pattern</div>
+      </div>
+    </a>
+  
+</div>
+
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern">從生活中認識Design Pattern</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-pattern">Design Pattern</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/behavioural-pattern">Behavioural Pattern</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+
+        <div class="disqus markdown">
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+      </main>
+      
+      <div id="page-sidebar">
+        
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div>
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_Design-Pattern-Post-List">
+												 Design Pattern 系列文章導讀
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%ae%9a%e7%be%a9">
+												 定義
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_mediator-pattern-%e6%88%90%e5%93%a1">
+												 Mediator Pattern 成員
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_mediator-pattern-%e5%af%a6%e4%bd%9c">
+												 Mediator Pattern 實作
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_mediator-pattern-%e7%b0%a1%e5%8c%96">
+												 Mediator Pattern 簡化
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%b0%8f%e7%b5%90">
+												 小結
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e7%af%84%e4%be%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc">
+												 範例程式碼
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_references">
+												 References
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+        <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    docsearch({
+    apiKey: "2e16477f048bc4528b166dfd1eb4804d",
+    indexName: "blog",
+    appId: "WTW32P5SNJ",
+    inputSelector: '.docsearch-input',
+    debug: false,
+    });
+</script><script src="/ianlife/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script src="/ianlife/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+      </div>
+    </div>
+    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+  </body>
+</html>

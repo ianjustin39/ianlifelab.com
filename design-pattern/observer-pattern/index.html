@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+  <meta content="Design Pattern, Behavioural Pattern, Observer Pattern, 觀察者模式" name="keywords">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  
+  
+  
+  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
+  <script src="/ianlife/js/bootstrap.js"></script>
+  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
+  
+  
+  
+  <script src="../js/jquery.magnific-popup.js"></script>
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="/ianlife/js/toc.js"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+  <script>
+   window.onload = function () {
+    let plantumlPrefix = "language-plantuml";
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
+      let image = document.createElement("IMG");
+      image.loading = 'lazy'; 
+      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
+      code.parentNode.insertBefore(image, code);
+      code.style.display = 'none';
+    });
+  };
+  </script>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta charset="utf-8">
+<title>觀察者模式 | Observer Pattern - Ian Tsai </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="觀察者模式 | Observer Pattern">
+<meta itemprop="description" content="多個物件之間存在著一對多的依賴關係，當一個物件發生改變時，所有跟他有關的物件都會被通知且更新。例如：訂閱youtuber，發布新影片就會接收到通知即觀察者模式。">
+<meta itemprop="datePublished" content="2020-10-05T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-10-05T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="455">
+<meta itemprop="image" content="https://ianjustin39.github.io/ianlife/">
+
+
+
+<meta itemprop="keywords" content="Design Pattern,Behavioural Pattern," /><meta property="og:title" content="觀察者模式 | Observer Pattern" />
+<meta property="og:description" content="多個物件之間存在著一對多的依賴關係，當一個物件發生改變時，所有跟他有關的物件都會被通知且更新。例如：訂閱youtuber，發布新影片就會接收到通知即觀察者模式。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/observer-pattern/" />
+<meta property="og:image" content="https://ianjustin39.github.io/ianlife/" />
+<meta property="article:published_time" content="2020-10-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-10-05T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ianjustin39.github.io/ianlife/"/>
+
+<meta name="twitter:title" content="觀察者模式 | Observer Pattern"/>
+<meta name="twitter:description" content="多個物件之間存在著一對多的依賴關係，當一個物件發生改變時，所有跟他有關的物件都會被通知且更新。例如：訂閱youtuber，發布新影片就會接收到通知即觀察者模式。"/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/ianlife/css/bundle.min.0c037ee5e40837985628b373e9760ef0820aaf44cb90ccc6dc34c45603970f2c.css" integrity="sha256-DAN&#43;5eQIN5hWKLNz6XYO8IIKr0TLkMzG3DTEVgOXDyw=">
+        <link rel="stylesheet" href="/ianlife/css/add-on.css">
+</head>
+
+  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
+  
+  
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ianlife/">
+        
+          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/blog/" class="link"><i class='fas fa-pencil-alt'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/life" class="link"><i class='fa fa-plane'></i> Life</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/reading" class="link"><i class='fa fa-book'></i> Reading</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/tech" class="link"><i class='fa fa-laptop'></i> Tech</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/photograph/" class="link"><i class='far fa-images'></i> Photograph</a>
+          
+        
+      
+      
+      
+
+    </menu>
+    
+
+    
+    
+    <a href="#site-nav-menu" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+</header>
+
+    <div id="wrapper">
+      
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    
+    <h2><a href="/ianlife/design-pattern/observer-pattern/">觀察者模式 | Observer Pattern</a></h2>
+    
+    
+    <p>多個物件之間存在著一對多的依賴關係，當一個物件發生改變時，所有跟他有關的物件都會被通知且更新。例如：訂閱youtuber，發布新影片就會接收到通知即觀察者模式。</p>
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2020-10-05 00:00:00 &#43;0000 UTC">
+      October 5, 2020
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>3 minute read</p>
+    
+    <p>
+      <span id="busuanzi_container_page_pv">
+        PV: <span id="busuanzi_value_page_pv"></span>
+      </span>
+    </p>
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+  </section>
+  
+  <a href="/ianlife/design-pattern/observer-pattern/" class="image featured">
+    
+      <img src="/ianlife/" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <p><strong><a href="https://ithelp.ithome.com.tw/articles/10249203" target="_blank">本系列文章同步分享於IT邦幫忙第12屆鐵人賽</a></strong></p>
+</br>
+<div>
+    <div>
+        <h3 id=_Design-Pattern-Post-List>Design Pattern 系列文章導讀</h3>
+    </div>
+    <hr>
+    <div>
+        <span>
+            Design Pattern可以說是開發上大家都會遇到的一個課題，
+            這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns & Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。
+            預計目標主題如下，若有哪部分不熟的章節可以直接點進去看
+
+            <br>
+
+            註：可以利用<a href="https://www.jdoodle.com/online-java-compiler/" target="_blank">Online Java Compiler IDE</a>
+            
+        </span>
+    </div>
+</br>
+    <ol>
+        <li>
+            <h5><a>設計模式 - 入門篇</a></h5>
+            <ul>
+                <li><a href="../what_is_design_pattern">什麼是Design Pattern?</a></li>
+                <li><a href="../design-patterns-and-principle">Design Pattern的類型與原則</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 原則篇 | Design Principles</a></h5>
+            <ul>
+                <li><a href="../single-responsibility-principle">單一職責原則 | Single Responsibility Principle</a></li>
+                <li><a href="../open-closed-principle">開閉原則 | Open/Closed Principle</a></li>
+                <li><a href="../liskov-substitution-principle">里氏替換原則 | Liskov Substitution Principle</a></li>
+                <li><a href="../interface-segregation-principle">介面隔離原則 | Interface Segregation Principle</a></li>
+                <li><a href="../dependence-inversion-principle">依賴反轉原則 | Dependency Inversion Principle</a></li>
+                <li><a href="../composite-aggregate-reuse-principle">合成/聚合複用原則 | Composite/Aggregate Reuse Principle</a></li>
+                <li><a href="../law-of-demeter">迪米特法則 | Law of Demeter</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 創建型模型篇 | Creational Patterns</a></h5>
+            <ul>
+                <li><a href="../singleton-pattern">單例模式 | Singleton Pattern</a></li>
+                <li><a href="../factory-pattern">工廠模式 | Factory Pattern</a></li>
+                <li><a href="../abstract-factory-pattern">抽象工廠模式 | Abstract Factory Pattern</a></li>
+                <li><a href="../builder-pattern">生成器模式 | Builder Pattern</a></li>
+                <li><a href="../prototype-pattern">原型模式 | Prototype Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 結構型模型篇 | Structural Patterns</a></h5>
+            <ul>
+                <li><a href="../adapter-pattern">適配器模式 | Adapter Pattern</a></li>
+                <li><a href="../bridge-pattern">橋接模式 | Bridge Pattern</a></li>
+                <li><a href="../composite-pattern">组合模式 | Composite Pattern</a></li>
+                <li><a href="../decorator-pattern">裝飾者模式 | Decorator Pattern</a></li>
+                <li><a href="../facede-pattern">外觀模式 | Facade Pattern</a></li>
+                <li><a href="../flyweight-pattern">享元模式 | Flyweight Pattern</a></li>
+                <li><a href="../proxy-pattern">代理模式 | Proxy Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 行為型模型篇 | Behavioural Patterns</a></h5>
+            <ul>
+                <li><a href="../chain-of-responsibility">責任鏈模式 | Chain of Responsibility Pattern</a></li>
+                <li><a href="../command-pattern">命令模式 | Command Pattern</a></li>
+                <li><a href="../iterator-pattern">迭代器模式 | Iterator Pattern</a></li>
+                <li><a href="../mediator-pattern">中介者模式 | Mediator Pattern</a></li>
+                <li><a href="../state-pattern">狀態模式 | State Pattern</a></li>
+                <li><a href="../memento-pattern">備忘錄模式 | Memento Pattern</a></li>
+                <li><a href="../observer-pattern">觀察者模式 | Observer Pattern</a></li>
+                <li><a href="">Strategy Pattern</a></li>
+                <li><a href="">Template Pattern</a></li>
+                <li><a href="">Visitor Pattern</a></li>
+                <li><a href="">Interpreter Pattern</a></li>
+            </ul>
+        </li>
+        <li>
+            <h5><a>設計模式 - 番外篇</a></h5>
+            <ul>
+                <li><a href="">Anti-Patterns</a></li>
+                <li><a href="">Code Smells</a></li>
+                <li><a href="">Design Pattern VS 演算法</a></li>
+            </ul>
+        </li>
+    </ol>
+</div>
+
+<br>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_定義>定義</h3>
+</li>
+</ul>
+<hr>
+<p><code>多個物件之間存在著一對多的依賴關係，當一個物件發生改變時，所有跟他有關的物件都會被通知且更新。</code></p>
+<p>現實生活中就有許多觀察者模式的案例，例如：訂閱youtuber，發布新影片就會接收到通知；加入Line官方帳號，會接收到優惠訊息&hellip;等等。</p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_observer-pattern-成員>Observer Pattern 成員</h3>
+</li>
+</ul>
+<hr>
+<table>
+<thead>
+<tr>
+<th align="left">name</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Subject</td>
+<td align="left">抽象目標，提供保存觀察者物件的集合以及增加觀察者物件的方法、刪除觀察者物件的方法以及通知所有觀察者的抽象方法。</td>
+</tr>
+<tr>
+<td align="left">ConcreteSubject</td>
+<td align="left">具體目標，實作抽象目標中的通知方法。具體目標內部發生改變時會通知所有加入的觀察者物件。</td>
+</tr>
+<tr>
+<td align="left">Observer</td>
+<td align="left">抽象觀察者，可以是抽象類別或是介面。含有更新自己的抽象方法。</td>
+</tr>
+<tr>
+<td align="left">ConcreteObserver</td>
+<td align="left">實作抽象觀察者，在目標更改狀態時接收通知並更改自身狀態。</td>
+</tr>
+</tbody>
+</table>
+<br>
+<img src='https://g.gravizo.com/svg?
+@startuml;
+skinparam linetype ortho;
+abstract Subject;
+Subject o-right- Observer;
+ConcreteSubject -up-> Subject;
+ConcreteObserver1 .up.> Observer;
+ConcreteObserver2 .up.> Observer;
+Subject : +add(Observer observer):void;
+Subject : +remove(Observer observer):void;
+Subject : +notifyObserver():void;
+ConcreteSubject : +notifyObserver():void;
+Observer : +response():void;
+ConcreteObserver1 : +response():void;
+ConcreteObserver2 : +response():void;
+@enduml
+'>
+<br>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_observer-pattern-實作>Observer Pattern 實作</h3>
+</li>
+</ul>
+<hr>
+<p>就拿現在很紅的Youtuber來做範例，Peeta葛格是一個Youtuber，我們訂閱了之後，就可以接收到他發片的通知，所以Peeta是目標，而我們是觀察者。廠商也訂閱了Peeta，他想知道Peeta發片時是不是葉配影片，所以廠商也是觀察者。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#ff79c6">import</span> java.util.*<span style="color:#ff79c6">;</span>
+
+<span style="color:#8be9fd;font-style:italic">enum</span> Type <span style="color:#ff79c6">{</span> <span style="color:#6272a4">// 建立列舉方便等等程式使用
+</span><span style="color:#6272a4"></span>    BUSINESS<span style="color:#ff79c6">,</span> VLOG
+<span style="color:#ff79c6">}</span>
+
+<span style="color:#6272a4">//抽象目標：分別有存放觀察者的集合以及增加、刪除、通知觀察者的方法
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Subject</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">protected</span> List<span style="color:#ff79c6">&lt;</span>Observer<span style="color:#ff79c6">&gt;</span> observers <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ArrayList<span style="color:#ff79c6">&lt;</span>Observer<span style="color:#ff79c6">&gt;();</span>   
+    <span style="color:#6272a4">//增加觀察者
+</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>Observer observer<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        observers<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>observer<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>    
+    <span style="color:#6272a4">//刪除觀察者
+</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>Observer observer<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        observers<span style="color:#ff79c6">.</span><span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>observer<span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>   
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">notifyObserver</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">);</span> <span style="color:#6272a4">//通知觀察者
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">}</span>
+<span style="color:#6272a4">//實體目標 Peeta葛格：實作抽象目標，通知觀察者的方法。
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">YoutuberPeeta</span> <span style="color:#8be9fd;font-style:italic">extends</span> Subject <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">notifyObserver</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        String videoType <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">;</span>
+        <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">){</span>
+            <span style="color:#ff79c6">case</span> BUSINESS<span style="color:#ff79c6">:</span>
+                videoType <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;葉配&#34;</span><span style="color:#ff79c6">;</span>
+                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+            <span style="color:#ff79c6">case</span> VLOG<span style="color:#ff79c6">:</span>
+                videoType <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;vlog&#34;</span><span style="color:#ff79c6">;</span>
+                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+        <span style="color:#ff79c6">}</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Peeta 發布新&#34;</span> <span style="color:#ff79c6">+</span> videoType <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;影片&#34;</span><span style="color:#ff79c6">);</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;--------------&#34;</span><span style="color:#ff79c6">);</span>       
+       
+        <span style="color:#ff79c6">for</span><span style="color:#ff79c6">(</span>Object obs<span style="color:#ff79c6">:</span>observers<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+            <span style="color:#ff79c6">((</span>Observer<span style="color:#ff79c6">)</span>obs<span style="color:#ff79c6">).</span><span style="color:#50fa7b">response</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">);</span>
+        <span style="color:#ff79c6">}</span>
+       
+    <span style="color:#ff79c6">}</span>          
+<span style="color:#ff79c6">}</span>
+
+<span style="color:#6272a4">//抽象觀察者：定義接收到目標時的方法。
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Observer</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">response</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">);</span> <span style="color:#6272a4">//反應
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">}</span>
+<span style="color:#6272a4">//實體觀察者 粉絲
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Fans</span> <span style="color:#8be9fd;font-style:italic">implements</span> Observer <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">response</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">){</span>
+            <span style="color:#ff79c6">case</span> BUSINESS<span style="color:#ff79c6">:</span>
+                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;紛絲看到葉配表示傷心！&#34;</span><span style="color:#ff79c6">);</span>
+                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+            <span style="color:#ff79c6">case</span> VLOG<span style="color:#ff79c6">:</span>
+                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;紛絲看到VLOG覺得有趣！&#34;</span><span style="color:#ff79c6">);</span>
+                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+        <span style="color:#ff79c6">}</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+<span style="color:#6272a4">//實體觀察者：廠商
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Vendor</span> <span style="color:#8be9fd;font-style:italic">implements</span> Observer <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">response</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+                <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">){</span>
+            <span style="color:#ff79c6">case</span> BUSINESS<span style="color:#ff79c6">:</span>
+                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;廠商看到葉配覺得開心！&#34;</span><span style="color:#ff79c6">);</span>
+                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+            <span style="color:#ff79c6">case</span> VLOG<span style="color:#ff79c6">:</span>
+                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;廠商看到VLOG表示為啥不是葉配！&#34;</span><span style="color:#ff79c6">);</span>
+                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+        <span style="color:#ff79c6">}</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+
+<span style="color:#6272a4">// Client分別建立目標及兩個觀察者，而目標在發布新影片時會同時通知兩個觀察者
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ObserverPattern</span> <span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+        Subject subject <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> YoutuberPeeta<span style="color:#ff79c6">();</span>
+        Observer obs1 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Fans<span style="color:#ff79c6">();</span>
+        Observer obs2 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Vendor<span style="color:#ff79c6">();</span>
+        subject<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>obs1<span style="color:#ff79c6">);</span>
+        subject<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>obs2<span style="color:#ff79c6">);</span>
+        subject<span style="color:#ff79c6">.</span><span style="color:#50fa7b">notifyObserver</span><span style="color:#ff79c6">(</span>Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">BUSINESS</span><span style="color:#ff79c6">);</span>
+        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">();</span>    
+        subject<span style="color:#ff79c6">.</span><span style="color:#50fa7b">notifyObserver</span><span style="color:#ff79c6">(</span>Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">VLOG</span><span style="color:#ff79c6">);</span>
+    <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p><strong>output</strong></p>
+<pre><code>Peeta 發布新葉配影片
+--------------
+紛絲看到葉配表示傷心！
+廠商看到葉配覺得開心！
+
+Peeta 發布新vlog影片
+--------------
+紛絲看到VLOG覺得有趣！
+廠商看到VLOG表示為啥不是葉配！
+</code></pre><br>
+<br>
+<ul>
+<li>
+<h3 id=_小結>小結</h3>
+</li>
+</ul>
+<hr>
+<h5 id="observer-pattern的目標">Observer Pattern的目標</h5>
+<p><code>多個物件之間存在著一對多的依賴關係，當一個物件發生改變時，所有跟他有關的物件都會被通知且更新。</code></p>
+<br>
+<h5 id="observer-pattern的成員">Observer Pattern的成員</h5>
+<pre><code>Subject：抽象目標，提供保存觀察者物件的集合以及增加觀察者物件的方法、刪除觀察者物件的方法以及通知所有觀察者的抽象方法。
+ConcreteSubject：具體目標，實作抽象目標中的通知方法。具體目標內部發生改變時會通知所有加入的觀察者物件。
+Observer：抽象觀察者，可以是抽象類別或是介面。含有更新自己的抽象方法。
+ConcreteObserver：實作抽象觀察者，在目標更改狀態時接收通知並更改自身狀態。
+</code></pre>
+<br>
+<h5 id="observer-pattern的優缺點">Observer Pattern的優缺點</h5>
+<pre><code>優點
+1. 降低目標與觀察者間的耦合關係，兩者之間為抽象耦合關係。
+2. 目標與觀察者間建立了一套觸發機制。
+缺點
+1. 目標與觀察者間的依賴並無完全切除。
+2. 當觀察者物件多時，會影響效能。
+</code></pre>
+<br>
+<h5 id="observer-pattern的使用時機">Observer Pattern的使用時機</h5>
+<pre><code>1. 物件之間存在一對多的關係，一個物件狀態改變會影響其他物件時。
+</code></pre>
+<br>
+<ul>
+<li>
+<h3 id=_範例程式碼>範例程式碼</h3>
+</li>
+</ul>
+<hr>
+<p><em><a href="https://www.jdoodle.com/a/2nIX" target="_blank">範例：Observer Pattern 實作</a></em></p>
+<br>
+<br>
+<ul>
+<li>
+<h3 id=_references>References</h3>
+</li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://notfalse.net/10/observer-pattern#i-5" target="_blank">觀察者模式 (Observer Pattern)</a></li>
+<li><a href="http://c.biancheng.net/view/1390.html" target="_blank">觀察者模式</a></li>
+</ul>
+
+  </div>
+  <br>
+  <br>
+  <div class="pagination">
+  
+    <a href="/ianlife/design-pattern/memento-pattern/" class="button">
+      <div class="previous">
+        <div>備忘錄模式 | Memento Pattern</div>
+      </div>
+    </a>
+  
+  
+    <a href="/ianlife/design-pattern/strategy-pattern/" class="button">
+      <div class="next">
+        <div>策略模式 | Strategy Pattern</div>
+      </div>
+    </a>
+  
+</div>
+
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98design-pattern">從生活中認識Design Pattern</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-pattern">Design Pattern</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/behavioural-pattern">Behavioural Pattern</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+
+        <div class="disqus markdown">
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+      </main>
+      
+      <div id="page-sidebar">
+        
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div>
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_Design-Pattern-Post-List">
+												 Design Pattern 系列文章導讀
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%ae%9a%e7%be%a9">
+												 定義
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_observer-pattern-%e6%88%90%e5%93%a1">
+												 Observer Pattern 成員
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_observer-pattern-%e5%af%a6%e4%bd%9c">
+												 Observer Pattern 實作
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%b0%8f%e7%b5%90">
+												 小結
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e7%af%84%e4%be%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc">
+												 範例程式碼
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_references">
+												 References
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+        <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+    docsearch({
+    apiKey: "2e16477f048bc4528b166dfd1eb4804d",
+    indexName: "blog",
+    appId: "WTW32P5SNJ",
+    inputSelector: '.docsearch-input',
+    debug: false,
+    });
+</script><script src="/ianlife/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script src="/ianlife/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+      </div>
+    </div>
+    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+  </body>
+</html>

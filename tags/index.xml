@@ -6,15 +6,60 @@
     <description>Recent content in Tags on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 29 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>blog</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/blog/</link>
+      <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Algorithm</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/algorithm/</link>
+      <pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Structures</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/data-structures/</link>
+      <pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/data-structures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>讀書心得</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97/</link>
+      <pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>好書推薦</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Behavioural Pattern</title>
       <link>https://ianjustin39.github.io/ianlife/tags/behavioural-pattern/</link>
-      <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://ianjustin39.github.io/ianlife/tags/behavioural-pattern/</guid>
       <description></description>
@@ -23,7 +68,7 @@
     <item>
       <title>Design Pattern</title>
       <link>https://ianjustin39.github.io/ianlife/tags/design-pattern/</link>
-      <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://ianjustin39.github.io/ianlife/tags/design-pattern/</guid>
       <description></description>
@@ -62,15 +107,6 @@
       <pubDate>Wed, 16 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://ianjustin39.github.io/ianlife/tags/design-principle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blog</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/blog/</link>
-      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/tags/blog/</guid>
       <description></description>
     </item>
     
