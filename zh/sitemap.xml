@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/algolia/</loc>
+    <lastmod>2021-03-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ianjustin39.github.io/ianlife/blog/</loc>
     <lastmod>2021-03-12T00:00:00+00:00</lastmod>
   </url>
@@ -25,6 +30,11 @@
                 hreflang="zh"
                 href="https://ianjustin39.github.io/ianlife/categories/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/hugo/</loc>
+    <lastmod>2021-03-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -78,7 +88,22 @@
   </url>
   
   <url>
+    <loc>https://ianjustin39.github.io/ianlife/categories/tech/</loc>
+    <lastmod>2021-03-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ianjustin39.github.io/ianlife/life/a-cup-of-coffee/</loc>
+    <lastmod>2021-03-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/hugo-and-algolia/</loc>
+    <lastmod>2021-03-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84blog/</loc>
     <lastmod>2021-03-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -99,11 +124,6 @@
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/series/it-%E4%BA%BA%E5%BF%85%E4%BF%AE-%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2021-03-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/tech/</loc>
     <lastmod>2021-03-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -338,22 +358,12 @@
   </url>
   
   <url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/hugo/</loc>
-    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ianjustin39.github.io/ianlife/tags/magnific-popup/</loc>
     <lastmod>2020-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/tags/masonry/</loc>
-    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84blog/</loc>
     <lastmod>2020-05-06T00:00:00+00:00</lastmod>
   </url>
   

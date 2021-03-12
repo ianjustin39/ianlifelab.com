@@ -29,6 +29,18 @@
     </item>
     
     <item>
+      <title>在自己的 Hugo Blog 中加上 Algolia 文章搜索工具</title>
+      <link>https://ianjustin39.github.io/ianlife/hugo-and-algolia/</link>
+      <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/hugo-and-algolia/</guid>
+      <description>
+隨著文章越來越多，要找到以前寫的文章就越來越麻煩，要一直點下一頁下一頁，所以就一直想尋找站內搜尋的功能使用。之前有使用 google 的站內搜索功能，但總覺得整體不是很好看，直到最近看到 Algolia ，可將文章的資料上傳上去，再藉由串接 Algolia API 就可以完成搜索功能。
+接下來就開始建立站內搜索功能吧。
+References     </description>
+    </item>
+    
+    <item>
       <title>字典樹 - Trie</title>
       <link>https://ianjustin39.github.io/ianlife/algorithms/tries/</link>
       <pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate>

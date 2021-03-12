@@ -59,7 +59,7 @@ if (!doNotTrack) {
 
   
   <meta charset="utf-8">
-<title>鐵人賽 - Ian Tsai </title>
+<title>在自己的 Hugo Blog 中加上 Algolia 文章搜索工具 - Ian Tsai </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -75,21 +75,45 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="鐵人賽">
-<meta itemprop="description" content=""><meta property="og:title" content="鐵人賽" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD/" />
-<meta property="og:updated_time" content="2020-09-24T00:00:00+00:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="鐵人賽"/>
-<meta name="twitter:description" content=""/>
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="在自己的 Hugo Blog 中加上 Algolia 文章搜索工具">
+<meta itemprop="description" content="
+隨著文章越來越多，要找到以前寫的文章就越來越麻煩，要一直點下一頁下一頁，所以就一直想尋找站內搜尋的功能使用。之前有使用 google 的站內搜索功能，但總覺得整體不是很好看，直到最近看到 Algolia ，可將文章的資料上傳上去，再藉由串接 Algolia API 就可以完成搜索功能。
+接下來就開始建立站內搜索功能吧。
+References     ">
+<meta itemprop="datePublished" content="2021-03-12T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-03-12T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="10">
+<meta itemprop="image" content="https://i.imgur.com/gx6To7q.png">
+
+
+
+<meta itemprop="keywords" content="Blog,Hugo,Algolia," /><meta property="og:title" content="在自己的 Hugo Blog 中加上 Algolia 文章搜索工具" />
+<meta property="og:description" content="
+隨著文章越來越多，要找到以前寫的文章就越來越麻煩，要一直點下一頁下一頁，所以就一直想尋找站內搜尋的功能使用。之前有使用 google 的站內搜索功能，但總覺得整體不是很好看，直到最近看到 Algolia ，可將文章的資料上傳上去，再藉由串接 Algolia API 就可以完成搜索功能。
+接下來就開始建立站內搜索功能吧。
+References     " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/hugo-and-algolia/" />
+<meta property="og:image" content="https://i.imgur.com/gx6To7q.png" />
+<meta property="article:published_time" content="2021-03-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-12T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://i.imgur.com/gx6To7q.png"/>
+
+<meta name="twitter:title" content="在自己的 Hugo Blog 中加上 Algolia 文章搜索工具"/>
+<meta name="twitter:description" content="
+隨著文章越來越多，要找到以前寫的文章就越來越麻煩，要一直點下一頁下一頁，所以就一直想尋找站內搜尋的功能使用。之前有使用 google 的站內搜索功能，但總覺得整體不是很好看，直到最近看到 Algolia ，可將文章的資料上傳上去，再藉由串接 Algolia API 就可以完成搜索功能。
+接下來就開始建立站內搜索功能吧。
+References     "/>
 <meta name="twitter:site" content="@example"/>
 <link rel="stylesheet" href="/ianlife/css/bundle.min.c1dab21d49772dc014ac5cdad486b0c24b232de173fab0b453929c139d487d93.css" integrity="sha256-wdqyHUl3LcAUrFza1IawwksjLeFz&#43;rC0U5KcE51IfZM=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
+  
+  
     
 <header id="site-header">
   <nav id="site-nav">
@@ -212,242 +236,225 @@ if (!doNotTrack) {
 </div>
 
     <div id="wrapper">
-      <section id="site-sidebar">
-  <section id="site-intro" >
-    <a href="/ianlife/"><img src="https://lh3.googleusercontent.com/oBxmIY5uloDqDQftTGdRtsXCB_WpmkvZqVSYrCeVdqGfCKG0hWDrUjX-dNZb57m_FpGzj2sYSCveJUJYnYq_VyUPCAf9-rWQc8ZkNsKYv1AL5BQKJ5JfQradyyIaKrTbT-_fPWlglBQ7K1ZVL-Rqk8G7ciYxz70twPN2TJjtEHXzbcpGz9Qwc7PKqPVAvf-qBKsYEIP2w0Evt2My8zhkr_buLfGb9SMvDRSpUzkel2X5AKlGLAPFNY-C29_UolLnEq1opwlkEC9JbKo_fohKL1w5vefeoCDL7RJVxw6DqAnUU9UPvsmobA2qErmoesl_lwyD92k-PPTLco-J86v6kRJhbNxQL0B-q2tc6o3Bx4c52Hc8U9sPjYcnigAUgJvwCm9w2i8_4ozGF3xNb7aIkIg7IeOS0HaTt8Obd5PmvAHfY4zItfPZWGGLfrUIRy2FQu9KbLH0Ob_HbyQq1XZ6uAU10zUV12HGf-9Ptrw59nQthnFOprw9Q8f40CVWFMdFsBPl6AyddRBTcXyOj7yRuDMu3UQBY6BhmOwoIhF-ROej9QCcayOtwF0NdXm__8B02dRPGbYries56f35UUckaHKRyqRWjD2dS4mkLDKx3pLwjez-56lbhmGD115ZgWL6psVZ4p2iqTckO5oLs5uj6HDjICVWQk2S0lI5C0h1OByKVttccY4fxLNLVXkjBdBQ1M-grwAhQ6_GyW2CcZHCHhzl0NRTgWyzIj7JA3SrEkn-K2cCk91276A=s120-no" class="circle" width="" alt="Hugo Future Imperfect Slim" /></a>
-    <header>
-      <h1>Ian 化學系軟體工程師</h1>
-    </header>
-    <main>
-      <p>學習, 攝影, 健身, 吃吃喝喝, 記錄生活</p>
-    </main>
-  </br>
+      
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84blog"><p>Build My Blog</p></a>
     
-    <section id="mini-bio">
-      <header>
-        <h1>About</h1>
-      </header>
-      <p> If you’re afraid to fail, then you’re probably going to fail.</p>
-      <footer>
-        <a href="/ianlife/about" class="button">Learn More</a>
-      </footer>
-    </section>
+    <h3><a href="/ianlife/hugo-and-algolia/">在自己的 Hugo Blog 中加上 Algolia 文章搜索工具</a></h3>
     
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2021-03-12 00:00:00 &#43;0000 UTC">
+      March 12, 2021
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>1 minute read</p>
+    
+    <p>
+      <span id="busuanzi_container_page_pv">
+        PV: <span id="busuanzi_value_page_pv"></span>
+      </span>
+    </p>
+  </div>
+</header>
+
+  <section id="socnet-share">
     
   </section>
-</section>
-      <main id="site-main">
-        
-        
-        <article class="post">
-          <header>
-            <div class="title">
-              
-                <h2>鐵人賽</h2>
-              
-            </div>
-            
-          </header>
-          <article>
-            <ul class="tags_ul">
-              
-              
-                <li>
-                  <p style="display: inline;">2020/09/09</p>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="/ianlife/design-pattern/design-patterns-and-principle/">Design Pattern的類型與原則</a>
-                </li>
-              
-                <li>
-                  <p style="display: inline;">2020/09/08</p>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="/ianlife/design-pattern/what_is_design_pattern/">什麼是Design Pattern?</a>
-                </li>
-              
-            </ul>
-          </article>
-          
-<div class="pagination">
   
-    <a href="/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD/" class="button big previous"><i class="fas fa-angle-left"></i></a>
+  <a href="/ianlife/hugo-and-algolia/" class="image featured">
+    
+      <img src="https://i.imgur.com/gx6To7q.png" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <br>
+<br>
+<p>隨著文章越來越多，要找到以前寫的文章就越來越麻煩，要一直點下一頁下一頁，所以就一直想尋找站內搜尋的功能使用。之前有使用 google 的站內搜索功能，但總覺得整體不是很好看，直到最近看到 Algolia ，可將文章的資料上傳上去，再藉由串接 Algolia API 就可以完成搜索功能。</p>
+<p>接下來就開始建立站內搜索功能吧。</p>
+<h3 id=_references>References</h3>
+<hr>
+<ul>
+<li><a href="" target="_blank"></a></li>
+</ul>
+
+  </div>
+  <br>
+  <br>
+  <div class="pagination">
+  
+    <a href="/ianlife/algorithms/tries/" class="button">
+      <div class="previous">
+        <div>字典樹 - Trie</div>
+      </div>
+    </a>
   
   
-    <a href="#" class="disabled button big next"><i class="fas fa-angle-right"></i></a>
+    <a href="/ianlife/life/a-cup-of-coffee/" class="button">
+      <div class="next">
+        <div>咖啡的價值 - 是買咖啡還是買時間？</div>
+      </div>
+    </a>
   
 </div>
 
-        </article>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84blog">建立自己的Blog</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/blog">Blog</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/hugo">Hugo</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/algolia">Algolia</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+
+        <div class="disqus markdown">
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
       </main>
       
-      <footer id="site-footer">
-    <p class="copyright">
-      <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span></span> |
-      <span id="busuanzi_container_site_uv">UV: <span id="busuanzi_value_site_uv"></span></span>
-    </p>
-  
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <section id="mini-bio">
-    <div id="tag-cloud" class="copyright" style="padding: 5px 25px">
+      <div id="page-sidebar">
         
-            
-            
-            
-            
-            
-            
-            <a href="/ianlife/tags/algolia" style="font-size:0.5rem">algolia</a>&nbsp;&nbsp;
-        
-            
-            
-            
-            
-            
-            
-            <a href="/ianlife/tags/algorithm" style="font-size:0.7037950470905061rem">algorithm</a>&nbsp;&nbsp;
-        
-            
-            
-            
-            
-            
-            
-            <a href="/ianlife/tags/behavioural-pattern" style="font-size:1.1113851412715186rem">behavioural-pattern</a>&nbsp;&nbsp;
-        
-            
-            
-            
-            
-            
-            
-            <a href="/ianlife/tags/blog" style="font-size:0.9075900941810123rem">blog</a>&nbsp;&nbsp;
-        
-            
-            
-            
-            
-            
-            
-            <a href="/ianlife/tags/bootstrap" style="font-size:0.5rem">bootstrap</a>&nbsp;&nbsp;
-        
-            
-            
-            
-            
-            
-            
-            <a href="/ianlife/tags/creational-pattern" style="font-size:0.9731974454383393rem">creational-pattern</a>&nbsp;&nbsp;
-        
-            
-            
-            
-            
-            
-            
-            <a href="/ianlife/tags/data-structures" style="font-size:0.5rem">data-structures</a>&nbsp;&nbsp;
-        
-            
-            
-            
-            
-            
-            
-            <a href="/ianlife/tags/design-pattern" style="font-size:1.4900324656668076rem">design-pattern</a>&nbsp;&nbsp;
-        
-            
-            
-            
-            
-            
-            
-            <a href="/ianlife/tags/design-principle" style="font-size:1.1113851412715186rem">design-principle</a>&nbsp;&nbsp;
-        
-            
-            
-            
-            
-            
-            
-            <a href="/ianlife/tags/github" style="font-size:0.5rem">github</a>&nbsp;&nbsp;
-        
-            
-            
-            
-            
-            
-            
-            <a href="/ianlife/tags/hugo" style="font-size:0.9075900941810123rem">hugo</a>&nbsp;&nbsp;
-        
-            
-            
-            
-            
-            
-            
-            <a href="/ianlife/tags/magnific-popup" style="font-size:0.5rem">magnific-popup</a>&nbsp;&nbsp;
-        
-            
-            
-            
-            
-            
-            
-            <a href="/ianlife/tags/masonry" style="font-size:0.5rem">masonry</a>&nbsp;&nbsp;
-        
-            
-            
-            
-            
-            
-            
-            <a href="/ianlife/tags/structural-pattern" style="font-size:1.0721250285404937rem">structural-pattern</a>&nbsp;&nbsp;
-        
-            
-            
-            
-            
-            
-            
-            <a href="/ianlife/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6" style="font-size:0.5rem">好書推薦</a>&nbsp;&nbsp;
-        
-            
-            
-            
-            
-            
-            
-            <a href="/ianlife/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97" style="font-size:0.7037950470905061rem">讀書心得</a>&nbsp;&nbsp;
-        
-            
-            
-            
-            
-            
-            
-            <a href="/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD" style="font-size:1.333004682213307rem">鐵人賽</a>&nbsp;&nbsp;
-        
-    </div>
-  </section>
-  
-  <br>
-  <p class="copyright"><a href="https://jumperc2p.github.io/InformisTry/" target="_blank">＊ 澳洲工程師日記 - Hank Lee</a></p>
-  <p class="copyright">
-    
-      &copy; 2021
-      
-        Ian Tsai
-      
-    . <br>
-    IAN 化學系軟體工程師 Powered by <a href='https://gohugo.io/' title='0.69.2' target='_blank' rel='noopener'>Hugo</a>
-  </p>
-</footer>
-<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+	
+	
+	
+	
+		
+		
+		
+	
 
-      <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
+		
+		<div>
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_references">
+												 References
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+        <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
     <script src="/ianlife/js/add-on.js"></script>
 <script type="application/javascript">
@@ -461,6 +468,8 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
+      </div>
     </div>
+    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
   </body>
 </html>
