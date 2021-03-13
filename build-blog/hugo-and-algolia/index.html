@@ -79,7 +79,7 @@ if (!doNotTrack) {
 <meta itemprop="description" content="Algolia 是為你在APP或網站提供搜索功能的最佳方式之一，在 Hugo 中加入 Algolia，讓你更方便尋找以前的文章。">
 <meta itemprop="datePublished" content="2021-03-13T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-03-13T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="714">
+<meta itemprop="wordCount" content="729">
 <meta itemprop="image" content="https://i.imgur.com/gx6To7q.png">
 
 
@@ -379,19 +379,19 @@ ALGOLIA_ADMIN_KEY=你的Admin API Key
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>    source<span style="color:#ff79c6">:</span> autocomplete.sources.hits(index, { hitsPerPage<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">20</span> }),
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>    displayKey<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;name&#39;</span>,
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>    templates<span style="color:#ff79c6">:</span> {
-<span style="display:block;width:100%;background-color:#3d3f4a"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>        suggestion<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">function</span> (suggestion) {
-</span><span style="display:block;width:100%;background-color:#3d3f4a"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>            <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#39;&lt;span&gt;&#39;</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39;&lt;a href=&#34;&#39;</span> <span style="color:#ff79c6">+</span> suggestion.relpermalink <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39;&#34;&gt;&#39;</span> <span style="color:#ff79c6">+</span>
-</span><span style="display:block;width:100%;background-color:#3d3f4a"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>            suggestion.title <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39;&lt;/a&gt;&lt;/span&gt;&#39;</span>;
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>      }
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>        suggestion<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">function</span> (suggestion) {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>            <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#39;&lt;span&gt;&#39;</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39;&lt;a href=&#34;&#39;</span> <span style="color:#ff79c6">+</span> suggestion.relpermalink <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39;&#34;&gt;&#39;</span> <span style="color:#ff79c6">+</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>            suggestion.title <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39;&lt;/a&gt;&lt;/span&gt;&#39;</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>      }
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span>    }
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span>  });
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span>  $(<span style="color:#f1fa8c">&#39;#searchGlyph&#39;</span>).click(<span style="color:#8be9fd;font-style:italic">function</span>() {
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span>    setTimeout(<span style="color:#8be9fd;font-style:italic">function</span>(){
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span>      $(<span style="color:#f1fa8c">&#39;#aa-search-input&#39;</span>).focus();
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span>    },<span style="color:#bd93f9">300</span>);
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span>  });
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span>&lt;/<span style="color:#ff79c6">script</span>&gt;
+<span style="display:block;width:100%;background-color:#3d3f4a"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span>  $(<span style="color:#f1fa8c">&#39;#searchGlyph&#39;</span>).click(<span style="color:#8be9fd;font-style:italic">function</span>() {
+</span><span style="display:block;width:100%;background-color:#3d3f4a"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span>    setTimeout(<span style="color:#8be9fd;font-style:italic">function</span>(){
+</span><span style="display:block;width:100%;background-color:#3d3f4a"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span>      $(<span style="color:#f1fa8c">&#39;#aa-search-input&#39;</span>).focus();
+</span><span style="display:block;width:100%;background-color:#3d3f4a"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span>    },<span style="color:#bd93f9">300</span>);
+</span><span style="display:block;width:100%;background-color:#3d3f4a"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span>  });
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span>&lt;/<span style="color:#ff79c6">script</span>&gt;
 </code></pre></div><p>幾點注意事項：</p>
 <ol>
 <li>
@@ -402,6 +402,10 @@ ALGOLIA_ADMIN_KEY=你的Admin API Key
 </li>
 <li>
 <p>有些教學文會使用<code>docsearch</code>這個 function，但在這個 function 我測試過是無法使用，查了一些資料發現比較推薦使用<code>autocomplete</code>這個 function，所以大家在使用時可以注意這一點。</p>
+</li>
+<li>
+<p>為了方便點選 search icon 之後可以直接輸入查詢資料，所以要增加 26-30 行的程式碼，而因為頁面 modal 內的 input 渲染較慢，所以需要設定延遲的時間
+，才有辦法 focus 到 input 內。</p>
 </li>
 </ol>
 <br>
