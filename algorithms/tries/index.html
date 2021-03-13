@@ -210,9 +210,6 @@ if (!doNotTrack) {
     displayKey: 'name',
     templates: {
       suggestion: function (suggestion) {
-        console.log(suggestion);
-        console.log(suggestion.title);
-        console.log(suggestion.title.value);
         return '<span>' + '<a href="' + suggestion.relpermalink + '">' +
           suggestion.title + '</a></span>';
       }
