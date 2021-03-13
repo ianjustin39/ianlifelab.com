@@ -79,7 +79,7 @@ if (!doNotTrack) {
 <meta itemprop="description" content="Algolia 是為你在APP或網站提供搜索功能的最佳方式之一，在 Hugo 中加入 Algolia，讓你更方便尋找以前的文章。">
 <meta itemprop="datePublished" content="2021-03-13T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-03-13T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="702">
+<meta itemprop="wordCount" content="714">
 <meta itemprop="image" content="https://i.imgur.com/gx6To7q.png">
 
 
@@ -220,7 +220,7 @@ if (!doNotTrack) {
     setTimeout(function(){
       $('#aa-search-input').focus();
     },300);
-});
+  });
 </script>
 
       </div>
@@ -385,7 +385,13 @@ ALGOLIA_ADMIN_KEY=你的Admin API Key
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>      }
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span>    }
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span>  });
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span>&lt;/<span style="color:#ff79c6">script</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span>  $(<span style="color:#f1fa8c">&#39;#searchGlyph&#39;</span>).click(<span style="color:#8be9fd;font-style:italic">function</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span>    setTimeout(<span style="color:#8be9fd;font-style:italic">function</span>(){
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span>      $(<span style="color:#f1fa8c">&#39;#aa-search-input&#39;</span>).focus();
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span>    },<span style="color:#bd93f9">300</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span>  });
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span>&lt;/<span style="color:#ff79c6">script</span>&gt;
 </code></pre></div><p>幾點注意事項：</p>
 <ol>
 <li>
