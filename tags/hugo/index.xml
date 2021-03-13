@@ -21,7 +21,7 @@
 接下來就開始建立站內搜索功能吧。
 註冊 Algolia  第一步就是要到 Algolia 註冊帳號，登入後會要求輸入一個 index（等等要用到這個 index），然後會以這個 index 建立一個 app ，接著選擇存取的國家（我是選日本），完成之後會有這個畫面。
 然後點選左邊的 API Keys，這邊有等等設定需要使用的參數，可以先將他們記下來。
-註：Algolia 有分幾個付費等級，但現在有 15 天試用期，不過因為 blog 只需要簡單的搜索文章的功能，這裡目前是使用免費版，若要更進階的功能可以自行研究看看。
+註：Algolia 有分幾個付費等級，現在有 15 天試用期，不過因為 blog 只需要簡單的搜索文章的功能，這裡目前是使用免費版，若要更進階的功能可以自行研究看看。
 hugo 生成索引文件  1. 修改 config.toml 修改./config.toml設定好需要的參數。
 [outputs] home = [&amp;#34;HTML&amp;#34;, &amp;#34;RSS&amp;#34;, &amp;#34;Algolia&amp;#34;] [outputFormats.Algolia] baseName = &amp;#34;algolia&amp;#34; isPlainText = true mediaType = &amp;#34;application/json&amp;#34; notAlternative = true [params.algolia] appId = &amp;#34;剛剛看到的 ID&amp;#34; indexName = &amp;#34;一開始輸入的 index&amp;#34; searchOnlyKey = &amp;#34;剛剛看到的 Search Only Key&amp;#34; vars = [&amp;#34;title&amp;#34;, &amp;#34;summary&amp;#34;, &amp;#34;date&amp;#34;, &amp;#34;publishdate&amp;#34;, &amp;#34;expirydate&amp;#34;, &amp;#34;permalink&amp;#34;] params = [&amp;#34;categories&amp;#34;, &amp;#34;tags&amp;#34;, &amp;#34;series&amp;#34;]</description>
     </item>
