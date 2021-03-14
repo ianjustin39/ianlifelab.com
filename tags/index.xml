@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>電影心得</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/%E9%9B%BB%E5%BD%B1%E5%BF%83%E5%BE%97/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/%E9%9B%BB%E5%BD%B1%E5%BF%83%E5%BE%97/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Algolia</title>
