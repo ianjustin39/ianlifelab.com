@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh">
   <head>
-  <meta content="複身犯, plurality" name="keywords">
+  <meta content="演算法, Algorithm, Data Structures, Bubble Sort, 泡沫排序" name="keywords">
   <link rel="stylesheet" href="https://ianjustin39.github.io/ianlife/%20css/search.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   <link rel="stylesheet" href="../css/magnific-popup.css">
@@ -59,7 +59,7 @@ if (!doNotTrack) {
 
   
   <meta charset="utf-8">
-<title>複身犯 - 寫出你的名字，你是誰？ - Ian Tsai </title>
+<title>泡沫排序 - Bubble Sort - Ian Tsai </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -75,28 +75,28 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="複身犯 - 寫出你的名字，你是誰？">
-<meta itemprop="description" content="不管這個世界怎麼看你，你都要相信你自己。">
-<meta itemprop="datePublished" content="2021-03-14T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-14T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="24">
-<meta itemprop="image" content="https://i.imgur.com/cl6uNzE.jpg">
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="泡沫排序 - Bubble Sort">
+<meta itemprop="description" content="泡沫排序是一種穩定排序演算法，不斷重複比較兩個元素，如果要最小的開頭，若前一個元素小於現在這個元素，則兩個元素位置互換，反之亦然，直到所有元素都是由小到大排序才結束。而也因為這種『小元素經由交換慢慢浮至集合頂端』，故稱作泡沫排序">
+<meta itemprop="datePublished" content="2021-03-16T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-03-16T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="206">
+<meta itemprop="image" content="https://i.imgur.com/9uBuL8g.png">
 
 
 
-<meta itemprop="keywords" content="電影心得," /><meta property="og:title" content="複身犯 - 寫出你的名字，你是誰？" />
-<meta property="og:description" content="不管這個世界怎麼看你，你都要相信你自己。" />
+<meta itemprop="keywords" content="Algorithm,Structures," /><meta property="og:title" content="泡沫排序 - Bubble Sort" />
+<meta property="og:description" content="泡沫排序是一種穩定排序演算法，不斷重複比較兩個元素，如果要最小的開頭，若前一個元素小於現在這個元素，則兩個元素位置互換，反之亦然，直到所有元素都是由小到大排序才結束。而也因為這種『小元素經由交換慢慢浮至集合頂端』，故稱作泡沫排序" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/movie/plurality/" />
-<meta property="og:image" content="https://i.imgur.com/cl6uNzE.jpg" />
-<meta property="article:published_time" content="2021-03-14T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-03-14T00:00:00+00:00" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/algorithms/bubble-sort/" />
+<meta property="og:image" content="https://i.imgur.com/9uBuL8g.png" />
+<meta property="article:published_time" content="2021-03-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-16T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://i.imgur.com/cl6uNzE.jpg"/>
+<meta name="twitter:image" content="https://i.imgur.com/9uBuL8g.png"/>
 
-<meta name="twitter:title" content="複身犯 - 寫出你的名字，你是誰？"/>
-<meta name="twitter:description" content="不管這個世界怎麼看你，你都要相信你自己。"/>
+<meta name="twitter:title" content="泡沫排序 - Bubble Sort"/>
+<meta name="twitter:description" content="泡沫排序是一種穩定排序演算法，不斷重複比較兩個元素，如果要最小的開頭，若前一個元素小於現在這個元素，則兩個元素位置互換，反之亦然，直到所有元素都是由小到大排序才結束。而也因為這種『小元素經由交換慢慢浮至集合頂端』，故稱作泡沫排序"/>
 <meta name="twitter:site" content="@example"/>
 <link rel="stylesheet" href="/ianlife/css/bundle.min.f5126a554d60fd3507b10428111eff8575a69e653a88f2d8977e43c50708f877.css" integrity="sha256-9RJqVU1g/TUHsQQoER7/hXWmnmU6iPLYl35DxQcI&#43;Hc=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
@@ -235,17 +235,17 @@ if (!doNotTrack) {
         <article class="post">
   <header>
   <div class="title">
-    <a href="/ianlife/series/%E7%9C%8B%E9%9B%BB%E5%BD%B1%E7%9A%84%E7%9C%81%E6%80%9D"><p>電影心得</p></a>
+    <a href="/ianlife/series/it-%E4%BA%BA%E5%BF%85%E4%BF%AE-%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95"><p>Data Structures and Algorithms</p></a>
     
-    <h3><a href="/ianlife/movie/plurality/">複身犯 - 寫出你的名字，你是誰？</a></h3>
+    <h3><a href="/ianlife/algorithms/bubble-sort/">泡沫排序 - Bubble Sort</a></h3>
     
     
-    <p style="margin-top: 0px;">不管這個世界怎麼看你，你都要相信你自己。</p>
+    <p style="margin-top: 0px;">泡沫排序是一種穩定排序演算法，不斷重複比較兩個元素，如果要最小的開頭，若前一個元素小於現在這個元素，則兩個元素位置互換，反之亦然，直到所有元素都是由小到大排序才結束。而也因為這種『小元素經由交換慢慢浮至集合頂端』，故稱作泡沫排序</p>
     
   </div>
   <div class="meta">
-    <time class="published" datetime="2021-03-14 00:00:00 &#43;0000 UTC">
-      March 14, 2021
+    <time class="published" datetime="2021-03-16 00:00:00 &#43;0000 UTC">
+      March 16, 2021
     </time>
     
     <span class="author">Ian Tsai</span>
@@ -264,9 +264,9 @@ if (!doNotTrack) {
     
   </section>
   
-  <a href="/ianlife/movie/plurality/" class="image featured">
+  <a href="/ianlife/algorithms/bubble-sort/" class="image featured">
     
-      <img src="https://i.imgur.com/cl6uNzE.jpg" alt="">
+      <img src="https://i.imgur.com/9uBuL8g.png" alt="">
     
   </a>
 
@@ -274,50 +274,109 @@ if (!doNotTrack) {
   <div class="content">
     <br>
 <br>
-<p>上次看電影是2019年的事（沒看天能，有理由不當低能🤣），而上次看國片更不知何時了，對於國片的記憶還停留在『大尾鱸鰻』、『總鋪師』等等賀歲片，這次剛好朋友介紹而看這部電影，起初以為是類似於人格分裂的犯罪電影，想不到劇情比我想的還要豐富，有點刷新了我對於國片既定的印象。雖然有部分沒有解釋的很到位，但對於我來說，看電影就是放鬆心情，不要太過於糾結🤣🤣🤣。</p>
-<p>以下心得可能有點雷，還沒看過的就先跳出囉！！</p>
-<h3 id=_人格的撕扯我不是我>人格的撕扯，我不是我。</h3>
+<h3 id=_泡沫排序原理>泡沫排序原理</h3>
 <hr>
-<p>『攔截記憶碼』是我對於這類電影的一個印象，但這片一次注入五個人格到單一個體的精神裡，是給演員的一大考驗。個人覺得楊祐寧把這五個人都詮釋的不錯，畢竟一次演兩個人就已經不是一件簡單的事了，更何況是五個人。而在這五個人存在於意識裡的空間，是與現實相同的實驗室，表示就算你們逃出了現實的實驗室，在意識裡面還是被關起來的。如果某一個人格想要驅動 193 的身體，就需要找到一個紅門，這個紅門，象徵著 193 與女兒講的『怪角鹿』的故事，那隻鹿為了面對自己而穿過的紅門。</p>
-<p>張榕容飾演的科學家沈宜玲，竭盡自己的所學，為了小孩，不放棄所有可能找到他的線索，體現出一個母親，可以為自己的孩子付出一切。故事的最後，意外的反轉，193 並不是許明哲，而真的許明哲，為了奪取身體而模仿甚至策劃抹殺所有人的意識，一種『我不是我，那我是誰』的感覺。</p>
-<p>整部下來印象最深刻的一句話還是公車司機邱俊生的：我只是想看我阿嬤啊</p>
-<p><img src="https://i.imgur.com/0PN4xtt.jpg" alt="image1"></p>
+<p>泡沫排序是一種穩定排序演算法，不斷重複比較兩個元素，如果要最小的開頭，若前一個元素小於現在這個元素，則兩個元素位置互換，反之亦然，直到所有元素都是由小到大排序才結束。而也因為這種『小元素經由交換慢慢浮至集合頂端』，故稱作泡沫排序。</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Bubble_sort_animation.gif" alt="Bubble Sort"></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/3/37/Bubble_sort_animation.gif">圖片來源</a></p>
 <br>
 <br>
-<h3 id=_觀後的省思>觀後的省思</h3>
+<h3 id=_泡沫排序運作>泡沫排序運作</h3>
 <hr>
-<h4 id=_世界友善對待先天有缺陷的人並不友善>世界友善對待先天有缺陷的人並不友善</h4>
-<p>想起以前學生時代，大家對於一些行為怪異或是身心有缺陷的人了，往往都給予不友善的態度甚至會霸凌他們。大家普遍認為他們是怪人，給與異樣眼光，對於這些人來說，這個世界有的甚至父母，都不會友善的對待自己。片中許明哲以及 193（意識載體）分別用不同的方法，去對待這些人。但許明哲這種極端的行為，也許演出很多人內心卻不敢表現出的想法，而 193 則是父母對待自己子女愛的體現。不禁讓人反思，是不是因為我們而造就了這個不友善的世界？</p>
-<br>
-<h4 id=_被正義包裝的惡>被『正義』包裝的『惡』</h4>
-<p>片尾王警官說：『我們沒辦法知道怪物的腦中想什麼，或許殺了他們，反而對他們比較好。』這句話就跟許明哲對沈宜玲（張榕容）講的話一樣：『這世界對他們並不友善，所以殺了他們。對他們比較好。』。往往有些『惡意』的外層包裝了『正義』，社會大眾就會覺的是合理的事，但是否只要是『正義』就是絕對的正確呢？</p>
-<br>
-<h4 id=_不管這個世界怎麼看你你都要相信你自己>不管這個世界怎麼看你，你都要相信你自己。</h4>
-<p>193 對女兒說：『不管這個世界怎麼看你，你都要相信你自己。』</p>
-<p>現在的人大多數在意『別人怎麼看我』，但我們是想要活出『我夢想中的自己』，還是『別人眼中的自己』。適度的在意並把意見化為養分是必要的，但應該要過濾，不是照單全收。</p>
-<br>
-<br>
-<br>
-<p>最後，你們有沒有看我阿嬤啊</p>
-<p><img src="https://i.imgur.com/Uc0Fb4Lm.png" alt="RMA"></p>
+<p>若有一筆資料要從小排到大，使用泡沫排序的步驟如下：</p>
+<ol>
+<li>比較相鄰兩個元素，若第一個元素大於第二元素，則兩個位置互換。</li>
+<li>針對每個元素（第二與第三&hellip;），不斷重複上一步驟，直到最後一個元素。</li>
+<li>重複步驟 1, 2 直到資料全部由小到大排序。</li>
+</ol>
+<p>可以用<code>[8, 3, 5, 6, 1]</code>來看看：</p>
+<pre><code>[8, 3, 5, 6, 1]
+ ^  ^
+(8 &gt; 3) 兩個位子交換
 
+[3, 8, 5, 6, 1]
+    ^  ^
+(8 &gt; 5) 兩個位子交換
+
+[3, 5, 8, 6, 1]
+       ^  ^
+(8 &gt; 6) 兩個位子交換
+ 
+[3, 5, 6, 8, 1]
+          ^  ^
+(8 &gt; 1) 兩個位子交換
+
+[3, 5, 6, 1, 8]
+
+</code></pre><p>這樣比一輪，就把最大值給放到最後了。接著就是不段重複上述步驟，直到排序完成。</p>
+<br>
+<br>
+<h3 id=_泡沫排序的時間複雜度time-complexity>泡沫排序的時間複雜度（Time complexity）</h3>
+<hr>
+<p>這是我們剛剛看到的流程，這次加入一個比較次數<code>num = 0</code>開始</p>
+<pre><code>num = 1
+[8, 3, 5, 6, 1]
+ ^  ^
+(8 &gt; 3) 兩個位子交換
+
+num = 2
+[3, 8, 5, 6, 1]
+    ^  ^
+(8 &gt; 5) 兩個位子交換
+
+num = 3
+[3, 5, 8, 6, 1]
+       ^  ^
+(8 &gt; 6) 兩個位子交換
+
+num = 4
+[3, 5, 6, 8, 1]
+          ^  ^
+(8 &gt; 1) 兩個位子交換
+
+[3, 5, 6, 1, 8]
+
+</code></pre><p>排序完一次，num 變成了 4，可以發現，陣列內有幾個元素，就要比較 (n-1) 次，而要把所有元素排序完，又需要 n 次。
+所以一個完整的泡沫排序所需的時間是 n(n-1) =&gt; n<sup>2</sup>，即 O(n<sup>2</sup>)。</p>
+<br>
+<br>
+<h3 id=_泡沫排序實作>泡沫排序實作</h3>
+<hr>
+<p>現在來練習一下泡沫排序吧！</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">8</span>]
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">bubble_sort_1</span>(l):
+    data_len <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">len</span>(l)
+    <span style="color:#ff79c6">for</span> run_time <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(data_len):
+        <span style="color:#ff79c6">for</span> index <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">1</span>, data_len):
+            this_data <span style="color:#ff79c6">=</span> l[index]
+            prev_data <span style="color:#ff79c6">=</span> l[index <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>]
+            <span style="color:#ff79c6">if</span> prev_data <span style="color:#ff79c6">&gt;</span> this_data:
+                l[index] <span style="color:#ff79c6">=</span> prev_data
+                l[index <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>] <span style="color:#ff79c6">=</span> this_data
+        
+    
+bubble_sort_1(data)
+<span style="color:#ff79c6">print</span> (<span style="color:#f1fa8c">&#34;Pass&#34;</span> <span style="color:#ff79c6">if</span> (data[<span style="color:#bd93f9">0</span>] <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">1</span>) <span style="color:#ff79c6">else</span> <span style="color:#f1fa8c">&#34;Fail&#34;</span>)
+</code></pre></div><p><a href="https://onlinegdb.com/ya9Bg0OOB" target="_blank">練習程式碼</a></p>
+<br>
+<br>
+<h3 id=_resource>Resource</h3>
+<hr>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F" target="_blank">泡沫排序</a></li>
+<li><a href="https://jumperc2p.github.io/InformisTry/posts/ithome-triathlon/brute_force_bubble_sort/" target="_blank">【舌尖上的演算法】Day7 &ndash; Brute Force - Bubble Sort</a></li>
+</ul>
   </div>
   <br>
   <br>
   <div class="pagination">
   
-    <a href="/ianlife/build-blog/hugo-and-algolia/" class="button">
+    <a href="/ianlife/movie/plurality/" class="button">
       <div class="previous">
-        <div>在 Hugo Blog 中加上 Algolia 文章搜索工具</div>
+        <div>複身犯 - 寫出你的名字，你是誰？</div>
       </div>
     </a>
   
-  
-    <a href="/ianlife/algorithms/bubble-sort/" class="button">
-      <div class="next">
-        <div>泡沫排序 - Bubble Sort</div>
-      </div>
-    </a>
   
 </div>
 
@@ -331,7 +390,7 @@ if (!doNotTrack) {
         <ul>
           
             
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E7%9C%8B%E9%9B%BB%E5%BD%B1%E7%9A%84%E7%9C%81%E6%80%9D">看電影的省思</a></li>
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/it-%E4%BA%BA%E5%BF%85%E4%BF%AE-%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95">IT 人必修 - 資料結構與演算法</a></li>
           
         </ul>
       </li>
@@ -346,7 +405,10 @@ if (!doNotTrack) {
         <ul>
           
             
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E9%9B%BB%E5%BD%B1%E5%BF%83%E5%BE%97">電影心得</a></li>
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/algorithm">Algorithm</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/structures">Structures</a></li>
           
         </ul>
       </li>
@@ -441,8 +503,8 @@ if (!doNotTrack) {
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e4%ba%ba%e6%a0%bc%e7%9a%84%e6%92%95%e6%89%af%e6%88%91%e4%b8%8d%e6%98%af%e6%88%91">
-												 人格的撕扯，我不是我。
+						 					<a class="nav-link" href="#_%e6%b3%a1%e6%b2%ab%e6%8e%92%e5%ba%8f%e5%8e%9f%e7%90%86">
+												 泡沫排序原理
 											</a>
 										</li>
 						 
@@ -467,8 +529,8 @@ if (!doNotTrack) {
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e8%a7%80%e5%be%8c%e7%9a%84%e7%9c%81%e6%80%9d">
-												 觀後的省思
+						 					<a class="nav-link" href="#_%e6%b3%a1%e6%b2%ab%e6%8e%92%e5%ba%8f%e9%81%8b%e4%bd%9c">
+												 泡沫排序運作
 											</a>
 										</li>
 						 
@@ -490,19 +552,15 @@ if (!doNotTrack) {
 								
 									<ul class="nav">
 								
-									<ul class="nav">
-								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e4%b8%96%e7%95%8c%e5%8f%8b%e5%96%84%e5%b0%8d%e5%be%85%e5%85%88%e5%a4%a9%e6%9c%89%e7%bc%ba%e9%99%b7%e7%9a%84%e4%ba%ba%e4%b8%a6%e4%b8%8d%e5%8f%8b%e5%96%84">
-												 世界友善對待先天有缺陷的人並不友善
+						 					<a class="nav-link" href="#_%e6%b3%a1%e6%b2%ab%e6%8e%92%e5%ba%8f%e7%9a%84%e6%99%82%e9%96%93%e8%a4%87%e9%9b%9c%e5%ba%a6time-complexity">
+												 泡沫排序的時間複雜度（Time complexity）
 											</a>
 										</li>
 						 
 								
-								
-									</ul>
 								
 									</ul>
 								
@@ -520,19 +578,15 @@ if (!doNotTrack) {
 								
 									<ul class="nav">
 								
-									<ul class="nav">
-								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e8%a2%ab%e6%ad%a3%e7%be%a9%e5%8c%85%e8%a3%9d%e7%9a%84%e6%83%a1">
-												 被『正義』包裝的『惡』
+						 					<a class="nav-link" href="#_%e6%b3%a1%e6%b2%ab%e6%8e%92%e5%ba%8f%e5%af%a6%e4%bd%9c">
+												 泡沫排序實作
 											</a>
 										</li>
 						 
 								
-								
-									</ul>
 								
 									</ul>
 								
@@ -550,19 +604,15 @@ if (!doNotTrack) {
 								
 									<ul class="nav">
 								
-									<ul class="nav">
-								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e4%b8%8d%e7%ae%a1%e9%80%99%e5%80%8b%e4%b8%96%e7%95%8c%e6%80%8e%e9%ba%bc%e7%9c%8b%e4%bd%a0%e4%bd%a0%e9%83%bd%e8%a6%81%e7%9b%b8%e4%bf%a1%e4%bd%a0%e8%87%aa%e5%b7%b1">
-												 不管這個世界怎麼看你，你都要相信你自己。
+						 					<a class="nav-link" href="#_resource">
+												 Resource
 											</a>
 										</li>
 						 
 								
-								
-									</ul>
 								
 									</ul>
 								
@@ -581,7 +631,7 @@ if (!doNotTrack) {
 	
 
         <iframe class="LikeCoin" height="235"
-  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2fmovie%2fplurality%2f" width="100%"
+  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2falgorithms%2fbubble-sort%2f" width="100%"
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
