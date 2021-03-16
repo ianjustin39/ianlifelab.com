@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh">
   <head>
-  <meta content="演算法, Algorithm, Data Structures, Bubble Sort, 泡沫排序" name="keywords">
+  <meta content="演算法, Algorithm, Data Structures, Merge Sort, 合併排序" name="keywords">
   <link rel="stylesheet" href="https://ianjustin39.github.io/ianlife/%20css/search.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   <link rel="stylesheet" href="../css/magnific-popup.css">
@@ -59,7 +59,7 @@ if (!doNotTrack) {
 
   
   <meta charset="utf-8">
-<title>泡沫排序 - Bubble Sort - Ian Tsai </title>
+<title>合併排序 - Merge Sort - Ian Tsai </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -75,28 +75,28 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="泡沫排序 - Bubble Sort">
-<meta itemprop="description" content="泡沫排序是一種穩定排序演算法，不斷重複比較兩個元素，如果要最小的開頭，若前一個元素小於現在這個元素，則兩個元素位置互換，反之亦然，直到所有元素都是由小到大排序才結束。而也因為這種『小元素經由交換慢慢浮至集合頂端』，故稱作泡沫排序">
-<meta itemprop="datePublished" content="2021-03-15T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-15T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="210">
-<meta itemprop="image" content="https://i.imgur.com/9uBuL8g.png">
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="合併排序 - Merge Sort">
+<meta itemprop="description" content="合併排序法屬於分治法（Divide and Conquer）演算法，先把大問題拆解成小問題，解決小問題後再將小問題合併，進而解決大問題。">
+<meta itemprop="datePublished" content="2021-03-16T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-03-16T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="263">
+<meta itemprop="image" content="https://i.imgur.com/kBcbZGH.png">
 
 
 
-<meta itemprop="keywords" content="Algorithm,Structures," /><meta property="og:title" content="泡沫排序 - Bubble Sort" />
-<meta property="og:description" content="泡沫排序是一種穩定排序演算法，不斷重複比較兩個元素，如果要最小的開頭，若前一個元素小於現在這個元素，則兩個元素位置互換，反之亦然，直到所有元素都是由小到大排序才結束。而也因為這種『小元素經由交換慢慢浮至集合頂端』，故稱作泡沫排序" />
+<meta itemprop="keywords" content="Algorithm,Structures," /><meta property="og:title" content="合併排序 - Merge Sort" />
+<meta property="og:description" content="合併排序法屬於分治法（Divide and Conquer）演算法，先把大問題拆解成小問題，解決小問題後再將小問題合併，進而解決大問題。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/algorithms/bubble-sort/" />
-<meta property="og:image" content="https://i.imgur.com/9uBuL8g.png" />
-<meta property="article:published_time" content="2021-03-15T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-03-15T00:00:00+00:00" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/algorithms/merge-sort/" />
+<meta property="og:image" content="https://i.imgur.com/kBcbZGH.png" />
+<meta property="article:published_time" content="2021-03-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-16T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://i.imgur.com/9uBuL8g.png"/>
+<meta name="twitter:image" content="https://i.imgur.com/kBcbZGH.png"/>
 
-<meta name="twitter:title" content="泡沫排序 - Bubble Sort"/>
-<meta name="twitter:description" content="泡沫排序是一種穩定排序演算法，不斷重複比較兩個元素，如果要最小的開頭，若前一個元素小於現在這個元素，則兩個元素位置互換，反之亦然，直到所有元素都是由小到大排序才結束。而也因為這種『小元素經由交換慢慢浮至集合頂端』，故稱作泡沫排序"/>
+<meta name="twitter:title" content="合併排序 - Merge Sort"/>
+<meta name="twitter:description" content="合併排序法屬於分治法（Divide and Conquer）演算法，先把大問題拆解成小問題，解決小問題後再將小問題合併，進而解決大問題。"/>
 <meta name="twitter:site" content="@example"/>
 <link rel="stylesheet" href="/ianlife/css/bundle.min.f5126a554d60fd3507b10428111eff8575a69e653a88f2d8977e43c50708f877.css" integrity="sha256-9RJqVU1g/TUHsQQoER7/hXWmnmU6iPLYl35DxQcI&#43;Hc=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
@@ -237,20 +237,20 @@ if (!doNotTrack) {
   <div class="title">
     <a href="/ianlife/series/it-%E4%BA%BA%E5%BF%85%E4%BF%AE-%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95"><p>Data Structures and Algorithms</p></a>
     
-    <h3><a href="/ianlife/algorithms/bubble-sort/">泡沫排序 - Bubble Sort</a></h3>
+    <h3><a href="/ianlife/algorithms/merge-sort/">合併排序 - Merge Sort</a></h3>
     
     
-    <p style="margin-top: 0px;">泡沫排序是一種穩定排序演算法，不斷重複比較兩個元素，如果要最小的開頭，若前一個元素小於現在這個元素，則兩個元素位置互換，反之亦然，直到所有元素都是由小到大排序才結束。而也因為這種『小元素經由交換慢慢浮至集合頂端』，故稱作泡沫排序</p>
+    <p style="margin-top: 0px;">合併排序法屬於分治法（Divide and Conquer）演算法，先把大問題拆解成小問題，解決小問題後再將小問題合併，進而解決大問題。</p>
     
   </div>
   <div class="meta">
-    <time class="published" datetime="2021-03-15 00:00:00 &#43;0000 UTC">
-      March 15, 2021
+    <time class="published" datetime="2021-03-16 00:00:00 &#43;0000 UTC">
+      March 16, 2021
     </time>
     
     <span class="author">Ian Tsai</span>
     
-    <p>1 minute read</p>
+    <p>2 minute read</p>
     
     <p>
       <span id="busuanzi_container_page_pv">
@@ -264,9 +264,9 @@ if (!doNotTrack) {
     
   </section>
   
-  <a href="/ianlife/algorithms/bubble-sort/" class="image featured">
+  <a href="/ianlife/algorithms/merge-sort/" class="image featured">
     
-      <img src="https://i.imgur.com/9uBuL8g.png" alt="">
+      <img src="https://i.imgur.com/kBcbZGH.png" alt="">
     
   </a>
 
@@ -274,91 +274,92 @@ if (!doNotTrack) {
   <div class="content">
     <br>
 <br>
-<h3 id=_泡沫排序原理>泡沫排序原理</h3>
+<h3 id=_合併排序法原理>合併排序法原理</h3>
 <hr>
-<p>泡沫排序是一種穩定排序演算法，不斷重複比較兩個元素，如果要最小的開頭，若前一個元素小於現在這個元素，則兩個元素位置互換，反之亦然，直到所有元素都是由小到大排序才結束。而也因為這種『小元素經由交換慢慢浮至集合頂端』，故稱作泡沫排序。</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Bubble_sort_animation.gif" alt="Bubble Sort"></p>
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/3/37/Bubble_sort_animation.gif">圖片來源</a></p>
+<p>合併排序法屬於<a href="https://zh.wikipedia.org/wiki/%E5%88%86%E6%B2%BB%E6%B3%95"  target="_blank">分治法（Divide and Conquer）演算法</a>，先把大問題拆解成小問題，解決小問題後再將小問題合併，進而解決大問題。</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif" alt="merge sort"></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif"  target="_blank">圖片來源</a></p>
 <br>
 <br>
-<h3 id=_泡沫排序運作>泡沫排序運作</h3>
+<h3 id=_合併排序法運作>合併排序法運作</h3>
 <hr>
-<p>若有一筆資料要從小排到大，使用泡沫排序的步驟如下：</p>
+<p>合併排序法採用 Divide and Conquer ，其運作有兩個步驟：</p>
 <ol>
-<li>比較相鄰兩個元素，若第一個元素大於第二元素，則兩個位置互換。</li>
-<li>針對每個元素（第二與第三&hellip;），不斷重複上一步驟，直到最後一個元素。</li>
-<li>重複步驟 1, 2 直到資料全部由小到大排序。</li>
+<li>Divide：先將元素列進行遞迴對半分割。</li>
 </ol>
-<p>可以用<code>[8, 3, 5, 6, 1]</code>來看看：</p>
-<pre><code>[8, 3, 5, 6, 1]
- ^  ^
-(8 &gt; 3) 兩個位子交換
-
-[3, 8, 5, 6, 1]
-    ^  ^
-(8 &gt; 5) 兩個位子交換
-
-[3, 5, 8, 6, 1]
-       ^  ^
-(8 &gt; 6) 兩個位子交換
- 
-[3, 5, 6, 8, 1]
-          ^  ^
-(8 &gt; 1) 兩個位子交換
-
-[3, 5, 6, 1, 8]
-
-</code></pre><p>這樣比一輪，就把最大值給放到最後了。接著就是不段重複上述步驟，直到排序完成。</p>
-<br>
-<br>
-<h3 id=_泡沫排序的時間複雜度time-complexity>泡沫排序的時間複雜度（Time complexity）</h3>
+<pre><code>[6, 5, 3, 1, 8, 7, 2, 4]
+[6, 5, 3, 1][8, 7, 2, 4]
+[6, 5][3, 1][8, 7][2, 4]
+[6][5][3][1][8][7][2][4]
+</code></pre><ol start="2">
+<li>Conquer：將所有小數列比較大小後合併。</li>
+</ol>
+<pre><code>[6][5] =&gt; [5, 6]
+[3][1] =&gt; [1, 3]
+[8][7] =&gt; [7, 8]
+[2][4] =&gt; [2, 4]
+[5, 6][1, 3] =&gt; [1, 3, 5, 6]
+[7, 8][2, 4] =&gt; [2, 4, 7, 8]
+[1, 3, 5, 6][2, 4, 7, 8] =&gt; [1, 2, 3, 4, 5, 6, 7, 8]
+</code></pre><p>完成上述兩步驟，即完成合併排序法。</p>
+<h3 id=_合併排序法時間複雜度time-complexity>合併排序法時間複雜度（Time complexity）</h3>
 <hr>
-<p>這是我們剛剛看到的流程，這次加入一個比較次數<code>num = 0</code>開始</p>
-<pre><code>num = 1
-[8, 3, 5, 6, 1]
- ^  ^
-(8 &gt; 3) 兩個位子交換
-
-num = 2
-[3, 8, 5, 6, 1]
-    ^  ^
-(8 &gt; 5) 兩個位子交換
-
-num = 3
-[3, 5, 8, 6, 1]
-       ^  ^
-(8 &gt; 6) 兩個位子交換
-
-num = 4
-[3, 5, 6, 8, 1]
-          ^  ^
-(8 &gt; 1) 兩個位子交換
-
-[3, 5, 6, 1, 8]
-
-</code></pre><p>排序完一次，num 變成了 4，可以發現，陣列內有幾個元素，就要比較 (n-1) 次，而要把所有元素排序完，又需要 n 次。
-所以一個完整的泡沫排序所需的時間是 n(n-1) =&gt; n<sup>2</sup>，即 O(n<sup>2</sup>)。</p>
-<p><strong>Bubble Sort 的時間複雜度是多少？ O(n<sup>2</sup>)</strong></p>
+<p>在<a href="https://ianjustin39.github.io/ianlife/algorithms/binary-search/#/_efficiency-of-binary-search"  target="_blank">二分搜尋演算法 (Binary Search Algorithm)</a>有計算時間複雜度，合併排序法內含有 Binary Search 對半分割的方法，所以時間複雜度為 log<sub>2</sub>(n)。而每個合併動作都要做兩個陣列的排序才合併，時間複雜度為 n。兩者加再一起的時間複雜度為 O(n log<sub>2</sub>(n))</p>
+<p><strong>Merge Sort 的時間複雜度是多少？ O(n log<sub>2</sub>(n))</strong></p>
 <br>
 <br>
-<h3 id=_泡沫排序實作>泡沫排序實作</h3>
+<h3 id=_合併排序法實作>合併排序法實作</h3>
 <hr>
-<p>現在來練習一下泡沫排序吧！</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">8</span>]
-<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">bubble_sort_1</span>(l):
-    data_len <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">len</span>(l)
-    <span style="color:#ff79c6">for</span> run_time <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(data_len):
-        <span style="color:#ff79c6">for</span> index <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">1</span>, data_len):
-            this_data <span style="color:#ff79c6">=</span> l[index]
-            prev_data <span style="color:#ff79c6">=</span> l[index <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>]
-            <span style="color:#ff79c6">if</span> prev_data <span style="color:#ff79c6">&gt;</span> this_data:
-                l[index] <span style="color:#ff79c6">=</span> prev_data
-                l[index <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>] <span style="color:#ff79c6">=</span> this_data
-        
-    
-bubble_sort_1(data)
-<span style="color:#ff79c6">print</span> (<span style="color:#f1fa8c">&#34;Pass&#34;</span> <span style="color:#ff79c6">if</span> (data[<span style="color:#bd93f9">0</span>] <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">1</span>) <span style="color:#ff79c6">else</span> <span style="color:#f1fa8c">&#34;Fail&#34;</span>)
-</code></pre></div><p><a href="https://onlinegdb.com/ya9Bg0OOB" target="_blank">練習程式碼</a></p>
+<p>按照合併排序法的第一個步驟，要先進行 Divide：</p>
+<pre><code>1. 使用遞迴將陣列分割到最小（6~11)。
+2. 若已經是最小的就進行 merge（13）。
+</code></pre>
+<p>接著進行 Conquer：</p>
+<pre><code>1. 先判斷是否左右邊 index 都在陣列長度內。
+2. 左邊第一個元素與右邊第一個元素比較。
+3. 若左邊較大，則右邊元素放入陣列，右邊 index + 1，反之亦然。
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">mergesort</span>(items):
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>    <span style="color:#ff79c6">if</span> <span style="color:#8be9fd;font-style:italic">len</span>(items) <span style="color:#ff79c6">&lt;=</span> <span style="color:#bd93f9">1</span>:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>        <span style="color:#ff79c6">return</span> items
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>    
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>    mid <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">len</span>(items) <span style="color:#ff79c6">//</span> <span style="color:#bd93f9">2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>    left <span style="color:#ff79c6">=</span> items[:mid]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>    right <span style="color:#ff79c6">=</span> items[mid:]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>    
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>    left <span style="color:#ff79c6">=</span> mergesort(left)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>    right <span style="color:#ff79c6">=</span> mergesort(right)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>    
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>    <span style="color:#ff79c6">return</span> merge(left, right)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>    
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">merge</span>(left, right):
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>    
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>    merged <span style="color:#ff79c6">=</span> []
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>    left_index <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>    right_index <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>    
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>    <span style="color:#ff79c6">while</span> left_index <span style="color:#ff79c6">&lt;</span> <span style="color:#8be9fd;font-style:italic">len</span>(left) <span style="color:#ff79c6">and</span> right_index <span style="color:#ff79c6">&lt;</span> <span style="color:#8be9fd;font-style:italic">len</span>(right):
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>        <span style="color:#ff79c6">if</span> left[left_index] <span style="color:#ff79c6">&gt;</span> right[right_index]:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span>            merged<span style="color:#ff79c6">.</span>append(right[right_index])
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span>            right_index <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span>        <span style="color:#ff79c6">else</span>:
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span>            merged<span style="color:#ff79c6">.</span>append(left[left_index])
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span>            left_index <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span>    merged <span style="color:#ff79c6">+=</span> left[left_index:]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span>    merged <span style="color:#ff79c6">+=</span> right[right_index:]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span>        
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span>    <span style="color:#ff79c6">return</span> merged
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span>test_list_1 <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">8</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">7</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">10</span>, <span style="color:#bd93f9">2</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span>test_list_2 <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">0</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span>test_list_3 <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">97</span>, <span style="color:#bd93f9">98</span>, <span style="color:#bd93f9">99</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span><span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;{} to {}&#39;</span><span style="color:#ff79c6">.</span>format(test_list_1, mergesort(test_list_1)))
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span><span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;{} to {}&#39;</span><span style="color:#ff79c6">.</span>format(test_list_2, mergesort(test_list_2)))
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span><span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#39;{} to {}&#39;</span><span style="color:#ff79c6">.</span>format(test_list_3, mergesort(test_list_3)))
+</code></pre></div><p><a href="https://onlinegdb.com/H18GqQRmO" target="_blank">練習程式碼</a></p>
 <br>
 <br>
 <h3 id=_resource>Resource</h3>
@@ -372,18 +373,12 @@ bubble_sort_1(data)
   <br>
   <div class="pagination">
   
-    <a href="/ianlife/movie/plurality/" class="button">
+    <a href="/ianlife/algorithms/bubble-sort/" class="button">
       <div class="previous">
-        <div>複身犯 - 寫出你的名字，你是誰？</div>
+        <div>泡沫排序 - Bubble Sort</div>
       </div>
     </a>
   
-  
-    <a href="/ianlife/algorithms/merge-sort/" class="button">
-      <div class="next">
-        <div>合併排序 - Merge Sort</div>
-      </div>
-    </a>
   
 </div>
 
@@ -510,8 +505,8 @@ bubble_sort_1(data)
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e6%b3%a1%e6%b2%ab%e6%8e%92%e5%ba%8f%e5%8e%9f%e7%90%86">
-												 泡沫排序原理
+						 					<a class="nav-link" href="#_%e5%90%88%e4%bd%b5%e6%8e%92%e5%ba%8f%e6%b3%95%e5%8e%9f%e7%90%86">
+												 合併排序法原理
 											</a>
 										</li>
 						 
@@ -536,8 +531,8 @@ bubble_sort_1(data)
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e6%b3%a1%e6%b2%ab%e6%8e%92%e5%ba%8f%e9%81%8b%e4%bd%9c">
-												 泡沫排序運作
+						 					<a class="nav-link" href="#_%e5%90%88%e4%bd%b5%e6%8e%92%e5%ba%8f%e6%b3%95%e9%81%8b%e4%bd%9c">
+												 合併排序法運作
 											</a>
 										</li>
 						 
@@ -562,8 +557,8 @@ bubble_sort_1(data)
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e6%b3%a1%e6%b2%ab%e6%8e%92%e5%ba%8f%e7%9a%84%e6%99%82%e9%96%93%e8%a4%87%e9%9b%9c%e5%ba%a6time-complexity">
-												 泡沫排序的時間複雜度（Time complexity）
+						 					<a class="nav-link" href="#_%e5%90%88%e4%bd%b5%e6%8e%92%e5%ba%8f%e6%b3%95%e6%99%82%e9%96%93%e8%a4%87%e9%9b%9c%e5%ba%a6time-complexity">
+												 合併排序法時間複雜度（Time complexity）
 											</a>
 										</li>
 						 
@@ -588,8 +583,8 @@ bubble_sort_1(data)
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e6%b3%a1%e6%b2%ab%e6%8e%92%e5%ba%8f%e5%af%a6%e4%bd%9c">
-												 泡沫排序實作
+						 					<a class="nav-link" href="#_%e5%90%88%e4%bd%b5%e6%8e%92%e5%ba%8f%e6%b3%95%e5%af%a6%e4%bd%9c">
+												 合併排序法實作
 											</a>
 										</li>
 						 
@@ -638,7 +633,7 @@ bubble_sort_1(data)
 	
 
         <iframe class="LikeCoin" height="235"
-  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2falgorithms%2fbubble-sort%2f" width="100%"
+  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2falgorithms%2fmerge-sort%2f" width="100%"
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
