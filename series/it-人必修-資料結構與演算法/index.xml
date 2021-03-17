@@ -6,10 +6,19 @@
     <description>Recent content in IT 人必修 - 資料結構與演算法 on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 16 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/series/it-%E4%BA%BA%E5%BF%85%E4%BF%AE-%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>快速排序 - Quick Sort</title>
+      <link>https://ianjustin39.github.io/ianlife/algorithms/quick-sort/</link>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/algorithms/quick-sort/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>合併排序 - Merge Sort</title>
