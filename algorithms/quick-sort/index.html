@@ -75,7 +75,7 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="快速排序 - Quick Sort">
+<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="快速排序 - Quick Sort">
 <meta itemprop="description" content="快速排序使用分治法（Divide and conquer）策略，藉由一個基準值來把一個序列（list）分為較小（左）和較大（右）的 2 個子序列，然後遞迴地排序兩個子序列。">
 <meta itemprop="datePublished" content="2021-03-17T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-03-17T00:00:00&#43;00:00" />
@@ -424,7 +424,7 @@ if (!doNotTrack) {
 <br>
 <h3 id=_快速排序法的時間複雜度time-complexity>快速排序法的時間複雜度（Time complexity）</h3>
 <hr>
-<p>快速排序法因為是類似於對半分割的方法，所以<strong>平均時間複雜度為 log<sub>2</sub>(n)</strong>。而需要每個陣列都需要比較過，所以時間複雜度為 n。合併兩者的時間複雜度為 O(n log<sub>2</sub>(n))。但若是 pivot 沒有選擇好（最大獲最小），可能讓左或右邊的子陣列為空，則<strong>最壞情況時間複雜度為 O(n<sup>2</sup>)</strong>。</p>
+<p>快速排序法因為是類似於對半分割的方法，所以時間複雜度為 log<sub>2</sub>(n)。而需要每個陣列都需要比較過，所以時間複雜度為 n。合併兩者的<strong>平均時間複雜度為 O(n log<sub>2</sub>(n))</strong>。但若是 pivot 沒有選擇好（最大獲最小），可能讓左或右邊的子陣列為空，則<strong>最壞情況時間複雜度為 O(n<sup>2</sup>)</strong>。</p>
 <br>
 <br>
 <h3 id=_快速排序法實作>快速排序法實作</h3>
@@ -460,7 +460,7 @@ if (!doNotTrack) {
         sort_all(array, pivot <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>, end);
 
 
-<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">quickSort</span>(array):
+<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">quick_sort</span>(array):
     
     sort(array, <span style="color:#bd93f9">0</span>, <span style="color:#8be9fd;font-style:italic">len</span>(array)<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>)
     <span style="color:#ff79c6">print</span>(array)
