@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 15 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 May 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>blog</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/blog/</link>
+      <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>django</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/django/</link>
+      <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/django/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>好書推薦</title>
@@ -53,15 +71,6 @@
       <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ianjustin39.github.io/ianlife/tags/algolia/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blog</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/blog/</link>
-      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/tags/blog/</guid>
       <description></description>
     </item>
     

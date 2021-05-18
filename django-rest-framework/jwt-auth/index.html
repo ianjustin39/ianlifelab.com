@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+  <meta content="django, python" name="keywords">
+  <link rel="stylesheet" href="https://ianjustin39.github.io/ianlife/%20css/search.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  
+  
+  
+  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
+  <script src="/ianlife/js/bootstrap.js"></script>
+  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
+  
+  
+  
+  <script src="../js/jquery.magnific-popup.js"></script>
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="/ianlife/js/toc.js"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+  <script>
+   window.onload = function () {
+    let plantumlPrefix = "language-plantuml";
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
+      let image = document.createElement("IMG");
+      image.loading = 'lazy'; 
+      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
+      code.parentNode.insertBefore(image, code);
+      code.style.display = 'none';
+    });
+  };
+  </script>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta charset="utf-8">
+<title>用 JWT 實作 Django rest 身份驗證 - Ian Tsai </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="用 JWT 實作 Django rest 身份驗證">
+<meta itemprop="description" content="前言  現在各種應用程式（app, web）都可以透過對 api 發送請求達到獲取資料、傳遞訊息的行為，但有些服務並不適合開放給所有人使用，這時就需要思考如何驗證或授權發送請求的應用程式，jwt 為其中的一個解決方案。 對 api 發送的應用程式可以將 jwt 產生的 token 存在 localstorage ，並且每次發送請求時只要將 token 帶入即可使用 api 服務，這樣就解決了 api 身份驗證的問題。
+ JSON Web Token (JWT)   JWT 介紹 先簡單介紹一下 JSON Web Token ，JWT 是一個開放標準（RFC 7519），它定義了一種簡潔且（compact）自包含（self-contained）的方式，用於在各方之間安全地將信息作為JSON對像傳輸。由於此信息是經過數字簽章的，因此可以被驗證和信任。可以使用秘密（使用HMAC算法）或使用RSA或ECDSA的公鑰/私鑰對對JWT進行簽章。
+來源Introduction to JSON Web Tokens
+ JWT 結構 JSON Web Token 由以下三個部分組成，並且以 . 做分隔：
+ header payload signature  因此通常以下方的格式表示：
+hhhhhhh.pppppppp.sssssssss 而實際上產生出來的資料會長這樣：
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9. eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjIxMDcwNzEzLCJlbWFpbCI6IiJ9. pMRb536U8XnNU9fi4T9A5QnpQuy3NYu1JdoYkpql-8I  header { &#34;alg&#34;: &#34;HS256&#34;, &#34;typ&#34;: &#34;JWT&#34; } header 內通常有 typ 以及 alg 兩部分，並以 json 的格式組成。">
+<meta itemprop="datePublished" content="2021-05-16T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-05-16T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="477">
+<meta itemprop="image" content="https://i.imgur.com/Ze4jgZS.png">
+
+
+
+<meta itemprop="keywords" content="django,," /><meta property="og:title" content="用 JWT 實作 Django rest 身份驗證" />
+<meta property="og:description" content="前言  現在各種應用程式（app, web）都可以透過對 api 發送請求達到獲取資料、傳遞訊息的行為，但有些服務並不適合開放給所有人使用，這時就需要思考如何驗證或授權發送請求的應用程式，jwt 為其中的一個解決方案。 對 api 發送的應用程式可以將 jwt 產生的 token 存在 localstorage ，並且每次發送請求時只要將 token 帶入即可使用 api 服務，這樣就解決了 api 身份驗證的問題。
+ JSON Web Token (JWT)   JWT 介紹 先簡單介紹一下 JSON Web Token ，JWT 是一個開放標準（RFC 7519），它定義了一種簡潔且（compact）自包含（self-contained）的方式，用於在各方之間安全地將信息作為JSON對像傳輸。由於此信息是經過數字簽章的，因此可以被驗證和信任。可以使用秘密（使用HMAC算法）或使用RSA或ECDSA的公鑰/私鑰對對JWT進行簽章。
+來源Introduction to JSON Web Tokens
+ JWT 結構 JSON Web Token 由以下三個部分組成，並且以 . 做分隔：
+ header payload signature  因此通常以下方的格式表示：
+hhhhhhh.pppppppp.sssssssss 而實際上產生出來的資料會長這樣：
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9. eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjIxMDcwNzEzLCJlbWFpbCI6IiJ9. pMRb536U8XnNU9fi4T9A5QnpQuy3NYu1JdoYkpql-8I  header { &#34;alg&#34;: &#34;HS256&#34;, &#34;typ&#34;: &#34;JWT&#34; } header 內通常有 typ 以及 alg 兩部分，並以 json 的格式組成。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/django-rest-framework/jwt-auth/" />
+<meta property="og:image" content="https://i.imgur.com/Ze4jgZS.png" />
+<meta property="article:published_time" content="2021-05-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-05-16T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://i.imgur.com/Ze4jgZS.png"/>
+
+<meta name="twitter:title" content="用 JWT 實作 Django rest 身份驗證"/>
+<meta name="twitter:description" content="前言  現在各種應用程式（app, web）都可以透過對 api 發送請求達到獲取資料、傳遞訊息的行為，但有些服務並不適合開放給所有人使用，這時就需要思考如何驗證或授權發送請求的應用程式，jwt 為其中的一個解決方案。 對 api 發送的應用程式可以將 jwt 產生的 token 存在 localstorage ，並且每次發送請求時只要將 token 帶入即可使用 api 服務，這樣就解決了 api 身份驗證的問題。
+ JSON Web Token (JWT)   JWT 介紹 先簡單介紹一下 JSON Web Token ，JWT 是一個開放標準（RFC 7519），它定義了一種簡潔且（compact）自包含（self-contained）的方式，用於在各方之間安全地將信息作為JSON對像傳輸。由於此信息是經過數字簽章的，因此可以被驗證和信任。可以使用秘密（使用HMAC算法）或使用RSA或ECDSA的公鑰/私鑰對對JWT進行簽章。
+來源Introduction to JSON Web Tokens
+ JWT 結構 JSON Web Token 由以下三個部分組成，並且以 . 做分隔：
+ header payload signature  因此通常以下方的格式表示：
+hhhhhhh.pppppppp.sssssssss 而實際上產生出來的資料會長這樣：
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9. eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjIxMDcwNzEzLCJlbWFpbCI6IiJ9. pMRb536U8XnNU9fi4T9A5QnpQuy3NYu1JdoYkpql-8I  header { &#34;alg&#34;: &#34;HS256&#34;, &#34;typ&#34;: &#34;JWT&#34; } header 內通常有 typ 以及 alg 兩部分，並以 json 的格式組成。"/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+        <link rel="stylesheet" href="/ianlife/css/add-on.css">
+</head>
+
+  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
+  
+  
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ianlife/">
+        
+          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/blog/" class="link"><i class='fas fa-pencil-alt'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/life" class="link"><i class='fa fa-plane'></i> Life</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/learning" class="link"><i class='fa fa-book'></i> Learning</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/tech" class="link"><i class='fa fa-laptop'></i> Tech</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+      
+      
+
+      <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
+        <span id="searchGlyph" class="glyphicon glyphicon-search"><i class="fas fa-search"></i></span></a>
+    </menu>
+    
+
+    
+    <a href="#lang-menu" class="lang-toggle" lang="zh">zh</a>
+    <a href="#site-nav-menu" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+ 
+ 
+  <menu id="lang-menu" class="flyout-menu">
+  <a href="#" lang="zh" class="link active">中文 (zh)</a>
+  
+    
+      
+        <a href="/ianlife/en" lang="en" class="no-lang link">English (en)</a>
+      
+    
+      
+    
+  
+</menu>
+
+  
+</header>
+
+<div id="modalSearch" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">文章搜尋</h4><button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="aa-input-container" id="aa-input-container">
+  <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for titles or URIs..."
+    name="search" autocomplete="off" />
+  <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
+    <path
+      d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z" />
+  </svg>
+</div>
+<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/algoliasearch.min.js"></script>
+<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/autocomplete.min.js"></script>
+<script>
+  var client = algoliasearch("WTW32P5SNJ", "2e16477f048bc4528b166dfd1eb4804d");
+  var index = client.initIndex("blog");
+  autocomplete('#aa-search-input',
+    { hint: false }, {
+    source: autocomplete.sources.hits(index, { hitsPerPage: 20 }),
+    displayKey: 'name',
+    templates: {
+      suggestion: function (suggestion) {
+        return '<span>' + '<a href="' + suggestion.relpermalink + '">' +
+          suggestion.title + '</a></span>';
+      }
+    }
+  });
+
+  $('#searchGlyph').click(function() {
+    setTimeout(function(){
+      $('#aa-search-input').focus();
+    },300);
+  });
+</script>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div id="wrapper">
+      
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/%E7%94%A8-django-rest-framework-%E6%89%93%E9%80%A0%E4%B8%80%E5%80%8B%E5%BE%8C%E7%AB%AF-api"><p>用 Django Rest framework 打造一個後端 api</p></a>
+    
+    <h3><a href="/ianlife/django-rest-framework/jwt-auth/">用 JWT 實作 Django rest 身份驗證</a></h3>
+    
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2021-05-16 00:00:00 &#43;0000 UTC">
+      May 16, 2021
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>3 minute read</p>
+    
+    <p>
+      <span id="busuanzi_container_page_pv">
+        PV: <span id="busuanzi_value_page_pv"></span>
+      </span>
+    </p>
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+  </section>
+  
+  <a href="/ianlife/django-rest-framework/jwt-auth/" class="image featured">
+    
+      <img src="https://i.imgur.com/Ze4jgZS.png" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <br/>
+<br/>
+<h2 id=_前言>前言</h2>
+<hr>
+<p>現在各種應用程式（app, web）都可以透過對 api 發送請求達到獲取資料、傳遞訊息的行為，但有些服務並不適合開放給所有人使用，這時就需要思考如何驗證或授權發送請求的應用程式，jwt 為其中的一個解決方案。
+對 api 發送的應用程式可以將 jwt 產生的 token 存在 localstorage ，並且每次發送請求時只要將 token 帶入即可使用 api 服務，這樣就解決了 api 身份驗證的問題。</p>
+<br/>
+<h2 id=_json-web-token-jwt>JSON Web Token (JWT)</h2>
+<hr>
+<br/>
+<h3 id=_jwt-介紹>JWT 介紹</h3>
+<p>先簡單介紹一下 JSON Web Token ，JWT 是一個開放標準（RFC 7519），它定義了一種簡潔且（compact）自包含（self-contained）的方式，用於在各方之間安全地將信息作為JSON對像傳輸。由於此信息是經過數字簽章的，因此可以被驗證和信任。可以使用秘密（使用HMAC算法）或使用RSA或ECDSA的公鑰/私鑰對對JWT進行簽章。</p>
+<p>來源<em><a href="https://jwt.io/introduction" target="_blank">Introduction to JSON Web Tokens</a></em></p>
+<br/>
+<h3 id=_jwt-結構>JWT 結構</h3>
+<p>JSON Web Token 由以下三個部分組成，並且以 <code>.</code> 做分隔：</p>
+<ul>
+<li>header</li>
+<li>payload</li>
+<li>signature</li>
+</ul>
+<p>因此通常以下方的格式表示：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">hhhhhhh.pppppppp.sssssssss
+</code></pre></div><p>而實際上產生出來的資料會長這樣：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.
+eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjIxMDcwNzEzLCJlbWFpbCI6IiJ9.
+pMRb536U8XnNU9fi4T9A5QnpQuy3NYu1JdoYkpql-8I
+</code></pre></div><br/>
+<h5 id="header">header</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#ff79c6">{</span>
+  <span style="color:#f1fa8c">&#34;alg&#34;</span>: <span style="color:#f1fa8c">&#34;HS256&#34;</span>,
+  <span style="color:#f1fa8c">&#34;typ&#34;</span>: <span style="color:#f1fa8c">&#34;JWT&#34;</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>header 內通常有 <code>typ</code> 以及 <code>alg</code> 兩部分，並以 json 的格式組成。</p>
+<ul>
+<li>typ：jwt 本身的類型，預設值為 <code>JWT</code>。</li>
+<li>alg：對 jwt 進行簽章或解密的演算法。</li>
+</ul>
+<p>而 header 最後會以 Base64Url 的編碼放在 jwt 的第一個部分。</p>
+<br/>
+<h5 id="payload">payload</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#ff79c6">{</span>
+  <span style="color:#f1fa8c">&#34;exp&#34;</span>: 1621165871,
+  <span style="color:#f1fa8c">&#34;orig_iat&#34;</span>: 1621165571,
+<span style="color:#ff79c6">}</span>
+</code></pre></div><p>這個部分和 header 一樣，是 JSON 格式，通常會放一些使用者相關的資料，也包含 jwt 的 claims，如：<code>exp</code> 為 token 的存在時間。
+而 claims 則分成以下三類：</p>
+<ul>
+<li>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc7519#section-4.1" target="_blank">Registered Claims</a>：
+為非強制但建議使用的 claims，如一開始提到的 <code>exp（到期時間）</code>，由於 jwt 是非常簡潔的，所以通常 claims 只會有三個字母。</p>
+</li>
+<li>
+<p>Public Claims：使用JWT的人員可以隨意定義這些聲明。但是為避免衝突，應在
+<a href="https://datatracker.ietf.org/doc/html/rfc7519#section-4.1" target="_blank">IANA JSON Web令牌註冊表</a>
+中定義它們，或將其定義為包含抗衝突名稱空間的URI。</p>
+</li>
+<li>
+<p>Private Claims：用於特定情況的臨時 claims。</p>
+</li>
+</ul>
+<p>payload 最後也會以 Base64Url 的編碼放在 jwt 的第二個部分。</p>
+<br/>
+<h5 id="signature">signature</h5>
+<p>要建立一個簽章需要有 header 以及 payload，並透過指定的演算法建立簽章。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">HMACSHA256<span style="color:#ff79c6">(</span>
+  base64UrlEncode<span style="color:#ff79c6">(</span>header<span style="color:#ff79c6">)</span> + <span style="color:#f1fa8c">&#34;.&#34;</span> +
+  base64UrlEncode<span style="color:#ff79c6">(</span>payload<span style="color:#ff79c6">)</span>,
+  secret<span style="color:#ff79c6">)</span>
+</code></pre></div><p>簽章可以驗證 jwt 的發送者身份是否真實。</p>
+<br/>
+<h5 id="合體之後">合體之後</h5>
+<p>如同一開始講的，將這三個 Base64-URL 的字串加再一起，並以 <code>.</code> 做區隔，就可以在 http 環境中傳遞這些字串，相較於 xml 格式， jwt 顯得更簡潔。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.
+eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjIxMDcwNzEzLCJlbWFpbCI6IiJ9.
+pMRb536U8XnNU9fi4T9A5QnpQuy3NYu1JdoYkpql-8I
+</code></pre></div><p>如果想要知道 jwt 內有什麼參數，可以利用
+<a href="https://jwt.io/#debugger-io" target="_blank">jwt.io Debugger </a>
+解碼，驗證和生成JWT。</p>
+<p><img src="https://cdn.auth0.com/blog/legacy-app-auth/legacy-app-auth-5.png" alt="jwt Debugger"></p>
+<br/>
+<h3 id=_jwt-運作方式>JWT 運作方式</h3>
+<p>jwt 如同下圖中運作，會先發送請求給 api 取得 token，如果 api 驗證過了就會產生一個 token 並返回，接著只要帶著 token 發送其他請求即可。</p>
+<p><img src="https://auth0.com/learn/wp-content/uploads/2016/01/17.png" alt="jwt work"></p>
+<br/>
+<br/>
+<h2 id=_實戰-django-rest-framework-jwt>實戰 django-rest-framework-jwt</h2>
+<hr>
+<h3 id=_1-安裝-djangorestframework-jwt>1. 安裝 djangorestframework-jwt</h3>
+<p>第一步，先在 project 內安裝 <code>djangorestframework-jwt</code> 的套件。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pipenv install djangorestframework-jwt
+</code></pre></div><h3 id=_2-獲取-token>2. 獲取 token</h3>
+<p>在 <code>settings.py</code> 內找到 <code>REST_FRAMEWORK</code> 的部分，並將 <code>JSONWebTokenAuthentication</code> 加到 <code>DEFAULT_AUTHENTICATION_CLASSES</code> 內。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">REST_FRAMEWORK <span style="color:#ff79c6">=</span> {
+    <span style="color:#f1fa8c">&#39;DEFAULT_PERMISSION_CLASSES&#39;</span>: (
+        <span style="color:#f1fa8c">&#39;rest_framework.permissions.IsAuthenticated&#39;</span>,
+    ),
+    <span style="color:#f1fa8c">&#39;DEFAULT_AUTHENTICATION_CLASSES&#39;</span>: (
+        <span style="color:#f1fa8c">&#39;rest_framework_jwt.authentication.JSONWebTokenAuthentication&#39;</span>, <span style="color:#6272a4"># 新增這行</span>
+        <span style="color:#f1fa8c">&#39;rest_framework.authentication.SessionAuthentication&#39;</span>,
+        <span style="color:#f1fa8c">&#39;rest_framework.authentication.BasicAuthentication&#39;</span>,
+    ),
+}
+</code></pre></div><p>接著到 <code>urls.py</code> 內新增 URL route，允許外部藉由 POST 的方式帶入 django 的 username 及 password 來取去 token。</p>
+<p><em>註：如果沒有的話可以輸入<code>python manage.py createsuperuser</code>來先建立一個 superuser。</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> rest_framework_jwt.views <span style="color:#ff79c6">import</span> obtain_jwt_token
+<span style="color:#6272a4">#...</span>
+urlpatterns <span style="color:#ff79c6">=</span> [
+    <span style="color:#6272a4">#...</span>
+    path(<span style="color:#f1fa8c">&#39;api-token-auth/&#39;</span>, obtain_jwt_token),
+    <span style="color:#6272a4">#...</span>
+]
+</code></pre></div><p>現在我們可以啟動 django project ，用以下的操作來獲取 auth token。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl  <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>-H <span style="color:#f1fa8c">&#34;Content-Type: application/json&#34;</span> <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>-X POST <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>-d <span style="color:#f1fa8c">&#39;{&#34;username&#34;:&#34;&lt;your username&gt;&#34;,&#34;password&#34;:&#34;&lt;your password&gt;&#34;}&#39;</span> <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>http://127.0.0.1:8000/api-token-auth/
+</code></pre></div><p>最終會獲取以下格式的 token。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#ff79c6">{</span><span style="color:#f1fa8c">&#34;token&#34;</span>:<span style="color:#f1fa8c">&#34;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjIxMTM5MzMzLCJlbWFpbCI6IiJ9.QC9ECnW5eHUgj3d9YMrZyowXD0sWEE83KQBtklvlicY&#34;</span><span style="color:#ff79c6">}</span>%
+</code></pre></div><p>現在可以利用這個 token 來對有受保護的 api 做請求。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl -H <span style="color:#f1fa8c">&#34;Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjIxMTM5MzMzLCJlbWFpbCI6IiJ9.QC9ECnW5eHUgj3d9YMrZyowXD0sWEE83KQBtklvlicY&#34;</span> /
+http://127.0.0.1:8000/api/&lt;your protected url&gt;
+
+</code></pre></div><p>response（這是自行開發的範例）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#ff79c6">[{</span><span style="color:#f1fa8c">&#34;id&#34;</span>:1,<span style="color:#f1fa8c">&#34;title&#34;</span>:<span style="color:#f1fa8c">&#34;test1&#34;</span>,<span style="color:#f1fa8c">&#34;description&#34;</span>:<span style="color:#f1fa8c">&#34;test111&#34;</span>,<span style="color:#f1fa8c">&#34;created_at&#34;</span>:<span style="color:#f1fa8c">&#34;2021-03-06T03:53:31.400162Z&#34;</span><span style="color:#ff79c6">}</span>,<span style="color:#ff79c6">{</span><span style="color:#f1fa8c">&#34;id&#34;</span>:2,<span style="color:#f1fa8c">&#34;title&#34;</span>:<span style="color:#f1fa8c">&#34;test2&#34;</span>,<span style="color:#f1fa8c">&#34;description&#34;</span>:<span style="color:#f1fa8c">&#34;test222&#34;</span>,<span style="color:#f1fa8c">&#34;created_at&#34;</span>:<span style="color:#f1fa8c">&#34;2021-03-06T04:14:38.848859Z&#34;</span><span style="color:#ff79c6">}</span>,<span style="color:#ff79c6">{</span><span style="color:#f1fa8c">&#34;id&#34;</span>:3,<span style="color:#f1fa8c">&#34;title&#34;</span>:<span style="color:#f1fa8c">&#34;測試三&#34;</span>,<span style="color:#f1fa8c">&#34;description&#34;</span>:<span style="color:#f1fa8c">&#34;測試三三三&#34;</span>,<span style="color:#f1fa8c">&#34;created_at&#34;</span>:<span style="color:#f1fa8c">&#34;2021-03-06T04:15:01.622623Z&#34;</span><span style="color:#ff79c6">}]</span>%  
+</code></pre></div><br/>
+<h3 id=_3-驗證-token>3. 驗證 token</h3>
+<p>若要驗證 token 的正確性，需要到 <code>urls.py</code> 內新增 URL route。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> rest_framework_jwt.views <span style="color:#ff79c6">import</span> verify_jwt_token
+<span style="color:#6272a4">#...</span>
+urlpatterns <span style="color:#ff79c6">=</span> [
+    <span style="color:#6272a4">#...</span>
+    path(<span style="color:#f1fa8c">&#39;api-token-verify/&#39;</span>, verify_jwt_token),
+    <span style="color:#6272a4">#...</span>
+]
+</code></pre></div><p>接著使用以下方法來驗證 token 的正確性。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>-X POST <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>-H <span style="color:#f1fa8c">&#34;Content-Type: application/json&#34;</span> <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>-d <span style="color:#f1fa8c">&#39;{&#34;token&#34;:&#34;&lt;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjIxMTM5MzMzLCJlbWFpbCI6IiJ9.QC9ECnW5eHUgj3d9YMrZyowXD0sWEE83KQBtklvlicY&gt;&#34;}&#39;</span><span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span> http://localhost:8000/api-token-verify/
+</code></pre></div><p>如果驗證正確，會將 token 回傳，失敗則會回傳錯誤原因，如下所示。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#ff79c6">{</span><span style="color:#f1fa8c">&#34;non_field_errors&#34;</span>:<span style="color:#ff79c6">[</span><span style="color:#f1fa8c">&#34;Error decoding signature.&#34;</span><span style="color:#ff79c6">]}</span>% 
+</code></pre></div><br/>
+<h3 id=_4-刷新-token>4. 刷新 token</h3>
+<p>如果 <code>JWT_ALLOW_REFRESH</code> 為 <code>True</code> ，則可以刷新<strong>未過期</strong>的 token。 <code>urls.py</code> 內新增 URL route。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">from</span> rest_framework_jwt.views <span style="color:#ff79c6">import</span> refresh_jwt_token
+<span style="color:#6272a4">#  ...</span>
+
+urlpatterns <span style="color:#ff79c6">=</span> [
+    <span style="color:#6272a4">#  ...</span>
+    path(<span style="color:#f1fa8c">&#39;api-token-refresh/&#39;</span>, refresh_jwt_token),
+    <span style="color:#6272a4">#  ...</span>
+]
+</code></pre></div><p>將現有的 token <code>&quot;token&quot;:&quot;&lt;EXISTING_TOKEN&gt;&quot;}</code> 傳送到新的 endpoint 到刷新端點。這邊要注意，只有未過期的 token 才可以使用。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>-X POST <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>-H <span style="color:#f1fa8c">&#34;Content-Type: application/json&#34;</span> <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>-d <span style="color:#f1fa8c">&#39;{&#34;token&#34;:&#34;&lt;EXISTING_TOKEN&gt;&#34;}&#39;</span> <span style="color:#f1fa8c">\
+</span><span style="color:#f1fa8c"></span>http://localhost:8000/api-token-refresh/
+</code></pre></div><br/>
+<h3 id=_5-相關設定>5. 相關設定</h3>
+<p>刷新 token 的部分有提到<strong>如果 <code>JWT_ALLOW_REFRESH</code> 為 <code>True</code> ，則可以刷新未過期的 token</strong>，<code>JWT_ALLOW_REFRESH</code> 為 jwt 的參數設定，
+可以在 settings.py 內來設定這些參數，來達到想要的笑過。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">JWT_AUTH <span style="color:#ff79c6">=</span> {
+    <span style="color:#6272a4"># ...</span>
+    <span style="color:#f1fa8c">&#39;JWT_ALGORITHM&#39;</span>: <span style="color:#f1fa8c">&#39;HS256&#39;</span>, <span style="color:#6272a4"># 指定演算法</span>
+    <span style="color:#f1fa8c">&#39;JWT_EXPIRATION_DELTA&#39;</span>: datetime<span style="color:#ff79c6">.</span>timedelta(seconds<span style="color:#ff79c6">=</span><span style="color:#bd93f9">300</span>), <span style="color:#6272a4"># token 存活時間</span>
+    <span style="color:#f1fa8c">&#39;JWT_ALLOW_REFRESH&#39;</span>: True, <span style="color:#6272a4"># 是否可以刷新未過期的 token</span>
+    <span style="color:#f1fa8c">&#39;JWT_REFRESH_EXPIRATION_DELTA&#39;</span>: datetime<span style="color:#ff79c6">.</span>timedelta(days<span style="color:#ff79c6">=</span><span style="color:#bd93f9">7</span>), <span style="color:#6272a4"># 刷新 token 的存活時間</span>
+}
+</code></pre></div><p>這邊只列出部分參數，更多關於 jwt auth 的參數設定可以參考
+<strong><a href="https://github.com/jpadilla/django-rest-framework-jwt" target="_blank">REST framework JWT Auth</a></strong>。</p>
+<br/>
+<br/>
+<p>到這差不多把 jwt 的基本功能都做完了，現在可以用 jwt 來做做 api 的使用者驗證拉。但如果想要自定義 payload 內的參數該如何做呢？這會在下一篇介紹。</p>
+<br/>
+<h2 id=_resource>Resource</h2>
+<hr>
+<ul>
+<li><a href="https://jpadilla.github.io/django-rest-framework-jwt/#rest-framework-jwt-auth" target="_blank">REST framework JWT Auth</a></li>
+<li><a href="https://jwt.io/introduction" target="_blank">Introduction to JSON Web Tokens</a></li>
+<li><a href="https://5xruby.tw/posts/what-is-jwt" target="_blank">是誰在敲打我窗？什麼是 JWT ？</a></li>
+<li><a href="https://mgleon08.github.io/blog/2018/07/16/jwt/" target="_blank">JSON Web Token(JWT) 簡單介紹</a></li>
+<li><a href="https://github.com/jpadilla/django-rest-framework-jwt" target="_blank">REST framework JWT Auth</a></li>
+<li><a href="https://medium.com/%E6%89%8B%E5%AF%AB%E7%AD%86%E8%A8%98/django-rest-framework-simplejwt-login-with-email-and-password-bb9fd2d918f8" target="_blank">Django REST framework simplejwt | 登入驗證使用 email 與 password</a></li>
+</ul>
+
+  </div>
+  <br>
+  <br>
+  <div class="pagination">
+  
+    <a href="/ianlife/read/game-the-infinite-game/" class="button">
+      <div class="previous">
+        <div>無限賽局 - 『永續』還是『取勝』？</div>
+      </div>
+    </a>
+  
+  
+</div>
+
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E7%94%A8-django-rest-framework-%E6%89%93%E9%80%A0%E4%B8%80%E5%80%8B%E5%BE%8C%E7%AB%AF-api">用 Django Rest framework 打造一個後端 api</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/django">django</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/"></a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+
+        <div class="disqus markdown">
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+      </main>
+      
+      <div id="page-sidebar">
+        
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div>
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%89%8d%e8%a8%80">
+												 前言
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_json-web-token-jwt">
+												 JSON Web Token (JWT)
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_jwt-%e4%bb%8b%e7%b4%b9">
+												 JWT 介紹
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_jwt-%e7%b5%90%e6%a7%8b">
+												 JWT 結構
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_jwt-%e9%81%8b%e4%bd%9c%e6%96%b9%e5%bc%8f">
+												 JWT 運作方式
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%af%a6%e6%88%b0-django-rest-framework-jwt">
+												 實戰 django-rest-framework-jwt
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_1-%e5%ae%89%e8%a3%9d-djangorestframework-jwt">
+												 1. 安裝 djangorestframework-jwt
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_2-%e7%8d%b2%e5%8f%96-token">
+												 2. 獲取 token
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_3-%e9%a9%97%e8%ad%89-token">
+												 3. 驗證 token
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_4-%e5%88%b7%e6%96%b0-token">
+												 4. 刷新 token
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_5-%e7%9b%b8%e9%97%9c%e8%a8%ad%e5%ae%9a">
+												 5. 相關設定
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_resource">
+												 Resource
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+        <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2fdjango-rest-framework%2fjwt-auth%2f" width="100%"
+  frameborder=0></iframe>
+ 
+        <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script src="/ianlife/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+      </div>
+    </div>
+    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+  </body>
+</html>
