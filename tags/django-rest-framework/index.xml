@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>用 Django Rest framework 打造一個後端 api on Life Story</title>
-    <link>https://ianjustin39.github.io/ianlife/series/%E7%94%A8-django-rest-framework-%E6%89%93%E9%80%A0%E4%B8%80%E5%80%8B%E5%BE%8C%E7%AB%AF-api/</link>
-    <description>Recent content in 用 Django Rest framework 打造一個後端 api on Life Story</description>
+    <title>django rest framework on Life Story</title>
+    <link>https://ianjustin39.github.io/ianlife/tags/django-rest-framework/</link>
+    <description>Recent content in django rest framework on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 16 May 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ianjustin39.github.io/ianlife/series/%E7%94%A8-django-rest-framework-%E6%89%93%E9%80%A0%E4%B8%80%E5%80%8B%E5%BE%8C%E7%AB%AF-api/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ianjustin39.github.io/ianlife/tags/django-rest-framework/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

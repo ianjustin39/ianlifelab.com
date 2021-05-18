@@ -12,20 +12,20 @@
     
     
     <item>
-      <title>blog</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/blog/</link>
+      <title>django rest framework</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/django-rest-framework/</link>
       <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/tags/blog/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/tags/django-rest-framework/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>django</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/django/</link>
+      <title>jwt</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/jwt/</link>
       <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/tags/django/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/tags/jwt/</guid>
       <description></description>
     </item>
     
@@ -71,6 +71,15 @@
       <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ianjustin39.github.io/ianlife/tags/algolia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/blog/</link>
+      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/blog/</guid>
       <description></description>
     </item>
     
