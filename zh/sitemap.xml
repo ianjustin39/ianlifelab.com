@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>https://ianjustin39.github.io/ianlife/series/django-rest-framework/</loc>
+    <lastmod>2021-05-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ianjustin39.github.io/ianlife/tags/django-rest-framework/</loc>
     <lastmod>2021-05-16T00:00:00+00:00</lastmod>
   </url>
@@ -79,11 +84,6 @@
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/categories/tech/</loc>
-    <lastmod>2021-05-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/series/%E7%94%A8-django-rest-framework-%E6%89%93%E9%80%A0%E4%B8%80%E5%80%8B%E5%BE%8C%E7%AB%AF-api/</loc>
     <lastmod>2021-05-16T00:00:00+00:00</lastmod>
   </url>
   
