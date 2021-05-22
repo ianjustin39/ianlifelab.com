@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 16 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 May 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>商業思維學院</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/%E5%95%86%E6%A5%AD%E6%80%9D%E7%B6%AD%E5%AD%B8%E9%99%A2/</link>
+      <pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/%E5%95%86%E6%A5%AD%E6%80%9D%E7%B6%AD%E5%AD%B8%E9%99%A2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>專案管理</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>django rest framework</title>

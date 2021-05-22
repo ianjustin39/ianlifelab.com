@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+  <meta content="project management" name="keywords">
+  <link rel="stylesheet" href="https://ianjustin39.github.io/ianlife/%20css/search.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  
+  
+  
+  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
+  <script src="/ianlife/js/bootstrap.js"></script>
+  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
+  
+  
+  
+  <script src="../js/jquery.magnific-popup.js"></script>
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="/ianlife/js/toc.js"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+  <script>
+   window.onload = function () {
+    let plantumlPrefix = "language-plantuml";
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
+      let image = document.createElement("IMG");
+      image.loading = 'lazy'; 
+      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
+      code.parentNode.insertBefore(image, code);
+      code.style.display = 'none';
+    });
+  };
+  </script>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta charset="utf-8">
+<title>什麼是專案管理？專案管理要管什麼？ - Ian Tsai </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="什麼是專案管理？專案管理要管什麼？">
+<meta itemprop="description" content="專案管理則將管理的知識、方法與工具運用於專案上，確保專案能夠完成。其中涉及人、事、物的『管理』、『規劃』、『控制』與『校正』的知識體系。">
+<meta itemprop="datePublished" content="2021-05-22T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-05-22T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="200">
+<meta itemprop="image" content="https://i.imgur.com/YETs8eF.png">
+
+
+
+<meta itemprop="keywords" content="商業思維學院,專案管理," /><meta property="og:title" content="什麼是專案管理？專案管理要管什麼？" />
+<meta property="og:description" content="專案管理則將管理的知識、方法與工具運用於專案上，確保專案能夠完成。其中涉及人、事、物的『管理』、『規劃』、『控制』與『校正』的知識體系。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/bizthinking/basic-concept-of-project-management/" />
+<meta property="og:image" content="https://i.imgur.com/YETs8eF.png" />
+<meta property="article:published_time" content="2021-05-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-05-22T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://i.imgur.com/YETs8eF.png"/>
+
+<meta name="twitter:title" content="什麼是專案管理？專案管理要管什麼？"/>
+<meta name="twitter:description" content="專案管理則將管理的知識、方法與工具運用於專案上，確保專案能夠完成。其中涉及人、事、物的『管理』、『規劃』、『控制』與『校正』的知識體系。"/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+        <link rel="stylesheet" href="/ianlife/css/add-on.css">
+</head>
+
+  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
+  
+  
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ianlife/">
+        
+          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/blog/" class="link"><i class='fas fa-pencil-alt'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/life" class="link"><i class='fa fa-plane'></i> Life</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/learning" class="link"><i class='fa fa-book'></i> Learning</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/tech" class="link"><i class='fa fa-laptop'></i> Tech</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+      
+      
+
+      <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
+        <span id="searchGlyph" class="glyphicon glyphicon-search"><i class="fas fa-search"></i></span></a>
+    </menu>
+    
+
+    
+    <a href="#lang-menu" class="lang-toggle" lang="zh">zh</a>
+    <a href="#site-nav-menu" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+ 
+ 
+  <menu id="lang-menu" class="flyout-menu">
+  <a href="#" lang="zh" class="link active">中文 (zh)</a>
+  
+    
+      
+        <a href="/ianlife/en" lang="en" class="no-lang link">English (en)</a>
+      
+    
+      
+    
+  
+</menu>
+
+  
+</header>
+
+<div id="modalSearch" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">文章搜尋</h4><button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="aa-input-container" id="aa-input-container">
+  <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for titles or URIs..."
+    name="search" autocomplete="off" />
+  <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
+    <path
+      d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z" />
+  </svg>
+</div>
+<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/algoliasearch.min.js"></script>
+<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/autocomplete.min.js"></script>
+<script>
+  var client = algoliasearch("WTW32P5SNJ", "2e16477f048bc4528b166dfd1eb4804d");
+  var index = client.initIndex("blog");
+  autocomplete('#aa-search-input',
+    { hint: false }, {
+    source: autocomplete.sources.hits(index, { hitsPerPage: 20 }),
+    displayKey: 'name',
+    templates: {
+      suggestion: function (suggestion) {
+        return '<span>' + '<a href="' + suggestion.relpermalink + '">' +
+          suggestion.title + '</a></span>';
+      }
+    }
+  });
+
+  $('#searchGlyph').click(function() {
+    setTimeout(function(){
+      $('#aa-search-input').focus();
+    },300);
+  });
+</script>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div id="wrapper">
+      
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/%E5%AD%B8%E7%BF%92%E6%80%8E%E9%BA%BC%E7%AE%A1%E7%90%86%E5%B0%88%E6%A1%88"><p>商業思維學院｜專案管理</p></a>
+    
+    <h3><a href="/ianlife/bizthinking/basic-concept-of-project-management/">什麼是專案管理？專案管理要管什麼？</a></h3>
+    
+    
+    <p style="margin-top: 0px;">專案管理則將管理的知識、方法與工具運用於專案上，確保專案能夠完成。其中涉及人、事、物的『管理』、『規劃』、『控制』與『校正』的知識體系。</p>
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2021-05-22 00:00:00 &#43;0000 UTC">
+      May 22, 2021
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>1 minute read</p>
+    
+    <p>
+      <span id="busuanzi_container_page_pv">
+        PV: <span id="busuanzi_value_page_pv"></span>
+      </span>
+    </p>
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+  </section>
+  
+  <a href="/ianlife/bizthinking/basic-concept-of-project-management/" class="image featured">
+    
+      <img src="https://i.imgur.com/YETs8eF.png" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <br/>
+<br/>
+<h3 id=_什麼是專案什麼是專案管理>什麼是專案？什麼是專案管理？</h3>
+<hr>
+<p>暑假出國旅遊是一個專案，學校社團的成果發表也是一個專案。
+專案是為了完成某一獨特（結果不重複）的產品或服務所做的臨時性（有開始及結束）努力。
+而專案管理則是將管理的知識、方法與工具運用於這些專案上，確保這些專案能完成。
+其中涉及人、事、物的『管理』、『規劃』、『控制』與『校正』的知識體系。</p>
+<h5 id="涉及面向">涉及面向</h5>
+<p>專案中會涉及幾個面向需要考慮：</p>
+<table>
+<thead>
+<tr>
+<th align="left">面向</th>
+<th align="left">內容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">WHY</td>
+<td align="left">為何要做？解決的問題是什麼？</td>
+</tr>
+<tr>
+<td align="left">WHAT</td>
+<td align="left">做什麼？要做哪些？不做哪些？</td>
+</tr>
+<tr>
+<td align="left">WHEN</td>
+<td align="left">何時做？何時交付？時程？</td>
+</tr>
+<tr>
+<td align="left">HOW</td>
+<td align="left">怎麼做？用什麼方法？</td>
+</tr>
+<tr>
+<td align="left">HOW MANY</td>
+<td align="left">需要多少資源？</td>
+</tr>
+<tr>
+<td align="left">WHO</td>
+<td align="left">有誰參與？負責項目？</td>
+</tr>
+<tr>
+<td align="left">RISK</td>
+<td align="left">有什麼風險？</td>
+</tr>
+</tbody>
+</table>
+<p>比方說：公司要一個建置一個 Landing Page，需要制定一個計畫，該怎麼做。</p>
+<table>
+<thead>
+<tr>
+<th align="left">面向</th>
+<th align="left">內容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">WHY</td>
+<td align="left">為了給公司的產品帶來曝光及流量。</td>
+</tr>
+<tr>
+<td align="left">WHAT</td>
+<td align="left">網頁設計、網頁開發、網頁文案。</td>
+</tr>
+<tr>
+<td align="left">WHEN</td>
+<td align="left">6 月底前完成。</td>
+</tr>
+<tr>
+<td align="left">HOW</td>
+<td align="left">請 IT 部門用 wordpress 拉一個網頁出來。</td>
+</tr>
+<tr>
+<td align="left">HOW MANY</td>
+<td align="left">需要工程師、設計師、平台費、網域費。</td>
+</tr>
+<tr>
+<td align="left">WHO</td>
+<td align="left">IT 部門、產品部門、行銷部門。</td>
+</tr>
+<tr>
+<td align="left">RISK</td>
+<td align="left">造成現階段開發的功能往後遞延。</td>
+</tr>
+</tbody>
+</table>
+<p>這樣可以大概了解，這個專案應該要做些什麼。</p>
+<h5 id="專案管理三項任務">專案管理三項任務</h5>
+<p>現在我們知道啟動一個專案應該做些什麼，而管理一個專案還需要看待三項任務：</p>
+<table>
+<thead>
+<tr>
+<th align="left">任務</th>
+<th align="left">內容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">需求</td>
+<td align="left">釐清哪些任務。</td>
+</tr>
+<tr>
+<td align="left">計畫</td>
+<td align="left">決定怎麼做。決定誰參與哪些任務。</td>
+</tr>
+<tr>
+<td align="left">執行</td>
+<td align="left">按表操課及應變。若遭遇到問題如何及時調整。</td>
+</tr>
+</tbody>
+</table>
+<p>拿剛剛的 Landing Page 來繼續當例子：</p>
+<table>
+<thead>
+<tr>
+<th align="left">任務</th>
+<th align="left">內容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">需求</td>
+<td align="left">網頁設計、網頁開發。</td>
+</tr>
+<tr>
+<td align="left">計畫</td>
+<td align="left">設計師在一週內設計完網頁內容，兩天與 PM 及工程師討論調整，工程師花兩週時間完成。</td>
+</tr>
+<tr>
+<td align="left">執行</td>
+<td align="left">按表操課及應變。若遭遇到問題如何及時調整。</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<br/>
+<h3 id=_從二十哩行軍看專案管理的重要性>從二十哩行軍看專案管理的重要性</h3>
+<hr>
+<p>『二十哩行軍』為羅爾達・阿蒙森所帶領的挪威探險隊成功往返南極極點的一個故事，在『十倍勝』一書中作者用『二十哩行軍』來象徵卓越企業的紀律。但這故事與專案管理有什麼關係呢？</p>
+<p>首先來看看要執行這樣任務的兩組人對於這樣任務的計畫為何：</p>
+<p>挪威代表：阿蒙森</p>
+<ul>
+<li>帶 4 組雪橇， 52 之雪橇犬</li>
+<li>不論天氣如何，每日前進 15 海哩</li>
+<li>帶三噸重的食物，食物不夠時就『吃雪橇犬』</li>
+<li>計畫 109 天達成往返任務</li>
+</ul>
+<p>英國代表：史考特</p>
+<ul>
+<li>完全徒步前進</li>
+<li>依照天氣來決定當天前進的距離</li>
+</ul>
+<p>而結果來說，阿蒙森不但成功往返極點，而且所花的時間比預期少十天；反觀史考特雖然也抵達極點，但到最後還是全員罹難。如果把『往返南極極點』看作一個專案，而阿蒙森及史考特看作專案管理者，可以發現兩者對於『管理』專案的方法有著很大的差異。這邊我認為可以由以下幾個方向去思考。</p>
+<h5 id="--對資源的掌握">- 對資源的掌握</h5>
+<p>阿蒙森計畫這趟探險需要 109 天，評估之後決定帶上三噸的食物以及 52 之雪橇犬來幫助探險隊前往極點。</p>
+<h5 id="--降低外力介入按表操課">- 降低外力介入，按表操課</h5>
+<p>如果因為極地的極端天氣而決定每日的行程，那食物的損耗就無法有效的估計，耗損的程度會超出預期，以至於無法堅持到結束，因此只要環境並非無法前進，每日仍然需要前進 15 海哩。</p>
+<h5 id="--根據目標善用資源">- 根據目標，善用資源</h5>
+<p>探險隊的目標是除了抵達極點以外，還需要活下來，雪橇犬不但可以快速前進，保留體力，必要時也可以作為食物。</p>
+<br/>
+<br/>
+<h3 id=_一個專案的關鍵要素>一個專案的關鍵要素</h3>
+<hr>
+<p>什麼是成功的專案？『如期』、『如質』、『如預算』？
+先用一個範例來看，公司要開發一個 Landing Page，狀況如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">情況</th>
+<th align="left">如期</th>
+<th align="left">如質</th>
+<th align="left">如預算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">預計</td>
+<td align="left">兩個月</td>
+<td align="left">對新產品帶來流量</td>
+<td align="left">花費金額為兩萬</td>
+</tr>
+<tr>
+<td align="left">實際</td>
+<td align="left">兩個月</td>
+<td align="left">對新產品帶來流量</td>
+<td align="left">花費金額為兩萬</td>
+</tr>
+</tbody>
+</table>
+<p>實際狀況與預期的一模一樣，這時大家就會認為，『恩！這是一個成功的專案』。</p>
+<p>但如果是這種狀況呢？</p>
+<table>
+<thead>
+<tr>
+<th align="left">情況</th>
+<th align="left">如期</th>
+<th align="left">如質</th>
+<th align="left">如預算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">預計</td>
+<td align="left">兩個月</td>
+<td align="left">對新產品帶來流量</td>
+<td align="left">花費金額為兩萬</td>
+</tr>
+<tr>
+<td align="left">實際</td>
+<td align="left">一個月</td>
+<td align="left">對新產品帶來流量</td>
+<td align="left">花費金額為一萬五千</td>
+</tr>
+</tbody>
+</table>
+<p>實際完成時間提早了一個月，預算也少了五千元。但這時 PM 卻可能被質疑：為什麼你多估一個月？為什麼多估五千塊？</p>
+<p>以往傳統的觀念，專案必須要完全照著計劃來，分毫不差的完成，才是一個完美的專案。但隨著市場的狀況及需求會不斷的變更的今天，或許已經不在適用。依照狀況調整專案，逐步朝目標前進對於現今的專案來說會比較適合。</p>
+<ul>
+<li>以往：如期、如質、如預算。</li>
+<li>現今：隨著狀況調整，逐步朝目標邁進。</li>
+</ul>
+<p>而要開始一個專案，會涉及『啟動』、『規劃』、『執行』、『交付驗收』四個階段：</p>
+<h5 id="啟動明確目標">啟動：明確目標</h5>
+<p>一定是有需求，才會有專案。而需求的產生可能是是看到某些機會，進而形成策略，接著產生了需求，最終產生專案。所以當接觸一個專案時，應該往前了解這個專案是為了解決什麼問題，而解決的策略為何，了解了專案的全貌，也比較好去啟動整個專案。</p>
+<p><img src="https://i.imgur.com/LxGAF0w.png" alt=""></p>
+<p><em>圖片來源：商業思維學院-專案管理學程</em></p>
+<h5 id="規劃消除不確定性">規劃：消除不確定性</h5>
+<p>在啟動之後，會開始規劃專案。通常一開始規劃的是一個草案，還有許多的不確定性，比方說：資源是否充足、關鍵人才是否到位、需求是否明確等等，必須將這些不確定性一一解決，最後產生出第二版可執行計畫。</p>
+<p>註：什麼是不確定性？人力不確定是否充足、需求不明確、預算不確定高低&hellip;等等皆為專案的不確定性。</p>
+<p><img src="https://i.imgur.com/dtQV8Em.png" alt=""></p>
+<p><em>圖片來源：商業思維學院-專案管理學程</em></p>
+<h5 id="執行精準執行變更管理">執行：精準執行＆變更管理</h5>
+<p>如果在規劃階段把不確定性排除，規劃執行基本上是不會有太大的問題。但如果其中有某些部分可能規劃的不夠完善，或是內部人力調動、外部阻力等，專案就會產生變更。
+不過並非所有發生的事都會執行變更，會依照事件的優先重要程度來判斷是否需要執行。</p>
+<p><img src="https://i.imgur.com/mt95qq3.png" alt=""></p>
+<p><em>圖片來源：商業思維學院-專案管理學程</em></p>
+<h5 id="交付驗收專注於交付成果">交付驗收：專注於交付成果</h5>
+<p>依照先前規劃的 Schedule 來逐步驗收成果，驗收標準是在規劃階段就決定好的<strong>允收準則</strong>（完成時的品質、功能&hellip;等），驗收者會藉由允收準則來驗收執行階段完成的<strong>交付物</strong>，或交付物符合標準即驗證完成。</p>
+<p><img src="https://i.imgur.com/E8VrCHT.png" alt=""></p>
+<p><em>圖片來源：商業思維學院-專案管理學程</em></p>
+<br/>
+<h3 id=_專案管理管什麼>專案管理管什麼？</h3>
+<hr>
+<p>專案管理主要在識別不確定性（規劃）以及管理變更（執行）。在專案管理的四個階段中，啟動及驗收兩階段基本上決定之後就不會有太大的變動，
+但規劃及執行這兩階段的變動率則相對高很多，可能因為某個部門無法提供資源而導致需要改變計畫，這時執行中的專案可能就會面臨需要變更的情況。</p>
+<p>比方說：原本公司沒有網頁設計師可以設計 Landing Page，所以規劃時預計要招募一個設計師，但最後在專案開始執行之後還沒有找到適合的人選，這時執行階段的人力就會產生變更，可能工程師必須要自己設計頁面才可以。</p>
+<p><img src="https://i.imgur.com/jnV3Hh7.png" alt=""></p>
+<p><em>圖片來源：商業思維學院-專案管理學程</em></p>
+<p>可以用這六個面向來盤點專案的不確定性。</p>
+<table>
+<thead>
+<tr>
+<th align="left">面向</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">技術</td>
+<td align="left">技術可行性？</td>
+</tr>
+<tr>
+<td align="left">需求</td>
+<td align="left">需求明確程度？</td>
+</tr>
+<tr>
+<td align="left">預算</td>
+<td align="left">預算足夠？現金到位？</td>
+</tr>
+<tr>
+<td align="left">人力</td>
+<td align="left">人力足夠？關鍵人才到位？</td>
+</tr>
+<tr>
+<td align="left">時程</td>
+<td align="left">時程符合？</td>
+</tr>
+<tr>
+<td align="left">資源</td>
+<td align="left">資源到位？</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h5 id="降低不確定性">降低不確定性</h5>
+<p>工程師需要等設計師完成網頁設計後才可以開始開發網頁，這時我們應該如何降低不確定性？是設計師的口頭保證？還是應該有計畫？
+PM 應該要看到證據，而不是相信保證。</p>
+<p>為了可以有效的管理專案， PM 應該請設計師提供計畫，並逐步驗收，若是中間遇到一些問題或是困難，也有緩衝時間可以做變更。</p>
+<ul>
+<li>提供計畫</li>
+<li>階段性驗收</li>
+</ul>
+<br/>
+<p>其實不確定性隨著專案的推進，有可能會演變成風險，若是放任不管，可能會引發重大問題，所以<strong>專案管理基本上就是風險管理</strong>。</p>
+<pre><code>專案管理 = 風險管理
+</code></pre>
+<br/>
+<h3 id=_resource>Resource</h3>
+<hr>
+<ul>
+<li><a href="https://bizthinking.com.tw/refer/?raf=ianjustin39@gmail.com" target="_blank">商業思維學院-專案管理學程</a></li>
+</ul>
+
+  </div>
+  <br>
+  <br>
+  <div class="pagination">
+  
+    <a href="/ianlife/django-rest-framework/jwt-auth/" class="button">
+      <div class="previous">
+        <div>用 JWT 實作 Django rest 身份驗證</div>
+      </div>
+    </a>
+  
+  
+</div>
+
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%AD%B8%E7%BF%92%E6%80%8E%E9%BA%BC%E7%AE%A1%E7%90%86%E5%B0%88%E6%A1%88">學習怎麼管理專案</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E5%95%86%E6%A5%AD%E6%80%9D%E7%B6%AD%E5%AD%B8%E9%99%A2">商業思維學院</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86">專案管理</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+
+        <div class="disqus markdown">
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+      </main>
+      
+      <div id="page-sidebar">
+        
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div>
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e4%bb%80%e9%ba%bc%e6%98%af%e5%b0%88%e6%a1%88%e4%bb%80%e9%ba%bc%e6%98%af%e5%b0%88%e6%a1%88%e7%ae%a1%e7%90%86">
+												 什麼是專案？什麼是專案管理？
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%be%9e%e4%ba%8c%e5%8d%81%e5%93%a9%e8%a1%8c%e8%bb%8d%e7%9c%8b%e5%b0%88%e6%a1%88%e7%ae%a1%e7%90%86%e7%9a%84%e9%87%8d%e8%a6%81%e6%80%a7">
+												 從二十哩行軍看專案管理的重要性
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e4%b8%80%e5%80%8b%e5%b0%88%e6%a1%88%e7%9a%84%e9%97%9c%e9%8d%b5%e8%a6%81%e7%b4%a0">
+												 一個專案的關鍵要素
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e5%b0%88%e6%a1%88%e7%ae%a1%e7%90%86%e7%ae%a1%e4%bb%80%e9%ba%bc">
+												 專案管理管什麼？
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_resource">
+												 Resource
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+        <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2fbizthinking%2fbasic-concept-of-project-management%2f" width="100%"
+  frameborder=0></iframe>
+ 
+        <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script src="/ianlife/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+      </div>
+    </div>
+    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+  </body>
+</html>

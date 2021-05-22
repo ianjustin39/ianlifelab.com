@@ -4,12 +4,12 @@
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/blog/</loc>
-    <lastmod>2021-05-16T00:00:00+00:00</lastmod>
+    <lastmod>2021-05-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/categories/</loc>
-    <lastmod>2021-05-16T00:00:00+00:00</lastmod>
+    <lastmod>2021-05-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -20,6 +20,76 @@
                 hreflang="zh"
                 href="https://ianjustin39.github.io/ianlife/categories/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/categories/learning/</loc>
+    <lastmod>2021-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/</loc>
+    <lastmod>2021-05-22T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianjustin39.github.io/ianlife/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianjustin39.github.io/ianlife/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/series/</loc>
+    <lastmod>2021-05-22T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianjustin39.github.io/ianlife/en/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianjustin39.github.io/ianlife/series/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/</loc>
+    <lastmod>2021-05-22T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianjustin39.github.io/ianlife/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianjustin39.github.io/ianlife/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/bizthinking/basic-concept-of-project-management/</loc>
+    <lastmod>2021-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/%E5%95%86%E6%A5%AD%E6%80%9D%E7%B6%AD%E5%AD%B8%E9%99%A2/</loc>
+    <lastmod>2021-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/series/%E5%AD%B8%E7%BF%92%E6%80%8E%E9%BA%BC%E7%AE%A1%E7%90%86%E5%B0%88%E6%A1%88/</loc>
+    <lastmod>2021-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2021-05-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -38,51 +108,6 @@
   </url>
   
   <url>
-    <loc>https://ianjustin39.github.io/ianlife/</loc>
-    <lastmod>2021-05-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ianjustin39.github.io/ianlife/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ianjustin39.github.io/ianlife/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/series/</loc>
-    <lastmod>2021-05-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ianjustin39.github.io/ianlife/en/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ianjustin39.github.io/ianlife/series/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/</loc>
-    <lastmod>2021-05-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ianjustin39.github.io/ianlife/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ianjustin39.github.io/ianlife/tags/"
-                />
-  </url>
-  
-  <url>
     <loc>https://ianjustin39.github.io/ianlife/categories/tech/</loc>
     <lastmod>2021-05-16T00:00:00+00:00</lastmod>
   </url>
@@ -90,11 +115,6 @@
   <url>
     <loc>https://ianjustin39.github.io/ianlife/django-rest-framework/jwt-auth/</loc>
     <lastmod>2021-05-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/learning/</loc>
-    <lastmod>2021-05-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
