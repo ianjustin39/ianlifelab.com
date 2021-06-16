@@ -6,10 +6,25 @@
     <description>Recent content in TECH on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 16 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jun 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>無視礦工，以太坊的倫敦硬分叉</title>
+      <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain/ethereum-london-hard-fork/</link>
+      <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain/ethereum-london-hard-fork/</guid>
+      <description>前言  現今以太坊的手續費過於昂貴，交易者需要付出高額的手續費才可以完成交易。 這次的 Ethereum London Hard Fork （倫敦硬分叉）所做的更新，包含了 EIP-1559、EIP-3198、EIP-3238 三個提案， 其中 EIP-1559 也是這次比較備受關注的部分。
+EIP 是什麼？  EIP(Ethereum Improvement Proposals)，是為以太坊指定潛在新功能或流程的標準，包含提議更改的技術規範。通過 EIP 流程討論和開發以太坊的網絡升級和應用標準。
+提案一： EIP-1559（區塊鏈交易費用模型）  EIP-1559 是對用戶在以太坊網絡上支付 gas 費用方式的更改。（由於現在以太坊交易手續費過高，降低對用戶的吸引力）
+ 以往：礦工可以賺的收入「挖礦獎勵」跟「 100% Gas fee 」 EIP 1559 ： gas fee 分為基礎費（base fee）和小費兩種，給礦工的是「小費」； base fee 的 50% 會直接銷毀。  EIP-1559 也導入目標塊容量機制，每個區塊的基本費用根據網絡需求而變化。如果一個區塊的交易量超過 50%，則基本費用將增加，低於 50% 的話基本費則會下降。 而基本費可能會隨著交易加入 block 時發生改變，可以先將 price 設定成願意支付的上限，最後沒用到的部分會退還。
+這個提案重點在於基本費會被銷毀，並不會所有的 gas fee 都讓礦工拿走。而也藉由『銷毀』機制，讓以太幣的供應量下降，避免通貨膨脹。
+交易格式的差異 以下部分段程式碼是從 EIP-1559 擷取。
+新交易格式內的 base_fee_per_gas ＆ priority_fee_per_gas 取代了以往的 Legacy Ethereum transactions 的 gas_price。 但 EIP-1559 可以相容 Legacy Ethereum transactions 的格式。 雖然現有的交易格式仍然有效且也被包含在 block 中，不過 Legacy transactions 沒辦法享有新的 pricing system 所帶來的優點。</description>
+    </item>
     
     <item>
       <title>用 JWT 實作 Django rest 身份驗證</title>
