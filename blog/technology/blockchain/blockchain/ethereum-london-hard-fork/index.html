@@ -305,7 +305,7 @@ if (!doNotTrack) {
 <p>以下部分段程式碼是從
 <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md" target="_blank">EIP-1559</a>
 擷取。</p>
-<p>新交易格式內的 <code>base_fee_per_gas</code> ＆ <code>priority_fee_per_gas</code> 取代了以往的 <strong>Legacy Ethereum transactions</strong> 的 <code>gas_price</code>。
+<p>新交易格式內的 <strong>base_fee_per_gas</strong> ＆ <strong>priority_fee_per_gas</strong> 取代了以往的 <strong>Legacy Ethereum transactions</strong> 的 <strong>gas_price</strong>。
 但 EIP-1559 <strong>可以相容</strong> Legacy Ethereum transactions 的格式。
 雖然現有的交易格式仍然有效且也被包含在 block 中，不過 Legacy transactions <strong>沒辦法</strong>享有新的 pricing system 所帶來的優點。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">@dataclass
@@ -370,7 +370,7 @@ if (!doNotTrack) {
 </code></pre></div><br>
 <h4 id=_計算-gas-fee>計算 gas fee</h4>
 <p>gas fee 會分為基礎費和小費兩種，base fee 會直接銷毀，「小費」會給礦工，沒有用到的部分則會返回給交易者。</p>
-<p>這邊第一步會判斷地址的 balance 是否有辦法負擔 <code>base fee</code>，如果有的話就會繼續往下計算 <code>fee_per_gas</code> 以及 <code>priority_fee_per_gas</code>，這邊就不逐一解釋程式碼了。</p>
+<p>這邊第一步會判斷地址的 balance 是否有辦法負擔 <strong>base fee</strong>，如果有的話就會繼續往下計算 <strong>fee_per_gas</strong> 以及 <strong>priority_fee_per_gas</strong>，這邊就不逐一解釋程式碼了。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#ff79c6">for</span> unnormalized_transaction <span style="color:#ff79c6">in</span> transactions:
 			<span style="color:#6272a4"># Note: this validates transaction signature and chain ID which must happen before we normalize below since normalized transactions don&#39;t include signature or chain ID</span>
@@ -411,7 +411,7 @@ if (!doNotTrack) {
 
 </code></pre></div><br>
 <h4 id=_交易順序>交易順序</h4>
-<p>多數的人不會在 <code>priority fees</code> 去做競爭，所以基本上以相同優先度會依照交易時間來進行排序。</p>
+<p>多數的人不會在 <strong>priority fees</strong> 去做競爭，所以基本上以相同優先度會依照交易時間來進行排序。</p>
 <br>
 <h3 id=_提案二-eip-3198basefee-操作碼>提案二： EIP-3198（BASEFEE 操作碼）</h3>
 <hr>
