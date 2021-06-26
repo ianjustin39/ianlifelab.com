@@ -93,31 +93,6 @@
   </url>
   
   <url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/learning/</loc>
-    <lastmod>2021-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/project-management/basic-concept-of-project-management/</loc>
-    <lastmod>2021-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/%E5%95%86%E6%A5%AD%E6%80%9D%E7%B6%AD%E5%AD%B8%E9%99%A2/</loc>
-    <lastmod>2021-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/series/%E5%AD%B8%E7%BF%92%E6%80%8E%E9%BA%BC%E7%AE%A1%E7%90%86%E5%B0%88%E6%A1%88/</loc>
-    <lastmod>2021-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/%E5%B0%88%E6%A1%88%E7%AE%A1%E7%90%86/</loc>
-    <lastmod>2021-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ianjustin39.github.io/ianlife/series/django-rest-framework/</loc>
     <lastmod>2021-05-16T00:00:00+00:00</lastmod>
   </url>
@@ -135,6 +110,11 @@
   <url>
     <loc>https://ianjustin39.github.io/ianlife/django-rest-framework/jwt-auth/</loc>
     <lastmod>2021-05-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/categories/learning/</loc>
+    <lastmod>2021-05-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
