@@ -4,12 +4,12 @@
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/blog/</loc>
-    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/categories/</loc>
-    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-24T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -24,12 +24,12 @@
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/categories/learning/</loc>
-    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/</loc>
-    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-24T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -43,18 +43,8 @@
   </url>
   
   <url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/retrospective/</loc>
-    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/series/retrospective/</loc>
-    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ianjustin39.github.io/ianlife/series/</loc>
-    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-24T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -69,7 +59,7 @@
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/tags/</loc>
-    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-24T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -83,6 +73,31 @@
   </url>
   
   <url>
+    <loc>https://ianjustin39.github.io/ianlife/read/11-writing-lesson/</loc>
+    <lastmod>2021-07-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%8F%BE%E5%9C%A8%E9%96%8B%E5%A7%8B%E8%AA%8D%E7%9C%9F%E8%AE%80%E6%9B%B8/</loc>
+    <lastmod>2021-07-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97/</loc>
+    <lastmod>2021-07-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/retrospective/</loc>
+    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/series/retrospective/</loc>
+    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ianjustin39.github.io/ianlife/retro/2021_q1q2/</loc>
     <lastmod>2021-07-03T00:00:00+00:00</lastmod>
   </url>
@@ -93,17 +108,7 @@
   </url>
   
   <url>
-    <loc>https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%8F%BE%E5%9C%A8%E9%96%8B%E5%A7%8B%E8%AA%8D%E7%9C%9F%E8%AE%80%E6%9B%B8/</loc>
-    <lastmod>2021-06-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ianjustin39.github.io/ianlife/read/understand-a-book/</loc>
-    <lastmod>2021-06-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97/</loc>
     <lastmod>2021-06-27T00:00:00+00:00</lastmod>
   </url>
   
