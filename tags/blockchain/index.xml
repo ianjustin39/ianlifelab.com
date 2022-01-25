@@ -13,10 +13,10 @@
     
     <item>
       <title>Polkadot Parse</title>
-      <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain/polkadot/</link>
+      <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/polkadot/</link>
       <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain/polkadot/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/polkadot/</guid>
       <description>What is DOT? DOT is the native token of the Polkadot network in a similar way that BTC is the native token of Bitcoin or ether is the native token of the Ethereum blockchain.
 The smallest unit of account in a Substrate network (Polkadot, Kusama, etc.) is the Planck. Kusama tokens (KSM) are equal to 1e12 Planck, and Polkadot mainnet DOT are equal to 1e10 Planck.
 1 Dot (DOT) = 10000000000 Planck</description>

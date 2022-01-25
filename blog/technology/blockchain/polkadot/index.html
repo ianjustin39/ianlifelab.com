@@ -1,0 +1,1953 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+  <meta content="Polkadot, Polkadot transaction, Polkadot payload" name="keywords">
+  <link rel="stylesheet" href="https://ianjustin39.github.io/ianlife/%20css/search.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  
+  
+  
+  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
+  <script src="/ianlife/js/bootstrap.js"></script>
+  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
+  
+  
+  
+  <script src="../js/jquery.magnific-popup.js"></script>
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="/ianlife/js/toc.js"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+  <script>
+   window.onload = function () {
+    let plantumlPrefix = "language-plantuml";
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
+      let image = document.createElement("IMG");
+      image.loading = 'lazy'; 
+      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
+      code.parentNode.insertBefore(image, code);
+      code.style.display = 'none';
+    });
+  };
+  </script>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta charset="utf-8">
+<title>Polkadot Parse - Ian Tsai </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="Polkadot Parse">
+<meta itemprop="description" content="DOT is the native token of the Polkadot network in a similar way that BTC is the native token of Bitcoin or ether is the native token of the Ethereum blockchain.">
+<meta itemprop="datePublished" content="2021-10-11T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-10-11T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1480">
+<meta itemprop="image" content="https://i.imgur.com/ZSYGxEF.png">
+
+
+
+<meta itemprop="keywords" content="Blockchain," /><meta property="og:title" content="Polkadot Parse" />
+<meta property="og:description" content="DOT is the native token of the Polkadot network in a similar way that BTC is the native token of Bitcoin or ether is the native token of the Ethereum blockchain." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/blog/technology/blockchain/polkadot/" />
+<meta property="og:image" content="https://i.imgur.com/ZSYGxEF.png" />
+<meta property="article:published_time" content="2021-10-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-10-11T00:00:00+00:00" /><meta property="og:see_also" content="https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain/ethereum-london-hard-fork/" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://i.imgur.com/ZSYGxEF.png"/>
+
+<meta name="twitter:title" content="Polkadot Parse"/>
+<meta name="twitter:description" content="DOT is the native token of the Polkadot network in a similar way that BTC is the native token of Bitcoin or ether is the native token of the Ethereum blockchain."/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+        <link rel="stylesheet" href="/ianlife/css/add-on.css">
+</head>
+
+  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
+  
+  
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ianlife/">
+        
+          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/blog/" class="link"><i class='fas fa-pencil-alt'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/%08product" class="link"><i class='fas fa-box'></i> Product</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/life" class="link"><i class='fa fa-plane'></i> Life</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/learning" class="link"><i class='fa fa-book'></i> Learning</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/tech" class="link"><i class='fa fa-laptop'></i> Tech</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+      
+      
+
+      <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
+        <span id="searchGlyph" class="glyphicon glyphicon-search"><i class="fas fa-search"></i></span></a>
+    </menu>
+    
+
+    
+    <a href="#lang-menu" class="lang-toggle" lang="zh">zh</a>
+    <a href="#site-nav-menu" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+ 
+ 
+  <menu id="lang-menu" class="flyout-menu">
+  <a href="#" lang="zh" class="link active">中文 (zh)</a>
+  
+    
+      
+        <a href="/ianlife/en" lang="en" class="no-lang link">English (en)</a>
+      
+    
+      
+    
+  
+</menu>
+
+  
+</header>
+
+<div id="modalSearch" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">文章搜尋</h4><button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="aa-input-container" id="aa-input-container">
+  <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for titles or URIs..."
+    name="search" autocomplete="off" />
+  <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
+    <path
+      d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z" />
+  </svg>
+</div>
+<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/algoliasearch.min.js"></script>
+<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/autocomplete.min.js"></script>
+<script>
+  var client = algoliasearch("WTW32P5SNJ", "2e16477f048bc4528b166dfd1eb4804d");
+  var index = client.initIndex("blog");
+  autocomplete('#aa-search-input',
+    { hint: false }, {
+    source: autocomplete.sources.hits(index, { hitsPerPage: 20 }),
+    displayKey: 'name',
+    templates: {
+      suggestion: function (suggestion) {
+        return '<span>' + '<a href="' + suggestion.relpermalink + '">' +
+          suggestion.title + '</a></span>';
+      }
+    }
+  });
+
+  $('#searchGlyph').click(function() {
+    setTimeout(function(){
+      $('#aa-search-input').focus();
+    },300);
+  });
+</script>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div id="wrapper">
+      
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/%E5%8D%80%E5%A1%8A%E9%8F%88"><p>區塊鏈</p></a>
+    
+    <h3><a href="/ianlife/blog/technology/blockchain/polkadot/">Polkadot Parse</a></h3>
+    
+    
+    <p style="margin-top: 0px;">DOT is the native token of the Polkadot network in a similar way that BTC is the native token of Bitcoin or ether is the native token of the Ethereum blockchain.</p>
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2021-10-11 00:00:00 &#43;0000 UTC">
+      October 11, 2021
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>7 minute read</p>
+    
+    <p>
+      <span id="busuanzi_container_page_pv">
+        PV: <span id="busuanzi_value_page_pv"></span>
+      </span>
+    </p>
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+  </section>
+  
+  <a href="/ianlife/blog/technology/blockchain/polkadot/" class="image featured">
+    
+      <img src="https://i.imgur.com/ZSYGxEF.png" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <br>
+<br>
+<br>
+<h3 id=_what-is-dot>What is DOT?</h3>
+<p>DOT is the native token of the Polkadot network in a similar way that BTC is the native token of Bitcoin or ether is the native token of the Ethereum blockchain.</p>
+<p>The smallest unit of account in a Substrate network (Polkadot, Kusama, etc.) is the Planck. Kusama tokens (KSM) are equal to 1e12 Planck, and Polkadot mainnet DOT are equal to 1e10 Planck.</p>
+<p>1 Dot (DOT)  = 10000000000 Planck</p>
+<h3 id=_address-formathttpswikipolkadotnetworkdocsenlearn-accounts><a href="https://wiki.polkadot.network/docs/en/learn-accounts">Address Format</a></h3>
+<p>The address format used in Substrate-based chains is <a href="https://github.com/polkadot-js/ss58">SS58</a>. The format contains an address type prefix that identifies an address as belonging to a specific network.</p>
+<ul>
+<li>Polkadot addresses always start with the number 1.</li>
+<li>Kusama addresses always start with a capital letter like C, D, F, G, H, J&hellip;</li>
+<li>Generic <a href="https://substrate.dev/docs/en/knowledgebase/integrate/subkey">Substrate</a> addresses start with 5.</li>
+</ul>
+<p>These prefixes are defined <a href="https://github.com/polkadot-js/ss58/blob/master/index.js">here</a>.</p>
+<p>SS58</p>
+<ul>
+<li><a href="https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)">https://github.com/paritytech/substrate/wiki/External-Address-Format-(SS58)</a></li>
+<li><a href="https://github.com/polkadot-js/ss58">https://github.com/polkadot-js/ss58</a></li>
+</ul>
+<p>Subkey</p>
+<ul>
+<li><a href="https://github.com/paritytech/substrate/tree/master/bin/utils/subkey">https://github.com/paritytech/substrate/tree/master/bin/utils/subkey</a></li>
+<li><a href="https://substrate.dev/docs/en/knowledgebase/integrate/subkey">https://substrate.dev/docs/en/knowledgebase/integrate/subkey</a></li>
+</ul>
+<h3 id=_address-generation-derivation-and-portability>Address Generation, Derivation, and Portability</h3>
+<h4 id=_seed-generation>Seed Generation</h4>
+<p>BIP39</p>
+<h4 id=_derivation-paths>Derivation Paths</h4>
+<p>BIP44</p>
+<h4 id=_portability>Portability</h4>
+<h3 id=_npos>NPoS</h3>
+<ol>
+<li>可以 nominate up to 16 validators（不一定要，但可以這樣）</li>
+<li>每個 validator 都獲得相同的獎勵</li>
+</ol>
+<h3 id=_tx-wrapper>Tx Wrapper</h3>
+<p>Polkadot網絡上需要1 DOT的現有存量（ED），兩種主要的方式將資金從一個帳戶轉移到另一個帳戶。</p>
+<ol>
+<li>transfer：無論後果如何，都可以發送DOT。</li>
+<li>transfer_keep_alive：若發送後金額低於 1 DOT，不允許發送。</li>
+</ol>
+<h3 id=_交易類型>交易類型</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">target address 五個以下 ：<span style="color:#8be9fd;font-style:italic">hash</span> 一次
+payload 長度（五個）：<span style="color:#bd93f9">488</span>
+
+target address 六個以上 ：<span style="color:#8be9fd;font-style:italic">hash</span> 兩次
+payload 長度（六個）：<span style="color:#bd93f9">566</span>
+
+差一個 target (長度 <span style="color:#bd93f9">66</span>），判斷長度分界應該是 <span style="color:#bd93f9">512</span> 。由於一般交易的長度現階段不太可能超過 <span style="color:#bd93f9">512</span> ，所以就只先修 nominate 的部分。
+</code></pre></div><p>transfer, bond, bond extra, unbond, nominate, withdraw unbonded</p>
+<h4 id=_transfer>transfer</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tsx" data-lang="tsx">{
+  address: <span style="color:#8be9fd">string</span>; <span style="color:#6272a4">// ss58
+</span><span style="color:#6272a4"></span>  blockHash: <span style="color:#8be9fd">string</span>;
+  blockNumber: <span style="color:#8be9fd">string</span>;
+	era: <span style="color:#8be9fd">string</span>;
+  genesisHash: <span style="color:#8be9fd">string</span>;
+  method: <span style="color:#8be9fd">string</span>;
+  nonce: <span style="color:#8be9fd">string</span>;
+  specVersion: <span style="color:#8be9fd">string</span>;
+  tip: <span style="color:#8be9fd">string</span>;
+  transactionVersion: <span style="color:#8be9fd">string</span>;
+  signedExtensions: <span style="color:#8be9fd">string</span>[];
+  version: <span style="color:#8be9fd">number</span>;
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tsx" data-lang="tsx">{
+      address: <span style="color:#8be9fd">address.toString</span>(),
+      blockHash: <span style="color:#8be9fd">blockHash.toHex</span>(),
+      blockNumber: <span style="color:#8be9fd">blockNumber.toHex</span>(),
+      era: <span style="color:#8be9fd">era.toHex</span>(),
+      genesisHash: <span style="color:#8be9fd">genesisHash.toHex</span>(),
+      method: <span style="color:#8be9fd">method.toHex</span>(),
+      nonce: <span style="color:#8be9fd">nonce.toHex</span>(),
+      signedExtensions: <span style="color:#8be9fd">signedExtensions.map</span>((e) <span style="color:#ff79c6">=&gt;</span> e.toString()),
+      specVersion: <span style="color:#8be9fd">specVersion.toHex</span>(),
+      tip: <span style="color:#8be9fd">tip.toHex</span>(),
+      transactionVersion: <span style="color:#8be9fd">transactionVersion.toHex</span>(),
+      version: <span style="color:#8be9fd">version.toNumber</span>()
+ }
+</code></pre></div><h5 id="input">input</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tsx" data-lang="tsx">{
+      value<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;90071992547409910&#39;</span>,
+      dest<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#39;</span>, <span style="color:#6272a4">// Bob
+</span><span style="color:#6272a4"></span>    },
+    {
+      <span style="color:#6272a4">// address: deriveAddress(alice.publicKey, POLKADOT_SS58_FORMAT),
+</span><span style="color:#6272a4"></span>      address<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;13v5sr4E8TLLfnA6ytPQwkA5HsEivYFpvaBATj5dDyDa38mY&#39;</span>,
+      blockHash<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a&#39;</span>,
+      blockNumber: <span style="color:#8be9fd">999</span>,
+      eraPeriod: <span style="color:#8be9fd">256</span>,
+      genesisHash<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3&#39;</span>,
+      metadataRpc: <span style="color:#8be9fd">metadataRpc</span>,
+      nonce: <span style="color:#8be9fd">33</span>, 
+      specVersion: <span style="color:#8be9fd">666</span>,
+      tip: <span style="color:#8be9fd">22</span>,
+      transactionVersion: <span style="color:#8be9fd">333</span>,
+    }
+}
+</code></pre></div><h5 id="unsign-data">unsign data</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tsx" data-lang="tsx">{
+  metadataRpc<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;&#39;</span>,
+  address<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;13v5sr4E8TLLfnA6ytPQwkA5HsEivYFpvaBATj5dDyDa38mY&#39;</span>,
+  blockHash<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a&#39;</span>,
+  blockNumber<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x000003e7&#39;</span>,
+  era<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x770e&#39;</span>,
+  genesisHash<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3&#39;</span>,
+  method<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x0500008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a4813f6ffffffffff3f01&#39;</span>,
+  nonce<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x00000021&#39;</span>,
+  signedExtensions<span style="color:#ff79c6">:</span> [
+    <span style="color:#f1fa8c">&#39;CheckSpecVersion&#39;</span>,
+    <span style="color:#f1fa8c">&#39;CheckTxVersion&#39;</span>,
+    <span style="color:#f1fa8c">&#39;CheckGenesis&#39;</span>,
+    <span style="color:#f1fa8c">&#39;CheckMortality&#39;</span>,
+    <span style="color:#f1fa8c">&#39;CheckNonce&#39;</span>,
+    <span style="color:#f1fa8c">&#39;CheckWeight&#39;</span>,
+    <span style="color:#f1fa8c">&#39;ChargeTransactionPayment&#39;</span>,
+    <span style="color:#f1fa8c">&#39;PrevalidateAttests&#39;</span>
+  ],
+  specVersion<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x0000029a&#39;</span>,
+  tip<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x00000000000000000000000000000016&#39;</span>,
+  transactionVersion<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x0000014d&#39;</span>,
+  version: <span style="color:#8be9fd">4</span>
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">const data: types.NormalMethod = {
+  fromAddress: &#39;13v5sr4E8TLLfnA6ytPQwkA5HsEivYFpvaBATj5dDyDa38mY&#39;,
+  blockHash: &#39;0x5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a&#39;,
+  blockNumber: &#39;999&#39;,
+  era: &#39;256&#39;,
+  genesisHash: &#39;0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3&#39;,
+  nonce: &#39;33&#39;,
+  specVersion: &#39;666&#39;,
+  tip: &#39;22&#39;,
+  transactionVersion: &#39;333&#39;,
+  version: 4,
+  method: {
+    value: &#39;90071992547409910&#39;,
+    destAddress: &#39;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#39;, // Bob
+    pallet: &#39;&#39;,
+    name: &#39;&#39;
+  }
+}
+</code></pre></div><h5 id="method">method</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">hex:
+0x0500  pallet + name
+00
+8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+13f6ffffffffff3f01
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tsx" data-lang="tsx">json<span style="color:#ff79c6">:</span>
+{
+   <span style="color:#f1fa8c">&#34;callIndex&#34;</span><span style="color:#ff79c6">:</span><span style="color:#f1fa8c">&#34;0x0500&#34;</span>,
+   <span style="color:#f1fa8c">&#34;args&#34;</span><span style="color:#ff79c6">:</span>{
+      <span style="color:#f1fa8c">&#34;dest&#34;</span><span style="color:#ff79c6">:</span>{
+         <span style="color:#f1fa8c">&#34;Id&#34;</span><span style="color:#ff79c6">:</span><span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span><span style="color:#f1fa8c">&#34;0x0000000000000000013ffffffffffff6&#34;</span>
+   }
+}
+</code></pre></div><p><a href="https://substrate.dev/docs/zh-CN/knowledgebase/advanced/codec">SCALE Codec</a></p>
+<ul>
+<li><code>0b00</code>: single-byte mode; upper six bits are the LE encoding of the value (valid only for values of 0-63).</li>
+<li><code>0b01</code>: two-byte mode: upper six bits and the following byte is the LE encoding of the value (valid only for values <code>64-(2**14-1)</code>).</li>
+<li><code>0b10</code>: four-byte mode: upper six bits and the following three bytes are the LE encoding of the value (valid only for values <code>(2**14)-(2**30-1)</code>).</li>
+<li><code>0b11</code>: Big-integer mode: The upper six bits are the number of bytes following, less four. The value is contained, LE encoded, in the bytes following. The final (most significant) byte must be non-zero. Valid only for values <code>(2**30)-(2**536-1)</code>.</li>
+</ul>
+<h5 id="payload">payload</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">hex:
+0xb0   method 長度 左shift 1 (0 or 1)
+0500   call index(pallet + name)
+00
+8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48   dest address
+13f6ffffffffff3f01   value
+770e   block num + eraPeriod 轉換
+84     nonce
+58     tip
+9a020000     spec ver
+4d010000     tx ver
+91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3   genesis hash
+5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a   block hash
+
+</code></pre></div><p>block num + eraPeriod：block number 轉二進位，era的n次方的個數字，後面加 n-1 的二進位。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">
+json:
+{
+   <span style="color:#ff79c6">&#34;blockHash&#34;</span>:<span style="color:#f1fa8c">&#34;0x5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a&#34;</span>,
+   <span style="color:#ff79c6">&#34;eraPeriod&#34;</span>:<span style="color:#bd93f9">256</span>,
+   <span style="color:#ff79c6">&#34;genesisHash&#34;</span>:<span style="color:#f1fa8c">&#34;0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3&#34;</span>,
+   <span style="color:#ff79c6">&#34;metadataRpc&#34;</span>:<span style="color:#f1fa8c">&#34;&#34;</span>,
+   <span style="color:#ff79c6">&#34;method&#34;</span>:{
+      <span style="color:#ff79c6">&#34;args&#34;</span>:{
+         <span style="color:#ff79c6">&#34;dest&#34;</span>:{
+            <span style="color:#ff79c6">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+         },
+         <span style="color:#ff79c6">&#34;value&#34;</span>:<span style="color:#f1fa8c">&#34;90071992547409910&#34;</span>
+      },
+      <span style="color:#ff79c6">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;transfer&#34;</span>,
+      <span style="color:#ff79c6">&#34;pallet&#34;</span>:<span style="color:#f1fa8c">&#34;balances&#34;</span>
+   },
+   <span style="color:#ff79c6">&#34;nonce&#34;</span>:<span style="color:#bd93f9">33</span>,
+   <span style="color:#ff79c6">&#34;specVersion&#34;</span>:<span style="color:#bd93f9">666</span>,
+   <span style="color:#ff79c6">&#34;tip&#34;</span>:<span style="color:#bd93f9">22</span>,
+   <span style="color:#ff79c6">&#34;transactionVersion&#34;</span>:<span style="color:#bd93f9">333</span>
+}
+</code></pre></div><h5 id="submit-transaction">Submit Transaction</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+   <span style="color:#ff79c6">&#34;signature&#34;</span>:{
+      <span style="color:#ff79c6">&#34;signer&#34;</span>:{
+         <span style="color:#ff79c6">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;13v5sr4E8TLLfnA6ytPQwkA5HsEivYFpvaBATj5dDyDa38mY&#34;</span>
+      },
+      <span style="color:#ff79c6">&#34;signature&#34;</span>:{
+         <span style="color:#ff79c6">&#34;Ed25519&#34;</span>:<span style="color:#f1fa8c">&#34;0xc9b652d557b520ab927b55cf27a218f035ddb682ce6d631febd3830f7b063fd4941cec54ef1b14e64830fe495a58e751d9dc92811579b449c57ca989564e930d&#34;</span>
+      },
+      <span style="color:#ff79c6">&#34;era&#34;</span>:{
+         <span style="color:#ff79c6">&#34;MortalEra&#34;</span>:<span style="color:#f1fa8c">&#34;0x770e&#34;</span>
+      },
+      <span style="color:#ff79c6">&#34;nonce&#34;</span>:<span style="color:#bd93f9">33</span>,
+      <span style="color:#ff79c6">&#34;tip&#34;</span>:<span style="color:#bd93f9">22</span>
+   },
+   <span style="color:#ff79c6">&#34;method&#34;</span>:{
+      <span style="color:#ff79c6">&#34;callIndex&#34;</span>:<span style="color:#f1fa8c">&#34;0x0500&#34;</span>,
+      <span style="color:#ff79c6">&#34;args&#34;</span>:{
+         <span style="color:#ff79c6">&#34;dest&#34;</span>:{
+            <span style="color:#ff79c6">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+         },
+         <span style="color:#ff79c6">&#34;value&#34;</span>:<span style="color:#f1fa8c">&#34;0x0000000000000000013ffffffffffff6&#34;</span>
+      }
+   }
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tsx" data-lang="tsx">
+			<span style="color:#bd93f9">0</span>x
+			<span style="color:#bd93f9">4</span>d02 
+ver format  <span style="color:#bd93f9">84</span>
+			<span style="color:#bd93f9">00</span>
+address 	<span style="color:#bd93f9">80</span>f4e3bd716d3f2c32a77a3423a669d8d5864c3a6fb504c281a229d3e4d836cc 
+signature 	<span style="color:#bd93f9">0188</span>ccf322696d4c5a9dd7dae01d72345dcbd26b9def1789f8cebfe6a143030723be15da6e75cd16618a031516adb93d2ddf71b810ddbff73429e4df08c9b36d81
+MortalEra	<span style="color:#bd93f9">9500</span>
+nonce		<span style="color:#bd93f9">84</span>
+tip			<span style="color:#bd93f9">58</span>
+method		<span style="color:#bd93f9">0500008</span>eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a4813f6ffffffffff3f01
+
+</code></pre></div><h4 id=_bond>Bond</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tsx" data-lang="tsx">{
+	address<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5&#39;</span>,
+  blockHash<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a&#39;</span>,
+  blockNumber<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x003c10a0&#39;</span>,
+  era<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x0502&#39;</span>,
+  genesisHash<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3&#39;</span>,
+  metadataRpc<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;很多字印不完&#39;</span>
+	method<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x0700008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a4813f6ffffffffff3f0101&#39;</span>,
+  nonce<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x00000000&#39;</span>,
+  signedExtensions<span style="color:#ff79c6">:</span> [
+    <span style="color:#f1fa8c">&#39;CheckSpecVersion&#39;</span>,
+    <span style="color:#f1fa8c">&#39;CheckTxVersion&#39;</span>,
+    <span style="color:#f1fa8c">&#39;CheckGenesis&#39;</span>,
+    <span style="color:#f1fa8c">&#39;CheckMortality&#39;</span>,
+    <span style="color:#f1fa8c">&#39;CheckNonce&#39;</span>,
+    <span style="color:#f1fa8c">&#39;CheckWeight&#39;</span>,
+    <span style="color:#f1fa8c">&#39;ChargeTransactionPayment&#39;</span>,
+    <span style="color:#f1fa8c">&#39;PrevalidateAttests&#39;</span>
+  ],
+  specVersion<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x0000001c&#39;</span>,
+  tip<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x00000000000000000000000000000000&#39;</span>,
+  transactionVersion<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;0x00000006&#39;</span>,
+  version: <span style="color:#8be9fd">4</span>
+</code></pre></div><h5 id="method-1">method</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">0x0700
+00
+8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+a10f
+01
+
+0x0700
+00
+8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+a10f
+00
+
+0x0700
+00
+8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+a10f
+02
+
+0x0700
+00
+8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+a10f
+03
+80f4e3bd716d3f2c32a77a3423a669d8d5864c3a6fb504c281a229d3e4d836cc
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">
+{
+   <span style="color:#f1fa8c">&#34;callIndex&#34;</span>:<span style="color:#f1fa8c">&#34;0x0700&#34;</span>,
+   <span style="color:#f1fa8c">&#34;args&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;controller&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;value&#34;</span>:1000,
+      <span style="color:#f1fa8c">&#34;payee&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;Stash&#34;</span>:null
+      }
+   }
+}
+
+{
+   <span style="color:#f1fa8c">&#34;callIndex&#34;</span>:<span style="color:#f1fa8c">&#34;0x0700&#34;</span>,
+   <span style="color:#f1fa8c">&#34;args&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;controller&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;value&#34;</span>:1000,
+      <span style="color:#f1fa8c">&#34;payee&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;Staked&#34;</span>:null
+      }
+   }
+}
+
+{
+   <span style="color:#f1fa8c">&#34;callIndex&#34;</span>:<span style="color:#f1fa8c">&#34;0x0700&#34;</span>,
+   <span style="color:#f1fa8c">&#34;args&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;controller&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;value&#34;</span>:1000,
+      <span style="color:#f1fa8c">&#34;payee&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;Controller&#34;</span>:null
+      }
+   }
+}
+
+{
+   <span style="color:#f1fa8c">&#34;callIndex&#34;</span>:<span style="color:#f1fa8c">&#34;0x0700&#34;</span>,
+   <span style="color:#f1fa8c">&#34;args&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;controller&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;value&#34;</span>:1000,
+      <span style="color:#f1fa8c">&#34;payee&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;Account&#34;</span>:<span style="color:#f1fa8c">&#34;13v5sr4E8TLLfnA6ytPQwkA5HsEivYFpvaBATj5dDyDa38mY&#34;</span>
+      }
+   }
+}
+</code></pre></div><h5 id="payload-1">payload</h5>
+<p>payee: { Account: &lsquo;13v5sr4E8TLLfnA6ytPQwkA5HsEivYFpvaBATj5dDyDa38mY&rsquo; }</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">0x98
+0700
+00
+8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+a10f
+01
+f503
+84
+2c
+9a020000
+4d010000
+91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3
+5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a
+---
+0x1901
+0700
+00
+8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+a10f
+03
+80f4e3bd716d3f2c32a77a3423a669d8d5864c3a6fb504c281a229d3e4d836cc
+f503
+84
+2c
+9a020000
+4d010000
+91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3
+5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">{
+   <span style="color:#f1fa8c">&#34;blockHash&#34;</span>:<span style="color:#f1fa8c">&#34;0x5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a&#34;</span>,
+   <span style="color:#f1fa8c">&#34;eraPeriod&#34;</span>:64,
+   <span style="color:#f1fa8c">&#34;genesisHash&#34;</span>:<span style="color:#f1fa8c">&#34;0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3&#34;</span>,
+   <span style="color:#f1fa8c">&#34;metadataRpc&#34;</span>:<span style="color:#f1fa8c">&#34;&#34;</span>,
+   <span style="color:#f1fa8c">&#34;method&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;args&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;controller&#34;</span>:{
+            <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+         },
+         <span style="color:#f1fa8c">&#34;value&#34;</span>:<span style="color:#f1fa8c">&#34;1000&#34;</span>,
+         <span style="color:#f1fa8c">&#34;payee&#34;</span>:{
+            <span style="color:#f1fa8c">&#34;Stash&#34;</span>:null
+         }
+      },
+      <span style="color:#f1fa8c">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;bond&#34;</span>,
+      <span style="color:#f1fa8c">&#34;pallet&#34;</span>:<span style="color:#f1fa8c">&#34;staking&#34;</span>
+   },
+   <span style="color:#f1fa8c">&#34;nonce&#34;</span>:33,
+   <span style="color:#f1fa8c">&#34;specVersion&#34;</span>:666,
+   <span style="color:#f1fa8c">&#34;tip&#34;</span>:11,
+   <span style="color:#f1fa8c">&#34;transactionVersion&#34;</span>:333
+}
+---
+{
+   <span style="color:#f1fa8c">&#34;blockHash&#34;</span>:<span style="color:#f1fa8c">&#34;0x5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a&#34;</span>,
+   <span style="color:#f1fa8c">&#34;eraPeriod&#34;</span>:64,
+   <span style="color:#f1fa8c">&#34;genesisHash&#34;</span>:<span style="color:#f1fa8c">&#34;0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3&#34;</span>,
+   <span style="color:#f1fa8c">&#34;metadataRpc&#34;</span>:<span style="color:#f1fa8c">&#34;&#34;</span>,
+   <span style="color:#f1fa8c">&#34;method&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;args&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;controller&#34;</span>:{
+            <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+         },
+         <span style="color:#f1fa8c">&#34;value&#34;</span>:<span style="color:#f1fa8c">&#34;1000&#34;</span>,
+         <span style="color:#f1fa8c">&#34;payee&#34;</span>:{
+            <span style="color:#f1fa8c">&#34;Staked&#34;</span>:null
+         }
+      },
+      <span style="color:#f1fa8c">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;bond&#34;</span>,
+      <span style="color:#f1fa8c">&#34;pallet&#34;</span>:<span style="color:#f1fa8c">&#34;staking&#34;</span>
+   },
+   <span style="color:#f1fa8c">&#34;nonce&#34;</span>:33,
+   <span style="color:#f1fa8c">&#34;specVersion&#34;</span>:666,
+   <span style="color:#f1fa8c">&#34;tip&#34;</span>:11,
+   <span style="color:#f1fa8c">&#34;transactionVersion&#34;</span>:333
+}
+</code></pre></div><h5 id="submit-transaction-1">Submit Transaction</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">0x
+3902
+84
+00
+80f4e3bd716d3f2c32a77a3423a669d8d5864c3a6fb504c281a229d3e4d836cc
+021f4be311ff5c5a396afda8945f4dbec412ddde53d481ec8fb12b7ecf66a12d4a69af1e8c28bd88ef6d13f12dcf4f98a550a6616717a2b430b2c44d76bfd0902300
+f503
+84
+2c
+	0700
+	00
+	8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+	a10f
+	01
+---
+0x
+b902
+84
+00
+80f4e3bd716d3f2c32a77a3423a669d8d5864c3a6fb504c281a229d3e4d836cc
+028321264b4408c61134c27636c31a5fd3561b82be49cf903d7cb7b9b25e57e80f40f416496073e5d884a9137a8d07c754bf2bef3f5cf876cc9f9400b3420c2b9600
+f503
+84
+2c
+	0700
+	00
+	8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+	a10f
+	03
+	80f4e3bd716d3f2c32a77a3423a669d8d5864c3a6fb504c281a229d3e4d836cc
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">{
+   <span style="color:#f1fa8c">&#34;signature&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;signer&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;13v5sr4E8TLLfnA6ytPQwkA5HsEivYFpvaBATj5dDyDa38mY&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;signature&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;Ecdsa&#34;</span>:<span style="color:#f1fa8c">&#34;0x8321264b4408c61134c27636c31a5fd3561b82be49cf903d7cb7b9b25e57e80f40f416496073e5d884a9137a8d07c754bf2bef3f5cf876cc9f9400b3420c2b9600&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;era&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;MortalEra&#34;</span>:<span style="color:#f1fa8c">&#34;0xf503&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;nonce&#34;</span>:33,
+      <span style="color:#f1fa8c">&#34;tip&#34;</span>:11
+   },
+   <span style="color:#f1fa8c">&#34;method&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;callIndex&#34;</span>:<span style="color:#f1fa8c">&#34;0x0700&#34;</span>,
+      <span style="color:#f1fa8c">&#34;args&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;controller&#34;</span>:{
+            <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+         },
+         <span style="color:#f1fa8c">&#34;value&#34;</span>:1000,
+         <span style="color:#f1fa8c">&#34;payee&#34;</span>:{
+            <span style="color:#f1fa8c">&#34;Account&#34;</span>:<span style="color:#f1fa8c">&#34;13v5sr4E8TLLfnA6ytPQwkA5HsEivYFpvaBATj5dDyDa38mY&#34;</span>
+         }
+      }
+   }
+}
+</code></pre></div><h4 id=_bondextra>BondExtra</h4>
+<h5 id="method-2">method</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">0x
+0701
+02286bee
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">{
+   <span style="color:#f1fa8c">&#34;callIndex&#34;</span>:<span style="color:#f1fa8c">&#34;0x0701&#34;</span>,
+   <span style="color:#f1fa8c">&#34;args&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;max_additional&#34;</span>:1000000000
+   }
+}
+</code></pre></div><h5 id="payload-2">payload</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">0x
+18
+0701
+02286bee
+f503
+84
+2c
+9a020000
+4d010000
+91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3
+5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">{
+   <span style="color:#f1fa8c">&#34;blockHash&#34;</span>:<span style="color:#f1fa8c">&#34;0x5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a&#34;</span>,
+   <span style="color:#f1fa8c">&#34;eraPeriod&#34;</span>:64,
+   <span style="color:#f1fa8c">&#34;genesisHash&#34;</span>:<span style="color:#f1fa8c">&#34;0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3&#34;</span>,
+   <span style="color:#f1fa8c">&#34;metadataRpc&#34;</span>:<span style="color:#f1fa8c">&#34;&#34;</span>,
+   <span style="color:#f1fa8c">&#34;method&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;args&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;maxAdditional&#34;</span>:<span style="color:#f1fa8c">&#34;1000000000&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;bondExtra&#34;</span>,
+      <span style="color:#f1fa8c">&#34;pallet&#34;</span>:<span style="color:#f1fa8c">&#34;staking&#34;</span>
+   },
+   <span style="color:#f1fa8c">&#34;nonce&#34;</span>:33,
+   <span style="color:#f1fa8c">&#34;specVersion&#34;</span>:666,
+   <span style="color:#f1fa8c">&#34;tip&#34;</span>:11,
+   <span style="color:#f1fa8c">&#34;transactionVersion&#34;</span>:333
+}
+</code></pre></div><h5 id="submit-transaction-2">Submit Transaction</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">0x
+b901
+84
+00
+80f4e3bd716d3f2c32a77a3423a669d8d5864c3a6fb504c281a229d3e4d836cc
+026d42b2f006dce23cccb071965365826965006f6765d9e6af4621808a1075ca99de46adc635e247e775b5a700dd12961b81a1076943fee5b542f4cdb006ecc28b01
+f503
+84
+2c
+	0701
+	02286bee
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">{
+   <span style="color:#f1fa8c">&#34;signature&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;signer&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;13v5sr4E8TLLfnA6ytPQwkA5HsEivYFpvaBATj5dDyDa38mY&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;signature&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;Ecdsa&#34;</span>:<span style="color:#f1fa8c">&#34;0x6d42b2f006dce23cccb071965365826965006f6765d9e6af4621808a1075ca99de46adc635e247e775b5a700dd12961b81a1076943fee5b542f4cdb006ecc28b01&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;era&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;MortalEra&#34;</span>:<span style="color:#f1fa8c">&#34;0xf503&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;nonce&#34;</span>:33,
+      <span style="color:#f1fa8c">&#34;tip&#34;</span>:11
+   },
+   <span style="color:#f1fa8c">&#34;method&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;callIndex&#34;</span>:<span style="color:#f1fa8c">&#34;0x0701&#34;</span>,
+      <span style="color:#f1fa8c">&#34;args&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;max_additional&#34;</span>:1000000000
+      }
+   }
+}
+</code></pre></div><h4 id=_unbond>Unbond</h4>
+<h5 id="method-3">method</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">0x
+0702
+419c
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">{<span style="color:#f1fa8c">&#34;callIndex&#34;</span>:<span style="color:#f1fa8c">&#34;0x0702&#34;</span>,<span style="color:#f1fa8c">&#34;args&#34;</span>:{<span style="color:#f1fa8c">&#34;value&#34;</span>:10000}}
+</code></pre></div><h5 id="payload-3">payload</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">0x10
+0702   call index(pallet + name)
+419c   value
+0502   block num + eraPeriod
+dc     nonce
+58     tip
+1c000000    spec ver
+06000000    tx ver
+91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3
+5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">{
+   <span style="color:#f1fa8c">&#34;blockHash&#34;</span>:<span style="color:#f1fa8c">&#34;0x5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a&#34;</span>,
+   <span style="color:#f1fa8c">&#34;eraPeriod&#34;</span>:64,
+   <span style="color:#f1fa8c">&#34;genesisHash&#34;</span>:<span style="color:#f1fa8c">&#34;0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3&#34;</span>,
+   <span style="color:#f1fa8c">&#34;metadataRpc&#34;</span>:<span style="color:#f1fa8c">&#34;&#34;</span>,
+   <span style="color:#f1fa8c">&#34;method&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;args&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;value&#34;</span>:<span style="color:#f1fa8c">&#34;10000&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;unbond&#34;</span>,
+      <span style="color:#f1fa8c">&#34;pallet&#34;</span>:<span style="color:#f1fa8c">&#34;staking&#34;</span>
+   },
+   <span style="color:#f1fa8c">&#34;nonce&#34;</span>:55,
+   <span style="color:#f1fa8c">&#34;specVersion&#34;</span>:28,
+   <span style="color:#f1fa8c">&#34;tip&#34;</span>:22,
+   <span style="color:#f1fa8c">&#34;transactionVersion&#34;</span>:6
+}
+</code></pre></div><h5 id="submit-transaction-3">Submit Transaction</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">0x
+2d02
+84
+00
+d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d
+013a5d193e6919455d5190c1c03cb3060644cf93e30a1b6984431f5c954306ab27d3f02cc67acea651820453237b0e84cb5c028ff7ba57a5f105e4c808768b038f
+0502
+dc
+58
+	0705
+	04
+	00
+	8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">{
+   <span style="color:#f1fa8c">&#34;signature&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;signer&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;signature&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;Sr25519&#34;</span>:<span style="color:#f1fa8c">&#34;0x3a5d193e6919455d5190c1c03cb3060644cf93e30a1b6984431f5c954306ab27d3f02cc67acea651820453237b0e84cb5c028ff7ba57a5f105e4c808768b038f&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;era&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;MortalEra&#34;</span>:<span style="color:#f1fa8c">&#34;0x0502&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;nonce&#34;</span>:55,
+      <span style="color:#f1fa8c">&#34;tip&#34;</span>:22
+   },
+   <span style="color:#f1fa8c">&#34;method&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;callIndex&#34;</span>:<span style="color:#f1fa8c">&#34;0x0705&#34;</span>,
+      <span style="color:#f1fa8c">&#34;args&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;targets&#34;</span>:[
+            {
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            }
+         ]
+      }
+   }
+}
+</code></pre></div><h4 id=_chill>Chill</h4>
+<h5 id="method-4">method</h5>
+<p>input 是空的，所以<code>&quot;args&quot;:{}</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tsx" data-lang="tsx"><span style="color:#bd93f9">0x0706</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">{<span style="color:#f1fa8c">&#34;callIndex&#34;</span>:<span style="color:#f1fa8c">&#34;0x0706&#34;</span>,<span style="color:#f1fa8c">&#34;args&#34;</span>:{}}
+</code></pre></div><h5 id="payload-4">payload</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tsx" data-lang="tsx"><span style="color:#bd93f9">0</span>x
+<span style="color:#bd93f9">08</span>
+<span style="color:#bd93f9">0706</span>
+<span style="color:#bd93f9">8607</span>
+<span style="color:#bd93f9">08</span>
+<span style="color:#bd93f9">00</span>
+<span style="color:#bd93f9">5</span>a230000
+<span style="color:#bd93f9">07000000</span>
+<span style="color:#bd93f9">91</span>b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3
+<span style="color:#bd93f9">4</span>c4f559ad2d3bc044490486fa2f7318ef40fe6a10600debd7db3c53694a2d4f3
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">{
+   <span style="color:#f1fa8c">&#34;blockHash&#34;</span>:<span style="color:#f1fa8c">&#34;0x4c4f559ad2d3bc044490486fa2f7318ef40fe6a10600debd7db3c53694a2d4f3&#34;</span>,
+   <span style="color:#f1fa8c">&#34;eraPeriod&#34;</span>:128,
+   <span style="color:#f1fa8c">&#34;genesisHash&#34;</span>:<span style="color:#f1fa8c">&#34;0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3&#34;</span>,
+   <span style="color:#f1fa8c">&#34;metadataRpc&#34;</span>:<span style="color:#f1fa8c">&#34;&#34;</span>,
+   <span style="color:#f1fa8c">&#34;method&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;args&#34;</span>:{
+         
+      },
+      <span style="color:#f1fa8c">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;chill&#34;</span>,
+      <span style="color:#f1fa8c">&#34;pallet&#34;</span>:<span style="color:#f1fa8c">&#34;staking&#34;</span>
+   },
+   <span style="color:#f1fa8c">&#34;nonce&#34;</span>:2,
+   <span style="color:#f1fa8c">&#34;specVersion&#34;</span>:9050,
+   <span style="color:#f1fa8c">&#34;tip&#34;</span>:0,
+   <span style="color:#f1fa8c">&#34;transactionVersion&#34;</span>:7
+}
+</code></pre></div><h5 id="submit-tx">submit tx</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tsx" data-lang="tsx"><span style="color:#bd93f9">0</span>x
+a901
+<span style="color:#bd93f9">84</span>
+<span style="color:#bd93f9">00</span>
+f9bef8da5ed33b2c0f4ad1e868c6baf61688ee15ae78b06e005f23a2faf7e286
+<span style="color:#bd93f9">0223119777</span>b4bd0fc14fc5dc8941b9dfbad4c75f42b70971bd54cc721d37c93c49b2e78501b77ef5ba5db1e73084a032892f96d7cb8d1cb046e97091a633ad30cd00
+<span style="color:#bd93f9">8607</span>
+<span style="color:#bd93f9">08</span>
+<span style="color:#bd93f9">00</span>
+<span style="color:#bd93f9">0706</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">{
+   <span style="color:#f1fa8c">&#34;address&#34;</span>:<span style="color:#f1fa8c">&#34;16eTevYtxg2hA2XimY1y7vV6CUga2EKhZQGKa9BvZpTcg5Ma&#34;</span>,
+   <span style="color:#f1fa8c">&#34;eraPeriod&#34;</span>:128,
+   <span style="color:#f1fa8c">&#34;metadataRpc&#34;</span>:<span style="color:#f1fa8c">&#34;&#34;</span>,
+   <span style="color:#f1fa8c">&#34;method&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;args&#34;</span>:{
+         
+      },
+      <span style="color:#f1fa8c">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;chill&#34;</span>,
+      <span style="color:#f1fa8c">&#34;pallet&#34;</span>:<span style="color:#f1fa8c">&#34;staking&#34;</span>
+   },
+   <span style="color:#f1fa8c">&#34;nonce&#34;</span>:2,
+   <span style="color:#f1fa8c">&#34;tip&#34;</span>:0
+}
+</code></pre></div><h4 id=_nominate>nominate</h4>
+<h5 id="method-5">method</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">0x
+0705
+04
+00
+8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">{
+   <span style="color:#f1fa8c">&#34;callIndex&#34;</span>:<span style="color:#f1fa8c">&#34;0x0705&#34;</span>,
+   <span style="color:#f1fa8c">&#34;args&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;targets&#34;</span>:[
+         {
+            <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+         }
+      ]
+   }
+}
+</code></pre></div><h5 id="payload-5">payload</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">0x90
+0705 call index(pallet + name)
+04   target count
+00   
+8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48  target address
+0502  mortalEra
+dc    nonce
+58    tip
+1c000000   spec ver
+06000000   tx ver
+91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3
+5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a
+
+0x
+2d04
+0705
+20
+008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+008eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+0502
+dc
+58
+1c000000
+06000000
+91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3
+5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">{
+   <span style="color:#f1fa8c">&#34;blockHash&#34;</span>:<span style="color:#f1fa8c">&#34;0x5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a&#34;</span>,
+   <span style="color:#f1fa8c">&#34;eraPeriod&#34;</span>:64,
+   <span style="color:#f1fa8c">&#34;genesisHash&#34;</span>:<span style="color:#f1fa8c">&#34;0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3&#34;</span>,
+   <span style="color:#f1fa8c">&#34;metadataRpc&#34;</span>:<span style="color:#f1fa8c">&#34;&#34;</span>,
+   <span style="color:#f1fa8c">&#34;method&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;args&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;targets&#34;</span>:[
+            {
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            }
+         ]
+      },
+      <span style="color:#f1fa8c">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;nominate&#34;</span>,
+      <span style="color:#f1fa8c">&#34;pallet&#34;</span>:<span style="color:#f1fa8c">&#34;staking&#34;</span>
+   },
+   <span style="color:#f1fa8c">&#34;nonce&#34;</span>:55,
+   <span style="color:#f1fa8c">&#34;specVersion&#34;</span>:28,
+   <span style="color:#f1fa8c">&#34;tip&#34;</span>:22,
+   <span style="color:#f1fa8c">&#34;transactionVersion&#34;</span>:6
+}
+
+{
+   <span style="color:#f1fa8c">&#34;blockHash&#34;</span>:<span style="color:#f1fa8c">&#34;0x5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a&#34;</span>,
+   <span style="color:#f1fa8c">&#34;eraPeriod&#34;</span>:64,
+   <span style="color:#f1fa8c">&#34;genesisHash&#34;</span>:<span style="color:#f1fa8c">&#34;0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3&#34;</span>,
+   <span style="color:#f1fa8c">&#34;metadataRpc&#34;</span>:<span style="color:#f1fa8c">&#34;&#34;</span>,
+   <span style="color:#f1fa8c">&#34;method&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;args&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;targets&#34;</span>:[
+            {
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            },
+            {
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            },
+            {
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            },
+            {
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            },
+            {
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            },
+            {
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            },
+            {
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            },
+            {
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            }
+         ]
+      },
+      <span style="color:#f1fa8c">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;nominate&#34;</span>,
+      <span style="color:#f1fa8c">&#34;pallet&#34;</span>:<span style="color:#f1fa8c">&#34;staking&#34;</span>
+   },
+   <span style="color:#f1fa8c">&#34;nonce&#34;</span>:55,
+   <span style="color:#f1fa8c">&#34;specVersion&#34;</span>:28,
+   <span style="color:#f1fa8c">&#34;tip&#34;</span>:22,
+   <span style="color:#f1fa8c">&#34;transactionVersion&#34;</span>:6
+}
+</code></pre></div><h5 id="submit-tx-1">submit tx</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tsx" data-lang="tsx"><span style="color:#bd93f9">0</span>x
+c905
+<span style="color:#bd93f9">84</span>
+<span style="color:#bd93f9">00</span>d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d
+<span style="color:#bd93f9">01</span>c4c2e275c7a9e2663548254cb95c092b19f1e79c45f91476ca0fa30dd4e5420393043e79e5d94880566f12c018464110ec13b4a06b121086a645e0fb6b4cf08a0502dc58070520
+<span style="color:#bd93f9">008</span>eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+<span style="color:#bd93f9">008</span>eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+<span style="color:#bd93f9">008</span>eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+<span style="color:#bd93f9">008</span>eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+<span style="color:#bd93f9">008</span>eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+<span style="color:#bd93f9">008</span>eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+<span style="color:#bd93f9">008</span>eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+<span style="color:#bd93f9">008</span>eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+
+<span style="color:#bd93f9">0</span>x
+cd05
+<span style="color:#bd93f9">84</span>
+<span style="color:#bd93f9">0080</span>f4e3bd716d3f2c32a77a3423a669d8d5864c3a6fb504c281a229d3e4d836cc
+<span style="color:#bd93f9">021187</span>e4d32f2fed8cccc0722b2d2a1c41100cd3f32891a385a44e599c9aa0483a9a886906d0c080800c3c808c932a2401166a74602742fee208c5dbca8f98182e00
+<span style="color:#bd93f9">0502</span>
+dc
+<span style="color:#bd93f9">58</span>
+<span style="color:#bd93f9">0705</span>
+<span style="color:#bd93f9">20</span>
+<span style="color:#bd93f9">008</span>eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+<span style="color:#bd93f9">008</span>eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+<span style="color:#bd93f9">008</span>eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+<span style="color:#bd93f9">008</span>eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+<span style="color:#bd93f9">008</span>eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+<span style="color:#bd93f9">008</span>eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+<span style="color:#bd93f9">008</span>eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+<span style="color:#bd93f9">008</span>eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ff79c6">{</span>
+   <span style="color:#f1fa8c">&#34;signature&#34;</span>:<span style="color:#ff79c6">{</span>
+      <span style="color:#f1fa8c">&#34;signer&#34;</span>:<span style="color:#ff79c6">{</span>
+         <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5&#34;</span>
+      <span style="color:#ff79c6">}</span>,
+      <span style="color:#f1fa8c">&#34;signature&#34;</span>:<span style="color:#ff79c6">{</span>
+         <span style="color:#f1fa8c">&#34;Sr25519&#34;</span>:<span style="color:#f1fa8c">&#34;0xc4c2e275c7a9e2663548254cb95c092b19f1e79c45f91476ca0fa30dd4e5420393043e79e5d94880566f12c018464110ec13b4a06b121086a645e0fb6b4cf08a&#34;</span>
+      <span style="color:#ff79c6">}</span>,
+      <span style="color:#f1fa8c">&#34;era&#34;</span>:<span style="color:#ff79c6">{</span>
+         <span style="color:#f1fa8c">&#34;MortalEra&#34;</span>:<span style="color:#f1fa8c">&#34;0x0502&#34;</span>
+      <span style="color:#ff79c6">}</span>,
+      <span style="color:#f1fa8c">&#34;nonce&#34;</span>:55,
+      <span style="color:#f1fa8c">&#34;tip&#34;</span>:22
+   <span style="color:#ff79c6">}</span>,
+   <span style="color:#f1fa8c">&#34;method&#34;</span>:<span style="color:#ff79c6">{</span>
+      <span style="color:#f1fa8c">&#34;callIndex&#34;</span>:<span style="color:#f1fa8c">&#34;0x0705&#34;</span>,
+      <span style="color:#f1fa8c">&#34;args&#34;</span>:<span style="color:#ff79c6">{</span>
+         <span style="color:#f1fa8c">&#34;targets&#34;</span>:<span style="color:#ff79c6">[</span>
+            <span style="color:#ff79c6">{</span>
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            <span style="color:#ff79c6">}</span>,
+            <span style="color:#ff79c6">{</span>
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            <span style="color:#ff79c6">}</span>,
+            <span style="color:#ff79c6">{</span>
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            <span style="color:#ff79c6">}</span>,
+            <span style="color:#ff79c6">{</span>
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            <span style="color:#ff79c6">}</span>,
+            <span style="color:#ff79c6">{</span>
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            <span style="color:#ff79c6">}</span>,
+            <span style="color:#ff79c6">{</span>
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            <span style="color:#ff79c6">}</span>,
+            <span style="color:#ff79c6">{</span>
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            <span style="color:#ff79c6">}</span>,
+            <span style="color:#ff79c6">{</span>
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            <span style="color:#ff79c6">}</span>
+         <span style="color:#ff79c6">]</span>
+      <span style="color:#ff79c6">}</span>
+   <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+
+<span style="color:#ff79c6">{</span>
+   <span style="color:#f1fa8c">&#34;signature&#34;</span>:<span style="color:#ff79c6">{</span>
+      <span style="color:#f1fa8c">&#34;signer&#34;</span>:<span style="color:#ff79c6">{</span>
+         <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;13v5sr4E8TLLfnA6ytPQwkA5HsEivYFpvaBATj5dDyDa38mY&#34;</span>
+      <span style="color:#ff79c6">}</span>,
+      <span style="color:#f1fa8c">&#34;signature&#34;</span>:<span style="color:#ff79c6">{</span>
+         <span style="color:#f1fa8c">&#34;Ecdsa&#34;</span>:<span style="color:#f1fa8c">&#34;0x1187e4d32f2fed8cccc0722b2d2a1c41100cd3f32891a385a44e599c9aa0483a9a886906d0c080800c3c808c932a2401166a74602742fee208c5dbca8f98182e00&#34;</span>
+      <span style="color:#ff79c6">}</span>,
+      <span style="color:#f1fa8c">&#34;era&#34;</span>:<span style="color:#ff79c6">{</span>
+         <span style="color:#f1fa8c">&#34;MortalEra&#34;</span>:<span style="color:#f1fa8c">&#34;0x0502&#34;</span>
+      <span style="color:#ff79c6">}</span>,
+      <span style="color:#f1fa8c">&#34;nonce&#34;</span>:55,
+      <span style="color:#f1fa8c">&#34;tip&#34;</span>:22
+   <span style="color:#ff79c6">}</span>,
+   <span style="color:#f1fa8c">&#34;method&#34;</span>:<span style="color:#ff79c6">{</span>
+      <span style="color:#f1fa8c">&#34;callIndex&#34;</span>:<span style="color:#f1fa8c">&#34;0x0705&#34;</span>,
+      <span style="color:#f1fa8c">&#34;args&#34;</span>:<span style="color:#ff79c6">{</span>
+         <span style="color:#f1fa8c">&#34;targets&#34;</span>:<span style="color:#ff79c6">[</span>
+            <span style="color:#ff79c6">{</span>
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            <span style="color:#ff79c6">}</span>,
+            <span style="color:#ff79c6">{</span>
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            <span style="color:#ff79c6">}</span>,
+            <span style="color:#ff79c6">{</span>
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            <span style="color:#ff79c6">}</span>,
+            <span style="color:#ff79c6">{</span>
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            <span style="color:#ff79c6">}</span>,
+            <span style="color:#ff79c6">{</span>
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            <span style="color:#ff79c6">}</span>,
+            <span style="color:#ff79c6">{</span>
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            <span style="color:#ff79c6">}</span>,
+            <span style="color:#ff79c6">{</span>
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            <span style="color:#ff79c6">}</span>,
+            <span style="color:#ff79c6">{</span>
+               <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;14E5nqKAp3oAJcmzgZhUD2RcptBeUBScxKHgJKU4HPNcKVf3&#34;</span>
+            <span style="color:#ff79c6">}</span>
+         <span style="color:#ff79c6">]</span>
+      <span style="color:#ff79c6">}</span>
+   <span style="color:#ff79c6">}</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><h4 id=_withdraw-unbonded>Withdraw Unbonded</h4>
+<h5 id="method-6">method</h5>
+<pre><code>0x
+0703
+2b020000
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+   <span style="color:#ff79c6">&#34;callIndex&#34;</span>:<span style="color:#f1fa8c">&#34;0x0703&#34;</span>,
+   <span style="color:#ff79c6">&#34;args&#34;</span>:{
+      <span style="color:#ff79c6">&#34;num_slashing_spans&#34;</span>:<span style="color:#bd93f9">555</span>
+   }
+}
+</code></pre></div><h5 id="payload-6">payload</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tsx" data-lang="tsx"><span style="color:#bd93f9">0x18</span>
+<span style="color:#bd93f9">0703</span>     callIndex
+<span style="color:#bd93f9">2</span>b020000 num_slashing_spans
+<span style="color:#bd93f9">0502</span>     mortalEra
+dc       nonce
+<span style="color:#bd93f9">58</span>       tip 
+<span style="color:#bd93f9">1</span>c000000 spec ver
+<span style="color:#bd93f9">06000000</span> tx ver
+<span style="color:#bd93f9">91</span>b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3
+<span style="color:#bd93f9">5</span>c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+   <span style="color:#ff79c6">&#34;blockHash&#34;</span>:<span style="color:#f1fa8c">&#34;0x5c697847b25d385178aa150d29e5ce212339c5624183f74bdf45f4912c89749a&#34;</span>,
+   <span style="color:#ff79c6">&#34;eraPeriod&#34;</span>:<span style="color:#bd93f9">64</span>,
+   <span style="color:#ff79c6">&#34;genesisHash&#34;</span>:<span style="color:#f1fa8c">&#34;0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3&#34;</span>,
+   <span style="color:#ff79c6">&#34;metadataRpc&#34;</span>:<span style="color:#f1fa8c">&#34;&#34;</span>,
+   <span style="color:#ff79c6">&#34;method&#34;</span>:{
+      <span style="color:#ff79c6">&#34;args&#34;</span>:{
+         <span style="color:#ff79c6">&#34;numSlashingSpans&#34;</span>:<span style="color:#f1fa8c">&#34;555&#34;</span>
+      },
+      <span style="color:#ff79c6">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;withdrawUnbonded&#34;</span>,
+      <span style="color:#ff79c6">&#34;pallet&#34;</span>:<span style="color:#f1fa8c">&#34;staking&#34;</span>
+   },
+   <span style="color:#ff79c6">&#34;nonce&#34;</span>:<span style="color:#bd93f9">55</span>,
+   <span style="color:#ff79c6">&#34;specVersion&#34;</span>:<span style="color:#bd93f9">28</span>,
+   <span style="color:#ff79c6">&#34;tip&#34;</span>:<span style="color:#bd93f9">22</span>,
+   <span style="color:#ff79c6">&#34;transactionVersion&#34;</span>:<span style="color:#bd93f9">6</span>
+}
+</code></pre></div><h5 id="submit-transaction-4">Submit Transaction</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">0x
+b501
+84
+00
+d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d
+01845a8f47b581c0c8bc27931311c984fafeebd6e9dca173a799fbc762f8eada3c3ef7753b67990e2c5fdd08d409464220965d73ef6e82572b48ba5e37f11fdb89
+0502
+dc
+58
+	0703
+	2b020000
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">{
+   <span style="color:#f1fa8c">&#34;signature&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;signer&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;Id&#34;</span>:<span style="color:#f1fa8c">&#34;15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;signature&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;Sr25519&#34;</span>:<span style="color:#f1fa8c">&#34;0x845a8f47b581c0c8bc27931311c984fafeebd6e9dca173a799fbc762f8eada3c3ef7753b67990e2c5fdd08d409464220965d73ef6e82572b48ba5e37f11fdb89&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;era&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;MortalEra&#34;</span>:<span style="color:#f1fa8c">&#34;0x0502&#34;</span>
+      },
+      <span style="color:#f1fa8c">&#34;nonce&#34;</span>:55,
+      <span style="color:#f1fa8c">&#34;tip&#34;</span>:22
+   },
+   <span style="color:#f1fa8c">&#34;method&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;callIndex&#34;</span>:<span style="color:#f1fa8c">&#34;0x0703&#34;</span>,
+      <span style="color:#f1fa8c">&#34;args&#34;</span>:{
+         <span style="color:#f1fa8c">&#34;num_slashing_spans&#34;</span>:555
+      }
+   }
+}
+</code></pre></div><h3 id=_polkadot-js-signer-cli>polkadot-js-signer cli</h3>
+<p>gen payload</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">polkadot-js-signer sendOffline --account &lt;from account&gt; --ws &lt;end_point&gt;  --type &lt; ed25519 or sr25519 &gt; &lt;tx type&gt; &lt;to address&gt; &lt;amount&gt;
+---
+polkadot-js-signer sendOffline --account 13v5sr4E8TLLfnA6ytPQwkA5HsEivYFpvaBATj5dDyDa38mY --ws wss://rpc.polkadot.io  --type ed25519 balances.transfer 13XiczUSaimw33g7GRDzr29SXmApGC8i153kscV6iqpk4aR5 <span style="color:#bd93f9">123</span>
+</code></pre></div><p>send transaction</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">polkadot-js-signer submit --tx &lt;transaction_hex&gt; --ws &lt;end_point&gt;   --type &lt; ed25519 or sr25519 &gt;
+---
+polkadot-js-signer submit --tx 0x35028400439ebc7a00972a7f31d2406867ae9320747c5fe5170ccafed6ea9844b10388c6025d4b5eba4a0da0c38b5346692a6c757357cf11725903d60fc119ea5002040c1aa3d5eb60529df31fb74ebb4868ab0e78712ed036f32d91e6617fa82d0b46975e00950300000500006fe5efad718a8eb756b669a4de50273b864282719759a9ce01576096ed6b676fa10f --ws wss://rpc.polkadot.io   --type ed25519
+</code></pre></div><h3 id=_tools>Tools</h3>
+<p><a href="https://polkadot.subscan.io/">Explorer</a></p>
+<p><a href="https://qiniu.netsafe.org.cn/polkadot-address2publicKey.html">Polkadot address to public key</a></p>
+
+  </div>
+  <br>
+  <br>
+  <div class="pagination">
+  
+    <a href="/ianlife/read/11-writing-lesson/" class="button">
+      <div class="previous">
+        <div>大人的11堂寫作課 - 複利成長自身的價值</div>
+      </div>
+    </a>
+  
+  
+</div>
+
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%8D%80%E5%A1%8A%E9%8F%88">區塊鏈</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/blockchain">Blockchain</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+
+        <div class="disqus markdown">
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+      </main>
+      
+      <div id="page-sidebar">
+        
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div>
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_what-is-dot">
+												 What is DOT?
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_address-formathttpswikipolkadotnetworkdocsenlearn-accounts">
+												 Address Format
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_address-generation-derivation-and-portability">
+												 Address Generation, Derivation, and Portability
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_seed-generation">
+												 Seed Generation
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_derivation-paths">
+												 Derivation Paths
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_portability">
+												 Portability
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_npos">
+												 NPoS
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_tx-wrapper">
+												 Tx Wrapper
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e4%ba%a4%e6%98%93%e9%a1%9e%e5%9e%8b">
+												 交易類型
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_transfer">
+												 transfer
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_bond">
+												 Bond
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_bondextra">
+												 BondExtra
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_unbond">
+												 Unbond
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_chill">
+												 Chill
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_nominate">
+												 nominate
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_withdraw-unbonded">
+												 Withdraw Unbonded
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_polkadot-js-signer-cli">
+												 polkadot-js-signer cli
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_tools">
+												 Tools
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+        <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2fblog%2ftechnology%2fblockchain%2fpolkadot%2f" width="100%"
+  frameborder=0></iframe>
+ 
+        <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script src="/ianlife/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+      </div>
+    </div>
+    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+  </body>
+</html>
