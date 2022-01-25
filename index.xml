@@ -6,10 +6,21 @@
     <description>Recent content on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 24 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Oct 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Polkadot Parse</title>
+      <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain/polkadot/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain/polkadot/</guid>
+      <description>What is DOT? DOT is the native token of the Polkadot network in a similar way that BTC is the native token of Bitcoin or ether is the native token of the Ethereum blockchain.
+The smallest unit of account in a Substrate network (Polkadot, Kusama, etc.) is the Planck. Kusama tokens (KSM) are equal to 1e12 Planck, and Polkadot mainnet DOT are equal to 1e10 Planck.
+1 Dot (DOT) = 10000000000 Planck</description>
+    </item>
     
     <item>
       <title>大人的11堂寫作課 - 複利成長自身的價值</title>
@@ -28,28 +39,6 @@
  追問：不管遇到什麼問題，都要有追根究底的精神。 建立連結：試著將學到的知識互相建立關係。例如：從寫好一句話開始 -&amp;gt; 原子習慣中的『最小努力原則』。 應用：將所學的東西實際應用出來。  輸出 有不斷的輸入、不斷的思考，最後就是如何把素材輸出成一篇文章，作者提供了以下四種方法來練習寫作：
  就是寫：就是不會，才要『刻意練習』。如同開頭講的，可以從一段話開始慢慢練習。 學寫故事、觀點：故事及觀點可以讓我們思考文章如何呈現給讀者，讀者才會買單。 建立寫作流程：寫作也是需要流程的，選題、找素材、擬稿、成搞&amp;hellip;等，因人而異。 建立回饋系統：不管做任何事，回饋機制很重要，有回饋才有辦法改進，才能不斷的進步。  五個切入點寫出好文章  主題：對這世界要有點意見 一篇好的文章，主題很重要。作者認為我們應該『對這世界要有點意見』，多發表自己的觀點，用自己的思路去思考每件事。再來主題應該要可以覆蓋多數人群，打到大部分人的痛點，可以參考人生金字塔的五個階層。
 題目：抓住眼球 好的題目可以讓讀者一眼看下去，就有『這就是我要找的』感覺。。這裡也可以參考剛剛提到的人生金字塔來擬定題目。 作者認為，好的標題包含三個因素：</description>
-    </item>
-    
-    <item>
-      <title>復盤一下 2021 上半年</title>
-      <link>https://ianjustin39.github.io/ianlife/retro/2021_q1q2/</link>
-      <pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/retro/2021_q1q2/</guid>
-      <description>在疫情的荼毒下，2021 也迅速的過了半年，是時候檢討一下自己這半年來到底有沒有在做事了&amp;hellip;
-問題一：過去半年，跟去年有什麼最大的不同？    思維模式的改變：不管是在工作上、生活上，思想成熟了不少，相較於去年，可以更客觀的分析事情，並試著看清每件事背後的含義。
-  執行力上升：相較於去年，今年的執行力又上升了不少，也接觸了以往不想接觸的事情，如：讀書&amp;hellip;。
-  問題二：過去的半年，你在學習上有什麼樣的進步？    區塊鏈：不斷累積區塊鏈相關的知識，相較於去年，更有辦法獨立作業。
-  資料結構與演算法：由於並非相關科系的背景，所以一直有這一塊的空缺，終於在今年把資料結構與演算法的基本知識補齊。
-  side project：年初開始規劃 side project ，從找夥伴、找需求、評估可行性、規劃、開發&amp;hellip;等等，雖然有許多部分需要再加以改進，但相較於去年一直沒有行動，今年上半年算是有很大的進步。
-  商業思維學院：上了學院的課後，本來模糊的目標逐漸變得清晰，在規劃一個產品以及專案管理上，都有非常大的進步與收穫。
-  讀書會：年初決定每個月要讀一本書，除了督促自己讀書以外，也想藉由分享來訓練自己的口條，於是組織了讀書會。從一月到六月共舉辦了六場，總分享書籍也將近 25 本，整體收穫大於預期。
-  健身習慣養成：去年二月為了腹肌，開始無止盡的健身雞胸地獄，養成了不去健身房就覺得怪的習慣。
-  問題三：過往半年，有哪些地方你覺得自己做得很好，應該繼續保持的？    每週日規劃整週待辦事項：過去半年用 notion 規劃整週的代辦事項，讓我沒有每天在抖音中度過，也可以回顧之前到底在幹什麼。
-  按表操課成功比例上升：上半年的執行成功率大大的提升，現在在家一樣可以做事，不再需依賴咖啡廳，省錢！！
-  問題四：過往半年，有哪些地方你做得還不夠好，可以加以改善的？    時間掌握還不夠如火純青：有時事件沒辦法在既定的時間內執行完畢，影響到其他代辦事項，對於時間評估需要再更加準確。
-  事件安排過於密集：沒有規劃好休息時間，把事情安排的過於緊湊，不但無法有效執行也造成疲乏，往後安排代辦時也需要將休息時間考慮進去。
-  問題五：綜合以上，你打算如何展開 2021 的下半年？    一直被遺棄的英文：英文很重要，是時候要認真看待它了&amp;hellip;，預計跟著某知名老師的線上課程進度來讀。</description>
     </item>
     
     <item>

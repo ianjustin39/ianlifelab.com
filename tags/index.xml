@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 24 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Oct 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blockchain</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/blockchain/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/blockchain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Polkadot</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/polkadot/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/polkadot/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>讀書心得</title>
@@ -21,29 +39,11 @@
     </item>
     
     <item>
-      <title>Retrospective</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/retrospective/</link>
-      <pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/tags/retrospective/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>好書推薦</title>
       <link>https://ianjustin39.github.io/ianlife/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6/</link>
       <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ianjustin39.github.io/ianlife/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Blockchain</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/blockchain/</link>
-      <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/tags/blockchain/</guid>
       <description></description>
     </item>
     
