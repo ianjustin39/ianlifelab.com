@@ -23,6 +23,16 @@ The smallest unit of account in a Substrate network (Polkadot, Kusama, etc.) is 
     </item>
     
     <item>
+      <title>Cosmos transaction parse</title>
+      <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/cosmos/</link>
+      <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/cosmos/</guid>
+      <description>圖片來源
+Transaction protobuf prefix  msgSend msgSend/amount tx single mode  enum SignMode { // SIGN_MODE_UNSPECIFIED specifies an unknown signing mode and will be  // rejected  SIGN_MODE_UNSPECIFIED = 0; // SIGN_MODE_DIRECT specifies a signing mode which uses SignDoc and is  // verified with raw bytes from Tx  SIGN_MODE_DIRECT = 1; // SIGN_MODE_TEXTUAL is a future signing mode that will verify some  // human-readable textual representation on top of the binary representation  // from SIGN_MODE_DIRECT  SIGN_MODE_TEXTUAL = 2; // SIGN_MODE_LEGACY_AMINO_JSON is a backwards compatibility mode which uses  // Amino JSON and will be removed in the future  SIGN_MODE_LEGACY_AMINO_JSON = 127; } Send - msgSend: { from_address: &amp;#39;cosmos1fnk3lxlks7tdg6x55ynv6vggtnd73ycqsq89sl&amp;#39;, to_address: &amp;#39;cosmos1hllwcqg3yz5mgx0cplh82l23ad8658dvphvjtl&amp;#39;, amount: [ { denom: &amp;#39;uatom&amp;#39;, amount: &amp;#39;10000&amp;#39; } ] } **- msgSend protobuf: (0a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c122d636f736d6f7331686c6c7763716733797a356d67783063706c6838326c323361643836353864767068766a746c1a0e0a057561746f6d12053130303030)** from_address | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c to_address | 00010 010 | 12 2d 636f736d6f7331686c6c7763716733797a356d67783063706c6838326c323361643836353864767068766a746c amount | 00011 010 | 1a 0e denom | 00001 010 | 0a 05 7561746f6d amount | 00010 010 | 12 05 3130303030 --- - signerInfo: SignerInfo { public_key: Any { type_url: &amp;#39;/cosmos.</description>
+    </item>
+    
+    <item>
       <title>大人的11堂寫作課 - 複利成長自身的價值</title>
       <link>https://ianjustin39.github.io/ianlife/read/11-writing-lesson/</link>
       <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>

@@ -1,0 +1,1266 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+  <meta content="Cosmos, Cosmos transaction, Cosmos payload" name="keywords">
+  <link rel="stylesheet" href="https://ianjustin39.github.io/ianlife/%20css/search.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  
+  
+  
+  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
+  <script src="/ianlife/js/bootstrap.js"></script>
+  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
+  
+  
+  
+  <script src="../js/jquery.magnific-popup.js"></script>
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="/ianlife/js/toc.js"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+  <script>
+   window.onload = function () {
+    let plantumlPrefix = "language-plantuml";
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
+      let image = document.createElement("IMG");
+      image.loading = 'lazy'; 
+      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
+      code.parentNode.insertBefore(image, code);
+      code.style.display = 'none';
+    });
+  };
+  </script>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta charset="utf-8">
+<title>Cosmos transaction parse - Ian Tsai </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="Cosmos transaction parse">
+<meta itemprop="description" content="The Internet of Blockchains.">
+<meta itemprop="datePublished" content="2021-08-05T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-08-05T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="3085">
+<meta itemprop="image" content="https://i.ytimg.com/vi/Eb8xkDi_PUg/maxresdefault.jpg">
+
+
+
+<meta itemprop="keywords" content="Blockchain," /><meta property="og:title" content="Cosmos transaction parse" />
+<meta property="og:description" content="The Internet of Blockchains." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/blog/technology/blockchain/cosmos/" />
+<meta property="og:image" content="https://i.ytimg.com/vi/Eb8xkDi_PUg/maxresdefault.jpg" />
+<meta property="article:published_time" content="2021-08-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-08-05T00:00:00+00:00" /><meta property="og:see_also" content="https://ianjustin39.github.io/ianlife/blog/technology/blockchain/polkadot/" /><meta property="og:see_also" content="https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain/ethereum-london-hard-fork/" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://i.ytimg.com/vi/Eb8xkDi_PUg/maxresdefault.jpg"/>
+
+<meta name="twitter:title" content="Cosmos transaction parse"/>
+<meta name="twitter:description" content="The Internet of Blockchains."/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+        <link rel="stylesheet" href="/ianlife/css/add-on.css">
+</head>
+
+  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
+  
+  
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ianlife/">
+        
+          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/blog/" class="link"><i class='fas fa-pencil-alt'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/%08product" class="link"><i class='fas fa-box'></i> Product</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/life" class="link"><i class='fa fa-plane'></i> Life</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/learning" class="link"><i class='fa fa-book'></i> Learning</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/tech" class="link"><i class='fa fa-laptop'></i> Tech</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+      
+      
+
+      <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
+        <span id="searchGlyph" class="glyphicon glyphicon-search"><i class="fas fa-search"></i></span></a>
+    </menu>
+    
+
+    
+    <a href="#lang-menu" class="lang-toggle" lang="zh">zh</a>
+    <a href="#site-nav-menu" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+ 
+ 
+  <menu id="lang-menu" class="flyout-menu">
+  <a href="#" lang="zh" class="link active">中文 (zh)</a>
+  
+    
+      
+        <a href="/ianlife/en" lang="en" class="no-lang link">English (en)</a>
+      
+    
+      
+    
+  
+</menu>
+
+  
+</header>
+
+<div id="modalSearch" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">文章搜尋</h4><button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="aa-input-container" id="aa-input-container">
+  <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for titles or URIs..."
+    name="search" autocomplete="off" />
+  <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
+    <path
+      d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z" />
+  </svg>
+</div>
+<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/algoliasearch.min.js"></script>
+<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/autocomplete.min.js"></script>
+<script>
+  var client = algoliasearch("WTW32P5SNJ", "2e16477f048bc4528b166dfd1eb4804d");
+  var index = client.initIndex("blog");
+  autocomplete('#aa-search-input',
+    { hint: false }, {
+    source: autocomplete.sources.hits(index, { hitsPerPage: 20 }),
+    displayKey: 'name',
+    templates: {
+      suggestion: function (suggestion) {
+        return '<span>' + '<a href="' + suggestion.relpermalink + '">' +
+          suggestion.title + '</a></span>';
+      }
+    }
+  });
+
+  $('#searchGlyph').click(function() {
+    setTimeout(function(){
+      $('#aa-search-input').focus();
+    },300);
+  });
+</script>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div id="wrapper">
+      
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/%E5%8D%80%E5%A1%8A%E9%8F%88"><p>區塊鏈</p></a>
+    
+    <h3><a href="/ianlife/blog/technology/blockchain/cosmos/">Cosmos transaction parse</a></h3>
+    
+    
+    <p style="margin-top: 0px;">The Internet of Blockchains.</p>
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2021-08-05 00:00:00 &#43;0000 UTC">
+      August 5, 2021
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>15 minute read</p>
+    
+    <p>
+      <span id="busuanzi_container_page_pv">
+        PV: <span id="busuanzi_value_page_pv"></span>
+      </span>
+    </p>
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+  </section>
+  
+  <a href="/ianlife/blog/technology/blockchain/cosmos/" class="image featured">
+    
+      <img src="https://i.ytimg.com/vi/Eb8xkDi_PUg/maxresdefault.jpg" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <br>
+<br>
+<br>
+<p><a href="https://i.ytimg.com/vi/Eb8xkDi_PUg/maxresdefault.jpg">圖片來源</a></p>
+<h3 id=_transaction>Transaction</h3>
+<p><img src="https://jiepeng.me/static/essays/2018/07/25/protobuf.png" alt="protobuf"></p>
+<h4 id=_protobuf-prefix>protobuf prefix</h4>
+<ul>
+<li><a href="https://github.com/cosmos/cosmos-sdk/blob/master/proto/cosmos/bank/v1beta1/tx.proto">msgSend</a></li>
+<li><a href="https://github.com/cosmos/cosmos-sdk/blob/master/proto/cosmos/base/v1beta1/coin.proto">msgSend/amount</a></li>
+<li><a href="https://github.com/cosmos/cosmos-sdk/blob/master/proto/cosmos/tx/v1beta1/tx.proto">tx</a></li>
+<li><a href="https://github.com/cosmos/cosmos-sdk/blob/master/proto/cosmos/tx/signing/v1beta1/signing.proto">single mode</a></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#ff79c6">enum</span> SignMode {
+  <span style="color:#6272a4">// SIGN_MODE_UNSPECIFIED specifies an unknown signing mode and will be
+</span><span style="color:#6272a4"></span>  <span style="color:#6272a4">// rejected
+</span><span style="color:#6272a4"></span>  SIGN_MODE_UNSPECIFIED <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>;
+
+  <span style="color:#6272a4">// SIGN_MODE_DIRECT specifies a signing mode which uses SignDoc and is
+</span><span style="color:#6272a4"></span>  <span style="color:#6272a4">// verified with raw bytes from Tx
+</span><span style="color:#6272a4"></span>  SIGN_MODE_DIRECT <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>;
+
+  <span style="color:#6272a4">// SIGN_MODE_TEXTUAL is a future signing mode that will verify some
+</span><span style="color:#6272a4"></span>  <span style="color:#6272a4">// human-readable textual representation on top of the binary representation
+</span><span style="color:#6272a4"></span>  <span style="color:#6272a4">// from SIGN_MODE_DIRECT
+</span><span style="color:#6272a4"></span>  SIGN_MODE_TEXTUAL <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">2</span>;
+
+  <span style="color:#6272a4">// SIGN_MODE_LEGACY_AMINO_JSON is a backwards compatibility mode which uses
+</span><span style="color:#6272a4"></span>  <span style="color:#6272a4">// Amino JSON and will be removed in the future
+</span><span style="color:#6272a4"></span>  SIGN_MODE_LEGACY_AMINO_JSON <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">127</span>;
+}
+</code></pre></div><h4 id=_send>Send</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">- msgSend:  {
+  from_address: <span style="color:#f1fa8c">&#39;cosmos1fnk3lxlks7tdg6x55ynv6vggtnd73ycqsq89sl&#39;</span>,
+  to_address: <span style="color:#f1fa8c">&#39;cosmos1hllwcqg3yz5mgx0cplh82l23ad8658dvphvjtl&#39;</span>,
+  amount: [ { denom: <span style="color:#f1fa8c">&#39;uatom&#39;</span>, amount: <span style="color:#f1fa8c">&#39;10000&#39;</span> } ]
+}
+**- msgSend protobuf: (0a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c122d636f736d6f7331686c6c7763716733797a356d67783063706c6838326c323361643836353864767068766a746c1a0e0a057561746f6d12053130303030)** 
+from_address | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c
+to_address   | 00010 010 | 12 2d 636f736d6f7331686c6c7763716733797a356d67783063706c6838326c323361643836353864767068766a746c
+amount       | 00011 010 | 1a 0e 
+	denom      | 00001 010 | 0a 05 7561746f6d
+	amount     | 00010 010 | 12 05 3130303030
+---
+- signerInfo:  SignerInfo {
+  public_key: Any {
+    type_url: <span style="color:#f1fa8c">&#39;/cosmos.crypto.secp256k1.PubKey&#39;</span>,
+    value: &lt;Buffer 0a 21 02 f1 0d 45 79 a3 bf bd 14 2a fb f2 ab 36 f0 2d 6e c4 27 cb 8f ba d6 5e bb 00 b7 7a bb b4 c3 4c a8&gt;
+  },
+  mode_info: { single: { mode: 1 } },
+  sequence: <span style="color:#f1fa8c">&#39;10&#39;</span>
+}
+---
+- feeValue:  { amount: [ { denom: <span style="color:#f1fa8c">&#39;uatom&#39;</span>, amount: <span style="color:#f1fa8c">&#39;5000&#39;</span> } ], gas_limit: <span style="color:#f1fa8c">&#39;200000&#39;</span> }
+**- feeValue protobuf:  (0a0d0a057561746f6d12043530303010c09a0c)**
+amount       | 00011 010 | 0a 0d
+	denom      | 00001 010 | 0a 05 7561746f6d
+	amount     | 00010 010 | 12 04 35303030
+gas_limit    | 00010 000 | 10 c09a0c
+---
+- txBoxdy:  {
+  messages: [
+    {
+      type_url: <span style="color:#f1fa8c">&#39;/cosmos.bank.v1beta1.MsgSend&#39;</span>,
+      value: <span style="color:#f1fa8c">&#39;Ci1jb3Ntb3MxZm5rM2x4bGtzN3RkZzZ4NTV5bnY2dmdndG5kNzN5Y3FzcTg5c2wSLWNvc21vczFobGx3Y3FnM3l6NW1neDBjcGxoODJsMjNhZDg2NThkdnBodmp0bBoOCgV1YXRvbRIFMTAwMDA=&#39;</span>
+    }
+  ],
+  memo: <span style="color:#f1fa8c">&#39;&#39;</span>
+}
+**- txBody protobuf:  (0a8e010a1c2f636f736d6f732e62616e6b2e763162657461312e4d736753656e64126e0a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c122d636f736d6f7331686c6c7763716733797a356d67783063706c6838326c323361643836353864767068766a746c1a0e0a057561746f6d120531303030301200)**
+messages         | 00001 010 | 0a 8e01
+	type_url       | 00001 010 | 0a 1c 2f636f736d6f732e62616e6b2e763162657461312e4d736753656e64
+	value          | 00010 010 | 12 6e
+		from_address | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c
+		to_address   | 00010 010 | 12 2d 636f736d6f7331686c6c7763716733797a356d67783063706c6838326c323361643836353864767068766a746c
+		amount       | 00011 010 | 1a 0e 
+			denom      | 00001 010 | 0a 05 7561746f6d
+			amount     | 00010 010 | 12 05 3130303030
+memo             | 00010 010 | 12 00
+---
+- authInfo:  AuthInfo {
+  signer_infos: [
+    SignerInfo {
+      public_key: [Any],
+      mode_info: [Object],
+      sequence: <span style="color:#f1fa8c">&#39;10&#39;</span>
+    }
+  ],
+  fee: Fee { amount: [ [Object] ], gas_limit: 200000 }
+}
+**- authInfo protobuf:  (0a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca812040a020801180a12130a0d0a057561746f6d12043530303010c09a0c)**
+SignerInfo       | 00001 010 | 0a 50 
+	public_key     | 00001 010 | 0a 46 
+		type_url     | 00001 010 | 0a 1f 2f636f736d6f732e63727970746f2e736563703235366b312e5075624b6579
+		value        | 00010 010 | 12 23
+			public_key | 00001 010 | 0a 21 02f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca8
+	mode_info      | 00010 010 | 12 04 
+		single       | 00001 010 | 0a 02 
+		mode         | 00001 000 | 08 01
+	sequence       | 00011 000 | 18 0a
+Fee              | 00010 010 | 12 13
+	amount         | 00011 010 | 0a 0d
+		denom        | 00001 010 | 0a 05 7561746f6d
+		amount       | 00010 010 | 12 04 35303030
+	gas_limit      | 00010 000 | 10 c09a0c
+---
+- signDoc:  {
+  body_bytes: <span style="color:#f1fa8c">&#39;Co4BChwvY29zbW9zLmJhbmsudjFiZXRhMS5Nc2dTZW5kEm4KLWNvc21vczFmbmszbHhsa3M3dGRnNng1NXludjZ2Z2d0bmQ3M3ljcXNxODlzbBItY29zbW9zMWhsbHdjcWczeXo1bWd4MGNwbGg4MmwyM2FkODY1OGR2cGh2anRsGg4KBXVhdG9tEgUxMDAwMBIA&#39;</span>,
+  auth_info_bytes: <span style="color:#f1fa8c">&#39;ClAKRgofL2Nvc21vcy5jcnlwdG8uc2VjcDI1NmsxLlB1YktleRIjCiEC8Q1FeaO/vRQq+/KrNvAtbsQny4+61l67ALd6u7TDTKgSBAoCCAEYChITCg0KBXVhdG9tEgQ1MDAwEMCaDA==&#39;</span>,
+  chain_id: <span style="color:#f1fa8c">&#39;cosmoshub-4&#39;</span>,
+  account_number: <span style="color:#f1fa8c">&#39;7439&#39;</span>
+}
+**- signDoc protobuf:  (0a93010a8e010a1c2f636f736d6f732e62616e6b2e763162657461312e4d736753656e64126e0a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c122d636f736d6f7331686c6c7763716733797a356d67783063706c6838326c323361643836353864767068766a746c1a0e0a057561746f6d12053130303030120012670a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca812040a020801180a12130a0d0a057561746f6d12043530303010c09a0c1a0b636f736d6f736875622d34208f3a)**
+
+body_bytes         | 00001 010 | 0a 9301
+	messages         | 00001 010 | 0a 8e01
+		type_url       | 00001 010 | 0a 1c 2f636f736d6f732e62616e6b2e763162657461312e4d736753656e64
+		value          | 00010 010 | 12 6e
+			from_address | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c
+			to_address   | 00010 010 | 12 2d 636f736d6f7331686c6c7763716733797a356d67783063706c6838326c323361643836353864767068766a746c
+			amount       | 00011 010 | 1a 0e 
+				denom      | 00001 010 | 0a 05 7561746f6d
+				amount     | 00010 010 | 12 05 3130303030
+	memo             | 00010 010 | 12 00
+auth_info_bytes    | 00010 010 | 12 67
+	SignerInfo       | 00001 010 | 0a 50 
+		public_key     | 00001 010 | 0a 46 
+			type_url     | 00001 010 | 0a 1f 2f636f736d6f732e63727970746f2e736563703235366b312e5075624b6579
+			value        | 00010 010 | 12 23
+				public_key | 00001 010 | 0a 21 02f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca8
+		mode_info      | 00010 010 | 12 04 
+			single       | 00001 010 | 0a 02 
+			mode         | 00001 000 | 08 01
+		sequence       | 00011 000 | 18 0a
+	Fee              | 00010 010 | 12 13
+		amount         | 00011 010 | 0a 0d
+			denom        | 00001 010 | 0a 05 7561746f6d
+			amount       | 00010 010 | 12 04 35303030
+		gas_limit      | 00010 000 | 10 c09a0c
+chain_id           | 00011 010 | 1a 0b 636f736d6f736875622d34
+account_number     | 00100 000 | 20 8f3a
+
+---
+- txRaw:  {
+  body_bytes: <span style="color:#f1fa8c">&#39;Co4BChwvY29zbW9zLmJhbmsudjFiZXRhMS5Nc2dTZW5kEm4KLWNvc21vczFmbmszbHhsa3M3dGRnNng1NXludjZ2Z2d0bmQ3M3ljcXNxODlzbBItY29zbW9zMWhsbHdjcWczeXo1bWd4MGNwbGg4MmwyM2FkODY1OGR2cGh2anRsGg4KBXVhdG9tEgUxMDAwMBIA&#39;</span>,
+  auth_info_bytes: <span style="color:#f1fa8c">&#39;ClAKRgofL2Nvc21vcy5jcnlwdG8uc2VjcDI1NmsxLlB1YktleRIjCiEC8Q1FeaO/vRQq+/KrNvAtbsQny4+61l67ALd6u7TDTKgSBAoCCAEYChITCg0KBXVhdG9tEgQ1MDAwEMCaDA==&#39;</span>,
+  signatures: [
+    <span style="color:#f1fa8c">&#39;xJTh+1UntZY9qe0UeOGt/R1jdheTr0ASb/k1tH5Euqd+rCnJbQXzF85vXaZM0j0jziuJyxYT7rDRotFqim3rRQ==&#39;</span>
+  ]
+}
+**- txBytes:  (0a93010a8e010a1c2f636f736d6f732e62616e6b2e763162657461312e4d736753656e64126e0a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c122d636f736d6f7331686c6c7763716733797a356d67783063706c6838326c323361643836353864767068766a746c1a0e0a057561746f6d12053130303030120012670a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca812040a020801180a12130a0d0a057561746f6d12043530303010c09a0c1a40c494e1fb5527b5963da9ed1478e1adfd1d63761793af40126ff935b47e44baa77eac29c96d05f317ce6f5da64cd23d23ce2b89cb1613eeb0d1a2d16a8a6deb45)**
+body_bytes         | 00001 010 | 0a 9301
+	messages         | 00001 010 | 0a 8e01
+		type_url       | 00001 010 | 0a 1c 2f636f736d6f732e62616e6b2e763162657461312e4d736753656e64
+		value          | 00010 010 | 12 6e
+			from_address | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c
+			to_address   | 00010 010 | 12 2d 636f736d6f7331686c6c7763716733797a356d67783063706c6838326c323361643836353864767068766a746c
+			amount       | 00011 010 | 1a 0e 
+				denom      | 00001 010 | 0a 05 7561746f6d
+				amount     | 00010 010 | 12 05 3130303030
+	memo             | 00010 010 | 12 00
+auth_info_bytes    | 00010 010 | 12 67
+	SignerInfo       | 00001 010 | 0a 50 
+		public_key     | 00001 010 | 0a 46 
+			type_url     | 00001 010 | 0a 1f 2f636f736d6f732e63727970746f2e736563703235366b312e5075624b6579
+			value        | 00010 010 | 12 23
+				public_key | 00001 010 | 0a 21 02f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca8
+		mode_info      | 00010 010 | 12 04 
+			single       | 00001 010 | 0a 02 
+			mode         | 00001 000 | 08 01
+		sequence       | 00011 000 | 18 0a
+	Fee              | 00010 010 | 12 13
+		amount         | 00011 010 | 0a 0d
+			denom        | 00001 010 | 0a 05 7561746f6d
+			amount       | 00010 010 | 12 04 35303030
+		gas_limit      | 00010 000 | 10 c09a0c
+signatures         | 00011 010 | 1a 40 c494e1fb5527b5963da9ed1478e1adfd1d63761793af40126ff935b47e44baa77eac29c96d05f317ce6f5da64cd23d23ce2b89cb1613eeb0d1a2d16a8a6deb45
+---
+- txBytesBase64:  CpMBCo4BChwvY29zbW9zLmJhbmsudjFiZXRhMS5Nc2dTZW5kEm4KLWNvc21vczFmbmszbHhsa3M3dGRnNng1NXludjZ2Z2d0bmQ3M3ljcXNxODlzbBItY29zbW9zMWhsbHdjcWczeXo1bWd4MGNwbGg4MmwyM2FkODY1OGR2cGh2anRsGg4KBXVhdG9tEgUxMDAwMBIAEmcKUApGCh8vY29zbW9zLmNyeXB0by5zZWNwMjU2azEuUHViS2V5EiMKIQLxDUV5o7+9FCr78qs28C1uxCfLj7rWXrsAt3q7tMNMqBIECgIIARgKEhMKDQoFdWF0b20SBDUwMDAQwJoMGkDElOH7VSe1lj2p7RR44a39HWN2F5OvQBJv+TW0fkS6p36sKcltBfMXzm9dpkzSPSPOK4nLFhPusNGi0WqKbetF
+---
+</code></pre></div><h4 id=_delegate>Delegate</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">- msgDelegate:  {
+  delegator_address: <span style="color:#f1fa8c">&#39;cosmos1fnk3lxlks7tdg6x55ynv6vggtnd73ycqsq89sl&#39;</span>,
+  validator_address: <span style="color:#f1fa8c">&#39;cosmosvaloper1we6knm8qartmmh2r0qfpsz6pq0s7emv3e0meuw&#39;</span>,
+  amount: { denom: <span style="color:#f1fa8c">&#39;uatom&#39;</span>, amount: <span style="color:#f1fa8c">&#39;10000&#39;</span> }
+}
+**- msgDelegate protobuf:  0a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c1234636f736d6f7376616c6f706572317765366b6e6d38716172746d6d68327230716670737a367071307337656d763365306d6575771a0e0a057561746f6d12053130303030**
+
+delegator_address   | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c
+validator_address   | 00010 010 | 12 34 636f736d6f7376616c6f706572317765366b6e6d38716172746d6d68327230716670737a367071307337656d763365306d657577
+amount              | 00011 010 | 1a 0e 
+	denom             | 00001 010 | 0a 05 7561746f6d
+	amount            | 00010 010 | 12 05 3130303030
+
+---
+- signerInfo:  SignerInfo {
+  public_key: Any {
+    type_url: <span style="color:#f1fa8c">&#39;/cosmos.crypto.secp256k1.PubKey&#39;</span>,
+    value: &lt;Buffer 0a 21 02 f1 0d 45 79 a3 bf bd 14 2a fb f2 ab 36 f0 2d 6e c4 27 cb 8f ba d6 5e bb 00 b7 7a bb b4 c3 4c a8&gt;
+  },
+  mode_info: { single: { mode: 1 } },
+  sequence: <span style="color:#f1fa8c">&#39;10&#39;</span>
+}
+---
+- feeValue:  { amount: [ { denom: <span style="color:#f1fa8c">&#39;uatom&#39;</span>, amount: <span style="color:#f1fa8c">&#39;5000&#39;</span> } ], gas_limit: <span style="color:#f1fa8c">&#39;200000&#39;</span> }
+**- feeValue protobuf:  0a0d0a057561746f6d12043530303010c09a0c**
+
+amount       | 00011 010 | 0a 0d
+	denom      | 00001 010 | 0a 05 7561746f6d
+	amount     | 00010 010 | 12 04 35303030
+gas_limit    | 00010 000 | 10 c09a0c
+
+---
+- txBody:  {
+  messages: [
+    {
+      type_url: <span style="color:#f1fa8c">&#39;/cosmos.staking.v1beta1.MsgDelegate&#39;</span>,
+      value: <span style="color:#f1fa8c">&#39;Ci1jb3Ntb3MxZm5rM2x4bGtzN3RkZzZ4NTV5bnY2dmdndG5kNzN5Y3FzcTg5c2wSNGNvc21vc3ZhbG9wZXIxd2U2a25tOHFhcnRtbWgycjBxZnBzejZwcTBzN2VtdjNlMG1ldXcaDgoFdWF0b20SBTEwMDAw&#39;</span>
+    }
+  ],
+  memo: <span style="color:#f1fa8c">&#39;&#39;</span>
+}
+**- txBody protobuf:  0a9c010a232f636f736d6f732e7374616b696e672e763162657461312e4d736744656c656761746512750a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c1234636f736d6f7376616c6f706572317765366b6e6d38716172746d6d68327230716670737a367071307337656d763365306d6575771a0e0a057561746f6d120531303030301200**
+
+messages              | 00001 010 | 0a 9c01
+	type_url            | 00001 010 | 0a 23 2f636f736d6f732e7374616b696e672e763162657461312e4d736744656c6567617465
+	value               | 00010 010 | 12 75
+		delegator_address | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c
+		validator_address | 00010 010 | 12 34 636f736d6f7376616c6f706572317765366b6e6d38716172746d6d68327230716670737a367071307337656d763365306d657577
+		amount            | 00011 010 | 1a 0e 
+			denom           | 00001 010 | 0a 05 7561746f6d
+			amount          | 00010 010 | 12 05 3130303030
+memo                  | 00010 010 | 12 00
+
+---
+- authInfo:  AuthInfo {
+  signer_infos: [
+    SignerInfo {
+      public_key: [Any],
+      mode_info: [Object],
+      sequence: <span style="color:#f1fa8c">&#39;10&#39;</span>
+    }
+  ],
+  fee: Fee { amount: [ [Object] ], gas_limit: 200000 }
+}
+**- authInfo protobuf:  0a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca812040a020801180a12130a0d0a057561746f6d12043530303010c09a0c**
+
+SignerInfo   | 00001 010 | 0a 50 
+	public_key | 00001 010 | 0a 46 0a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca8
+	mode_info  | 00010 010 | 12 04 
+		single   | 00001 010 | 0a 02 
+		mode     | 00001 000 | 08 01
+	sequence   | 00011 000 | 18 0a
+Fee          | 00010 010 | 12 13
+	amount     | 00011 010 | 0a 0d
+		denom    | 00001 010 | 0a 05 7561746f6d
+		amount   | 00010 010 | 12 04 35303030
+	gas_limit  | 00010 000 | 10 c09a0c
+
+---
+- signDoc:  {
+  body_bytes: <span style="color:#f1fa8c">&#39;CpwBCiMvY29zbW9zLnN0YWtpbmcudjFiZXRhMS5Nc2dEZWxlZ2F0ZRJ1Ci1jb3Ntb3MxZm5rM2x4bGtzN3RkZzZ4NTV5bnY2dmdndG5kNzN5Y3FzcTg5c2wSNGNvc21vc3ZhbG9wZXIxd2U2a25tOHFhcnRtbWgycjBxZnBzejZwcTBzN2VtdjNlMG1ldXcaDgoFdWF0b20SBTEwMDAwEgA=&#39;</span>,
+  auth_info_bytes: <span style="color:#f1fa8c">&#39;ClAKRgofL2Nvc21vcy5jcnlwdG8uc2VjcDI1NmsxLlB1YktleRIjCiEC8Q1FeaO/vRQq+/KrNvAtbsQny4+61l67ALd6u7TDTKgSBAoCCAEYChITCg0KBXVhdG9tEgQ1MDAwEMCaDA==&#39;</span>,
+  chain_id: <span style="color:#f1fa8c">&#39;cosmoshub-4&#39;</span>,
+  account_number: <span style="color:#f1fa8c">&#39;7439&#39;</span>
+}
+**- signDoc protobuf:  0aa1010a9c010a232f636f736d6f732e7374616b696e672e763162657461312e4d736744656c656761746512750a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c1234636f736d6f7376616c6f706572317765366b6e6d38716172746d6d68327230716670737a367071307337656d763365306d6575771a0e0a057561746f6d12053130303030120012670a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca812040a020801180a12130a0d0a057561746f6d12043530303010c09a0c1a0b636f736d6f736875622d34208f3a**
+
+body_bytes              | 00001 010 | 0a a101
+	messages              | 00001 010 | 0a 9c01
+		type_url            | 00001 010 | 0a 23 2f636f736d6f732e7374616b696e672e763162657461312e4d736744656c6567617465
+		value               | 00010 010 | 12 75
+			delegator_address | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c
+			validator_address | 00010 010 | 12 34 636f736d6f7376616c6f706572317765366b6e6d38716172746d6d68327230716670737a367071307337656d763365306d657577
+			amount            | 00011 010 | 1a 0e 
+				denom           | 00001 010 | 0a 05 7561746f6d
+				amount          | 00010 010 | 12 05 3130303030
+	memo                  | 00010 010 | 12 00
+auth_info_bytes         | 00010 010 | 12 67
+	SignerInfo            | 00001 010 | 0a 50 
+		public_key          | 00001 010 | 0a 46 0a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca8
+		mode_info           | 00010 010 | 12 04 
+			single            | 00001 010 | 0a 02 
+			mode              | 00001 000 | 08 01
+		sequence            | 00011 000 | 18 0a
+	Fee                   | 00010 010 | 12 13
+		amount              | 00011 010 | 0a 0d
+			denom             | 00001 010 | 0a 05 7561746f6d
+			amount            | 00010 010 | 12 04 35303030
+		gas_limit           | 00010 000 | 10 c09a0c
+chain_id                | 00011 010 | 1a 0b 636f736d6f736875622d34
+account_number          | 00100 000 | 20 8f3a
+
+---
+- txRaw:  {
+  body_bytes: <span style="color:#f1fa8c">&#39;CpwBCiMvY29zbW9zLnN0YWtpbmcudjFiZXRhMS5Nc2dEZWxlZ2F0ZRJ1Ci1jb3Ntb3MxZm5rM2x4bGtzN3RkZzZ4NTV5bnY2dmdndG5kNzN5Y3FzcTg5c2wSNGNvc21vc3ZhbG9wZXIxd2U2a25tOHFhcnRtbWgycjBxZnBzejZwcTBzN2VtdjNlMG1ldXcaDgoFdWF0b20SBTEwMDAwEgA=&#39;</span>,
+  auth_info_bytes: <span style="color:#f1fa8c">&#39;ClAKRgofL2Nvc21vcy5jcnlwdG8uc2VjcDI1NmsxLlB1YktleRIjCiEC8Q1FeaO/vRQq+/KrNvAtbsQny4+61l67ALd6u7TDTKgSBAoCCAEYChITCg0KBXVhdG9tEgQ1MDAwEMCaDA==&#39;</span>,
+  signatures: [
+    <span style="color:#f1fa8c">&#39;k7hbJFJgtImMJQ4wdX5NxJsN5kYyG+5fgfTl2s8kcb53Su16xyARAqZMeOROAYwYSuRKzY6TsWPccCoLKo1VRA==&#39;</span>
+  ]
+}
+**- txBytes:  0aa1010a9c010a232f636f736d6f732e7374616b696e672e763162657461312e4d736744656c656761746512750a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c1234636f736d6f7376616c6f706572317765366b6e6d38716172746d6d68327230716670737a367071307337656d763365306d6575771a0e0a057561746f6d12053130303030120012670a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca812040a020801180a12130a0d0a057561746f6d12043530303010c09a0c1a4093b85b245260b4898c250e30757e4dc49b0de646321bee5f81f4e5dacf2471be774aed7ac7201102a64c78e44e018c184ae44acd8e93b163dc702a0b2a8d5544**
+body_bytes              | 00001 010 | 0a a101
+	messages              | 00001 010 | 0a 9c01
+		type_url            | 00001 010 | 0a 23 2f636f736d6f732e7374616b696e672e763162657461312e4d736744656c6567617465
+		value               | 00010 010 | 12 75
+			delegator_address | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c
+			validator_address | 00010 010 | 12 34 636f736d6f7376616c6f706572317765366b6e6d38716172746d6d68327230716670737a367071307337656d763365306d657577
+			amount            | 00011 010 | 1a 0e 
+				denom           | 00001 010 | 0a 05 7561746f6d
+				amount          | 00010 010 | 12 05 3130303030
+	memo                  | 00010 010 | 12 00
+auth_info_bytes         | 00010 010 | 12 67
+	SignerInfo            | 00001 010 | 0a 50 
+		public_key          | 00001 010 | 0a 46 0a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca8
+		mode_info           | 00010 010 | 12 04 
+			single            | 00001 010 | 0a 02 
+			mode              | 00001 000 | 08 01
+		sequence            | 00011 000 | 18 0a
+	Fee                   | 00010 010 | 12 13
+		amount              | 00011 010 | 0a 0d
+			denom             | 00001 010 | 0a 05 7561746f6d
+			amount            | 00010 010 | 12 04 35303030
+		gas_limit           | 00010 000 | 10 c09a0c
+signatures              | 00011 010 | 1a 40 93b85b245260b4898c250e30757e4dc49b0de646321bee5f81f4e5dacf2471be774aed7ac7201102a64c78e44e018c184ae44acd8e93b163dc702a0b2a8d5544
+
+---
+- txBytesBase64:  CqEBCpwBCiMvY29zbW9zLnN0YWtpbmcudjFiZXRhMS5Nc2dEZWxlZ2F0ZRJ1Ci1jb3Ntb3MxZm5rM2x4bGtzN3RkZzZ4NTV5bnY2dmdndG5kNzN5Y3FzcTg5c2wSNGNvc21vc3ZhbG9wZXIxd2U2a25tOHFhcnRtbWgycjBxZnBzejZwcTBzN2VtdjNlMG1ldXcaDgoFdWF0b20SBTEwMDAwEgASZwpQCkYKHy9jb3Ntb3MuY3J5cHRvLnNlY3AyNTZrMS5QdWJLZXkSIwohAvENRXmjv70UKvvyqzbwLW7EJ8uPutZeuwC3eru0w0yoEgQKAggBGAoSEwoNCgV1YXRvbRIENTAwMBDAmgwaQJO4WyRSYLSJjCUOMHV+TcSbDeZGMhvuX4H05drPJHG+d0rtescgEQKmTHjkTgGMGErkSs2Ok7Fj3HAqCyqNVUQ=
+---
+</code></pre></div><h4 id=_undelegate>Undelegate</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">- msgUndelegate:  {
+  delegator_address: <span style="color:#f1fa8c">&#39;cosmos1fnk3lxlks7tdg6x55ynv6vggtnd73ycqsq89sl&#39;</span>,
+  validator_address: <span style="color:#f1fa8c">&#39;cosmosvaloper1we6knm8qartmmh2r0qfpsz6pq0s7emv3e0meuw&#39;</span>,
+  amount: { denom: <span style="color:#f1fa8c">&#39;uatom&#39;</span>, amount: <span style="color:#f1fa8c">&#39;10000&#39;</span> }
+}
+**- msgUndelegate protobuf:  0a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c1234636f736d6f7376616c6f706572317765366b6e6d38716172746d6d68327230716670737a367071307337656d763365306d6575771a0e0a057561746f6d12053130303030**
+
+delegator_address   | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c
+validator_address   | 00010 010 | 12 34 636f736d6f7376616c6f706572317765366b6e6d38716172746d6d68327230716670737a367071307337656d763365306d657577
+amount              | 00011 010 | 1a 0e 
+	denom             | 00001 010 | 0a 05 7561746f6d
+	amount            | 00010 010 | 12 05 3130303030
+
+- signerInfo:  SignerInfo {
+  public_key: Any {
+    type_url: <span style="color:#f1fa8c">&#39;/cosmos.crypto.secp256k1.PubKey&#39;</span>,
+    value: &lt;Buffer 0a 21 02 f1 0d 45 79 a3 bf bd 14 2a fb f2 ab 36 f0 2d 6e c4 27 cb 8f ba d6 5e bb 00 b7 7a bb b4 c3 4c a8&gt;
+  },
+  mode_info: { single: { mode: 1 } },
+  sequence: <span style="color:#f1fa8c">&#39;10&#39;</span>
+}
+---
+- feeValue:  { amount: [ { denom: <span style="color:#f1fa8c">&#39;uatom&#39;</span>, amount: <span style="color:#f1fa8c">&#39;5000&#39;</span> } ], gas_limit: <span style="color:#f1fa8c">&#39;200000&#39;</span> }
+**- feeValue protobuf:  0a0d0a057561746f6d12043530303010c09a0c**
+
+amount       | 00011 010 | 0a 0d
+	denom      | 00001 010 | 0a 05 7561746f6d
+	amount     | 00010 010 | 12 04 35303030
+gas_limit    | 00010 000 | 10 c09a0c
+
+---
+- txBody:  {
+  messages: [
+    {
+      type_url: <span style="color:#f1fa8c">&#39;/cosmos.staking.v1beta1.MsgUndelegate&#39;</span>,
+      value: <span style="color:#f1fa8c">&#39;Ci1jb3Ntb3MxZm5rM2x4bGtzN3RkZzZ4NTV5bnY2dmdndG5kNzN5Y3FzcTg5c2wSNGNvc21vc3ZhbG9wZXIxd2U2a25tOHFhcnRtbWgycjBxZnBzejZwcTBzN2VtdjNlMG1ldXcaDgoFdWF0b20SBTEwMDAw&#39;</span>
+    }
+  ],
+  memo: <span style="color:#f1fa8c">&#39;&#39;</span>
+}
+**- txBody protobuf:  0a9e010a252f636f736d6f732e7374616b696e672e763162657461312e4d7367556e64656c656761746512750a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c1234636f736d6f7376616c6f706572317765366b6e6d38716172746d6d68327230716670737a367071307337656d763365306d6575771a0e0a057561746f6d120531303030301200**
+
+messages              | 00001 010 | 0a 9e01
+	type_url            | 00001 010 | 0a 25 2f636f736d6f732e7374616b696e672e763162657461312e4d7367556e64656c6567617465
+	value               | 00010 010 | 12 75
+		delegator_address | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c
+		validator_address | 00010 010 | 12 34 636f736d6f7376616c6f706572317765366b6e6d38716172746d6d68327230716670737a367071307337656d763365306d657577
+		amount            | 00011 010 | 1a 0e 
+			denom           | 00001 010 | 0a 05 7561746f6d
+			amount          | 00010 010 | 12 05 3130303030
+memo                  | 00010 010 | 12 00
+
+---
+- authInfo:  AuthInfo {
+  signer_infos: [
+    SignerInfo {
+      public_key: [Any],
+      mode_info: [Object],
+      sequence: <span style="color:#f1fa8c">&#39;10&#39;</span>
+    }
+  ],
+  fee: Fee { amount: [ [Object] ], gas_limit: 200000 }
+}
+**- authInfo protobuf:  0a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca812040a020801180a12130a0d0a057561746f6d12043530303010c09a0c**
+
+SignerInfo   | 00001 010 | 0a 50 
+	public_key | 00001 010 | 0a 46 0a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca8
+	mode_info  | 00010 010 | 12 04 
+		single   | 00001 010 | 0a 02 
+		mode     | 00001 000 | 08 01
+	sequence   | 00011 000 | 18 0a
+Fee          | 00010 010 | 12 13
+	amount     | 00011 010 | 0a 0d
+		denom    | 00001 010 | 0a 05 7561746f6d
+		amount   | 00010 010 | 12 04 35303030
+	gas_limit  | 00010 000 | 10 c09a0c
+
+---
+- signDoc:  {
+  body_bytes: <span style="color:#f1fa8c">&#39;Cp4BCiUvY29zbW9zLnN0YWtpbmcudjFiZXRhMS5Nc2dVbmRlbGVnYXRlEnUKLWNvc21vczFmbmszbHhsa3M3dGRnNng1NXludjZ2Z2d0bmQ3M3ljcXNxODlzbBI0Y29zbW9zdmFsb3BlcjF3ZTZrbm04cWFydG1taDJyMHFmcHN6NnBxMHM3ZW12M2UwbWV1dxoOCgV1YXRvbRIFMTAwMDASAA==&#39;</span>,
+  auth_info_bytes: <span style="color:#f1fa8c">&#39;ClAKRgofL2Nvc21vcy5jcnlwdG8uc2VjcDI1NmsxLlB1YktleRIjCiEC8Q1FeaO/vRQq+/KrNvAtbsQny4+61l67ALd6u7TDTKgSBAoCCAEYChITCg0KBXVhdG9tEgQ1MDAwEMCaDA==&#39;</span>,
+  chain_id: <span style="color:#f1fa8c">&#39;cosmoshub-4&#39;</span>,
+  account_number: <span style="color:#f1fa8c">&#39;7439&#39;</span>
+}
+**- signDoc protobuf:  0aa3010a9e010a252f636f736d6f732e7374616b696e672e763162657461312e4d7367556e64656c656761746512750a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c1234636f736d6f7376616c6f706572317765366b6e6d38716172746d6d68327230716670737a367071307337656d763365306d6575771a0e0a057561746f6d12053130303030120012670a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca812040a020801180a12130a0d0a057561746f6d12043530303010c09a0c1a0b636f736d6f736875622d34208f3a**
+
+body_bytes              | 00001 010 | 0a a301
+	messages              | 00001 010 | 0a 9e01
+		type_url            | 00001 010 | 0a 25 2f636f736d6f732e7374616b696e672e763162657461312e4d7367556e64656c6567617465
+		value               | 00010 010 | 12 75
+			delegator_address | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c
+			validator_address | 00010 010 | 12 34 636f736d6f7376616c6f706572317765366b6e6d38716172746d6d68327230716670737a367071307337656d763365306d657577
+			amount            | 00011 010 | 1a 0e 
+				denom           | 00001 010 | 0a 05 7561746f6d
+				amount          | 00010 010 | 12 05 3130303030
+	memo                  | 00010 010 | 12 00
+auth_info_bytes         | 00010 010 | 12 67
+	SignerInfo            | 00001 010 | 0a 50 
+		public_key          | 00001 010 | 0a 46 0a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca8
+		mode_info           | 00010 010 | 12 04 
+			single            | 00001 010 | 0a 02 
+			mode              | 00001 000 | 08 01
+		sequence            | 00011 000 | 18 0a
+	Fee                   | 00010 010 | 12 13
+		amount              | 00011 010 | 0a 0d
+			denom             | 00001 010 | 0a 05 7561746f6d
+			amount            | 00010 010 | 12 04 35303030
+		gas_limit           | 00010 000 | 10 c09a0c
+chain_id                | 00011 010 | 1a 0b 636f736d6f736875622d34
+account_number          | 00100 000 | 20 8f3a
+---
+- txRaw:  {
+  body_bytes: <span style="color:#f1fa8c">&#39;Cp4BCiUvY29zbW9zLnN0YWtpbmcudjFiZXRhMS5Nc2dVbmRlbGVnYXRlEnUKLWNvc21vczFmbmszbHhsa3M3dGRnNng1NXludjZ2Z2d0bmQ3M3ljcXNxODlzbBI0Y29zbW9zdmFsb3BlcjF3ZTZrbm04cWFydG1taDJyMHFmcHN6NnBxMHM3ZW12M2UwbWV1dxoOCgV1YXRvbRIFMTAwMDASAA==&#39;</span>,
+  auth_info_bytes: <span style="color:#f1fa8c">&#39;ClAKRgofL2Nvc21vcy5jcnlwdG8uc2VjcDI1NmsxLlB1YktleRIjCiEC8Q1FeaO/vRQq+/KrNvAtbsQny4+61l67ALd6u7TDTKgSBAoCCAEYChITCg0KBXVhdG9tEgQ1MDAwEMCaDA==&#39;</span>,
+  signatures: [
+    <span style="color:#f1fa8c">&#39;IE6NUN9fopIAHoqT04Kjj+UVkV35kR+ZQTZTtKTVQJtz3Ma3M8daZeRu89p9Ut93HfpU0+ew1X5rCWhXN/CgSw==&#39;</span>
+  ]
+}
+**- txBytes:  0aa3010a9e010a252f636f736d6f732e7374616b696e672e763162657461312e4d7367556e64656c656761746512750a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c1234636f736d6f7376616c6f706572317765366b6e6d38716172746d6d68327230716670737a367071307337656d763365306d6575771a0e0a057561746f6d12053130303030120012670a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca812040a020801180a12130a0d0a057561746f6d12043530303010c09a0c1a40204e8d50df5fa292001e8a93d382a38fe515915df9911f99413653b4a4d5409b73dcc6b733c75a65e46ef3da7d52df771dfa54d3e7b0d57e6b09685737f0a04b**
+body_bytes              | 00001 010 | 0a a301
+	messages              | 00001 010 | 0a 9e01
+		type_url            | 00001 010 | 0a 25 2f636f736d6f732e7374616b696e672e763162657461312e4d7367556e64656c6567617465
+		value               | 00010 010 | 12 75
+			delegator_address | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c
+			validator_address | 00010 010 | 12 34 636f736d6f7376616c6f706572317765366b6e6d38716172746d6d68327230716670737a367071307337656d763365306d657577
+			amount            | 00011 010 | 1a 0e 
+				denom           | 00001 010 | 0a 05 7561746f6d
+				amount          | 00010 010 | 12 05 3130303030
+	memo                  | 00010 010 | 12 00
+auth_info_bytes         | 00010 010 | 12 67
+	SignerInfo            | 00001 010 | 0a 50 
+		public_key          | 00001 010 | 0a 46 0a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca8
+		mode_info           | 00010 010 | 12 04 
+			single            | 00001 010 | 0a 02 
+			mode              | 00001 000 | 08 01
+		sequence            | 00011 000 | 18 0a
+	Fee                   | 00010 010 | 12 13
+		amount              | 00011 010 | 0a 0d
+			denom             | 00001 010 | 0a 05 7561746f6d
+			amount            | 00010 010 | 12 04 35303030
+		gas_limit           | 00010 000 | 10 c09a0c
+signatures              | 00011 010 | 1a 40 204e8d50df5fa292001e8a93d382a38fe515915df9911f99413653b4a4d5409b73dcc6b733c75a65e46ef3da7d52df771dfa54d3e7b0d57e6b09685737f0a04b
+
+---
+- txBytesBase64:  CqMBCp4BCiUvY29zbW9zLnN0YWtpbmcudjFiZXRhMS5Nc2dVbmRlbGVnYXRlEnUKLWNvc21vczFmbmszbHhsa3M3dGRnNng1NXludjZ2Z2d0bmQ3M3ljcXNxODlzbBI0Y29zbW9zdmFsb3BlcjF3ZTZrbm04cWFydG1taDJyMHFmcHN6NnBxMHM3ZW12M2UwbWV1dxoOCgV1YXRvbRIFMTAwMDASABJnClAKRgofL2Nvc21vcy5jcnlwdG8uc2VjcDI1NmsxLlB1YktleRIjCiEC8Q1FeaO/vRQq+/KrNvAtbsQny4+61l67ALd6u7TDTKgSBAoCCAEYChITCg0KBXVhdG9tEgQ1MDAwEMCaDBpAIE6NUN9fopIAHoqT04Kjj+UVkV35kR+ZQTZTtKTVQJtz3Ma3M8daZeRu89p9Ut93HfpU0+ew1X5rCWhXN/CgSw==
+---
+</code></pre></div><h4 id=_withdraw>Withdraw</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">- msgWithdraw:  {
+  delegator_address: <span style="color:#f1fa8c">&#39;cosmos1fnk3lxlks7tdg6x55ynv6vggtnd73ycqsq89sl&#39;</span>,
+  validator_address: <span style="color:#f1fa8c">&#39;cosmosvaloper1qwl879nx9t6kef4supyazayf7vjhennyh568ys&#39;</span>
+}
+**- msgWithdraw protobuf:  0a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c1234636f736d6f7376616c6f7065723171776c3837396e783974366b65663473757079617a61796637766a68656e6e79683536387973**
+
+delegator_address   | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c
+validator_address   | 00010 010 | 12 34 636f736d6f7376616c6f7065723171776c3837396e783974366b65663473757079617a61796637766a68656e6e79683536387973
+
+---
+- signerInfo:  SignerInfo {
+  public_key: Any {
+    type_url: <span style="color:#f1fa8c">&#39;/cosmos.crypto.secp256k1.PubKey&#39;</span>,
+    value: &lt;Buffer 0a 21 02 f1 0d 45 79 a3 bf bd 14 2a fb f2 ab 36 f0 2d 6e c4 27 cb 8f ba d6 5e bb 00 b7 7a bb b4 c3 4c a8&gt;
+  },
+  mode_info: { single: { mode: 1 } },
+  sequence: <span style="color:#f1fa8c">&#39;10&#39;</span>
+}
+---
+- feeValue:  { amount: [ { denom: <span style="color:#f1fa8c">&#39;uatom&#39;</span>, amount: <span style="color:#f1fa8c">&#39;5000&#39;</span> } ], gas_limit: <span style="color:#f1fa8c">&#39;200000&#39;</span> }
+**- feeValue protobuf:  0a0d0a057561746f6d12043530303010c09a0c**
+
+amount       | 00011 010 | 0a 0d
+	denom      | 00001 010 | 0a 05 7561746f6d
+	amount     | 00010 010 | 12 04 35303030
+gas_limit    | 00010 000 | 10 c09a0c
+
+---
+- txBody:  {
+  messages: [
+    {
+      type_url: <span style="color:#f1fa8c">&#39;/cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward&#39;</span>,
+      value: <span style="color:#f1fa8c">&#39;Ci1jb3Ntb3MxZm5rM2x4bGtzN3RkZzZ4NTV5bnY2dmdndG5kNzN5Y3FzcTg5c2wSNGNvc21vc3ZhbG9wZXIxcXdsODc5bng5dDZrZWY0c3VweWF6YXlmN3ZqaGVubnloNTY4eXM=&#39;</span>
+    }
+  ],
+  memo: <span style="color:#f1fa8c">&#39;&#39;</span>
+}
+- txBody protobuf:  **0aa0010a372f636f736d6f732e646973747269627574696f6e2e763162657461312e4d7367576974686472617744656c656761746f7252657761726412650a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c1234636f736d6f7376616c6f7065723171776c3837396e783974366b65663473757079617a61796637766a68656e6e796835363879731200**
+
+messages              | 00001 010 | 0a 9e01
+	type_url            | 00001 010 | 0a 37 2f636f736d6f732e646973747269627574696f6e2e763162657461312e4d7367576974686472617744656c656761746f72526577617264
+	value               | 00010 010 | 12 65
+		delegator_address | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c
+		validator_address | 00010 010 | 12 34 636f736d6f7376616c6f7065723171776c3837396e783974366b65663473757079617a61796637766a68656e6e79683536387973
+memo                  | 00010 010 | 12 00
+
+---
+- authInfo:  AuthInfo {
+  signer_infos: [
+    SignerInfo {
+      public_key: [Any],
+      mode_info: [Object],
+      sequence: <span style="color:#f1fa8c">&#39;10&#39;</span>
+    }
+  ],
+  fee: Fee { amount: [ [Object] ], gas_limit: 200000 }
+}
+**- authInfo protobuf:  0a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca812040a020801180a12130a0d0a057561746f6d12043530303010c09a0c**
+
+SignerInfo   | 00001 010 | 0a 50 
+	public_key | 00001 010 | 0a 46 0a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca8
+	mode_info  | 00010 010 | 12 04 
+		single   | 00001 010 | 0a 02 
+		mode     | 00001 000 | 08 01
+	sequence   | 00011 000 | 18 0a
+Fee          | 00010 010 | 12 13
+	amount     | 00011 010 | 0a 0d
+		denom    | 00001 010 | 0a 05 7561746f6d
+		amount   | 00010 010 | 12 04 35303030
+	gas_limit  | 00010 000 | 10 c09a0c
+
+---
+- signDoc:  {
+  body_bytes: <span style="color:#f1fa8c">&#39;CqABCjcvY29zbW9zLmRpc3RyaWJ1dGlvbi52MWJldGExLk1zZ1dpdGhkcmF3RGVsZWdhdG9yUmV3YXJkEmUKLWNvc21vczFmbmszbHhsa3M3dGRnNng1NXludjZ2Z2d0bmQ3M3ljcXNxODlzbBI0Y29zbW9zdmFsb3BlcjFxd2w4NzlueDl0NmtlZjRzdXB5YXpheWY3dmpoZW5ueWg1Njh5cxIA&#39;</span>,
+  auth_info_bytes: <span style="color:#f1fa8c">&#39;ClAKRgofL2Nvc21vcy5jcnlwdG8uc2VjcDI1NmsxLlB1YktleRIjCiEC8Q1FeaO/vRQq+/KrNvAtbsQny4+61l67ALd6u7TDTKgSBAoCCAEYChITCg0KBXVhdG9tEgQ1MDAwEMCaDA==&#39;</span>,
+  chain_id: <span style="color:#f1fa8c">&#39;cosmoshub-4&#39;</span>,
+  account_number: <span style="color:#f1fa8c">&#39;7439&#39;</span>
+}
+**- signDoc protobuf:  0aa5010aa0010a372f636f736d6f732e646973747269627574696f6e2e763162657461312e4d7367576974686472617744656c656761746f7252657761726412650a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c1234636f736d6f7376616c6f7065723171776c3837396e783974366b65663473757079617a61796637766a68656e6e79683536387973120012670a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca812040a020801180a12130a0d0a057561746f6d12043530303010c09a0c1a0b636f736d6f736875622d34208f3a**
+
+body_bytes              | 00001 010 | 0a a501
+	messages              | 00001 010 | 0a 9e01
+		type_url            | 00001 010 | 0a 37 2f636f736d6f732e646973747269627574696f6e2e763162657461312e4d7367576974686472617744656c656761746f72526577617264
+		value               | 00010 010 | 12 65
+			delegator_address | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c
+			validator_address | 00010 010 | 12 34 636f736d6f7376616c6f7065723171776c3837396e783974366b65663473757079617a61796637766a68656e6e79683536387973
+	memo                  | 00010 010 | 12 00
+auth_info_bytes         | 00010 010 | 12 67
+	SignerInfo            | 00001 010 | 0a 50 
+		public_key          | 00001 010 | 0a 46 0a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca8
+		mode_info           | 00010 010 | 12 04 
+			single            | 00001 010 | 0a 02 
+			mode              | 00001 000 | 08 01
+		sequence            | 00011 000 | 18 0a
+	Fee                   | 00010 010 | 12 13
+		amount              | 00011 010 | 0a 0d
+			denom             | 00001 010 | 0a 05 7561746f6d
+			amount            | 00010 010 | 12 04 35303030
+		gas_limit           | 00010 000 | 10 c09a0c
+chain_id                | 00011 010 | 1a 0b 636f736d6f736875622d34
+account_number          | 00100 000 | 20 8f3a
+
+---
+- txRaw:  {
+  body_bytes: <span style="color:#f1fa8c">&#39;CqABCjcvY29zbW9zLmRpc3RyaWJ1dGlvbi52MWJldGExLk1zZ1dpdGhkcmF3RGVsZWdhdG9yUmV3YXJkEmUKLWNvc21vczFmbmszbHhsa3M3dGRnNng1NXludjZ2Z2d0bmQ3M3ljcXNxODlzbBI0Y29zbW9zdmFsb3BlcjFxd2w4NzlueDl0NmtlZjRzdXB5YXpheWY3dmpoZW5ueWg1Njh5cxIA&#39;</span>,
+  auth_info_bytes: <span style="color:#f1fa8c">&#39;ClAKRgofL2Nvc21vcy5jcnlwdG8uc2VjcDI1NmsxLlB1YktleRIjCiEC8Q1FeaO/vRQq+/KrNvAtbsQny4+61l67ALd6u7TDTKgSBAoCCAEYChITCg0KBXVhdG9tEgQ1MDAwEMCaDA==&#39;</span>,
+  signatures: [
+    <span style="color:#f1fa8c">&#39;KPf9f5dG1kNR7MmqyvAzykswALyJ3HRKLMcziy0d9xEGAIofoR3tQadfxtbdynnOedWqDgN17YfsNHZUtXZkOw==&#39;</span>
+  ]
+}
+**- txBytes:  0aa5010aa0010a372f636f736d6f732e646973747269627574696f6e2e763162657461312e4d7367576974686472617744656c656761746f7252657761726412650a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c1234636f736d6f7376616c6f7065723171776c3837396e783974366b65663473757079617a61796637766a68656e6e79683536387973120012670a500a460a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca812040a020801180a12130a0d0a057561746f6d12043530303010c09a0c1a4028f7fd7f9746d64351ecc9aacaf033ca4b3000bc89dc744a2cc7338b2d1df71106008a1fa11ded41a75fc6d6ddca79ce79d5aa0e0375ed87ec347654b576643b**
+
+body_bytes              | 00001 010 | 0a a501
+	messages              | 00001 010 | 0a 9e01
+		type_url            | 00001 010 | 0a 37 2f636f736d6f732e646973747269627574696f6e2e763162657461312e4d7367576974686472617744656c656761746f72526577617264
+		value               | 00010 010 | 12 65
+			delegator_address | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c
+			validator_address | 00010 010 | 12 34 636f736d6f7376616c6f7065723171776c3837396e783974366b65663473757079617a61796637766a68656e6e79683536387973
+	memo                  | 00010 010 | 12 00
+auth_info_bytes         | 00010 010 | 12 67
+	SignerInfo            | 00001 010 | 0a 50 
+		public_key          | 00001 010 | 0a 46 0a1f2f636f736d6f732e63727970746f2e736563703235366b312e5075624b657912230a2102f10d4579a3bfbd142afbf2ab36f02d6ec427cb8fbad65ebb00b77abbb4c34ca8
+		mode_info           | 00010 010 | 12 04 
+			single            | 00001 010 | 0a 02 
+			mode              | 00001 000 | 08 01
+		sequence            | 00011 000 | 18 0a
+	Fee                   | 00010 010 | 12 13
+		amount              | 00011 010 | 0a 0d
+			denom             | 00001 010 | 0a 05 7561746f6d
+			amount            | 00010 010 | 12 04 35303030
+		gas_limit           | 00010 000 | 10 c09a0c
+signatures              | 00011 010 | 1a 40 28f7fd7f9746d64351ecc9aacaf033ca4b3000bc89dc744a2cc7338b2d1df71106008a1fa11ded41a75fc6d6ddca79ce79d5aa0e0375ed87ec347654b576643b
+---
+- txBytesBase64:  CqUBCqABCjcvY29zbW9zLmRpc3RyaWJ1dGlvbi52MWJldGExLk1zZ1dpdGhkcmF3RGVsZWdhdG9yUmV3YXJkEmUKLWNvc21vczFmbmszbHhsa3M3dGRnNng1NXludjZ2Z2d0bmQ3M3ljcXNxODlzbBI0Y29zbW9zdmFsb3BlcjFxd2w4NzlueDl0NmtlZjRzdXB5YXpheWY3dmpoZW5ueWg1Njh5cxIAEmcKUApGCh8vY29zbW9zLmNyeXB0by5zZWNwMjU2azEuUHViS2V5EiMKIQLxDUV5o7+9FCr78qs28C1uxCfLj7rWXrsAt3q7tMNMqBIECgIIARgKEhMKDQoFdWF0b20SBDUwMDAQwJoMGkAo9
+</code></pre></div><h3 id=_doc>Doc</h3>
+<ul>
+<li><a href="https://github.com/cosmos/cosmos-sdk/blob/master/proto/cosmos/staking/v1beta1/tx.proto">MsgDelegate / MsgUndelegate Protobuf</a></li>
+<li><a href="https://github.com/cosmos/cosmos-sdk/blob/master/proto/cosmos/distribution/v1beta1/tx.proto">MsgWithdrawDelegatorReward</a></li>
+<li><a href="https://github.com/cosmos/cosmos-sdk/blob/master/docs/core/proto-docs.md#cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward">proto doc</a></li>
+</ul>
+
+  </div>
+  <br>
+  <br>
+  <div class="pagination">
+  
+    <a href="/ianlife/read/11-writing-lesson/" class="button">
+      <div class="previous">
+        <div>大人的11堂寫作課 - 複利成長自身的價值</div>
+      </div>
+    </a>
+  
+  
+    <a href="/ianlife/blog/technology/blockchain/polkadot/" class="button">
+      <div class="next">
+        <div>Polkadot Parse</div>
+      </div>
+    </a>
+  
+</div>
+
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%8D%80%E5%A1%8A%E9%8F%88">區塊鏈</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/blockchain">Blockchain</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+
+        <div class="disqus markdown">
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+      </main>
+      
+      <div id="page-sidebar">
+        
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div>
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_transaction">
+												 Transaction
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_protobuf-prefix">
+												 protobuf prefix
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_send">
+												 Send
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_delegate">
+												 Delegate
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_undelegate">
+												 Undelegate
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_withdraw">
+												 Withdraw
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_doc">
+												 Doc
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+        <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2fblog%2ftechnology%2fblockchain%2fcosmos%2f" width="100%"
+  frameborder=0></iframe>
+ 
+        <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script src="/ianlife/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+      </div>
+    </div>
+    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+  </body>
+</html>
