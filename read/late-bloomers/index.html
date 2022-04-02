@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh">
   <head>
-  <meta content="演算法, Algorithm, Binary search, 資料結構, Data Structures, 二分搜尋" name="keywords">
+  <meta content="讀書心得, 可複製的領導力, 樊登" name="keywords">
   <link rel="stylesheet" href="https://ianjustin39.github.io/ianlife/%20css/search.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   <link rel="stylesheet" href="../css/magnific-popup.css">
@@ -59,7 +59,7 @@ if (!doNotTrack) {
 
   
   <meta charset="utf-8">
-<title>二分搜尋演算法 (Binary search algorithm) - 終極密碼 - Ian Tsai </title>
+<title>大器可以晚成 - Ian Tsai </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -75,31 +75,28 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="二分搜尋演算法 (Binary search algorithm) - 終極密碼">
-<meta itemprop="description" content="圖片來源
-">
-<meta itemprop="datePublished" content="2021-03-07T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-07T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="336">
-<meta itemprop="image" content="https://i.imgur.com/RVPOINs.png">
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="大器可以晚成">
+<meta itemprop="description" content="當世界沉迷年少得志，耐心是你成功的本事">
+<meta itemprop="datePublished" content="2022-03-29T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2022-03-29T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="39">
+<meta itemprop="image" content="https://i.imgur.com/sWSBPih.png">
 
 
 
-<meta itemprop="keywords" content="Algorithm,Data Structures," /><meta property="og:title" content="二分搜尋演算法 (Binary search algorithm) - 終極密碼" />
-<meta property="og:description" content="圖片來源
-" />
+<meta itemprop="keywords" content="讀書心得,好書推薦," /><meta property="og:title" content="大器可以晚成" />
+<meta property="og:description" content="當世界沉迷年少得志，耐心是你成功的本事" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/algorithms/binary-search/" />
-<meta property="og:image" content="https://i.imgur.com/RVPOINs.png" />
-<meta property="article:published_time" content="2021-03-07T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-03-07T00:00:00+00:00" /><meta property="og:see_also" content="https://ianjustin39.github.io/ianlife/algorithms/quick-sort/" /><meta property="og:see_also" content="https://ianjustin39.github.io/ianlife/algorithms/merge-sort/" /><meta property="og:see_also" content="https://ianjustin39.github.io/ianlife/algorithms/bubble-sort/" /><meta property="og:see_also" content="https://ianjustin39.github.io/ianlife/algorithms/tries/" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/read/late-bloomers/" />
+<meta property="og:image" content="https://i.imgur.com/sWSBPih.png" />
+<meta property="article:published_time" content="2022-03-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-03-29T00:00:00+00:00" /><meta property="og:see_also" content="https://ianjustin39.github.io/ianlife/read/reproducible-leadership/" /><meta property="og:see_also" content="https://ianjustin39.github.io/ianlife/read/11-writing-lesson/" /><meta property="og:see_also" content="https://ianjustin39.github.io/ianlife/read/understand-a-book/" /><meta property="og:see_also" content="https://ianjustin39.github.io/ianlife/read/game-the-infinite-game/" /><meta property="og:see_also" content="https://ianjustin39.github.io/ianlife/read/ultralearning/" />
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://i.imgur.com/RVPOINs.png"/>
+<meta name="twitter:image" content="https://i.imgur.com/sWSBPih.png"/>
 
-<meta name="twitter:title" content="二分搜尋演算法 (Binary search algorithm) - 終極密碼"/>
-<meta name="twitter:description" content="圖片來源
-"/>
+<meta name="twitter:title" content="大器可以晚成"/>
+<meta name="twitter:description" content="當世界沉迷年少得志，耐心是你成功的本事"/>
 <meta name="twitter:site" content="@example"/>
 <link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
@@ -243,20 +240,22 @@ if (!doNotTrack) {
         <article class="post">
   <header>
   <div class="title">
-    <a href="/ianlife/series/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95"><p>Data Structures and Algorithms</p></a>
+    <a href="/ianlife/series/%E5%BE%9E%E7%8F%BE%E5%9C%A8%E9%96%8B%E5%A7%8B%E8%AA%8D%E7%9C%9F%E8%AE%80%E6%9B%B8"><p>讀書心得</p></a>
     
-    <h3><a href="/ianlife/algorithms/binary-search/">二分搜尋演算法 (Binary search algorithm) - 終極密碼</a></h3>
+    <h3><a href="/ianlife/read/late-bloomers/">大器可以晚成</a></h3>
     
+    
+    <p style="margin-top: 0px;">當世界沉迷年少得志，耐心是你成功的本事</p>
     
   </div>
   <div class="meta">
-    <time class="published" datetime="2021-03-07 00:00:00 &#43;0000 UTC">
-      March 7, 2021
+    <time class="published" datetime="2022-03-29 00:00:00 &#43;0000 UTC">
+      March 29, 2022
     </time>
     
     <span class="author">Ian Tsai</span>
     
-    <p>2 minute read</p>
+    <p>1 minute read</p>
     
     <p>
       <span id="busuanzi_container_page_pv">
@@ -270,147 +269,53 @@ if (!doNotTrack) {
     
   </section>
   
-  <a href="/ianlife/algorithms/binary-search/" class="image featured">
+  <a href="/ianlife/read/late-bloomers/" class="image featured">
     
-      <img src="https://i.imgur.com/RVPOINs.png" alt="">
+      <img src="https://i.imgur.com/sWSBPih.png" alt="">
     
   </a>
 
 
   <div class="content">
-    <p><a href="https://www.geeksforgeeks.org/binary-search/" target="_blank">圖片來源</a>
-<br></p>
-<h2 id=_終極密碼>終極密碼</h2>
-<hr>
-<p>再進入 Binary search 之前，先來玩一段小程式（可以點 <strong><a href="https://onlinegdb.com/r1FwI5mQO" target="_blank">這裏</a></strong> 試玩）：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">import</span> random
+    <h3 id=_1-英雄出少年的時代>1. 英雄出少年的時代</h3>
+<p>現在時常可以看到關於『三十歲以下的傑出青年榜』、『矽谷獨角獸創辦人年紀僅二十多歲』之類的新聞，大多在敘述現在的年輕人有多麼的積極，年紀輕輕就創出了一番名號、甚至改變產業，賺進鉅額的資產。而父母為了讓自己的兒女也可以『英雄出少年』，便讓小孩從小學，甚至幼稚園開始就開始補習，目的就是為了不要讓他們輸在起跑點，可以在年紀輕輕就有一番成就。</p>
+<p>這個文化不只影響了父母，學校教育也逐漸偏向這種風氣，比方說，如何用智力測驗篩選出菁英人才；為了讓考生可以進入菁英大學而開設的補習班等等，整個社會彷彿充斥著『你必須要在年輕時就成功，這樣才算一個成功者』的氛圍，但同時也扼殺了年輕人的潛能。為了及早成功，這些人相較以前更為疲憊、脆弱、甚至害怕失敗。為了成功，他們不在願意冒險，只想打著安全牌，這樣看似可以交出一些東西，也不會被檢討。或許這在成績、工作上可以帶來成就，但這並不一定是自己想要過的人生。</p>
+<h3 id=_2-創造屬於自己的文化>2. 創造屬於自己的文化</h3>
+<p>如同之前講的，社會對於年輕就有成就的人給予了極大的肯定，心理學家稱這類的想法為『規範性思維』。『規範性思維』有幾個缺點，首先大部分的人都認為『多數人的選擇』才是正確的選擇，像是『大家都考大學，所以我也要跟著考大學』一樣。第二個壞處在於，會無止盡的『有害比較』，如哪間大學畢業、薪水多少、職業是什麼等。如果自己沒有尊崇這規範性思維，就會被社會排擠、被認為是異類。不過也有成功人士，在年輕時默默無聞，經歷了一番歷練後才有所成就，
+如漫威（Marvel）教父史丹．李（Stan Lee）40多歲創立自己的漫畫世界、張忠謀 56 歲創立台積電、肯德基爺爺哈倫德 65 歲才創肯德基。</p>
+<p>若當下的自己還沒有，或是沒辦法發揮自己的潛能，或許可以看看現今社會對文化的影響，可能不是你不夠好，只是你被現今的社會文化所束縛了。一定得進 google 才算成功嗎？自己開一間餐館或許是更好的選擇。</p>
+<h3 id=_3-學會放棄探索更多可能>3. 學會放棄，探索更多可能</h3>
+<p>成功的秘訣在於堅忍不拔，克服重重困難。在這個社會，放棄是被忽略的選項甚至是被禁止的事情，但堅持不懈卻幾個問題：</p>
+<ol>
+<li>
+<p>韌性以及意志是一種有限的資源：也就是自我損耗的概念，當你在堅持一件自己沒那麼相信的事，那到最後只會將你的意志力消磨殆盡而已。這就很像去重訓，最多就只能做100公斤四組，但硬要做到第五組，那結果顯而易見（但這不代表意志力可以像肌肉一樣鍛鍊）。</p>
+</li>
+<li>
+<p>放棄反而有益健康＆常能帶來更好的結果：1970 末期 intel 因為日韓進入了記憶體市場而開始跟他們薛假競爭，這是 intel 決定要放棄記憶體市場，將未來賭在微處理器上，以現在看來這是個成功的決定，但當初並不是這麼順利，如果 intel 沒有放棄記憶體市場，現在的微處理器大廠可能就換人了。所以放棄並非失敗，放棄只是為了尋找更適合的方向。</p>
+</li>
+</ol>
+<h3 id=_4-成長的太慢那就尋找更好的花盆>4. 成長的太慢？那就尋找更好的花盆</h3>
+<p>相信大家都聽過『螃蟹心理』，當一隻螃蟹想要往上爬時，其他螃蟹會將他往下拉。有時自己想要往上爬，便會感到同溫層會將自己往下拉的力量，就如同螃蟹一樣。
+不過為了自己可以有更好的發展，必須要找到適合的地方，就像每種植栽都適合不同的栽種方式，必須要找到適合的花盆，才有可能長的美麗。</p>
+<p>但不是說毫無計畫的更換，如果想要去國外工作，離職去當外送員似乎助力不大，或許去外商公司上班磨練，會是更好的選擇。所以在選擇花盆時，應該考慮自己的目標是否與花盆契合，轉換後是否可以讓自己更專心、認真、更全心投入，讓整體表現都比現在狀況更好。轉換的過程中也會有阻力，不管是環境或是自己，畢竟改變是痛苦的，為何我不好好待在舒適圈？不過我們應該時刻的問自己『我是不是待在最能讓我發光發熱的花盆內？』這才是最重要的事。</p>
+<h3 id=_5-成功沒有期限>5. 成功沒有期限</h3>
+<p>在資訊爆發的年代，很多團體或是公司橫空出世，大家所認為的『一夕爆紅』、『一夜至富』的背後，其實是十幾年、甚至二三十年的堅持，才能活得的結果。諸多大器晚成的人都表示，只要找到屬於自己的花盆，就要努力堅持下去。</p>
+<h3 id=_讀後心得>讀後心得</h3>
+<p>在這網路發達的時代，社群媒體、新聞上充斥著各種的年輕創業家，短短幾年內把自己的產品打造成獨角獸的故事。讓社會漸漸的覺得『如果沒有年紀輕輕有一番作為，那一定沒辦法成功』。當然這個觀念也深深影響到了我，曾經的我也認爲需要在年輕時有一番作為，不管年薪達到一個門檻，或是當上某間公司的主管，就是一個成功者。這也讓我在追逐著這『自以為的成功』的過程中付出了不小的代價。</p>
+<p>這本書説是為大器晚成的人抱不平，但其實我認為他想傳遞的思想是『跳脫社會主流的價值觀，活出自己想要的樣子』。或許每個人都要思考一下，自己有限的人生中，想要成為什麼樣子的人？社會定義的文化並非適用於每個人，也不是一個必須遵守的法則。耐心尋找屬於自己的路，走出自己的人生才是最重要的。</p>
+<p><img src="https://i.imgur.com/ozhF9lo.png" alt=""></p>
 
-<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">guess_the_number</span>(total_tries, start_range, end_range):
-    <span style="color:#ff79c6">if</span> start_range <span style="color:#ff79c6">&gt;</span> end_range:
-        start_range, end_range <span style="color:#ff79c6">=</span> end_range, start_range
-        
-    random_number <span style="color:#ff79c6">=</span> random<span style="color:#ff79c6">.</span>randint(start_range, end_range)
-    try_count <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
-    success_message <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;答對了！！&#34;</span>
-    failure_message <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;遊戲結束！！&#34;</span>
-    miss_message <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;答錯囉！！&#34;</span>
-    
-    num_tries <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
-    <span style="color:#ff79c6">while</span> num_tries <span style="color:#ff79c6">&lt;</span> total_tries:
-        attempt <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;輸入數字: &#34;</span>))
-        
-        <span style="color:#ff79c6">if</span> attempt <span style="color:#ff79c6">==</span> random_number:
-            <span style="color:#ff79c6">print</span>(success_message)
-            <span style="color:#ff79c6">return</span>
-        <span style="color:#ff79c6">print</span>(miss_message)
-        <span style="color:#ff79c6">if</span> attempt <span style="color:#ff79c6">&lt;</span> random_number:
-            <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;再高一點!&#34;</span>)
-        <span style="color:#ff79c6">else</span>:
-            <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;再低一點!&#34;</span>)
-        num_tries <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
-    <span style="color:#ff79c6">print</span>(failure_message)
-    <span style="color:#ff79c6">print</span>(random_number)
-
-total_tries <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5</span>
-start_range <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
-end_range <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">100</span>
-guess_the_number(total_tries, start_range, end_range)
-</code></pre></div><p>這其實就是以前常玩的猜數字（終極密碼）的遊戲。猜一個數字看是否正確，不正確的話是比正確數字大還是小，然後繼續猜另一半，雖然帶有一點隨機性，不過概念就跟 Binary search 相似。</p>
-<p>但在再更進一步了解 Binary search 之前，先來了解一下 Linear search。</p>
-<br>
-<br>
-<h2 id=_linear-search>Linear search</h2>
-<hr>
-<p>假設有一本字典，我們要從字典裡面找到一個單字。但這本字典編輯的很爛，它並沒有按照字母順序排列，那我們該如何找到這個單字？</p>
-<p>看起來我們只能從第一頁開始逐個字的看，直到找到為止。這就是 Linear search。</p>
-<pre><code>Linear search 的時間複雜度是多少？ O(n)
-</code></pre><br>
-<br>
-<h2 id=_binary-search>Binary search</h2>
-<hr>
-<p>因為上一本字典太爛，所以現在我們去買一本字母是按照順序排列的字典。那我們該如何找到這個單字？</p>
-<p>一般來說（撇除我們知道字母在哪，從頭或是尾巴開始找），會先翻到中間，然後，我們會執行以下操作：</p>
-<ul>
-<li>將目標單詞與該頁面上的單詞進行比較。</li>
-<li>如果目標單字排在前面（按照字母順序），那麼我們將丟棄本書的右半部分。從現在開始，將只搜索左半部分。</li>
-<li>同樣，如果該單字在本頁上的單字的後面，則我們將本書的左半部分丟棄。從現在開始，將只搜索右半部分。</li>
-</ul>
-<p>如此一來，便可以確保在第一步時，就已經過濾掉一半的搜索空間，並重複以上步驟，就可以找到目標單字。這就是 <strong>Binary search</strong> 。</p>
-<p><em>注意：在這裡 <strong>Binary</strong> 的意思是<strong>具有兩個部分</strong>，且 Binary search 的資料需要經過排序</em></p>
-<p>總而言之 Binary search ：</p>
-<ul>
-<li>Binary search 是通過搜索中間值與目標值來進行比較來找到目標的位置。</li>
-<li>若中間值等於目標值，即找到位置。</li>
-<li>若目標值在中間值之前，則繼續找尋左半邊部分，反之則找尋右半部分。</li>
-<li>重複上述步驟，直到找到目標值為止。</li>
-</ul>
-<br>
-<br>
-<h2 id=_efficiency-of-binary-search>Efficiency of Binary Search</h2>
-<hr>
-<p>現在我們知道了 Binary Search 的運作原理，也知道了使用 Binary Search 的資料必須是經過排序的資料。那它的時間複雜度該如何計算？
-我們再來看一個範例，現在有一個經過排序的陣列如下：</p>
-<pre><code>data:   [1, 2, 4, 5, 6, 7, 8, 13, 14, 15, 16, 18]
-index:   1  2  3  4  5  6  7  8   9   10  11  12
-</code></pre><p>如果我現在要找<code>16</code>在 array 中的哪個位置，就開始從中間搜尋:</p>
-<pre><code>data:   [1, 2, 4, 5, 6, 7, 8, 13, 14, 15, 16, 18]
-index:   1  2  3  4  5  6  7  8   9   10  11  12
-                        ＾
-                        mid
-</code></pre><p>比對發現<code>7&lt;16</code>，所以要繼續搜索 array 的右半邊。</p>
-<pre><code>data:   [8, 13, 14, 15, 16, 18]
-index:   1  2   3   4   5   6 
-                ＾
-                mid
-</code></pre><p>再比對發現<code>14&lt;16</code>，所以要繼續搜索 array 的右半邊。</p>
-<pre><code>data:   [15, 16, 18]
-index:   1   2   3 
-             ＾
-             mid
-</code></pre><p>最後比對發現<code>16=16</code>，找到了目標值。</p>
-<p>經過這個範例，一共比對了三次才找到<code>16</code>，就是對半分三次，即 <strong>1/2 * 1/2 * 1/2 = (1/2)^3</strong>。</p>
-<p>全部有 12 個資料，所以是 <code>12 * (1/2)^3 = 1</code>，而現在可以做以下的運算：</p>
-<p><strong>step 0:</strong></p>
-<p>12 * (1/2)<sup>3</sup> = 1</p>
-<p><strong>step 1: 若有 n 個元素，則要對半 k 次</strong></p>
-<p>n * (1/2)<sup>k</sup> = 1</p>
-<p><strong>step 2: 上面等於下面</strong></p>
-<p>n * 1/2<sup>k</sup> = 1</p>
-<p><strong>step 3: 同乘 2<sup>k</sup></strong></p>
-<p>2<sup>k</sup> * n/2<sup>k</sup> = 2<sup>k</sup></p>
-<p><strong>step 4: 變成</strong></p>
-<p>n = 2k</p>
-<p>所以以 2 為底 n 的<a href="https://zh.wikipedia.org/wiki/%E5%AF%B9%E6%95%B0" target="_blank">對數</a>是 log<sub>2</sub>(n) = k， 所以 k 就是 log<sub>2</sub>(n)，也就是在最糟情況下，要從 n 個元素中搜尋到某一個元素，則要折半比對的次數為 k 次，就是 log<sub>2</sub>(n) 次。</p>
-<pre><code>Binary search 的時間複雜度是多少？ O(log n)
-</code></pre><br>
-<br>
-<h2 id=_練習程式碼>練習程式碼</h2>
-<hr>
-<p>可以到 clone <a href="https://github.com/ianjustin39/Data-Structures-and-Algorithms/tree/master/Algorithms/Binary%20Search" target="_blank">github</a> 的程式碼練習（01, 02），或是把程式碼複製到 <a href="https://www.onlinegdb.com/online_python_compiler#" target="_blank">online_python_compiler</a> 練習也可以。</p>
-<h2 id=_resource>Resource</h2>
-<hr>
-<ul>
-<li><a href="https://matthung0807.blogspot.com/2018/04/binary-search-ologn.html" target="_blank">為什麼Binary Search 二元搜索法的時間複雜度是O(log(n))</a></li>
-<li><a href="https://pjchender.blogspot.com/2017/09/big-o-notation-time-complexity.html" target="_blank">[演算法] Big O Notation &amp; Time Complexity</a></li>
-<li>Udacity Data Structures and Algorithms Class</li>
-</ul>
   </div>
   <br>
   <br>
   <div class="pagination">
   
-    <a href="/ianlife/read/40-years-old/" class="button">
+    <a href="/ianlife/read/reproducible-leadership/" class="button">
       <div class="previous">
-        <div>為了遇見40歲更好的自己</div>
+        <div>可複製的領導力：樊登的九堂商業課</div>
       </div>
     </a>
   
-  
-    <a href="/ianlife/algorithms/tries/" class="button">
-      <div class="next">
-        <div>字典樹 - Trie</div>
-      </div>
-    </a>
   
 </div>
 
@@ -424,7 +329,7 @@ index:   1   2   3
         <ul>
           
             
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95">資料結構與演算法</a></li>
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%8F%BE%E5%9C%A8%E9%96%8B%E5%A7%8B%E8%AA%8D%E7%9C%9F%E8%AE%80%E6%9B%B8">從現在開始認真讀書</a></li>
           
         </ul>
       </li>
@@ -439,10 +344,10 @@ index:   1   2   3
         <ul>
           
             
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/algorithm">Algorithm</a></li>
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97">讀書心得</a></li>
           
             
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/data-structures">Data Structures</a></li>
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6">好書推薦</a></li>
           
         </ul>
       </li>
@@ -532,15 +437,19 @@ index:   1   2   3
 								
 									<ul class="nav">
 								
+									<ul class="nav">
+								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e7%b5%82%e6%a5%b5%e5%af%86%e7%a2%bc">
-												 終極密碼
+						 					<a class="nav-link" href="#_1-%e8%8b%b1%e9%9b%84%e5%87%ba%e5%b0%91%e5%b9%b4%e7%9a%84%e6%99%82%e4%bb%a3">
+												 1. 英雄出少年的時代
 											</a>
 										</li>
 						 
 								
+								
+									</ul>
 								
 									</ul>
 								
@@ -554,15 +463,19 @@ index:   1   2   3
 								
 									<ul class="nav">
 								
+									<ul class="nav">
+								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_linear-search">
-												 Linear search
+						 					<a class="nav-link" href="#_2-%e5%89%b5%e9%80%a0%e5%b1%ac%e6%96%bc%e8%87%aa%e5%b7%b1%e7%9a%84%e6%96%87%e5%8c%96">
+												 2. 創造屬於自己的文化
 											</a>
 										</li>
 						 
 								
+								
+									</ul>
 								
 									</ul>
 								
@@ -576,15 +489,19 @@ index:   1   2   3
 								
 									<ul class="nav">
 								
+									<ul class="nav">
+								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_binary-search">
-												 Binary search
+						 					<a class="nav-link" href="#_3-%e5%ad%b8%e6%9c%83%e6%94%be%e6%a3%84%e6%8e%a2%e7%b4%a2%e6%9b%b4%e5%a4%9a%e5%8f%af%e8%83%bd">
+												 3. 學會放棄，探索更多可能
 											</a>
 										</li>
 						 
 								
+								
+									</ul>
 								
 									</ul>
 								
@@ -598,15 +515,19 @@ index:   1   2   3
 								
 									<ul class="nav">
 								
+									<ul class="nav">
+								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_efficiency-of-binary-search">
-												 Efficiency of Binary Search
+						 					<a class="nav-link" href="#_4-%e6%88%90%e9%95%b7%e7%9a%84%e5%a4%aa%e6%85%a2%e9%82%a3%e5%b0%b1%e5%b0%8b%e6%89%be%e6%9b%b4%e5%a5%bd%e7%9a%84%e8%8a%b1%e7%9b%86">
+												 4. 成長的太慢？那就尋找更好的花盆
 											</a>
 										</li>
 						 
 								
+								
+									</ul>
 								
 									</ul>
 								
@@ -620,15 +541,19 @@ index:   1   2   3
 								
 									<ul class="nav">
 								
+									<ul class="nav">
+								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e7%b7%b4%e7%bf%92%e7%a8%8b%e5%bc%8f%e7%a2%bc">
-												 練習程式碼
+						 					<a class="nav-link" href="#_5-%e6%88%90%e5%8a%9f%e6%b2%92%e6%9c%89%e6%9c%9f%e9%99%90">
+												 5. 成功沒有期限
 											</a>
 										</li>
 						 
 								
+								
+									</ul>
 								
 									</ul>
 								
@@ -642,15 +567,19 @@ index:   1   2   3
 								
 									<ul class="nav">
 								
+									<ul class="nav">
+								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_resource">
-												 Resource
+						 					<a class="nav-link" href="#_%e8%ae%80%e5%be%8c%e5%bf%83%e5%be%97">
+												 讀後心得
 											</a>
 										</li>
 						 
 								
+								
+									</ul>
 								
 									</ul>
 								
@@ -667,7 +596,7 @@ index:   1   2   3
 	
 
         <iframe class="LikeCoin" height="235"
-  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2falgorithms%2fbinary-search%2f" width="100%"
+  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2fread%2flate-bloomers%2f" width="100%"
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
