@@ -13,10 +13,10 @@
     
     <item>
       <title>什麼是 Blockchain Bridges，運作原理是什麼?</title>
-      <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain/blockchain-bridge/</link>
+      <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain-bridge/</link>
       <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain/blockchain-bridge/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain-bridge/</guid>
       <description>區塊鏈技術在近幾年來成長非常的快速，最早的 Bitcoin、Ethereum 到 Binance Chain 、 Polygon 、 Solana 等，每條鏈上都有各自的治理模式、協議、規則，甚至是 Defi、NFT、DAO 等多元化的應用也相繼出現。
 儘管近幾年出現的這麼多元的應用，但這些終究只能存在於單一條區塊鏈上，並沒有辦法與其他的區塊鏈互動，也就是說鏈與鏈之間並沒有互相操作性。每一條區塊鏈，就好比一座小島，試想在台灣的 Ian 想要跟在日本的 Justin 溝通訊息，該如何做到呢？現在的社會可以經由通訊軟體或是社群軟體，直接將訊息傳遞出去，也就是所謂 Web 2.0 的應用，同理，想要從比特幣想要到以太坊上做應用，以現在的狀況來說，只有中心化交易所（還不能經由去中心化交易所 Dex）換成以太幣或是 ERC-20 token 才有辦法做到這件事。但若這樣操作手上便不在持有比特幣，這也跟當初想要以『比特幣在以太坊上做應用』的想法有所差異。
 什麼是 Bridges，運作原理是什麼？ 先來講講什麼是 Blockchain Bridge 以什麼方式來解決互相操作性的問題。Bridge 允許兩條不同規則、不同協議的區塊鏈將他們的數據、代幣互相傳遞。以上述的例子來講，可以不經由交易所得換幣服務，直接再以太坊上使用自己持有的比特幣。
@@ -140,10 +140,10 @@ Transaction protobuf prefix  msgSend msgSend/amount tx single mode  enum SignMod
     
     <item>
       <title>無視礦工，以太坊的倫敦硬分叉</title>
-      <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain/ethereum-london-hard-fork/</link>
+      <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/ethereum-london-hard-fork/</link>
       <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain/ethereum-london-hard-fork/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/ethereum-london-hard-fork/</guid>
       <description>前言  現今以太坊的手續費過於昂貴，交易者需要付出高額的手續費才可以完成交易。 這次的 Ethereum London Hard Fork （倫敦硬分叉）所做的更新，包含了 EIP-1559、EIP-3198、EIP-3238 三個提案， 其中 EIP-1559 也是這次比較備受關注的部分。
 EIP 是什麼？  EIP(Ethereum Improvement Proposals)，是為以太坊指定潛在新功能或流程的標準，包含提議更改的技術規範。通過 EIP 流程討論和開發以太坊的網絡升級和應用標準。
 提案一： EIP-1559（區塊鏈交易費用模型）  EIP-1559 是對用戶在以太坊網絡上支付 gas 費用方式的更改。（由於現在以太坊交易手續費過高，降低對用戶的吸引力）
