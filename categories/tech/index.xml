@@ -6,10 +6,24 @@
     <description>Recent content in TECH on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 11 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 31 Mar 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>什麼是 Blockchain Bridges，運作原理是什麼</title>
+      <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain/blockchain-bridge/</link>
+      <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain/blockchain-bridge/</guid>
+      <description>區塊鏈技術在近幾年來成長非常的快速，最早的 Bitcoin、Ethereum 到 Binance Chain 、 Polygon 、 Solana 等，每條鏈上都有各自的治理模式、協議、規則，甚至是 Defi、NFT、DAO 等多元化的應用也相繼出現。
+儘管近幾年出現的這麼多元的應用，但這些終究只能存在於單一條區塊鏈上，並沒有辦法與其他的區塊鏈互動，也就是說鏈與鏈之間並沒有互相操作性。每一條區塊鏈，就好比一座小島，試想在台灣的 Ian 想要跟在日本的 Justin 溝通訊息，該如何做到呢？現在的社會可以經由通訊軟體或是社群軟體，直接將訊息傳遞出去，也就是所謂 Web 2.0 的應用，同理，想要從比特幣想要到以太坊上做應用，以現在的狀況來說，只有中心化交易所（還不能經由去中心化交易所 Dex）換成以太幣或是 ERC-20 token 才有辦法做到這件事。但若這樣操作手上便不在持有比特幣，這也跟當初想要以『比特幣在以太坊上做應用』的想法有所差異。
+什麼是 Bridges，運作原理是什麼？ 先來講講什麼是 Blockchain Bridge 以什麼方式來解決互相操作性的問題。Bridge 允許兩條不同規則、不同協議的區塊鏈將他們的數據、代幣互相傳遞。以上述的例子來講，可以不經由交易所得換幣服務，直接再以太坊上使用自己持有的比特幣。
+在你希望將自己的一部分比特幣轉移到以太坊上時， Blockchain Bridge 會先將你比特幣鎖在所使用的 Bridge 上，並在以太坊上建立等同價值的比特幣代幣（稱作 wBTC），此時便可以使用 wBTC 去操作以太坊上的 Dapp 。相反，當你認為不需要繼續在以太坊上，想要換回比特幣時，只需要做反向的行為，那再以太坊上的 wBTC 就會被燒毀，而同等價值的比特幣則會回到你的手上。但必須注意的是，若用 Bridge 將 10 BTC 換成 10 wBTC，換回時卻只有 9 wBTC 的話，也只能取得 9 BTC。
+簡單來說，經由 Bridge 是將你的加密貨幣『完全複製』一份到別條鏈上，讓他符合另一條鏈的規範與協議，可以操作上面的各種應用。
+Bridges 種類 Bridges 又分為 One-Way Bridges &amp;amp; Two-Way Bridges，以及 Trust-Based &amp;amp; Trustless Bridges。</description>
+    </item>
     
     <item>
       <title>Polkadot Parse</title>
