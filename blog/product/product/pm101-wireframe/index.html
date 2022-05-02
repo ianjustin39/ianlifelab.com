@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+  <meta content="wireframe" name="keywords">
+  <link rel="stylesheet" href="https://ianjustin39.github.io/ianlife/%20css/search.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  
+  
+  
+  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
+  <script src="/ianlife/js/bootstrap.js"></script>
+  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
+  
+  
+  
+  <script src="../js/jquery.magnific-popup.js"></script>
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="/ianlife/js/toc.js"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+  <script>
+   window.onload = function () {
+    let plantumlPrefix = "language-plantuml";
+    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
+      let image = document.createElement("IMG");
+      image.loading = 'lazy'; 
+      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
+      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
+      code.parentNode.insertBefore(image, code);
+      code.style.display = 'none';
+    });
+  };
+  </script>
+  
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+  <meta charset="utf-8">
+<title>畫 Wireframe 目的是什麼？ - Ian Tsai </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="畫 Wireframe 目的是什麼？">
+<meta itemprop="description" content="wireframe 是產品開發現場的建築藍圖，不是草稿">
+<meta itemprop="datePublished" content="2022-05-02T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2022-05-02T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="83">
+<meta itemprop="image" content="https://i.imgur.com/SGZFXmK.png">
+
+
+
+<meta itemprop="keywords" content="wireframe," /><meta property="og:title" content="畫 Wireframe 目的是什麼？" />
+<meta property="og:description" content="wireframe 是產品開發現場的建築藍圖，不是草稿" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/blog/product/product/pm101-wireframe/" />
+<meta property="og:image" content="https://i.imgur.com/SGZFXmK.png" />
+<meta property="article:published_time" content="2022-05-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-02T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://i.imgur.com/SGZFXmK.png"/>
+
+<meta name="twitter:title" content="畫 Wireframe 目的是什麼？"/>
+<meta name="twitter:description" content="wireframe 是產品開發現場的建築藍圖，不是草稿"/>
+<meta name="twitter:site" content="@example"/>
+<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+        <link rel="stylesheet" href="/ianlife/css/add-on.css">
+</head>
+
+  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
+  
+  
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ianlife/">
+        
+          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/blog/" class="link"><i class='fas fa-pencil-alt'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/life" class="link"><i class='fa fa-plane'></i> Life</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/learning" class="link"><i class='fa fa-book'></i> Learning</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/%08product" class="link"><i class='fas fa-box'></i> Product</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/tech" class="link"><i class='fa fa-laptop'></i> Tech</a>
+          
+        
+      
+        
+          
+          
+            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+      
+      
+
+      <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
+        <span id="searchGlyph" class="glyphicon glyphicon-search"><i class="fas fa-search"></i></span></a>
+    </menu>
+    
+
+    
+    <a href="#lang-menu" class="lang-toggle" lang="zh">zh</a>
+    <a href="#site-nav-menu" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+ 
+ 
+  <menu id="lang-menu" class="flyout-menu">
+  <a href="#" lang="zh" class="link active">中文 (zh)</a>
+  
+    
+      
+        <a href="/ianlife/en" lang="en" class="no-lang link">English (en)</a>
+      
+    
+      
+    
+  
+</menu>
+
+  
+</header>
+
+<div id="modalSearch" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">文章搜尋</h4><button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="aa-input-container" id="aa-input-container">
+  <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for titles or URIs..."
+    name="search" autocomplete="off" />
+  <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
+    <path
+      d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z" />
+  </svg>
+</div>
+<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/algoliasearch.min.js"></script>
+<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/autocomplete.min.js"></script>
+<script>
+  var client = algoliasearch("WTW32P5SNJ", "2e16477f048bc4528b166dfd1eb4804d");
+  var index = client.initIndex("blog");
+  autocomplete('#aa-search-input',
+    { hint: false }, {
+    source: autocomplete.sources.hits(index, { hitsPerPage: 20 }),
+    displayKey: 'name',
+    templates: {
+      suggestion: function (suggestion) {
+        return '<span>' + '<a href="' + suggestion.relpermalink + '">' +
+          suggestion.title + '</a></span>';
+      }
+    }
+  });
+
+  $('#searchGlyph').click(function() {
+    setTimeout(function(){
+      $('#aa-search-input').focus();
+    },300);
+  });
+</script>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <div id="wrapper">
+      
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    <a href="/ianlife/series/pm-101"><p>PM 101</p></a>
+    
+    <h3><a href="/ianlife/blog/product/product/pm101-wireframe/">畫 Wireframe 目的是什麼？</a></h3>
+    
+    
+    <p style="margin-top: 0px;">wireframe 是產品開發現場的建築藍圖，不是草稿</p>
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2022-05-02 00:00:00 &#43;0000 UTC">
+      May 2, 2022
+    </time>
+    
+    <span class="author">Ian Tsai</span>
+    
+    <p>1 minute read</p>
+    
+    <p>
+      <span id="busuanzi_container_page_pv">
+        PV: <span id="busuanzi_value_page_pv"></span>
+      </span>
+    </p>
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+  </section>
+  
+  <a href="/ianlife/blog/product/product/pm101-wireframe/" class="image featured">
+    
+      <img src="https://i.imgur.com/SGZFXmK.png" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <br>
+<br>
+<br>
+<p>最近畫 Wireframe 的頻率有點高，也畫出了一些心得，中間也有遇到一些問題，剛好分享紀錄一下。</p>
+<h3 id=_什麼是-wireframe>什麼是 Wireframe</h3>
+<hr>
+<p>基本的 Wireframe 是一種低保真的設計原型，頁面上面沒有華麗的設計元素，只有匡線、文字資訊、架構排版等。
+在一個新的需求出現時，會有非常多的不確定性，需要先確定產品要呈現什麼資訊給用戶、使用旅程是什麼、可能遇到什麼問題、我們想解決什麼問題等，
+都需要考慮進去，所以若是太快進入 UI 設計，如果架構或是流程等部分需要做更改，可能會造成過多的資源消耗。</p>
+<p><img src="https://i.imgur.com/GAmbXpUl.png" alt=""></p>
+<br>
+<h3 id=_畫-wireframe-目的是什麼>畫 Wireframe 目的是什麼？</h3>
+<hr>
+<p>我認為 Wireframe 階段主要考慮以下兩個部分：</p>
+<ul>
+<li>傳遞資訊</li>
+<li>使用者流程</li>
+</ul>
+<p>以下會拿會員系統內新增訂單功能來做範例：</p>
+<h5 id="傳遞資訊">傳遞資訊</h5>
+<p>畫面上要呈現什麼類型的資訊給用戶，必須在 Wireframe 階段就決定，
+使用適當的文字幫助用戶理解情境，讓用戶可以很簡單的知道新功能的價值是什麼。</p>
+<p>比方說，電商會員系統中新增了查詢訂單的功能，用戶在登入會員後會希望去看自己的訂單狀況，
+或許在會員頁面上用一段文字提醒目前訂單狀況，讓用戶知道自己的訂單現在的狀況。</p>
+<br>
+<h5 id="使用者流程">使用者流程</h5>
+<p>接續上述訂單狀況，當用戶看到自己訂單狀況時，要怎麼樣引導他去看到自己的訂單。
+可以在文字附上超連結導去訂單頁面，也可以在畫面上新增『我的訂單』的分頁，讓用戶可以用最短時間內找到自己的訂單，
+又或是當用戶遇到錯誤時，是不是有明確的提示可以讓他解決當下的問題。</p>
+<p>所以 Wireframe 除了傳達資訊以外，使用者流程也是很重要的一環，用戶看到關鍵訊息後，可以很簡單的使用新功能。</p>
+<br>
+<h3 id=_wireframe-常見的錯誤>Wireframe 常見的錯誤</h3>
+<hr>
+<p>第一次畫 Wireframe 的人很有可能落入『濫用視覺元素』這個錯誤，畫著畫著就會開始想頁面的顏色要怎樣呈現比較好按鈕形狀長怎樣，
+要放什麼 icon 在畫面上，在顯示圖片的地方要放哪張圖等。
+但這些東西並不是在 Wireframe 階段該專注的事情，上面有提到 Wireframe 專注於傳遞資訊，包含資訊架構、功能、流程等等，
+而不是設計，所以用最簡單基本的方式呈現，剩下精緻的設計就讓設計師煩惱吧。</p>
+<p>以下幾個是我從零開始畫 Wireframe 時會注意的幾點：</p>
+<ol>
+<li>只用灰白色，專注於架構的呈現</li>
+<li>單一字體，專注於傳達資訊</li>
+<li>只用 3, 4 種字級</li>
+<li>不用照片或插圖，用方框框代替</li>
+<li>不用強烈風格的 icon 或裝飾圖</li>
+</ol>
+<p>但有些產品已經很成熟，在 Wireframe 階段會拿既有的畫面去改，這時要注意的點便是每個畫面或是元件所使用的場景是什麼。
+以電商來說，買家的訂單元件以及賣家的訂單元件可能就長得不一樣，這時如果混用的話，由於已經算是高保真的設計，
+這時一同討論的工程師或是設計師可能會因為精緻的畫面，而跳過『討論資訊架構』的階段，開始思考畫面的問題。
+所以當使用既有的畫面去做 Wireframe 時要注意使用的元件要正確，不能混用，導致誤會。</p>
+<br>
+<h3 id=_怎樣的-wireframe-算好的-wireframe>怎樣的 Wireframe 算好的 Wireframe</h3>
+<hr>
+<p>Wireframe 不是上色的 ui，不管是低保真還是高保真的 Wireframe，他的目的都是要確認資訊架構以及使用者流程，
+提供工程師與設計皆端明確的規格。所以我認為只要可以明確表達上述兩點的，讓別人可以很簡單的了解 Wireframe 想傳遞的資訊，
+個人認為就是好的 Wireframe。</p>
+<p><img src="https://i.imgur.com/LFyenvE.png" alt=""></p>
+
+  </div>
+  <br>
+  <br>
+  <div class="pagination">
+  
+    <a href="/ianlife/read/give-and-take/" class="button">
+      <div class="previous">
+        <div>給予 - 施比受更有福，給予的力量</div>
+      </div>
+    </a>
+  
+  
+</div>
+
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <i class="fas fa-folder"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/pm-101">PM 101</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+  
+    
+    
+      <li class="tags">
+        <i class="fas fa-tags"></i>
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/wireframe">wireframe</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+
+
+
+        <div class="disqus markdown">
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        </div>
+      </main>
+      
+      <div id="page-sidebar">
+        
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div>
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e4%bb%80%e9%ba%bc%e6%98%af-wireframe">
+												 什麼是 Wireframe
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e7%95%ab-wireframe-%e7%9b%ae%e7%9a%84%e6%98%af%e4%bb%80%e9%ba%bc">
+												 畫 Wireframe 目的是什麼？
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_wireframe-%e5%b8%b8%e8%a6%8b%e7%9a%84%e9%8c%af%e8%aa%a4">
+												 Wireframe 常見的錯誤
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_%e6%80%8e%e6%a8%a3%e7%9a%84-wireframe-%e7%ae%97%e5%a5%bd%e7%9a%84-wireframe">
+												 怎樣的 Wireframe 算好的 Wireframe
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+        <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2fblog%2fproduct%2fproduct%2fpm101-wireframe%2f" width="100%"
+  frameborder=0></iframe>
+ 
+        <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script src="/ianlife/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+      </div>
+    </div>
+    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+  </body>
+</html>

@@ -6,10 +6,19 @@
     <description>Recent content in Series on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 26 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 May 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/series/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PM 101</title>
+      <link>https://ianjustin39.github.io/ianlife/series/pm-101/</link>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/series/pm-101/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>從現在開始認真讀書</title>

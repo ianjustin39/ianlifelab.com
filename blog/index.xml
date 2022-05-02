@@ -6,10 +6,29 @@
     <description>Recent content in Blog on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 26 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 May 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ianjustin39.github.io/ianlife/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>畫 Wireframe 目的是什麼？</title>
+      <link>https://ianjustin39.github.io/ianlife/blog/product/product/pm101-wireframe/</link>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/blog/product/product/pm101-wireframe/</guid>
+      <description>最近畫 Wireframe 的頻率有點高，也畫出了一些心得，中間也有遇到一些問題，剛好分享紀錄一下。
+什麼是 Wireframe  基本的 Wireframe 是一種低保真的設計原型，頁面上面沒有華麗的設計元素，只有匡線、文字資訊、架構排版等。 在一個新的需求出現時，會有非常多的不確定性，需要先確定產品要呈現什麼資訊給用戶、使用旅程是什麼、可能遇到什麼問題、我們想解決什麼問題等， 都需要考慮進去，所以若是太快進入 UI 設計，如果架構或是流程等部分需要做更改，可能會造成過多的資源消耗。
+畫 Wireframe 目的是什麼？  我認為 Wireframe 階段主要考慮以下兩個部分：
+ 傳遞資訊 使用者流程  以下會拿會員系統內新增訂單功能來做範例：
+傳遞資訊 畫面上要呈現什麼類型的資訊給用戶，必須在 Wireframe 階段就決定， 使用適當的文字幫助用戶理解情境，讓用戶可以很簡單的知道新功能的價值是什麼。
+比方說，電商會員系統中新增了查詢訂單的功能，用戶在登入會員後會希望去看自己的訂單狀況， 或許在會員頁面上用一段文字提醒目前訂單狀況，讓用戶知道自己的訂單現在的狀況。
+使用者流程 接續上述訂單狀況，當用戶看到自己訂單狀況時，要怎麼樣引導他去看到自己的訂單。 可以在文字附上超連結導去訂單頁面，也可以在畫面上新增『我的訂單』的分頁，讓用戶可以用最短時間內找到自己的訂單， 又或是當用戶遇到錯誤時，是不是有明確的提示可以讓他解決當下的問題。
+所以 Wireframe 除了傳達資訊以外，使用者流程也是很重要的一環，用戶看到關鍵訊息後，可以很簡單的使用新功能。
+Wireframe 常見的錯誤  第一次畫 Wireframe 的人很有可能落入『濫用視覺元素』這個錯誤，畫著畫著就會開始想頁面的顏色要怎樣呈現比較好按鈕形狀長怎樣， 要放什麼 icon 在畫面上，在顯示圖片的地方要放哪張圖等。 但這些東西並不是在 Wireframe 階段該專注的事情，上面有提到 Wireframe 專注於傳遞資訊，包含資訊架構、功能、流程等等， 而不是設計，所以用最簡單基本的方式呈現，剩下精緻的設計就讓設計師煩惱吧。
+以下幾個是我從零開始畫 Wireframe 時會注意的幾點：
+ 只用灰白色，專注於架構的呈現 單一字體，專注於傳達資訊 只用 3, 4 種字級 不用照片或插圖，用方框框代替 不用強烈風格的 icon 或裝飾圖  但有些產品已經很成熟，在 Wireframe 階段會拿既有的畫面去改，這時要注意的點便是每個畫面或是元件所使用的場景是什麼。 以電商來說，買家的訂單元件以及賣家的訂單元件可能就長得不一樣，這時如果混用的話，由於已經算是高保真的設計， 這時一同討論的工程師或是設計師可能會因為精緻的畫面，而跳過『討論資訊架構』的階段，開始思考畫面的問題。 所以當使用既有的畫面去做 Wireframe 時要注意使用的元件要正確，不能混用，導致誤會。</description>
+    </item>
     
     <item>
       <title>給予 - 施比受更有福，給予的力量</title>
