@@ -3,13 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/blockchain/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ianjustin39.github.io/ianlife/blog/</loc>
-    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/categories/</loc>
-    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -24,7 +29,7 @@
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/</loc>
-    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -38,18 +43,13 @@
   </url>
   
   <url>
-    <loc>https://ianjustin39.github.io/ianlife/series/pm-101/</loc>
-    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/product/</loc>
-    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
+    <loc>https://ianjustin39.github.io/ianlife/tags/polkadot/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/series/</loc>
-    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -64,7 +64,7 @@
   
   <url>
     <loc>https://ianjustin39.github.io/ianlife/tags/</loc>
-    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -75,6 +75,31 @@
                 hreflang="zh"
                 href="https://ianjustin39.github.io/ianlife/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/categories/tech/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/series/%E5%8D%80%E5%A1%8A%E9%8F%88/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain_black_swan_terra/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/series/pm-101/</loc>
+    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ianjustin39.github.io/ianlife/categories/product/</loc>
+    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -113,22 +138,7 @@
   </url>
   
   <url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/blockchain/</loc>
-    <lastmod>2022-03-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/tech/</loc>
-    <lastmod>2022-03-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain-bridge/</loc>
-    <lastmod>2022-03-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ianjustin39.github.io/ianlife/series/%E5%8D%80%E5%A1%8A%E9%8F%88/</loc>
     <lastmod>2022-03-31T00:00:00+00:00</lastmod>
   </url>
   
