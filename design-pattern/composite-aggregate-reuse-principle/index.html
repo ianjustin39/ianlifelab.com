@@ -75,22 +75,17 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="合成/聚合複用原則 | Composite/Aggregate Reuse Principle">
-<meta itemprop="description" content="合成/聚合複用原則的在於當要重複使用套件時，應該先考慮使用組合/聚合的方式，其次才是繼承。而如果要使用繼承的話，則須符合里氏替換原則(LSP)。在這之前，要先了解什麼是合成？什麼是聚合？他們又與繼承差在哪？">
-<meta itemprop="datePublished" content="2020-09-15T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-09-15T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="632">
-<meta itemprop="image" content="https://i.imgur.com/aMQKizj.png">
-
-
-
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="合成/聚合複用原則 | Composite/Aggregate Reuse Principle">
+<meta itemprop="description" content="合成/聚合複用原則的在於當要重複使用套件時，應該先考慮使用組合/聚合的方式，其次才是繼承。而如果要使用繼承的話，則須符合里氏替換原則(LSP)。在這之前，要先了解什麼是合成？什麼是聚合？他們又與繼承差在哪？"><meta itemprop="datePublished" content="2020-09-15T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-09-15T00:00:00+00:00" />
+<meta itemprop="wordCount" content="569"><meta itemprop="image" content="https://i.imgur.com/aMQKizj.png">
 <meta itemprop="keywords" content="Design Pattern,Design Principle,鐵人賽," /><meta property="og:title" content="合成/聚合複用原則 | Composite/Aggregate Reuse Principle" />
 <meta property="og:description" content="合成/聚合複用原則的在於當要重複使用套件時，應該先考慮使用組合/聚合的方式，其次才是繼承。而如果要使用繼承的話，則須符合里氏替換原則(LSP)。在這之前，要先了解什麼是合成？什麼是聚合？他們又與繼承差在哪？" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/composite-aggregate-reuse-principle/" />
-<meta property="og:image" content="https://i.imgur.com/aMQKizj.png" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/composite-aggregate-reuse-principle/" /><meta property="og:image" content="https://i.imgur.com/aMQKizj.png" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-09-15T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-09-15T00:00:00+00:00" />
+
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.imgur.com/aMQKizj.png"/>
@@ -98,7 +93,7 @@ if (!doNotTrack) {
 <meta name="twitter:title" content="合成/聚合複用原則 | Composite/Aggregate Reuse Principle"/>
 <meta name="twitter:description" content="合成/聚合複用原則的在於當要重複使用套件時，應該先考慮使用組合/聚合的方式，其次才是繼承。而如果要使用繼承的話，則須符合里氏替換原則(LSP)。在這之前，要先了解什麼是合成？什麼是聚合？他們又與繼承差在哪？"/>
 <meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
@@ -109,7 +104,7 @@ if (!doNotTrack) {
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ianlife/">
+      <a href="/">
         
           <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
         
@@ -247,7 +242,7 @@ if (!doNotTrack) {
         <article class="post">
   <header>
   <div class="title">
-    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    <a href="/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
     
     <h3><a href="/ianlife/design-pattern/composite-aggregate-reuse-principle/">合成/聚合複用原則 | Composite/Aggregate Reuse Principle</a></h3>
     
@@ -397,54 +392,54 @@ if (!doNotTrack) {
 <br>
 <h5 id="聚合班級與學生">聚合：班級與學生</h5>
 <p>在聚合中，部分對象及整體對象兩者的生命週期並沒有關聯，部分對象甚至可能超過整體對象。例如部分對象是學生，而整體對象是班級。一個班級畢業班級就不存在了，但學生依舊繼續存在於另一個整體對象，如大學或是某間公司。學生（部分對象）的生命週期並沒有因為班級（整體對象）結束而跟著結束。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Clazz</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">request</span><span style="color:#ff79c6">(</span>Student student<span style="color:#ff79c6">){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;class點名！！&#34;</span><span style="color:#ff79c6">);</span>
-        student<span style="color:#ff79c6">.</span><span style="color:#50fa7b">response</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Student</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">response</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;student喊在！！&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyClass</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
-      Clazz c <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Clazz<span style="color:#ff79c6">();</span>
-      Student s <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Student<span style="color:#ff79c6">();</span>
-      c<span style="color:#ff79c6">.</span><span style="color:#50fa7b">request</span><span style="color:#ff79c6">(</span>s<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>class點名！！
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Clazz</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">request</span><span style="color:#ff79c6">(</span>Student student<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;class點名！！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        student<span style="color:#ff79c6">.</span><span style="color:#50fa7b">response</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Student</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">response</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;student喊在！！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyClass</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>      Clazz c <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Clazz<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>      Student s <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Student<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>      c<span style="color:#ff79c6">.</span><span style="color:#50fa7b">request</span><span style="color:#ff79c6">(</span>s<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>class點名！！
 student喊在！！
 </code></pre><br>
 <h5 id="合成人與器官">合成：人與器官</h5>
 <p>相較於聚合，合成的擁有關係就相對強烈一點。部分對象以及整體對象的生命週期是一致的。如人與他的心臟。如果他人死了，那心臟也跟著停止跳動。相對於聚合，合成擁有較強的關聯性。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">People</span> <span style="color:#ff79c6">{</span>
-    Heart h <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Heart<span style="color:#ff79c6">();</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">request</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;people走路！！&#34;</span><span style="color:#ff79c6">);</span>
-        h<span style="color:#ff79c6">.</span><span style="color:#50fa7b">response</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Heart</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">response</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;heart跳一下！！&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyClass</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
-      People c <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> People<span style="color:#ff79c6">();</span>
-      c<span style="color:#ff79c6">.</span><span style="color:#50fa7b">request</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>people走路！！
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">People</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    Heart h <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Heart<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">request</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;people走路！！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        h<span style="color:#ff79c6">.</span><span style="color:#50fa7b">response</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Heart</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">response</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;heart跳一下！！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyClass</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>      People c <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> People<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>      c<span style="color:#ff79c6">.</span><span style="color:#50fa7b">request</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>people走路！！
 heart跳一下！！
 </code></pre><p>經由上面兩個例子可以發現，Clazz及Student的關聯性低，就算Clazz結束了也跟Student無關。而相較於前一個例子，People與Heart的關係就比較緊密，若People生命週期結束了Heart也會跟著結束。</p>
 <br>
@@ -501,54 +496,54 @@ WhitePetrolCar : +run();
 '>
 <br>
 <br>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Car</span> <span style="color:#ff79c6">{</span>
-     <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">run</span><span style="color:#ff79c6">();</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ElectricCar</span> <span style="color:#8be9fd;font-style:italic">extends</span> Car <span style="color:#ff79c6">{</span>
-    @Override
-    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">run</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;電動車&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">PetrolCar</span> <span style="color:#8be9fd;font-style:italic">extends</span> Car <span style="color:#ff79c6">{</span>
-    @Override
-    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">run</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;汽油車&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">BlackElectricCar</span> <span style="color:#8be9fd;font-style:italic">extends</span> ElectricCar <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">appearance</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">print</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;黑色&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">run</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">BlackPetrolCar</span>  <span style="color:#8be9fd;font-style:italic">extends</span> PetrolCar <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">appearance</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">print</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;黑色&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">run</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">WhiteElectricCar</span> <span style="color:#8be9fd;font-style:italic">extends</span> ElectricCar <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">appearance</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">print</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;白色&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">run</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">WhitePetrolCar</span> <span style="color:#8be9fd;font-style:italic">extends</span> PetrolCar <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">appearance</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">print</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;白色&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">run</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyCar</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
-        WhiteElectricCar whiteElectricCar <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> WhiteElectricCar<span style="color:#ff79c6">();</span>
-        whiteElectricCar<span style="color:#ff79c6">.</span><span style="color:#50fa7b">appearance</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>白色電動車
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Car</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">run</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ElectricCar</span> <span style="color:#8be9fd;font-style:italic">extends</span> Car <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    @Override
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">run</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;電動車&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">PetrolCar</span> <span style="color:#8be9fd;font-style:italic">extends</span> Car <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    @Override
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">run</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;汽油車&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">BlackElectricCar</span> <span style="color:#8be9fd;font-style:italic">extends</span> ElectricCar <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">appearance</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">print</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;黑色&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">run</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">BlackPetrolCar</span>  <span style="color:#8be9fd;font-style:italic">extends</span> PetrolCar <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">appearance</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">print</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;黑色&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">run</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">WhiteElectricCar</span> <span style="color:#8be9fd;font-style:italic">extends</span> ElectricCar <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">appearance</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">print</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;白色&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">run</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">WhitePetrolCar</span> <span style="color:#8be9fd;font-style:italic">extends</span> PetrolCar <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">appearance</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">print</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;白色&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">run</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyCar</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        WhiteElectricCar whiteElectricCar <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> WhiteElectricCar<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        whiteElectricCar<span style="color:#ff79c6">.</span><span style="color:#50fa7b">appearance</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>白色電動車
 </code></pre><br>
 <p>這是用繼承的方式去撰寫一個汽車的系統，我們可以用剛剛比較的三點來看看：</p>
 <ol>
@@ -584,56 +579,56 @@ PetrolCar : +run();
 <br>
 <br>
 <p>建立一個interface Color，然後將這個interface合成到Car的抽象類別內。接著再由不同的顏色實作Color，如下：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Color</span> <span style="color:#ff79c6">{</span>  <span style="color:#6272a4">// 抽出來建立介面
-</span><span style="color:#6272a4"></span>      <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">kind</span><span style="color:#ff79c6">();</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Car</span> <span style="color:#ff79c6">{</span>
-     Color color<span style="color:#ff79c6">;</span>  <span style="color:#6272a4">// 做合成
-</span><span style="color:#6272a4"></span>     <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">run</span><span style="color:#ff79c6">();</span>
-     <span style="color:#8be9fd;font-style:italic">public</span> Color <span style="color:#50fa7b">getColor</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">return</span> color<span style="color:#ff79c6">;</span>
-     <span style="color:#ff79c6">}</span>
-     <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setColor</span><span style="color:#ff79c6">(</span>Color color<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">color</span> <span style="color:#ff79c6">=</span> color<span style="color:#ff79c6">;</span>
-     <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ElectricCar</span> <span style="color:#8be9fd;font-style:italic">extends</span> Car <span style="color:#ff79c6">{</span>
-    @Override
-    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">run</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;電動車&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">PetrolCar</span> <span style="color:#8be9fd;font-style:italic">extends</span> Car <span style="color:#ff79c6">{</span>
-    @Override
-    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">run</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;汽油車&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">White</span> <span style="color:#8be9fd;font-style:italic">implements</span> Color<span style="color:#ff79c6">{</span>
-    @Override
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">kind</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;白色&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Black</span> <span style="color:#8be9fd;font-style:italic">implements</span> Color<span style="color:#ff79c6">{</span>
-    @Override
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">kind</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;黑色&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyCar</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
-        ElectricCar electricCar <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ElectricCar<span style="color:#ff79c6">();</span>
-        White color <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> White<span style="color:#ff79c6">();</span>
-        electricCar<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setColor</span><span style="color:#ff79c6">(</span>color<span style="color:#ff79c6">);</span>
-        electricCar<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getColor</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">kind</span><span style="color:#ff79c6">();</span>
-        electricCar<span style="color:#ff79c6">.</span><span style="color:#50fa7b">run</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>白色
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Color</span> <span style="color:#ff79c6">{</span>  <span style="color:#6272a4">// 抽出來建立介面
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>      <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">kind</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Car</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>     Color color<span style="color:#ff79c6">;</span>  <span style="color:#6272a4">// 做合成
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>     <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">run</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">public</span> Color <span style="color:#50fa7b">getColor</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> color<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setColor</span><span style="color:#ff79c6">(</span>Color color<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">color</span> <span style="color:#ff79c6">=</span> color<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ElectricCar</span> <span style="color:#8be9fd;font-style:italic">extends</span> Car <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    @Override
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">run</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;電動車&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">PetrolCar</span> <span style="color:#8be9fd;font-style:italic">extends</span> Car <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    @Override
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">run</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;汽油車&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">White</span> <span style="color:#8be9fd;font-style:italic">implements</span> Color<span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    @Override
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">kind</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;白色&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Black</span> <span style="color:#8be9fd;font-style:italic">implements</span> Color<span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    @Override
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">kind</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;黑色&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyCar</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        ElectricCar electricCar <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ElectricCar<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        White color <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> White<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        electricCar<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setColor</span><span style="color:#ff79c6">(</span>color<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        electricCar<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getColor</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">kind</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        electricCar<span style="color:#ff79c6">.</span><span style="color:#50fa7b">run</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>白色
 電動車
 </code></pre><br>
 <p>把Color拉出來建立一個介面。再經由不同的顏色去實作，最後類別Car再由合成的方式將Color引入，這是用CARP的方式做更改後的結果。現在依然用剛剛比較的三點來看看：</p>
@@ -767,7 +762,7 @@ Color和Car沒有了相依，只需要選好車款，再把指定的顏色帶入
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -1058,7 +1053,7 @@ Color和Car沒有了相依，只需要選好車款，再把指定的顏色帶入
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/ianlife/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

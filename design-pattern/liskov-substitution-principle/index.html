@@ -75,22 +75,17 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="里氏替換原則 | Liskov Substitution Principle">
-<meta itemprop="description" content="里氏替換原則主要在於子類別可以擴充套件父類別的功能，但不改變父類別原有的功能。就像老鷹跟企鵝都是鳥，老鷹會飛但企鵝不會。但企鵝不能去更改鳥類內的方法，只好經由其他設計達成目的。">
-<meta itemprop="datePublished" content="2020-09-12T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-09-12T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1061">
-<meta itemprop="image" content="https://i.imgur.com/elJyzxE.png">
-
-
-
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="里氏替換原則 | Liskov Substitution Principle">
+<meta itemprop="description" content="里氏替換原則主要在於子類別可以擴充套件父類別的功能，但不改變父類別原有的功能。就像老鷹跟企鵝都是鳥，老鷹會飛但企鵝不會。但企鵝不能去更改鳥類內的方法，只好經由其他設計達成目的。"><meta itemprop="datePublished" content="2020-09-12T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-09-12T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1010"><meta itemprop="image" content="https://i.imgur.com/elJyzxE.png">
 <meta itemprop="keywords" content="Design Pattern,Design Principle,鐵人賽," /><meta property="og:title" content="里氏替換原則 | Liskov Substitution Principle" />
 <meta property="og:description" content="里氏替換原則主要在於子類別可以擴充套件父類別的功能，但不改變父類別原有的功能。就像老鷹跟企鵝都是鳥，老鷹會飛但企鵝不會。但企鵝不能去更改鳥類內的方法，只好經由其他設計達成目的。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/liskov-substitution-principle/" />
-<meta property="og:image" content="https://i.imgur.com/elJyzxE.png" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/liskov-substitution-principle/" /><meta property="og:image" content="https://i.imgur.com/elJyzxE.png" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-09-12T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-09-12T00:00:00+00:00" />
+
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.imgur.com/elJyzxE.png"/>
@@ -98,7 +93,7 @@ if (!doNotTrack) {
 <meta name="twitter:title" content="里氏替換原則 | Liskov Substitution Principle"/>
 <meta name="twitter:description" content="里氏替換原則主要在於子類別可以擴充套件父類別的功能，但不改變父類別原有的功能。就像老鷹跟企鵝都是鳥，老鷹會飛但企鵝不會。但企鵝不能去更改鳥類內的方法，只好經由其他設計達成目的。"/>
 <meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
@@ -109,7 +104,7 @@ if (!doNotTrack) {
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ianlife/">
+      <a href="/">
         
           <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
         
@@ -247,7 +242,7 @@ if (!doNotTrack) {
         <article class="post">
   <header>
   <div class="title">
-    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    <a href="/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
     
     <h3><a href="/ianlife/design-pattern/liskov-substitution-principle/">里氏替換原則 | Liskov Substitution Principle</a></h3>
     
@@ -396,28 +391,28 @@ if (!doNotTrack) {
 <p>物件導向程式設計中，is-a指的是類別的父子繼承關係。比方說老鷹是鳥的一種，鳥為父類別，老鷹為子類別。而子類別也繼承父類別的行為，比如說鳥會飛，老鷹為鳥的子類別，所以老鷹也會飛。</p>
 <p>我們用鳥類飛行速度以及飛行一段距離所需花的時間來舉例子。</p>
 <p>範例1</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bird</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">;</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">flySpeed</span> <span style="color:#ff79c6">=</span> flySpeed<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">/</span>flySpeed<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Eagle</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{}</span>
-
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LSP</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        Bird eagle<span style="color:#ff79c6">=</span><span style="color:#ff79c6">new</span> Eagle<span style="color:#ff79c6">();</span>
-        eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路程300公里：&#34;</span><span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹花了&#34;</span> <span style="color:#ff79c6">+</span> eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>300<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時.&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>路程300公里：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bird</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">flySpeed</span> <span style="color:#ff79c6">=</span> flySpeed<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">/</span>flySpeed<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Eagle</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LSP</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Bird eagle<span style="color:#ff79c6">=</span><span style="color:#ff79c6">new</span> Eagle<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路程300公里：&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹花了&#34;</span> <span style="color:#ff79c6">+</span> eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>300<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時.&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>路程300公里：
 老鷹花了2.5小時.
 </code></pre><p>上面的程式碼我們可以了解，老鷹是鳥的子類別，所以老鷹也有setFlySpeed()的功能，藉由setFlySpeed()來設定老鷹的飛行速度，再經由getFlyTime()取得老鷹的飛行時間。但若今天我們也想知道企鵝會花多久時間移動呢？</p>
 <br>
@@ -428,41 +423,41 @@ if (!doNotTrack) {
 </ul>
 <hr>
 <p>範例2</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bird</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">;</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">flySpeed</span> <span style="color:#ff79c6">=</span> flySpeed<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">/</span>flySpeed<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Eagle</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Penguin</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">flySpeed</span> <span style="color:#ff79c6">=</span> 0<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LSP</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        Bird eagle<span style="color:#ff79c6">=</span><span style="color:#ff79c6">new</span> Eagle<span style="color:#ff79c6">();</span>
-        Bird penguin<span style="color:#ff79c6">=</span><span style="color:#ff79c6">new</span> Penguin<span style="color:#ff79c6">();</span>
-        eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
-        penguin<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>20<span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路程300公里：&#34;</span><span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹花了&#34;</span> <span style="color:#ff79c6">+</span> eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>300<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時&#34;</span><span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;企鵝花了&#34;</span> <span style="color:#ff79c6">+</span> penguin<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>300<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>飛行300公里：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bird</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">flySpeed</span> <span style="color:#ff79c6">=</span> flySpeed<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">/</span>flySpeed<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Eagle</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Penguin</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">flySpeed</span> <span style="color:#ff79c6">=</span> 0<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LSP</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Bird eagle<span style="color:#ff79c6">=</span><span style="color:#ff79c6">new</span> Eagle<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        Bird penguin<span style="color:#ff79c6">=</span><span style="color:#ff79c6">new</span> Penguin<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        penguin<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>20<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路程300公里：&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹花了&#34;</span> <span style="color:#ff79c6">+</span> eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>300<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;企鵝花了&#34;</span> <span style="color:#ff79c6">+</span> penguin<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>300<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>飛行300公里：
 老鷹花了2.5小時
 
-Exception in thread &quot;main&quot; java.lang.ArithmeticException: / by zero
+Exception in thread &#34;main&#34; java.lang.ArithmeticException: / by zero
 	at Bird.getFlyTime(LSP.java:7)
 	at LSP.main(LSP.java:28)
 </code></pre><br>
@@ -499,82 +494,81 @@ Penguin : +setFlySpeed();
 <br>
 <h4 id=_1-子類別必須完全實現父類別的方法>1. 子類別必須完全實現父類別的方法</h4>
 <p>若Bird為一個抽象類別，裡面含有抽象方法。Penguin和Eagle繼承了Bird，就需要實現裡面的抽象方法，也就是action()。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bird</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">;</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">flySpeed</span> <span style="color:#ff79c6">=</span> flySpeed<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">/</span>flySpeed<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">action</span><span style="color:#ff79c6">();</span>
-    
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Eagle</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{</span>
-    @Override
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">action</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹用飛的&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Penguin</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{</span>
-    @Override
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">action</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;企鵝用走的&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bird</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">flySpeed</span> <span style="color:#ff79c6">=</span> flySpeed<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">/</span>flySpeed<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">action</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Eagle</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    @Override
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">action</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹用飛的&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Penguin</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    @Override
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">action</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;企鵝用走的&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><br>
 <br>
 <h4 id=_2-子類別可以有自己的特性>2. 子類別可以有自己的特性</h4>
 <p>子類別除了繼承父類別的方法外，也可以擁有屬於自己的方法。比方說，企鵝會游泳，那在class Penguin內就可以加一個swim()的function。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Penguin</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">swim</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;企鵝游泳&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Penguin</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">swim</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;企鵝游泳&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><br>
 <br>
 <h4 id=_3-重載overload或者實現父類別的方法時輸入參數可以被放大>3. 重載(Overload)或者實現父類別的方法時輸入參數可以被放大</h4>
 <p>我們將getFlyTime()的傳入參數改為Map。Map為HashMap的父類別，所以若Eagle要重載Bird的function，那傳入的參數範圍一定要比Brid大才行。</p>
 <h5 id="子類別參數範圍大於父類別"><strong>子類別參數範圍大於父類別</strong></h5>
 <p>範例3</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bird</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">;</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">flySpeed</span> <span style="color:#ff79c6">=</span> flySpeed<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>HashMap<span style="color:#ff79c6">&lt;</span>String<span style="color:#ff79c6">,</span> Integer<span style="color:#ff79c6">&gt;</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;父類別執行&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;distance&#34;</span><span style="color:#ff79c6">)/</span>flySpeed<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Eagle</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>Map<span style="color:#ff79c6">&lt;</span>String<span style="color:#ff79c6">,</span> Integer<span style="color:#ff79c6">&gt;</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;子類別執行&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;distance&#34;</span><span style="color:#ff79c6">)/</span>flySpeed<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LSP</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        Bird bird <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Bird<span style="color:#ff79c6">();</span>
-        bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
-        Eagle eagle <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Eagle<span style="color:#ff79c6">();</span>
-        eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
-        
-        HashMap map <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> HashMap<span style="color:#ff79c6">();</span>
-        map<span style="color:#ff79c6">.</span><span style="color:#50fa7b">put</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;distance&#34;</span><span style="color:#ff79c6">,</span> 300<span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路程300公里：&#34;</span><span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;鳥花了&#34;</span> <span style="color:#ff79c6">+</span> bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>map<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時.&#34;</span><span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹花了&#34;</span> <span style="color:#ff79c6">+</span> eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>map<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時.&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>路程300公里：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bird</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">flySpeed</span> <span style="color:#ff79c6">=</span> flySpeed<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>HashMap<span style="color:#ff79c6">&lt;</span>String<span style="color:#ff79c6">,</span> Integer<span style="color:#ff79c6">&gt;</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;父類別執行&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;distance&#34;</span><span style="color:#ff79c6">)/</span>flySpeed<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Eagle</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>Map<span style="color:#ff79c6">&lt;</span>String<span style="color:#ff79c6">,</span> Integer<span style="color:#ff79c6">&gt;</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;子類別執行&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;distance&#34;</span><span style="color:#ff79c6">)/</span>flySpeed<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LSP</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Bird bird <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Bird<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        Eagle eagle <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Eagle<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        HashMap map <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> HashMap<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        map<span style="color:#ff79c6">.</span><span style="color:#50fa7b">put</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;distance&#34;</span><span style="color:#ff79c6">,</span> 300<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路程300公里：&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;鳥花了&#34;</span> <span style="color:#ff79c6">+</span> bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>map<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時.&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹花了&#34;</span> <span style="color:#ff79c6">+</span> eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>map<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時.&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>路程300公里：
 父類別執行
 鳥花了2.5小時.
 父類別執行
@@ -582,41 +576,40 @@ Penguin : +setFlySpeed();
 </code></pre><br>
 <h5 id="子類別參數範圍小於父類別"><strong>子類別參數範圍小於父類別</strong></h5>
 <p>範例4</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bird</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">;</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">flySpeed</span> <span style="color:#ff79c6">=</span> flySpeed<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>Map<span style="color:#ff79c6">&lt;</span>String<span style="color:#ff79c6">,</span> Integer<span style="color:#ff79c6">&gt;</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;父類別執行&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;distance&#34;</span><span style="color:#ff79c6">)/</span>flySpeed<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Eagle</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>HashMap<span style="color:#ff79c6">&lt;</span>String<span style="color:#ff79c6">,</span> Integer<span style="color:#ff79c6">&gt;</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;子類別執行&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;distance&#34;</span><span style="color:#ff79c6">)/</span>flySpeed<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LSP</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        Bird bird <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Bird<span style="color:#ff79c6">();</span>
-        bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
-        Eagle eagle <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Eagle<span style="color:#ff79c6">();</span>
-        eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
-        
-        HashMap map <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> HashMap<span style="color:#ff79c6">();</span>
-        map<span style="color:#ff79c6">.</span><span style="color:#50fa7b">put</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;distance&#34;</span><span style="color:#ff79c6">,</span> 300<span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路程300公里：&#34;</span><span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;鳥花了&#34;</span> <span style="color:#ff79c6">+</span> bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>map<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時.&#34;</span><span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹花了&#34;</span> <span style="color:#ff79c6">+</span> eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>map<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時.&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>路程300公里：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bird</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">flySpeed</span> <span style="color:#ff79c6">=</span> flySpeed<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>Map<span style="color:#ff79c6">&lt;</span>String<span style="color:#ff79c6">,</span> Integer<span style="color:#ff79c6">&gt;</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;父類別執行&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;distance&#34;</span><span style="color:#ff79c6">)/</span>flySpeed<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Eagle</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>HashMap<span style="color:#ff79c6">&lt;</span>String<span style="color:#ff79c6">,</span> Integer<span style="color:#ff79c6">&gt;</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;子類別執行&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;distance&#34;</span><span style="color:#ff79c6">)/</span>flySpeed<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LSP</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Bird bird <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Bird<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        Eagle eagle <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Eagle<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        HashMap map <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> HashMap<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        map<span style="color:#ff79c6">.</span><span style="color:#50fa7b">put</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;distance&#34;</span><span style="color:#ff79c6">,</span> 300<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路程300公里：&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;鳥花了&#34;</span> <span style="color:#ff79c6">+</span> bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>map<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時.&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹花了&#34;</span> <span style="color:#ff79c6">+</span> eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>map<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時.&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>路程300公里：
 父類別執行
 鳥花了2.5小時.
 子類別執行
@@ -628,39 +621,38 @@ Penguin : +setFlySpeed();
 <p>這其實與第三點類似，父類別能出現的地方子類別就可以出現,而且替換為子類別不會產生任何錯誤或者異常。但是反過來就不行了,有子類別出現的地方,父類別未必就適應。</p>
 <h5 id="子類別替換父類別"><strong>子類別替換父類別</strong></h5>
 <p>範例5</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bird</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">;</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">flySpeed</span> <span style="color:#ff79c6">=</span> flySpeed<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">/</span>flySpeed<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Eagle</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{}</span>
-<span style="color:#6272a4">// 父類別
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LSP</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
-        Bird bird <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Bird<span style="color:#ff79c6">();</span>
-        bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路程300公里：&#34;</span><span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹花了&#34;</span> <span style="color:#ff79c6">+</span> bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>300<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時.&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-</code></pre></div><p>範例6</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">// 子類別(Eagle)替換父類別(Bird) 
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LSP</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        Eagle bird <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Eagle<span style="color:#ff79c6">();</span>
-        bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路程300公里：&#34;</span><span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹花了&#34;</span> <span style="color:#ff79c6">+</span> bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>300<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時.&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>// 父類別
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bird</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">flySpeed</span> <span style="color:#ff79c6">=</span> flySpeed<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">/</span>flySpeed<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Eagle</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{}</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 父類別
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LSP</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>        Bird bird <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Bird<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路程300公里：&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹花了&#34;</span> <span style="color:#ff79c6">+</span> bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>300<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時.&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>範例6</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#6272a4">// 子類別(Eagle)替換父類別(Bird) 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LSP</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Eagle bird <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Eagle<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路程300公里：&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹花了&#34;</span> <span style="color:#ff79c6">+</span> bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>300<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時.&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>// 父類別
 路程300公里：
 老鷹花了2.5小時.
 
@@ -672,56 +664,56 @@ Penguin : +setFlySpeed();
 <br>
 <h5 id="父類別替換子類別"><strong>父類別替換子類別</strong></h5>
 <p>範例7</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bird</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">;</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">flySpeed</span> <span style="color:#ff79c6">=</span> flySpeed<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">/</span>flySpeed<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Eagle</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">action</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹用飛的&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#6272a4">// 子類別
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LSP</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        Eagle bird <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Eagle<span style="color:#ff79c6">();</span>
-        bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路程300公里：&#34;</span><span style="color:#ff79c6">);</span>
-        bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">action</span><span style="color:#ff79c6">();</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹花了&#34;</span> <span style="color:#ff79c6">+</span> bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>300<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時.&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>範例8</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">// 父類別替換子類別 
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LSP</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        Bird bird <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Bird<span style="color:#ff79c6">();</span>
-        bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路程300公里：&#34;</span><span style="color:#ff79c6">);</span>
-        bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">action</span><span style="color:#ff79c6">();</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹花了&#34;</span> <span style="color:#ff79c6">+</span> bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>300<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時.&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">// 子類別
-</span><span style="color:#6272a4"></span>路程300公里：
-老鷹用飛的
-老鷹花了2<span style="color:#ff79c6">.</span><span style="color:#50fa7b">5小時</span><span style="color:#ff79c6">.</span>
-
-<span style="color:#6272a4">// 父類別替換子類別
-</span><span style="color:#6272a4"></span><span style="color:#ff79c6">/</span>LSP<span style="color:#ff79c6">.</span><span style="color:#50fa7b">java</span><span style="color:#ff79c6">:</span>25<span style="color:#ff79c6">:</span> error<span style="color:#ff79c6">:</span> cannot find symbol
-        bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">action</span><span style="color:#ff79c6">();</span>
-            <span style="color:#ff79c6">^</span>
-  symbol<span style="color:#ff79c6">:</span>   method <span style="color:#50fa7b">action</span><span style="color:#ff79c6">()</span>
-  location<span style="color:#ff79c6">:</span> variable bird of type Bird
-1 error
-</code></pre></div><p>由上面兩個例子可以發現，當原本是Bird要替換成Eagle，是可以的，因為Eagle擁有Bird的所有行為。但反過來Bird要替換Eagle卻是不行的，原因是Bird並沒有action()的function可以用。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bird</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">flySpeed</span> <span style="color:#ff79c6">=</span> flySpeed<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">/</span>flySpeed<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Eagle</span> <span style="color:#8be9fd;font-style:italic">extends</span> Bird <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">action</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹用飛的&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 子類別
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LSP</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Eagle bird <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Eagle<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路程300公里：&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">action</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹花了&#34;</span> <span style="color:#ff79c6">+</span> bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>300<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時.&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>範例8</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#6272a4">// 父類別替換子類別 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LSP</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Bird bird <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Bird<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路程300公里：&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">action</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹花了&#34;</span> <span style="color:#ff79c6">+</span> bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>300<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時.&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#6272a4">// 子類別
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>路程300公里：
+</span></span><span style="display:flex;"><span>老鷹用飛的
+</span></span><span style="display:flex;"><span>老鷹花了2<span style="color:#ff79c6">.</span><span style="color:#50fa7b">5小時</span><span style="color:#ff79c6">.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 父類別替換子類別
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">/</span>LSP<span style="color:#ff79c6">.</span><span style="color:#50fa7b">java</span><span style="color:#ff79c6">:</span>25<span style="color:#ff79c6">:</span> error<span style="color:#ff79c6">:</span> cannot find symbol
+</span></span><span style="display:flex;"><span>        bird<span style="color:#ff79c6">.</span><span style="color:#50fa7b">action</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">^</span>
+</span></span><span style="display:flex;"><span>  symbol<span style="color:#ff79c6">:</span>   method <span style="color:#50fa7b">action</span><span style="color:#ff79c6">()</span>
+</span></span><span style="display:flex;"><span>  location<span style="color:#ff79c6">:</span> variable bird of type Bird
+</span></span><span style="display:flex;"><span>1 error
+</span></span></code></pre></div><p>由上面兩個例子可以發現，當原本是Bird要替換成Eagle，是可以的，因為Eagle擁有Bird的所有行為。但反過來Bird要替換Eagle卻是不行的，原因是Bird並沒有action()的function可以用。</p>
 <br>
 <br>
 <ul>
@@ -731,52 +723,52 @@ Penguin : +setFlySpeed();
 </ul>
 <p>回到剛剛老鷹與企鵝的問題裡。因為企鵝更改了父類別的function，以至於其他的function無法正常的運行。我們可以用比較詳細的分類來區分老鷹以及企鵝。鳥不一定就會飛，企鵝、鴕鳥&hellip;這類的基本上都不會飛。所以我們可以將父類別分成會飛的鳥以及用跑的鳥（這樣比較好分類ＸＤ），再分別去繼承鳥類。然後讓老鷹繼承會飛的鳥，企鵝繼承會跑的鳥。</p>
 <p>範例9</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bird</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">eat</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;鳥吃東西！！&#34;</span><span style="color:#ff79c6">)</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">BirdFly</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">;</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">flySpeed</span> <span style="color:#ff79c6">=</span> flySpeed<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">/</span>flySpeed<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">BirdRun</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd">int</span> runSpeed<span style="color:#ff79c6">;</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setRunSpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> runSpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">runSpeed</span> <span style="color:#ff79c6">=</span> runSpeed<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getRunTime</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">/</span>runSpeed<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Eagle</span> <span style="color:#8be9fd;font-style:italic">extends</span> BirdFly <span style="color:#ff79c6">{}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Penguin</span> <span style="color:#8be9fd;font-style:italic">extends</span> BirdRun <span style="color:#ff79c6">{}</span>
-
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LSP</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        BirdFly eagle <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Eagle<span style="color:#ff79c6">();</span>
-        BirdRun penguin <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Penguin<span style="color:#ff79c6">();</span>
-        eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
-        penguin<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setRunSpeed</span><span style="color:#ff79c6">(</span>20<span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路程300公里&#34;</span><span style="color:#ff79c6">)</span><span style="color:#ff79c6">;</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹花了&#34;</span> <span style="color:#ff79c6">+</span> eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>300<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時&#34;</span><span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;企鵝花了&#34;</span> <span style="color:#ff79c6">+</span> penguin<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getRunTime</span><span style="color:#ff79c6">(</span>300<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">路程300公里
-老鷹花了2<span style="color:#ff79c6">.</span><span style="color:#50fa7b">5小時</span>
-企鵝花了15<span style="color:#ff79c6">.</span><span style="color:#50fa7b">0小時</span>
-</code></pre></div><br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bird</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">eat</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;鳥吃東西！！&#34;</span><span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">BirdFly</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> flySpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">flySpeed</span> <span style="color:#ff79c6">=</span> flySpeed<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">/</span>flySpeed<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">BirdRun</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">int</span> runSpeed<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setRunSpeed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> runSpeed<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">runSpeed</span> <span style="color:#ff79c6">=</span> runSpeed<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">getRunTime</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> distance<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span>distance<span style="color:#ff79c6">/</span>runSpeed<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Eagle</span> <span style="color:#8be9fd;font-style:italic">extends</span> BirdFly <span style="color:#ff79c6">{}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Penguin</span> <span style="color:#8be9fd;font-style:italic">extends</span> BirdRun <span style="color:#ff79c6">{}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LSP</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        BirdFly eagle <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Eagle<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        BirdRun penguin <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Penguin<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setFlySpeed</span><span style="color:#ff79c6">(</span>120<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        penguin<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setRunSpeed</span><span style="color:#ff79c6">(</span>20<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;路程300公里&#34;</span><span style="color:#ff79c6">)</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;老鷹花了&#34;</span> <span style="color:#ff79c6">+</span> eagle<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getFlyTime</span><span style="color:#ff79c6">(</span>300<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;企鵝花了&#34;</span> <span style="color:#ff79c6">+</span> penguin<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getRunTime</span><span style="color:#ff79c6">(</span>300<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;小時&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>路程300公里
+</span></span><span style="display:flex;"><span>老鷹花了2<span style="color:#ff79c6">.</span><span style="color:#50fa7b">5小時</span>
+</span></span><span style="display:flex;"><span>企鵝花了15<span style="color:#ff79c6">.</span><span style="color:#50fa7b">0小時</span>
+</span></span></code></pre></div><br>
 <img src='https://g.gravizo.com/svg?
 @startuml;
 BirdFly -up-> Bird;
@@ -921,7 +913,7 @@ BirdRun : +getRunTime();
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -1362,7 +1354,7 @@ BirdRun : +getRunTime();
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/ianlife/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

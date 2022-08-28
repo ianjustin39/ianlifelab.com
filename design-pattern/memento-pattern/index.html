@@ -75,22 +75,17 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="備忘錄模式 | Memento Pattern">
-<meta itemprop="description" content="備忘錄模式在不破壞封裝的前提下，儲存一個物件的某個狀態，以便於需要的時候將物件恢復到原先儲存的狀態。例如：後悔藥。">
-<meta itemprop="datePublished" content="2020-10-04T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-10-04T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="436">
-<meta itemprop="image" content="https://ianjustin39.github.io/ianlife/">
-
-
-
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="備忘錄模式 | Memento Pattern">
+<meta itemprop="description" content="備忘錄模式在不破壞封裝的前提下，儲存一個物件的某個狀態，以便於需要的時候將物件恢復到原先儲存的狀態。例如：後悔藥。"><meta itemprop="datePublished" content="2020-10-04T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-10-04T00:00:00+00:00" />
+<meta itemprop="wordCount" content="386"><meta itemprop="image" content="https://ianjustin39.github.io/ianlife/">
 <meta itemprop="keywords" content="Design Pattern,Behavioural Pattern," /><meta property="og:title" content="備忘錄模式 | Memento Pattern" />
 <meta property="og:description" content="備忘錄模式在不破壞封裝的前提下，儲存一個物件的某個狀態，以便於需要的時候將物件恢復到原先儲存的狀態。例如：後悔藥。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/memento-pattern/" />
-<meta property="og:image" content="https://ianjustin39.github.io/ianlife/" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/memento-pattern/" /><meta property="og:image" content="https://ianjustin39.github.io/ianlife/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-10-04T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-10-04T00:00:00+00:00" />
+
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://ianjustin39.github.io/ianlife/"/>
@@ -98,7 +93,7 @@ if (!doNotTrack) {
 <meta name="twitter:title" content="備忘錄模式 | Memento Pattern"/>
 <meta name="twitter:description" content="備忘錄模式在不破壞封裝的前提下，儲存一個物件的某個狀態，以便於需要的時候將物件恢復到原先儲存的狀態。例如：後悔藥。"/>
 <meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
@@ -109,7 +104,7 @@ if (!doNotTrack) {
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ianlife/">
+      <a href="/">
         
           <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
         
@@ -247,7 +242,7 @@ if (!doNotTrack) {
         <article class="post">
   <header>
   <div class="title">
-    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    <a href="/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
     
     <h3><a href="/ianlife/design-pattern/memento-pattern/">備忘錄模式 | Memento Pattern</a></h3>
     
@@ -262,7 +257,7 @@ if (!doNotTrack) {
     
     <span class="author">Ian Tsai</span>
     
-    <p>3 minute read</p>
+    <p>2 minute read</p>
     
     <p>
       <span id="busuanzi_container_page_pv">
@@ -395,22 +390,22 @@ if (!doNotTrack) {
 <table>
 <thead>
 <tr>
-<th align="left">name</th>
-<th align="left">description</th>
+<th style="text-align:left">name</th>
+<th style="text-align:left">description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Originator(發起人)</td>
-<td align="left">紀錄目前的內部狀態，提供建立備忘錄及回復備忘錄狀態的功能，可以訪問備忘錄內所有訊息。</td>
+<td style="text-align:left">Originator(發起人)</td>
+<td style="text-align:left">紀錄目前的內部狀態，提供建立備忘錄及回復備忘錄狀態的功能，可以訪問備忘錄內所有訊息。</td>
 </tr>
 <tr>
-<td align="left">Memento(備忘錄)</td>
-<td align="left">保存發起人的內部狀態，在需要的時候提供給發起人。</td>
+<td style="text-align:left">Memento(備忘錄)</td>
+<td style="text-align:left">保存發起人的內部狀態，在需要的時候提供給發起人。</td>
 </tr>
 <tr>
-<td align="left">Caretaker(管理者)</td>
-<td align="left">管理、保存及讀取備忘錄的功能，但不能對備忘錄的內容進行訪問及修改。</td>
+<td style="text-align:left">Caretaker(管理者)</td>
+<td style="text-align:left">管理、保存及讀取備忘錄的功能，但不能對備忘錄的內容進行訪問及修改。</td>
 </tr>
 </tbody>
 </table>
@@ -446,62 +441,62 @@ Caretaker : +getMemento():Memento;
 </ul>
 <hr>
 <p>相信大部分男性都有當兵的經驗，大家最常聽到的一句話： <strong>回復上一動。</strong> 我們就用班長的回復上一動來實作備忘錄模式。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">// 備忘錄，有保存狀態及取出狀態兩個方法。
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Memento</span> <span style="color:#ff79c6">{</span> 
-    <span style="color:#8be9fd;font-style:italic">private</span> String state<span style="color:#ff79c6">;</span> 
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Memento</span><span style="color:#ff79c6">(</span>String state<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">state</span> <span style="color:#ff79c6">=</span> state<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>     
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setState</span><span style="color:#ff79c6">(</span>String state<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">state</span> <span style="color:#ff79c6">=</span> state<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">getState</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span> 
-        <span style="color:#ff79c6">return</span> state<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#6272a4">// 發起人，也就是班長，負責對部隊發號司令。
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Originator</span> <span style="color:#ff79c6">{</span> 
-    <span style="color:#8be9fd;font-style:italic">private</span> String state<span style="color:#ff79c6">;</span>     
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setState</span><span style="color:#ff79c6">(</span>String state<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>state <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;！&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">state</span> <span style="color:#ff79c6">=</span> state<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">getState</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span> 
-        <span style="color:#ff79c6">return</span> state<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> Memento <span style="color:#50fa7b">createMemento</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>  <span style="color:#6272a4">// 建立備忘錄
-</span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> Memento<span style="color:#ff79c6">(</span>state<span style="color:#ff79c6">);</span> 
-    <span style="color:#ff79c6">}</span> 
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">restoreMemento</span><span style="color:#ff79c6">(</span>Memento m<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>  <span style="color:#6272a4">// 回復上一個狀態
-</span><span style="color:#6272a4"></span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;班長：幹什麼！回復上一動！&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">setState</span><span style="color:#ff79c6">(</span>m<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getState</span><span style="color:#ff79c6">());</span> 
-    <span style="color:#ff79c6">}</span> 
-<span style="color:#ff79c6">}</span>
-<span style="color:#6272a4">// 管理者，保存備忘錄及取得備忘錄
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Caretaker</span> <span style="color:#ff79c6">{</span> 
-    <span style="color:#8be9fd;font-style:italic">private</span> Memento memento<span style="color:#ff79c6">;</span>       
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setMemento</span><span style="color:#ff79c6">(</span>Memento m<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
-        memento <span style="color:#ff79c6">=</span> m<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> Memento <span style="color:#50fa7b">getMemento</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span> 
-        <span style="color:#ff79c6">return</span> memento<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MementoPattern</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        Originator or <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Originator<span style="color:#ff79c6">();</span>
-        Caretaker cr <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Caretaker<span style="color:#ff79c6">();</span>       
-        or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setState</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;稍息！！&#34;</span><span style="color:#ff79c6">);</span> 
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;---初始狀態:&#34;</span> <span style="color:#ff79c6">+</span> or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getState</span><span style="color:#ff79c6">());</span>           
-        cr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setMemento</span><span style="color:#ff79c6">(</span>or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">createMemento</span><span style="color:#ff79c6">());</span> <span style="color:#6272a4">//保存      
-</span><span style="color:#6272a4"></span>        or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setState</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;置板凳！！&#34;</span><span style="color:#ff79c6">);</span> 
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;---新的狀態:&#34;</span> <span style="color:#ff79c6">+</span> or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getState</span><span style="color:#ff79c6">());</span>     
-        or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">restoreMemento</span><span style="color:#ff79c6">(</span>cr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getMemento</span><span style="color:#ff79c6">());</span> <span style="color:#6272a4">//回復
-</span><span style="color:#6272a4"></span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;---回復狀態:&#34;</span> <span style="color:#ff79c6">+</span> or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getState</span><span style="color:#ff79c6">());</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>稍息！！！
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#6272a4">// 備忘錄，有保存狀態及取出狀態兩個方法。
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Memento</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> String state<span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Memento</span><span style="color:#ff79c6">(</span>String state<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">state</span> <span style="color:#ff79c6">=</span> state<span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>     
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setState</span><span style="color:#ff79c6">(</span>String state<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">state</span> <span style="color:#ff79c6">=</span> state<span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">getState</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> state<span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 發起人，也就是班長，負責對部隊發號司令。
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Originator</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> String state<span style="color:#ff79c6">;</span>     
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setState</span><span style="color:#ff79c6">(</span>String state<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>state <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">state</span> <span style="color:#ff79c6">=</span> state<span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">getState</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> state<span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> Memento <span style="color:#50fa7b">createMemento</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>  <span style="color:#6272a4">// 建立備忘錄
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> Memento<span style="color:#ff79c6">(</span>state<span style="color:#ff79c6">);</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">restoreMemento</span><span style="color:#ff79c6">(</span>Memento m<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>  <span style="color:#6272a4">// 回復上一個狀態
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;班長：幹什麼！回復上一動！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">setState</span><span style="color:#ff79c6">(</span>m<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getState</span><span style="color:#ff79c6">());</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 管理者，保存備忘錄及取得備忘錄
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Caretaker</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> Memento memento<span style="color:#ff79c6">;</span>       
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setMemento</span><span style="color:#ff79c6">(</span>Memento m<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>        memento <span style="color:#ff79c6">=</span> m<span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> Memento <span style="color:#50fa7b">getMemento</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> memento<span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MementoPattern</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Originator or <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Originator<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        Caretaker cr <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Caretaker<span style="color:#ff79c6">();</span>       
+</span></span><span style="display:flex;"><span>        or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setState</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;稍息！！&#34;</span><span style="color:#ff79c6">);</span> 
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;---初始狀態:&#34;</span> <span style="color:#ff79c6">+</span> or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getState</span><span style="color:#ff79c6">());</span>           
+</span></span><span style="display:flex;"><span>        cr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setMemento</span><span style="color:#ff79c6">(</span>or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">createMemento</span><span style="color:#ff79c6">());</span> <span style="color:#6272a4">//保存      
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setState</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;置板凳！！&#34;</span><span style="color:#ff79c6">);</span> 
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;---新的狀態:&#34;</span> <span style="color:#ff79c6">+</span> or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getState</span><span style="color:#ff79c6">());</span>     
+</span></span><span style="display:flex;"><span>        or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">restoreMemento</span><span style="color:#ff79c6">(</span>cr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getMemento</span><span style="color:#ff79c6">());</span> <span style="color:#6272a4">//回復
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;---回復狀態:&#34;</span> <span style="color:#ff79c6">+</span> or<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getState</span><span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>稍息！！！
 ---初始狀態:稍息！！
 置板凳！！！
 ---新的狀態:置板凳！！
@@ -623,7 +618,7 @@ Caretaker(管理者)：管理、保存及讀取備忘錄的功能，但不能對
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -888,7 +883,7 @@ Caretaker(管理者)：管理、保存及讀取備忘錄的功能，但不能對
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/ianlife/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

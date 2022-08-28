@@ -75,22 +75,17 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="在 Hugo Blog 中加上 Algolia 文章搜索工具">
-<meta itemprop="description" content="Algolia 是為你在APP或網站提供搜索功能的最佳方式之一，在 Hugo 中加入 Algolia，讓你更方便尋找以前的文章。">
-<meta itemprop="datePublished" content="2021-03-13T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-13T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="729">
-<meta itemprop="image" content="https://i.imgur.com/gx6To7q.png">
-
-
-
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="在 Hugo Blog 中加上 Algolia 文章搜索工具">
+<meta itemprop="description" content="Algolia 是為你在APP或網站提供搜索功能的最佳方式之一，在 Hugo 中加入 Algolia，讓你更方便尋找以前的文章。"><meta itemprop="datePublished" content="2021-03-13T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-03-13T00:00:00+00:00" />
+<meta itemprop="wordCount" content="729"><meta itemprop="image" content="https://i.imgur.com/gx6To7q.png">
 <meta itemprop="keywords" content="Blog,Hugo,Algolia," /><meta property="og:title" content="在 Hugo Blog 中加上 Algolia 文章搜索工具" />
 <meta property="og:description" content="Algolia 是為你在APP或網站提供搜索功能的最佳方式之一，在 Hugo 中加入 Algolia，讓你更方便尋找以前的文章。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/build-blog/hugo-and-algolia/" />
-<meta property="og:image" content="https://i.imgur.com/gx6To7q.png" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/build-blog/hugo-and-algolia/" /><meta property="og:image" content="https://i.imgur.com/gx6To7q.png" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2021-03-13T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-03-13T00:00:00+00:00" />
+
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.imgur.com/gx6To7q.png"/>
@@ -98,7 +93,7 @@ if (!doNotTrack) {
 <meta name="twitter:title" content="在 Hugo Blog 中加上 Algolia 文章搜索工具"/>
 <meta name="twitter:description" content="Algolia 是為你在APP或網站提供搜索功能的最佳方式之一，在 Hugo 中加入 Algolia，讓你更方便尋找以前的文章。"/>
 <meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
@@ -109,7 +104,7 @@ if (!doNotTrack) {
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ianlife/">
+      <a href="/">
         
           <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
         
@@ -247,7 +242,7 @@ if (!doNotTrack) {
         <article class="post">
   <header>
   <div class="title">
-    <a href="/ianlife/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84-blog"><p>Build My Blog</p></a>
+    <a href="/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84-blog"><p>Build My Blog</p></a>
     
     <h3><a href="/ianlife/build-blog/hugo-and-algolia/">在 Hugo Blog 中加上 Algolia 文章搜索工具</a></h3>
     
@@ -303,34 +298,33 @@ if (!doNotTrack) {
 <hr>
 <h5 id="1-修改-configtoml">1. 修改 config.toml</h5>
 <p>修改<code>./config.toml</code>設定好需要的參數。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[outputs]
-  home = [<span style="color:#f1fa8c">&#34;HTML&#34;</span>, <span style="color:#f1fa8c">&#34;RSS&#34;</span>, <span style="color:#f1fa8c">&#34;Algolia&#34;</span>]
-  
-[outputFormats.Algolia]
-  baseName = <span style="color:#f1fa8c">&#34;algolia&#34;</span>
-  isPlainText = <span style="color:#ff79c6">true</span>
-  mediaType = <span style="color:#f1fa8c">&#34;application/json&#34;</span>
-  notAlternative = <span style="color:#ff79c6">true</span>
-  
-[params.algolia]
-  appId = <span style="color:#f1fa8c">&#34;剛剛看到的 ID&#34;</span>
-  indexName = <span style="color:#f1fa8c">&#34;一開始輸入的 index&#34;</span>
-  searchOnlyKey = <span style="color:#f1fa8c">&#34;剛剛看到的 Search Only Key&#34;</span>
-  vars = [<span style="color:#f1fa8c">&#34;title&#34;</span>, <span style="color:#f1fa8c">&#34;summary&#34;</span>, <span style="color:#f1fa8c">&#34;date&#34;</span>, <span style="color:#f1fa8c">&#34;publishdate&#34;</span>, <span style="color:#f1fa8c">&#34;expirydate&#34;</span>, <span style="color:#f1fa8c">&#34;permalink&#34;</span>] 
-  params = [<span style="color:#f1fa8c">&#34;categories&#34;</span>, <span style="color:#f1fa8c">&#34;tags&#34;</span>, <span style="color:#f1fa8c">&#34;series&#34;</span>]
-</code></pre></div><br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[outputs]
+</span></span><span style="display:flex;"><span>  home = [<span style="color:#f1fa8c">&#34;HTML&#34;</span>, <span style="color:#f1fa8c">&#34;RSS&#34;</span>, <span style="color:#f1fa8c">&#34;Algolia&#34;</span>]
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>[outputFormats.Algolia]
+</span></span><span style="display:flex;"><span>  baseName = <span style="color:#f1fa8c">&#34;algolia&#34;</span>
+</span></span><span style="display:flex;"><span>  isPlainText = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  mediaType = <span style="color:#f1fa8c">&#34;application/json&#34;</span>
+</span></span><span style="display:flex;"><span>  notAlternative = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>[params.algolia]
+</span></span><span style="display:flex;"><span>  appId = <span style="color:#f1fa8c">&#34;剛剛看到的 ID&#34;</span>
+</span></span><span style="display:flex;"><span>  indexName = <span style="color:#f1fa8c">&#34;一開始輸入的 index&#34;</span>
+</span></span><span style="display:flex;"><span>  searchOnlyKey = <span style="color:#f1fa8c">&#34;剛剛看到的 Search Only Key&#34;</span>
+</span></span><span style="display:flex;"><span>  vars = [<span style="color:#f1fa8c">&#34;title&#34;</span>, <span style="color:#f1fa8c">&#34;summary&#34;</span>, <span style="color:#f1fa8c">&#34;date&#34;</span>, <span style="color:#f1fa8c">&#34;publishdate&#34;</span>, <span style="color:#f1fa8c">&#34;expirydate&#34;</span>, <span style="color:#f1fa8c">&#34;permalink&#34;</span>] 
+</span></span><span style="display:flex;"><span>  params = [<span style="color:#f1fa8c">&#34;categories&#34;</span>, <span style="color:#f1fa8c">&#34;tags&#34;</span>, <span style="color:#f1fa8c">&#34;series&#34;</span>]
+</span></span></code></pre></div><br>
 <h5 id="2-新增-listalgoliajson">2. 新增 list.algolia.json</h5>
 <p>在<code>layouts/_default</code>路徑下新增<code>list.algolia.json</code>文件，並加入以下程式碼，可以依照每個不同的 blog 所含有的參數去做設定。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{{- $.Scratch.Add <span style="color:#ff79c6">&#34;index&#34;</span> slice -}}
-{{- $section := $.Site.GetPage <span style="color:#ff79c6">&#34;section&#34;</span> .Section}}
-{{- range .Site.AllPages -}}
-  {{- if or (and (.IsDescendant $section) (and (not .Draft) (not .Params.private))) $section.IsHome -}}
-    {{- $.Scratch.Add <span style="color:#ff79c6">&#34;index&#34;</span> (dict <span style="color:#f1fa8c">&#34;objectID&#34;</span> .UniqueID <span style="color:#f1fa8c">&#34;date&#34;</span> .Date.UTC.Unix <span style="color:#f1fa8c">&#34;description&#34;</span> .Description <span style="color:#f1fa8c">&#34;dir&#34;</span> .Dir <span style="color:#f1fa8c">&#34;expirydate&#34;</span> .ExpiryDate.UTC.Unix <span style="color:#f1fa8c">&#34;fuzzywordcount&#34;</span> .FuzzyWordCount <span style="color:#f1fa8c">&#34;keywords&#34;</span> .Keywords <span style="color:#f1fa8c">&#34;kind&#34;</span> .Kind <span style="color:#f1fa8c">&#34;lang&#34;</span> .Lang <span style="color:#f1fa8c">&#34;lastmod&#34;</span> .Lastmod.UTC.Unix <span style="color:#f1fa8c">&#34;permalink&#34;</span> .Permalink <span style="color:#f1fa8c">&#34;publishdate&#34;</span> .PublishDate <span style="color:#f1fa8c">&#34;readingtime&#34;</span> .ReadingTime <span style="color:#f1fa8c">&#34;relpermalink&#34;</span> .RelPermalink <span style="color:#f1fa8c">&#34;summary&#34;</span> .Summary <span style="color:#f1fa8c">&#34;title&#34;</span> .Title <span style="color:#f1fa8c">&#34;type&#34;</span> .Type <span style="color:#f1fa8c">&#34;url&#34;</span> .URL <span style="color:#f1fa8c">&#34;weight&#34;</span> .Weight <span style="color:#f1fa8c">&#34;wordcount&#34;</span> .WordCount <span style="color:#f1fa8c">&#34;section&#34;</span> .Section <span style="color:#f1fa8c">&#34;tags&#34;</span> .Params.Tags <span style="color:#f1fa8c">&#34;categories&#34;</span> .Params.Categories <span style="color:#f1fa8c">&#34;authors&#34;</span> .Params.Authors)}}
-  {{- end -}}
-{{- end -}}
-{{- $.Scratch.Get <span style="color:#ff79c6">&#34;index&#34;</span> | jsonify -}}
-
-</code></pre></div><br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{{- $.Scratch.Add <span style="color:#ff79c6">&#34;index&#34;</span> slice -}}
+</span></span><span style="display:flex;"><span>{{- $section := $.Site.GetPage <span style="color:#ff79c6">&#34;section&#34;</span> .Section}}
+</span></span><span style="display:flex;"><span>{{- range .Site.AllPages -}}
+</span></span><span style="display:flex;"><span>  {{- if or (and (.IsDescendant $section) (and (not .Draft) (not .Params.private))) $section.IsHome -}}
+</span></span><span style="display:flex;"><span>    {{- $.Scratch.Add <span style="color:#ff79c6">&#34;index&#34;</span> (dict <span style="color:#f1fa8c">&#34;objectID&#34;</span> .UniqueID <span style="color:#f1fa8c">&#34;date&#34;</span> .Date.UTC.Unix <span style="color:#f1fa8c">&#34;description&#34;</span> .Description <span style="color:#f1fa8c">&#34;dir&#34;</span> .Dir <span style="color:#f1fa8c">&#34;expirydate&#34;</span> .ExpiryDate.UTC.Unix <span style="color:#f1fa8c">&#34;fuzzywordcount&#34;</span> .FuzzyWordCount <span style="color:#f1fa8c">&#34;keywords&#34;</span> .Keywords <span style="color:#f1fa8c">&#34;kind&#34;</span> .Kind <span style="color:#f1fa8c">&#34;lang&#34;</span> .Lang <span style="color:#f1fa8c">&#34;lastmod&#34;</span> .Lastmod.UTC.Unix <span style="color:#f1fa8c">&#34;permalink&#34;</span> .Permalink <span style="color:#f1fa8c">&#34;publishdate&#34;</span> .PublishDate <span style="color:#f1fa8c">&#34;readingtime&#34;</span> .ReadingTime <span style="color:#f1fa8c">&#34;relpermalink&#34;</span> .RelPermalink <span style="color:#f1fa8c">&#34;summary&#34;</span> .Summary <span style="color:#f1fa8c">&#34;title&#34;</span> .Title <span style="color:#f1fa8c">&#34;type&#34;</span> .Type <span style="color:#f1fa8c">&#34;url&#34;</span> .URL <span style="color:#f1fa8c">&#34;weight&#34;</span> .Weight <span style="color:#f1fa8c">&#34;wordcount&#34;</span> .WordCount <span style="color:#f1fa8c">&#34;section&#34;</span> .Section <span style="color:#f1fa8c">&#34;tags&#34;</span> .Params.Tags <span style="color:#f1fa8c">&#34;categories&#34;</span> .Params.Categories <span style="color:#f1fa8c">&#34;authors&#34;</span> .Params.Authors)}}
+</span></span><span style="display:flex;"><span>  {{- end -}}
+</span></span><span style="display:flex;"><span>{{- end -}}
+</span></span><span style="display:flex;"><span>{{- $.Scratch.Get <span style="color:#ff79c6">&#34;index&#34;</span> | jsonify -}}
+</span></span></code></pre></div><br>
 <h5 id="3-產生-algoliajson">3. 產生 algolia.json</h5>
 <p>之後在執行<code>hugo</code>建立的<code>public</code>時可以確認一下有沒有產生<code>algolia.json</code>的索引文件。</p>
 <br>
@@ -338,19 +332,19 @@ if (!doNotTrack) {
 <h3 id=_自動上傳索引至-algolia>自動上傳索引至 Algolia</h3>
 <hr>
 <h5 id="1-安装-atomic-algolia">1. 安装 atomic-algolia</h5>
-<pre><code class="language-treminal" data-lang="treminal">npm init
+<pre tabindex="0"><code class="language-treminal" data-lang="treminal">npm init
 npm install atomic-algolia --save
 </code></pre><p><em>註：這裡需要用到 npm 套件工具，所以需要安裝 node js，若沒有安裝的可以到 <a href="https://nodejs.org/en/download/" target="_blank">這裏</a>下載。</em></p>
 <br>
 <h5 id="2-修改根目錄下的-packagejson">2. 修改根目錄下的 package.json</h5>
 <p>到根目錄下的 package.json 內，在 scripts 下添加 &ldquo;algolia&rdquo;: &ldquo;atomic-algolia&rdquo;</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">  <span style="color:#f1fa8c">&#34;scripts&#34;</span>: {
-    <span style="color:#ff79c6">&#34;test&#34;</span>: <span style="color:#f1fa8c">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>,
-    <span style="color:#ff79c6">&#34;algolia&#34;</span>: <span style="color:#f1fa8c">&#34;atomic-algolia&#34;</span>
-  },
-</code></pre></div><br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;scripts&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;test&#34;</span>: <span style="color:#f1fa8c">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;algolia&#34;</span>: <span style="color:#f1fa8c">&#34;atomic-algolia&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span></code></pre></div><br>
 <h5 id="3-建立-env-檔">3. 建立 .ENV 檔</h5>
-<pre><code class="language-code" data-lang="code">ALGOLIA_APP_ID=你的Application ID
+<pre tabindex="0"><code class="language-code" data-lang="code">ALGOLIA_APP_ID=你的Application ID
 ALGOLIA_INDEX_NAME=你的索引名字
 ALGOLIA_INDEX_FILE=public/algolia.json
 ALGOLIA_ADMIN_KEY=你的Admin API Key
@@ -373,38 +367,38 @@ ALGOLIA_ADMIN_KEY=你的Admin API Key
 <p><em>註：這部分的 html, css 都使用現成的，只稍作修改。</em></p>
 <h5 id="1-新增-searchhtml">1. 新增 search.html</h5>
 <p>到 <code>layouy/partials/</code> 路徑下新增一個</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span>&lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;aa-input-container&#34;</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;aa-input-container&#34;</span>&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>  &lt;<span style="color:#ff79c6">input</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;search&#34;</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;aa-search-input&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;aa-input-search&#34;</span> <span style="color:#50fa7b">placeholder</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Search for titles or URIs...&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>    <span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;search&#34;</span> <span style="color:#50fa7b">autocomplete</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;off&#34;</span> /&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>  &lt;<span style="color:#ff79c6">svg</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;aa-input-icon&#34;</span> <span style="color:#50fa7b">viewBox</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;654 -372 1664 1664&#34;</span>&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>    &lt;<span style="color:#ff79c6">path</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>      <span style="color:#50fa7b">d</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z&#34;</span> /&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>  &lt;/<span style="color:#ff79c6">svg</span>&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>&lt;/<span style="color:#ff79c6">div</span>&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>&lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/algoliasearch.min.js&#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>&lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/autocomplete.min.js&#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>&lt;<span style="color:#ff79c6">script</span>&gt;
-<span style="display:block;width:100%;background-color:#3d3f4a"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>  <span style="color:#8be9fd;font-style:italic">var</span> client <span style="color:#ff79c6">=</span> algoliasearch({{.Site.Params.algolia.appId}}, {{.Site.Params.algolia.searchOnlyKey}});
-</span><span style="display:block;width:100%;background-color:#3d3f4a"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>  <span style="color:#8be9fd;font-style:italic">var</span> index <span style="color:#ff79c6">=</span> client.initIndex({{.Site.Params.algolia.indexName}});
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>  autocomplete(<span style="color:#f1fa8c">&#39;#aa-search-input&#39;</span>,
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>    { hint<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span> }, {
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>    source<span style="color:#ff79c6">:</span> autocomplete.sources.hits(index, { hitsPerPage<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">20</span> }),
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>    displayKey<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;name&#39;</span>,
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>    templates<span style="color:#ff79c6">:</span> {
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>        suggestion<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">function</span> (suggestion) {
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>            <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#39;&lt;span&gt;&#39;</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39;&lt;a href=&#34;&#39;</span> <span style="color:#ff79c6">+</span> suggestion.relpermalink <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39;&#34;&gt;&#39;</span> <span style="color:#ff79c6">+</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>            suggestion.title <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39;&lt;/a&gt;&lt;/span&gt;&#39;</span>;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>      }
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span>    }
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span>  });
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span>
-<span style="display:block;width:100%;background-color:#3d3f4a"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span>  $(<span style="color:#f1fa8c">&#39;#searchGlyph&#39;</span>).click(<span style="color:#8be9fd;font-style:italic">function</span>() {
-</span><span style="display:block;width:100%;background-color:#3d3f4a"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span>    setTimeout(<span style="color:#8be9fd;font-style:italic">function</span>(){
-</span><span style="display:block;width:100%;background-color:#3d3f4a"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span>      $(<span style="color:#f1fa8c">&#39;#aa-search-input&#39;</span>).focus();
-</span><span style="display:block;width:100%;background-color:#3d3f4a"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span>    },<span style="color:#bd93f9">300</span>);
-</span><span style="display:block;width:100%;background-color:#3d3f4a"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span>  });
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span>&lt;/<span style="color:#ff79c6">script</span>&gt;
-</code></pre></div><p>幾點注意事項：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>&lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;aa-input-container&#34;</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;aa-input-container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>  &lt;<span style="color:#ff79c6">input</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;search&#34;</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;aa-search-input&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;aa-input-search&#34;</span> <span style="color:#50fa7b">placeholder</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Search for titles or URIs...&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;search&#34;</span> <span style="color:#50fa7b">autocomplete</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;off&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>  &lt;<span style="color:#ff79c6">svg</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;aa-input-icon&#34;</span> <span style="color:#50fa7b">viewBox</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;654 -372 1664 1664&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    &lt;<span style="color:#ff79c6">path</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>      <span style="color:#50fa7b">d</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>  &lt;/<span style="color:#ff79c6">svg</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>&lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>&lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/algoliasearch.min.js&#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>&lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/autocomplete.min.js&#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>&lt;<span style="color:#ff79c6">script</span>&gt;
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>  <span style="color:#8be9fd;font-style:italic">var</span> client <span style="color:#ff79c6">=</span> algoliasearch({{.Site.Params.algolia.appId}}, {{.Site.Params.algolia.searchOnlyKey}});
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>  <span style="color:#8be9fd;font-style:italic">var</span> index <span style="color:#ff79c6">=</span> client.initIndex({{.Site.Params.algolia.indexName}});
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>  autocomplete(<span style="color:#f1fa8c">&#39;#aa-search-input&#39;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>    { hint<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span> }, {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>    source<span style="color:#ff79c6">:</span> autocomplete.sources.hits(index, { hitsPerPage<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">20</span> }),
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>    displayKey<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;name&#39;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>    templates<span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>        suggestion<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">function</span> (suggestion) {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>            <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#39;&lt;span&gt;&#39;</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39;&lt;a href=&#34;&#39;</span> <span style="color:#ff79c6">+</span> suggestion.relpermalink <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39;&#34;&gt;&#39;</span> <span style="color:#ff79c6">+</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>            suggestion.title <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39;&lt;/a&gt;&lt;/span&gt;&#39;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>      }
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>  });
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>  $(<span style="color:#f1fa8c">&#39;#searchGlyph&#39;</span>).click(<span style="color:#8be9fd;font-style:italic">function</span>() {
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>    setTimeout(<span style="color:#8be9fd;font-style:italic">function</span>(){
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>      $(<span style="color:#f1fa8c">&#39;#aa-search-input&#39;</span>).focus();
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>    },<span style="color:#bd93f9">300</span>);
+</span></span><span style="display:flex; background-color:#3d3f4a"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>  });
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>&lt;/<span style="color:#ff79c6">script</span>&gt;
+</span></span></code></pre></div><p>幾點注意事項：</p>
 <ol>
 <li>
 <p><strong>algoliasearch</strong> 以及 <strong>client.initIndex</strong> 所需要的參數在最一開始我們就已經設定到<code>config.toml</code>內了，如果還沒設定的可以往前看。</p>
@@ -423,122 +417,122 @@ ALGOLIA_ADMIN_KEY=你的Admin API Key
 <br>
 <h5 id="2-在-header-加入搜索按鈕">2. 在 header 加入搜索按鈕</h5>
 <p>先在 header 最後加上放大鏡的 icon</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;#modalSearch&#34;</span> <span style="color:#50fa7b">data-toggle</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal&#34;</span> <span style="color:#50fa7b">data-target</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;#modalSearch&#34;</span> <span style="color:#50fa7b">style</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;outline: none;&#34;</span>&gt;
-    &lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;searchGlyph&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;glyphicon glyphicon-search&#34;</span>&gt;&lt;<span style="color:#ff79c6">i</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;fas fa-search&#34;</span>&gt;&lt;/<span style="color:#ff79c6">i</span>&gt;&lt;/<span style="color:#ff79c6">span</span>&gt;
-&lt;/<span style="color:#ff79c6">a</span>&gt;
-</code></pre></div><p>接著加入搜所匡</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">
-&lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modalSearch&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal fade&#34;</span> <span style="color:#50fa7b">role</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;dialog&#34;</span>&gt;
-  &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-dialog&#34;</span>&gt;
-    &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-content&#34;</span>&gt;
-      &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-header&#34;</span>&gt;
-        &lt;<span style="color:#ff79c6">h4</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-title&#34;</span>&gt;文章搜尋&lt;/<span style="color:#ff79c6">h4</span>&gt;&lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;button&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;close&#34;</span> <span style="color:#50fa7b">data-dismiss</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal&#34;</span>&gt;&amp;times;&lt;/<span style="color:#ff79c6">button</span>&gt;
-      &lt;/<span style="color:#ff79c6">div</span>&gt;
-      &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-body&#34;</span>&gt;
-        {{ partial &#34;search.html&#34; . }}
-      &lt;/<span style="color:#ff79c6">div</span>&gt;
-      <span style="color:#6272a4">&lt;!-- &lt;div class=&#34;modal-footer&#34;&gt;
-</span><span style="color:#6272a4">        &lt;button type=&#34;button&#34; class=&#34;btn btn-default&#34; data-dismiss=&#34;modal&#34;&gt;close&lt;/button&gt;
-</span><span style="color:#6272a4">      &lt;/div&gt; --&gt;</span>
-    &lt;/<span style="color:#ff79c6">div</span>&gt;
-  &lt;/<span style="color:#ff79c6">div</span>&gt;
-&lt;/<span style="color:#ff79c6">div</span>&gt;
-</code></pre></div><br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">a</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;#modalSearch&#34;</span> <span style="color:#50fa7b">data-toggle</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal&#34;</span> <span style="color:#50fa7b">data-target</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;#modalSearch&#34;</span> <span style="color:#50fa7b">style</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;outline: none;&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;searchGlyph&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;glyphicon glyphicon-search&#34;</span>&gt;&lt;<span style="color:#ff79c6">i</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;fas fa-search&#34;</span>&gt;&lt;/<span style="color:#ff79c6">i</span>&gt;&lt;/<span style="color:#ff79c6">span</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">a</span>&gt;
+</span></span></code></pre></div><p>接著加入搜所匡</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modalSearch&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal fade&#34;</span> <span style="color:#50fa7b">role</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;dialog&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-dialog&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-content&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-header&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">h4</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-title&#34;</span>&gt;文章搜尋&lt;/<span style="color:#ff79c6">h4</span>&gt;&lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;button&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;close&#34;</span> <span style="color:#50fa7b">data-dismiss</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal&#34;</span>&gt;&amp;times;&lt;/<span style="color:#ff79c6">button</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;modal-body&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        {{ partial &#34;search.html&#34; . }}
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>      <span style="color:#6272a4">&lt;!-- &lt;div class=&#34;modal-footer&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">        &lt;button type=&#34;button&#34; class=&#34;btn btn-default&#34; data-dismiss=&#34;modal&#34;&gt;close&lt;/button&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">      &lt;/div&gt; --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span></code></pre></div><br>
 <h5 id="3-加入-css">3. 加入 css</h5>
 <p>可以到<code>staic/css</code>內新增<code>search.css</code>，但我這部分設定好像沒弄好，所以我是新增在<code>assets/scss/main.scss</code>內，建議如果要加在這的話，可以寫幾行註解，以免日後不知道自己新增哪些 css。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#ff79c6">import</span> <span style="color:#f1fa8c">&#39;https://fonts.googleapis.com/css?family=Montserrat:400,700&#39;</span>;
-.<span style="color:#50fa7b">aa-input-container</span> {
-  <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">inline</span><span style="color:#ff79c6">-</span><span style="color:#ff79c6">block</span>;
-  <span style="color:#ff79c6">position</span>: <span style="color:#ff79c6">relative</span>;
-  <span style="color:#ff79c6">width</span>: <span style="color:#bd93f9">100</span><span style="color:#8be9fd">%</span>;
-}
-.<span style="color:#50fa7b">aa-input-container</span> <span style="color:#ff79c6">span</span><span style="color:#ff79c6">,</span>.<span style="color:#50fa7b">aa-input-container</span> <span style="color:#ff79c6">input</span> {
-    <span style="color:#ff79c6">width</span>: <span style="color:#ff79c6">inherit</span>;
-}
-.<span style="color:#50fa7b">aa-input-search</span> {
-  <span style="color:#ff79c6">width</span>: <span style="color:#bd93f9">300</span><span style="color:#8be9fd">px</span>;
-  <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">12</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">28</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">12</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">12</span><span style="color:#8be9fd">px</span>;
-  <span style="color:#ff79c6">border</span>: <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#ff79c6">solid</span> <span style="color:#bd93f9">#e4e4e4</span>;
-  <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span>;
-  <span style="color:#ff79c6">-webkit-</span><span style="color:#ff79c6">transition</span>: <span style="color:#bd93f9">.2</span><span style="color:#8be9fd">s</span>;
-  <span style="color:#ff79c6">transition</span>: <span style="color:#bd93f9">.2</span><span style="color:#8be9fd">s</span>;
-  <span style="color:#ff79c6">font-family</span>: <span style="color:#f1fa8c">&#34;Montserrat&#34;</span>, <span style="color:#ff79c6">sans-serif</span>;
-  <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">0</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">241</span>, <span style="color:#bd93f9">241</span>, <span style="color:#bd93f9">241</span>, <span style="color:#bd93f9">0.35</span>);
-  <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">11</span><span style="color:#8be9fd">px</span>;
-  <span style="color:#ff79c6">box-sizing</span>: <span style="color:#ff79c6">border-box</span>;
-  <span style="color:#ff79c6">color</span>: <span style="color:#bd93f9">#333</span>;
-  <span style="color:#ff79c6">-webkit-</span><span style="color:#ff79c6">appearance</span>: <span style="color:#ff79c6">none</span>;
-  <span style="color:#ff79c6">-moz-</span><span style="color:#ff79c6">appearance</span>: <span style="color:#ff79c6">none</span>;
-  <span style="color:#ff79c6">appearance</span>: <span style="color:#ff79c6">none</span>;
-}
-.<span style="color:#50fa7b">aa-input-search</span>::-webkit-search-decoration<span style="color:#ff79c6">,</span> .<span style="color:#50fa7b">aa-input-search</span>::-webkit-search-cancel-button<span style="color:#ff79c6">,</span> .<span style="color:#50fa7b">aa-input-search</span>::-webkit-search-results-button<span style="color:#ff79c6">,</span> .<span style="color:#50fa7b">aa-input-search</span>::-webkit-search-results-decoration {
-    <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">none</span>;
-}
-.<span style="color:#50fa7b">aa-input-search</span>:focus {
-    <span style="color:#ff79c6">outline</span>: <span style="color:#bd93f9">0</span>;
-    <span style="color:#ff79c6">border-color</span>: <span style="color:#bd93f9">#3a96cf</span>;
-    <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">0</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">58</span>, <span style="color:#bd93f9">150</span>, <span style="color:#bd93f9">207</span>, <span style="color:#bd93f9">0.1</span>);
-}
-.<span style="color:#50fa7b">aa-input-icon</span> {
-  <span style="color:#ff79c6">height</span>: <span style="color:#bd93f9">16</span><span style="color:#8be9fd">px</span>;
-  <span style="color:#ff79c6">width</span>: <span style="color:#bd93f9">16</span><span style="color:#8be9fd">px</span>;
-  <span style="color:#ff79c6">position</span>: <span style="color:#ff79c6">absolute</span>;
-  <span style="color:#ff79c6">top</span>: <span style="color:#bd93f9">50</span><span style="color:#8be9fd">%</span>;
-  <span style="color:#ff79c6">right</span>: <span style="color:#bd93f9">16</span><span style="color:#8be9fd">px</span>;
-  <span style="color:#ff79c6">-webkit-</span><span style="color:#ff79c6">transform</span>: <span style="color:#8be9fd;font-style:italic">translateY</span>(<span style="color:#bd93f9">-50</span><span style="color:#8be9fd">%</span>);
-          <span style="color:#ff79c6">transform</span>: <span style="color:#8be9fd;font-style:italic">translateY</span>(<span style="color:#bd93f9">-50</span><span style="color:#8be9fd">%</span>);
-  fill: <span style="color:#bd93f9">#e4e4e4</span>;
-}
-.<span style="color:#50fa7b">aa-hint</span> {
-  <span style="color:#ff79c6">color</span>: <span style="color:#bd93f9">#e4e4e4</span>;
-}
-.<span style="color:#50fa7b">aa-dropdown-menu</span> {
-  <span style="color:#ff79c6">background-color</span>: <span style="color:#bd93f9">#fff</span>;
-  <span style="color:#ff79c6">border</span>: <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#ff79c6">solid</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">228</span>, <span style="color:#bd93f9">228</span>, <span style="color:#bd93f9">228</span>, <span style="color:#bd93f9">0.6</span>);
-  <span style="color:#ff79c6">border-top-width</span>: <span style="color:#bd93f9">1</span><span style="color:#8be9fd">px</span>;
-  <span style="color:#ff79c6">font-family</span>: <span style="color:#f1fa8c">&#34;Montserrat&#34;</span>, <span style="color:#ff79c6">sans-serif</span>;
-  <span style="color:#ff79c6">width</span>: <span style="color:#bd93f9">300</span><span style="color:#8be9fd">px</span>;
-  <span style="color:#ff79c6">margin-top</span>: <span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span>;
-  <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">0</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">241</span>, <span style="color:#bd93f9">241</span>, <span style="color:#bd93f9">241</span>, <span style="color:#bd93f9">0.35</span>);
-  <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">11</span><span style="color:#8be9fd">px</span>;
-  <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span>;
-  <span style="color:#ff79c6">box-sizing</span>: <span style="color:#ff79c6">border-box</span>;
-}
-.<span style="color:#50fa7b">aa-suggestion</span> {
-  <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">12</span><span style="color:#8be9fd">px</span>;
-  <span style="color:#ff79c6">border-top</span>: <span style="color:#bd93f9">1</span><span style="color:#8be9fd">px</span> <span style="color:#ff79c6">solid</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">228</span>, <span style="color:#bd93f9">228</span>, <span style="color:#bd93f9">228</span>, <span style="color:#bd93f9">0.6</span>);
-  <span style="color:#ff79c6">cursor</span>: <span style="color:#ff79c6">pointer</span>;
-  <span style="color:#ff79c6">-webkit-</span><span style="color:#ff79c6">transition</span>: <span style="color:#bd93f9">.2</span><span style="color:#8be9fd">s</span>;
-  <span style="color:#ff79c6">transition</span>: <span style="color:#bd93f9">.2</span><span style="color:#8be9fd">s</span>;
-  <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">-webkit-</span>box;
-  <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">-ms-</span>flexbox;
-  <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">flex</span>;
-  <span style="color:#ff79c6">-webkit-</span>box-pack: <span style="color:#ff79c6">justify</span>;
-      <span style="color:#ff79c6">-ms-</span>flex-pack: <span style="color:#ff79c6">justify</span>;
-          <span style="color:#ff79c6">justify-content</span>: <span style="color:#ff79c6">space</span><span style="color:#ff79c6">-</span>between;
-  <span style="color:#ff79c6">-webkit-</span>box-align: <span style="color:#ff79c6">center</span>;
-      <span style="color:#ff79c6">-ms-</span>flex-align: <span style="color:#ff79c6">center</span>;
-          <span style="color:#ff79c6">align-items</span>: <span style="color:#ff79c6">center</span>;
-}
-.<span style="color:#50fa7b">aa-suggestion</span>:hover<span style="color:#ff79c6">,</span> .<span style="color:#50fa7b">aa-suggestion</span>.<span style="color:#50fa7b">aa-cursor</span> {
-    <span style="color:#ff79c6">background-color</span>: <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">241</span>, <span style="color:#bd93f9">241</span>, <span style="color:#bd93f9">241</span>, <span style="color:#bd93f9">0.35</span>);
-}
-.<span style="color:#50fa7b">aa-suggestion</span> <span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">span</span>:first-child {
-    <span style="color:#ff79c6">color</span>: <span style="color:#bd93f9">#333</span>;
-}
-.<span style="color:#50fa7b">aa-suggestion</span> <span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">span</span>:last-child {
-    <span style="color:#ff79c6">text-transform</span>: <span style="color:#ff79c6">uppercase</span>;
-    <span style="color:#ff79c6">color</span>: <span style="color:#bd93f9">#a9a9a9</span>;
-}
-.<span style="color:#50fa7b">aa-suggestion</span> <span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">span</span>:first-child <span style="color:#ff79c6">em</span><span style="color:#ff79c6">,</span> .<span style="color:#50fa7b">aa-suggestion</span> <span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">span</span>:last-child <span style="color:#ff79c6">em</span> {
-  <span style="color:#ff79c6">font-weight</span>: <span style="color:#bd93f9">700</span>;
-  <span style="color:#ff79c6">font-style</span>: <span style="color:#ff79c6">normal</span>;
-  <span style="color:#ff79c6">background-color</span>: <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">58</span>, <span style="color:#bd93f9">150</span>, <span style="color:#bd93f9">207</span>, <span style="color:#bd93f9">0.1</span>);
-  <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span>;
-}
-</code></pre></div><p>這一步如果剛剛是建立一個新的 <code>search.css</code>的話，要到 <code>layout/partails/head.html</code> 內將剛剛寫好的 css 引入。若是在<code>main.scss</code>內則不用。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  &lt;<span style="color:#ff79c6">link</span> <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stylesheet&#34;</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ &#34;</span> <span style="color:#50fa7b">css</span>/<span style="color:#50fa7b">search</span>.<span style="color:#50fa7b">css</span>&#34; | <span style="color:#50fa7b">absURL</span> }}&#34; /&gt;
-</code></pre></div><p>到這邊基本設定都已經完成，接著就可以試用看看自己的文章搜索功能拉！！</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>@<span style="color:#ff79c6">import</span> <span style="color:#f1fa8c">&#39;https://fonts.googleapis.com/css?family=Montserrat:400,700&#39;</span>;
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">aa-input-container</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">inline-block</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">position</span>: <span style="color:#ff79c6">relative</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">width</span>: <span style="color:#bd93f9">100</span><span style="color:#8be9fd">%</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">aa-input-container</span> <span style="color:#ff79c6">span</span><span style="color:#ff79c6">,</span>.<span style="color:#50fa7b">aa-input-container</span> <span style="color:#ff79c6">input</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">width</span>: <span style="color:#ff79c6">inherit</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">aa-input-search</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">width</span>: <span style="color:#bd93f9">300</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">12</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">28</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">12</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">12</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">border</span>: <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#ff79c6">solid</span> <span style="color:#bd93f9">#e4e4e4</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">-webkit-</span><span style="color:#ff79c6">transition</span>: <span style="color:#bd93f9">.2</span><span style="color:#8be9fd">s</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">transition</span>: <span style="color:#bd93f9">.2</span><span style="color:#8be9fd">s</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">font-family</span>: <span style="color:#f1fa8c">&#34;Montserrat&#34;</span>, <span style="color:#ff79c6">sans-serif</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">0</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">241</span>, <span style="color:#bd93f9">241</span>, <span style="color:#bd93f9">241</span>, <span style="color:#bd93f9">0.35</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">11</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">box-sizing</span>: <span style="color:#ff79c6">border-box</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">color</span>: <span style="color:#bd93f9">#333</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">-webkit-</span><span style="color:#ff79c6">appearance</span>: <span style="color:#ff79c6">none</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">-moz-</span><span style="color:#ff79c6">appearance</span>: <span style="color:#ff79c6">none</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">appearance</span>: <span style="color:#ff79c6">none</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">aa-input-search</span>::-webkit-search-decoration<span style="color:#ff79c6">,</span> .<span style="color:#50fa7b">aa-input-search</span>::-webkit-search-cancel-button<span style="color:#ff79c6">,</span> .<span style="color:#50fa7b">aa-input-search</span>::-webkit-search-results-button<span style="color:#ff79c6">,</span> .<span style="color:#50fa7b">aa-input-search</span>::-webkit-search-results-decoration {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">none</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">aa-input-search</span>:focus {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">outline</span>: <span style="color:#bd93f9">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border-color</span>: <span style="color:#bd93f9">#3a96cf</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">0</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">58</span>, <span style="color:#bd93f9">150</span>, <span style="color:#bd93f9">207</span>, <span style="color:#bd93f9">0.1</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">aa-input-icon</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">height</span>: <span style="color:#bd93f9">16</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">width</span>: <span style="color:#bd93f9">16</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">position</span>: <span style="color:#ff79c6">absolute</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">top</span>: <span style="color:#bd93f9">50</span><span style="color:#8be9fd">%</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">right</span>: <span style="color:#bd93f9">16</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">-webkit-</span><span style="color:#ff79c6">transform</span>: <span style="color:#8be9fd;font-style:italic">translateY</span>(<span style="color:#bd93f9">-50</span><span style="color:#8be9fd">%</span>);
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">transform</span>: <span style="color:#8be9fd;font-style:italic">translateY</span>(<span style="color:#bd93f9">-50</span><span style="color:#8be9fd">%</span>);
+</span></span><span style="display:flex;"><span>  fill: <span style="color:#bd93f9">#e4e4e4</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">aa-hint</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">color</span>: <span style="color:#bd93f9">#e4e4e4</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">aa-dropdown-menu</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background-color</span>: <span style="color:#bd93f9">#fff</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">border</span>: <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#ff79c6">solid</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">228</span>, <span style="color:#bd93f9">228</span>, <span style="color:#bd93f9">228</span>, <span style="color:#bd93f9">0.6</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">border-top-width</span>: <span style="color:#bd93f9">1</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">font-family</span>: <span style="color:#f1fa8c">&#34;Montserrat&#34;</span>, <span style="color:#ff79c6">sans-serif</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">width</span>: <span style="color:#bd93f9">300</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">margin-top</span>: <span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">0</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">241</span>, <span style="color:#bd93f9">241</span>, <span style="color:#bd93f9">241</span>, <span style="color:#bd93f9">0.35</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">11</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">box-sizing</span>: <span style="color:#ff79c6">border-box</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">aa-suggestion</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">12</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">border-top</span>: <span style="color:#bd93f9">1</span><span style="color:#8be9fd">px</span> <span style="color:#ff79c6">solid</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">228</span>, <span style="color:#bd93f9">228</span>, <span style="color:#bd93f9">228</span>, <span style="color:#bd93f9">0.6</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">cursor</span>: <span style="color:#ff79c6">pointer</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">-webkit-</span><span style="color:#ff79c6">transition</span>: <span style="color:#bd93f9">.2</span><span style="color:#8be9fd">s</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">transition</span>: <span style="color:#bd93f9">.2</span><span style="color:#8be9fd">s</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">-webkit-</span>box;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">-ms-</span>flexbox;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">flex</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">-webkit-</span>box-pack: <span style="color:#ff79c6">justify</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">-ms-</span>flex-pack: <span style="color:#ff79c6">justify</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">justify-content</span>: <span style="color:#ff79c6">space-between</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">-webkit-</span>box-align: <span style="color:#ff79c6">center</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">-ms-</span>flex-align: <span style="color:#ff79c6">center</span>;
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">align-items</span>: <span style="color:#ff79c6">center</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">aa-suggestion</span>:hover<span style="color:#ff79c6">,</span> .<span style="color:#50fa7b">aa-suggestion</span>.<span style="color:#50fa7b">aa-cursor</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-color</span>: <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">241</span>, <span style="color:#bd93f9">241</span>, <span style="color:#bd93f9">241</span>, <span style="color:#bd93f9">0.35</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">aa-suggestion</span> <span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">span</span>:first-child {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">color</span>: <span style="color:#bd93f9">#333</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">aa-suggestion</span> <span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">span</span>:last-child {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">text-transform</span>: <span style="color:#ff79c6">uppercase</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">color</span>: <span style="color:#bd93f9">#a9a9a9</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">aa-suggestion</span> <span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">span</span>:first-child <span style="color:#ff79c6">em</span><span style="color:#ff79c6">,</span> .<span style="color:#50fa7b">aa-suggestion</span> <span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">span</span>:last-child <span style="color:#ff79c6">em</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">font-weight</span>: <span style="color:#bd93f9">700</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">font-style</span>: <span style="color:#ff79c6">normal</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background-color</span>: <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">58</span>, <span style="color:#bd93f9">150</span>, <span style="color:#bd93f9">207</span>, <span style="color:#bd93f9">0.1</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>這一步如果剛剛是建立一個新的 <code>search.css</code>的話，要到 <code>layout/partails/head.html</code> 內將剛剛寫好的 css 引入。若是在<code>main.scss</code>內則不用。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">link</span> <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stylesheet&#34;</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ &#34;</span> <span style="color:#50fa7b">css</span>/<span style="color:#50fa7b">search</span>.<span style="color:#50fa7b">css</span>&#34; | <span style="color:#50fa7b">absURL</span> }}&#34; /&gt;
+</span></span></code></pre></div><p>到這邊基本設定都已經完成，接著就可以試用看看自己的文章搜索功能拉！！</p>
 <p><img src="https://i.imgur.com/cnGIXay.png" alt="search block"></p>
 <br>
 <p>如果無法使用或有更好的建議都歡迎留言給我，感謝收看！！</p>
@@ -617,7 +611,7 @@ ALGOLIA_ADMIN_KEY=你的Admin API Key
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -830,7 +824,7 @@ ALGOLIA_ADMIN_KEY=你的Admin API Key
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/ianlife/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

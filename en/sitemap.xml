@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://ianjustin39.github.io/ianlife/en/about/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
@@ -15,9 +14,7 @@
                 hreflang="en"
                 href="https://ianjustin39.github.io/ianlife/en/about/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ianjustin39.github.io/ianlife/en/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -30,9 +27,7 @@
                 hreflang="en"
                 href="https://ianjustin39.github.io/ianlife/en/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ianjustin39.github.io/ianlife/en/photograph/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -45,9 +40,7 @@
                 hreflang="en"
                 href="https://ianjustin39.github.io/ianlife/en/photograph/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ianjustin39.github.io/ianlife/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -59,9 +52,7 @@
                 hreflang="en"
                 href="https://ianjustin39.github.io/ianlife/en/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ianjustin39.github.io/ianlife/en/series/</loc>
     <xhtml:link
                 rel="alternate"
@@ -73,9 +64,7 @@
                 hreflang="en"
                 href="https://ianjustin39.github.io/ianlife/en/series/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ianjustin39.github.io/ianlife/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -88,5 +77,4 @@
                 href="https://ianjustin39.github.io/ianlife/en/tags/"
                 />
   </url>
-  
 </urlset>

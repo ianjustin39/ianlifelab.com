@@ -5,10 +5,6 @@
     <link>https://ianjustin39.github.io/ianlife/contact/</link>
     <description>Recent content in Contact on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    
-	<atom:link href="https://ianjustin39.github.io/ianlife/contact/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>zh</language><atom:link href="https://ianjustin39.github.io/ianlife/contact/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

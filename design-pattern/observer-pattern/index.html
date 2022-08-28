@@ -75,22 +75,17 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="觀察者模式 | Observer Pattern">
-<meta itemprop="description" content="多個物件之間存在著一對多的依賴關係，當一個物件發生改變時，所有跟他有關的物件都會被通知且更新。例如：訂閱youtuber，發布新影片就會接收到通知即觀察者模式。">
-<meta itemprop="datePublished" content="2020-10-05T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-10-05T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="455">
-<meta itemprop="image" content="https://ianjustin39.github.io/ianlife/">
-
-
-
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="觀察者模式 | Observer Pattern">
+<meta itemprop="description" content="多個物件之間存在著一對多的依賴關係，當一個物件發生改變時，所有跟他有關的物件都會被通知且更新。例如：訂閱youtuber，發布新影片就會接收到通知即觀察者模式。"><meta itemprop="datePublished" content="2020-10-05T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-10-05T00:00:00+00:00" />
+<meta itemprop="wordCount" content="423"><meta itemprop="image" content="https://ianjustin39.github.io/ianlife/">
 <meta itemprop="keywords" content="Design Pattern,Behavioural Pattern," /><meta property="og:title" content="觀察者模式 | Observer Pattern" />
 <meta property="og:description" content="多個物件之間存在著一對多的依賴關係，當一個物件發生改變時，所有跟他有關的物件都會被通知且更新。例如：訂閱youtuber，發布新影片就會接收到通知即觀察者模式。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/observer-pattern/" />
-<meta property="og:image" content="https://ianjustin39.github.io/ianlife/" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/observer-pattern/" /><meta property="og:image" content="https://ianjustin39.github.io/ianlife/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-10-05T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-10-05T00:00:00+00:00" />
+
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://ianjustin39.github.io/ianlife/"/>
@@ -98,7 +93,7 @@ if (!doNotTrack) {
 <meta name="twitter:title" content="觀察者模式 | Observer Pattern"/>
 <meta name="twitter:description" content="多個物件之間存在著一對多的依賴關係，當一個物件發生改變時，所有跟他有關的物件都會被通知且更新。例如：訂閱youtuber，發布新影片就會接收到通知即觀察者模式。"/>
 <meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
@@ -109,7 +104,7 @@ if (!doNotTrack) {
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ianlife/">
+      <a href="/">
         
           <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
         
@@ -247,7 +242,7 @@ if (!doNotTrack) {
         <article class="post">
   <header>
   <div class="title">
-    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    <a href="/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
     
     <h3><a href="/ianlife/design-pattern/observer-pattern/">觀察者模式 | Observer Pattern</a></h3>
     
@@ -262,7 +257,7 @@ if (!doNotTrack) {
     
     <span class="author">Ian Tsai</span>
     
-    <p>3 minute read</p>
+    <p>2 minute read</p>
     
     <p>
       <span id="busuanzi_container_page_pv">
@@ -395,26 +390,26 @@ if (!doNotTrack) {
 <table>
 <thead>
 <tr>
-<th align="left">name</th>
-<th align="left">description</th>
+<th style="text-align:left">name</th>
+<th style="text-align:left">description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Subject</td>
-<td align="left">抽象目標，提供保存觀察者物件的集合以及增加觀察者物件的方法、刪除觀察者物件的方法以及通知所有觀察者的抽象方法。</td>
+<td style="text-align:left">Subject</td>
+<td style="text-align:left">抽象目標，提供保存觀察者物件的集合以及增加觀察者物件的方法、刪除觀察者物件的方法以及通知所有觀察者的抽象方法。</td>
 </tr>
 <tr>
-<td align="left">ConcreteSubject</td>
-<td align="left">具體目標，實作抽象目標中的通知方法。具體目標內部發生改變時會通知所有加入的觀察者物件。</td>
+<td style="text-align:left">ConcreteSubject</td>
+<td style="text-align:left">具體目標，實作抽象目標中的通知方法。具體目標內部發生改變時會通知所有加入的觀察者物件。</td>
 </tr>
 <tr>
-<td align="left">Observer</td>
-<td align="left">抽象觀察者，可以是抽象類別或是介面。含有更新自己的抽象方法。</td>
+<td style="text-align:left">Observer</td>
+<td style="text-align:left">抽象觀察者，可以是抽象類別或是介面。含有更新自己的抽象方法。</td>
 </tr>
 <tr>
-<td align="left">ConcreteObserver</td>
-<td align="left">實作抽象觀察者，在目標更改狀態時接收通知並更改自身狀態。</td>
+<td style="text-align:left">ConcreteObserver</td>
+<td style="text-align:left">實作抽象觀察者，在目標更改狀態時接收通知並更改自身狀態。</td>
 </tr>
 </tbody>
 </table>
@@ -446,93 +441,93 @@ ConcreteObserver2 : +response():void;
 </ul>
 <hr>
 <p>就拿現在很紅的Youtuber來做範例，Peeta葛格是一個Youtuber，我們訂閱了之後，就可以接收到他發片的通知，所以Peeta是目標，而我們是觀察者。廠商也訂閱了Peeta，他想知道Peeta發片時是不是葉配影片，所以廠商也是觀察者。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#ff79c6">import</span> java.util.*<span style="color:#ff79c6">;</span>
-
-<span style="color:#8be9fd;font-style:italic">enum</span> Type <span style="color:#ff79c6">{</span> <span style="color:#6272a4">// 建立列舉方便等等程式使用
-</span><span style="color:#6272a4"></span>    BUSINESS<span style="color:#ff79c6">,</span> VLOG
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#6272a4">//抽象目標：分別有存放觀察者的集合以及增加、刪除、通知觀察者的方法
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Subject</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">protected</span> List<span style="color:#ff79c6">&lt;</span>Observer<span style="color:#ff79c6">&gt;</span> observers <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ArrayList<span style="color:#ff79c6">&lt;</span>Observer<span style="color:#ff79c6">&gt;();</span>   
-    <span style="color:#6272a4">//增加觀察者
-</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>Observer observer<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        observers<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>observer<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>    
-    <span style="color:#6272a4">//刪除觀察者
-</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>Observer observer<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        observers<span style="color:#ff79c6">.</span><span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>observer<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>   
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">notifyObserver</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">);</span> <span style="color:#6272a4">//通知觀察者
-</span><span style="color:#6272a4"></span><span style="color:#ff79c6">}</span>
-<span style="color:#6272a4">//實體目標 Peeta葛格：實作抽象目標，通知觀察者的方法。
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">YoutuberPeeta</span> <span style="color:#8be9fd;font-style:italic">extends</span> Subject <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">notifyObserver</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        String videoType <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">){</span>
-            <span style="color:#ff79c6">case</span> BUSINESS<span style="color:#ff79c6">:</span>
-                videoType <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;葉配&#34;</span><span style="color:#ff79c6">;</span>
-                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
-            <span style="color:#ff79c6">case</span> VLOG<span style="color:#ff79c6">:</span>
-                videoType <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;vlog&#34;</span><span style="color:#ff79c6">;</span>
-                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">}</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Peeta 發布新&#34;</span> <span style="color:#ff79c6">+</span> videoType <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;影片&#34;</span><span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;--------------&#34;</span><span style="color:#ff79c6">);</span>       
-       
-        <span style="color:#ff79c6">for</span><span style="color:#ff79c6">(</span>Object obs<span style="color:#ff79c6">:</span>observers<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-            <span style="color:#ff79c6">((</span>Observer<span style="color:#ff79c6">)</span>obs<span style="color:#ff79c6">).</span><span style="color:#50fa7b">response</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">}</span>
-       
-    <span style="color:#ff79c6">}</span>          
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#6272a4">//抽象觀察者：定義接收到目標時的方法。
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Observer</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">response</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">);</span> <span style="color:#6272a4">//反應
-</span><span style="color:#6272a4"></span><span style="color:#ff79c6">}</span>
-<span style="color:#6272a4">//實體觀察者 粉絲
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Fans</span> <span style="color:#8be9fd;font-style:italic">implements</span> Observer <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">response</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">){</span>
-            <span style="color:#ff79c6">case</span> BUSINESS<span style="color:#ff79c6">:</span>
-                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;紛絲看到葉配表示傷心！&#34;</span><span style="color:#ff79c6">);</span>
-                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
-            <span style="color:#ff79c6">case</span> VLOG<span style="color:#ff79c6">:</span>
-                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;紛絲看到VLOG覺得有趣！&#34;</span><span style="color:#ff79c6">);</span>
-                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">}</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#6272a4">//實體觀察者：廠商
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Vendor</span> <span style="color:#8be9fd;font-style:italic">implements</span> Observer <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">response</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-                <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">){</span>
-            <span style="color:#ff79c6">case</span> BUSINESS<span style="color:#ff79c6">:</span>
-                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;廠商看到葉配覺得開心！&#34;</span><span style="color:#ff79c6">);</span>
-                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
-            <span style="color:#ff79c6">case</span> VLOG<span style="color:#ff79c6">:</span>
-                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;廠商看到VLOG表示為啥不是葉配！&#34;</span><span style="color:#ff79c6">);</span>
-                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">}</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#6272a4">// Client分別建立目標及兩個觀察者，而目標在發布新影片時會同時通知兩個觀察者
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ObserverPattern</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        Subject subject <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> YoutuberPeeta<span style="color:#ff79c6">();</span>
-        Observer obs1 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Fans<span style="color:#ff79c6">();</span>
-        Observer obs2 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Vendor<span style="color:#ff79c6">();</span>
-        subject<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>obs1<span style="color:#ff79c6">);</span>
-        subject<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>obs2<span style="color:#ff79c6">);</span>
-        subject<span style="color:#ff79c6">.</span><span style="color:#50fa7b">notifyObserver</span><span style="color:#ff79c6">(</span>Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">BUSINESS</span><span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">();</span>    
-        subject<span style="color:#ff79c6">.</span><span style="color:#50fa7b">notifyObserver</span><span style="color:#ff79c6">(</span>Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">VLOG</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>Peeta 發布新葉配影片
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> java.util.*<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">enum</span> Type <span style="color:#ff79c6">{</span> <span style="color:#6272a4">// 建立列舉方便等等程式使用
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    BUSINESS<span style="color:#ff79c6">,</span> VLOG
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//抽象目標：分別有存放觀察者的集合以及增加、刪除、通知觀察者的方法
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Subject</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">protected</span> List<span style="color:#ff79c6">&lt;</span>Observer<span style="color:#ff79c6">&gt;</span> observers <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ArrayList<span style="color:#ff79c6">&lt;</span>Observer<span style="color:#ff79c6">&gt;();</span>   
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">//增加觀察者
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>Observer observer<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        observers<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>observer<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">//刪除觀察者
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>Observer observer<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        observers<span style="color:#ff79c6">.</span><span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>observer<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>   
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">notifyObserver</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">);</span> <span style="color:#6272a4">//通知觀察者
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//實體目標 Peeta葛格：實作抽象目標，通知觀察者的方法。
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">YoutuberPeeta</span> <span style="color:#8be9fd;font-style:italic">extends</span> Subject <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">notifyObserver</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        String videoType <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">case</span> BUSINESS<span style="color:#ff79c6">:</span>
+</span></span><span style="display:flex;"><span>                videoType <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;葉配&#34;</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">case</span> VLOG<span style="color:#ff79c6">:</span>
+</span></span><span style="display:flex;"><span>                videoType <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;vlog&#34;</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Peeta 發布新&#34;</span> <span style="color:#ff79c6">+</span> videoType <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;影片&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;--------------&#34;</span><span style="color:#ff79c6">);</span>       
+</span></span><span style="display:flex;"><span>       
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">for</span><span style="color:#ff79c6">(</span>Object obs<span style="color:#ff79c6">:</span>observers<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">((</span>Observer<span style="color:#ff79c6">)</span>obs<span style="color:#ff79c6">).</span><span style="color:#50fa7b">response</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>       
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>          
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//抽象觀察者：定義接收到目標時的方法。
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Observer</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">response</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">);</span> <span style="color:#6272a4">//反應
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//實體觀察者 粉絲
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Fans</span> <span style="color:#8be9fd;font-style:italic">implements</span> Observer <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">response</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">case</span> BUSINESS<span style="color:#ff79c6">:</span>
+</span></span><span style="display:flex;"><span>                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;紛絲看到葉配表示傷心！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">case</span> VLOG<span style="color:#ff79c6">:</span>
+</span></span><span style="display:flex;"><span>                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;紛絲看到VLOG覺得有趣！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//實體觀察者：廠商
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Vendor</span> <span style="color:#8be9fd;font-style:italic">implements</span> Observer <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">response</span><span style="color:#ff79c6">(</span>Type type<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">switch</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">case</span> BUSINESS<span style="color:#ff79c6">:</span>
+</span></span><span style="display:flex;"><span>                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;廠商看到葉配覺得開心！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">case</span> VLOG<span style="color:#ff79c6">:</span>
+</span></span><span style="display:flex;"><span>                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;廠商看到VLOG表示為啥不是葉配！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">break</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// Client分別建立目標及兩個觀察者，而目標在發布新影片時會同時通知兩個觀察者
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ObserverPattern</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Subject subject <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> YoutuberPeeta<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        Observer obs1 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Fans<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        Observer obs2 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Vendor<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        subject<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>obs1<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        subject<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>obs2<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        subject<span style="color:#ff79c6">.</span><span style="color:#50fa7b">notifyObserver</span><span style="color:#ff79c6">(</span>Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">BUSINESS</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">();</span>    
+</span></span><span style="display:flex;"><span>        subject<span style="color:#ff79c6">.</span><span style="color:#50fa7b">notifyObserver</span><span style="color:#ff79c6">(</span>Type<span style="color:#ff79c6">.</span><span style="color:#50fa7b">VLOG</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>Peeta 發布新葉配影片
 --------------
 紛絲看到葉配表示傷心！
 廠商看到葉配覺得開心！
@@ -654,7 +649,7 @@ ConcreteObserver：實作抽象觀察者，在目標更改狀態時接收通知�
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -919,7 +914,7 @@ ConcreteObserver：實作抽象觀察者，在目標更改狀態時接收通知�
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/ianlife/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

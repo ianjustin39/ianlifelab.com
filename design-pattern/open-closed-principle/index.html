@@ -75,22 +75,17 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="開閉原則 | Open/Closed Principle">
-<meta itemprop="description" content="擴充系統時，應該由新增程式碼代替修改程式碼。如同電鑽，可以換各種不同的鑽頭，而電鑽本身並不需要被改造，就符合開閉原則。">
-<meta itemprop="datePublished" content="2020-09-11T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-09-11T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="432">
-<meta itemprop="image" content="https://i.imgur.com/G1UzqoY.png">
-
-
-
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="開閉原則 | Open/Closed Principle">
+<meta itemprop="description" content="擴充系統時，應該由新增程式碼代替修改程式碼。如同電鑽，可以換各種不同的鑽頭，而電鑽本身並不需要被改造，就符合開閉原則。"><meta itemprop="datePublished" content="2020-09-11T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-09-11T00:00:00+00:00" />
+<meta itemprop="wordCount" content="402"><meta itemprop="image" content="https://i.imgur.com/G1UzqoY.png">
 <meta itemprop="keywords" content="Design Pattern,Design Principle,鐵人賽," /><meta property="og:title" content="開閉原則 | Open/Closed Principle" />
 <meta property="og:description" content="擴充系統時，應該由新增程式碼代替修改程式碼。如同電鑽，可以換各種不同的鑽頭，而電鑽本身並不需要被改造，就符合開閉原則。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/open-closed-principle/" />
-<meta property="og:image" content="https://i.imgur.com/G1UzqoY.png" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/open-closed-principle/" /><meta property="og:image" content="https://i.imgur.com/G1UzqoY.png" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-09-11T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-09-11T00:00:00+00:00" />
+
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.imgur.com/G1UzqoY.png"/>
@@ -98,7 +93,7 @@ if (!doNotTrack) {
 <meta name="twitter:title" content="開閉原則 | Open/Closed Principle"/>
 <meta name="twitter:description" content="擴充系統時，應該由新增程式碼代替修改程式碼。如同電鑽，可以換各種不同的鑽頭，而電鑽本身並不需要被改造，就符合開閉原則。"/>
 <meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
@@ -109,7 +104,7 @@ if (!doNotTrack) {
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ianlife/">
+      <a href="/">
         
           <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
         
@@ -247,7 +242,7 @@ if (!doNotTrack) {
         <article class="post">
   <header>
   <div class="title">
-    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    <a href="/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
     
     <h3><a href="/ianlife/design-pattern/open-closed-principle/">開閉原則 | Open/Closed Principle</a></h3>
     
@@ -262,7 +257,7 @@ if (!doNotTrack) {
     
     <span class="author">Ian Tsai</span>
     
-    <p>3 minute read</p>
+    <p>2 minute read</p>
     
     <p>
       <span id="busuanzi_container_page_pv">
@@ -387,51 +382,51 @@ if (!doNotTrack) {
 <p><em>翻譯年糕：軟體實體像是類別、模組和函式，應該只對延展開放，但對修改關閉。</em></p>
 <p>簡單來說，就是當系統需要被擴充時，應該藉由新增新的程式碼來擴充新功能，而非修改原本的程式碼來擴充新功能。</p>
 <p>先來看個例子，我們以前到百貨公司買東西，可以刷信用卡付錢，也可以刷金融卡付錢（兩者的差別在於金融卡帳戶有錢才能刷）。對於銀行而言他們會判斷你用的是哪種卡，而去做扣款的動作。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Payment</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> String msg<span style="color:#ff79c6">;</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>msg<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setPaymentType</span><span style="color:#ff79c6">(</span>String type<span style="color:#ff79c6">){</span>
-        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;creditCard&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">{</span>
-            msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;選擇信用卡付錢！！&#34;</span><span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;debitCard&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">{</span>
-            msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;選擇金融卡付錢！！&#34;</span><span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">}</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>如上述程式，銀行判斷是刷哪種卡，在用該類的進行付款。但隨著科技越來越進步，現在不只這兩種付費方式。電子支付、悠遊卡&hellip;等等都是現在可以選擇的付費方式。如果銀行要跟著時代進步，勢必也要增加付款的功能才行。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Payment</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> String msg<span style="color:#ff79c6">;</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>msg<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setPaymentType</span><span style="color:#ff79c6">(</span>String type<span style="color:#ff79c6">){</span>
-        String msg<span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;creditCard&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">{</span>
-            msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;選擇信用卡付錢！！&#34;</span><span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;debitCard&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">{</span>
-            msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;選擇金融卡付錢！！&#34;</span><span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;easyCard&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">{</span>
-            msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;選擇悠遊卡付錢！！&#34;</span><span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;electronicPayment&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">{</span>
-            msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;選擇電子支付！！&#34;</span><span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
-            msg <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;不支援付款選項&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">}</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">msg</span> <span style="color:#ff79c6">=</span> msg<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bank</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
-     Payment p <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Payment<span style="color:#ff79c6">();</span>
-     p<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setPaymentType</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;creditCard&#34;</span><span style="color:#ff79c6">);</span>
-     p<span style="color:#ff79c6">.</span><span style="color:#50fa7b">pay</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>選擇信用卡付錢！！
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Payment</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> String msg<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>msg<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setPaymentType</span><span style="color:#ff79c6">(</span>String type<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;creditCard&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;選擇信用卡付錢！！&#34;</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;debitCard&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;選擇金融卡付錢！！&#34;</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>如上述程式，銀行判斷是刷哪種卡，在用該類的進行付款。但隨著科技越來越進步，現在不只這兩種付費方式。電子支付、悠遊卡&hellip;等等都是現在可以選擇的付費方式。如果銀行要跟著時代進步，勢必也要增加付款的功能才行。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Payment</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> String msg<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>msg<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setPaymentType</span><span style="color:#ff79c6">(</span>String type<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>        String msg<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;creditCard&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;選擇信用卡付錢！！&#34;</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;debitCard&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;選擇金融卡付錢！！&#34;</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;easyCard&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;選擇悠遊卡付錢！！&#34;</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;electronicPayment&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">))</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            msg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;選擇電子支付！！&#34;</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            msg <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;不支援付款選項&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">msg</span> <span style="color:#ff79c6">=</span> msg<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bank</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>     Payment p <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Payment<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>     p<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setPaymentType</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;creditCard&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>     p<span style="color:#ff79c6">.</span><span style="color:#50fa7b">pay</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>選擇信用卡付錢！！
 </code></pre><p>程式經過修改後，增加了悠遊卡以及電子支付的方法進Payment內了！但這顯然不是一個好方法。如果再擴充的時候，把原本的方法改錯了，這樣會造成系統的問題。所以我們需要一個讓系統方便擴充，但同時又不能影響到原本的程式方法。</p>
 <br>
 <br>
@@ -452,31 +447,31 @@ if (!doNotTrack) {
 </ul>
 <hr>
 <p>現在我們知道了不能在<code>既有</code>的程式碼做修改，也知道了業務邏輯與附加邏輯間的差異，那我們就可以開始對剛剛的付款範例進行OCP的修改！</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Payment</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> String msg<span style="color:#ff79c6">;</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(){</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">msg</span> <span style="color:#ff79c6">=</span> setPaymentType<span style="color:#ff79c6">();</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>msg<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> String <span style="color:#50fa7b">setPaymentType</span><span style="color:#ff79c6">();</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">CreditCard</span> <span style="color:#8be9fd;font-style:italic">extends</span> Payment <span style="color:#ff79c6">{</span>
-    @Override
-    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">setPaymentType</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#34;選擇信用卡付錢！！&#34;</span><span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">};</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#6272a4">// 其他三種略...
-</span><span style="color:#6272a4"></span>
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bank</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
-     CreditCard cc <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> CreditCard<span style="color:#ff79c6">();</span>
-     cc<span style="color:#ff79c6">.</span><span style="color:#50fa7b">pay</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Payment</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> String msg<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">pay</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">msg</span> <span style="color:#ff79c6">=</span> setPaymentType<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>msg<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> String <span style="color:#50fa7b">setPaymentType</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">CreditCard</span> <span style="color:#8be9fd;font-style:italic">extends</span> Payment <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    @Override
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">setPaymentType</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#34;選擇信用卡付錢！！&#34;</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 其他三種略...
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bank</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>     CreditCard cc <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> CreditCard<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>     cc<span style="color:#ff79c6">.</span><span style="color:#50fa7b">pay</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><br>
 <img src='https://g.gravizo.com/svg?
 @startuml;
 abstract Payment;
@@ -599,7 +594,7 @@ EasyCard : +setPaymentType() ;
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -864,7 +859,7 @@ EasyCard : +setPaymentType() ;
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/ianlife/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

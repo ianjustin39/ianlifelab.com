@@ -75,22 +75,17 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="工廠模式 | Factory Pattern">
-<meta itemprop="description" content="簡單工廠模式：藉由定義一個class來負責建立其他class的instance，被建立的instance通常都具有共同的super class；工廠方法模式：定義了一個建立物件的insterface，由子類別決定實體化的類別為何者。而兩者之間的差異在...">
-<meta itemprop="datePublished" content="2020-09-18T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-09-18T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="935">
-<meta itemprop="image" content="https://i.imgur.com/8ZtHHsD.png">
-
-
-
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="工廠模式 | Factory Pattern">
+<meta itemprop="description" content="簡單工廠模式：藉由定義一個class來負責建立其他class的instance，被建立的instance通常都具有共同的super class；工廠方法模式：定義了一個建立物件的insterface，由子類別決定實體化的類別為何者。而兩者之間的差異在..."><meta itemprop="datePublished" content="2020-09-18T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-09-18T00:00:00+00:00" />
+<meta itemprop="wordCount" content="845"><meta itemprop="image" content="https://i.imgur.com/8ZtHHsD.png">
 <meta itemprop="keywords" content="Design Pattern,Creational Pattern,鐵人賽," /><meta property="og:title" content="工廠模式 | Factory Pattern" />
 <meta property="og:description" content="簡單工廠模式：藉由定義一個class來負責建立其他class的instance，被建立的instance通常都具有共同的super class；工廠方法模式：定義了一個建立物件的insterface，由子類別決定實體化的類別為何者。而兩者之間的差異在..." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/factory-pattern/" />
-<meta property="og:image" content="https://i.imgur.com/8ZtHHsD.png" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/factory-pattern/" /><meta property="og:image" content="https://i.imgur.com/8ZtHHsD.png" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-09-18T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-09-18T00:00:00+00:00" />
+
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.imgur.com/8ZtHHsD.png"/>
@@ -98,7 +93,7 @@ if (!doNotTrack) {
 <meta name="twitter:title" content="工廠模式 | Factory Pattern"/>
 <meta name="twitter:description" content="簡單工廠模式：藉由定義一個class來負責建立其他class的instance，被建立的instance通常都具有共同的super class；工廠方法模式：定義了一個建立物件的insterface，由子類別決定實體化的類別為何者。而兩者之間的差異在..."/>
 <meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
@@ -109,7 +104,7 @@ if (!doNotTrack) {
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ianlife/">
+      <a href="/">
         
           <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
         
@@ -247,7 +242,7 @@ if (!doNotTrack) {
         <article class="post">
   <header>
   <div class="title">
-    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    <a href="/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
     
     <h3><a href="/ianlife/design-pattern/factory-pattern/">工廠模式 | Factory Pattern</a></h3>
     
@@ -262,7 +257,7 @@ if (!doNotTrack) {
     
     <span class="author">Ian Tsai</span>
     
-    <p>5 minute read</p>
+    <p>4 minute read</p>
     
     <p>
       <span id="busuanzi_container_page_pv">
@@ -386,182 +381,181 @@ if (!doNotTrack) {
 <p><code>藉由定義一個class來負責建立其他class的instance，被建立的instance通常都具有共同的super class</code></p>
 <p>這段話是什麼意思呢？首先我們先來看一個簡單了例子：</p>
 <p>我們開了一間餐廳（Restaurant.class），只賣了牛排。客人來點了一份牛排，做法如下：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Restaurant</span><span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> Steak <span style="color:#50fa7b">cookSteak</span><span style="color:#ff79c6">(){</span>
-    Steak steak <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Steak<span style="color:#ff79c6">()</span>
-    steak<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
-    steak<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">return</span> steak
-  <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Steak</span><span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">cook</span><span style="color:#ff79c6">(){</span>
-    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;把牛排煮熟&#34;</span><span style="color:#ff79c6">);</span>
-  <span style="color:#ff79c6">};</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">(){</span>
-    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;送牛排&#34;</span><span style="color:#ff79c6">);</span>
-  <span style="color:#ff79c6">};</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>這樣一來，客人就可以來餐廳吃牛排了。由於只有牛排已經無法滿足客人的需求，所以老闆決定，菜單上面加上烤雞供客人選擇：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Restaurant</span><span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> Steak <span style="color:#50fa7b">cookSteak</span><span style="color:#ff79c6">(){</span>
-    Steak steak <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Steak<span style="color:#ff79c6">()</span>
-    steak<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
-    steak<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">return</span> steak<span style="color:#ff79c6">;</span>
-  <span style="color:#ff79c6">}</span>
-
-  <span style="color:#8be9fd;font-style:italic">public</span> Chicken <span style="color:#50fa7b">cookChicken</span><span style="color:#ff79c6">(){</span>
-    Chicken chicken <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Chicken<span style="color:#ff79c6">();</span>
-    chicken<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
-    chicken<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">return</span> chicken
-  <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Steak</span><span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">cook</span><span style="color:#ff79c6">(){</span>
-    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;把牛排煮熟&#34;</span><span style="color:#ff79c6">);</span>
-  <span style="color:#ff79c6">};</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">(){</span>
-    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;送牛排&#34;</span><span style="color:#ff79c6">);</span>
-  <span style="color:#ff79c6">};</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Chicken</span><span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">cook</span><span style="color:#ff79c6">(){</span>
-    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;把雞肉煮熟&#34;</span><span style="color:#ff79c6">);</span>
-  <span style="color:#ff79c6">};</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">(){</span>
-    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;送雞肉&#34;</span><span style="color:#ff79c6">);</span>
-  <span style="color:#ff79c6">};</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>這樣就餐廳就有牛排跟烤雞可以販售了。可以發現不管是牛排還是烤雞，都需要進行cook以及delivery兩道手續，所以我們可以將這兩種方法放到interface內封裝起來，讓Chicken和Steak去實作：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">CookMeal</span><span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
-    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Steak</span> <span style="color:#8be9fd;font-style:italic">implements</span> CookMeal<span style="color:#ff79c6">{</span>
-
-  @Override
-  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">cook</span><span style="color:#ff79c6">(){</span>
-    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;把牛排煮熟&#34;</span><span style="color:#ff79c6">);</span>
-  <span style="color:#ff79c6">};</span>
-  @Override
-  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">(){</span>
-    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;送牛排&#34;</span><span style="color:#ff79c6">);</span>
-  <span style="color:#ff79c6">};</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Chicken</span> <span style="color:#8be9fd;font-style:italic">implements</span> CookMeal<span style="color:#ff79c6">{</span>
-  @Override
-  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">cook</span><span style="color:#ff79c6">(){</span>
-    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;把雞肉煮熟&#34;</span><span style="color:#ff79c6">);</span>
-  <span style="color:#ff79c6">};</span>
-  @Override
-  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">(){</span>
-    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;送雞肉&#34;</span><span style="color:#ff79c6">);</span>
-  <span style="color:#ff79c6">};</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>如此一來，我們就能確保每道料理的工序是一樣的不會出錯。接著回到餐廳的部分，現在只有兩道餐提供給客人選擇，今天老闆想要新增一到豬排，我們可以這樣寫：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#6272a4">// ...Steak 略
-</span><span style="color:#6272a4"></span>  <span style="color:#6272a4">// ...Chicken 略
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Pork</span> <span style="color:#8be9fd;font-style:italic">implements</span> CookMeal<span style="color:#ff79c6">{</span>
-  @Override
-  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">cook</span><span style="color:#ff79c6">(){</span>
-    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;把豬排煮熟&#34;</span><span style="color:#ff79c6">);</span>
-  <span style="color:#ff79c6">};</span>
-  @Override
-  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">(){</span>
-    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;送豬排&#34;</span><span style="color:#ff79c6">);</span>
-  <span style="color:#ff79c6">};</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Restaurant</span><span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> Steak <span style="color:#50fa7b">cookSteak</span><span style="color:#ff79c6">(){</span>
-    Steak steak <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Steak<span style="color:#ff79c6">()</span>
-    steak<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
-    steak<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">return</span> steak<span style="color:#ff79c6">;</span>
-  <span style="color:#ff79c6">}</span>
-
-  <span style="color:#8be9fd;font-style:italic">public</span> Chicken <span style="color:#50fa7b">cookChicken</span><span style="color:#ff79c6">(){</span>
-    Chicken chicken <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Chicken<span style="color:#ff79c6">();</span>
-    chicken<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
-    chicken<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">return</span> chicken
-  <span style="color:#ff79c6">}</span>
-
-  <span style="color:#8be9fd;font-style:italic">public</span> Pork <span style="color:#50fa7b">cookPork</span><span style="color:#ff79c6">(){</span>
-    Pork pork <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Pork<span style="color:#ff79c6">();</span>
-    pork<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
-    pork<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">return</span> pork
-  <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-</code></pre></div><p>這樣菜單上就有豬排可以選擇了。不過隨著餐廳的營運，菜單上的餐點會不段的增加，這樣的寫法並不是一個好的方法，所以餐廳的點餐邏輯做了一些更動：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Restaurant</span><span style="color:#ff79c6">{</span>
-  CookMeal <span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">(</span>String mealType<span style="color:#ff79c6">){</span>
-    CookMeal meal<span style="color:#ff79c6">;</span>
-
-    <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Steak&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">)){</span>
-      meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Steak<span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Chicken&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">)){</span>
-      meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Chicken<span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Pork&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">)){</span>
-      meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Pork<span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-
-    meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
-    meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">return</span> meal<span style="color:#ff79c6">;</span>
-  <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>前面提到Steak, Chicken, Pork都實作CookMeal，所以這三個項目合成為一個判斷邏輯，在if-else內判斷客人要點哪種餐點，這樣未來菜單再增加時，就不需要再寫一大串在程式內了。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Restaurant</span><span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> Steak <span style="color:#50fa7b">cookSteak</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    Steak steak <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Steak<span style="color:#ff79c6">()</span>
+</span></span><span style="display:flex;"><span>    steak<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    steak<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> steak
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Steak</span><span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">cook</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;把牛排煮熟&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">};</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;送牛排&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>這樣一來，客人就可以來餐廳吃牛排了。由於只有牛排已經無法滿足客人的需求，所以老闆決定，菜單上面加上烤雞供客人選擇：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Restaurant</span><span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> Steak <span style="color:#50fa7b">cookSteak</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    Steak steak <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Steak<span style="color:#ff79c6">()</span>
+</span></span><span style="display:flex;"><span>    steak<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    steak<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> steak<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> Chicken <span style="color:#50fa7b">cookChicken</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    Chicken chicken <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Chicken<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    chicken<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    chicken<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> chicken
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Steak</span><span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">cook</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;把牛排煮熟&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">};</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;送牛排&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Chicken</span><span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">cook</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;把雞肉煮熟&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">};</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;送雞肉&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>這樣就餐廳就有牛排跟烤雞可以販售了。可以發現不管是牛排還是烤雞，都需要進行cook以及delivery兩道手續，所以我們可以將這兩種方法放到interface內封裝起來，讓Chicken和Steak去實作：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">CookMeal</span><span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Steak</span> <span style="color:#8be9fd;font-style:italic">implements</span> CookMeal<span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  @Override
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">cook</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;把牛排煮熟&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">};</span>
+</span></span><span style="display:flex;"><span>  @Override
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;送牛排&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Chicken</span> <span style="color:#8be9fd;font-style:italic">implements</span> CookMeal<span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  @Override
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">cook</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;把雞肉煮熟&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">};</span>
+</span></span><span style="display:flex;"><span>  @Override
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;送雞肉&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>如此一來，我們就能確保每道料理的工序是一樣的不會出錯。接著回到餐廳的部分，現在只有兩道餐提供給客人選擇，今天老闆想要新增一到豬排，我們可以這樣寫：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>  <span style="color:#6272a4">// ...Steak 略
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#6272a4">// ...Chicken 略
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Pork</span> <span style="color:#8be9fd;font-style:italic">implements</span> CookMeal<span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  @Override
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">cook</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;把豬排煮熟&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">};</span>
+</span></span><span style="display:flex;"><span>  @Override
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;送豬排&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Restaurant</span><span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> Steak <span style="color:#50fa7b">cookSteak</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    Steak steak <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Steak<span style="color:#ff79c6">()</span>
+</span></span><span style="display:flex;"><span>    steak<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    steak<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> steak<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> Chicken <span style="color:#50fa7b">cookChicken</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    Chicken chicken <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Chicken<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    chicken<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    chicken<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> chicken
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> Pork <span style="color:#50fa7b">cookPork</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    Pork pork <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Pork<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    pork<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    pork<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> pork
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>這樣菜單上就有豬排可以選擇了。不過隨著餐廳的營運，菜單上的餐點會不段的增加，這樣的寫法並不是一個好的方法，所以餐廳的點餐邏輯做了一些更動：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Restaurant</span><span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  CookMeal <span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">(</span>String mealType<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>    CookMeal meal<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Steak&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">)){</span>
+</span></span><span style="display:flex;"><span>      meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Steak<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Chicken&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">)){</span>
+</span></span><span style="display:flex;"><span>      meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Chicken<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Pork&#34;</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">)){</span>
+</span></span><span style="display:flex;"><span>      meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Pork<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> meal<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>前面提到Steak, Chicken, Pork都實作CookMeal，所以這三個項目合成為一個判斷邏輯，在if-else內判斷客人要點哪種餐點，這樣未來菜單再增加時，就不需要再寫一大串在程式內了。</p>
 <p>但問題來了！如果我們不在自己的店裡生產食物原料怎麼辦？又或是別家店也想要食物原料怎麼辦？</p>
 <p><em>註：根據ＯＯ的開放封閉原則，我們不能在這個地方做修改，詳情可以點<a href="https://medium.com/@f40507777/%E9%96%8B%E6%94%BE%E5%B0%81%E9%96%89%E5%8E%9F%E5%89%87-open-closed-principle-31d61f9d37a5">這裡</a></em></p>
 <br>
 <h4 id=_sample-factory-pattern-實作>Sample Factory Pattern 實作</h4>
 <p>在現實生活中，餐廳會跟肉廠叫肉，肉送到餐廳後再進行烹煮。這邊也是一樣，我們將建立食材物件的邏輯額外拉出來，取名叫做mealFactory，這裡面就是放置上述if-else的邏輯：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MealFactory</span><span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(</span>String mealType<span style="color:#ff79c6">){</span>
-    CookMeal meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">;</span>
-
-    <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Steak&#34;</span><span style="color:#ff79c6">)){</span>
-      meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Steak<span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Chicken&#34;</span><span style="color:#ff79c6">)){</span>
-      meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Chicken<span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Pork&#34;</span><span style="color:#ff79c6">)){</span>
-      meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Pork<span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span> 
-    <span style="color:#ff79c6">return</span> meal<span style="color:#ff79c6">;</span>
-  <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>mealFactory我們稱做factory class，裡面有一個createMeal的方法，由這個方法去決定產出哪些食材，也就是說統一在這個工廠內生產食材物件。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MealFactory</span><span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(</span>String mealType<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>    CookMeal meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Steak&#34;</span><span style="color:#ff79c6">)){</span>
+</span></span><span style="display:flex;"><span>      meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Steak<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Chicken&#34;</span><span style="color:#ff79c6">)){</span>
+</span></span><span style="display:flex;"><span>      meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Chicken<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Pork&#34;</span><span style="color:#ff79c6">)){</span>
+</span></span><span style="display:flex;"><span>      meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Pork<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> meal<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>mealFactory我們稱做factory class，裡面有一個createMeal的方法，由這個方法去決定產出哪些食材，也就是說統一在這個工廠內生產食材物件。</p>
 <p>接著因為餐廳不在由自己產生食材，變成統一由工廠送來餐廳，所以我們逮來整裡餐廳（Restaurant.class）：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Restaurant</span><span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">private</span> MealFactory factory<span style="color:#ff79c6">;</span>
-
-  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Restaurant</span> <span style="color:#ff79c6">(</span>MealFactory factory<span style="color:#ff79c6">){</span>
-    <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">factory</span> <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">;</span>
-  <span style="color:#ff79c6">}</span>
-
-  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">(</span>String mealType<span style="color:#ff79c6">){</span>
-    CookMeal meal<span style="color:#ff79c6">;</span>
-
-    meal <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">.</span><span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">);</span>
-
-    meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
-    meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
-
-    <span style="color:#ff79c6">return</span> meal<span style="color:#ff79c6">;</span>
-  <span style="color:#ff79c6">}</span>
-
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>factory就是餐廳與工廠合作的管道，只要將指定的食材名稱傳入工廠的createMeal，工廠就會生產食材物件給餐廳，供餐廳烹煮，如同我們一開始講的：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Restaurant</span><span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">private</span> MealFactory factory<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Restaurant</span> <span style="color:#ff79c6">(</span>MealFactory factory<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">factory</span> <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">(</span>String mealType<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>    CookMeal meal<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    meal <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">.</span><span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> meal<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>factory就是餐廳與工廠合作的管道，只要將指定的食材名稱傳入工廠的createMeal，工廠就會生產食材物件給餐廳，供餐廳烹煮，如同我們一開始講的：</p>
 <p><code>藉由定義一個class來負責建立其他class的instance，被建立的instance通常都具有共同的super class</code></p>
 <p>經過上述的例子，相信大家對sample factory pattern有了初步的認識，接下來我們來看一下UML來比較有用pattern以及沒有用pattern的差異。</p>
 <br>
@@ -598,17 +592,17 @@ CookMeal : +delivery%28%29;
 <br>
 <br></p>
 <p>接著我們可以試著點餐看看！！</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Order</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
-     
-        Restaurant r <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Restaurant<span style="color:#ff79c6">(</span><span style="color:#ff79c6">new</span> MealFactory<span style="color:#ff79c6">());</span>
-        r<span style="color:#ff79c6">.</span><span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Steak&#34;</span><span style="color:#ff79c6">);</span>
-        r<span style="color:#ff79c6">.</span><span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Chicken&#34;</span><span style="color:#ff79c6">);</span>
-
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output :</strong></p>
-<pre><code>把牛排煮熟
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Order</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>     
+</span></span><span style="display:flex;"><span>        Restaurant r <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Restaurant<span style="color:#ff79c6">(</span><span style="color:#ff79c6">new</span> MealFactory<span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>        r<span style="color:#ff79c6">.</span><span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Steak&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        r<span style="color:#ff79c6">.</span><span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Chicken&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output :</strong></p>
+<pre tabindex="0"><code>把牛排煮熟
 送牛排
 把雞肉煮熟
 送雞肉
@@ -618,26 +612,26 @@ CookMeal : +delivery%28%29;
 <table>
 <thead>
 <tr>
-<th align="left">角色</th>
-<th align="left">名稱</th>
-<th align="left">功能</th>
+<th style="text-align:left">角色</th>
+<th style="text-align:left">名稱</th>
+<th style="text-align:left">功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Factory（工廠）</td>
-<td align="left">MealFactory</td>
-<td align="left">實現建立物件（食材）的邏輯</td>
+<td style="text-align:left">Factory（工廠）</td>
+<td style="text-align:left">MealFactory</td>
+<td style="text-align:left">實現建立物件（食材）的邏輯</td>
 </tr>
 <tr>
-<td align="left">Product（抽象產品）</td>
-<td align="left">CookMeal</td>
-<td align="left">定義抽象方法供ConcreteProduct實作</td>
+<td style="text-align:left">Product（抽象產品）</td>
+<td style="text-align:left">CookMeal</td>
+<td style="text-align:left">定義抽象方法供ConcreteProduct實作</td>
 </tr>
 <tr>
-<td align="left">ConcreteProduct（實體產品）</td>
-<td align="left">Steak, Chicken, Pork</td>
-<td align="left">實作產品的商業邏輯</td>
+<td style="text-align:left">ConcreteProduct（實體產品）</td>
+<td style="text-align:left">Steak, Chicken, Pork</td>
+<td style="text-align:left">實作產品的商業邏輯</td>
 </tr>
 </tbody>
 </table>
@@ -663,123 +657,123 @@ CookMeal : +delivery%28%29;
 <table>
 <thead>
 <tr>
-<th align="left">角色</th>
-<th align="left">名稱</th>
-<th align="left">功能</th>
+<th style="text-align:left">角色</th>
+<th style="text-align:left">名稱</th>
+<th style="text-align:left">功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Factory（抽象工廠）</td>
-<td align="left">MealFactory</td>
-<td align="left">定義抽象方法供ConcreteFactory實作</td>
+<td style="text-align:left">Factory（抽象工廠）</td>
+<td style="text-align:left">MealFactory</td>
+<td style="text-align:left">定義抽象方法供ConcreteFactory實作</td>
 </tr>
 <tr>
-<td align="left">ConcreteFactory（實體工廠）</td>
-<td align="left">SteakFactory, ChickenFactory, PorkFactory</td>
-<td align="left">實作Factory並建立物件</td>
+<td style="text-align:left">ConcreteFactory（實體工廠）</td>
+<td style="text-align:left">SteakFactory, ChickenFactory, PorkFactory</td>
+<td style="text-align:left">實作Factory並建立物件</td>
 </tr>
 <tr>
-<td align="left">Product（抽象產品）</td>
-<td align="left">CookMeal</td>
-<td align="left">定義抽象方法供ConcreteProduct實作</td>
+<td style="text-align:left">Product（抽象產品）</td>
+<td style="text-align:left">CookMeal</td>
+<td style="text-align:left">定義抽象方法供ConcreteProduct實作</td>
 </tr>
 <tr>
-<td align="left">ConcreteProduct（實體產品）</td>
-<td align="left">Steak, Chicken, Pork</td>
-<td align="left">實作產品的商業邏輯</td>
+<td style="text-align:left">ConcreteProduct（實體產品）</td>
+<td style="text-align:left">Steak, Chicken, Pork</td>
+<td style="text-align:left">實作產品的商業邏輯</td>
 </tr>
 </tbody>
 </table>
 <p>由上表組成中發現Factory不再只有一個，而是變成了一個抽象一個實體。為什麼呢？剛才有講到Sample Factory Pattern，若商品一直增加，會導致集中在factory的邏輯變得複雜，會難以維護。所以需要將Factory的部分也做拆分。</p>
 <p>這是Sample Factory Pattern的例子：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Restaurant</span><span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">private</span> MealFactory factory<span style="color:#ff79c6">;</span>
-
-  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Restaurant</span> <span style="color:#ff79c6">(</span>MealFactory factory<span style="color:#ff79c6">){</span>
-    <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">factory</span> <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">;</span>
-  <span style="color:#ff79c6">}</span>
-
-  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">(</span>String mealType<span style="color:#ff79c6">){</span>
-    CookMeal meal<span style="color:#ff79c6">;</span>
-
-    meal <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">.</span><span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">);</span>
-
-    meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
-    meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
-
-    <span style="color:#ff79c6">return</span> meal<span style="color:#ff79c6">;</span>
-  <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MealFactory</span><span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(</span>String mealType<span style="color:#ff79c6">){</span>
-    CookMeal meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">;</span>
-
-    <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Steak&#34;</span><span style="color:#ff79c6">)){</span>
-      meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Steak<span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Chicken&#34;</span><span style="color:#ff79c6">)){</span>
-      meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Chicken<span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Pork&#34;</span><span style="color:#ff79c6">)){</span>
-      meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Pork<span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span> 
-    <span style="color:#ff79c6">return</span> meal<span style="color:#ff79c6">;</span>
-  <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>由於我們不想要在MealFactory無止盡的增加邏輯，所以我們建立一個將MealFactory改成interface，並將裡面生產食材的邏輯分別抽出實作。好比原本是一家大的肉廠，同時處理各種肉品，但隨著品項越來越多，大肉廠沒辦法負荷，所以成立子公司，有牛肉公司、豬肉公司&hellip;等等。分別讓子公司處理對應的食材，總公司只要把SOP制定好讓子公司照著做即可。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Restaurant</span><span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">private</span> MealFactory factory<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Restaurant</span> <span style="color:#ff79c6">(</span>MealFactory factory<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">factory</span> <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">(</span>String mealType<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>    CookMeal meal<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    meal <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">.</span><span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> meal<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MealFactory</span><span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(</span>String mealType<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>    CookMeal meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Steak&#34;</span><span style="color:#ff79c6">)){</span>
+</span></span><span style="display:flex;"><span>      meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Steak<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Chicken&#34;</span><span style="color:#ff79c6">)){</span>
+</span></span><span style="display:flex;"><span>      meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Chicken<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>mealType<span style="color:#ff79c6">.</span><span style="color:#50fa7b">equals</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Pork&#34;</span><span style="color:#ff79c6">)){</span>
+</span></span><span style="display:flex;"><span>      meal <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Pork<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> meal<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>由於我們不想要在MealFactory無止盡的增加邏輯，所以我們建立一個將MealFactory改成interface，並將裡面生產食材的邏輯分別抽出實作。好比原本是一家大的肉廠，同時處理各種肉品，但隨著品項越來越多，大肉廠沒辦法負荷，所以成立子公司，有牛肉公司、豬肉公司&hellip;等等。分別讓子公司處理對應的食材，總公司只要把SOP制定好讓子公司照著做即可。</p>
 <h4 id=_factory-method-pattern-實作>Factory Method Pattern 實作</h4>
 <br>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">MealFactory</span><span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">();</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SteakFactory</span> <span style="color:#8be9fd;font-style:italic">implements</span> MealFactory<span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(){</span>
-    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> Steak<span style="color:#ff79c6">();</span>
-  <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ChickenFactory</span> <span style="color:#8be9fd;font-style:italic">implements</span> MealFactory<span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(){</span>
-    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> Chicken<span style="color:#ff79c6">();</span>
-  <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">PorkFactory</span> <span style="color:#8be9fd;font-style:italic">implements</span> MealFactory<span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(){</span>
-    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> Pork<span style="color:#ff79c6">();</span>
-  <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>各類肉工廠就這樣建立起來了，若未來我們還需要一個羊肉工廠，那就再建立一個羊肉的sub class即可，不在需要到MealFactory增加邏輯，造成MealFactory複雜度上升。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">MealFactory</span><span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SteakFactory</span> <span style="color:#8be9fd;font-style:italic">implements</span> MealFactory<span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> Steak<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ChickenFactory</span> <span style="color:#8be9fd;font-style:italic">implements</span> MealFactory<span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> Chicken<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">PorkFactory</span> <span style="color:#8be9fd;font-style:italic">implements</span> MealFactory<span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> Pork<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>各類肉工廠就這樣建立起來了，若未來我們還需要一個羊肉工廠，那就再建立一個羊肉的sub class即可，不在需要到MealFactory增加邏輯，造成MealFactory複雜度上升。</p>
 <p>那我們實際來跑跑程式！！</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Restaurant</span><span style="color:#ff79c6">{</span>
-  <span style="color:#8be9fd;font-style:italic">private</span> MealFactory factory<span style="color:#ff79c6">;</span>
-
-  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Restaurant</span> <span style="color:#ff79c6">(</span>MealFactory factory<span style="color:#ff79c6">){</span>
-    <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">factory</span> <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">;</span>
-  <span style="color:#ff79c6">}</span>
-
-  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">(){</span>
-    CookMeal meal<span style="color:#ff79c6">;</span>
-
-    meal <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">.</span><span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">();</span>
-
-    meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
-    meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
-
-    <span style="color:#ff79c6">return</span> meal<span style="color:#ff79c6">;</span>
-  <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Order</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
-     
-        Restaurant rSteak <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Restaurant<span style="color:#ff79c6">(</span><span style="color:#ff79c6">new</span> SteakFactory<span style="color:#ff79c6">());</span>
-        rSteak<span style="color:#ff79c6">.</span><span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">();</span>
-        Restaurant rChicken <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Restaurant<span style="color:#ff79c6">(</span><span style="color:#ff79c6">new</span> ChickenFactory<span style="color:#ff79c6">());</span>
-        rChicken<span style="color:#ff79c6">.</span><span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">();</span>
-
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>把牛排煮熟
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Restaurant</span><span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">private</span> MealFactory factory<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Restaurant</span> <span style="color:#ff79c6">(</span>MealFactory factory<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">factory</span> <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">public</span> CookMeal <span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>    CookMeal meal<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    meal <span style="color:#ff79c6">=</span> factory<span style="color:#ff79c6">.</span><span style="color:#50fa7b">createMeal</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">cook</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    meal<span style="color:#ff79c6">.</span><span style="color:#50fa7b">delivery</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> meal<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Order</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>     
+</span></span><span style="display:flex;"><span>        Restaurant rSteak <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Restaurant<span style="color:#ff79c6">(</span><span style="color:#ff79c6">new</span> SteakFactory<span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>        rSteak<span style="color:#ff79c6">.</span><span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        Restaurant rChicken <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Restaurant<span style="color:#ff79c6">(</span><span style="color:#ff79c6">new</span> ChickenFactory<span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>        rChicken<span style="color:#ff79c6">.</span><span style="color:#50fa7b">mealOrder</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>把牛排煮熟
 送牛排
 把雞肉煮熟
 送雞肉
@@ -819,21 +813,21 @@ ConcreteFactory（實體工廠）以及ConcreteProduct（實體產品）即可�
 <table>
 <thead>
 <tr>
-<th align="left">Pattern</th>
-<th align="left">Sample Factory</th>
-<th align="left">Factory Method</th>
+<th style="text-align:left">Pattern</th>
+<th style="text-align:left">Sample Factory</th>
+<th style="text-align:left">Factory Method</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">優點</td>
-<td align="left">1. 由factory建立物件，client可以免除。<br>2. 可以減少使用者的記憶量。<br>3. 可以在不修改client資料的情況下，變更ConcreteProduct，提高系統靈活性。</td>
-<td align="left">1. 建立物件只需要知道名稱，不需要知道細節 <br> 2. 擴展性加</td>
+<td style="text-align:left">優點</td>
+<td style="text-align:left">1. 由factory建立物件，client可以免除。<br>2. 可以減少使用者的記憶量。<br>3. 可以在不修改client資料的情況下，變更ConcreteProduct，提高系統靈活性。</td>
+<td style="text-align:left">1. 建立物件只需要知道名稱，不需要知道細節 <br> 2. 擴展性加</td>
 </tr>
 <tr>
-<td align="left">缺點</td>
-<td align="left">1. factory若有問題便無法使用。<br> 2. 邏輯集中在factory，產品過多會導致邏輯複雜且難以維護。</td>
-<td align="left">產品數量增加，伴隨著系統複雜度的增加</td>
+<td style="text-align:left">缺點</td>
+<td style="text-align:left">1. factory若有問題便無法使用。<br> 2. 邏輯集中在factory，產品過多會導致邏輯複雜且難以維護。</td>
+<td style="text-align:left">產品數量增加，伴隨著系統複雜度的增加</td>
 </tr>
 </tbody>
 </table>
@@ -930,7 +924,7 @@ ConcreteFactory（實體工廠）以及ConcreteProduct（實體產品）即可�
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -1349,7 +1343,7 @@ ConcreteFactory（實體工廠）以及ConcreteProduct（實體產品）即可�
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/ianlife/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

@@ -75,22 +75,17 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="组合模式 | Composite Pattern">
-<meta itemprop="description" content="組合模式就是將元件做分離，依照需求一一組裝起來，建立不同需求的物件。">
-<meta itemprop="datePublished" content="2020-09-24T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-09-24T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="865">
-<meta itemprop="image" content="https://i.imgur.com/eG4eA7j.png">
-
-
-
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="组合模式 | Composite Pattern">
+<meta itemprop="description" content="組合模式就是將元件做分離，依照需求一一組裝起來，建立不同需求的物件。"><meta itemprop="datePublished" content="2020-09-24T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-09-24T00:00:00+00:00" />
+<meta itemprop="wordCount" content="784"><meta itemprop="image" content="https://i.imgur.com/eG4eA7j.png">
 <meta itemprop="keywords" content="Design Pattern,Structural Pattern,鐵人賽," /><meta property="og:title" content="组合模式 | Composite Pattern" />
 <meta property="og:description" content="組合模式就是將元件做分離，依照需求一一組裝起來，建立不同需求的物件。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/composite-pattern/" />
-<meta property="og:image" content="https://i.imgur.com/eG4eA7j.png" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/composite-pattern/" /><meta property="og:image" content="https://i.imgur.com/eG4eA7j.png" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-09-24T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-09-24T00:00:00+00:00" />
+
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.imgur.com/eG4eA7j.png"/>
@@ -98,7 +93,7 @@ if (!doNotTrack) {
 <meta name="twitter:title" content="组合模式 | Composite Pattern"/>
 <meta name="twitter:description" content="組合模式就是將元件做分離，依照需求一一組裝起來，建立不同需求的物件。"/>
 <meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
@@ -109,7 +104,7 @@ if (!doNotTrack) {
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ianlife/">
+      <a href="/">
         
           <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
         
@@ -247,7 +242,7 @@ if (!doNotTrack) {
         <article class="post">
   <header>
   <div class="title">
-    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    <a href="/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
     
     <h3><a href="/ianlife/design-pattern/composite-pattern/">组合模式 | Composite Pattern</a></h3>
     
@@ -262,7 +257,7 @@ if (!doNotTrack) {
     
     <span class="author">Ian Tsai</span>
     
-    <p>5 minute read</p>
+    <p>4 minute read</p>
     
     <p>
       <span id="busuanzi_container_page_pv">
@@ -395,22 +390,22 @@ if (!doNotTrack) {
 <table>
 <thead>
 <tr>
-<th align="left">成員</th>
-<th align="left">功用</th>
+<th style="text-align:left">成員</th>
+<th style="text-align:left">功用</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Component 抽象構件</td>
-<td align="left">為組合中的物件宣告介面，在透明式組合模式中可以宣告包括管理子類的方法接口。安全式組合模式中管理子類的方法則由樹枝構件完成。</td>
+<td style="text-align:left">Component 抽象構件</td>
+<td style="text-align:left">為組合中的物件宣告介面，在透明式組合模式中可以宣告包括管理子類的方法接口。安全式組合模式中管理子類的方法則由樹枝構件完成。</td>
 </tr>
 <tr>
-<td align="left">Leaf 樹葉構件</td>
-<td align="left">組合中的樹葉節點，沒有子節點。實作Component宣告的接口。</td>
+<td style="text-align:left">Leaf 樹葉構件</td>
+<td style="text-align:left">組合中的樹葉節點，沒有子節點。實作Component宣告的接口。</td>
 </tr>
 <tr>
-<td align="left">Composite 樹枝構件</td>
-<td align="left">組合中的分支節點，有子節點。實作Component宣告的接口。主要作用在於儲存及管理子類物件。通常有add(), remove()等方法。</td>
+<td style="text-align:left">Composite 樹枝構件</td>
+<td style="text-align:left">組合中的分支節點，有子節點。實作Component宣告的接口。主要作用在於儲存及管理子類物件。通常有add(), remove()等方法。</td>
 </tr>
 </tbody>
 </table>
@@ -495,89 +490,89 @@ Leaf : +operation();
 <br>
 <h4 id=_透明式的組合模式實作>透明式的組合模式實作</h4>
 <p>首先我們先將Component的介面給定義出來：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Articles</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>Articles articles<span style="color:#ff79c6">);</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>Articles articles<span style="color:#ff79c6">);</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">float</span> <span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">();</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">show</span><span style="color:#ff79c6">();</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>由於我們使用透明組合模式，所以將所有的方法都定義在component內。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Articles</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>Articles articles<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>Articles articles<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">float</span> <span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">show</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>由於我們使用透明組合模式，所以將所有的方法都定義在component內。</p>
 <br>
 <p>接著建立肉類海鮮等等商品的類別Leaf來實作Component：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Commodity</span> <span style="color:#8be9fd;font-style:italic">implements</span> Articles <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> String name<span style="color:#ff79c6">;</span>     
-    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> quantity<span style="color:#ff79c6">;</span>    
-    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> unitPrice<span style="color:#ff79c6">;</span> 
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Commodity</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">,</span> <span style="color:#8be9fd">int</span> quantity<span style="color:#ff79c6">,</span> <span style="color:#8be9fd">int</span> unitPrice<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span>name<span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">quantity</span><span style="color:#ff79c6">=</span>quantity<span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">unitPrice</span><span style="color:#ff79c6">=</span>unitPrice<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>   
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>Articles articles<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>Articles articles<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{}</span>
-
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">float</span> <span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">return</span> quantity <span style="color:#ff79c6">*</span> unitPrice<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">show</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>name <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34; (quantity: &#34;</span><span style="color:#ff79c6">+</span>quantity<span style="color:#ff79c6">+</span><span style="color:#f1fa8c">&#34;, unitPrice: NT &#34;</span><span style="color:#ff79c6">+</span>unitPrice<span style="color:#ff79c6">+</span><span style="color:#f1fa8c">&#34;)&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>產品內有名稱、要購買的數量以及價錢。其中add與remove不需要實作，所以方法內放空的。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Commodity</span> <span style="color:#8be9fd;font-style:italic">implements</span> Articles <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> String name<span style="color:#ff79c6">;</span>     
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> quantity<span style="color:#ff79c6">;</span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> unitPrice<span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Commodity</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">,</span> <span style="color:#8be9fd">int</span> quantity<span style="color:#ff79c6">,</span> <span style="color:#8be9fd">int</span> unitPrice<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span>name<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">quantity</span><span style="color:#ff79c6">=</span>quantity<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">unitPrice</span><span style="color:#ff79c6">=</span>unitPrice<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>   
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>Articles articles<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>Articles articles<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">float</span> <span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> quantity <span style="color:#ff79c6">*</span> unitPrice<span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">show</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>name <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34; (quantity: &#34;</span><span style="color:#ff79c6">+</span>quantity<span style="color:#ff79c6">+</span><span style="color:#f1fa8c">&#34;, unitPrice: NT &#34;</span><span style="color:#ff79c6">+</span>unitPrice<span style="color:#ff79c6">+</span><span style="color:#f1fa8c">&#34;)&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>產品內有名稱、要購買的數量以及價錢。其中add與remove不需要實作，所以方法內放空的。</p>
 <p>下一步就是將購物袋Composite給建立起來：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bags</span> <span style="color:#8be9fd;font-style:italic">implements</span> Articles<span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> String name<span style="color:#ff79c6">;</span>        
-    <span style="color:#8be9fd;font-style:italic">private</span> ArrayList<span style="color:#ff79c6">&lt;</span>Articles<span style="color:#ff79c6">&gt;</span> bags<span style="color:#ff79c6">=</span><span style="color:#ff79c6">new</span> ArrayList<span style="color:#ff79c6">&lt;</span>Articles<span style="color:#ff79c6">&gt;();</span>   
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Bags</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span>name<span style="color:#ff79c6">;</span>       
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>Articles articles<span style="color:#ff79c6">){</span>
-        bags<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>articles<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>   
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>Articles articles<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        bags<span style="color:#ff79c6">.</span><span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>articles<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">float</span> <span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#8be9fd">float</span> s <span style="color:#ff79c6">=</span> 0<span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">for</span><span style="color:#ff79c6">(</span>Object bag <span style="color:#ff79c6">:</span> bags<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-            s <span style="color:#ff79c6">+=</span> <span style="color:#ff79c6">((</span>Articles<span style="color:#ff79c6">)</span>bag<span style="color:#ff79c6">).</span><span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">();</span>
-        <span style="color:#ff79c6">}</span>
-        <span style="color:#ff79c6">return</span> s<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">show</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">for</span><span style="color:#ff79c6">(</span>Object bag <span style="color:#ff79c6">:</span> bags<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-            <span style="color:#ff79c6">((</span>Articles<span style="color:#ff79c6">)</span>bag<span style="color:#ff79c6">).</span><span style="color:#50fa7b">show</span><span style="color:#ff79c6">();</span>
-        <span style="color:#ff79c6">}</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>最後來使用看看我們剛建立好的程式：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ShoppingTest</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        Articles bigBag<span style="color:#ff79c6">,</span> smallBag<span style="color:#ff79c6">;</span>
-        Articles commodity<span style="color:#ff79c6">;</span>
-        bigBag <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Bags<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Big Bag&#34;</span><span style="color:#ff79c6">);</span>
-        smallBag <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Bags<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;small Bag&#34;</span><span style="color:#ff79c6">);</span>           
-        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;bamboo shoot&#34;</span><span style="color:#ff79c6">,</span> 5<span style="color:#ff79c6">,</span> 20<span style="color:#ff79c6">);</span>
-        smallBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>
-        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;plate&#34;</span><span style="color:#ff79c6">,</span> 5<span style="color:#ff79c6">,</span> 40<span style="color:#ff79c6">);</span>
-        smallBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>       
-        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;meat&#34;</span><span style="color:#ff79c6">,</span> 10<span style="color:#ff79c6">,</span> 300<span style="color:#ff79c6">);</span>
-        smallBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>
-        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;seafood&#34;</span><span style="color:#ff79c6">,</span> 3<span style="color:#ff79c6">,</span> 480<span style="color:#ff79c6">);</span>
-        smallBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span> 
-        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;barbecue grill&#34;</span><span style="color:#ff79c6">,</span> 2<span style="color:#ff79c6">,</span> 199<span style="color:#ff79c6">);</span>
-        bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>
-        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;charcoal&#34;</span><span style="color:#ff79c6">,</span>2<span style="color:#ff79c6">,</span> 399<span style="color:#ff79c6">);</span>
-        bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>
-        bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>smallBag<span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;list:&#34;</span><span style="color:#ff79c6">);</span>
-        bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">show</span><span style="color:#ff79c6">();</span>
-        <span style="color:#8be9fd">float</span> amount <span style="color:#ff79c6">=</span> bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">();</span>       
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;total: NT &#34;</span><span style="color:#ff79c6">+</span> amount<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>list:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bags</span> <span style="color:#8be9fd;font-style:italic">implements</span> Articles<span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> String name<span style="color:#ff79c6">;</span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> ArrayList<span style="color:#ff79c6">&lt;</span>Articles<span style="color:#ff79c6">&gt;</span> bags<span style="color:#ff79c6">=</span><span style="color:#ff79c6">new</span> ArrayList<span style="color:#ff79c6">&lt;</span>Articles<span style="color:#ff79c6">&gt;();</span>   
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Bags</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span>name<span style="color:#ff79c6">;</span>       
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>Articles articles<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>        bags<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>articles<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>   
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>Articles articles<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        bags<span style="color:#ff79c6">.</span><span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>articles<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">float</span> <span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd">float</span> s <span style="color:#ff79c6">=</span> 0<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">for</span><span style="color:#ff79c6">(</span>Object bag <span style="color:#ff79c6">:</span> bags<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            s <span style="color:#ff79c6">+=</span> <span style="color:#ff79c6">((</span>Articles<span style="color:#ff79c6">)</span>bag<span style="color:#ff79c6">).</span><span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> s<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">show</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">for</span><span style="color:#ff79c6">(</span>Object bag <span style="color:#ff79c6">:</span> bags<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">((</span>Articles<span style="color:#ff79c6">)</span>bag<span style="color:#ff79c6">).</span><span style="color:#50fa7b">show</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>最後來使用看看我們剛建立好的程式：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ShoppingTest</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Articles bigBag<span style="color:#ff79c6">,</span> smallBag<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        Articles commodity<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        bigBag <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Bags<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Big Bag&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        smallBag <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Bags<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;small Bag&#34;</span><span style="color:#ff79c6">);</span>           
+</span></span><span style="display:flex;"><span>        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;bamboo shoot&#34;</span><span style="color:#ff79c6">,</span> 5<span style="color:#ff79c6">,</span> 20<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        smallBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;plate&#34;</span><span style="color:#ff79c6">,</span> 5<span style="color:#ff79c6">,</span> 40<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        smallBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>       
+</span></span><span style="display:flex;"><span>        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;meat&#34;</span><span style="color:#ff79c6">,</span> 10<span style="color:#ff79c6">,</span> 300<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        smallBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;seafood&#34;</span><span style="color:#ff79c6">,</span> 3<span style="color:#ff79c6">,</span> 480<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        smallBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span> 
+</span></span><span style="display:flex;"><span>        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;barbecue grill&#34;</span><span style="color:#ff79c6">,</span> 2<span style="color:#ff79c6">,</span> 199<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;charcoal&#34;</span><span style="color:#ff79c6">,</span>2<span style="color:#ff79c6">,</span> 399<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>smallBag<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;list:&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">show</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd">float</span> amount <span style="color:#ff79c6">=</span> bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">();</span>       
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;total: NT &#34;</span><span style="color:#ff79c6">+</span> amount<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>list:
 barbecue grill (quantity: 2, unitPrice: NT 199)
 charcoal (quantity: 2, unitPrice: NT 399)
 bamboo shoot (quantity: 5, unitPrice: NT 20)
@@ -591,85 +586,85 @@ total: NT 5936.0
 <h4 id=_安全式的組合模式實作>安全式的組合模式實作</h4>
 <br>
 <p>我們一樣先將Component的介面給定義出來：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Articles</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">float</span> <span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">();</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">show</span><span style="color:#ff79c6">();</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>因為現在使用的是安全組合模式，所以add即remove不需要定義在Component內。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Articles</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">float</span> <span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">show</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>因為現在使用的是安全組合模式，所以add即remove不需要定義在Component內。</p>
 <br>
 <p>接著建立肉類海鮮等等的類別Leaf來實作Component：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Commodity</span> <span style="color:#8be9fd;font-style:italic">implements</span> Articles <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> String name<span style="color:#ff79c6">;</span>     
-    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> quantity<span style="color:#ff79c6">;</span>    
-    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> unitPrice<span style="color:#ff79c6">;</span> 
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Commodity</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">,</span> <span style="color:#8be9fd">int</span> quantity<span style="color:#ff79c6">,</span> <span style="color:#8be9fd">int</span> unitPrice<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span>name<span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">quantity</span><span style="color:#ff79c6">=</span>quantity<span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">unitPrice</span><span style="color:#ff79c6">=</span>unitPrice<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>   
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">float</span> <span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">return</span> quantity <span style="color:#ff79c6">*</span> unitPrice<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">show</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>name <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34; (quantity: &#34;</span><span style="color:#ff79c6">+</span>quantity<span style="color:#ff79c6">+</span><span style="color:#f1fa8c">&#34;, unitPrice: NT &#34;</span><span style="color:#ff79c6">+</span>unitPrice<span style="color:#ff79c6">+</span><span style="color:#f1fa8c">&#34;)&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>由於Component內已經沒有add與remove了，所以Leaf內也不在需要實作這兩個Function。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Commodity</span> <span style="color:#8be9fd;font-style:italic">implements</span> Articles <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> String name<span style="color:#ff79c6">;</span>     
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> quantity<span style="color:#ff79c6">;</span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> unitPrice<span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Commodity</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">,</span> <span style="color:#8be9fd">int</span> quantity<span style="color:#ff79c6">,</span> <span style="color:#8be9fd">int</span> unitPrice<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span>name<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">quantity</span><span style="color:#ff79c6">=</span>quantity<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">unitPrice</span><span style="color:#ff79c6">=</span>unitPrice<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>   
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">float</span> <span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> quantity <span style="color:#ff79c6">*</span> unitPrice<span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">show</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span>name <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34; (quantity: &#34;</span><span style="color:#ff79c6">+</span>quantity<span style="color:#ff79c6">+</span><span style="color:#f1fa8c">&#34;, unitPrice: NT &#34;</span><span style="color:#ff79c6">+</span>unitPrice<span style="color:#ff79c6">+</span><span style="color:#f1fa8c">&#34;)&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>由於Component內已經沒有add與remove了，所以Leaf內也不在需要實作這兩個Function。</p>
 <p>下一步就是將購物袋Composite給建立起來：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bags</span> <span style="color:#8be9fd;font-style:italic">implements</span> Articles<span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> String name<span style="color:#ff79c6">;</span>        
-    <span style="color:#8be9fd;font-style:italic">private</span> ArrayList<span style="color:#ff79c6">&lt;</span>Articles<span style="color:#ff79c6">&gt;</span> bags<span style="color:#ff79c6">=</span><span style="color:#ff79c6">new</span> ArrayList<span style="color:#ff79c6">&lt;</span>Articles<span style="color:#ff79c6">&gt;();</span>   
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Bags</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span>name<span style="color:#ff79c6">;</span>       
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>Articles articles<span style="color:#ff79c6">){</span>
-        bags<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>articles<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>   
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>Articles articles<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        bags<span style="color:#ff79c6">.</span><span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>articles<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">float</span> <span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#8be9fd">float</span> s <span style="color:#ff79c6">=</span> 0<span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">for</span><span style="color:#ff79c6">(</span>Object bag <span style="color:#ff79c6">:</span> bags<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-            s <span style="color:#ff79c6">+=</span> <span style="color:#ff79c6">((</span>Articles<span style="color:#ff79c6">)</span>bag<span style="color:#ff79c6">).</span><span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">();</span>
-        <span style="color:#ff79c6">}</span>
-        <span style="color:#ff79c6">return</span> s<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">show</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">for</span><span style="color:#ff79c6">(</span>Object bag <span style="color:#ff79c6">:</span> bags<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-            <span style="color:#ff79c6">((</span>Articles<span style="color:#ff79c6">)</span>bag<span style="color:#ff79c6">).</span><span style="color:#50fa7b">show</span><span style="color:#ff79c6">();</span>
-        <span style="color:#ff79c6">}</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>這部分並沒有差別</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bags</span> <span style="color:#8be9fd;font-style:italic">implements</span> Articles<span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> String name<span style="color:#ff79c6">;</span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> ArrayList<span style="color:#ff79c6">&lt;</span>Articles<span style="color:#ff79c6">&gt;</span> bags<span style="color:#ff79c6">=</span><span style="color:#ff79c6">new</span> ArrayList<span style="color:#ff79c6">&lt;</span>Articles<span style="color:#ff79c6">&gt;();</span>   
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Bags</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span>name<span style="color:#ff79c6">;</span>       
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>Articles articles<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>        bags<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>articles<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>   
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>Articles articles<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        bags<span style="color:#ff79c6">.</span><span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>articles<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">float</span> <span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd">float</span> s <span style="color:#ff79c6">=</span> 0<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">for</span><span style="color:#ff79c6">(</span>Object bag <span style="color:#ff79c6">:</span> bags<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            s <span style="color:#ff79c6">+=</span> <span style="color:#ff79c6">((</span>Articles<span style="color:#ff79c6">)</span>bag<span style="color:#ff79c6">).</span><span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> s<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">show</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">for</span><span style="color:#ff79c6">(</span>Object bag <span style="color:#ff79c6">:</span> bags<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">((</span>Articles<span style="color:#ff79c6">)</span>bag<span style="color:#ff79c6">).</span><span style="color:#50fa7b">show</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>這部分並沒有差別</p>
 <p>最後一樣來使用看看我們剛建立好的程式：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ShoppingTest</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        Bags bigBag<span style="color:#ff79c6">,</span> smallBag<span style="color:#ff79c6">;</span>  <span style="color:#6272a4">// 更改
-</span><span style="color:#6272a4"></span>        Commodity commodity<span style="color:#ff79c6">;</span>    <span style="color:#6272a4">// 更改
-</span><span style="color:#6272a4"></span>        bigBag <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Bags<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Big Bag&#34;</span><span style="color:#ff79c6">);</span>
-        smallBag <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Bags<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;small Bag&#34;</span><span style="color:#ff79c6">);</span>           
-        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;bamboo shoot&#34;</span><span style="color:#ff79c6">,</span> 5<span style="color:#ff79c6">,</span> 20<span style="color:#ff79c6">);</span>
-        smallBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>
-        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;plate&#34;</span><span style="color:#ff79c6">,</span> 5<span style="color:#ff79c6">,</span> 40<span style="color:#ff79c6">);</span>
-        smallBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>       
-        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;meat&#34;</span><span style="color:#ff79c6">,</span> 10<span style="color:#ff79c6">,</span> 300<span style="color:#ff79c6">);</span>
-        smallBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>
-        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;seafood&#34;</span><span style="color:#ff79c6">,</span> 3<span style="color:#ff79c6">,</span> 480<span style="color:#ff79c6">);</span>
-        smallBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span> 
-        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;barbecue grill&#34;</span><span style="color:#ff79c6">,</span> 2<span style="color:#ff79c6">,</span> 199<span style="color:#ff79c6">);</span>
-        bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>
-        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;charcoal&#34;</span><span style="color:#ff79c6">,</span>2<span style="color:#ff79c6">,</span> 399<span style="color:#ff79c6">);</span>
-        bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>
-        bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>smallBag<span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;list:&#34;</span><span style="color:#ff79c6">);</span>
-        bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">show</span><span style="color:#ff79c6">();</span>
-        <span style="color:#8be9fd">float</span> amount <span style="color:#ff79c6">=</span> bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">();</span>       
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;total: NT &#34;</span><span style="color:#ff79c6">+</span> amount<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>list:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ShoppingTest</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Bags bigBag<span style="color:#ff79c6">,</span> smallBag<span style="color:#ff79c6">;</span>  <span style="color:#6272a4">// 更改
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        Commodity commodity<span style="color:#ff79c6">;</span>    <span style="color:#6272a4">// 更改
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        bigBag <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Bags<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Big Bag&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        smallBag <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Bags<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;small Bag&#34;</span><span style="color:#ff79c6">);</span>           
+</span></span><span style="display:flex;"><span>        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;bamboo shoot&#34;</span><span style="color:#ff79c6">,</span> 5<span style="color:#ff79c6">,</span> 20<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        smallBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;plate&#34;</span><span style="color:#ff79c6">,</span> 5<span style="color:#ff79c6">,</span> 40<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        smallBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>       
+</span></span><span style="display:flex;"><span>        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;meat&#34;</span><span style="color:#ff79c6">,</span> 10<span style="color:#ff79c6">,</span> 300<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        smallBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;seafood&#34;</span><span style="color:#ff79c6">,</span> 3<span style="color:#ff79c6">,</span> 480<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        smallBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span> 
+</span></span><span style="display:flex;"><span>        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;barbecue grill&#34;</span><span style="color:#ff79c6">,</span> 2<span style="color:#ff79c6">,</span> 199<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        commodity <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Commodity<span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;charcoal&#34;</span><span style="color:#ff79c6">,</span>2<span style="color:#ff79c6">,</span> 399<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>commodity<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>smallBag<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;list:&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">show</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd">float</span> amount <span style="color:#ff79c6">=</span> bigBag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">calculation</span><span style="color:#ff79c6">();</span>       
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;total: NT &#34;</span><span style="color:#ff79c6">+</span> amount<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>list:
 barbecue grill (quantity: 2, unitPrice: NT 199)
 charcoal (quantity: 2, unitPrice: NT 399)
 bamboo shoot (quantity: 5, unitPrice: NT 20)
@@ -800,7 +795,7 @@ Composite 樹枝構件：
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -1151,7 +1146,7 @@ Composite 樹枝構件：
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/ianlife/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	
-	<sitemap>
-	   	<loc>https://ianjustin39.github.io/ianlife/en/sitemap.xml</loc>
-		
-	   	<lastmod>2020-05-01T00:00:00+00:00</lastmod>
-		
-	</sitemap>
-	
-	<sitemap>
-	   	<loc>https://ianjustin39.github.io/ianlife/zh/sitemap.xml</loc>
-		
-	   	<lastmod>2022-05-12T00:00:00+00:00</lastmod>
-		
-	</sitemap>
-	
+  
+  <sitemap>
+    <loc>https://ianjustin39.github.io/ianlife/en/sitemap.xml</loc>
+    
+      <lastmod>2020-05-01T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://ianjustin39.github.io/ianlife/zh/sitemap.xml</loc>
+    
+      <lastmod>2022-07-27T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
 </sitemapindex>

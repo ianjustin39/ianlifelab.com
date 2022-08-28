@@ -75,22 +75,17 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="原型模式 | Prototype Pattern">
-<meta itemprop="description" content="建立原型物件，透過複製的方式建立大量物件，而非傳統的建立方式。這為原型模式主張的目標，不但能提升效能，也隱藏了創建新物件的復雜性。">
-<meta itemprop="datePublished" content="2020-09-21T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-09-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="807">
-<meta itemprop="image" content="https://i.imgur.com/9jF8Qym.png">
-
-
-
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="原型模式 | Prototype Pattern">
+<meta itemprop="description" content="建立原型物件，透過複製的方式建立大量物件，而非傳統的建立方式。這為原型模式主張的目標，不但能提升效能，也隱藏了創建新物件的復雜性。"><meta itemprop="datePublished" content="2020-09-21T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-09-21T00:00:00+00:00" />
+<meta itemprop="wordCount" content="696"><meta itemprop="image" content="https://i.imgur.com/9jF8Qym.png">
 <meta itemprop="keywords" content="Design Pattern,Creational Pattern,鐵人賽," /><meta property="og:title" content="原型模式 | Prototype Pattern" />
 <meta property="og:description" content="建立原型物件，透過複製的方式建立大量物件，而非傳統的建立方式。這為原型模式主張的目標，不但能提升效能，也隱藏了創建新物件的復雜性。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/prototype-pattern/" />
-<meta property="og:image" content="https://i.imgur.com/9jF8Qym.png" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/prototype-pattern/" /><meta property="og:image" content="https://i.imgur.com/9jF8Qym.png" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-09-21T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-09-21T00:00:00+00:00" />
+
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.imgur.com/9jF8Qym.png"/>
@@ -98,7 +93,7 @@ if (!doNotTrack) {
 <meta name="twitter:title" content="原型模式 | Prototype Pattern"/>
 <meta name="twitter:description" content="建立原型物件，透過複製的方式建立大量物件，而非傳統的建立方式。這為原型模式主張的目標，不但能提升效能，也隱藏了創建新物件的復雜性。"/>
 <meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
@@ -109,7 +104,7 @@ if (!doNotTrack) {
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ianlife/">
+      <a href="/">
         
           <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
         
@@ -247,7 +242,7 @@ if (!doNotTrack) {
         <article class="post">
   <header>
   <div class="title">
-    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    <a href="/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
     
     <h3><a href="/ianlife/design-pattern/prototype-pattern/">原型模式 | Prototype Pattern</a></h3>
     
@@ -396,22 +391,22 @@ if (!doNotTrack) {
 <table>
 <thead>
 <tr>
-<th align="left">成員</th>
-<th align="left">功用</th>
+<th style="text-align:left">成員</th>
+<th style="text-align:left">功用</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Prototype</td>
-<td align="left">定義實體原型物件必須實作的介面。</td>
+<td style="text-align:left">Prototype</td>
+<td style="text-align:left">定義實體原型物件必須實作的介面。</td>
 </tr>
 <tr>
-<td align="left">ConcretePrototype</td>
-<td align="left">實作抽象介面的clone()方法，為可被複製的對象。</td>
+<td style="text-align:left">ConcretePrototype</td>
+<td style="text-align:left">實作抽象介面的clone()方法，為可被複製的對象。</td>
 </tr>
 <tr>
-<td align="left">Client</td>
-<td align="left">使用ConcretePrototype中的clone()來複製新的物件。</td>
+<td style="text-align:left">Client</td>
+<td style="text-align:left">使用ConcretePrototype中的clone()來複製新的物件。</td>
 </tr>
 </tbody>
 </table>
@@ -507,90 +502,90 @@ v2 -up- p2;
 <p><code>多重影分身之術～～～～</code></p>
 <p>相信大家都有看過火影忍者，沒看過的話，可以看一下ＸＤ</p>
 <p>個人主觀認為，影分身拿來舉這個例子應該滿適合的。鳴人（以下稱拿嚕頭）使用影分身，複製出多個拿嚕頭。藉由影分身修煉的經驗值回到本體身上。他身上的查克拉就很像基本數據類型；而經驗值則是引用類型。所以我們來看看拿嚕頭到底是怎樣使用影分身的。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">NARUTO</span> <span style="color:#8be9fd;font-style:italic">implements</span> Cloneable <span style="color:#ff79c6">{</span>
-    NARUTO<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO create success！&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">clone</span><span style="color:#ff79c6">()</span> <span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException<span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO clone success&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">(</span>NARUTO<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SHADOW_CLONE_JUTSU</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException
-    <span style="color:#ff79c6">{</span>
-        NARUTO naruto <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> NARUTO<span style="color:#ff79c6">();</span>
-        NARUTO cloneNaruto<span style="color:#ff79c6">=(</span>NARUTO<span style="color:#ff79c6">)</span>naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO == clone NARUTO : &#34;</span> <span style="color:#ff79c6">+</span> <span style="color:#ff79c6">(</span>naruto<span style="color:#ff79c6">==</span>cloneNaruto<span style="color:#ff79c6">));</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>NARUTO create success
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">NARUTO</span> <span style="color:#8be9fd;font-style:italic">implements</span> Cloneable <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    NARUTO<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO create success！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">clone</span><span style="color:#ff79c6">()</span> <span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException<span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO clone success&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">(</span>NARUTO<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SHADOW_CLONE_JUTSU</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        NARUTO naruto <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> NARUTO<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        NARUTO cloneNaruto<span style="color:#ff79c6">=(</span>NARUTO<span style="color:#ff79c6">)</span>naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO == clone NARUTO : &#34;</span> <span style="color:#ff79c6">+</span> <span style="color:#ff79c6">(</span>naruto<span style="color:#ff79c6">==</span>cloneNaruto<span style="color:#ff79c6">));</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>NARUTO create success
 NARUTO clone success
 NARUTO == clone NARUTO : false
 </code></pre><p>class NARUTO先實作Cloneable（java.lang.Cloneable，這邊就不多做解釋），然後複寫其內部的clone()。接著clinet將拿嚕頭建立起來後，還需要多個拿嚕頭。就使用NARUTO內的clone，就會有許多的拿嚕頭被複製出來。而這些拿嚕頭在經過比對後，都是一個獨立的物件，並非同一個。</p>
 <p>而現在我們要讓影分身也有個地方住，所以我們增加了一個Address的類別。並將那方到NARUTO類別內。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Address</span>  <span style="color:#ff79c6">{</span>  
-    <span style="color:#8be9fd;font-style:italic">private</span> String addr<span style="color:#ff79c6">;</span>  
-    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">get</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>  
-        <span style="color:#ff79c6">return</span> addr<span style="color:#ff79c6">;</span>  
-    <span style="color:#ff79c6">}</span>  
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span>String addr<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>  
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">addr</span> <span style="color:#ff79c6">=</span> addr<span style="color:#ff79c6">;</span>  
-    <span style="color:#ff79c6">}</span>  
-<span style="color:#ff79c6">}</span> 
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">NARUTO</span> <span style="color:#8be9fd;font-style:italic">implements</span> Cloneable <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> Address addr<span style="color:#ff79c6">;</span>  
-
-    NARUTO<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO create success！&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> Address <span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>  
-        <span style="color:#ff79c6">return</span> addr<span style="color:#ff79c6">;</span>  
-    <span style="color:#ff79c6">}</span>  
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setAddr</span><span style="color:#ff79c6">(</span>Address addr<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>  
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">addr</span> <span style="color:#ff79c6">=</span> addr<span style="color:#ff79c6">;</span>  
-    <span style="color:#ff79c6">}</span>  
-    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">clone</span><span style="color:#ff79c6">()</span> <span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException<span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO clone success&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">(</span>NARUTO<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SHADOW_CLONE_JUTSU</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException
-    <span style="color:#ff79c6">{</span>
-        Address addr <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Address<span style="color:#ff79c6">();</span>
-        addr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Konohagakure&#34;</span><span style="color:#ff79c6">);</span>
-        NARUTO naruto <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> NARUTO<span style="color:#ff79c6">();</span>
-        naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setAddr</span><span style="color:#ff79c6">(</span>addr<span style="color:#ff79c6">);</span>
-        NARUTO cloneNaruto<span style="color:#ff79c6">=(</span>NARUTO<span style="color:#ff79c6">)</span>naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO address : &#34;</span> <span style="color:#ff79c6">+</span> naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;cloneNaruto address : &#34;</span> <span style="color:#ff79c6">+</span> cloneNaruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>NARUTO create success！
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Address</span>  <span style="color:#ff79c6">{</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> String addr<span style="color:#ff79c6">;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">get</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> addr<span style="color:#ff79c6">;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span>String addr<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">addr</span> <span style="color:#ff79c6">=</span> addr<span style="color:#ff79c6">;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>  
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">NARUTO</span> <span style="color:#8be9fd;font-style:italic">implements</span> Cloneable <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> Address addr<span style="color:#ff79c6">;</span>  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    NARUTO<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO create success！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> Address <span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> addr<span style="color:#ff79c6">;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setAddr</span><span style="color:#ff79c6">(</span>Address addr<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">addr</span> <span style="color:#ff79c6">=</span> addr<span style="color:#ff79c6">;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">clone</span><span style="color:#ff79c6">()</span> <span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException<span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO clone success&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">(</span>NARUTO<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SHADOW_CLONE_JUTSU</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Address addr <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Address<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        addr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Konohagakure&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        NARUTO naruto <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> NARUTO<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setAddr</span><span style="color:#ff79c6">(</span>addr<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        NARUTO cloneNaruto<span style="color:#ff79c6">=(</span>NARUTO<span style="color:#ff79c6">)</span>naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO address : &#34;</span> <span style="color:#ff79c6">+</span> naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;cloneNaruto address : &#34;</span> <span style="color:#ff79c6">+</span> cloneNaruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>NARUTO create success！
 NARUTO clone success
 NARUTO address : Konohagakure
 cloneNaruto address : Konohagakure
 </code></pre><p>一樣我們使用了影分身。乍看之下，好像沒啥不對勁。那如果今天拿嚕頭本體要搬家，他想住到台北。於是我們新增addr.set(&ldquo;Taipei&rdquo;);</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SHADOW_CLONE_JUTSU</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException
-    <span style="color:#ff79c6">{</span>
-        Address addr <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Address<span style="color:#ff79c6">();</span>
-        addr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Konohagakure&#34;</span><span style="color:#ff79c6">);</span>
-        NARUTO naruto <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> NARUTO<span style="color:#ff79c6">();</span>
-        naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setAddr</span><span style="color:#ff79c6">(</span>addr<span style="color:#ff79c6">);</span>
-        NARUTO cloneNaruto<span style="color:#ff79c6">=(</span>NARUTO<span style="color:#ff79c6">)</span>naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO address : &#34;</span> <span style="color:#ff79c6">+</span> naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;cloneNaruto address : &#34;</span> <span style="color:#ff79c6">+</span> cloneNaruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
-        addr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Taipei&#34;</span><span style="color:#ff79c6">);</span>   <span style="color:#6272a4">// 新增
-</span><span style="color:#6272a4"></span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO address : &#34;</span> <span style="color:#ff79c6">+</span> naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;cloneNaruto address : &#34;</span> <span style="color:#ff79c6">+</span> cloneNaruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>NARUTO create success！
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SHADOW_CLONE_JUTSU</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Address addr <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Address<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        addr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Konohagakure&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        NARUTO naruto <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> NARUTO<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setAddr</span><span style="color:#ff79c6">(</span>addr<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        NARUTO cloneNaruto<span style="color:#ff79c6">=(</span>NARUTO<span style="color:#ff79c6">)</span>naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO address : &#34;</span> <span style="color:#ff79c6">+</span> naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;cloneNaruto address : &#34;</span> <span style="color:#ff79c6">+</span> cloneNaruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>        addr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Taipei&#34;</span><span style="color:#ff79c6">);</span>   <span style="color:#6272a4">// 新增
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO address : &#34;</span> <span style="color:#ff79c6">+</span> naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;cloneNaruto address : &#34;</span> <span style="color:#ff79c6">+</span> cloneNaruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>NARUTO create success！
 NARUTO clone success
 NARUTO address : Konohagakure
 cloneNaruto address : Konohagakure
@@ -598,54 +593,54 @@ NARUTO address : Taipei
 cloneNaruto address : Taipei
 </code></pre><p>印出來發現，怎們分身也搬到台北了？原因是因為剛剛做的都是淺複製。之前有提到，淺複製對於引用類型不會複製一個到新的物件中。而Address是一個類別，為引用類型，所以如果按照上述的需求，我們必須要用深複製才可以達到目的。</p>
 <p>我們先將Address的內容變得可複製，並修改clone內部的實作如下。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Address</span> <span style="color:#8be9fd;font-style:italic">implements</span> Cloneable <span style="color:#ff79c6">{</span>   <span style="color:#6272a4">// 修改：實作Cloneable
-</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">private</span> String addr<span style="color:#ff79c6">;</span>  
-    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">get</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>  
-        <span style="color:#ff79c6">return</span> addr<span style="color:#ff79c6">;</span>  
-    <span style="color:#ff79c6">}</span>  
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span>String addr<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>  
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">addr</span> <span style="color:#ff79c6">=</span> addr<span style="color:#ff79c6">;</span>  
-    <span style="color:#ff79c6">}</span>  
-    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">clone</span><span style="color:#ff79c6">()</span> <span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException<span style="color:#ff79c6">{</span>  <span style="color:#6272a4">// 新增：複寫clone
-</span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">(</span>Address<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span> 
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">NARUTO</span> <span style="color:#8be9fd;font-style:italic">implements</span> Cloneable <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> Address addr<span style="color:#ff79c6">;</span>  
-
-    NARUTO<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO create success！&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> Address <span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>  
-        <span style="color:#ff79c6">return</span> addr<span style="color:#ff79c6">;</span>  
-    <span style="color:#ff79c6">}</span>  
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setAddr</span><span style="color:#ff79c6">(</span>Address addr<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>  
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">addr</span> <span style="color:#ff79c6">=</span> addr<span style="color:#ff79c6">;</span>  
-    <span style="color:#ff79c6">}</span>  
-    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">clone</span><span style="color:#ff79c6">()</span> <span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException<span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO clone success&#34;</span><span style="color:#ff79c6">);</span>
-        NARUTO naruto <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">(</span>NARUTO<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
-        naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">addr</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">(</span>Address<span style="color:#ff79c6">)</span>addr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span> <span style="color:#6272a4">// 新增addr的clone
-</span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">return</span> naruto<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SHADOW_CLONE_JUTSU</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException
-    <span style="color:#ff79c6">{</span>
-        Address addr <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Address<span style="color:#ff79c6">();</span>
-        addr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Konohagakure&#34;</span><span style="color:#ff79c6">);</span>
-        NARUTO naruto <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> NARUTO<span style="color:#ff79c6">();</span>
-        naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setAddr</span><span style="color:#ff79c6">(</span>addr<span style="color:#ff79c6">);</span>
-        NARUTO cloneNaruto<span style="color:#ff79c6">=(</span>NARUTO<span style="color:#ff79c6">)</span>naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO address : &#34;</span> <span style="color:#ff79c6">+</span> naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;cloneNaruto address : &#34;</span> <span style="color:#ff79c6">+</span> cloneNaruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
-        addr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Taipei&#34;</span><span style="color:#ff79c6">);</span>   
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO address : &#34;</span> <span style="color:#ff79c6">+</span> naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;cloneNaruto address : &#34;</span> <span style="color:#ff79c6">+</span> cloneNaruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>NARUTO create success！
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Address</span> <span style="color:#8be9fd;font-style:italic">implements</span> Cloneable <span style="color:#ff79c6">{</span>   <span style="color:#6272a4">// 修改：實作Cloneable
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">private</span> String addr<span style="color:#ff79c6">;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> String <span style="color:#50fa7b">get</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> addr<span style="color:#ff79c6">;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span>String addr<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">addr</span> <span style="color:#ff79c6">=</span> addr<span style="color:#ff79c6">;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">clone</span><span style="color:#ff79c6">()</span> <span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException<span style="color:#ff79c6">{</span>  <span style="color:#6272a4">// 新增：複寫clone
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">(</span>Address<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">NARUTO</span> <span style="color:#8be9fd;font-style:italic">implements</span> Cloneable <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> Address addr<span style="color:#ff79c6">;</span>  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    NARUTO<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO create success！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> Address <span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> addr<span style="color:#ff79c6">;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setAddr</span><span style="color:#ff79c6">(</span>Address addr<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">addr</span> <span style="color:#ff79c6">=</span> addr<span style="color:#ff79c6">;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">clone</span><span style="color:#ff79c6">()</span> <span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException<span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO clone success&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        NARUTO naruto <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">(</span>NARUTO<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">addr</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">(</span>Address<span style="color:#ff79c6">)</span>addr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span> <span style="color:#6272a4">// 新增addr的clone
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">return</span> naruto<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">SHADOW_CLONE_JUTSU</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span><span style="color:#8be9fd;font-style:italic">throws</span> CloneNotSupportedException
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Address addr <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Address<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        addr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Konohagakure&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        NARUTO naruto <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> NARUTO<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setAddr</span><span style="color:#ff79c6">(</span>addr<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        NARUTO cloneNaruto<span style="color:#ff79c6">=(</span>NARUTO<span style="color:#ff79c6">)</span>naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">clone</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO address : &#34;</span> <span style="color:#ff79c6">+</span> naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;cloneNaruto address : &#34;</span> <span style="color:#ff79c6">+</span> cloneNaruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>        addr<span style="color:#ff79c6">.</span><span style="color:#50fa7b">set</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Taipei&#34;</span><span style="color:#ff79c6">);</span>   
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;NARUTO address : &#34;</span> <span style="color:#ff79c6">+</span> naruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;cloneNaruto address : &#34;</span> <span style="color:#ff79c6">+</span> cloneNaruto<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getAddr</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>NARUTO create success！
 NARUTO clone success
 NARUTO address : Konohagakure
 cloneNaruto address : Konohagakure
@@ -766,7 +761,7 @@ Client :  使用ConcretePrototype中的clone()來複製新的物件。
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -1057,7 +1052,7 @@ Client :  使用ConcretePrototype中的clone()來複製新的物件。
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/ianlife/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

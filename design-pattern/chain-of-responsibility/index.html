@@ -75,22 +75,17 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="責任鏈模式 | Chain of Responsibility Pattern">
-<meta itemprop="description" content="責任鏈模式就是將多個物件連成一條鏈，沿著這條鏈傳遞至每一個物件並處理請求，當這個物件沒有處理的權限時，能夠將這個請求，傳遞給下一個物件繼續處理。">
-<meta itemprop="datePublished" content="2020-09-29T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-09-29T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="556">
-<meta itemprop="image" content="https://i.imgur.com/HwGlMZU.png">
-
-
-
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="責任鏈模式 | Chain of Responsibility Pattern">
+<meta itemprop="description" content="責任鏈模式就是將多個物件連成一條鏈，沿著這條鏈傳遞至每一個物件並處理請求，當這個物件沒有處理的權限時，能夠將這個請求，傳遞給下一個物件繼續處理。"><meta itemprop="datePublished" content="2020-09-29T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-09-29T00:00:00+00:00" />
+<meta itemprop="wordCount" content="529"><meta itemprop="image" content="https://i.imgur.com/HwGlMZU.png">
 <meta itemprop="keywords" content="Design Pattern,Behavioural Pattern," /><meta property="og:title" content="責任鏈模式 | Chain of Responsibility Pattern" />
 <meta property="og:description" content="責任鏈模式就是將多個物件連成一條鏈，沿著這條鏈傳遞至每一個物件並處理請求，當這個物件沒有處理的權限時，能夠將這個請求，傳遞給下一個物件繼續處理。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/chain-of-responsibility/" />
-<meta property="og:image" content="https://i.imgur.com/HwGlMZU.png" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/chain-of-responsibility/" /><meta property="og:image" content="https://i.imgur.com/HwGlMZU.png" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-09-29T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-09-29T00:00:00+00:00" />
+
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.imgur.com/HwGlMZU.png"/>
@@ -98,7 +93,7 @@ if (!doNotTrack) {
 <meta name="twitter:title" content="責任鏈模式 | Chain of Responsibility Pattern"/>
 <meta name="twitter:description" content="責任鏈模式就是將多個物件連成一條鏈，沿著這條鏈傳遞至每一個物件並處理請求，當這個物件沒有處理的權限時，能夠將這個請求，傳遞給下一個物件繼續處理。"/>
 <meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
@@ -109,7 +104,7 @@ if (!doNotTrack) {
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ianlife/">
+      <a href="/">
         
           <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
         
@@ -247,7 +242,7 @@ if (!doNotTrack) {
         <article class="post">
   <header>
   <div class="title">
-    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    <a href="/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
     
     <h3><a href="/ianlife/design-pattern/chain-of-responsibility/">責任鏈模式 | Chain of Responsibility Pattern</a></h3>
     
@@ -410,18 +405,18 @@ if (!doNotTrack) {
 <table>
 <thead>
 <tr>
-<th align="left">成員</th>
-<th align="left">功用</th>
+<th style="text-align:left">成員</th>
+<th style="text-align:left">功用</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Handler</td>
-<td align="left">定義一個處理請求的接口，包含抽象處理方法及後續方法。</td>
+<td style="text-align:left">Handler</td>
+<td style="text-align:left">定義一個處理請求的接口，包含抽象處理方法及後續方法。</td>
 </tr>
 <tr>
-<td align="left">ConcreteHandler</td>
-<td align="left">實作Handler的處理方法，判斷是否可以處理這次的請求，可以則處理，不行則往後傳。</td>
+<td style="text-align:left">ConcreteHandler</td>
+<td style="text-align:left">實作Handler的處理方法，判斷是否可以處理這次的請求，可以則處理，不行則往後傳。</td>
 </tr>
 </tbody>
 </table>
@@ -465,121 +460,121 @@ ConcreteHandler3 : next;
 <hr>
 <p>了解完責任鏈的定義及架構後，現在來實作責任鏈模式。</p>
 <p>首先就是建立抽象類別Handler，在內部定義好處理請求的方法其其餘的功能。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#6272a4">//抽象處理者：大領導類
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Leader</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> Leader next<span style="color:#ff79c6">;</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> String name<span style="color:#ff79c6">;</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Leader</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">){</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">name</span> <span style="color:#ff79c6">=</span> name<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setNext</span><span style="color:#ff79c6">(</span>Leader next<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">next</span> <span style="color:#ff79c6">=</span> next<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> Leader <span style="color:#50fa7b">getNext</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">return</span> next<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>   
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">leaveSuccessed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> LeaveDays<span style="color:#ff79c6">){</span>
-            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">name</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34; approve your &#34;</span> <span style="color:#ff79c6">+</span> LeaveDays <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34; days leave.&#34;</span><span style="color:#ff79c6">);</span>   
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">leaveFailed</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;There are too many days of leave, no one approved the leave slip!&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#6272a4">// 處理請求的方法
-</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> LeaveDays<span style="color:#ff79c6">);</span>       
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>接著ConcreteHandler實作Handler，並在剛剛定義的方法內實作邏輯，每個主管級的權限不同，所以個邏輯也不同。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">//實體處理者1：團隊經理
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">TeamManager</span> <span style="color:#8be9fd;font-style:italic">extends</span> Leader <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">TeamManager</span><span style="color:#ff79c6">(){</span>
-        <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;TeamManager&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> LeaveDays<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span>LeaveDays <span style="color:#ff79c6">&lt;=</span> 7<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-            <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">leaveSuccessed</span><span style="color:#ff79c6">(</span>LeaveDays<span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">}</span>
-        <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
-            <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>getNext<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-                getNext<span style="color:#ff79c6">().</span><span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span>LeaveDays<span style="color:#ff79c6">);</span>             
-            <span style="color:#ff79c6">}</span>
-            <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
-                  <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">leaveFailed</span><span style="color:#ff79c6">();</span>
-            <span style="color:#ff79c6">}</span>
-        <span style="color:#ff79c6">}</span> 
-    <span style="color:#ff79c6">}</span> 
-<span style="color:#ff79c6">}</span>
-<span style="color:#6272a4">//實體處理者2：部門經理
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">DepartmentManager</span> <span style="color:#8be9fd;font-style:italic">extends</span> Leader <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">DepartmentManager</span><span style="color:#ff79c6">(){</span>
-        <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;DepartmentManager&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> LeaveDays<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span>LeaveDays <span style="color:#ff79c6">&lt;=</span> 10<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-            <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">leaveSuccessed</span><span style="color:#ff79c6">(</span>LeaveDays<span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">}</span>
-        <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
-            <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span>getNext<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">)</span>  <span style="color:#ff79c6">{</span>
-                  getNext<span style="color:#ff79c6">().</span><span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span>LeaveDays<span style="color:#ff79c6">);</span>             
-            <span style="color:#ff79c6">}</span>
-            <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
-                  <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">leaveFailed</span><span style="color:#ff79c6">();</span>
-           <span style="color:#ff79c6">}</span>
-        <span style="color:#ff79c6">}</span> 
-    <span style="color:#ff79c6">}</span> 
-<span style="color:#ff79c6">}</span>
-<span style="color:#6272a4">//實體處理者3：院长类
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">TechnicalDirector</span> <span style="color:#8be9fd;font-style:italic">extends</span> Leader <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">TechnicalDirector</span><span style="color:#ff79c6">(){</span>
-        <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;TechnicalDirector&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> LeaveDays<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span>LeaveDays <span style="color:#ff79c6">&lt;=</span> 15<span style="color:#ff79c6">)</span>  <span style="color:#ff79c6">{</span>
-            <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">leaveSuccessed</span><span style="color:#ff79c6">(</span>LeaveDays<span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">}</span>
-        <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
-            <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span>getNext<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-                getNext<span style="color:#ff79c6">().</span><span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span>LeaveDays<span style="color:#ff79c6">);</span>             
-            <span style="color:#ff79c6">}</span>
-            <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
-                  <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">leaveFailed</span><span style="color:#ff79c6">();</span>
-            <span style="color:#ff79c6">}</span>
-        <span style="color:#ff79c6">}</span> 
-    <span style="color:#ff79c6">}</span> 
-<span style="color:#ff79c6">}</span>
-<span style="color:#6272a4">//實體處理者4：技術長
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">CTO</span> <span style="color:#8be9fd;font-style:italic">extends</span> Leader<span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">CTO</span><span style="color:#ff79c6">(){</span>
-        <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;CTO&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> LeaveDays<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span>LeaveDays <span style="color:#ff79c6">&lt;=</span> 20<span style="color:#ff79c6">)</span>  <span style="color:#ff79c6">{</span>
-            <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">leaveSuccessed</span><span style="color:#ff79c6">(</span>LeaveDays<span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">}</span>
-        <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
-            <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span>getNext<span style="color:#ff79c6">()!=</span><span style="color:#ff79c6">null</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-                getNext<span style="color:#ff79c6">().</span><span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span>LeaveDays<span style="color:#ff79c6">);</span>          
-            <span style="color:#ff79c6">}</span>
-            <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
-                  <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">leaveFailed</span><span style="color:#ff79c6">();</span>
-            <span style="color:#ff79c6">}</span>
-        <span style="color:#ff79c6">}</span> 
-    <span style="color:#ff79c6">}</span> 
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>最後在Client端就是把責任鏈組裝起來，比方說員工要請假，會先經由團隊經理審核，但天數太長的話，團隊經理權限不夠，任務只好往部門經理傳下去，以此類推。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LeaveApproval</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#6272a4">//組裝責任練 
-</span><span style="color:#6272a4"></span>        Leader teamManager <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> TeamManager<span style="color:#ff79c6">();</span>
-        Leader departmentManager <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> DepartmentManager<span style="color:#ff79c6">();</span>
-        Leader technicalDirector <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> TechnicalDirector<span style="color:#ff79c6">();</span>
-        teamManager<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setNext</span><span style="color:#ff79c6">(</span>departmentManager<span style="color:#ff79c6">);</span>
-        departmentManager<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setNext</span><span style="color:#ff79c6">(</span>technicalDirector<span style="color:#ff79c6">);</span>
-        <span style="color:#6272a4">//提交請求
-</span><span style="color:#6272a4"></span>        teamManager<span style="color:#ff79c6">.</span><span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span>8<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>DepartmentManager approve your 8 days leave.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//抽象處理者：大領導類
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Leader</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> Leader next<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> String name<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Leader</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">name</span> <span style="color:#ff79c6">=</span> name<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setNext</span><span style="color:#ff79c6">(</span>Leader next<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">next</span> <span style="color:#ff79c6">=</span> next<span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> Leader <span style="color:#50fa7b">getNext</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> next<span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>   
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">leaveSuccessed</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> LeaveDays<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">name</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34; approve your &#34;</span> <span style="color:#ff79c6">+</span> LeaveDays <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34; days leave.&#34;</span><span style="color:#ff79c6">);</span>   
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">leaveFailed</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;There are too many days of leave, no one approved the leave slip!&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 處理請求的方法
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> LeaveDays<span style="color:#ff79c6">);</span>       
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>接著ConcreteHandler實作Handler，並在剛剛定義的方法內實作邏輯，每個主管級的權限不同，所以個邏輯也不同。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#6272a4">//實體處理者1：團隊經理
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">TeamManager</span> <span style="color:#8be9fd;font-style:italic">extends</span> Leader <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">TeamManager</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;TeamManager&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> LeaveDays<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span>LeaveDays <span style="color:#ff79c6">&lt;=</span> 7<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">leaveSuccessed</span><span style="color:#ff79c6">(</span>LeaveDays<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>getNext<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>                getNext<span style="color:#ff79c6">().</span><span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span>LeaveDays<span style="color:#ff79c6">);</span>             
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">leaveFailed</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//實體處理者2：部門經理
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">DepartmentManager</span> <span style="color:#8be9fd;font-style:italic">extends</span> Leader <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">DepartmentManager</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;DepartmentManager&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> LeaveDays<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span>LeaveDays <span style="color:#ff79c6">&lt;=</span> 10<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">leaveSuccessed</span><span style="color:#ff79c6">(</span>LeaveDays<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span>getNext<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">)</span>  <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>                  getNext<span style="color:#ff79c6">().</span><span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span>LeaveDays<span style="color:#ff79c6">);</span>             
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">leaveFailed</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>           <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//實體處理者3：院长类
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">TechnicalDirector</span> <span style="color:#8be9fd;font-style:italic">extends</span> Leader <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">TechnicalDirector</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;TechnicalDirector&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> LeaveDays<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span>LeaveDays <span style="color:#ff79c6">&lt;=</span> 15<span style="color:#ff79c6">)</span>  <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">leaveSuccessed</span><span style="color:#ff79c6">(</span>LeaveDays<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span>getNext<span style="color:#ff79c6">()</span> <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>                getNext<span style="color:#ff79c6">().</span><span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span>LeaveDays<span style="color:#ff79c6">);</span>             
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">leaveFailed</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">//實體處理者4：技術長
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">CTO</span> <span style="color:#8be9fd;font-style:italic">extends</span> Leader<span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">CTO</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">super</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;CTO&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> LeaveDays<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span>LeaveDays <span style="color:#ff79c6">&lt;=</span> 20<span style="color:#ff79c6">)</span>  <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">leaveSuccessed</span><span style="color:#ff79c6">(</span>LeaveDays<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span>getNext<span style="color:#ff79c6">()!=</span><span style="color:#ff79c6">null</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>                getNext<span style="color:#ff79c6">().</span><span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span>LeaveDays<span style="color:#ff79c6">);</span>          
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">leaveFailed</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>最後在Client端就是把責任鏈組裝起來，比方說員工要請假，會先經由團隊經理審核，但天數太長的話，團隊經理權限不夠，任務只好往部門經理傳下去，以此類推。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">LeaveApproval</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">//組裝責任練 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        Leader teamManager <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> TeamManager<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        Leader departmentManager <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> DepartmentManager<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        Leader technicalDirector <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> TechnicalDirector<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        teamManager<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setNext</span><span style="color:#ff79c6">(</span>departmentManager<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        departmentManager<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setNext</span><span style="color:#ff79c6">(</span>technicalDirector<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">//提交請求
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        teamManager<span style="color:#ff79c6">.</span><span style="color:#50fa7b">handleRequest</span><span style="color:#ff79c6">(</span>8<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>DepartmentManager approve your 8 days leave.
 </code></pre><br>
 <br>
 <ul>
@@ -698,7 +693,7 @@ ConcreteHandler：實作Handler的處理方法，判斷是否可以處理這次�
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -989,7 +984,7 @@ ConcreteHandler：實作Handler的處理方法，判斷是否可以處理這次�
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/ianlife/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

@@ -75,22 +75,17 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="外觀模式 | Facade Pattern">
-<meta itemprop="description" content="外觀模式為子系統中的一組接口提供一個統一的高層接口，使得子系統更容易使用。比方說，當要找銀行貸款時，我們只需要找專員，而專員把我們的資料拿到後，要回銀行各部門跑流程，最後才能核貸給我們。行員就是接口，銀行各部門就是子系統。">
-<meta itemprop="datePublished" content="2020-09-26T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-09-26T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="479">
-<meta itemprop="image" content="https://i.imgur.com/LA4pFIK.png">
-
-
-
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="外觀模式 | Facade Pattern">
+<meta itemprop="description" content="外觀模式為子系統中的一組接口提供一個統一的高層接口，使得子系統更容易使用。比方說，當要找銀行貸款時，我們只需要找專員，而專員把我們的資料拿到後，要回銀行各部門跑流程，最後才能核貸給我們。行員就是接口，銀行各部門就是子系統。"><meta itemprop="datePublished" content="2020-09-26T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-09-26T00:00:00+00:00" />
+<meta itemprop="wordCount" content="401"><meta itemprop="image" content="https://i.imgur.com/LA4pFIK.png">
 <meta itemprop="keywords" content="Design Pattern,Structural Pattern," /><meta property="og:title" content="外觀模式 | Facade Pattern" />
 <meta property="og:description" content="外觀模式為子系統中的一組接口提供一個統一的高層接口，使得子系統更容易使用。比方說，當要找銀行貸款時，我們只需要找專員，而專員把我們的資料拿到後，要回銀行各部門跑流程，最後才能核貸給我們。行員就是接口，銀行各部門就是子系統。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/facede-pattern/" />
-<meta property="og:image" content="https://i.imgur.com/LA4pFIK.png" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/facede-pattern/" /><meta property="og:image" content="https://i.imgur.com/LA4pFIK.png" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-09-26T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-09-26T00:00:00+00:00" />
+
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.imgur.com/LA4pFIK.png"/>
@@ -98,7 +93,7 @@ if (!doNotTrack) {
 <meta name="twitter:title" content="外觀模式 | Facade Pattern"/>
 <meta name="twitter:description" content="外觀模式為子系統中的一組接口提供一個統一的高層接口，使得子系統更容易使用。比方說，當要找銀行貸款時，我們只需要找專員，而專員把我們的資料拿到後，要回銀行各部門跑流程，最後才能核貸給我們。行員就是接口，銀行各部門就是子系統。"/>
 <meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
@@ -109,7 +104,7 @@ if (!doNotTrack) {
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ianlife/">
+      <a href="/">
         
           <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
         
@@ -247,7 +242,7 @@ if (!doNotTrack) {
         <article class="post">
   <header>
   <div class="title">
-    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    <a href="/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
     
     <h3><a href="/ianlife/design-pattern/facede-pattern/">外觀模式 | Facade Pattern</a></h3>
     
@@ -262,7 +257,7 @@ if (!doNotTrack) {
     
     <span class="author">Ian Tsai</span>
     
-    <p>3 minute read</p>
+    <p>2 minute read</p>
     
     <p>
       <span id="busuanzi_container_page_pv">
@@ -393,18 +388,18 @@ if (!doNotTrack) {
 <table>
 <thead>
 <tr>
-<th align="left">成員</th>
-<th align="left">功用</th>
+<th style="text-align:left">成員</th>
+<th style="text-align:left">功用</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Facade</td>
-<td align="left">為多個SubSystem對外提供的一個接口。</td>
+<td style="text-align:left">Facade</td>
+<td style="text-align:left">為多個SubSystem對外提供的一個接口。</td>
 </tr>
 <tr>
-<td align="left">SubSystem</td>
-<td align="left">系統各種不同的功能，Client透過Facade使用。</td>
+<td style="text-align:left">SubSystem</td>
+<td style="text-align:left">系統各種不同的功能，Client透過Facade使用。</td>
 </tr>
 </tbody>
 </table>
@@ -432,53 +427,53 @@ SubSystem3 : +method3();
 </ul>
 <hr>
 <p>首先我們先將銀行各部門的系統給建立起來（由於本人不清楚貸款要跑哪些部門，所以用ABCD代替）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Department_A</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">method1</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Data sent to the departmentA&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>   
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Department_B</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span>  <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">method2</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Data sent to the departmentB&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>   
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Department_C</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span>  <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">method3</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Data sent to the departmentC&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>   
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Department_D</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span>  <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">method4</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Data sent to the departmentD&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>   
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>我們建立了ABCD四個子系統。現在需要一個Facade來把所有的子系統包裝起來：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">CommissionerFacade</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> Department_A obj1 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Department_A<span style="color:#ff79c6">();</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> Department_B obj2 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Department_B<span style="color:#ff79c6">();</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> Department_C obj3 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Department_C<span style="color:#ff79c6">();</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> Department_D obj4 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Department_D<span style="color:#ff79c6">();</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">method</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        obj1<span style="color:#ff79c6">.</span><span style="color:#50fa7b">method1</span><span style="color:#ff79c6">();</span>
-        obj2<span style="color:#ff79c6">.</span><span style="color:#50fa7b">method2</span><span style="color:#ff79c6">();</span>
-        obj3<span style="color:#ff79c6">.</span><span style="color:#50fa7b">method3</span><span style="color:#ff79c6">();</span>
-        obj4<span style="color:#ff79c6">.</span><span style="color:#50fa7b">method4</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>銀行專員就是Facade，將所有的子系統包裝在method()內，也就是說，由他去找各部門辦事情，Client不需要管。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Department_A</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">method1</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Data sent to the departmentA&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>   
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Department_B</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span>  <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">method2</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Data sent to the departmentB&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>   
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Department_C</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span>  <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">method3</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Data sent to the departmentC&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>   
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Department_D</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span>  <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">method4</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Data sent to the departmentD&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>   
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>我們建立了ABCD四個子系統。現在需要一個Facade來把所有的子系統包裝起來：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">CommissionerFacade</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> Department_A obj1 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Department_A<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> Department_B obj2 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Department_B<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> Department_C obj3 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Department_C<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> Department_D obj4 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Department_D<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">method</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        obj1<span style="color:#ff79c6">.</span><span style="color:#50fa7b">method1</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        obj2<span style="color:#ff79c6">.</span><span style="color:#50fa7b">method2</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        obj3<span style="color:#ff79c6">.</span><span style="color:#50fa7b">method3</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        obj4<span style="color:#ff79c6">.</span><span style="color:#50fa7b">method4</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>銀行專員就是Facade，將所有的子系統包裝在method()內，也就是說，由他去找各部門辦事情，Client不需要管。</p>
 <p>最後Client將Facade建立起來並呼叫裡面的method()，來完成我們貸款的行為。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">PCHome</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        CommissionerFacade f <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> CommissionerFacade<span style="color:#ff79c6">();</span>
-        f<span style="color:#ff79c6">.</span><span style="color:#50fa7b">method</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Data sent to the departmentA
-Data sent to the departmentB
-Data sent to the departmentC
-Data sent to the departmentD
-</code></pre></div><br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">PCHome</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        CommissionerFacade f <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> CommissionerFacade<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        f<span style="color:#ff79c6">.</span><span style="color:#50fa7b">method</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Data sent to the departmentA
+</span></span><span style="display:flex;"><span>Data sent to the departmentB
+</span></span><span style="display:flex;"><span>Data sent to the departmentC
+</span></span><span style="display:flex;"><span>Data sent to the departmentD
+</span></span></code></pre></div><br>
 <img src='https://g.gravizo.com/svg?
 @startuml;
 skinparam linetype ortho;
@@ -497,18 +492,18 @@ Department_D : +method4();
 <br>
 <br>
 <p>這就是Facade Pattern實作後的程式碼。UML可以看出，由專員處理一切事務，我們只需要對應專員即可，不需要知道銀行各部門到底在幹嘛。這看起來很簡單，但如果沒使用的話會長怎樣呢？</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bank</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        Department_A obj1 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Department_A<span style="color:#ff79c6">();</span>
-        Department_B obj2 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Department_B<span style="color:#ff79c6">();</span>
-        Department_C obj3 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Department_C<span style="color:#ff79c6">();</span>
-        Department_D obj4 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Department_D<span style="color:#ff79c6">();</span>
-        obj1<span style="color:#ff79c6">.</span><span style="color:#50fa7b">method1</span><span style="color:#ff79c6">();</span>
-        obj2<span style="color:#ff79c6">.</span><span style="color:#50fa7b">method2</span><span style="color:#ff79c6">();</span>
-        obj3<span style="color:#ff79c6">.</span><span style="color:#50fa7b">method3</span><span style="color:#ff79c6">();</span>
-        obj4<span style="color:#ff79c6">.</span><span style="color:#50fa7b">method4</span><span style="color:#ff79c6">();</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Bank</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Department_A obj1 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Department_A<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        Department_B obj2 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Department_B<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        Department_C obj3 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Department_C<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        Department_D obj4 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Department_D<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        obj1<span style="color:#ff79c6">.</span><span style="color:#50fa7b">method1</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        obj2<span style="color:#ff79c6">.</span><span style="color:#50fa7b">method2</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        obj3<span style="color:#ff79c6">.</span><span style="color:#50fa7b">method3</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        obj4<span style="color:#ff79c6">.</span><span style="color:#50fa7b">method4</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><br>
 <img src='https://g.gravizo.com/svg?
 @startuml;
 skinparam linetype ortho;
@@ -637,7 +632,7 @@ SubSystem：各種系統，如銀行各部門。
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -902,7 +897,7 @@ SubSystem：各種系統，如銀行各部門。
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/ianlife/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

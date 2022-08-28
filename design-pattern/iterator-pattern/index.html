@@ -75,22 +75,17 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="迭代器模式 | Iterator Pattern">
-<meta itemprop="description" content="迭代氣模式提供一種方法可以順序性讀取一個集合物件中的各個元素，而又不會暴露該物件的內部表示。如 Java 中的 Collection、List、Set、Map 等都包含了迭代器。">
-<meta itemprop="datePublished" content="2020-10-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-10-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="556">
-<meta itemprop="image" content="https://ianjustin39.github.io/ianlife/">
-
-
-
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="迭代器模式 | Iterator Pattern">
+<meta itemprop="description" content="迭代氣模式提供一種方法可以順序性讀取一個集合物件中的各個元素，而又不會暴露該物件的內部表示。如 Java 中的 Collection、List、Set、Map 等都包含了迭代器。"><meta itemprop="datePublished" content="2020-10-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-10-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="497"><meta itemprop="image" content="https://ianjustin39.github.io/ianlife/">
 <meta itemprop="keywords" content="Design Pattern,Behavioural Pattern," /><meta property="og:title" content="迭代器模式 | Iterator Pattern" />
 <meta property="og:description" content="迭代氣模式提供一種方法可以順序性讀取一個集合物件中的各個元素，而又不會暴露該物件的內部表示。如 Java 中的 Collection、List、Set、Map 等都包含了迭代器。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/iterator-pattern/" />
-<meta property="og:image" content="https://ianjustin39.github.io/ianlife/" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/iterator-pattern/" /><meta property="og:image" content="https://ianjustin39.github.io/ianlife/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-10-01T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-10-01T00:00:00+00:00" />
+
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://ianjustin39.github.io/ianlife/"/>
@@ -98,7 +93,7 @@ if (!doNotTrack) {
 <meta name="twitter:title" content="迭代器模式 | Iterator Pattern"/>
 <meta name="twitter:description" content="迭代氣模式提供一種方法可以順序性讀取一個集合物件中的各個元素，而又不會暴露該物件的內部表示。如 Java 中的 Collection、List、Set、Map 等都包含了迭代器。"/>
 <meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
@@ -109,7 +104,7 @@ if (!doNotTrack) {
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ianlife/">
+      <a href="/">
         
           <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
         
@@ -247,7 +242,7 @@ if (!doNotTrack) {
         <article class="post">
   <header>
   <div class="title">
-    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    <a href="/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
     
     <h3><a href="/ianlife/design-pattern/iterator-pattern/">迭代器模式 | Iterator Pattern</a></h3>
     
@@ -395,26 +390,26 @@ if (!doNotTrack) {
 <table>
 <thead>
 <tr>
-<th align="left">成員</th>
-<th align="left">功用</th>
+<th style="text-align:left">成員</th>
+<th style="text-align:left">功用</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Aggregate</td>
-<td align="left">定義新增、儲存、刪除集合物件及建立迭代器物件的接口。</td>
+<td style="text-align:left">Aggregate</td>
+<td style="text-align:left">定義新增、儲存、刪除集合物件及建立迭代器物件的接口。</td>
 </tr>
 <tr>
-<td align="left">ConcreteAggregate</td>
-<td align="left">實作Aggregate，回傳一個迭代器的實體。</td>
+<td style="text-align:left">ConcreteAggregate</td>
+<td style="text-align:left">實作Aggregate，回傳一個迭代器的實體。</td>
 </tr>
 <tr>
-<td align="left">Iterator</td>
-<td align="left">定義呼叫及遍歷集合元素的接口，通常包含hasNext()、first()、next() 等方法。</td>
+<td style="text-align:left">Iterator</td>
+<td style="text-align:left">定義呼叫及遍歷集合元素的接口，通常包含hasNext()、first()、next() 等方法。</td>
 </tr>
 <tr>
-<td align="left">Concretelterator</td>
-<td align="left">實現Iterator所定義的方法，完成集合物件的遍歷及記錄當前的位置。</td>
+<td style="text-align:left">Concretelterator</td>
+<td style="text-align:left">實現Iterator所定義的方法，完成集合物件的遍歷及記錄當前的位置。</td>
 </tr>
 </tbody>
 </table>
@@ -455,120 +450,120 @@ ConcreteAggregate : +getIterator():Iterator;
 <hr>
 <p>以前國中考高中時，會選填志願，我們拿這個例子來實作。</p>
 <p>首先先建立抽象集合，並定義方法。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">//抽象集合
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Aggregate</span> <span style="color:#ff79c6">{</span> 
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>Object obj<span style="color:#ff79c6">);</span>  <span style="color:#6272a4">// 新增元素
-</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>Object obj<span style="color:#ff79c6">);</span>  <span style="color:#6272a4">// 移除元素
-</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">public</span> Iterator <span style="color:#50fa7b">getIterator</span><span style="color:#ff79c6">();</span>  <span style="color:#6272a4">// 取得集合
-</span><span style="color:#6272a4"></span><span style="color:#ff79c6">}</span>
-</code></pre></div><p>定義完介面後，接著要建立ConcreteAggregate實作Aggregate。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">//實體集合
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ConcreteAggregate</span> <span style="color:#8be9fd;font-style:italic">implements</span> Aggregate <span style="color:#ff79c6">{</span> 
-    <span style="color:#8be9fd;font-style:italic">private</span> List<span style="color:#ff79c6">&lt;</span>Object<span style="color:#ff79c6">&gt;</span> list <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ArrayList<span style="color:#ff79c6">&lt;</span>Object<span style="color:#ff79c6">&gt;();</span>  <span style="color:#6272a4">// 存放元素的集合
-</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>Object obj<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
-        list<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>obj<span style="color:#ff79c6">);</span> 
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>Object obj<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
-        list<span style="color:#ff79c6">.</span><span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>obj<span style="color:#ff79c6">);</span> 
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> Iterator <span style="color:#50fa7b">getIterator</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span><span style="color:#ff79c6">new</span> ConcreteIterator<span style="color:#ff79c6">(</span>list<span style="color:#ff79c6">));</span> 
-    <span style="color:#ff79c6">}</span>     
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>這樣就將集合物件做好了。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#6272a4">//抽象集合
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Aggregate</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>Object obj<span style="color:#ff79c6">);</span>  <span style="color:#6272a4">// 新增元素
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>Object obj<span style="color:#ff79c6">);</span>  <span style="color:#6272a4">// 移除元素
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">public</span> Iterator <span style="color:#50fa7b">getIterator</span><span style="color:#ff79c6">();</span>  <span style="color:#6272a4">// 取得集合
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>定義完介面後，接著要建立ConcreteAggregate實作Aggregate。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#6272a4">//實體集合
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ConcreteAggregate</span> <span style="color:#8be9fd;font-style:italic">implements</span> Aggregate <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> List<span style="color:#ff79c6">&lt;</span>Object<span style="color:#ff79c6">&gt;</span> list <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ArrayList<span style="color:#ff79c6">&lt;</span>Object<span style="color:#ff79c6">&gt;();</span>  <span style="color:#6272a4">// 存放元素的集合
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>Object obj<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>        list<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span>obj<span style="color:#ff79c6">);</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>Object obj<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>        list<span style="color:#ff79c6">.</span><span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>obj<span style="color:#ff79c6">);</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> Iterator <span style="color:#50fa7b">getIterator</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span><span style="color:#ff79c6">(</span><span style="color:#ff79c6">new</span> ConcreteIterator<span style="color:#ff79c6">(</span>list<span style="color:#ff79c6">));</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>     
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>這樣就將集合物件做好了。</p>
 <p>再來就是迭代器的部分，我們選填完志願後，想要看第一個、下一個、上一個、最後一個志願以及是否還有下一間學校的功能，所以Iterator必須要先定義好。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">//抽象迭代器
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Iterator</span> <span style="color:#ff79c6">{</span>
-    Object <span style="color:#50fa7b">first</span><span style="color:#ff79c6">();</span>
-    Object <span style="color:#50fa7b">next</span><span style="color:#ff79c6">();</span>
-    Object <span style="color:#50fa7b">previous</span><span style="color:#ff79c6">();</span>
-    Object <span style="color:#50fa7b">last</span><span style="color:#ff79c6">();</span>
-    <span style="color:#8be9fd">boolean</span> <span style="color:#50fa7b">hasNext</span><span style="color:#ff79c6">();</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>接著ConcreteIterator實作Iterator。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#6272a4">//實體迭代器
-</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ConcreteIterator</span> <span style="color:#8be9fd;font-style:italic">implements</span> Iterator <span style="color:#ff79c6">{</span> 
-    <span style="color:#8be9fd;font-style:italic">private</span> List<span style="color:#ff79c6">&lt;</span>Object<span style="color:#ff79c6">&gt;</span> list<span style="color:#ff79c6">=</span><span style="color:#ff79c6">null</span><span style="color:#ff79c6">;</span> 
-    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> index<span style="color:#ff79c6">=-</span>1<span style="color:#ff79c6">;</span> 
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">ConcreteIterator</span><span style="color:#ff79c6">(</span>List<span style="color:#ff79c6">&lt;</span>Object<span style="color:#ff79c6">&gt;</span> list<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">list</span><span style="color:#ff79c6">=</span>list<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span> 
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">boolean</span> <span style="color:#50fa7b">hasNext</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span> 
-        <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span>index<span style="color:#ff79c6">&lt;</span>list<span style="color:#ff79c6">.</span><span style="color:#50fa7b">size</span><span style="color:#ff79c6">()-</span>1<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
-            <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">true</span><span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">}</span>
-        <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
-            <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">false</span><span style="color:#ff79c6">;</span>
-        <span style="color:#ff79c6">}</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">first</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        index<span style="color:#ff79c6">=</span>0<span style="color:#ff79c6">;</span>
-        Object obj<span style="color:#ff79c6">=</span>list<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(</span>index<span style="color:#ff79c6">);;</span>
-        <span style="color:#ff79c6">return</span> obj<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">next</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        Object obj<span style="color:#ff79c6">=</span><span style="color:#ff79c6">null</span><span style="color:#ff79c6">;</span> 
-        <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span><span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">hasNext</span><span style="color:#ff79c6">())</span> <span style="color:#ff79c6">{</span> 
-            obj<span style="color:#ff79c6">=</span>list<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(++</span>index<span style="color:#ff79c6">);</span> 
-        <span style="color:#ff79c6">}</span> 
-        <span style="color:#ff79c6">return</span> obj<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>   
-    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">previous</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        Object obj<span style="color:#ff79c6">=</span><span style="color:#ff79c6">null</span><span style="color:#ff79c6">;</span> 
-        <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span><span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">hasNext</span><span style="color:#ff79c6">())</span> <span style="color:#ff79c6">{</span> 
-            obj<span style="color:#ff79c6">=</span>list<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(--</span>index<span style="color:#ff79c6">);</span> 
-        <span style="color:#ff79c6">}</span> 
-        <span style="color:#ff79c6">return</span> obj<span style="color:#ff79c6">;</span> 
-    <span style="color:#ff79c6">}</span>  
-    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">last</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        index<span style="color:#ff79c6">=</span>list<span style="color:#ff79c6">.</span><span style="color:#50fa7b">size</span><span style="color:#ff79c6">()-</span>1<span style="color:#ff79c6">;</span>
-        Object obj <span style="color:#ff79c6">=</span> list<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(</span>index<span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">return</span> obj<span style="color:#ff79c6">;</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>最後我們就可以使用看看。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Main</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-        Aggregate ag <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ConcreteAggregate<span style="color:#ff79c6">();</span> 
-        ag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;建國中學&#34;</span><span style="color:#ff79c6">);</span> 
-        ag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;師大附中&#34;</span><span style="color:#ff79c6">);</span> 
-        ag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;成功高中&#34;</span><span style="color:#ff79c6">);</span>
-        ag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;松山高中&#34;</span><span style="color:#ff79c6">);</span>
-        ag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;中崙高中&#34;</span><span style="color:#ff79c6">);</span>
-        ag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;麗山高中&#34;</span><span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">print</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;學校列表：&#34;</span><span style="color:#ff79c6">);</span>
-        Iterator it <span style="color:#ff79c6">=</span> ag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getIterator</span><span style="color:#ff79c6">();</span> 
-        <span style="color:#ff79c6">while</span><span style="color:#ff79c6">(</span>it<span style="color:#ff79c6">.</span><span style="color:#50fa7b">hasNext</span><span style="color:#ff79c6">())</span> <span style="color:#ff79c6">{</span> 
-            Object ob<span style="color:#ff79c6">=</span>it<span style="color:#ff79c6">.</span><span style="color:#50fa7b">next</span><span style="color:#ff79c6">();</span> 
-            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">print</span><span style="color:#ff79c6">(</span>ob<span style="color:#ff79c6">.</span><span style="color:#50fa7b">toString</span><span style="color:#ff79c6">()+</span><span style="color:#f1fa8c">&#34;\t&#34;</span><span style="color:#ff79c6">);</span> 
-        <span style="color:#ff79c6">}</span>
-        Object ob<span style="color:#ff79c6">=</span>it<span style="color:#ff79c6">.</span><span style="color:#50fa7b">first</span><span style="color:#ff79c6">();</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;\nFirst：&#34;</span><span style="color:#ff79c6">+</span>ob<span style="color:#ff79c6">.</span><span style="color:#50fa7b">toString</span><span style="color:#ff79c6">());</span>
-        
-        Scanner scanner <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Scanner<span style="color:#ff79c6">(</span>System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">in</span><span style="color:#ff79c6">);</span>
-        
-        <span style="color:#8be9fd">boolean</span> end <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span><span style="color:#ff79c6">;</span>
-
-        <span style="color:#ff79c6">while</span> <span style="color:#ff79c6">(!</span>end<span style="color:#ff79c6">){</span>
-            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;請輸入選項（1：第一所；2：下一所；3：最後一所）：&#34;</span><span style="color:#ff79c6">);</span>
-            <span style="color:#8be9fd">int</span> num <span style="color:#ff79c6">=</span> scanner<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">();</span>
-            <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>num <span style="color:#ff79c6">==</span> 1<span style="color:#ff79c6">){</span>
-                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;顯示的學校為：&#34;</span> <span style="color:#ff79c6">+</span>  it<span style="color:#ff79c6">.</span><span style="color:#50fa7b">first</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">toString</span><span style="color:#ff79c6">());</span>
-            <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>num <span style="color:#ff79c6">==</span> 2<span style="color:#ff79c6">){</span>
-                <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>it<span style="color:#ff79c6">.</span><span style="color:#50fa7b">hasNext</span><span style="color:#ff79c6">()){</span>
-                    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;顯示的學校為：&#34;</span> <span style="color:#ff79c6">+</span>  it<span style="color:#ff79c6">.</span><span style="color:#50fa7b">next</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">toString</span><span style="color:#ff79c6">());</span>
-                <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
-                    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;已經到最後一筆&#34;</span><span style="color:#ff79c6">);</span>
-                <span style="color:#ff79c6">}</span>
-            <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>num <span style="color:#ff79c6">==</span> 3<span style="color:#ff79c6">){</span>
-                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;顯示的學校為：&#34;</span> <span style="color:#ff79c6">+</span>  it<span style="color:#ff79c6">.</span><span style="color:#50fa7b">last</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">toString</span><span style="color:#ff79c6">());</span>
-            <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
-                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;請輸入正確指令&#34;</span> <span style="color:#ff79c6">);</span>
-            <span style="color:#ff79c6">}</span>
-        <span style="color:#ff79c6">}</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><a href="https://imgur.com/SUjtbD7"><img src="https://i.imgur.com/SUjtbD7.gif" title="source: imgur.com" /></a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#6272a4">//抽象迭代器
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Iterator</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    Object <span style="color:#50fa7b">first</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    Object <span style="color:#50fa7b">next</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    Object <span style="color:#50fa7b">previous</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    Object <span style="color:#50fa7b">last</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">boolean</span> <span style="color:#50fa7b">hasNext</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>接著ConcreteIterator實作Iterator。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#6272a4">//實體迭代器
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ConcreteIterator</span> <span style="color:#8be9fd;font-style:italic">implements</span> Iterator <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> List<span style="color:#ff79c6">&lt;</span>Object<span style="color:#ff79c6">&gt;</span> list<span style="color:#ff79c6">=</span><span style="color:#ff79c6">null</span><span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> index<span style="color:#ff79c6">=-</span>1<span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">ConcreteIterator</span><span style="color:#ff79c6">(</span>List<span style="color:#ff79c6">&lt;</span>Object<span style="color:#ff79c6">&gt;</span> list<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">list</span><span style="color:#ff79c6">=</span>list<span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">boolean</span> <span style="color:#50fa7b">hasNext</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span>index<span style="color:#ff79c6">&lt;</span>list<span style="color:#ff79c6">.</span><span style="color:#50fa7b">size</span><span style="color:#ff79c6">()-</span>1<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">true</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">false</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">first</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        index<span style="color:#ff79c6">=</span>0<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        Object obj<span style="color:#ff79c6">=</span>list<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(</span>index<span style="color:#ff79c6">);;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> obj<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">next</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Object obj<span style="color:#ff79c6">=</span><span style="color:#ff79c6">null</span><span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span><span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">hasNext</span><span style="color:#ff79c6">())</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>            obj<span style="color:#ff79c6">=</span>list<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(++</span>index<span style="color:#ff79c6">);</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> obj<span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>   
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">previous</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Object obj<span style="color:#ff79c6">=</span><span style="color:#ff79c6">null</span><span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span><span style="color:#ff79c6">(</span><span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">hasNext</span><span style="color:#ff79c6">())</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>            obj<span style="color:#ff79c6">=</span>list<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(--</span>index<span style="color:#ff79c6">);</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> obj<span style="color:#ff79c6">;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> Object <span style="color:#50fa7b">last</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        index<span style="color:#ff79c6">=</span>list<span style="color:#ff79c6">.</span><span style="color:#50fa7b">size</span><span style="color:#ff79c6">()-</span>1<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>        Object obj <span style="color:#ff79c6">=</span> list<span style="color:#ff79c6">.</span><span style="color:#50fa7b">get</span><span style="color:#ff79c6">(</span>index<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> obj<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>最後我們就可以使用看看。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Main</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String<span style="color:#ff79c6">[]</span> args<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Aggregate ag <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ConcreteAggregate<span style="color:#ff79c6">();</span> 
+</span></span><span style="display:flex;"><span>        ag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;建國中學&#34;</span><span style="color:#ff79c6">);</span> 
+</span></span><span style="display:flex;"><span>        ag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;師大附中&#34;</span><span style="color:#ff79c6">);</span> 
+</span></span><span style="display:flex;"><span>        ag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;成功高中&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        ag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;松山高中&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        ag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;中崙高中&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        ag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">add</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;麗山高中&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">print</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;學校列表：&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        Iterator it <span style="color:#ff79c6">=</span> ag<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getIterator</span><span style="color:#ff79c6">();</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">while</span><span style="color:#ff79c6">(</span>it<span style="color:#ff79c6">.</span><span style="color:#50fa7b">hasNext</span><span style="color:#ff79c6">())</span> <span style="color:#ff79c6">{</span> 
+</span></span><span style="display:flex;"><span>            Object ob<span style="color:#ff79c6">=</span>it<span style="color:#ff79c6">.</span><span style="color:#50fa7b">next</span><span style="color:#ff79c6">();</span> 
+</span></span><span style="display:flex;"><span>            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">print</span><span style="color:#ff79c6">(</span>ob<span style="color:#ff79c6">.</span><span style="color:#50fa7b">toString</span><span style="color:#ff79c6">()+</span><span style="color:#f1fa8c">&#34;\t&#34;</span><span style="color:#ff79c6">);</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        Object ob<span style="color:#ff79c6">=</span>it<span style="color:#ff79c6">.</span><span style="color:#50fa7b">first</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;\nFirst：&#34;</span><span style="color:#ff79c6">+</span>ob<span style="color:#ff79c6">.</span><span style="color:#50fa7b">toString</span><span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        Scanner scanner <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Scanner<span style="color:#ff79c6">(</span>System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">in</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd">boolean</span> end <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">while</span> <span style="color:#ff79c6">(!</span>end<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;請輸入選項（1：第一所；2：下一所；3：最後一所）：&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd">int</span> num <span style="color:#ff79c6">=</span> scanner<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>num <span style="color:#ff79c6">==</span> 1<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;顯示的學校為：&#34;</span> <span style="color:#ff79c6">+</span>  it<span style="color:#ff79c6">.</span><span style="color:#50fa7b">first</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">toString</span><span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>num <span style="color:#ff79c6">==</span> 2<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>it<span style="color:#ff79c6">.</span><span style="color:#50fa7b">hasNext</span><span style="color:#ff79c6">()){</span>
+</span></span><span style="display:flex;"><span>                    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;顯示的學校為：&#34;</span> <span style="color:#ff79c6">+</span>  it<span style="color:#ff79c6">.</span><span style="color:#50fa7b">next</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">toString</span><span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>                    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;已經到最後一筆&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>num <span style="color:#ff79c6">==</span> 3<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;顯示的學校為：&#34;</span> <span style="color:#ff79c6">+</span>  it<span style="color:#ff79c6">.</span><span style="color:#50fa7b">last</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">toString</span><span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>                System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;請輸入正確指令&#34;</span> <span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><a href="https://imgur.com/SUjtbD7"><img src="https://i.imgur.com/SUjtbD7.gif" title="source: imgur.com" /></a></p>
 <br>
 <br>
 <ul>
@@ -687,7 +682,7 @@ Concretelterator：實現Iterator所定義的方法，完成集合物件的遍�
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -952,7 +947,7 @@ Concretelterator：實現Iterator所定義的方法，完成集合物件的遍�
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/ianlife/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

@@ -6,11 +6,7 @@
     <description>Recent content in Blockchain on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 12 May 2022 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://ianjustin39.github.io/ianlife/tags/blockchain/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 12 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/tags/blockchain/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>幣圈黑天鵝，前十大公鏈 Terra 如何從月球殞落</title>
       <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain-black-swan-terra/</link>
@@ -18,7 +14,7 @@
       
       <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain-black-swan-terra/</guid>
       <description>一個星期前，Terra 還是市值前十的加密貨幣，其中包含近期最熱門的 Defi 項目 Anchor 也是大家趨之若鶩投資的項目之一， 甚至有很多投資人把大部分資產兌換成 UST 放到 Anchor 內。 但短短的一週 Luna 的價格卻從 80 跌到0.00001 美金，Anchor 中的 UST 資金也大量的撤離， 這中間與 UST 脫鉤有著莫大的關係，一個大家都以為會成功的項目是如何在短時間內跌落谷底， 自身參與了這個幣圈的重大事件 (韭菜？)，想說來紀錄一下。
-Terra 的模型  Terra 是一個擁有雙主鏈幣的區塊鏈，包含其算法穩定幣 Terra 及治理代幣 Luna，而 UST 為算法穩定幣 Terra 的一種。 由於 UST 並不像 USDC 有美元資產儲備抵押，需要依靠演算法及市場支撐與美金的掛鉤。
+Terra 的模型 Terra 是一個擁有雙主鏈幣的區塊鏈，包含其算法穩定幣 Terra 及治理代幣 Luna，而 UST 為算法穩定幣 Terra 的一種。 由於 UST 並不像 USDC 有美元資產儲備抵押，需要依靠演算法及市場支撐與美金的掛鉤。
 所以當 UST 價格高於一美元時，代表供不應求，這時便會燃燒 Luna 並鑄造 UST，讓價格回穩到一美元， 而這中間也因為 Luna 的總量變小，進而提高了 Luna 的價格。
 反之，若 UST 低於一美元時，代表供過於求，這時則會燃燒 UST 去鑄造 Luna，也因為這樣 UST 的總量變小，可以讓價格回穩至一美元， 而當 UST 價格回穩後，因為 Luna 便多，所以導致 Lune 的價格下降。
 這看似很合理的邏輯，似乎必須建立在市場對 Terra 有信心的情況下，Terra 才可以穩定的生存， 這也讓 Terra 埋下了一個落入死亡螺旋的不安定因素。</description>
@@ -32,10 +28,10 @@ Terra 的模型  Terra 是一個擁有雙主鏈幣的區塊鏈，包含其算法
       <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain-bridge/</guid>
       <description>區塊鏈技術在近幾年來成長非常的快速，最早的 Bitcoin、Ethereum 到 Binance Chain 、 Polygon 、 Solana 等，每條鏈上都有各自的治理模式、協議、規則，甚至是 Defi、NFT、DAO 等多元化的應用也相繼出現。
 儘管近幾年出現的這麼多元的應用，但這些終究只能存在於單一條區塊鏈上，並沒有辦法與其他的區塊鏈互動，也就是說鏈與鏈之間並沒有互相操作性。每一條區塊鏈，就好比一座小島，試想在台灣的 Ian 想要跟在日本的 Justin 溝通訊息，該如何做到呢？現在的社會可以經由通訊軟體或是社群軟體，直接將訊息傳遞出去，也就是所謂 Web 2.0 的應用，同理，比特幣想要到以太坊上做應用，以現在的狀況來說，只有中心化交易所（還不能經由去中心化交易所 Dex）換成以太幣或是 ERC-20 token 才有辦法做到這件事。但若這樣操作手上便不在持有比特幣，這也跟當初想要以『比特幣在以太坊上做應用』的想法有所差異。
-什麼是 Bridges，運作原理是什麼？  先來講講什麼是 Blockchain Bridge ，它是以什麼方式來解決互相操作性的問題。Bridge 允許兩條不同規則、不同協議的區塊鏈將他們的數據、代幣互相傳遞。以上述的例子來講，可以不經由交易所得換幣服務，直接再以太坊上使用自己持有的比特幣。
+什麼是 Bridges，運作原理是什麼？ 先來講講什麼是 Blockchain Bridge ，它是以什麼方式來解決互相操作性的問題。Bridge 允許兩條不同規則、不同協議的區塊鏈將他們的數據、代幣互相傳遞。以上述的例子來講，可以不經由交易所得換幣服務，直接再以太坊上使用自己持有的比特幣。
 在你希望將自己的一部分比特幣轉移到以太坊上時， Blockchain Bridge 會先將你比特幣鎖在所使用的 Bridge 上，並在以太坊上建立等同價值的比特幣代幣（稱作 wBTC），此時便可以使用 wBTC 去操作以太坊上的 Dapp 。相反，當你認為不需要繼續在以太坊上，想要換回比特幣時，只需要做反向的行為，以太坊上的 wBTC 會被燒毀，而同等價值的比特幣則會回到你的手上。但必須注意的是，若用 Bridge 將 10 BTC 換成 10 wBTC，換回時卻只有 9 wBTC 的話，也只能取得 9 BTC。
 簡單來說，經由 Bridge 是將你的加密貨幣『複製』一份到別條鏈上，讓他符合另一條鏈的規範與協議，可以操作上面的各種應用。
-Bridges 種類  Bridges 又分為 One-Way Bridges &amp;amp; Two-Way Bridges，以及 Trust-Based &amp;amp; Trustless Bridges。</description>
+Bridges 種類 Bridges 又分為 One-Way Bridges &amp;amp; Two-Way Bridges，以及 Trust-Based &amp;amp; Trustless Bridges。</description>
     </item>
     
     <item>
@@ -56,7 +52,7 @@ The smallest unit of account in a Substrate network (Polkadot, Kusama, etc.) is 
       
       <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/cosmos/</guid>
       <description>圖片來源
-Transaction protobuf prefix  msgSend msgSend/amount tx single mode  enum SignMode { // SIGN_MODE_UNSPECIFIED specifies an unknown signing mode and will be  // rejected  SIGN_MODE_UNSPECIFIED = 0; // SIGN_MODE_DIRECT specifies a signing mode which uses SignDoc and is  // verified with raw bytes from Tx  SIGN_MODE_DIRECT = 1; // SIGN_MODE_TEXTUAL is a future signing mode that will verify some  // human-readable textual representation on top of the binary representation  // from SIGN_MODE_DIRECT  SIGN_MODE_TEXTUAL = 2; // SIGN_MODE_LEGACY_AMINO_JSON is a backwards compatibility mode which uses  // Amino JSON and will be removed in the future  SIGN_MODE_LEGACY_AMINO_JSON = 127; } Send - msgSend: { from_address: &amp;#39;cosmos1fnk3lxlks7tdg6x55ynv6vggtnd73ycqsq89sl&amp;#39;, to_address: &amp;#39;cosmos1hllwcqg3yz5mgx0cplh82l23ad8658dvphvjtl&amp;#39;, amount: [ { denom: &amp;#39;uatom&amp;#39;, amount: &amp;#39;10000&amp;#39; } ] } **- msgSend protobuf: (0a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c122d636f736d6f7331686c6c7763716733797a356d67783063706c6838326c323361643836353864767068766a746c1a0e0a057561746f6d12053130303030)** from_address | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c to_address | 00010 010 | 12 2d 636f736d6f7331686c6c7763716733797a356d67783063706c6838326c323361643836353864767068766a746c amount | 00011 010 | 1a 0e denom | 00001 010 | 0a 05 7561746f6d amount | 00010 010 | 12 05 3130303030 --- - signerInfo: SignerInfo { public_key: Any { type_url: &amp;#39;/cosmos.</description>
+Transaction protobuf prefix msgSend msgSend/amount tx single mode enum SignMode { // SIGN_MODE_UNSPECIFIED specifies an unknown signing mode and will be // rejected SIGN_MODE_UNSPECIFIED = 0; // SIGN_MODE_DIRECT specifies a signing mode which uses SignDoc and is // verified with raw bytes from Tx SIGN_MODE_DIRECT = 1; // SIGN_MODE_TEXTUAL is a future signing mode that will verify some // human-readable textual representation on top of the binary representation // from SIGN_MODE_DIRECT SIGN_MODE_TEXTUAL = 2; // SIGN_MODE_LEGACY_AMINO_JSON is a backwards compatibility mode which uses // Amino JSON and will be removed in the future SIGN_MODE_LEGACY_AMINO_JSON = 127; } Send - msgSend: { from_address: &amp;#39;cosmos1fnk3lxlks7tdg6x55ynv6vggtnd73ycqsq89sl&amp;#39;, to_address: &amp;#39;cosmos1hllwcqg3yz5mgx0cplh82l23ad8658dvphvjtl&amp;#39;, amount: [ { denom: &amp;#39;uatom&amp;#39;, amount: &amp;#39;10000&amp;#39; } ] } **- msgSend protobuf: (0a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c122d636f736d6f7331686c6c7763716733797a356d67783063706c6838326c323361643836353864767068766a746c1a0e0a057561746f6d12053130303030)** from_address | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c to_address | 00010 010 | 12 2d 636f736d6f7331686c6c7763716733797a356d67783063706c6838326c323361643836353864767068766a746c amount | 00011 010 | 1a 0e denom | 00001 010 | 0a 05 7561746f6d amount | 00010 010 | 12 05 3130303030 --- - signerInfo: SignerInfo { public_key: Any { type_url: &amp;#39;/cosmos.</description>
     </item>
     
     <item>
@@ -65,10 +61,10 @@ Transaction protobuf prefix  msgSend msgSend/amount tx single mode  enum SignMod
       <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/ethereum-london-hard-fork/</guid>
-      <description>前言  現今以太坊的手續費過於昂貴，交易者需要付出高額的手續費才可以完成交易。 這次的 Ethereum London Hard Fork （倫敦硬分叉）所做的更新，包含了 EIP-1559、EIP-3198、EIP-3238 三個提案， 其中 EIP-1559 也是這次比較備受關注的部分。
-EIP 是什麼？  EIP(Ethereum Improvement Proposals)，是為以太坊指定潛在新功能或流程的標準，包含提議更改的技術規範。通過 EIP 流程討論和開發以太坊的網絡升級和應用標準。
-提案一： EIP-1559（區塊鏈交易費用模型）  EIP-1559 是對用戶在以太坊網絡上支付 gas 費用方式的更改。（由於現在以太坊交易手續費過高，降低對用戶的吸引力）
- 以往：礦工可以賺的收入「挖礦獎勵」跟「 100% Gas fee 」 EIP 1559 ： gas fee 分為基礎費（base fee）和小費兩種，給礦工的是「小費」； base fee 的 50% 會直接銷毀。  EIP-1559 也導入目標塊容量機制，每個區塊的基本費用根據網絡需求而變化。如果一個區塊的交易量超過 50%，則基本費用將增加，低於 50% 的話基本費則會下降。 而基本費可能會隨著交易加入 block 時發生改變，可以先將 price 設定成願意支付的上限，最後沒用到的部分會退還。
+      <description>前言 現今以太坊的手續費過於昂貴，交易者需要付出高額的手續費才可以完成交易。 這次的 Ethereum London Hard Fork （倫敦硬分叉）所做的更新，包含了 EIP-1559、EIP-3198、EIP-3238 三個提案， 其中 EIP-1559 也是這次比較備受關注的部分。
+EIP 是什麼？ EIP(Ethereum Improvement Proposals)，是為以太坊指定潛在新功能或流程的標準，包含提議更改的技術規範。通過 EIP 流程討論和開發以太坊的網絡升級和應用標準。
+提案一： EIP-1559（區塊鏈交易費用模型） EIP-1559 是對用戶在以太坊網絡上支付 gas 費用方式的更改。（由於現在以太坊交易手續費過高，降低對用戶的吸引力）
+以往：礦工可以賺的收入「挖礦獎勵」跟「 100% Gas fee 」 EIP 1559 ： gas fee 分為基礎費（base fee）和小費兩種，給礦工的是「小費」； base fee 的 50% 會直接銷毀。 EIP-1559 也導入目標塊容量機制，每個區塊的基本費用根據網絡需求而變化。如果一個區塊的交易量超過 50%，則基本費用將增加，低於 50% 的話基本費則會下降。 而基本費可能會隨著交易加入 block 時發生改變，可以先將 price 設定成願意支付的上限，最後沒用到的部分會退還。
 這個提案重點在於基本費會被銷毀，並不會所有的 gas fee 都讓礦工拿走。而也藉由『銷毀』機制，讓以太幣的供應量下降，避免通貨膨脹。
 交易格式的差異 以下部分段程式碼是從 EIP-1559 擷取。
 新交易格式內的 base_fee_per_gas ＆ priority_fee_per_gas 取代了以往的 Legacy Ethereum transactions 的 gas_price。 但 EIP-1559 可以相容 Legacy Ethereum transactions 的格式。 雖然現有的交易格式仍然有效且也被包含在 block 中，不過 Legacy transactions 沒辦法享有新的 pricing system 所帶來的優點。</description>

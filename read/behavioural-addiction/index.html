@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh">
   <head>
-  <meta content="演算法, Algorithm, Data Structures, Bubble Sort, 泡沫排序" name="keywords">
+  <meta content="讀書心得, , " name="keywords">
   <link rel="stylesheet" href="https://ianjustin39.github.io/ianlife/%20css/search.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   <link rel="stylesheet" href="../css/magnific-popup.css">
@@ -59,7 +59,7 @@ if (!doNotTrack) {
 
   
   <meta charset="utf-8">
-<title>泡沫排序 - Bubble Sort - Ian Tsai </title>
+<title> - Ian Tsai </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -75,23 +75,41 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="泡沫排序 - Bubble Sort">
-<meta itemprop="description" content="泡沫排序是一種穩定排序演算法，不斷重複比較兩個元素，如果要最小的開頭，若前一個元素小於現在這個元素，則兩個元素位置互換，反之亦然，直到所有元素都是由小到大排序才結束。而也因為這種『小元素經由交換慢慢浮至集合頂端』，故稱作泡沫排序"><meta itemprop="datePublished" content="2021-03-15T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-03-15T00:00:00+00:00" />
-<meta itemprop="wordCount" content="210"><meta itemprop="image" content="https://i.imgur.com/9uBuL8g.png">
-<meta itemprop="keywords" content="Algorithm," /><meta property="og:title" content="泡沫排序 - Bubble Sort" />
-<meta property="og:description" content="泡沫排序是一種穩定排序演算法，不斷重複比較兩個元素，如果要最小的開頭，若前一個元素小於現在這個元素，則兩個元素位置互換，反之亦然，直到所有元素都是由小到大排序才結束。而也因為這種『小元素經由交換慢慢浮至集合頂端』，故稱作泡沫排序" />
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="">
+<meta itemprop="description" content="
+0. 花了一週制定縝密的計畫，卻無法持續超過三天？ 相信大家都有過這個經驗，每年年底勵志明年要幹大事，一頭熱的制定了年度目標以及執行計畫，想說『我一定要在 1/1 號開始發奮向上』， 結果跨完年覺得很累想要休息，開始滑個社群軟體、回覆別人限動、與朋友聊天或是追追劇，完美的計畫不知不覺就被落在一旁，然後年底到了又開始一樣的輪迴。 我們是否有想過，為什麼已經下定決心要做某些事，但卻又被其他不重要的事情偷走專注力而沒辦法達成目標呢？
+1. 意志力不足才會上癮？ 毒癮、賭癮是最常見到行為上癮的事務，不管哪個，都會讓人甚至家庭造成巨大的危害。 但你以為沒吸毒賭博，就不會成癮了嗎？ 遊戲、社群是這個世代另種讓人成癮的事物，在科技發達的現代，各種 app、廣告、媒體、遊戲都在爭奪人們的眼球，只要有辦法讓人停留一秒，那就有機會觸發上癮的行為。 比如說，明明沒事卻一直重新整理 IG 頁面，抖音影片都看完了，還是不斷重看等。
+明明我們知道不能一直這樣下去，但還是會不由自主的花時間成癮在這些事物上，是為什麼？你可能會說『一定是他們意志力不足。』 但真的是這樣嗎？曾經有一個測試意志力實驗的案例：
+實驗兩組學生進行一個無解的數學題考試，並要求兩組學生在解題前要空腹，分別安排在裝滿餅乾以及胡蘿蔔的房間，一組要求只能吃餅乾，另一組只能吃胡蘿蔔， 相較於餅乾組，胡蘿蔔組的學生需要驅動意志力才可以抵抗餅乾的誘惑。隨後兩組學生在分別去進行無解的數學題考試，餅乾組堅持的時間是胡蘿蔔組的兩倍。 很顯然，我們很難一直驅動意志力，就像是肌肉一樣，當人一直使用肌肉的力量到筋疲力盡時，肌肉變無法再提供力量作其他的活動。 所以意志力並非一項技能，他更像一種會消耗的力量。
+1. 是什麼讓我們行為上癮？ 人的行為，就像是一套套演算法
+2. 上癮飛輪 - 在不知不覺中成癮 3. 擺脫上癮，找回自主權 4. 讀後心得 "><meta itemprop="datePublished" content="2022-07-27T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-07-27T00:00:00+00:00" />
+<meta itemprop="wordCount" content="33"><meta itemprop="image" content="https://ianjustin39.github.io/ianlife/">
+<meta itemprop="keywords" content="讀書心得,好書推薦," /><meta property="og:title" content="" />
+<meta property="og:description" content="
+0. 花了一週制定縝密的計畫，卻無法持續超過三天？ 相信大家都有過這個經驗，每年年底勵志明年要幹大事，一頭熱的制定了年度目標以及執行計畫，想說『我一定要在 1/1 號開始發奮向上』， 結果跨完年覺得很累想要休息，開始滑個社群軟體、回覆別人限動、與朋友聊天或是追追劇，完美的計畫不知不覺就被落在一旁，然後年底到了又開始一樣的輪迴。 我們是否有想過，為什麼已經下定決心要做某些事，但卻又被其他不重要的事情偷走專注力而沒辦法達成目標呢？
+1. 意志力不足才會上癮？ 毒癮、賭癮是最常見到行為上癮的事務，不管哪個，都會讓人甚至家庭造成巨大的危害。 但你以為沒吸毒賭博，就不會成癮了嗎？ 遊戲、社群是這個世代另種讓人成癮的事物，在科技發達的現代，各種 app、廣告、媒體、遊戲都在爭奪人們的眼球，只要有辦法讓人停留一秒，那就有機會觸發上癮的行為。 比如說，明明沒事卻一直重新整理 IG 頁面，抖音影片都看完了，還是不斷重看等。
+明明我們知道不能一直這樣下去，但還是會不由自主的花時間成癮在這些事物上，是為什麼？你可能會說『一定是他們意志力不足。』 但真的是這樣嗎？曾經有一個測試意志力實驗的案例：
+實驗兩組學生進行一個無解的數學題考試，並要求兩組學生在解題前要空腹，分別安排在裝滿餅乾以及胡蘿蔔的房間，一組要求只能吃餅乾，另一組只能吃胡蘿蔔， 相較於餅乾組，胡蘿蔔組的學生需要驅動意志力才可以抵抗餅乾的誘惑。隨後兩組學生在分別去進行無解的數學題考試，餅乾組堅持的時間是胡蘿蔔組的兩倍。 很顯然，我們很難一直驅動意志力，就像是肌肉一樣，當人一直使用肌肉的力量到筋疲力盡時，肌肉變無法再提供力量作其他的活動。 所以意志力並非一項技能，他更像一種會消耗的力量。
+1. 是什麼讓我們行為上癮？ 人的行為，就像是一套套演算法
+2. 上癮飛輪 - 在不知不覺中成癮 3. 擺脫上癮，找回自主權 4. 讀後心得 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/algorithms/bubble-sort/" /><meta property="og:image" content="https://i.imgur.com/9uBuL8g.png" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2021-03-15T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-03-15T00:00:00+00:00" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/read/behavioural-addiction/" /><meta property="og:image" content="https://ianjustin39.github.io/ianlife/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2022-07-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-07-27T00:00:00+00:00" />
 
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://i.imgur.com/9uBuL8g.png"/>
+<meta name="twitter:image" content="https://ianjustin39.github.io/ianlife/"/>
 
-<meta name="twitter:title" content="泡沫排序 - Bubble Sort"/>
-<meta name="twitter:description" content="泡沫排序是一種穩定排序演算法，不斷重複比較兩個元素，如果要最小的開頭，若前一個元素小於現在這個元素，則兩個元素位置互換，反之亦然，直到所有元素都是由小到大排序才結束。而也因為這種『小元素經由交換慢慢浮至集合頂端』，故稱作泡沫排序"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="
+0. 花了一週制定縝密的計畫，卻無法持續超過三天？ 相信大家都有過這個經驗，每年年底勵志明年要幹大事，一頭熱的制定了年度目標以及執行計畫，想說『我一定要在 1/1 號開始發奮向上』， 結果跨完年覺得很累想要休息，開始滑個社群軟體、回覆別人限動、與朋友聊天或是追追劇，完美的計畫不知不覺就被落在一旁，然後年底到了又開始一樣的輪迴。 我們是否有想過，為什麼已經下定決心要做某些事，但卻又被其他不重要的事情偷走專注力而沒辦法達成目標呢？
+1. 意志力不足才會上癮？ 毒癮、賭癮是最常見到行為上癮的事務，不管哪個，都會讓人甚至家庭造成巨大的危害。 但你以為沒吸毒賭博，就不會成癮了嗎？ 遊戲、社群是這個世代另種讓人成癮的事物，在科技發達的現代，各種 app、廣告、媒體、遊戲都在爭奪人們的眼球，只要有辦法讓人停留一秒，那就有機會觸發上癮的行為。 比如說，明明沒事卻一直重新整理 IG 頁面，抖音影片都看完了，還是不斷重看等。
+明明我們知道不能一直這樣下去，但還是會不由自主的花時間成癮在這些事物上，是為什麼？你可能會說『一定是他們意志力不足。』 但真的是這樣嗎？曾經有一個測試意志力實驗的案例：
+實驗兩組學生進行一個無解的數學題考試，並要求兩組學生在解題前要空腹，分別安排在裝滿餅乾以及胡蘿蔔的房間，一組要求只能吃餅乾，另一組只能吃胡蘿蔔， 相較於餅乾組，胡蘿蔔組的學生需要驅動意志力才可以抵抗餅乾的誘惑。隨後兩組學生在分別去進行無解的數學題考試，餅乾組堅持的時間是胡蘿蔔組的兩倍。 很顯然，我們很難一直驅動意志力，就像是肌肉一樣，當人一直使用肌肉的力量到筋疲力盡時，肌肉變無法再提供力量作其他的活動。 所以意志力並非一項技能，他更像一種會消耗的力量。
+1. 是什麼讓我們行為上癮？ 人的行為，就像是一套套演算法
+2. 上癮飛輪 - 在不知不覺中成癮 3. 擺脫上癮，找回自主權 4. 讀後心得 "/>
 <meta name="twitter:site" content="@example"/>
 <link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
@@ -242,17 +260,15 @@ if (!doNotTrack) {
         <article class="post">
   <header>
   <div class="title">
-    <a href="/series/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95"><p>Data Structures and Algorithms</p></a>
+    <a href="/series/%E5%BE%9E%E7%8F%BE%E5%9C%A8%E9%96%8B%E5%A7%8B%E8%AA%8D%E7%9C%9F%E8%AE%80%E6%9B%B8"><p>讀書心得</p></a>
     
-    <h3><a href="/ianlife/algorithms/bubble-sort/">泡沫排序 - Bubble Sort</a></h3>
+    <h3><a href="/ianlife/read/behavioural-addiction/"></a></h3>
     
-    
-    <p style="margin-top: 0px;">泡沫排序是一種穩定排序演算法，不斷重複比較兩個元素，如果要最小的開頭，若前一個元素小於現在這個元素，則兩個元素位置互換，反之亦然，直到所有元素都是由小到大排序才結束。而也因為這種『小元素經由交換慢慢浮至集合頂端』，故稱作泡沫排序</p>
     
   </div>
   <div class="meta">
-    <time class="published" datetime="2021-03-15 00:00:00 &#43;0000 UTC">
-      March 15, 2021
+    <time class="published" datetime="2022-07-27 00:00:00 &#43;0000 UTC">
+      July 27, 2022
     </time>
     
     <span class="author">Ian Tsai</span>
@@ -271,9 +287,9 @@ if (!doNotTrack) {
     
   </section>
   
-  <a href="/ianlife/algorithms/bubble-sort/" class="image featured">
+  <a href="/ianlife/read/behavioural-addiction/" class="image featured">
     
-      <img src="https://i.imgur.com/9uBuL8g.png" alt="">
+      <img src="/ianlife/" alt="">
     
   </a>
 
@@ -281,114 +297,50 @@ if (!doNotTrack) {
   <div class="content">
     <br>
 <br>
-<h3 id=_泡沫排序原理>泡沫排序原理</h3>
+<h3 id=_0-花了一週制定縝密的計畫卻無法持續超過三天>0. 花了一週制定縝密的計畫，卻無法持續超過三天？</h3>
 <hr>
-<p>泡沫排序是一種穩定排序演算法，不斷重複比較兩個元素，如果要最小的開頭，若前一個元素小於現在這個元素，則兩個元素位置互換，反之亦然，直到所有元素都是由小到大排序才結束。而也因為這種『小元素經由交換慢慢浮至集合頂端』，故稱作泡沫排序。</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Bubble_sort_animation.gif" alt="Bubble Sort"></p>
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/3/37/Bubble_sort_animation.gif">圖片來源</a></p>
+<p>相信大家都有過這個經驗，每年年底勵志明年要幹大事，一頭熱的制定了年度目標以及執行計畫，想說『我一定要在 1/1 號開始發奮向上』，
+結果跨完年覺得很累想要休息，開始滑個社群軟體、回覆別人限動、與朋友聊天或是追追劇，完美的計畫不知不覺就被落在一旁，然後年底到了又開始一樣的輪迴。
+我們是否有想過，為什麼已經下定決心要做某些事，但卻又被其他不重要的事情偷走專注力而沒辦法達成目標呢？</p>
 <br>
-<br>
-<h3 id=_泡沫排序運作>泡沫排序運作</h3>
+<h3 id=_1-意志力不足才會上癮>1. 意志力不足才會上癮？</h3>
 <hr>
-<p>若有一筆資料要從小排到大，使用泡沫排序的步驟如下：</p>
-<ol>
-<li>比較相鄰兩個元素，若第一個元素大於第二元素，則兩個位置互換。</li>
-<li>針對每個元素（第二與第三&hellip;），不斷重複上一步驟，直到最後一個元素。</li>
-<li>重複步驟 1, 2 直到資料全部由小到大排序。</li>
-</ol>
-<p>可以用<code>[8, 3, 5, 6, 1]</code>來看看：</p>
-<pre tabindex="0"><code>[8, 3, 5, 6, 1]
- ^  ^
-(8 &gt; 3) 兩個位子交換
-
-[3, 8, 5, 6, 1]
-    ^  ^
-(8 &gt; 5) 兩個位子交換
-
-[3, 5, 8, 6, 1]
-       ^  ^
-(8 &gt; 6) 兩個位子交換
- 
-[3, 5, 6, 8, 1]
-          ^  ^
-(8 &gt; 1) 兩個位子交換
-
-[3, 5, 6, 1, 8]
-</code></pre><p>這樣比一輪，就把最大值給放到最後了。接著就是不段重複上述步驟，直到排序完成。</p>
+<p>毒癮、賭癮是最常見到行為上癮的事務，不管哪個，都會讓人甚至家庭造成巨大的危害。
+但你以為沒吸毒賭博，就不會成癮了嗎？
+遊戲、社群是這個世代另種讓人成癮的事物，在科技發達的現代，各種 app、廣告、媒體、遊戲都在爭奪人們的眼球，只要有辦法讓人停留一秒，那就有機會觸發上癮的行為。
+比如說，明明沒事卻一直重新整理 IG 頁面，抖音影片都看完了，還是不斷重看等。</p>
+<p>明明我們知道不能一直這樣下去，但還是會不由自主的花時間成癮在這些事物上，是為什麼？你可能會說『一定是他們意志力不足。』
+但真的是這樣嗎？曾經有一個測試意志力實驗的案例：</p>
+<pre><code>實驗兩組學生進行一個無解的數學題考試，並要求兩組學生在解題前要空腹，分別安排在裝滿餅乾以及胡蘿蔔的房間，一組要求只能吃餅乾，另一組只能吃胡蘿蔔，
+相較於餅乾組，胡蘿蔔組的學生需要驅動意志力才可以抵抗餅乾的誘惑。隨後兩組學生在分別去進行無解的數學題考試，餅乾組堅持的時間是胡蘿蔔組的兩倍。
+</code></pre>
+<p>很顯然，我們很難一直驅動意志力，就像是肌肉一樣，當人一直使用肌肉的力量到筋疲力盡時，肌肉變無法再提供力量作其他的活動。
+所以意志力並非一項技能，他更像一種會消耗的力量。</p>
 <br>
-<br>
-<h3 id=_泡沫排序的時間複雜度time-complexity>泡沫排序的時間複雜度（Time complexity）</h3>
+<h3 id=_1-是什麼讓我們行為上癮>1. 是什麼讓我們行為上癮？</h3>
 <hr>
-<p>這是我們剛剛看到的流程，這次加入一個比較次數<code>num = 0</code>開始</p>
-<pre tabindex="0"><code>num = 1
-[8, 3, 5, 6, 1]
- ^  ^
-(8 &gt; 3) 兩個位子交換
-
-num = 2
-[3, 8, 5, 6, 1]
-    ^  ^
-(8 &gt; 5) 兩個位子交換
-
-num = 3
-[3, 5, 8, 6, 1]
-       ^  ^
-(8 &gt; 6) 兩個位子交換
-
-num = 4
-[3, 5, 6, 8, 1]
-          ^  ^
-(8 &gt; 1) 兩個位子交換
-
-[3, 5, 6, 1, 8]
-</code></pre><p>排序完一次，num 變成了 4，可以發現，陣列內有幾個元素，就要比較 (n-1) 次，而要把所有元素排序完，又需要 n 次。
-所以一個完整的泡沫排序所需的時間是 n(n-1) =&gt; n<sup>2</sup>，即 O(n<sup>2</sup>)。</p>
-<p><strong>Bubble Sort 的時間複雜度是多少？ O(n<sup>2</sup>)</strong></p>
+<p>人的行為，就像是一套套演算法</p>
 <br>
-<br>
-<h3 id=_泡沫排序實作>泡沫排序實作</h3>
+<h3 id=_2-上癮飛輪---在不知不覺中成癮>2. 上癮飛輪 - 在不知不覺中成癮</h3>
 <hr>
-<p>現在來練習一下泡沫排序吧！</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>data <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">8</span>]
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">bubble_sort_1</span>(l):
-</span></span><span style="display:flex;"><span>    data_len <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">len</span>(l)
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">for</span> run_time <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(data_len):
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">for</span> index <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">1</span>, data_len):
-</span></span><span style="display:flex;"><span>            this_data <span style="color:#ff79c6">=</span> l[index]
-</span></span><span style="display:flex;"><span>            prev_data <span style="color:#ff79c6">=</span> l[index <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>]
-</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> prev_data <span style="color:#ff79c6">&gt;</span> this_data:
-</span></span><span style="display:flex;"><span>                l[index] <span style="color:#ff79c6">=</span> prev_data
-</span></span><span style="display:flex;"><span>                l[index <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>] <span style="color:#ff79c6">=</span> this_data
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>bubble_sort_1(data)
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span> (<span style="color:#f1fa8c">&#34;Pass&#34;</span> <span style="color:#ff79c6">if</span> (data[<span style="color:#bd93f9">0</span>] <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">1</span>) <span style="color:#ff79c6">else</span> <span style="color:#f1fa8c">&#34;Fail&#34;</span>)
-</span></span></code></pre></div><p><a href="https://onlinegdb.com/ya9Bg0OOB" target="_blank">練習程式碼</a></p>
 <br>
-<br>
-<h3 id=_resource>Resource</h3>
+<h3 id=_3-擺脫上癮找回自主權>3. 擺脫上癮，找回自主權</h3>
 <hr>
-<ul>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F" target="_blank">泡沫排序</a></li>
-<li><a href="https://jumperc2p.github.io/InformisTry/posts/ithome-triathlon/brute_force_bubble_sort/" target="_blank">【舌尖上的演算法】Day7 &ndash; Brute Force - Bubble Sort</a></li>
-</ul>
+<br>
+<h3 id=_4-讀後心得>4. 讀後心得</h3>
+<hr>
+
   </div>
   <br>
   <br>
   <div class="pagination">
   
-    <a href="/ianlife/movie/plurality/" class="button">
+    <a href="/ianlife/blog/technology/blockchain/blockchain-black-swan-terra/" class="button">
       <div class="previous">
-        <div>複身犯 - 寫出你的名字，你是誰？</div>
+        <div>幣圈黑天鵝，前十大公鏈 Terra 如何從月球殞落</div>
       </div>
     </a>
   
-  
-    <a href="/ianlife/algorithms/merge-sort/" class="button">
-      <div class="next">
-        <div>合併排序 - Merge Sort</div>
-      </div>
-    </a>
   
 </div>
 
@@ -402,7 +354,7 @@ num = 4
         <ul>
           
             
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95">資料結構與演算法</a></li>
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%8F%BE%E5%9C%A8%E9%96%8B%E5%A7%8B%E8%AA%8D%E7%9C%9F%E8%AE%80%E6%9B%B8">從現在開始認真讀書</a></li>
           
         </ul>
       </li>
@@ -417,7 +369,10 @@ num = 4
         <ul>
           
             
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/algorithm">Algorithm</a></li>
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97">讀書心得</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6">好書推薦</a></li>
           
         </ul>
       </li>
@@ -512,8 +467,8 @@ num = 4
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e6%b3%a1%e6%b2%ab%e6%8e%92%e5%ba%8f%e5%8e%9f%e7%90%86">
-												 泡沫排序原理
+						 					<a class="nav-link" href="#_0-%e8%8a%b1%e4%ba%86%e4%b8%80%e9%80%b1%e5%88%b6%e5%ae%9a%e7%b8%9d%e5%af%86%e7%9a%84%e8%a8%88%e7%95%ab%e5%8d%bb%e7%84%a1%e6%b3%95%e6%8c%81%e7%ba%8c%e8%b6%85%e9%81%8e%e4%b8%89%e5%a4%a9">
+												 0. 花了一週制定縝密的計畫，卻無法持續超過三天？
 											</a>
 										</li>
 						 
@@ -538,8 +493,8 @@ num = 4
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e6%b3%a1%e6%b2%ab%e6%8e%92%e5%ba%8f%e9%81%8b%e4%bd%9c">
-												 泡沫排序運作
+						 					<a class="nav-link" href="#_1-%e6%84%8f%e5%bf%97%e5%8a%9b%e4%b8%8d%e8%b6%b3%e6%89%8d%e6%9c%83%e4%b8%8a%e7%99%ae">
+												 1. 意志力不足才會上癮？
 											</a>
 										</li>
 						 
@@ -564,8 +519,8 @@ num = 4
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e6%b3%a1%e6%b2%ab%e6%8e%92%e5%ba%8f%e7%9a%84%e6%99%82%e9%96%93%e8%a4%87%e9%9b%9c%e5%ba%a6time-complexity">
-												 泡沫排序的時間複雜度（Time complexity）
+						 					<a class="nav-link" href="#_1-%e6%98%af%e4%bb%80%e9%ba%bc%e8%ae%93%e6%88%91%e5%80%91%e8%a1%8c%e7%82%ba%e4%b8%8a%e7%99%ae">
+												 1. 是什麼讓我們行為上癮？
 											</a>
 										</li>
 						 
@@ -590,8 +545,8 @@ num = 4
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e6%b3%a1%e6%b2%ab%e6%8e%92%e5%ba%8f%e5%af%a6%e4%bd%9c">
-												 泡沫排序實作
+						 					<a class="nav-link" href="#_2-%e4%b8%8a%e7%99%ae%e9%a3%9b%e8%bc%aa---%e5%9c%a8%e4%b8%8d%e7%9f%a5%e4%b8%8d%e8%a6%ba%e4%b8%ad%e6%88%90%e7%99%ae">
+												 2. 上癮飛輪 - 在不知不覺中成癮
 											</a>
 										</li>
 						 
@@ -616,8 +571,34 @@ num = 4
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#_resource">
-												 Resource
+						 					<a class="nav-link" href="#_3-%e6%93%ba%e8%84%ab%e4%b8%8a%e7%99%ae%e6%89%be%e5%9b%9e%e8%87%aa%e4%b8%bb%e6%ac%8a">
+												 3. 擺脫上癮，找回自主權
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#_4-%e8%ae%80%e5%be%8c%e5%bf%83%e5%be%97">
+												 4. 讀後心得
 											</a>
 										</li>
 						 
@@ -640,7 +621,7 @@ num = 4
 	
 
         <iframe class="LikeCoin" height="235"
-  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2falgorithms%2fbubble-sort%2f" width="100%"
+  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2fread%2fbehavioural-addiction%2f" width="100%"
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>

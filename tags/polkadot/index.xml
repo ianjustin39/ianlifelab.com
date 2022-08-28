@@ -6,11 +6,7 @@
     <description>Recent content in Polkadot on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 12 May 2022 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://ianjustin39.github.io/ianlife/tags/polkadot/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 12 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/tags/polkadot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>幣圈黑天鵝，前十大公鏈 Terra 如何從月球殞落</title>
       <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain-black-swan-terra/</link>
@@ -18,7 +14,7 @@
       
       <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain-black-swan-terra/</guid>
       <description>一個星期前，Terra 還是市值前十的加密貨幣，其中包含近期最熱門的 Defi 項目 Anchor 也是大家趨之若鶩投資的項目之一， 甚至有很多投資人把大部分資產兌換成 UST 放到 Anchor 內。 但短短的一週 Luna 的價格卻從 80 跌到0.00001 美金，Anchor 中的 UST 資金也大量的撤離， 這中間與 UST 脫鉤有著莫大的關係，一個大家都以為會成功的項目是如何在短時間內跌落谷底， 自身參與了這個幣圈的重大事件 (韭菜？)，想說來紀錄一下。
-Terra 的模型  Terra 是一個擁有雙主鏈幣的區塊鏈，包含其算法穩定幣 Terra 及治理代幣 Luna，而 UST 為算法穩定幣 Terra 的一種。 由於 UST 並不像 USDC 有美元資產儲備抵押，需要依靠演算法及市場支撐與美金的掛鉤。
+Terra 的模型 Terra 是一個擁有雙主鏈幣的區塊鏈，包含其算法穩定幣 Terra 及治理代幣 Luna，而 UST 為算法穩定幣 Terra 的一種。 由於 UST 並不像 USDC 有美元資產儲備抵押，需要依靠演算法及市場支撐與美金的掛鉤。
 所以當 UST 價格高於一美元時，代表供不應求，這時便會燃燒 Luna 並鑄造 UST，讓價格回穩到一美元， 而這中間也因為 Luna 的總量變小，進而提高了 Luna 的價格。
 反之，若 UST 低於一美元時，代表供過於求，這時則會燃燒 UST 去鑄造 Luna，也因為這樣 UST 的總量變小，可以讓價格回穩至一美元， 而當 UST 價格回穩後，因為 Luna 便多，所以導致 Lune 的價格下降。
 這看似很合理的邏輯，似乎必須建立在市場對 Terra 有信心的情況下，Terra 才可以穩定的生存， 這也讓 Terra 埋下了一個落入死亡螺旋的不安定因素。</description>

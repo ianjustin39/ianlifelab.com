@@ -75,22 +75,17 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="代理模式 | Proxy Pattern">
-<meta itemprop="description" content="代理模式目的爲其他物件提供一種代理以控制對這個物件的訪問。應用可以為遠端代理、虛擬代理、保護代理、智慧代理等等。">
-<meta itemprop="datePublished" content="2020-09-28T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-09-28T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="405">
-<meta itemprop="image" content="https://i.imgur.com/21fwpdm.png">
-
-
-
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="代理模式 | Proxy Pattern">
+<meta itemprop="description" content="代理模式目的爲其他物件提供一種代理以控制對這個物件的訪問。應用可以為遠端代理、虛擬代理、保護代理、智慧代理等等。"><meta itemprop="datePublished" content="2020-09-28T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-09-28T00:00:00+00:00" />
+<meta itemprop="wordCount" content="351"><meta itemprop="image" content="https://i.imgur.com/21fwpdm.png">
 <meta itemprop="keywords" content="Design Pattern,Structural Pattern," /><meta property="og:title" content="代理模式 | Proxy Pattern" />
 <meta property="og:description" content="代理模式目的爲其他物件提供一種代理以控制對這個物件的訪問。應用可以為遠端代理、虛擬代理、保護代理、智慧代理等等。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/proxy-pattern/" />
-<meta property="og:image" content="https://i.imgur.com/21fwpdm.png" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/proxy-pattern/" /><meta property="og:image" content="https://i.imgur.com/21fwpdm.png" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-09-28T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-09-28T00:00:00+00:00" />
+
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.imgur.com/21fwpdm.png"/>
@@ -98,7 +93,7 @@ if (!doNotTrack) {
 <meta name="twitter:title" content="代理模式 | Proxy Pattern"/>
 <meta name="twitter:description" content="代理模式目的爲其他物件提供一種代理以控制對這個物件的訪問。應用可以為遠端代理、虛擬代理、保護代理、智慧代理等等。"/>
 <meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
@@ -109,7 +104,7 @@ if (!doNotTrack) {
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ianlife/">
+      <a href="/">
         
           <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
         
@@ -247,7 +242,7 @@ if (!doNotTrack) {
         <article class="post">
   <header>
   <div class="title">
-    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    <a href="/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
     
     <h3><a href="/ianlife/design-pattern/proxy-pattern/">代理模式 | Proxy Pattern</a></h3>
     
@@ -395,22 +390,22 @@ if (!doNotTrack) {
 <table>
 <thead>
 <tr>
-<th align="left">成員</th>
-<th align="left">功用</th>
+<th style="text-align:left">成員</th>
+<th style="text-align:left">功用</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Subject</td>
-<td align="left">定義RealSubject和Proxy實作的業務方法，可是介面或抽象類別。</td>
+<td style="text-align:left">Subject</td>
+<td style="text-align:left">定義RealSubject和Proxy實作的業務方法，可是介面或抽象類別。</td>
 </tr>
 <tr>
-<td align="left">RealSubject</td>
-<td align="left">實作Subject中的方法，為最終要引用的物件。</td>
+<td style="text-align:left">RealSubject</td>
+<td style="text-align:left">實作Subject中的方法，為最終要引用的物件。</td>
 </tr>
 <tr>
-<td align="left">Proxy</td>
-<td align="left">提供與RealSubject相同的接口，內部引用RealSubject，可以訪問、控制或擴充RealSubject的工能。</td>
+<td style="text-align:left">Proxy</td>
+<td style="text-align:left">提供與RealSubject相同的接口，內部引用RealSubject，可以訪問、控制或擴充RealSubject的工能。</td>
 </tr>
 </tbody>
 </table>
@@ -461,42 +456,42 @@ Proxy : -RealSubject;
 <hr>
 <p>一開始有提到，想要買日本的藥妝品，無法自己飛過去只能請代購的例子，現在我們就來實作。</p>
 <p>首先先將Subject建立起來：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">IPurchasing</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">Request</span><span style="color:#ff79c6">();</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>接著需要一個真正的類別RealSubject，他來實作Subject，主要就是在日本買東西：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Purchasing</span> <span style="color:#8be9fd;font-style:italic">implements</span> IPurchasing <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">Request</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Shopping in japan&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>然後建立代購的人Proxy，Proxy內除了有Request以外，還可以增加一些方法。preRequest()含有確認品項以及記錄到底有多少人需要代購兩個邏輯；而postRequest()則是ㄧ買完回來要把東西寄給買家。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ProxyBuyer</span> <span style="color:#8be9fd;font-style:italic">implements</span> IPurchasing <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> Purchasing purchasing<span style="color:#ff79c6">;</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">Request</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>purchasing <span style="color:#ff79c6">==</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-            purchasing <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Purchasing<span style="color:#ff79c6">();</span>
-        <span style="color:#ff79c6">}</span>
-        preRequest<span style="color:#ff79c6">();</span>
-        purchasing<span style="color:#ff79c6">.</span><span style="color:#50fa7b">Request</span><span style="color:#ff79c6">();</span>
-        postRequest<span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">preRequest</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Confirm shopping items&#34;</span><span style="color:#ff79c6">);</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Record the number of purchasers&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">postRequest</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;delivery&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p>最後身為買家的我，只要呼叫ProxyBuyer就可以請他幫我買到日本的藥妝了。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyClass</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
-        ProxyBuyer proxy <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ProxyBuyer<span style="color:#ff79c6">();</span>
-        proxy<span style="color:#ff79c6">.</span><span style="color:#50fa7b">Request</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">IPurchasing</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">Request</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>接著需要一個真正的類別RealSubject，他來實作Subject，主要就是在日本買東西：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Purchasing</span> <span style="color:#8be9fd;font-style:italic">implements</span> IPurchasing <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">Request</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Shopping in japan&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>然後建立代購的人Proxy，Proxy內除了有Request以外，還可以增加一些方法。preRequest()含有確認品項以及記錄到底有多少人需要代購兩個邏輯；而postRequest()則是ㄧ買完回來要把東西寄給買家。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ProxyBuyer</span> <span style="color:#8be9fd;font-style:italic">implements</span> IPurchasing <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> Purchasing purchasing<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">Request</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>purchasing <span style="color:#ff79c6">==</span> <span style="color:#ff79c6">null</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            purchasing <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Purchasing<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        preRequest<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        purchasing<span style="color:#ff79c6">.</span><span style="color:#50fa7b">Request</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        postRequest<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">preRequest</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Confirm shopping items&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Record the number of purchasers&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">postRequest</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;delivery&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p>最後身為買家的我，只要呼叫ProxyBuyer就可以請他幫我買到日本的藥妝了。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyClass</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        ProxyBuyer proxy <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ProxyBuyer<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        proxy<span style="color:#ff79c6">.</span><span style="color:#50fa7b">Request</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><br>
 <br>
 <img src='https://g.gravizo.com/svg?
 @startuml;
@@ -635,7 +630,7 @@ Proxy：代理者。
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -926,7 +921,7 @@ Proxy：代理者。
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/ianlife/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

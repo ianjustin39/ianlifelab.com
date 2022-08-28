@@ -75,24 +75,19 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="二分搜尋演算法 (Binary search algorithm) - 終極密碼">
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="二分搜尋演算法 (Binary search algorithm) - 終極密碼">
 <meta itemprop="description" content="圖片來源
-">
-<meta itemprop="datePublished" content="2021-03-07T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-07T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="336">
-<meta itemprop="image" content="https://i.imgur.com/RVPOINs.png">
-
-
-
+"><meta itemprop="datePublished" content="2021-03-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-03-07T00:00:00+00:00" />
+<meta itemprop="wordCount" content="336"><meta itemprop="image" content="https://i.imgur.com/RVPOINs.png">
 <meta itemprop="keywords" content="Algorithm,Data Structures," /><meta property="og:title" content="二分搜尋演算法 (Binary search algorithm) - 終極密碼" />
 <meta property="og:description" content="圖片來源
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/algorithms/binary-search/" />
-<meta property="og:image" content="https://i.imgur.com/RVPOINs.png" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/algorithms/binary-search/" /><meta property="og:image" content="https://i.imgur.com/RVPOINs.png" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2021-03-07T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-03-07T00:00:00+00:00" /><meta property="og:see_also" content="https://ianjustin39.github.io/ianlife/algorithms/quick-sort/" /><meta property="og:see_also" content="https://ianjustin39.github.io/ianlife/algorithms/merge-sort/" /><meta property="og:see_also" content="https://ianjustin39.github.io/ianlife/algorithms/bubble-sort/" /><meta property="og:see_also" content="https://ianjustin39.github.io/ianlife/algorithms/tries/" />
+<meta property="article:modified_time" content="2021-03-07T00:00:00+00:00" />
+
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.imgur.com/RVPOINs.png"/>
@@ -101,7 +96,7 @@ if (!doNotTrack) {
 <meta name="twitter:description" content="圖片來源
 "/>
 <meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
@@ -112,7 +107,7 @@ if (!doNotTrack) {
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ianlife/">
+      <a href="/">
         
           <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
         
@@ -250,7 +245,7 @@ if (!doNotTrack) {
         <article class="post">
   <header>
   <div class="title">
-    <a href="/ianlife/series/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95"><p>Data Structures and Algorithms</p></a>
+    <a href="/series/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95"><p>Data Structures and Algorithms</p></a>
     
     <h3><a href="/ianlife/algorithms/binary-search/">二分搜尋演算法 (Binary search algorithm) - 終極密碼</a></h3>
     
@@ -290,39 +285,39 @@ if (!doNotTrack) {
 <h2 id=_終極密碼>終極密碼</h2>
 <hr>
 <p>再進入 Binary search 之前，先來玩一段小程式（可以點 <strong><a href="https://onlinegdb.com/r1FwI5mQO" target="_blank">這裏</a></strong> 試玩）：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">import</span> random
-
-<span style="color:#ff79c6">def</span> <span style="color:#50fa7b">guess_the_number</span>(total_tries, start_range, end_range):
-    <span style="color:#ff79c6">if</span> start_range <span style="color:#ff79c6">&gt;</span> end_range:
-        start_range, end_range <span style="color:#ff79c6">=</span> end_range, start_range
-        
-    random_number <span style="color:#ff79c6">=</span> random<span style="color:#ff79c6">.</span>randint(start_range, end_range)
-    try_count <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
-    success_message <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;答對了！！&#34;</span>
-    failure_message <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;遊戲結束！！&#34;</span>
-    miss_message <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;答錯囉！！&#34;</span>
-    
-    num_tries <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
-    <span style="color:#ff79c6">while</span> num_tries <span style="color:#ff79c6">&lt;</span> total_tries:
-        attempt <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;輸入數字: &#34;</span>))
-        
-        <span style="color:#ff79c6">if</span> attempt <span style="color:#ff79c6">==</span> random_number:
-            <span style="color:#ff79c6">print</span>(success_message)
-            <span style="color:#ff79c6">return</span>
-        <span style="color:#ff79c6">print</span>(miss_message)
-        <span style="color:#ff79c6">if</span> attempt <span style="color:#ff79c6">&lt;</span> random_number:
-            <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;再高一點!&#34;</span>)
-        <span style="color:#ff79c6">else</span>:
-            <span style="color:#ff79c6">print</span>(<span style="color:#f1fa8c">&#34;再低一點!&#34;</span>)
-        num_tries <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
-    <span style="color:#ff79c6">print</span>(failure_message)
-    <span style="color:#ff79c6">print</span>(random_number)
-
-total_tries <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5</span>
-start_range <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
-end_range <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">100</span>
-guess_the_number(total_tries, start_range, end_range)
-</code></pre></div><p>這其實就是以前常玩的猜數字（終極密碼）的遊戲。猜一個數字看是否正確，不正確的話是比正確數字大還是小，然後繼續猜另一半，雖然帶有一點隨機性，不過概念就跟 Binary search 相似。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> random
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">guess_the_number</span>(total_tries, start_range, end_range):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> start_range <span style="color:#ff79c6">&gt;</span> end_range:
+</span></span><span style="display:flex;"><span>        start_range, end_range <span style="color:#ff79c6">=</span> end_range, start_range
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    random_number <span style="color:#ff79c6">=</span> random<span style="color:#ff79c6">.</span>randint(start_range, end_range)
+</span></span><span style="display:flex;"><span>    try_count <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>    success_message <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;答對了！！&#34;</span>
+</span></span><span style="display:flex;"><span>    failure_message <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;遊戲結束！！&#34;</span>
+</span></span><span style="display:flex;"><span>    miss_message <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;答錯囉！！&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    num_tries <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">while</span> num_tries <span style="color:#ff79c6">&lt;</span> total_tries:
+</span></span><span style="display:flex;"><span>        attempt <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(<span style="color:#8be9fd;font-style:italic">input</span>(<span style="color:#f1fa8c">&#34;輸入數字: &#34;</span>))
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> attempt <span style="color:#ff79c6">==</span> random_number:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(success_message)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">print</span>(miss_message)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> attempt <span style="color:#ff79c6">&lt;</span> random_number:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;再高一點!&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;再低一點!&#34;</span>)
+</span></span><span style="display:flex;"><span>        num_tries <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(failure_message)
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(random_number)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>total_tries <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5</span>
+</span></span><span style="display:flex;"><span>start_range <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>end_range <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">100</span>
+</span></span><span style="display:flex;"><span>guess_the_number(total_tries, start_range, end_range)
+</span></span></code></pre></div><p>這其實就是以前常玩的猜數字（終極密碼）的遊戲。猜一個數字看是否正確，不正確的話是比正確數字大還是小，然後繼續猜另一半，雖然帶有一點隨機性，不過概念就跟 Binary search 相似。</p>
 <p>但在再更進一步了解 Binary search 之前，先來了解一下 Linear search。</p>
 <br>
 <br>
@@ -330,7 +325,7 @@ guess_the_number(total_tries, start_range, end_range)
 <hr>
 <p>假設有一本字典，我們要從字典裡面找到一個單字。但這本字典編輯的很爛，它並沒有按照字母順序排列，那我們該如何找到這個單字？</p>
 <p>看起來我們只能從第一頁開始逐個字的看，直到找到為止。這就是 Linear search。</p>
-<pre><code>Linear search 的時間複雜度是多少？ O(n)
+<pre tabindex="0"><code>Linear search 的時間複雜度是多少？ O(n)
 </code></pre><br>
 <br>
 <h2 id=_binary-search>Binary search</h2>
@@ -357,20 +352,20 @@ guess_the_number(total_tries, start_range, end_range)
 <hr>
 <p>現在我們知道了 Binary Search 的運作原理，也知道了使用 Binary Search 的資料必須是經過排序的資料。那它的時間複雜度該如何計算？
 我們再來看一個範例，現在有一個經過排序的陣列如下：</p>
-<pre><code>data:   [1, 2, 4, 5, 6, 7, 8, 13, 14, 15, 16, 18]
+<pre tabindex="0"><code>data:   [1, 2, 4, 5, 6, 7, 8, 13, 14, 15, 16, 18]
 index:   1  2  3  4  5  6  7  8   9   10  11  12
 </code></pre><p>如果我現在要找<code>16</code>在 array 中的哪個位置，就開始從中間搜尋:</p>
-<pre><code>data:   [1, 2, 4, 5, 6, 7, 8, 13, 14, 15, 16, 18]
+<pre tabindex="0"><code>data:   [1, 2, 4, 5, 6, 7, 8, 13, 14, 15, 16, 18]
 index:   1  2  3  4  5  6  7  8   9   10  11  12
                         ＾
                         mid
 </code></pre><p>比對發現<code>7&lt;16</code>，所以要繼續搜索 array 的右半邊。</p>
-<pre><code>data:   [8, 13, 14, 15, 16, 18]
+<pre tabindex="0"><code>data:   [8, 13, 14, 15, 16, 18]
 index:   1  2   3   4   5   6 
                 ＾
                 mid
 </code></pre><p>再比對發現<code>14&lt;16</code>，所以要繼續搜索 array 的右半邊。</p>
-<pre><code>data:   [15, 16, 18]
+<pre tabindex="0"><code>data:   [15, 16, 18]
 index:   1   2   3 
              ＾
              mid
@@ -388,7 +383,7 @@ index:   1   2   3
 <p><strong>step 4: 變成</strong></p>
 <p>n = 2k</p>
 <p>所以以 2 為底 n 的<a href="https://zh.wikipedia.org/wiki/%E5%AF%B9%E6%95%B0" target="_blank">對數</a>是 log<sub>2</sub>(n) = k， 所以 k 就是 log<sub>2</sub>(n)，也就是在最糟情況下，要從 n 個元素中搜尋到某一個元素，則要折半比對的次數為 k 次，就是 log<sub>2</sub>(n) 次。</p>
-<pre><code>Binary search 的時間複雜度是多少？ O(log n)
+<pre tabindex="0"><code>Binary search 的時間複雜度是多少？ O(log n)
 </code></pre><br>
 <br>
 <h2 id=_練習程式碼>練習程式碼</h2>
@@ -463,7 +458,7 @@ index:   1   2   3
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -678,7 +673,7 @@ index:   1   2   3
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/ianlife/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

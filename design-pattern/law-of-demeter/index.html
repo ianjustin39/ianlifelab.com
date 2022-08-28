@@ -75,22 +75,17 @@ if (!doNotTrack) {
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.69.2" /><meta itemprop="name" content="迪米特法則 | Law of Demeter">
-<meta itemprop="description" content="迪米特法則，又稱最少知識原則。其定義為各單元對其他單元所知應當有限：只瞭解與目前單元最相關之單元。意思就是，只跟你熟的朋友聊天，不要跟陌生人講話。">
-<meta itemprop="datePublished" content="2020-09-16T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-09-16T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="834">
-<meta itemprop="image" content="https://i.imgur.com/kIleRln.png">
-
-
-
+<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="迪米特法則 | Law of Demeter">
+<meta itemprop="description" content="迪米特法則，又稱最少知識原則。其定義為各單元對其他單元所知應當有限：只瞭解與目前單元最相關之單元。意思就是，只跟你熟的朋友聊天，不要跟陌生人講話。"><meta itemprop="datePublished" content="2020-09-16T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-09-16T00:00:00+00:00" />
+<meta itemprop="wordCount" content="834"><meta itemprop="image" content="https://i.imgur.com/kIleRln.png">
 <meta itemprop="keywords" content="Design Pattern,Design Principle,鐵人賽," /><meta property="og:title" content="迪米特法則 | Law of Demeter" />
 <meta property="og:description" content="迪米特法則，又稱最少知識原則。其定義為各單元對其他單元所知應當有限：只瞭解與目前單元最相關之單元。意思就是，只跟你熟的朋友聊天，不要跟陌生人講話。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/law-of-demeter/" />
-<meta property="og:image" content="https://i.imgur.com/kIleRln.png" />
+<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/law-of-demeter/" /><meta property="og:image" content="https://i.imgur.com/kIleRln.png" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-09-16T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-09-16T00:00:00+00:00" />
+
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://i.imgur.com/kIleRln.png"/>
@@ -98,7 +93,7 @@ if (!doNotTrack) {
 <meta name="twitter:title" content="迪米特法則 | Law of Demeter"/>
 <meta name="twitter:description" content="迪米特法則，又稱最少知識原則。其定義為各單元對其他單元所知應當有限：只瞭解與目前單元最相關之單元。意思就是，只跟你熟的朋友聊天，不要跟陌生人講話。"/>
 <meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.6d3a4179a363b5cb9926f042020120b2bd0cd9f412cc5795303e17ba5f9cec72.css" integrity="sha256-bTpBeaNjtcuZJvBCAgEgsr0M2fQSzFeVMD4Xul&#43;c7HI=">
+<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
         <link rel="stylesheet" href="/ianlife/css/add-on.css">
 </head>
 
@@ -109,7 +104,7 @@ if (!doNotTrack) {
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ianlife/">
+      <a href="/">
         
           <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
         
@@ -247,7 +242,7 @@ if (!doNotTrack) {
         <article class="post">
   <header>
   <div class="title">
-    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
+    <a href="/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
     
     <h3><a href="/ianlife/design-pattern/law-of-demeter/">迪米特法則 | Law of Demeter</a></h3>
     
@@ -397,39 +392,39 @@ if (!doNotTrack) {
 <h4 id=_1-只和朋友交流>1. 只和朋友交流</h4>
 <p>LoD有一段英文的解釋，<code>Only talk to your immediate friends; 只與直接的朋友講話</code>。什麼是朋友？兩個物件只要有耦合，就會成為朋友。好比說：合成、聚合及依賴。
 例如：老師要班長清點班上人數，就清點這件事來說，老師只需要跟班長有耦合，不需要跟班級有耦合。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Clazz</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">getInfo</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;共30人！！&#34;</span><span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ClassLeader</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> Clazz c<span style="color:#ff79c6">;</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">getClazz</span><span style="color:#ff79c6">(){</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">c</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Clazz<span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">getClassInfo</span><span style="color:#ff79c6">(){</span>
-		<span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">getClazz</span><span style="color:#ff79c6">();</span>
-		<span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">c</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">getInfo</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Teacher</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> ClassLeader cl<span style="color:#ff79c6">;</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">getClassLeader</span><span style="color:#ff79c6">(){</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">cl</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ClassLeader<span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">getClassInfo</span><span style="color:#ff79c6">(){</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">getClassLeader</span><span style="color:#ff79c6">();</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">cl</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">getClassInfo</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyClass</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
-      Teacher t <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Teacher<span style="color:#ff79c6">();</span>
-      t<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getClassInfo</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>共30人！！
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Clazz</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">getInfo</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;共30人！！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">ClassLeader</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> Clazz c<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">getClazz</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">c</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Clazz<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">getClassInfo</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">getClazz</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">c</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">getInfo</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Teacher</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> ClassLeader cl<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">getClassLeader</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">cl</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ClassLeader<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">getClassInfo</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">getClassLeader</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">cl</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">getClassInfo</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyClass</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>      Teacher t <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Teacher<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>      t<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getClassInfo</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>共30人！！
 </code></pre><br>
 <h4 id=_2-朋友間也應該有距離>2. 朋友間也應該有距離</h4>
 <p>就算是朋友，也不可能什麼都知道。一個公開類別的public屬性或方法越多，修改時的風險也會跟著提高，所以在系統在設計時應該反覆衡量以下幾點：</p>
@@ -438,95 +433,95 @@ if (!doNotTrack) {
 3. 是否可以加上final關鍵字。
 </code></pre>
 <p>可以用安裝java sdk來舉例，一般安裝要先下載JDK，然後設定環境變數，最後確認是否安裝。可以這樣呈現：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#ff79c6">import</span> java.util.Random<span style="color:#ff79c6">;</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">JavaJDK</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> Random rand <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Random<span style="color:#ff79c6">(</span>System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">currentTimeMillis</span><span style="color:#ff79c6">());</span>
-
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">downloadJDK</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;下載JAVA JDK&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span> <span style="color:#6272a4">// 先用隨機數字的狀態表示狀態
-</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">setEnv</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;設定JAVA環境變數&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;確認JAVA版本&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">InstallSoftware</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">installJava</span><span style="color:#ff79c6">(){</span>
-        JavaJDK j <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> JavaJDK<span style="color:#ff79c6">();</span>
-        <span style="color:#8be9fd">int</span> jdkStatus <span style="color:#ff79c6">=</span> j<span style="color:#ff79c6">.</span><span style="color:#50fa7b">downloadJDK</span><span style="color:#ff79c6">();</span>
-        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>jdkStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
-            <span style="color:#8be9fd">int</span> envStatus <span style="color:#ff79c6">=</span> j<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setEnv</span><span style="color:#ff79c6">();</span>
-            <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>envStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
-                <span style="color:#8be9fd">int</span> verStatus <span style="color:#ff79c6">=</span> j<span style="color:#ff79c6">.</span><span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">();</span>
-                <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>verStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
-                    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;安裝完成！！&#34;</span><span style="color:#ff79c6">);</span>
-                <span style="color:#ff79c6">}</span>
-            <span style="color:#ff79c6">}</span>
-        <span style="color:#ff79c6">}</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyComputer</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
-        InstallSoftware i <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> InstallSoftware<span style="color:#ff79c6">();</span>
-        i<span style="color:#ff79c6">.</span><span style="color:#50fa7b">installJava</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>下載JAVA JDK
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> java.util.Random<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">JavaJDK</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> Random rand <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Random<span style="color:#ff79c6">(</span>System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">currentTimeMillis</span><span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">downloadJDK</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;下載JAVA JDK&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span> <span style="color:#6272a4">// 先用隨機數字的狀態表示狀態
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">setEnv</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;設定JAVA環境變數&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;確認JAVA版本&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">InstallSoftware</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">installJava</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        JavaJDK j <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> JavaJDK<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd">int</span> jdkStatus <span style="color:#ff79c6">=</span> j<span style="color:#ff79c6">.</span><span style="color:#50fa7b">downloadJDK</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>jdkStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd">int</span> envStatus <span style="color:#ff79c6">=</span> j<span style="color:#ff79c6">.</span><span style="color:#50fa7b">setEnv</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>envStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#8be9fd">int</span> verStatus <span style="color:#ff79c6">=</span> j<span style="color:#ff79c6">.</span><span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>verStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>                    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;安裝完成！！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyComputer</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        InstallSoftware i <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> InstallSoftware<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        i<span style="color:#ff79c6">.</span><span style="color:#50fa7b">installJava</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>下載JAVA JDK
 設定JAVA環境變數
 確認JAVA版本
 安裝完成！！
 </code></pre><p>這程式跑起來很正常，卻也存在著一些問題。JavaJDK類別開放太多的public方法給InstallJava了。若今天回傳的int型別要變成boolean，也要修改InstallJava，這就會有一些風險產生。所以我們需要優化一下程式：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#ff79c6">import</span> java.util.Random<span style="color:#ff79c6">;</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">JavaJDK</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> Random rand <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Random<span style="color:#ff79c6">(</span>System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">currentTimeMillis</span><span style="color:#ff79c6">());</span>
-
-    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">downloadJDK</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;下載JAVA JDK&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span> <span style="color:#6272a4">// 先用隨機數字的狀態表示狀態
-</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">setEnv</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;設定JAVA環境變數&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;確認JAVA版本&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">install</span><span style="color:#ff79c6">(){</span>
-        <span style="color:#8be9fd">int</span> jdkStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">downloadJDK</span><span style="color:#ff79c6">();</span>
-        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>jdkStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
-            <span style="color:#8be9fd">int</span> envStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">setEnv</span><span style="color:#ff79c6">();</span>
-            <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>envStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
-                <span style="color:#8be9fd">int</span> verStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">();</span>
-                <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>verStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
-                    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;安裝完成！！&#34;</span><span style="color:#ff79c6">);</span>
-                <span style="color:#ff79c6">}</span>
-            <span style="color:#ff79c6">}</span>
-        <span style="color:#ff79c6">}</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">InstallSoftware</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">installJava</span><span style="color:#ff79c6">(){</span>
-        JavaJDK j <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> JavaJDK<span style="color:#ff79c6">();</span>
-        j<span style="color:#ff79c6">.</span><span style="color:#50fa7b">install</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyComputer</span><span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
-        InstallSoftware i <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> InstallSoftware<span style="color:#ff79c6">();</span>
-        i<span style="color:#ff79c6">.</span><span style="color:#50fa7b">installJava</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>下載JAVA JDK
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> java.util.Random<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">JavaJDK</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> Random rand <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Random<span style="color:#ff79c6">(</span>System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">currentTimeMillis</span><span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">downloadJDK</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;下載JAVA JDK&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span> <span style="color:#6272a4">// 先用隨機數字的狀態表示狀態
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">setEnv</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;設定JAVA環境變數&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;確認JAVA版本&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">install</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd">int</span> jdkStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">downloadJDK</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>jdkStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd">int</span> envStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">setEnv</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>envStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#8be9fd">int</span> verStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>verStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>                    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;安裝完成！！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">InstallSoftware</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">installJava</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        JavaJDK j <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> JavaJDK<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        j<span style="color:#ff79c6">.</span><span style="color:#50fa7b">install</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyComputer</span><span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        InstallSoftware i <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> InstallSoftware<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        i<span style="color:#ff79c6">.</span><span style="color:#50fa7b">installJava</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>下載JAVA JDK
 設定JAVA環境變數
 確認JAVA版本
 安裝完成！！
@@ -535,70 +530,70 @@ if (!doNotTrack) {
 <br>
 <h4 id=_3-是自己的就是自己的>3. 是自己的就是自己的</h4>
 <p>一個方法，放在本類別沒問題，但放在其他類別也不會出錯。checkVer</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#ff79c6">import</span> java.util.Random<span style="color:#ff79c6">;</span>
-
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">JavaJDK</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> Random rand <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Random<span style="color:#ff79c6">(</span>System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">currentTimeMillis</span><span style="color:#ff79c6">());</span>
-
-    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">downloadJDK</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;下載JAVA JDK&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span> <span style="color:#6272a4">// 先用隨機數字的狀態表示狀態
-</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">setEnv</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;設定JAVA環境變數&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">(){</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;確認JAVA版本&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">install</span><span style="color:#ff79c6">(){</span>
-        <span style="color:#8be9fd">int</span> jdkStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">downloadJDK</span><span style="color:#ff79c6">();</span>
-        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>jdkStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
-            <span style="color:#8be9fd">int</span> envStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">setEnv</span><span style="color:#ff79c6">();</span>
-            <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>envStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
-                <span style="color:#8be9fd">int</span> verStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">();</span>
-                <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>verStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
-                    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;安裝完成！！&#34;</span><span style="color:#ff79c6">);</span>
-                <span style="color:#ff79c6">}</span>
-            <span style="color:#ff79c6">}</span>
-        <span style="color:#ff79c6">}</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">isInstalledJava</span><span style="color:#ff79c6">(){</span>
-        <span style="color:#8be9fd">int</span> verStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">();</span>
-        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>verStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
-            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Java已安裝！！&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
-            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Java未完成！！&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">}</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">InstallSoftware</span> <span style="color:#ff79c6">{</span>
-    JavaJDK j <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> JavaJDK<span style="color:#ff79c6">();</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">installJava</span><span style="color:#ff79c6">(){</span>
-        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">j</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">install</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">isInstalledJava</span><span style="color:#ff79c6">(){</span>
-        <span style="color:#8be9fd">int</span> verStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">j</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">();</span>
-        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>verStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
-            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Java已安裝！！&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
-            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Java未完成！！&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">}</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyComputer</span><span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
-        InstallSoftware i <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> InstallSoftware<span style="color:#ff79c6">();</span>
-        i<span style="color:#ff79c6">.</span><span style="color:#50fa7b">isInstalledJava</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> java.util.Random<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">JavaJDK</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> Random rand <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Random<span style="color:#ff79c6">(</span>System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">currentTimeMillis</span><span style="color:#ff79c6">());</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">downloadJDK</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;下載JAVA JDK&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span> <span style="color:#6272a4">// 先用隨機數字的狀態表示狀態
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">setEnv</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;設定JAVA環境變數&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;確認JAVA版本&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> rand<span style="color:#ff79c6">.</span><span style="color:#50fa7b">nextInt</span><span style="color:#ff79c6">(</span>10<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">install</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd">int</span> jdkStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">downloadJDK</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>jdkStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd">int</span> envStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">setEnv</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>envStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#8be9fd">int</span> verStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>verStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>                    System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;安裝完成！！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">isInstalledJava</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd">int</span> verStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>verStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Java已安裝！！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Java未完成！！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">InstallSoftware</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    JavaJDK j <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> JavaJDK<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">installJava</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">j</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">install</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">isInstalledJava</span><span style="color:#ff79c6">(){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd">int</span> verStatus <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">j</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">checkVer</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>verStatus <span style="color:#ff79c6">!=</span> 0<span style="color:#ff79c6">){</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Java已安裝！！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span> <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;Java未完成！！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyComputer</span><span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        InstallSoftware i <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> InstallSoftware<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        i<span style="color:#ff79c6">.</span><span style="color:#50fa7b">isInstalledJava</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><br>
 <p>將第二點的範例做了一下更改，發現isInstalledJava()放在InstallSoftware類別內或是JavaJDK類別內都不會有問題。所以這個原則的意思就是：如果一個方法放在本類中，不增加類別間關係，也不對本類產生負面影響，那就可以放到本類中。</p>
 <br>
 <h4 id=_4-謹慎使用serializable>4. 謹慎使用Serializable</h4>
 <p>若使用不當，未來修改屬性，序列化時會拋異常NotSerializableException。</p>
-<p>詳細可以參考這篇<strong><a href="https://www.jyt0532.com/2017/09/29/implement-serializable-judiciously/" target="_blank">謹慎實現Serializable介面</a></strong>
+<p>詳細可以參考這篇**<a href="https://www.jyt0532.com/2017/09/29/implement-serializable-judiciously/" target="_blank">謹慎實現Serializable介面</a>**
 <br>
 <br></p>
 <ul>
@@ -610,71 +605,71 @@ if (!doNotTrack) {
 <p>看完了有關LoD的解釋，這時來舉個例子讓我們更熟悉這個法則。</p>
 <p><strong>六度人脈空間</strong>這個名詞大家應該很熟悉，意指你和任何一個陌生人之間，只有六個人的距離。也就是說如果我想聯繫比爾蓋茲，我只要找到我與他之間的六個人，然後藉由這六個人的介紹，我就可以順利的聯繫到比爾蓋茲！！</p>
 <p>這跟LoD有什麼關係？假設有一件事情我沒辦法獨力完成，我需要別人的幫助，而我周遭的朋友也沒有這個能力幫助我。但其中一個朋友認識比爾蓋茲，他剛好可以幫忙解決這件事。於是我就藉由我朋友中間牽的線，讓比爾蓋茲幫助我完成這件事。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Me</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> String name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Me&#34;</span><span style="color:#ff79c6">;</span>
-	<span style="color:#8be9fd;font-style:italic">public</span> MyFriend <span style="color:#50fa7b">getMyFriend</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-		<span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> MyFriend<span style="color:#ff79c6">();</span>
-	<span style="color:#ff79c6">}</span>
-	<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">work</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-		MyFriend mf <span style="color:#ff79c6">=</span> getMyFriend<span style="color:#ff79c6">();</span>
-		mf<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getBillGates</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">work</span><span style="color:#ff79c6">(</span>name<span style="color:#ff79c6">);</span>
-	<span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyFriend</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> BillGates <span style="color:#50fa7b">getBillGates</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;MyFriend介紹BillGates！！&#34;</span><span style="color:#ff79c6">);</span>
-        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> BillGates<span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">BillGates</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">work</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-		System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;BillGates跟&#34;</span> <span style="color:#ff79c6">+</span> name <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;握手！！&#34;</span><span style="color:#ff79c6">);</span>
-	<span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyWorke</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
-        Me me <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Me<span style="color:#ff79c6">();</span>
-        me<span style="color:#ff79c6">.</span><span style="color:#50fa7b">work</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>MyFriend介紹BillGates！！
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Me</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> String name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Me&#34;</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#8be9fd;font-style:italic">public</span> MyFriend <span style="color:#50fa7b">getMyFriend</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> MyFriend<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">work</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>		MyFriend mf <span style="color:#ff79c6">=</span> getMyFriend<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>		mf<span style="color:#ff79c6">.</span><span style="color:#50fa7b">getBillGates</span><span style="color:#ff79c6">().</span><span style="color:#50fa7b">work</span><span style="color:#ff79c6">(</span>name<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyFriend</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> BillGates <span style="color:#50fa7b">getBillGates</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;MyFriend介紹BillGates！！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> BillGates<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">BillGates</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">work</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>		System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;BillGates跟&#34;</span> <span style="color:#ff79c6">+</span> name <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;握手！！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyWorke</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Me me <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Me<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        me<span style="color:#ff79c6">.</span><span style="color:#50fa7b">work</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>MyFriend介紹BillGates！！
 BillGates跟Me握手！！
 </code></pre><br>
 <p>最後比爾蓋茲確實幫我完成了一件事。但在class Me內，卻直接呼叫BillGates的work方法，這並不符合LoD。應該藉由MyFriend這個類別去呼叫BillGates做事才對。所以我們需要做一些更動</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Me</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">private</span> String name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Me&#34;</span><span style="color:#ff79c6">;</span>
-	<span style="color:#8be9fd;font-style:italic">public</span> MyFriend <span style="color:#50fa7b">getMyFriend</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-		<span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> MyFriend<span style="color:#ff79c6">();</span>
-	<span style="color:#ff79c6">}</span>
-	<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">work</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-		MyFriend mf <span style="color:#ff79c6">=</span> getMyFriend<span style="color:#ff79c6">();</span>
-		mf<span style="color:#ff79c6">.</span><span style="color:#50fa7b">work</span><span style="color:#ff79c6">(</span>name<span style="color:#ff79c6">);</span>
-	<span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyFriend</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> BillGates <span style="color:#50fa7b">getBillGates</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
-        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> BillGates<span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">work</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-		BillGates bg <span style="color:#ff79c6">=</span> getBillGates<span style="color:#ff79c6">();</span>
-        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;MyFriend介紹BillGates！！&#34;</span><span style="color:#ff79c6">);</span>
-		bg<span style="color:#ff79c6">.</span><span style="color:#50fa7b">work</span><span style="color:#ff79c6">(</span>name<span style="color:#ff79c6">);</span>
-	<span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">BillGates</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">work</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
-		System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;BillGates跟&#34;</span> <span style="color:#ff79c6">+</span> name <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;握手！！&#34;</span><span style="color:#ff79c6">);</span>
-	<span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyWorke</span> <span style="color:#ff79c6">{</span>
-    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
-        Me me <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Me<span style="color:#ff79c6">();</span>
-        me<span style="color:#ff79c6">.</span><span style="color:#50fa7b">work</span><span style="color:#ff79c6">();</span>
-    <span style="color:#ff79c6">}</span>
-<span style="color:#ff79c6">}</span>
-</code></pre></div><p><strong>output</strong></p>
-<pre><code>MyFriend介紹BillGates！！
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Me</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> String name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Me&#34;</span><span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#8be9fd;font-style:italic">public</span> MyFriend <span style="color:#50fa7b">getMyFriend</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> MyFriend<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">work</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>		MyFriend mf <span style="color:#ff79c6">=</span> getMyFriend<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>		mf<span style="color:#ff79c6">.</span><span style="color:#50fa7b">work</span><span style="color:#ff79c6">(</span>name<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyFriend</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> BillGates <span style="color:#50fa7b">getBillGates</span><span style="color:#ff79c6">()</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> BillGates<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">work</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>		BillGates bg <span style="color:#ff79c6">=</span> getBillGates<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;MyFriend介紹BillGates！！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>		bg<span style="color:#ff79c6">.</span><span style="color:#50fa7b">work</span><span style="color:#ff79c6">(</span>name<span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">BillGates</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">work</span><span style="color:#ff79c6">(</span>String name<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>		System<span style="color:#ff79c6">.</span><span style="color:#50fa7b">out</span><span style="color:#ff79c6">.</span><span style="color:#50fa7b">println</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;BillGates跟&#34;</span> <span style="color:#ff79c6">+</span> name <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;握手！！&#34;</span><span style="color:#ff79c6">);</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">MyWorke</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">main</span><span style="color:#ff79c6">(</span>String args<span style="color:#ff79c6">[])</span> <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>        Me me <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Me<span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>        me<span style="color:#ff79c6">.</span><span style="color:#50fa7b">work</span><span style="color:#ff79c6">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
+</span></span></code></pre></div><p><strong>output</strong></p>
+<pre tabindex="0"><code>MyFriend介紹BillGates！！
 BillGates跟Me握手！！
 </code></pre><p>經過修改後，我與比爾蓋茲沒有直接的關係，只需要跟MyFriend溝通，請他跟蓋茲牽線，就可以完成事情。</p>
 <p>迪米特法則核心觀念就是解耦、弱耦合，只有弱耦合後，類別的複用率才可以提高。但解耦和也是要有限度的，過度的解耦會造成系統的複雜度提高，維護困難。</p>
@@ -796,7 +791,7 @@ BillGates跟Me握手！！
     <article class="post">
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -1181,7 +1176,7 @@ BillGates跟Me握手！！
   frameborder=0></iframe>
  
         <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.e0c399b948d3cf5c3a5e3badb94023d0b064a19ac39fd8cd79fb9f57fa4d1091.js" integrity="sha256-4MOZuUjTz1w6XjutuUAj0LBkoZrDn9jNefufV/pNEJE="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
     <script src="/ianlife/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;
