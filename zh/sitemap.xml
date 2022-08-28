@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ianjustin39.github.io/ianlife/read/behavioural-addiction/</loc>
-    <lastmod>2022-07-27T00:00:00+00:00</lastmod>
+    <loc>https://ianjustin39.github.io/ianlife/tags/blockchain/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianjustin39.github.io/ianlife/blog/</loc>
-    <lastmod>2022-07-27T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianjustin39.github.io/ianlife/categories/</loc>
-    <lastmod>2022-07-27T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -21,11 +21,8 @@
                 href="https://ianjustin39.github.io/ianlife/categories/"
                 />
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/learning/</loc>
-    <lastmod>2022-07-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ianjustin39.github.io/ianlife/</loc>
-    <lastmod>2022-07-27T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -37,8 +34,11 @@
                 href="https://ianjustin39.github.io/ianlife/"
                 />
   </url><url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/polkadot/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://ianjustin39.github.io/ianlife/series/</loc>
-    <lastmod>2022-07-27T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -51,7 +51,7 @@
                 />
   </url><url>
     <loc>https://ianjustin39.github.io/ianlife/tags/</loc>
-    <lastmod>2022-07-27T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -62,21 +62,6 @@
                 hreflang="zh"
                 href="https://ianjustin39.github.io/ianlife/tags/"
                 />
-  </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6/</loc>
-    <lastmod>2022-07-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%8F%BE%E5%9C%A8%E9%96%8B%E5%A7%8B%E8%AA%8D%E7%9C%9F%E8%AE%80%E6%9B%B8/</loc>
-    <lastmod>2022-07-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97/</loc>
-    <lastmod>2022-07-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/blockchain/</loc>
-    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/polkadot/</loc>
-    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianjustin39.github.io/ianlife/categories/tech/</loc>
     <lastmod>2022-05-12T00:00:00+00:00</lastmod>
@@ -99,7 +84,19 @@
     <loc>https://ianjustin39.github.io/ianlife/blog/product/product/pm101-wireframe/</loc>
     <lastmod>2022-05-02T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://ianjustin39.github.io/ianlife/categories/learning/</loc>
+    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6/</loc>
+    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%8F%BE%E5%9C%A8%E9%96%8B%E5%A7%8B%E8%AA%8D%E7%9C%9F%E8%AE%80%E6%9B%B8/</loc>
+    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://ianjustin39.github.io/ianlife/read/give-and-take/</loc>
+    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97/</loc>
     <lastmod>2022-04-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain-bridge/</loc>
