@@ -6,7 +6,25 @@
     <description>Recent content in TECH on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 12 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？</title>
+      <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/ftx-is-gone/</link>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/ftx-is-gone/</guid>
+      <description>在 2022/05 發生 Luna 崩跌事件後，當大家還覺得為什麼最近市場的波動這麼小時，全球第二大加密貨幣交易所 FTX 在上週給了大家一個驚喜，因為被爆私自挪用用戶資金，導致交易所內發生了擠兌潮，以至於 FTX 不堪負荷，不但暫停用戶提領，更在一週內宣告破產，讓許多來不及逃難的用戶資金卡在 FTX 內沒辦法拿出來。
+（SBF 還錢～～～
+FTX 相關事件的文章或分析相信在網路上搜個關鍵字都可以找到很多資訊在這就不多加敘述，而本篇要來探討的並非 FTX 倒閉，而是身在加密貨幣的世界裡，要如何選擇存放資產的位置，才不會風險發生時被當成韭菜收割。
+選擇大到不會倒的交易所？ 大家在一開始接觸加密貨幣時，應該都會聽到『選一間你信任且大到不會倒的交易所，就可以開始把錢放進去買虛擬貨幣了』，相較於一些名不見經傳的交易所，世界排行前幾名的交易所的確安全許多，但 FTX 卻給了我們一個重擊，全球第二大的交易所不到一週就宣布破產，相信在 SBF 與 CZ 隔空交火時，大部分的人應該還沒想到會是這個結果。
+區塊鏈的精神 - 去中心化 交易所倒閉跟去中心化又有什麼關係呢？想必有接觸過區塊鏈都聽過『去中心化』一詞，那這又代表著什麼呢？在 Web2.0 的世界裡，科技巨頭 Facebook, Google 掌握著用戶的所有資料以及生殺大權，今天只要他們認為你不合乎平台規範，他們便可以將你封鎖（想想之前川普的 twitter）；而傳統金融也是，錢讓私有銀行管理，如果銀行營運出了什麼問題導致沒辦法領出現金，那你在銀行的錢錢就只是一串數字罷了（比如說前陣子中國四大銀行無法提領現金的狀況）。而區塊鏈的其中一個精神，就是不希望有一個集團或是一個機構來『操控』這一切，你的資產讓你自己保管，鏈上一切皆由參與者來共同決定這件事。
+講到這有沒有覺得，都已經投入了一個『去中心化』的世界了，卻還相信著『中心化』的機構，是不是有種矛盾的感覺？？🤣
+『被管理』的資產 加密貨幣的地址是以持有的註記詞經由一連串的協議及演算法導出的一串英數字，而註記詞會交由交易保管並不會提供給用戶，用戶只會獲得每個加密貨幣的地址，提供給別人接收加密貨幣。而當要發送交易時，需要發送『申請』，等交易所同意這筆交易，用戶才能將交易發送到區塊鏈上。從頭到尾的操作，都需要經過『交易所』的同意（除了存錢以外），雖然看起來是自己決定自己的資產要做什麼，但其實所有的一切都是由交易所決定，而不是自己，哪天交易所駁回你的請求，那我們也沒辦法用其他方式拯救自己的資產。
+Not Your Keys, Not Your Asset 什麼是 Key？區塊鏈的每一筆交易都需要用 private key 簽署後得到一個 signature，並將這個 signature 連同交易發送到區塊鏈上驗證。而這個 key 也是由註記詞依照一串協議及演算法推導而成。剛剛提到在交易所發送一筆交易時都需『被同意』，同意後交易所會發送一筆用『我們的 key』簽署出來的簽章及交易到鏈上，當然他也可以不同意，這樣我們就沒辦法操控自己的資產。
+而這把 Key 除了放在交易所內，也可以放在加密貨幣錢包中。只要持有錢包，所有的交易都不再虛要被同意，任何交易行為都掌控在自己的手上。也就是說，我們有 100% 掌控錢包內資產的權力，就算有第二個 FTX 不給用戶提領也跟我們沒有關係，因為我們的 Key 在自己的手上不需要遷就其他團體或機構。
+究竟是加密貨幣不安全，還是對產業不了解？ 最後回到 FTX 事件，個人認為如果把 FTX 事件的原因歸咎於『加密貨幣就是不安全』的話，就不太合情理，畢竟中心化的機構，本來就伴隨著『人』這個最大的風險，十年夫妻也可能被戴綠帽，何況是一間交易所。不過這不代表不能把錢存在交易所內，只是做任何決定時需要知道其伴隨的風險，當風險發生時伴隨的傷害會不會影響到自己的身活甚至周遭的人，評估之下若是可以負擔的狀況，再來做這件事，不然如果心臟太小顆的話，還是把錢放在錢包內吧。</description>
+    </item>
+    
     <item>
       <title>幣圈黑天鵝，前十大公鏈 Terra 如何從月球殞落</title>
       <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain-black-swan-terra/</link>
