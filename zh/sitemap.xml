@@ -2,11 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ianjustin39.github.io/ianlife/blog/product/product/startup-agneepath-01/</loc>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://ianjustin39.github.io/ianlife/blog/</loc>
-    <lastmod>2022-11-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianjustin39.github.io/ianlife/categories/</loc>
-    <lastmod>2022-11-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -18,11 +21,8 @@
                 href="https://ianjustin39.github.io/ianlife/categories/"
                 />
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/learning/</loc>
-    <lastmod>2022-11-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ianjustin39.github.io/ianlife/</loc>
-    <lastmod>2022-11-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -34,8 +34,11 @@
                 href="https://ianjustin39.github.io/ianlife/"
                 />
   </url><url>
+    <loc>https://ianjustin39.github.io/ianlife/categories/product/</loc>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://ianjustin39.github.io/ianlife/series/</loc>
-    <lastmod>2022-11-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -48,7 +51,7 @@
                 />
   </url><url>
     <loc>https://ianjustin39.github.io/ianlife/tags/</loc>
-    <lastmod>2022-11-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -59,6 +62,18 @@
                 hreflang="zh"
                 href="https://ianjustin39.github.io/ianlife/tags/"
                 />
+  </url><url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/%E5%89%B5%E6%A5%AD/</loc>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianjustin39.github.io/ianlife/series/%E5%89%B5%E6%A5%AD%E5%A4%A9%E5%A0%82%E8%B7%AF/</loc>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/%E7%94%A2%E5%93%81%E9%96%8B%E7%99%BC/</loc>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianjustin39.github.io/ianlife/categories/learning/</loc>
+    <lastmod>2022-11-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianjustin39.github.io/ianlife/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6/</loc>
     <lastmod>2022-11-27T00:00:00+00:00</lastmod>
@@ -91,9 +106,6 @@
     <lastmod>2022-05-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianjustin39.github.io/ianlife/series/pm-101/</loc>
-    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/product/</loc>
     <lastmod>2022-05-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianjustin39.github.io/ianlife/tags/wireframe/</loc>
