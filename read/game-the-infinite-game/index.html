@@ -1,309 +1,293 @@
-<!doctype html>
-<html lang="zh">
-  <head>
-  <meta content="讀書心得, 無限賽局" name="keywords">
-  <link rel="stylesheet" href="https://ianjustin39.github.io/ianlife/%20css/search.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
-  <link rel="stylesheet" href="../css/magnific-popup.css">
-  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  
-  
-  
-  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
-  <script src="/ianlife/js/bootstrap.js"></script>
-  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
-  
-  
-  
-  <script src="../js/jquery.magnific-popup.js"></script>
-  
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
-  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="/ianlife/js/toc.js"></script>
-  
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  
-  
-  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
-  <script>
-   window.onload = function () {
-    let plantumlPrefix = "language-plantuml";
-    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
-      let image = document.createElement("IMG");
-      image.loading = 'lazy'; 
-      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
-      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
-      code.parentNode.insertBefore(image, code);
-      code.style.display = 'none';
-    });
-  };
-  </script>
-  
-  
-  
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Life Story">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://ianjustin39.github.io//https://i.imgur.com/NYIZKq3.jpg">
+    <meta property="twitter:image" content="https://ianjustin39.github.io//https://i.imgur.com/NYIZKq3.jpg" />
+    
+
+    
+    <meta name="title" content="無限賽局 - 『永續』還是『取勝』？" />
+    <meta property="og:title" content="無限賽局 - 『永續』還是『取勝』？" />
+    <meta property="twitter:title" content="無限賽局 - 『永續』還是『取勝』？" />
+    
+
+    
+    <meta name="description" content="跳脫勝負、平手、僵局之外，看懂自己身處的賽局，才能選對策略、創造最大價值。">
+    <meta property="og:description" content="跳脫勝負、平手、僵局之外，看懂自己身處的賽局，才能選對策略、創造最大價值。" />
+    <meta property="twitter:description" content="跳脫勝負、平手、僵局之外，看懂自己身處的賽局，才能選對策略、創造最大價值。" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>無限賽局 - 『永續』還是『取勝』？ | Ian Blog</title>
+
+    <link rel="canonical" href="/read/game-the-infinite-game/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 	ga('create', 'UA-165850720-1', 'auto');
 	
 	ga('send', 'pageview');
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-  
-  <meta charset="utf-8">
-<title>無限賽局 - 『永續』還是『取勝』？ - Ian Tsai </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
-  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
-  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
-  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
-  
-    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
-    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
-    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
-  
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
-
-<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="無限賽局 - 『永續』還是『取勝』？">
-<meta itemprop="description" content="跳脫勝負、平手、僵局之外，看懂自己身處的賽局，才能選對策略、創造最大價值。"><meta itemprop="datePublished" content="2021-05-15T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-05-15T00:00:00+00:00" />
-<meta itemprop="wordCount" content="69"><meta itemprop="image" content="https://i.imgur.com/u5s5w72.png">
-<meta itemprop="keywords" content="讀書心得,好書推薦," /><meta property="og:title" content="無限賽局 - 『永續』還是『取勝』？" />
-<meta property="og:description" content="跳脫勝負、平手、僵局之外，看懂自己身處的賽局，才能選對策略、創造最大價值。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/read/game-the-infinite-game/" /><meta property="og:image" content="https://i.imgur.com/u5s5w72.png" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2021-05-15T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-05-15T00:00:00+00:00" />
 
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://i.imgur.com/u5s5w72.png"/>
 
-<meta name="twitter:title" content="無限賽局 - 『永續』還是『取勝』？"/>
-<meta name="twitter:description" content="跳脫勝負、平手、僵局之外，看懂自己身處的賽局，才能選對策略、創造最大價值。"/>
-<meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
-        <link rel="stylesheet" href="/ianlife/css/add-on.css">
-</head>
 
-  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
-  
-  
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Life Story</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">HOME</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/learning/">learning</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/life/">life</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/product/">product</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">ALL POST</a></li>
+                    
+                        <li><a href="/about//">ABOUT</a></li>
+                    
+		            
+                </ul>
+            </div>
+        </div>
+        
+    </div>
     
-<header id="site-header">
-  <nav id="site-nav">
-    <h1 class="nav-title">
-      <a href="/ianlife">
-        
-          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
-        
-      </a>
-    </h1>
-    <menu id="site-nav-menu" class="flyout-menu">
-      
-        
-          
-          
-            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/blog/" class="link"><i class='fas fa-pencil-alt'></i> Blog</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/life" class="link"><i class='fa fa-plane'></i> Life</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/learning" class="link"><i class='fa fa-book'></i> Learning</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/product" class="link"><i class='fas fa-box'></i> Product</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/tech" class="link"><i class='fa fa-laptop'></i> Tech</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
-          
-        
-      
-      
-      
-
-      <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
-        <span id="searchGlyph" class="glyphicon glyphicon-search"><i class="fas fa-search"></i></span></a>
-    </menu>
-    
-
-    
-    <a href="#lang-menu" class="lang-toggle" lang="zh">zh</a>
-    <a href="#site-nav-menu" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
-  </nav>
- 
- 
-  <menu id="lang-menu" class="flyout-menu">
-  <a href="#" lang="zh" class="link active">中文 (zh)</a>
-  
-    
-      
-        <a href="/ianlife/en" lang="en" class="no-lang link">English (en)</a>
-      
-    
-      
-    
-  
-</menu>
-
-  
-</header>
-
-<div id="modalSearch" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">文章搜尋</h4><button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-      <div class="modal-body">
-        <div class="aa-input-container" id="aa-input-container">
-  <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for titles or URIs..."
-    name="search" autocomplete="off" />
-  <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
-    <path
-      d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z" />
-  </svg>
-</div>
-<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/algoliasearch.min.js"></script>
-<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/autocomplete.min.js"></script>
+</nav>
 <script>
-  var client = algoliasearch("WTW32P5SNJ", "2e16477f048bc4528b166dfd1eb4804d");
-  var index = client.initIndex("blog");
-  autocomplete('#aa-search-input',
-    { hint: false }, {
-    source: autocomplete.sources.hits(index, { hitsPerPage: 20 }),
-    displayKey: 'name',
-    templates: {
-      suggestion: function (suggestion) {
-        return '<span>' + '<a href="' + suggestion.relpermalink + '">' +
-          suggestion.title + '</a></span>';
-      }
-    }
-  });
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
 
-  $('#searchGlyph').click(function() {
-    setTimeout(function(){
-      $('#aa-search-input').focus();
-    },300);
-  });
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
 </script>
 
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-    <div id="wrapper">
-      
-      <main id="site-main">
-        <article class="post">
-  <header>
-  <div class="title">
-    <a href="/ianlife/series/%E5%BE%9E%E7%8F%BE%E5%9C%A8%E9%96%8B%E5%A7%8B%E8%AA%8D%E7%9C%9F%E8%AE%80%E6%9B%B8"><p>讀書心得</p></a>
-    
-    <h3><a href="/ianlife/read/game-the-infinite-game/">無限賽局 - 『永續』還是『取勝』？</a></h3>
-    
-    
-    <p style="margin-top: 0px;">跳脫勝負、平手、僵局之外，看懂自己身處的賽局，才能選對策略、創造最大價值。</p>
-    
-  </div>
-  <div class="meta">
-    <time class="published" datetime="2021-05-15 00:00:00 &#43;0000 UTC">
-      May 15, 2021
-    </time>
-    
-    <span class="author">Ian Tsai</span>
-    
-    <p>1 minute read</p>
-    
-    <p>
-      <span id="busuanzi_container_page_pv">
-        PV: <span id="busuanzi_value_page_pv"></span>
-      </span>
-    </p>
-  </div>
-</header>
-
-  <section id="socnet-share">
-    
-  </section>
-  
-  <a href="/ianlife/read/game-the-infinite-game/" class="image featured">
-    
-      <img src="https://i.imgur.com/u5s5w72.png" alt="">
-    
-  </a>
 
 
-  <div class="content">
-    <br>
-<br>
-<h3 id=_沒有開始中場以及結束的賽局>沒有開始、中場以及結束的賽局</h3>
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('https://i.imgur.com/u5s5w72.png');
+         
+         
+        background-blend-mode: multiply;
+    }
+</style>
+
+    <header class="intro-header">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" href="/%20/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97" title="讀書心得">
+                                讀書心得
+                            </a>
+                            
+                            <a class="tag" href="/%20/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6" title="好書推薦">
+                                好書推薦
+                            </a>
+                            
+                        </div>
+                        <h1>無限賽局 - 『永續』還是『取勝』？</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            
+                            Posted by
+                            
+                            Ian Tsai
+                            
+                            on
+                            Saturday, May 15, 2021
+                            
+                            
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+
+                
+                
+                <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                    <div class="side-catalog">
+                        <hr class="hidden-sm hidden-xs">
+                        <h5>
+                            <a class="catalog-toggle" href="#">CATALOG</a>
+                        </h5>
+                        <ul class="catalog-body"></ul>
+
+                    <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianjustin39.github.io%2fread%2fgame-the-infinite-game%2f" width="100%"
+  frameborder=0></iframe>
+
+                    </div>
+                </div>
+                
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                    
+                    <!-- raw HTML omitted -->
+<h3 id="沒有開始中場以及結束的賽局">沒有開始、中場以及結束的賽局</h3>
 <hr>
 <p>想想從小到大，我們經歷了許多賽局，像是體育競賽，有已知的玩家，既定的規則。在達成目標，也就是誰的比分先到標準，該隊伍就會獲勝，賽局就會結束。
 相較於競技比賽的『有限賽局』。『無限賽局』中並沒有時間限制、沒有終點線、沒有真正的結束，像是商場上會不斷的有新玩家加入，沒有既定的規則，大家會依照自己的方式衍生出商業模式，試著一直存活在這場賽局內。</p>
-<br>
-<h3 id=_從微軟與蘋果間的戰爭看待商業賽局>從微軟與蘋果間的戰爭看待商業賽局</h3>
+<!-- raw HTML omitted -->
+<h3 id="從微軟與蘋果間的戰爭看待商業賽局">從微軟與蘋果間的戰爭看待商業賽局</h3>
 <hr>
 <p>微軟本來的願景，是為了提高生產力，幫助地球每個人到組織，可以貢獻更多，成就更大。但到了近幾年，公司的目標逐漸轉向『打贏競爭者』，也就是打贏蘋果。
 作者曾經受邀在微軟以及蘋果的教育高峰論壇上演講。在微軟的論壇中，多數的講者都會提到如何打敗蘋果；而在蘋果的論壇內，講者都花時間在討論蘋果如何幫助老師教學、幫助學生學習。</p>
 <p>打敗蘋果事現在微軟的目標，所以微軟的產品都以『性能需要比蘋果強』為出發點思考；反之蘋果則是思考如何達到公司願景，創造更好的產品來滿足大眾的需求，並且可以不段的創新突破，這樣的信念也進而改變了市場的結構。</p>
-<br>
-<h3 id=_無限思維的五個關鍵>無限思維的五個關鍵</h3>
+<!-- raw HTML omitted -->
+<h3 id="無限思維的五個關鍵">無限思維的五個關鍵</h3>
 <hr>
 <p>如何從有限思維的框架中跳脫出去，進而有無限思維呢？作者提供了五個關鍵給我們</p>
-<br>
-<h4 id=_崇高的信念>崇高的信念</h4>
+<!-- raw HTML omitted -->
+<h4 id="崇高的信念">崇高的信念</h4>
 <pre><code>崇高的信念是對一個尚不存在的未來懷抱具體的願景；這個未來令人嚮往到人們願意犧牲小我，來實現這個願景。
 </code></pre>
 <p>『隨時隨地以最低的價格來服務美國廣大的勞工』，這是美國零售業沃爾瑪的企業願景。其創辦人沃爾頓秉持著這個信念經營，在經濟大蕭條時成為了最富有的人之一。
 但就算這樣，沃爾瑪也有背離信念的時候。接任執行長杜克上任後，將公司目標轉向利潤、成長以及市場地位，服務的對象以股東為首，不在是美國勞工。這也造就了後續沃爾瑪的各種負面新聞。直到明倫接任杜克之後，才重拾沃爾瑪的信念，將公司帶回無限賽局內。</p>
 <p>信念不像目標，達成就結束，而是會一直持續下去。若公司的不在以信念為核心推廣業務，反而只在乎獲利、報酬，長久下來會脫離原本的軌道，也無法進步。</p>
-<br>
-<h4 id=_彼此信任的團隊>彼此信任的團隊</h4>
+<!-- raw HTML omitted -->
+<h4 id="彼此信任的團隊">彼此信任的團隊</h4>
 <pre><code>領導者要負責的不是結果，領導者要負責的是要對結果負責的人們。
 </code></pre>
 <p>組織文化、環境關係到一個團隊的是否可以高效率的執行作業。
@@ -311,8 +295,8 @@ if (!doNotTrack) {
 而領導者的責任就是維持這個組織的文化，提升成員對團隊的信任程度，讓員工發揮最佳的表現。</p>
 <p>『有限思維』的領導者關注『結果』、『績效』，想著如何壓榨員工，讓他們達到自己預期的成果；
 『無限思維』的領導者則是關注團隊的『環境』、解決問題的『過程』，遇到問題時大家是否可以適時的提出自己的意見，並一起解決眼前的問題。</p>
-<br>
-<h4 id=_可敬的對手>可敬的對手</h4>
+<!-- raw HTML omitted -->
+<h4 id="可敬的對手">可敬的對手</h4>
 <pre><code>傳統思維讓我們採取要獲勝的態度，敬畏對手的思維則啟發我們採取改進的態度
 </code></pre>
 <p>『成為第一』、『打敗對手』內心總是想著如何讓對手退出賽局，傳統的思維讓我們侷限在只能『獲勝』的層次。
@@ -320,8 +304,8 @@ if (!doNotTrack) {
 擁有『無限思維』的人為認為，可敬的對手指出了自身的不足，我們可以藉由向對方學習，不斷的提升自己，讓自己不斷的朝『崇高的信念』邁進。</p>
 <p>『有限思維』的人關注『結果』，想著如何才可以打敗對手；
 『無限思維』的人關注改變的『過程』，改變讓自己更接近『崇高的信念』。</p>
-<br>
-<h4 id=_攸關存亡的應變>攸關存亡的應變</h4>
+<!-- raw HTML omitted -->
+<h4 id="攸關存亡的應變">攸關存亡的應變</h4>
 <pre><code>攸關存亡的應變是為了更有效地推動信念，即使這麼做會顛覆現有的商業模式。
 </code></pre>
 <p>以往的商業模式可以賺大錢，但套用在現今或許不在實用，可以從柯達這間公司來思考。</p>
@@ -332,92 +316,57 @@ if (!doNotTrack) {
 十年後 Nikon 發表第一台數位相機，而柯達到最後也退出了這場賽局。</p>
 <p>『有限思維』的人關注『短期獲利』，只想著怎麼樣才可以賺錢，而忽略了自身的信念；
 『無限思維』的人關注『推動信念』，攸關存亡的應變為了更推動『崇高的信念』，即使推翻現有的商業模式。</p>
-<br>
-<h4 id=_領導的勇氣>領導的勇氣</h4>
+<!-- raw HTML omitted -->
+<h4 id="領導的勇氣">領導的勇氣</h4>
 <pre><code>正值不只是做對的事，正直是在大眾抗議或醜聞發生之前就採取行動。
 當領導這知道公司明明在做不道德的事，卻等輿論爆發之後才採取行動，這不是正直，這叫損害控制。
 </code></pre>
 <p>2014 年，美國最大的連鎖藥局 CVS 宣布停售香煙及菸草，這項決定並沒有人去要求 CVS ，也並非任何負面消息，縱使這項決定會使他們每年損失二十億美元。
 CVS 的領導者用『信念』來引導公司業務，而這項決定也讓有使命感的公司去跟他們合作，開啟了 CVS 在保健食品這塊領域的商機，也提升了公司的形象。
 反觀競爭對手，只高喊帶給世人健康的信念，而沒有勇氣做出改變的決定。</p>
-<br>
-<img src="https://i.imgur.com/h4dJAap.jpg" width="100%" />
-<br>
-<h3 id=_限時的無限賽局>限時的無限賽局</h3>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="限時的無限賽局">限時的無限賽局</h3>
 <hr>
 <p>或許『信念』才是『無限思維』根本，蘋果的信念是創新，微軟的信念是激發大家的生產力，『崇高的信念』造就了這些偉大的公司。
 當信念轉變成利益導向，如同微軟不在思考怎麼讓大家發揮價值，而把目標轉向打贏蘋果，此時陷入有限思維的微軟，如同丟掉武器赤手空拳的來對抗競爭者，對於蘋果的競爭力也不在像以前那麼高。</p>
 <p>人生本是一場『無限賽局』，但我們僅擁有有限的時間，我們要用『無限思維』去看待這場『限時的賽局』。崇高的信念可以讓思維跳脫輸贏，可以犯錯、可以推翻現況，就是為了更接近人生的信念；擁有可敬的對手讓我們不在只在乎表面的輸贏，而是成為互相檢視的導師，推動自己不斷的向前邁進。當我們不在以『我』為中心來思考任何事，而是將眼光放遠，以信念來引導我們的方向，勢必可以創造屬於自己的價值，並影響更多的人。</p>
 <pre><code>🔅 原子習慣：一旦你發現『時間』才是最寶貴的貨幣，你會徹底改變你的生活風格和習慣。 
 </code></pre>
-<br>
-<h3 id=_slideshare>SlideShare</h3>
+<!-- raw HTML omitted -->
+<h3 id="slideshare">SlideShare</h3>
 <hr>
-<details>
-<summary>顯示簡報</summary>
-<iframe class="slideShare" src="//www.slideshare.net/slideshow/embed_code/key/gpWT6mhExd9KAX" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/ssuser76de98/game-the-infinite-game-248308253" title="Game the infinite game" target="_blank">Game the infinite game</a> </strong> from <strong><a href="https://www.slideshare.net/ssuser76de98" target="_blank">Ian Tsai</a></strong> </div>
-</details>
-  </div>
-  <br>
-  <br>
-  <div class="pagination">
-  
-    <a href="/ianlife/read/ultralearning/" class="button">
-      <div class="previous">
-        <div>超速學習 - 『學習』從來不是一件輕鬆的事</div>
-      </div>
-    </a>
-  
-  
-    <a href="/ianlife/blog/technology/blockchain/ethereum-london-hard-fork/" class="button">
-      <div class="next">
-        <div>無視礦工，以太坊的倫敦硬分叉</div>
-      </div>
-    </a>
-  
-</div>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
-  <footer>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <i class="fas fa-folder"></i>
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%8F%BE%E5%9C%A8%E9%96%8B%E5%A7%8B%E8%AA%8D%E7%9C%9F%E8%AE%80%E6%9B%B8">從現在開始認真讀書</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-  
-    
-    
-      <li class="tags">
-        <i class="fas fa-tags"></i>
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97">讀書心得</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6">好書推薦</a></li>
-          
-        </ul>
-      </li>
-    
-  
-</ul>
 
-  </footer>
-</article>
 
-    <article class="post">
-        <div id="disqus_thread"></div>
+                    
+                    <hr>
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/read/ultralearning/" data-toggle="tooltip" data-placement="top"
+                                title="超速學習 - 『學習』從來不是一件輕鬆的事">&larr;
+                                Previous Post</a>
+                        </li>
+                        
+                        
+                        <li class="next">
+                            <a href="/post/technology/blockchain/ethereum-london-hard-fork/" data-toggle="tooltip" data-placement="top"
+                                title="無視礦工，以太坊的倫敦硬分叉">Next
+                                Post &rarr;</a>
+                        </li>
+                        
+                    </ul>
+                    
+
+                    
+
+
+<div id="disqus-comment"></div>
+<div id="disqus_thread"></div>
 <script type="application/javascript">
     window.disqus_config = function () {
     
@@ -437,366 +386,212 @@ CVS 的領導者用『信念』來引導公司業務，而這項決定也讓有�
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+                </div>
+
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+
+                    
+                    
+                </div>
+            </div>
+        </div>
     </article>
 
-
-
-
-
-        <div class="disqus markdown">
-          <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    
     
 
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:ianjustin39@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/ching-yu-tsai-19b53a147/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            <li>
+                <a target="_blank" href="https://www.instagram.com/ian.aapm/">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            
+            
+           
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="Life Story" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Life Story 2023
+                    <br>
+                    
+                </p>
+            </div>
         </div>
-      </main>
-      
-      <div id="page-sidebar">
-        
-	
-	
-	
-	
-		
-		
-		
-	
-
-		
-		<div>
-
-			
-			<div id="page-scrollspy" class="toc-nav">
-				
-				<ul class="nav nav-pills ml-0">
-					
-					<li class="nav-item pb-3 text-center">
-						<span class="font-weight-bold mb-2">- CATALOG - </span>
-					</li>
-
-					
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e6%b2%92%e6%9c%89%e9%96%8b%e5%a7%8b%e4%b8%ad%e5%a0%b4%e4%bb%a5%e5%8f%8a%e7%b5%90%e6%9d%9f%e7%9a%84%e8%b3%bd%e5%b1%80">
-												 沒有開始、中場以及結束的賽局
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%be%9e%e5%be%ae%e8%bb%9f%e8%88%87%e8%98%8b%e6%9e%9c%e9%96%93%e7%9a%84%e6%88%b0%e7%88%ad%e7%9c%8b%e5%be%85%e5%95%86%e6%a5%ad%e8%b3%bd%e5%b1%80">
-												 從微軟與蘋果間的戰爭看待商業賽局
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e7%84%a1%e9%99%90%e6%80%9d%e7%b6%ad%e7%9a%84%e4%ba%94%e5%80%8b%e9%97%9c%e9%8d%b5">
-												 無限思維的五個關鍵
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%b4%87%e9%ab%98%e7%9a%84%e4%bf%a1%e5%bf%b5">
-												 崇高的信念
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%bd%bc%e6%ad%a4%e4%bf%a1%e4%bb%bb%e7%9a%84%e5%9c%98%e9%9a%8a">
-												 彼此信任的團隊
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%8f%af%e6%95%ac%e7%9a%84%e5%b0%8d%e6%89%8b">
-												 可敬的對手
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e6%94%b8%e9%97%9c%e5%ad%98%e4%ba%a1%e7%9a%84%e6%87%89%e8%ae%8a">
-												 攸關存亡的應變
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e9%a0%98%e5%b0%8e%e7%9a%84%e5%8b%87%e6%b0%a3">
-												 領導的勇氣
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e9%99%90%e6%99%82%e7%9a%84%e7%84%a1%e9%99%90%e8%b3%bd%e5%b1%80">
-												 限時的無限賽局
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_slideshare">
-												 SlideShare
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-
-				</ul>
-			</div>
-			
-
-		</div>
-		
-	
-
-        <iframe class="LikeCoin" height="235"
-  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2fread%2fgame-the-infinite-game%2f" width="100%"
-  frameborder=0></iframe>
- 
-        <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
-    <script src="/ianlife/js/add-on.js"></script>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-165850720-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-      </div>
     </div>
-    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
-  </body>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+
 </html>

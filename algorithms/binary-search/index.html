@@ -1,290 +1,274 @@
-<!doctype html>
-<html lang="zh">
-  <head>
-  <meta content="演算法, Algorithm, Binary search, 資料結構, Data Structures, 二分搜尋" name="keywords">
-  <link rel="stylesheet" href="https://ianjustin39.github.io/ianlife/%20css/search.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
-  <link rel="stylesheet" href="../css/magnific-popup.css">
-  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  
-  
-  
-  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
-  <script src="/ianlife/js/bootstrap.js"></script>
-  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
-  
-  
-  
-  <script src="../js/jquery.magnific-popup.js"></script>
-  
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
-  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="/ianlife/js/toc.js"></script>
-  
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  
-  
-  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
-  <script>
-   window.onload = function () {
-    let plantumlPrefix = "language-plantuml";
-    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
-      let image = document.createElement("IMG");
-      image.loading = 'lazy'; 
-      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
-      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
-      code.parentNode.insertBefore(image, code);
-      code.style.display = 'none';
-    });
-  };
-  </script>
-  
-  
-  
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Life Story">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://ianjustin39.github.io//https://i.imgur.com/NYIZKq3.jpg">
+    <meta property="twitter:image" content="https://ianjustin39.github.io//https://i.imgur.com/NYIZKq3.jpg" />
+    
+
+    
+    <meta name="title" content="二分搜尋演算法 (Binary search algorithm) - 終極密碼" />
+    <meta property="og:title" content="二分搜尋演算法 (Binary search algorithm) - 終極密碼" />
+    <meta property="twitter:title" content="二分搜尋演算法 (Binary search algorithm) - 終極密碼" />
+    
+
+    
+    <meta name="description" content="從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。">
+    <meta property="og:description" content="從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。" />
+    <meta property="twitter:description" content="從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>二分搜尋演算法 (Binary search algorithm) - 終極密碼 | Ian Blog</title>
+
+    <link rel="canonical" href="/algorithms/binary-search/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 	ga('create', 'UA-165850720-1', 'auto');
 	
 	ga('send', 'pageview');
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-  
-  <meta charset="utf-8">
-<title>二分搜尋演算法 (Binary search algorithm) - 終極密碼 - Ian Tsai </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
-  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
-  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
-  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
-  
-    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
-    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
-    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
-  
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
-
-<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="二分搜尋演算法 (Binary search algorithm) - 終極密碼">
-<meta itemprop="description" content="圖片來源
-"><meta itemprop="datePublished" content="2021-03-07T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-03-07T00:00:00+00:00" />
-<meta itemprop="wordCount" content="336"><meta itemprop="image" content="https://i.imgur.com/RVPOINs.png">
-<meta itemprop="keywords" content="Algorithm,Data Structures," /><meta property="og:title" content="二分搜尋演算法 (Binary search algorithm) - 終極密碼" />
-<meta property="og:description" content="圖片來源
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/algorithms/binary-search/" /><meta property="og:image" content="https://i.imgur.com/RVPOINs.png" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2021-03-07T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-03-07T00:00:00+00:00" />
 
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://i.imgur.com/RVPOINs.png"/>
 
-<meta name="twitter:title" content="二分搜尋演算法 (Binary search algorithm) - 終極密碼"/>
-<meta name="twitter:description" content="圖片來源
-"/>
-<meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
-        <link rel="stylesheet" href="/ianlife/css/add-on.css">
-</head>
 
-  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
-  
-  
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Life Story</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">HOME</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/learning/">learning</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/life/">life</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/product/">product</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">ALL POST</a></li>
+                    
+                        <li><a href="/about//">ABOUT</a></li>
+                    
+		            
+                </ul>
+            </div>
+        </div>
+        
+    </div>
     
-<header id="site-header">
-  <nav id="site-nav">
-    <h1 class="nav-title">
-      <a href="/ianlife">
-        
-          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
-        
-      </a>
-    </h1>
-    <menu id="site-nav-menu" class="flyout-menu">
-      
-        
-          
-          
-            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/blog/" class="link"><i class='fas fa-pencil-alt'></i> Blog</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/life" class="link"><i class='fa fa-plane'></i> Life</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/learning" class="link"><i class='fa fa-book'></i> Learning</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/product" class="link"><i class='fas fa-box'></i> Product</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/tech" class="link"><i class='fa fa-laptop'></i> Tech</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
-          
-        
-      
-      
-      
-
-      <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
-        <span id="searchGlyph" class="glyphicon glyphicon-search"><i class="fas fa-search"></i></span></a>
-    </menu>
-    
-
-    
-    <a href="#lang-menu" class="lang-toggle" lang="zh">zh</a>
-    <a href="#site-nav-menu" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
-  </nav>
- 
- 
-  <menu id="lang-menu" class="flyout-menu">
-  <a href="#" lang="zh" class="link active">中文 (zh)</a>
-  
-    
-      
-        <a href="/ianlife/en" lang="en" class="no-lang link">English (en)</a>
-      
-    
-      
-    
-  
-</menu>
-
-  
-</header>
-
-<div id="modalSearch" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">文章搜尋</h4><button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-      <div class="modal-body">
-        <div class="aa-input-container" id="aa-input-container">
-  <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for titles or URIs..."
-    name="search" autocomplete="off" />
-  <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
-    <path
-      d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z" />
-  </svg>
-</div>
-<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/algoliasearch.min.js"></script>
-<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/autocomplete.min.js"></script>
+</nav>
 <script>
-  var client = algoliasearch("WTW32P5SNJ", "2e16477f048bc4528b166dfd1eb4804d");
-  var index = client.initIndex("blog");
-  autocomplete('#aa-search-input',
-    { hint: false }, {
-    source: autocomplete.sources.hits(index, { hitsPerPage: 20 }),
-    displayKey: 'name',
-    templates: {
-      suggestion: function (suggestion) {
-        return '<span>' + '<a href="' + suggestion.relpermalink + '">' +
-          suggestion.title + '</a></span>';
-      }
-    }
-  });
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
 
-  $('#searchGlyph').click(function() {
-    setTimeout(function(){
-      $('#aa-search-input').focus();
-    },300);
-  });
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
 </script>
 
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-    <div id="wrapper">
-      
-      <main id="site-main">
-        <article class="post">
-  <header>
-  <div class="title">
-    <a href="/ianlife/series/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95"><p>Data Structures and Algorithms</p></a>
-    
-    <h3><a href="/ianlife/algorithms/binary-search/">二分搜尋演算法 (Binary search algorithm) - 終極密碼</a></h3>
-    
-    
-  </div>
-  <div class="meta">
-    <time class="published" datetime="2021-03-07 00:00:00 &#43;0000 UTC">
-      March 7, 2021
-    </time>
-    
-    <span class="author">Ian Tsai</span>
-    
-    <p>2 minute read</p>
-    
-    <p>
-      <span id="busuanzi_container_page_pv">
-        PV: <span id="busuanzi_value_page_pv"></span>
-      </span>
-    </p>
-  </div>
-</header>
-
-  <section id="socnet-share">
-    
-  </section>
-  
-  <a href="/ianlife/algorithms/binary-search/" class="image featured">
-    
-      <img src="https://i.imgur.com/RVPOINs.png" alt="">
-    
-  </a>
 
 
-  <div class="content">
-    <p><a href="https://www.geeksforgeeks.org/binary-search/" target="_blank">圖片來源</a>
-<br></p>
-<h2 id=_終極密碼>終極密碼</h2>
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('https://i.imgur.com/RVPOINs.png');
+         
+         
+        background-blend-mode: multiply;
+    }
+</style>
+
+    <header class="intro-header">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" href="/%20/tags/algorithm" title="Algorithm">
+                                Algorithm
+                            </a>
+                            
+                            <a class="tag" href="/%20/tags/data-structures" title="Data Structures">
+                                Data Structures
+                            </a>
+                            
+                        </div>
+                        <h1>二分搜尋演算法 (Binary search algorithm) - 終極密碼</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            
+                            Posted by
+                            
+                            Ian Tsai
+                            
+                            on
+                            Sunday, March 7, 2021
+                            
+                            
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+
+                
+                
+                <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                    <div class="side-catalog">
+                        <hr class="hidden-sm hidden-xs">
+                        <h5>
+                            <a class="catalog-toggle" href="#">CATALOG</a>
+                        </h5>
+                        <ul class="catalog-body"></ul>
+
+                    <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianjustin39.github.io%2falgorithms%2fbinary-search%2f" width="100%"
+  frameborder=0></iframe>
+
+                    </div>
+                </div>
+                
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                    
+                    <p><!-- raw HTML omitted -->圖片來源<!-- raw HTML omitted -->
+<!-- raw HTML omitted --></p>
+<h2 id="終極密碼">終極密碼</h2>
 <hr>
-<p>再進入 Binary search 之前，先來玩一段小程式（可以點 <strong><a href="https://onlinegdb.com/r1FwI5mQO" target="_blank">這裏</a></strong> 試玩）：</p>
+<p>再進入 Binary search 之前，先來玩一段小程式（可以點 <strong><!-- raw HTML omitted -->這裏<!-- raw HTML omitted --></strong> 試玩）：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> random
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">guess_the_number</span>(total_tries, start_range, end_range):
@@ -319,16 +303,14 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>guess_the_number(total_tries, start_range, end_range)
 </span></span></code></pre></div><p>這其實就是以前常玩的猜數字（終極密碼）的遊戲。猜一個數字看是否正確，不正確的話是比正確數字大還是小，然後繼續猜另一半，雖然帶有一點隨機性，不過概念就跟 Binary search 相似。</p>
 <p>但在再更進一步了解 Binary search 之前，先來了解一下 Linear search。</p>
-<br>
-<br>
-<h2 id=_linear-search>Linear search</h2>
+<!-- raw HTML omitted -->
+<h2 id="linear-search">Linear search</h2>
 <hr>
 <p>假設有一本字典，我們要從字典裡面找到一個單字。但這本字典編輯的很爛，它並沒有按照字母順序排列，那我們該如何找到這個單字？</p>
 <p>看起來我們只能從第一頁開始逐個字的看，直到找到為止。這就是 Linear search。</p>
 <pre tabindex="0"><code>Linear search 的時間複雜度是多少？ O(n)
-</code></pre><br>
-<br>
-<h2 id=_binary-search>Binary search</h2>
+</code></pre><!-- raw HTML omitted -->
+<h2 id="binary-search">Binary search</h2>
 <hr>
 <p>因為上一本字典太爛，所以現在我們去買一本字母是按照順序排列的字典。那我們該如何找到這個單字？</p>
 <p>一般來說（撇除我們知道字母在哪，從頭或是尾巴開始找），會先翻到中間，然後，我們會執行以下操作：</p>
@@ -346,9 +328,8 @@ if (!doNotTrack) {
 <li>若目標值在中間值之前，則繼續找尋左半邊部分，反之則找尋右半部分。</li>
 <li>重複上述步驟，直到找到目標值為止。</li>
 </ul>
-<br>
-<br>
-<h2 id=_efficiency-of-binary-search>Efficiency of Binary Search</h2>
+<!-- raw HTML omitted -->
+<h2 id="efficiency-of-binary-search">Efficiency of Binary Search</h2>
 <hr>
 <p>現在我們知道了 Binary Search 的運作原理，也知道了使用 Binary Search 的資料必須是經過排序的資料。那它的時間複雜度該如何計算？
 我們再來看一個範例，現在有一個經過排序的陣列如下：</p>
@@ -373,90 +354,55 @@ index:   1   2   3
 <p>經過這個範例，一共比對了三次才找到<code>16</code>，就是對半分三次，即 <strong>1/2 * 1/2 * 1/2 = (1/2)^3</strong>。</p>
 <p>全部有 12 個資料，所以是 <code>12 * (1/2)^3 = 1</code>，而現在可以做以下的運算：</p>
 <p><strong>step 0:</strong></p>
-<p>12 * (1/2)<sup>3</sup> = 1</p>
+<p>12 * (1/2)<!-- raw HTML omitted -->3<!-- raw HTML omitted --> = 1</p>
 <p><strong>step 1: 若有 n 個元素，則要對半 k 次</strong></p>
-<p>n * (1/2)<sup>k</sup> = 1</p>
+<p>n * (1/2)<!-- raw HTML omitted -->k<!-- raw HTML omitted --> = 1</p>
 <p><strong>step 2: 上面等於下面</strong></p>
-<p>n * 1/2<sup>k</sup> = 1</p>
-<p><strong>step 3: 同乘 2<sup>k</sup></strong></p>
-<p>2<sup>k</sup> * n/2<sup>k</sup> = 2<sup>k</sup></p>
+<p>n * 1/2<!-- raw HTML omitted -->k<!-- raw HTML omitted --> = 1</p>
+<p><strong>step 3: 同乘 2<!-- raw HTML omitted -->k<!-- raw HTML omitted --></strong></p>
+<p>2<!-- raw HTML omitted -->k<!-- raw HTML omitted --> * n/2<!-- raw HTML omitted -->k<!-- raw HTML omitted --> = 2<!-- raw HTML omitted -->k<!-- raw HTML omitted --></p>
 <p><strong>step 4: 變成</strong></p>
 <p>n = 2k</p>
-<p>所以以 2 為底 n 的<a href="https://zh.wikipedia.org/wiki/%E5%AF%B9%E6%95%B0" target="_blank">對數</a>是 log<sub>2</sub>(n) = k， 所以 k 就是 log<sub>2</sub>(n)，也就是在最糟情況下，要從 n 個元素中搜尋到某一個元素，則要折半比對的次數為 k 次，就是 log<sub>2</sub>(n) 次。</p>
+<p>所以以 2 為底 n 的<!-- raw HTML omitted -->對數<!-- raw HTML omitted -->是 log<!-- raw HTML omitted -->2<!-- raw HTML omitted -->(n) = k， 所以 k 就是 log<!-- raw HTML omitted -->2<!-- raw HTML omitted -->(n)，也就是在最糟情況下，要從 n 個元素中搜尋到某一個元素，則要折半比對的次數為 k 次，就是 log<!-- raw HTML omitted -->2<!-- raw HTML omitted -->(n) 次。</p>
 <pre tabindex="0"><code>Binary search 的時間複雜度是多少？ O(log n)
-</code></pre><br>
-<br>
-<h2 id=_練習程式碼>練習程式碼</h2>
+</code></pre><!-- raw HTML omitted -->
+<h2 id="練習程式碼">練習程式碼</h2>
 <hr>
-<p>可以到 clone <a href="https://github.com/ianjustin39/Data-Structures-and-Algorithms/tree/master/Algorithms/Binary%20Search" target="_blank">github</a> 的程式碼練習（01, 02），或是把程式碼複製到 <a href="https://www.onlinegdb.com/online_python_compiler#" target="_blank">online_python_compiler</a> 練習也可以。</p>
-<h2 id=_resource>Resource</h2>
+<p>可以到 clone <!-- raw HTML omitted -->github<!-- raw HTML omitted --> 的程式碼練習（01, 02），或是把程式碼複製到 <!-- raw HTML omitted -->online_python_compiler<!-- raw HTML omitted --> 練習也可以。</p>
+<h2 id="resource">Resource</h2>
 <hr>
 <ul>
-<li><a href="https://matthung0807.blogspot.com/2018/04/binary-search-ologn.html" target="_blank">為什麼Binary Search 二元搜索法的時間複雜度是O(log(n))</a></li>
-<li><a href="https://pjchender.blogspot.com/2017/09/big-o-notation-time-complexity.html" target="_blank">[演算法] Big O Notation &amp; Time Complexity</a></li>
+<li><!-- raw HTML omitted -->為什麼Binary Search 二元搜索法的時間複雜度是O(log(n))<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->[演算法] Big O Notation &amp; Time Complexity<!-- raw HTML omitted --></li>
 <li>Udacity Data Structures and Algorithms Class</li>
 </ul>
-  </div>
-  <br>
-  <br>
-  <div class="pagination">
-  
-    <a href="/ianlife/read/40-years-old/" class="button">
-      <div class="previous">
-        <div>為了遇見40歲更好的自己</div>
-      </div>
-    </a>
-  
-  
-    <a href="/ianlife/algorithms/tries/" class="button">
-      <div class="next">
-        <div>字典樹 - Trie</div>
-      </div>
-    </a>
-  
-</div>
 
-  <footer>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <i class="fas fa-folder"></i>
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95">資料結構與演算法</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-  
-    
-    
-      <li class="tags">
-        <i class="fas fa-tags"></i>
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/algorithm">Algorithm</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/data-structures">Data Structures</a></li>
-          
-        </ul>
-      </li>
-    
-  
-</ul>
 
-  </footer>
-</article>
+                    
+                    <hr>
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/read/40-years-old/" data-toggle="tooltip" data-placement="top"
+                                title="為了遇見40歲更好的自己">&larr;
+                                Previous Post</a>
+                        </li>
+                        
+                        
+                        <li class="next">
+                            <a href="/algorithms/tries/" data-toggle="tooltip" data-placement="top"
+                                title="字典樹 - Trie">Next
+                                Post &rarr;</a>
+                        </li>
+                        
+                    </ul>
+                    
 
-    <article class="post">
-        <div id="disqus_thread"></div>
+                    
+
+
+<div id="disqus-comment"></div>
+<div id="disqus_thread"></div>
 <script type="application/javascript">
     window.disqus_config = function () {
     
@@ -476,218 +422,212 @@ index:   1   2   3
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+                </div>
+
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+
+                    
+                    
+                </div>
+            </div>
+        </div>
     </article>
 
-
-
-
-
-        <div class="disqus markdown">
-          <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    
     
 
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:ianjustin39@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/ching-yu-tsai-19b53a147/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            <li>
+                <a target="_blank" href="https://www.instagram.com/ian.aapm/">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            
+            
+           
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="Life Story" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Life Story 2023
+                    <br>
+                    
+                </p>
+            </div>
         </div>
-      </main>
-      
-      <div id="page-sidebar">
-        
-	
-	
-	
-	
-		
-		
-		
-	
-
-		
-		<div>
-
-			
-			<div id="page-scrollspy" class="toc-nav">
-				
-				<ul class="nav nav-pills ml-0">
-					
-					<li class="nav-item pb-3 text-center">
-						<span class="font-weight-bold mb-2">- CATALOG - </span>
-					</li>
-
-					
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e7%b5%82%e6%a5%b5%e5%af%86%e7%a2%bc">
-												 終極密碼
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_linear-search">
-												 Linear search
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_binary-search">
-												 Binary search
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_efficiency-of-binary-search">
-												 Efficiency of Binary Search
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e7%b7%b4%e7%bf%92%e7%a8%8b%e5%bc%8f%e7%a2%bc">
-												 練習程式碼
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_resource">
-												 Resource
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-							
-						
-				 
-
-				</ul>
-			</div>
-			
-
-		</div>
-		
-	
-
-        <iframe class="LikeCoin" height="235"
-  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2falgorithms%2fbinary-search%2f" width="100%"
-  frameborder=0></iframe>
- 
-        <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
-    <script src="/ianlife/js/add-on.js"></script>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-165850720-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-      </div>
     </div>
-    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
-  </body>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+
 </html>

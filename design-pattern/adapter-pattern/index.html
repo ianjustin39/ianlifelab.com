@@ -1,289 +1,278 @@
-<!doctype html>
-<html lang="zh">
-  <head>
-  <meta content="Design Pattern, Structural Pattern, Adapter Pattern, 適配器模式, 接配器模式" name="keywords">
-  <link rel="stylesheet" href="https://ianjustin39.github.io/ianlife/%20css/search.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
-  <link rel="stylesheet" href="../css/magnific-popup.css">
-  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  
-  
-  
-  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
-  <script src="/ianlife/js/bootstrap.js"></script>
-  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
-  
-  
-  
-  <script src="../js/jquery.magnific-popup.js"></script>
-  
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
-  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="/ianlife/js/toc.js"></script>
-  
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  
-  
-  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
-  <script>
-   window.onload = function () {
-    let plantumlPrefix = "language-plantuml";
-    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
-      let image = document.createElement("IMG");
-      image.loading = 'lazy'; 
-      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
-      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
-      code.parentNode.insertBefore(image, code);
-      code.style.display = 'none';
-    });
-  };
-  </script>
-  
-  
-  
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Life Story">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://ianjustin39.github.io//https://i.imgur.com/NYIZKq3.jpg">
+    <meta property="twitter:image" content="https://ianjustin39.github.io//https://i.imgur.com/NYIZKq3.jpg" />
+    
+
+    
+    <meta name="title" content="適配器模式 | Adapter Pattern" />
+    <meta property="og:title" content="適配器模式 | Adapter Pattern" />
+    <meta property="twitter:title" content="適配器模式 | Adapter Pattern" />
+    
+
+    
+    <meta name="description" content="適配器模式如同出國玩時，一定會有使用電器的需求。但每個國家的插座及電壓都不一樣，這時就會拿出事先準備好的轉接頭，藉由轉接頭將插座與電器插頭做連接。適配器模式的目的在於將一個類別的介面轉換成客戶希望的另外一個介面，Adapter使得原本由於介面相容而不能一起工作的那些類別可以一起工作。">
+    <meta property="og:description" content="適配器模式如同出國玩時，一定會有使用電器的需求。但每個國家的插座及電壓都不一樣，這時就會拿出事先準備好的轉接頭，藉由轉接頭將插座與電器插頭做連接。適配器模式的目的在於將一個類別的介面轉換成客戶希望的另外一個介面，Adapter使得原本由於介面相容而不能一起工作的那些類別可以一起工作。" />
+    <meta property="twitter:description" content="適配器模式如同出國玩時，一定會有使用電器的需求。但每個國家的插座及電壓都不一樣，這時就會拿出事先準備好的轉接頭，藉由轉接頭將插座與電器插頭做連接。適配器模式的目的在於將一個類別的介面轉換成客戶希望的另外一個介面，Adapter使得原本由於介面相容而不能一起工作的那些類別可以一起工作。" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>適配器模式 | Adapter Pattern | Ian Blog</title>
+
+    <link rel="canonical" href="/design-pattern/adapter-pattern/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 	ga('create', 'UA-165850720-1', 'auto');
 	
 	ga('send', 'pageview');
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-  
-  <meta charset="utf-8">
-<title>適配器模式 | Adapter Pattern - Ian Tsai </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
-  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
-  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
-  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
-  
-    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
-    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
-    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
-  
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
-
-<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="適配器模式 | Adapter Pattern">
-<meta itemprop="description" content="適配器模式如同出國玩時，一定會有使用電器的需求。但每個國家的插座及電壓都不一樣，這時就會拿出事先準備好的轉接頭，藉由轉接頭將插座與電器插頭做連接。適配器模式的目的在於將一個類別的介面轉換成客戶希望的另外一個介面，Adapter使得原本由於介面相容而不能一起工作的那些類別可以一起工作。"><meta itemprop="datePublished" content="2020-09-22T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2020-09-22T00:00:00+00:00" />
-<meta itemprop="wordCount" content="628"><meta itemprop="image" content="https://i.imgur.com/2wVomMg.png">
-<meta itemprop="keywords" content="Design Pattern,Structural Pattern,鐵人賽," /><meta property="og:title" content="適配器模式 | Adapter Pattern" />
-<meta property="og:description" content="適配器模式如同出國玩時，一定會有使用電器的需求。但每個國家的插座及電壓都不一樣，這時就會拿出事先準備好的轉接頭，藉由轉接頭將插座與電器插頭做連接。適配器模式的目的在於將一個類別的介面轉換成客戶希望的另外一個介面，Adapter使得原本由於介面相容而不能一起工作的那些類別可以一起工作。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/adapter-pattern/" /><meta property="og:image" content="https://i.imgur.com/2wVomMg.png" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2020-09-22T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-09-22T00:00:00+00:00" />
 
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://i.imgur.com/2wVomMg.png"/>
 
-<meta name="twitter:title" content="適配器模式 | Adapter Pattern"/>
-<meta name="twitter:description" content="適配器模式如同出國玩時，一定會有使用電器的需求。但每個國家的插座及電壓都不一樣，這時就會拿出事先準備好的轉接頭，藉由轉接頭將插座與電器插頭做連接。適配器模式的目的在於將一個類別的介面轉換成客戶希望的另外一個介面，Adapter使得原本由於介面相容而不能一起工作的那些類別可以一起工作。"/>
-<meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
-        <link rel="stylesheet" href="/ianlife/css/add-on.css">
-</head>
 
-  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
-  
-  
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Life Story</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">HOME</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/learning/">learning</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/life/">life</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/product/">product</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">ALL POST</a></li>
+                    
+                        <li><a href="/about//">ABOUT</a></li>
+                    
+		            
+                </ul>
+            </div>
+        </div>
+        
+    </div>
     
-<header id="site-header">
-  <nav id="site-nav">
-    <h1 class="nav-title">
-      <a href="/ianlife">
-        
-          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
-        
-      </a>
-    </h1>
-    <menu id="site-nav-menu" class="flyout-menu">
-      
-        
-          
-          
-            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/blog/" class="link"><i class='fas fa-pencil-alt'></i> Blog</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/life" class="link"><i class='fa fa-plane'></i> Life</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/learning" class="link"><i class='fa fa-book'></i> Learning</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/product" class="link"><i class='fas fa-box'></i> Product</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/tech" class="link"><i class='fa fa-laptop'></i> Tech</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
-          
-        
-      
-      
-      
-
-      <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
-        <span id="searchGlyph" class="glyphicon glyphicon-search"><i class="fas fa-search"></i></span></a>
-    </menu>
-    
-
-    
-    <a href="#lang-menu" class="lang-toggle" lang="zh">zh</a>
-    <a href="#site-nav-menu" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
-  </nav>
- 
- 
-  <menu id="lang-menu" class="flyout-menu">
-  <a href="#" lang="zh" class="link active">中文 (zh)</a>
-  
-    
-      
-        <a href="/ianlife/en" lang="en" class="no-lang link">English (en)</a>
-      
-    
-      
-    
-  
-</menu>
-
-  
-</header>
-
-<div id="modalSearch" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">文章搜尋</h4><button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-      <div class="modal-body">
-        <div class="aa-input-container" id="aa-input-container">
-  <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for titles or URIs..."
-    name="search" autocomplete="off" />
-  <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
-    <path
-      d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z" />
-  </svg>
-</div>
-<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/algoliasearch.min.js"></script>
-<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/autocomplete.min.js"></script>
+</nav>
 <script>
-  var client = algoliasearch("WTW32P5SNJ", "2e16477f048bc4528b166dfd1eb4804d");
-  var index = client.initIndex("blog");
-  autocomplete('#aa-search-input',
-    { hint: false }, {
-    source: autocomplete.sources.hits(index, { hitsPerPage: 20 }),
-    displayKey: 'name',
-    templates: {
-      suggestion: function (suggestion) {
-        return '<span>' + '<a href="' + suggestion.relpermalink + '">' +
-          suggestion.title + '</a></span>';
-      }
-    }
-  });
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
 
-  $('#searchGlyph').click(function() {
-    setTimeout(function(){
-      $('#aa-search-input').focus();
-    },300);
-  });
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
 </script>
 
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-    <div id="wrapper">
-      
-      <main id="site-main">
-        <article class="post">
-  <header>
-  <div class="title">
-    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
-    
-    <h3><a href="/ianlife/design-pattern/adapter-pattern/">適配器模式 | Adapter Pattern</a></h3>
-    
-    
-    <p style="margin-top: 0px;">適配器模式如同出國玩時，一定會有使用電器的需求。但每個國家的插座及電壓都不一樣，這時就會拿出事先準備好的轉接頭，藉由轉接頭將插座與電器插頭做連接。適配器模式的目的在於將一個類別的介面轉換成客戶希望的另外一個介面，Adapter使得原本由於介面相容而不能一起工作的那些類別可以一起工作。</p>
-    
-  </div>
-  <div class="meta">
-    <time class="published" datetime="2020-09-22 00:00:00 &#43;0000 UTC">
-      September 22, 2020
-    </time>
-    
-    <span class="author">Ian Tsai</span>
-    
-    <p>3 minute read</p>
-    
-    <p>
-      <span id="busuanzi_container_page_pv">
-        PV: <span id="busuanzi_value_page_pv"></span>
-      </span>
-    </p>
-  </div>
-</header>
-
-  <section id="socnet-share">
-    
-  </section>
-  
-  <a href="/ianlife/design-pattern/adapter-pattern/" class="image featured">
-    
-      <img src="https://i.imgur.com/2wVomMg.png" alt="">
-    
-  </a>
 
 
-  <div class="content">
-    <p><strong><a href="https://ithelp.ithome.com.tw/articles/10241632" target="_blank">本系列文章同步分享於IT邦幫忙第12屆鐵人賽</a></strong></p>
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('https://i.imgur.com/2wVomMg.png');
+         
+         
+        background-blend-mode: multiply;
+    }
+</style>
+
+    <header class="intro-header">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" href="/%20/tags/design-pattern" title="Design Pattern">
+                                Design Pattern
+                            </a>
+                            
+                            <a class="tag" href="/%20/tags/structural-pattern" title="Structural Pattern">
+                                Structural Pattern
+                            </a>
+                            
+                            <a class="tag" href="/%20/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD" title="鐵人賽">
+                                鐵人賽
+                            </a>
+                            
+                        </div>
+                        <h1>適配器模式 | Adapter Pattern</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            
+                            Posted by
+                            
+                            Ian Tsai
+                            
+                            on
+                            Tuesday, September 22, 2020
+                            
+                            
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+
+                
+                
+                <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                    <div class="side-catalog">
+                        <hr class="hidden-sm hidden-xs">
+                        <h5>
+                            <a class="catalog-toggle" href="#">CATALOG</a>
+                        </h5>
+                        <ul class="catalog-body"></ul>
+
+                    <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianjustin39.github.io%2fdesign-pattern%2fadapter-pattern%2f" width="100%"
+  frameborder=0></iframe>
+
+                    </div>
+                </div>
+                
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                    
+                    <p><strong><!-- raw HTML omitted -->本系列文章同步分享於IT邦幫忙第12屆鐵人賽<!-- raw HTML omitted --></strong></p>
 </br>
 <div>
     <div>
-        <h3 id=_Design-Pattern-Post-List>Design Pattern 系列文章導讀</h3>
+        <h3 id="Design-Pattern-Post-List">Design Pattern 系列文章導讀</h3>
     </div>
     <hr>
     <div>
@@ -368,27 +357,28 @@ if (!doNotTrack) {
     </ol>
 </div>
 
-<br>
-<br>
-<br>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_定義>定義</h3>
+<h3 id="定義">定義</h3>
 </li>
 </ul>
 <hr>
 <p><code>The Adapter Pattern converts the interface of a class into another interface the clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.</code></p>
 <p><em>翻譯年糕：適配器模式將一個類別的介面轉換成客戶希望的另外一個介面，Adapter使得原本由於介面相容而不能一起工作的那些類別可以一起工作</em></p>
 <p>最常見的例子就是電器插頭與插座。當出國玩時，一定會有使用電器的需求。但每個國家的插座及電壓都不一樣，那該怎麼辦？這時你就會拿出你事先準備好的轉接頭，藉由轉接頭將插座與電器插頭做連接。生活上還有許多的例子，如type-c轉hdmi線&hellip;等等。</p>
-<p><img src="https://3.bp.blogspot.com/-vjWnaHjv5s4/XJ4UQkkX27I/AAAAAAAAAOo/72U6nK_ZZxMT6_zeEXMyByuAWm2J1SRZACLcBGAs/s1600/19329_1.JPG" alt="AdapterPattern"></p>
-<p><a href="https://3.bp.blogspot.com/-vjWnaHjv5s4/XJ4UQkkX27I/AAAAAAAAAOo/72U6nK_ZZxMT6_zeEXMyByuAWm2J1SRZACLcBGAs/s1600/19329_1.JPG" target="_blank">註：圖片取自這</a></p>
-<br>
+<p>
+  <img src="https://3.bp.blogspot.com/-vjWnaHjv5s4/XJ4UQkkX27I/AAAAAAAAAOo/72U6nK_ZZxMT6_zeEXMyByuAWm2J1SRZACLcBGAs/s1600/19329_1.JPG" alt="AdapterPattern">
+
+</p>
+<p><!-- raw HTML omitted -->註：圖片取自這<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_adapter-pattern-成員>Adapter Pattern 成員</h3>
+<h3 id="adapter-pattern-成員">Adapter Pattern 成員</h3>
 </li>
 </ul>
-<br>
+<!-- raw HTML omitted -->
 <p>又到了介紹家族成員的時候了。Adapter Pattern內有三個成員</p>
 <table>
 <thead>
@@ -412,26 +402,32 @@ if (!doNotTrack) {
 </tr>
 </tbody>
 </table>
-<br>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_object-adapter--class-adapter>Object Adapter &amp; Class Adapter</h3>
+<h3 id="object-adapter--class-adapter">Object Adapter &amp; Class Adapter</h3>
 </li>
 </ul>
 <hr>
-<br>
+<!-- raw HTML omitted -->
 <p>Adapter Pattern內有分兩種模式，一種是物件結構型模式，另一種是類別結構型模式。類別結構型模式的耦合度會比物件模式要高，且類別結構型模式使用多繼承，所以不能使用在JAVA中。</p>
-<br>
-<h4 id=_物件適配器object-adapter>物件適配器（Object Adapter）</h4>
-<br>
+<!-- raw HTML omitted -->
+<h4 id="物件適配器object-adapter">物件適配器（Object Adapter）</h4>
+<!-- raw HTML omitted -->
 <p>在這種模式中，用合成的方式，將Adaptee放入Adapter中。</p>
 <p><em>註：什麼是合成，可參考這篇：汽油車 &amp; 電動車 - 合成/聚合複用原則 | Composite/Aggregate Reuse Principle內的<strong>合成 v.s 聚合</strong></em></p>
-<br>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/ObjectAdapter.png" alt="Object_Adapter_wiki1"></p>
-<br>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Adapter%28Object%29_pattern_in_LePUS3.png" alt="Object_Adapter_wiki2"></p>
-<p><a href="https://en.wikipedia.org/wiki/Adapter_pattern" target="_blank">註：圖片取自wiki</a></p>
-<br>
+<!-- raw HTML omitted -->
+<p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/ObjectAdapter.png" alt="Object_Adapter_wiki1">
+
+</p>
+<!-- raw HTML omitted -->
+<p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Adapter%28Object%29_pattern_in_LePUS3.png" alt="Object_Adapter_wiki2">
+
+</p>
+<p><!-- raw HTML omitted -->註：圖片取自wiki<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Target</span> <span style="color:#ff79c6">{</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">request</span><span style="color:#ff79c6">();</span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
@@ -463,16 +459,22 @@ if (!doNotTrack) {
 </span></span></code></pre></div><p><strong>output</strong></p>
 <pre tabindex="0"><code>ObjectAdapterTest:
 run specificRequest in Adaptee class
-</code></pre><br>
-<h4 id=_類別適配器class-adapter>類別適配器（Class Adapter）</h4>
-<br>
+</code></pre><!-- raw HTML omitted -->
+<h4 id="類別適配器class-adapter">類別適配器（Class Adapter）</h4>
+<!-- raw HTML omitted -->
 <p>透過多重繼承來實現，adapter同時繼承兩個以上的類別。這種方式在支援多繼承的語言中出現，如：C++、python。而Java中無法實作多重繼承，但可以定義一個Adapter來實作Target，同時繼承Adaptee的方式來實現Class Adapter。</p>
-<br>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/35/ClassAdapter.png" alt="Class_Adapter_wiki1"></p>
-<br>
-<p><img src="https://upload.wikimedia.org/wikipedia/en/b/b3/Adapter%28Class%29_pattern_in_LePUS3.png" alt="Class_Adapter_wiki2"></p>
-<p><a href="https://en.wikipedia.org/wiki/Adapter_pattern" target="_blank">註：圖片取自wiki</a></p>
-<br>
+<!-- raw HTML omitted -->
+<p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/ClassAdapter.png" alt="Class_Adapter_wiki1">
+
+</p>
+<!-- raw HTML omitted -->
+<p>
+  <img src="https://upload.wikimedia.org/wikipedia/en/b/b3/Adapter%28Class%29_pattern_in_LePUS3.png" alt="Class_Adapter_wiki2">
+
+</p>
+<p><!-- raw HTML omitted -->註：圖片取自wiki<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <p>python範例：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Adaptee1</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">doAction1</span>(self):
@@ -494,8 +496,8 @@ run specificRequest in Adaptee class
 <pre tabindex="0"><code>action 1
 action 2
 request   
-</code></pre><p><a href="https://www.onlinegdb.com/online_python_compiler" target="_blank">註：可將程式碼在 online_python_compiler 執行</a></p>
-<br>
+</code></pre><p><!-- raw HTML omitted -->註：可將程式碼在 online_python_compiler 執行<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <p>Java範例：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Target</span> <span style="color:#ff79c6">{</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">request</span><span style="color:#ff79c6">();</span>
@@ -523,17 +525,16 @@ request
 </span></span></code></pre></div><p><strong>output</strong></p>
 <pre tabindex="0"><code>ClassAdapterTest:
 run specificRequest in Adaptee class
-</code></pre><br>
+</code></pre><!-- raw HTML omitted -->
 <p>雖然Java這樣依舊可以執行，但如果要有多個Adaptee，Class Adapter就不在適用了。</p>
-<br>
-<br>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_adapter-pattern-實作>Adapter Pattern 實作</h3>
+<h3 id="adapter-pattern-實作">Adapter Pattern 實作</h3>
 </li>
 </ul>
 <hr>
-<br>
+<!-- raw HTML omitted -->
 <p>看完Adapter Pattern的成員以及兩種Adapter之後，就來實作看看Adapter Pattern吧！</p>
 <p>來用小紅帽與大野狼的故事來寫看看Adapter Pattern。大野狼為了把小紅帽吃了，所以到老奶奶家，先把奶奶吃了，再假扮成奶奶。我們就不實作吃奶奶的步驟了，直接從假扮奶奶開始。</p>
 <p>分別將奶奶與大野狼的Target做出來，然後再分別實作他們。</p>
@@ -604,11 +605,10 @@ run specificRequest in Adaptee class
 BigWildWolf bark
 BigWildWolf imitate Grandma snore
 </code></pre><p>在Client中，有奶奶（RedHatGrandma）跟假扮成奶奶的大野狼（BigWildWolfAdapter）。小紅帽執行home.call()的動作，分別傳回奶奶跟大野狼的聲音。可以看到，大野狼成功的假扮成奶奶了！</p>
-<br>
-<br>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_小結>小結</h3>
+<h3 id="小結">小結</h3>
 </li>
 </ul>
 <hr>
@@ -628,97 +628,58 @@ Adapter：把想變身的對象變成他想變成的對象，這邊稱他上帝�
 缺點
 1. 若使用過多的Adapter會使系統過於複雜凌亂，不易維護。
 </code></pre>
-<br>
-<br>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_範例程式碼>範例程式碼</h3>
+<h3 id="範例程式碼">範例程式碼</h3>
 </li>
 </ul>
 <hr>
-<p><em><a href="https://www.jdoodle.com/embed/v0/2ipZ" target="_blank">範例1：Object Adapter</a></em></p>
-<p><em><a href="https://onlinegdb.com/Hysv2a_Vv" target="_blank">範例2：Class Adapter(python)</a></em></p>
-<p><em><a href="https://www.jdoodle.com/embed/v0/2iq0" target="_blank">範例3：Class Adapter(java)</a></em></p>
-<p><em><a href="https://www.jdoodle.com/embed/v0/2iwj" target="_blank">範例4：Adapter Pattern</a></em></p>
-<br>
-<br>
+<p><em><!-- raw HTML omitted -->範例1：Object Adapter<!-- raw HTML omitted --></em></p>
+<p><em><!-- raw HTML omitted -->範例2：Class Adapter(python)<!-- raw HTML omitted --></em></p>
+<p><em><!-- raw HTML omitted -->範例3：Class Adapter(java)<!-- raw HTML omitted --></em></p>
+<p><em><!-- raw HTML omitted -->範例4：Adapter Pattern<!-- raw HTML omitted --></em></p>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_references>References</h3>
+<h3 id="references">References</h3>
 </li>
 </ul>
 <hr>
 <ul>
-<li><a href="https://dotblogs.com.tw/pin0513/2010/05/30/15497" target="_blank">轉接器模式(Adapter Pattern)</a></li>
-<li><a href="http://corrupt003-design-pattern.blogspot.com/2016/07/adapter-pattern.html" target="_blank">轉接器模式 (Adapter Pattern)</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Adapter_pattern" target="_blank">Adapter pattern</a></li>
-<li><a href="https://openhome.cc/Gossip/DesignPattern/AdapterPattern2.htm" target="_blank">Adapter 模式 - Class Adapter</a></li>
+<li><!-- raw HTML omitted -->轉接器模式(Adapter Pattern)<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->轉接器模式 (Adapter Pattern)<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->Adapter pattern<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->Adapter 模式 - Class Adapter<!-- raw HTML omitted --></li>
 </ul>
 
-  </div>
-  <br>
-  <br>
-  <div class="pagination">
-  
-    <a href="/ianlife/design-pattern/prototype-pattern/" class="button">
-      <div class="previous">
-        <div>原型模式 | Prototype Pattern</div>
-      </div>
-    </a>
-  
-  
-    <a href="/ianlife/design-pattern/bridge-pattern/" class="button">
-      <div class="next">
-        <div>橋接模式 | Bridge Pattern</div>
-      </div>
-    </a>
-  
-</div>
 
-  <footer>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <i class="fas fa-folder"></i>
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern">從生活中認識 Design Pattern</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-  
-    
-    
-      <li class="tags">
-        <i class="fas fa-tags"></i>
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-pattern">Design Pattern</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/structural-pattern">Structural Pattern</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD">鐵人賽</a></li>
-          
-        </ul>
-      </li>
-    
-  
-</ul>
 
-  </footer>
-</article>
+                    
+                    <hr>
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/design-pattern/prototype-pattern/" data-toggle="tooltip" data-placement="top"
+                                title="原型模式 | Prototype Pattern">&larr;
+                                Previous Post</a>
+                        </li>
+                        
+                        
+                        <li class="next">
+                            <a href="/design-pattern/bridge-pattern/" data-toggle="tooltip" data-placement="top"
+                                title="橋接模式 | Bridge Pattern">Next
+                                Post &rarr;</a>
+                        </li>
+                        
+                    </ul>
+                    
 
-    <article class="post">
-        <div id="disqus_thread"></div>
+                    
+
+
+<div id="disqus-comment"></div>
+<div id="disqus_thread"></div>
 <script type="application/javascript">
     window.disqus_config = function () {
     
@@ -738,354 +699,212 @@ Adapter：把想變身的對象變成他想變成的對象，這邊稱他上帝�
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+                </div>
+
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+
+                    
+                    
+                </div>
+            </div>
+        </div>
     </article>
 
-
-
-
-
-        <div class="disqus markdown">
-          <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    
     
 
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:ianjustin39@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/ching-yu-tsai-19b53a147/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            <li>
+                <a target="_blank" href="https://www.instagram.com/ian.aapm/">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            
+            
+           
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="Life Story" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Life Story 2023
+                    <br>
+                    
+                </p>
+            </div>
         </div>
-      </main>
-      
-      <div id="page-sidebar">
-        
-	
-	
-	
-	
-		
-		
-		
-	
-
-		
-		<div>
-
-			
-			<div id="page-scrollspy" class="toc-nav">
-				
-				<ul class="nav nav-pills ml-0">
-					
-					<li class="nav-item pb-3 text-center">
-						<span class="font-weight-bold mb-2">- CATALOG - </span>
-					</li>
-
-					
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_Design-Pattern-Post-List">
-												 Design Pattern 系列文章導讀
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%ae%9a%e7%be%a9">
-												 定義
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_adapter-pattern-%e6%88%90%e5%93%a1">
-												 Adapter Pattern 成員
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_object-adapter--class-adapter">
-												 Object Adapter &amp; Class Adapter
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e7%89%a9%e4%bb%b6%e9%81%a9%e9%85%8d%e5%99%a8object-adapter">
-												 物件適配器（Object Adapter）
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e9%a1%9e%e5%88%a5%e9%81%a9%e9%85%8d%e5%99%a8class-adapter">
-												 類別適配器（Class Adapter）
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_adapter-pattern-%e5%af%a6%e4%bd%9c">
-												 Adapter Pattern 實作
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%b0%8f%e7%b5%90">
-												 小結
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e7%af%84%e4%be%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc">
-												 範例程式碼
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_references">
-												 References
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-
-				</ul>
-			</div>
-			
-
-		</div>
-		
-	
-
-        <iframe class="LikeCoin" height="235"
-  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2fdesign-pattern%2fadapter-pattern%2f" width="100%"
-  frameborder=0></iframe>
- 
-        <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
-    <script src="/ianlife/js/add-on.js"></script>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-165850720-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-      </div>
     </div>
-    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
-  </body>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+
 </html>

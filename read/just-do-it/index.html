@@ -1,370 +1,334 @@
-<!doctype html>
-<html lang="zh">
-  <head>
-  <meta content="讀書心得, 就是因為『沒時間』，才什麼都能辦到, 時間管理, 沒時間" name="keywords">
-  <link rel="stylesheet" href="https://ianjustin39.github.io/ianlife/%20css/search.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
-  <link rel="stylesheet" href="../css/magnific-popup.css">
-  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  
-  
-  
-  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
-  <script src="/ianlife/js/bootstrap.js"></script>
-  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
-  
-  
-  
-  <script src="../js/jquery.magnific-popup.js"></script>
-  
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
-  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="/ianlife/js/toc.js"></script>
-  
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  
-  
-  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
-  <script>
-   window.onload = function () {
-    let plantumlPrefix = "language-plantuml";
-    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
-      let image = document.createElement("IMG");
-      image.loading = 'lazy'; 
-      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
-      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
-      code.parentNode.insertBefore(image, code);
-      code.style.display = 'none';
-    });
-  };
-  </script>
-  
-  
-  
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Life Story">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://ianjustin39.github.io//https://i.imgur.com/NYIZKq3.jpg">
+    <meta property="twitter:image" content="https://ianjustin39.github.io//https://i.imgur.com/NYIZKq3.jpg" />
+    
+
+    
+    <meta name="title" content="就是因為『沒時間』，才什麼都能辦到" />
+    <meta property="og:title" content="就是因為『沒時間』，才什麼都能辦到" />
+    <meta property="twitter:title" content="就是因為『沒時間』，才什麼都能辦到" />
+    
+
+    
+    <meta name="description" content="羅賓・夏瑪說過『不是因為某件事很難，你才不想做，而是因為你不想做，所以變得困難。』">
+    <meta property="og:description" content="羅賓・夏瑪說過『不是因為某件事很難，你才不想做，而是因為你不想做，所以變得困難。』" />
+    <meta property="twitter:description" content="羅賓・夏瑪說過『不是因為某件事很難，你才不想做，而是因為你不想做，所以變得困難。』" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>就是因為『沒時間』，才什麼都能辦到 | Ian Blog</title>
+
+    <link rel="canonical" href="/read/just-do-it/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 	ga('create', 'UA-165850720-1', 'auto');
 	
 	ga('send', 'pageview');
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-  
-  <meta charset="utf-8">
-<title>就是因為『沒時間』，才什麼都能辦到 - Ian Tsai </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
-  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
-  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
-  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
-  
-    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
-    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
-    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
-  
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
-
-<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="就是因為『沒時間』，才什麼都能辦到">
-<meta itemprop="description" content="羅賓・夏瑪說過『不是因為某件事很難，你才不想做，而是因為你不想做，所以變得困難。』"><meta itemprop="datePublished" content="2022-11-27T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2022-11-27T00:00:00+00:00" />
-<meta itemprop="wordCount" content="35"><meta itemprop="image" content="https://i.imgur.com/KbnkUY2.png">
-<meta itemprop="keywords" content="讀書心得,好書推薦," /><meta property="og:title" content="就是因為『沒時間』，才什麼都能辦到" />
-<meta property="og:description" content="羅賓・夏瑪說過『不是因為某件事很難，你才不想做，而是因為你不想做，所以變得困難。』" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/read/just-do-it/" /><meta property="og:image" content="https://i.imgur.com/KbnkUY2.png" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2022-11-27T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-11-27T00:00:00+00:00" />
 
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://i.imgur.com/KbnkUY2.png"/>
 
-<meta name="twitter:title" content="就是因為『沒時間』，才什麼都能辦到"/>
-<meta name="twitter:description" content="羅賓・夏瑪說過『不是因為某件事很難，你才不想做，而是因為你不想做，所以變得困難。』"/>
-<meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
-        <link rel="stylesheet" href="/ianlife/css/add-on.css">
-</head>
 
-  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
-  
-  
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Life Story</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">HOME</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/learning/">learning</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/life/">life</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/product/">product</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">ALL POST</a></li>
+                    
+                        <li><a href="/about//">ABOUT</a></li>
+                    
+		            
+                </ul>
+            </div>
+        </div>
+        
+    </div>
     
-<header id="site-header">
-  <nav id="site-nav">
-    <h1 class="nav-title">
-      <a href="/ianlife">
-        
-          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
-        
-      </a>
-    </h1>
-    <menu id="site-nav-menu" class="flyout-menu">
-      
-        
-          
-          
-            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/blog/" class="link"><i class='fas fa-pencil-alt'></i> Blog</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/life" class="link"><i class='fa fa-plane'></i> Life</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/learning" class="link"><i class='fa fa-book'></i> Learning</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/product" class="link"><i class='fas fa-box'></i> Product</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/tech" class="link"><i class='fa fa-laptop'></i> Tech</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
-          
-        
-      
-      
-      
-
-      <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
-        <span id="searchGlyph" class="glyphicon glyphicon-search"><i class="fas fa-search"></i></span></a>
-    </menu>
-    
-
-    
-    <a href="#lang-menu" class="lang-toggle" lang="zh">zh</a>
-    <a href="#site-nav-menu" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
-  </nav>
- 
- 
-  <menu id="lang-menu" class="flyout-menu">
-  <a href="#" lang="zh" class="link active">中文 (zh)</a>
-  
-    
-      
-        <a href="/ianlife/en" lang="en" class="no-lang link">English (en)</a>
-      
-    
-      
-    
-  
-</menu>
-
-  
-</header>
-
-<div id="modalSearch" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">文章搜尋</h4><button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-      <div class="modal-body">
-        <div class="aa-input-container" id="aa-input-container">
-  <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for titles or URIs..."
-    name="search" autocomplete="off" />
-  <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
-    <path
-      d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z" />
-  </svg>
-</div>
-<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/algoliasearch.min.js"></script>
-<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/autocomplete.min.js"></script>
+</nav>
 <script>
-  var client = algoliasearch("WTW32P5SNJ", "2e16477f048bc4528b166dfd1eb4804d");
-  var index = client.initIndex("blog");
-  autocomplete('#aa-search-input',
-    { hint: false }, {
-    source: autocomplete.sources.hits(index, { hitsPerPage: 20 }),
-    displayKey: 'name',
-    templates: {
-      suggestion: function (suggestion) {
-        return '<span>' + '<a href="' + suggestion.relpermalink + '">' +
-          suggestion.title + '</a></span>';
-      }
-    }
-  });
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
 
-  $('#searchGlyph').click(function() {
-    setTimeout(function(){
-      $('#aa-search-input').focus();
-    },300);
-  });
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
 </script>
 
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-    <div id="wrapper">
-      
-      <main id="site-main">
-        <article class="post">
-  <header>
-  <div class="title">
-    <a href="/ianlife/series/%E5%BE%9E%E7%8F%BE%E5%9C%A8%E9%96%8B%E5%A7%8B%E8%AA%8D%E7%9C%9F%E8%AE%80%E6%9B%B8"><p>讀書心得</p></a>
-    
-    <h3><a href="/ianlife/read/just-do-it/">就是因為『沒時間』，才什麼都能辦到</a></h3>
-    
-    
-    <p style="margin-top: 0px;">羅賓・夏瑪說過『不是因為某件事很難，你才不想做，而是因為你不想做，所以變得困難。』</p>
-    
-  </div>
-  <div class="meta">
-    <time class="published" datetime="2022-11-27 00:00:00 &#43;0000 UTC">
-      November 27, 2022
-    </time>
-    
-    <span class="author">Ian Tsai</span>
-    
-    <p>1 minute read</p>
-    
-    <p>
-      <span id="busuanzi_container_page_pv">
-        PV: <span id="busuanzi_value_page_pv"></span>
-      </span>
-    </p>
-  </div>
-</header>
-
-  <section id="socnet-share">
-    
-  </section>
-  
-  <a href="/ianlife/read/just-do-it/" class="image featured">
-    
-      <img src="https://i.imgur.com/KbnkUY2.png" alt="">
-    
-  </a>
 
 
-  <div class="content">
-    <br>
-<h3 id=_沒時間那就全部一起做>沒時間，那就全部一起做</h3>
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('https://i.imgur.com/KbnkUY2.png');
+         
+         
+        background-blend-mode: multiply;
+    }
+</style>
+
+    <header class="intro-header">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" href="/%20/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97" title="讀書心得">
+                                讀書心得
+                            </a>
+                            
+                            <a class="tag" href="/%20/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6" title="好書推薦">
+                                好書推薦
+                            </a>
+                            
+                        </div>
+                        <h1>就是因為『沒時間』，才什麼都能辦到</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            
+                            Posted by
+                            
+                            Ian Tsai
+                            
+                            on
+                            Sunday, November 27, 2022
+                            
+                            
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+
+                
+                
+                <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                    <div class="side-catalog">
+                        <hr class="hidden-sm hidden-xs">
+                        <h5>
+                            <a class="catalog-toggle" href="#">CATALOG</a>
+                        </h5>
+                        <ul class="catalog-body"></ul>
+
+                    <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianjustin39.github.io%2fread%2fjust-do-it%2f" width="100%"
+  frameborder=0></iframe>
+
+                    </div>
+                </div>
+                
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                    
+                    <!-- raw HTML omitted -->
+<h3 id="沒時間那就全部一起做">沒時間，那就全部一起做</h3>
 <hr>
 <p>『我想要學XXX啊，但下班後就沒有時間』，或是說『這件事情太難，我沒時間學』之類的話。我們往往被『工作』、『家庭』等這些生活上事情所困，但多半因為這樣也會因為被這些塞滿，時不時會有『我想幹大事』的衝動，可能是『想要去打工度假』，也可能是『想要開始征服百岳』等，就是因為沒有自由的時間，才是充滿『幹勁』的時刻。</p>
 <p>當發現了這個『沒時間』反而是『轉機』後，來整理看看自己每天的時間，就會知道自己的一天有多少可利用時間，以及哪些時間段是可以被優化的部分。如下兩張圖，圖一時作者平時的行程，圖二為決定去美國留學後的行程，誰說有工作又要帶小孩就不能準備出國留學？可以發現藉由調整早上與晚上兩時段的作息，讓他一天多了三小時可以為了留學而做準備。</p>
-<p><img src="https://i.imgur.com/IOEaek1l.png" alt="schedule1"><img src="https://i.imgur.com/DVPEojYl.png" alt="schedule1"></p>
-<br>
-<h3 id=_時間無法節約那只能提升價值密度>時間無法節約，那只能提升價值密度</h3>
+<p>
+  <img src="https://i.imgur.com/IOEaek1l.png" alt="schedule1">
+
+
+  <img src="https://i.imgur.com/DVPEojYl.png" alt="schedule1">
+
+</p>
+<!-- raw HTML omitted -->
+<h3 id="時間無法節約那只能提升價值密度">時間無法節約，那只能提升價值密度</h3>
 <hr>
 <p>什麼是提升時間的價值密度？當我們整理了自己的一天之後會發現，我們其實有許多時間可以利用，不管是一段長的時間，或是很小很零碎的時間。但空出時間不代表就會成功，還需要列出要執行的待辦清單，並依照重要程度將這些任務安排在空出的時間內，否則我們單純就只是把時間空出來繼續滑抖音而已。</p>
 <p>不知道大家有沒有看過一個短片，教授分別把高爾夫球、碎石、沙粒以及啤酒分別到入罐子內，並在每放入一個東西時，問學生裝滿了沒。這些內容物就是代表任務，而高爾夫球就是清單上最重要的任務，試想如果先放入了沙粒以及碎石，哪還有沒有空間放高爾夫球呢？所以當整理出可利用的時間後，應該優先把清單上的高爾夫球放入時間內，再接著放入碎石即沙粒，才有辦法確保最重要的事情一定會優先完成，而不是都把時間花在瑣碎且不重要的事物上。這邊可能有人會想，那啤酒呢？啤酒則代表，就算生活過得再辛苦，也要停下來喝杯酒休息一下 🤣</p>
-<br>
-<h3 id=_因為你不想做所以變得困難>因為你不想做，所以變得困難</h3>
+<!-- raw HTML omitted -->
+<h3 id="因為你不想做所以變得困難">因為你不想做，所以變得困難</h3>
 <hr>
 <p>羅賓・夏瑪說過『不是因為某件事很難，你才不想做，而是因為你不想做，所以變得困難。』</p>
 <p>大家應該都有騎腳踏車的經驗，起步時的第一下是最辛苦的，但是在接續第二下之後會發現，第二下所耗費的力氣比第一下小許多，於是便可以更容易的踏下第三、第四下。在學習新事物或是挑戰新計畫也是一樣，我們沒辦法準備到 100% 完美時才開始執行這些事，可以想像不管我們在學生時代、或是在職場上，環境強迫我們踏出第一步接觸新事物，並且在新的環境內遇到各種不同的挑戰，我們會嘗試解決這些問題，過程中當然會遇到挫折或失敗，但同時我們也獲得了更多的經驗，讓自己不斷地強壯。</p>
-<p><img src="https://i.imgur.com/RH1zITc.jpg" alt="banner"></p>
-<br>
-<h3 id=_正常速度沒辦法完成那就加速吧>正常速度沒辦法完成，那就加速吧</h3>
+<p>
+  <img src="https://i.imgur.com/RH1zITc.jpg" alt="banner">
+
+</p>
+<!-- raw HTML omitted -->
+<h3 id="正常速度沒辦法完成那就加速吧">正常速度沒辦法完成，那就加速吧</h3>
 <hr>
 <p>回到騎腳踏車的議題，若我們今天的目標是一日雙塔，時速 10 公里跟時速 30 公里所花費的時間一定不同，在學習挑戰任何事物的時候也是如此，但要怎麼做才可以有效的『加速』？</p>
 <p>先來談談如何加速，第一點是『不要想太多，先做了再說』，試想當生日時買了新手機，會先打開把玩看看，還是看一頁一頁的說明書呢？想必不會是打開說明書，一定是先開機玩玩看。如果把手機換成學習程式語言 Python 呢？可能就會開始去研讀他的官方文件，不是說讀文件不好，從零開始一定要會一些基本的東西，但當這些東西都學會之後，應該要開始自己寫看看，體驗一下這個程式語言到底該怎麼撰寫，如果不這樣，永遠不會知道自己遇到什麼問題，一定是執行一段程式碼後後發現了 bug 才會知道遇到了什麼問題並尋求解決方案。</p>
 <p>第二點就是『不要停，一直堅持下去』，當決定開始學寫 Python ，已經安裝好 Python 、載好了開發工具，並成功的將『Hello World!!』給印出來時，最困難的第一步已經完成了，剩下的就是如何堅持下去，可以自己定一個目標讓計畫堅持下去，可能是要用 Python 的框架建造一個電商網站，那就可以朝著這個目標邁進，隨著不斷執行計畫，技能會越來越熟練，速度自然會越來越快。</p>
 <p>最後就是給自己一個『deadline』吧。有了期限限制，便能發揮『臨陣磨槍』的狂熱，期限是讓人『加速』的必要條件，因為以正常速度並沒有辦法完成事情，那叫讓他加速讓他有可能成功。</p>
-<br>
-<h3 id=_讀後心得>讀後心得</h3>
+<!-- raw HTML omitted -->
+<h3 id="讀後心得">讀後心得</h3>
 <hr>
 <p>這本書與其說是方法書，我覺得更像是作者的經歷分享，從決定申請哈佛研究所到學成歸國，這段經歷中所遇到各種挑戰時的心境，以及最後如何解決這些問題，最後如願取得哈佛的碩士。我想這比『成功的人都比你更努力』這句話更貼近我們，在讀完這本書後不禁會思考，這位三個小孩的母親，並不是富二代，也沒嫁入豪門，完全靠著他自己對於『哈佛』的憧憬，努力的完成了他的夢想，那我們還有什麼理由原地踏步。或許我們真的被生活壓得喘不過氣，想要停下腳步休息，我認為這沒有不對，但在休息過後還是要跨步向前，開始人生的下個旅程，若是一直停滯不前，也只能落入我們認為不美滿的無限迴圈內而已。最後，用羅賓・夏瑪的這段話來讓自己動起來吧！</p>
 <p><strong>『不是因為某件事很難，你才不想做，而是因為你不想做，所以變得困難。』</strong></p>
-<p><img src="https://i.imgur.com/SlJANHO.png" alt="banner"></p>
-<br>
-  </div>
-  <br>
-  <br>
-  <div class="pagination">
-  
-    <a href="/ianlife/blog/technology/blockchain/ftx-is-gone/" class="button">
-      <div class="previous">
-        <div>FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？</div>
-      </div>
-    </a>
-  
-  
-</div>
+<p>
+  <img src="https://i.imgur.com/SlJANHO.png" alt="banner">
 
-  <footer>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <i class="fas fa-folder"></i>
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%8F%BE%E5%9C%A8%E9%96%8B%E5%A7%8B%E8%AA%8D%E7%9C%9F%E8%AE%80%E6%9B%B8">從現在開始認真讀書</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-  
-    
-    
-      <li class="tags">
-        <i class="fas fa-tags"></i>
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97">讀書心得</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6">好書推薦</a></li>
-          
-        </ul>
-      </li>
-    
-  
-</ul>
+</p>
+<!-- raw HTML omitted -->
 
-  </footer>
-</article>
 
-    <article class="post">
-        <div id="disqus_thread"></div>
+
+                    
+                    <hr>
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/post/technology/blockchain/ftx-is-gone/" data-toggle="tooltip" data-placement="top"
+                                title="FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？">&larr;
+                                Previous Post</a>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+
+                    
+
+
+<div id="disqus-comment"></div>
+<div id="disqus_thread"></div>
 <script type="application/javascript">
     window.disqus_config = function () {
     
@@ -384,216 +348,212 @@ if (!doNotTrack) {
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+                </div>
+
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+
+                    
+                    
+                </div>
+            </div>
+        </div>
     </article>
 
-
-
-
-
-        <div class="disqus markdown">
-          <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    
     
 
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:ianjustin39@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/ching-yu-tsai-19b53a147/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            <li>
+                <a target="_blank" href="https://www.instagram.com/ian.aapm/">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            
+            
+           
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="Life Story" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Life Story 2023
+                    <br>
+                    
+                </p>
+            </div>
         </div>
-      </main>
-      
-      <div id="page-sidebar">
-        
-	
-	
-	
-	
-		
-		
-		
-	
-
-		
-		<div>
-
-			
-			<div id="page-scrollspy" class="toc-nav">
-				
-				<ul class="nav nav-pills ml-0">
-					
-					<li class="nav-item pb-3 text-center">
-						<span class="font-weight-bold mb-2">- CATALOG - </span>
-					</li>
-
-					
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e6%b2%92%e6%99%82%e9%96%93%e9%82%a3%e5%b0%b1%e5%85%a8%e9%83%a8%e4%b8%80%e8%b5%b7%e5%81%9a">
-												 沒時間，那就全部一起做
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e6%99%82%e9%96%93%e7%84%a1%e6%b3%95%e7%af%80%e7%b4%84%e9%82%a3%e5%8f%aa%e8%83%bd%e6%8f%90%e5%8d%87%e5%83%b9%e5%80%bc%e5%af%86%e5%ba%a6">
-												 時間無法節約，那只能提升價值密度
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%9b%a0%e7%82%ba%e4%bd%a0%e4%b8%8d%e6%83%b3%e5%81%9a%e6%89%80%e4%bb%a5%e8%ae%8a%e5%be%97%e5%9b%b0%e9%9b%a3">
-												 因為你不想做，所以變得困難
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e6%ad%a3%e5%b8%b8%e9%80%9f%e5%ba%a6%e6%b2%92%e8%be%a6%e6%b3%95%e5%ae%8c%e6%88%90%e9%82%a3%e5%b0%b1%e5%8a%a0%e9%80%9f%e5%90%a7">
-												 正常速度沒辦法完成，那就加速吧
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e8%ae%80%e5%be%8c%e5%bf%83%e5%be%97">
-												 讀後心得
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-
-				</ul>
-			</div>
-			
-
-		</div>
-		
-	
-
-        <iframe class="LikeCoin" height="235"
-  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2fread%2fjust-do-it%2f" width="100%"
-  frameborder=0></iframe>
- 
-        <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
-    <script src="/ianlife/js/add-on.js"></script>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-165850720-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-      </div>
     </div>
-    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
-  </body>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+
 </html>

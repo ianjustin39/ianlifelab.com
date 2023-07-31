@@ -2,17 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>區塊鏈 on Life Story</title>
-    <link>https://ianjustin39.github.io/ianlife/series/%E5%8D%80%E5%A1%8A%E9%8F%88/</link>
+    <link>https://ianjustin39.github.io/series/%E5%8D%80%E5%A1%8A%E9%8F%88/</link>
     <description>Recent content in 區塊鏈 on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Mon, 14 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/series/%E5%8D%80%E5%A1%8A%E9%8F%88/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/series/%E5%8D%80%E5%A1%8A%E9%8F%88/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？</title>
-      <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/ftx-is-gone/</link>
+      <link>https://ianjustin39.github.io/post/technology/blockchain/ftx-is-gone/</link>
       <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/ftx-is-gone/</guid>
+      <guid>https://ianjustin39.github.io/post/technology/blockchain/ftx-is-gone/</guid>
       <description>在 2022/05 發生 Luna 崩跌事件後，當大家還覺得為什麼最近市場的波動這麼小時，全球第二大加密貨幣交易所 FTX 在上週給了大家一個驚喜，因為被爆私自挪用用戶資金，導致交易所內發生了擠兌潮，以至於 FTX 不堪負荷，不但暫停用戶提領，更在一週內宣告破產，讓許多來不及逃難的用戶資金卡在 FTX 內沒辦法拿出來。
 （ 還錢～～～
 FTX 相關事件的文章或分析相信在網路上搜個關鍵字都可以找到很多資訊在這就不多加敘述，而本篇要來探討的並非 FTX 倒閉，而是身在加密貨幣的世界裡，要如何選擇存放資產的位置，才不會風險發生時被當成韭菜收割。
@@ -27,10 +26,10 @@ Not Your Keys, Not Your Asset 什麼是 Key？區塊鏈的每一筆交易都需�
     
     <item>
       <title>幣圈黑天鵝，前十大公鏈 Terra 如何從月球殞落</title>
-      <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain-black-swan-terra/</link>
+      <link>https://ianjustin39.github.io/post/technology/blockchain/blockchain-black-swan-terra/</link>
       <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain-black-swan-terra/</guid>
+      <guid>https://ianjustin39.github.io/post/technology/blockchain/blockchain-black-swan-terra/</guid>
       <description>一個星期前，Terra 還是市值前十的加密貨幣，其中包含近期最熱門的 Defi 項目 Anchor 也是大家趨之若鶩投資的項目之一， 甚至有很多投資人把大部分資產兌換成 UST 放到 Anchor 內。 但短短的一週 Luna 的價格卻從 80 跌到0.00001 美金，Anchor 中的 UST 資金也大量的撤離， 這中間與 UST 脫鉤有著莫大的關係，一個大家都以為會成功的項目是如何在短時間內跌落谷底， 自身參與了這個幣圈的重大事件 (韭菜？)，想說來紀錄一下。
 Terra 的模型 Terra 是一個擁有雙主鏈幣的區塊鏈，包含其算法穩定幣 Terra 及治理代幣 Luna，而 UST 為算法穩定幣 Terra 的一種。 由於 UST 並不像 USDC 有美元資產儲備抵押，需要依靠演算法及市場支撐與美金的掛鉤。
 所以當 UST 價格高於一美元時，代表供不應求，這時便會燃燒 Luna 並鑄造 UST，讓價格回穩到一美元， 而這中間也因為 Luna 的總量變小，進而提高了 Luna 的價格。
@@ -40,10 +39,10 @@ Terra 的模型 Terra 是一個擁有雙主鏈幣的區塊鏈，包含其算法�
     
     <item>
       <title>什麼是 Blockchain Bridges，運作原理是什麼?</title>
-      <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain-bridge/</link>
+      <link>https://ianjustin39.github.io/post/technology/blockchain/blockchain-bridge/</link>
       <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain-bridge/</guid>
+      <guid>https://ianjustin39.github.io/post/technology/blockchain/blockchain-bridge/</guid>
       <description>區塊鏈技術在近幾年來成長非常的快速，最早的 Bitcoin、Ethereum 到 Binance Chain 、 Polygon 、 Solana 等，每條鏈上都有各自的治理模式、協議、規則，甚至是 Defi、NFT、DAO 等多元化的應用也相繼出現。
 儘管近幾年出現的這麼多元的應用，但這些終究只能存在於單一條區塊鏈上，並沒有辦法與其他的區塊鏈互動，也就是說鏈與鏈之間並沒有互相操作性。每一條區塊鏈，就好比一座小島，試想在台灣的 Ian 想要跟在日本的 Justin 溝通訊息，該如何做到呢？現在的社會可以經由通訊軟體或是社群軟體，直接將訊息傳遞出去，也就是所謂 Web 2.0 的應用，同理，比特幣想要到以太坊上做應用，以現在的狀況來說，只有中心化交易所（還不能經由去中心化交易所 Dex）換成以太幣或是 ERC-20 token 才有辦法做到這件事。但若這樣操作手上便不在持有比特幣，這也跟當初想要以『比特幣在以太坊上做應用』的想法有所差異。
 什麼是 Bridges，運作原理是什麼？ 先來講講什麼是 Blockchain Bridge ，它是以什麼方式來解決互相操作性的問題。Bridge 允許兩條不同規則、不同協議的區塊鏈將他們的數據、代幣互相傳遞。以上述的例子來講，可以不經由交易所得換幣服務，直接再以太坊上使用自己持有的比特幣。
@@ -54,10 +53,10 @@ Bridges 種類 Bridges 又分為 One-Way Bridges &amp;amp; Two-Way Bridges，以
     
     <item>
       <title>Polkadot Parse</title>
-      <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/polkadot/</link>
+      <link>https://ianjustin39.github.io/post/technology/blockchain/polkadot/</link>
       <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/polkadot/</guid>
+      <guid>https://ianjustin39.github.io/post/technology/blockchain/polkadot/</guid>
       <description>What is DOT? DOT is the native token of the Polkadot network in a similar way that BTC is the native token of Bitcoin or ether is the native token of the Ethereum blockchain.
 The smallest unit of account in a Substrate network (Polkadot, Kusama, etc.) is the Planck. Kusama tokens (KSM) are equal to 1e12 Planck, and Polkadot mainnet DOT are equal to 1e10 Planck.
 1 Dot (DOT) = 10000000000 Planck</description>
@@ -65,20 +64,20 @@ The smallest unit of account in a Substrate network (Polkadot, Kusama, etc.) is 
     
     <item>
       <title>Cosmos transaction parse</title>
-      <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/cosmos/</link>
+      <link>https://ianjustin39.github.io/post/technology/blockchain/cosmos/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/cosmos/</guid>
+      <guid>https://ianjustin39.github.io/post/technology/blockchain/cosmos/</guid>
       <description>圖片來源
 Transaction protobuf prefix msgSend msgSend/amount tx single mode enum SignMode { // SIGN_MODE_UNSPECIFIED specifies an unknown signing mode and will be // rejected SIGN_MODE_UNSPECIFIED = 0; // SIGN_MODE_DIRECT specifies a signing mode which uses SignDoc and is // verified with raw bytes from Tx SIGN_MODE_DIRECT = 1; // SIGN_MODE_TEXTUAL is a future signing mode that will verify some // human-readable textual representation on top of the binary representation // from SIGN_MODE_DIRECT SIGN_MODE_TEXTUAL = 2; // SIGN_MODE_LEGACY_AMINO_JSON is a backwards compatibility mode which uses // Amino JSON and will be removed in the future SIGN_MODE_LEGACY_AMINO_JSON = 127; } Send - msgSend: { from_address: &amp;#39;cosmos1fnk3lxlks7tdg6x55ynv6vggtnd73ycqsq89sl&amp;#39;, to_address: &amp;#39;cosmos1hllwcqg3yz5mgx0cplh82l23ad8658dvphvjtl&amp;#39;, amount: [ { denom: &amp;#39;uatom&amp;#39;, amount: &amp;#39;10000&amp;#39; } ] } **- msgSend protobuf: (0a2d636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c122d636f736d6f7331686c6c7763716733797a356d67783063706c6838326c323361643836353864767068766a746c1a0e0a057561746f6d12053130303030)** from_address | 00001 010 | 0a 2d 636f736d6f7331666e6b336c786c6b733774646736783535796e7636766767746e64373379637173713839736c to_address | 00010 010 | 12 2d 636f736d6f7331686c6c7763716733797a356d67783063706c6838326c323361643836353864767068766a746c amount | 00011 010 | 1a 0e denom | 00001 010 | 0a 05 7561746f6d amount | 00010 010 | 12 05 3130303030 --- - signerInfo: SignerInfo { public_key: Any { type_url: &amp;#39;/cosmos.</description>
     </item>
     
     <item>
       <title>無視礦工，以太坊的倫敦硬分叉</title>
-      <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/ethereum-london-hard-fork/</link>
+      <link>https://ianjustin39.github.io/post/technology/blockchain/ethereum-london-hard-fork/</link>
       <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/ethereum-london-hard-fork/</guid>
+      <guid>https://ianjustin39.github.io/post/technology/blockchain/ethereum-london-hard-fork/</guid>
       <description>前言 現今以太坊的手續費過於昂貴，交易者需要付出高額的手續費才可以完成交易。 這次的 Ethereum London Hard Fork （倫敦硬分叉）所做的更新，包含了 EIP-1559、EIP-3198、EIP-3238 三個提案， 其中 EIP-1559 也是這次比較備受關注的部分。
 EIP 是什麼？ EIP(Ethereum Improvement Proposals)，是為以太坊指定潛在新功能或流程的標準，包含提議更改的技術規範。通過 EIP 流程討論和開發以太坊的網絡升級和應用標準。
 提案一： EIP-1559（區塊鏈交易費用模型） EIP-1559 是對用戶在以太坊網絡上支付 gas 費用方式的更改。（由於現在以太坊交易手續費過高，降低對用戶的吸引力）

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Life Story">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://ianjustin39.github.io//https://i.imgur.com/NYIZKq3.jpg">
+    <meta property="twitter:image" content="https://ianjustin39.github.io//https://i.imgur.com/NYIZKq3.jpg" />
+    
+
+    
+    <meta name="title" content="畫 Wireframe 目的是什麼？" />
+    <meta property="og:title" content="畫 Wireframe 目的是什麼？" />
+    <meta property="twitter:title" content="畫 Wireframe 目的是什麼？" />
+    
+
+    
+    <meta name="description" content="wireframe 是產品開發現場的建築藍圖，不是草稿">
+    <meta property="og:description" content="wireframe 是產品開發現場的建築藍圖，不是草稿" />
+    <meta property="twitter:description" content="wireframe 是產品開發現場的建築藍圖，不是草稿" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>畫 Wireframe 目的是什麼？ | Ian Blog</title>
+
+    <link rel="canonical" href="/post/product/product/pm101-wireframe/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Life Story</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">HOME</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/learning/">learning</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/life/">life</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/product/">product</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">ALL POST</a></li>
+                    
+                        <li><a href="/about//">ABOUT</a></li>
+                    
+		            
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('https://i.imgur.com/SGZFXmK.png');
+         
+         
+        background-blend-mode: multiply;
+    }
+</style>
+
+    <header class="intro-header">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" href="/%20/tags/wireframe" title="wireframe">
+                                wireframe
+                            </a>
+                            
+                        </div>
+                        <h1>畫 Wireframe 目的是什麼？</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            
+                            Posted by
+                            
+                            Ian Tsai
+                            
+                            on
+                            Monday, May 2, 2022
+                            
+                            
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+
+                
+                
+                <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                    <div class="side-catalog">
+                        <hr class="hidden-sm hidden-xs">
+                        <h5>
+                            <a class="catalog-toggle" href="#">CATALOG</a>
+                        </h5>
+                        <ul class="catalog-body"></ul>
+
+                    <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianjustin39.github.io%2fpost%2fproduct%2fproduct%2fpm101-wireframe%2f" width="100%"
+  frameborder=0></iframe>
+
+                    </div>
+                </div>
+                
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                    
+                    <!-- raw HTML omitted -->
+<p>最近畫 Wireframe 的頻率有點高，也畫出了一些心得，中間也有遇到一些問題，剛好分享紀錄一下。</p>
+<h3 id="什麼是-wireframe">什麼是 Wireframe</h3>
+<hr>
+<p>基本的 Wireframe 是一種低保真的設計原型，頁面上面沒有華麗的設計元素，只有匡線、文字資訊、架構排版等。
+在一個新的需求出現時，會有非常多的不確定性，需要先確定產品要呈現什麼資訊給用戶、使用旅程是什麼、可能遇到什麼問題、我們想解決什麼問題等，
+都需要考慮進去，所以若是太快進入 UI 設計，如果架構或是流程等部分需要做更改，可能會造成過多的資源消耗。</p>
+<p>
+  <img src="https://i.imgur.com/GAmbXpUl.png" alt="">
+
+</p>
+<!-- raw HTML omitted -->
+<h3 id="畫-wireframe-目的是什麼">畫 Wireframe 目的是什麼？</h3>
+<hr>
+<p>我認為 Wireframe 階段主要考慮以下兩個部分：</p>
+<ul>
+<li>傳遞資訊</li>
+<li>使用者流程</li>
+</ul>
+<p>以下會拿會員系統內新增訂單功能來做範例：</p>
+<h5 id="傳遞資訊">傳遞資訊</h5>
+<p>畫面上要呈現什麼類型的資訊給用戶，必須在 Wireframe 階段就決定，
+使用適當的文字幫助用戶理解情境，讓用戶可以很簡單的知道新功能的價值是什麼。</p>
+<p>比方說，電商會員系統中新增了查詢訂單的功能，用戶在登入會員後會希望去看自己的訂單狀況，
+或許在會員頁面上用一段文字提醒目前訂單狀況，讓用戶在一進到會員頁面時就知道自己的訂單現在的狀況。</p>
+<!-- raw HTML omitted -->
+<h5 id="使用者流程">使用者流程</h5>
+<p>接續上述的情境，當用戶看到自己訂單狀況時，要怎麼樣引導他去看到自己的訂單。
+可以在文字附上超連結導去訂單頁面，也可以在畫面上新增『我的訂單』的分頁，讓用戶可以用最短時間內找到自己的訂單，
+這些都是我們希望用戶去看到訂單的方式。</p>
+<p>所以 Wireframe 除了傳達資訊以外，使用者流程也是很重要的一環，用戶看到關鍵訊息後，可以很簡單的使用新功能。</p>
+<!-- raw HTML omitted -->
+<h3 id="wireframe-常見的錯誤">Wireframe 常見的錯誤</h3>
+<hr>
+<p>第一次畫 Wireframe 的人很有可能落入『濫用視覺元素』這個錯誤，畫著畫著就會開始想頁面的顏色要怎樣呈現比較好按鈕形狀長怎樣，
+要放什麼 icon 在畫面上，在顯示圖片的地方要放哪張圖等。
+但這些東西並不是在 Wireframe 階段該專注的事情，上面有提到 Wireframe 專注於傳遞資訊，包含資訊架構、流程等等，
+而不是設計，所以用最簡單基本的方式呈現，剩下精緻的設計就讓設計師煩惱吧。</p>
+<p>以下幾個是我從零開始畫 Wireframe 時會注意的幾點：</p>
+<ol>
+<li>只用灰白色，專注於架構的呈現</li>
+<li>單一字體，專注於傳達資訊</li>
+<li>只用 3, 4 種字級</li>
+<li>不用照片或插圖，用方框框代替</li>
+<li>不用強烈風格的 icon 或裝飾圖</li>
+</ol>
+<p>另一個情況是，產品已經很成熟，在 Wireframe 階段會拿既有的畫面去改，這時要注意的點便是每個畫面或是元件所使用的場景是什麼。
+以電商來說，買家的訂單元件以及賣家的訂單元件可能就長得不一樣，這時如果混用的話，由於已經算是高保真的設計，
+這時一同討論的工程師或是設計師可能會因為精緻的畫面，而跳過『討論資訊架構』的階段，開始思考畫面的問題。
+所以當使用既有的畫面去做 Wireframe 時要注意使用的元件要正確，不能混用，導致誤會。</p>
+<!-- raw HTML omitted -->
+<h3 id="怎樣的-wireframe-算好的-wireframe">怎樣的 Wireframe 算好的 Wireframe</h3>
+<hr>
+<p>Wireframe 不是上色的 UI，不管是低保真還是高保真的 Wireframe，他的目的都是要確認資訊架構以及使用者流程，
+提供工程師與設計師明確的規格。所以我認為只要可以明確表達上述兩點的，讓別人可以很簡單的了解 Wireframe 想傳遞的資訊，
+個人認為就是好的 Wireframe。</p>
+<p>
+  <img src="https://i.imgur.com/LFyenvE.png" alt="">
+
+</p>
+
+
+
+                    
+                    <hr>
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/read/give-and-take/" data-toggle="tooltip" data-placement="top"
+                                title="給予 - 施比受更有福，給予的力量">&larr;
+                                Previous Post</a>
+                        </li>
+                        
+                        
+                        <li class="next">
+                            <a href="/post/technology/blockchain/blockchain-black-swan-terra/" data-toggle="tooltip" data-placement="top"
+                                title="幣圈黑天鵝，前十大公鏈 Terra 如何從月球殞落">Next
+                                Post &rarr;</a>
+                        </li>
+                        
+                    </ul>
+                    
+
+                    
+
+
+<div id="disqus-comment"></div>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+                </div>
+
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:ianjustin39@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/ching-yu-tsai-19b53a147/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            <li>
+                <a target="_blank" href="https://www.instagram.com/ian.aapm/">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            
+            
+           
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="Life Story" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Life Story 2023
+                    <br>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+
+</html>

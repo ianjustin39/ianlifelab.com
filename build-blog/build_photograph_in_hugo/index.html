@@ -1,283 +1,274 @@
-<!doctype html>
-<html lang="zh">
-  <head>
-  <meta content="" name="keywords">
-  <link rel="stylesheet" href="https://ianjustin39.github.io/ianlife/%20css/search.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
-  <link rel="stylesheet" href="../css/magnific-popup.css">
-  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  
-  
-  
-  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
-  <script src="/ianlife/js/bootstrap.js"></script>
-  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
-  
-  
-  
-  <script src="../js/jquery.magnific-popup.js"></script>
-  
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
-  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="/ianlife/js/toc.js"></script>
-  
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  
-  
-  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
-  <script>
-   window.onload = function () {
-    let plantumlPrefix = "language-plantuml";
-    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
-      let image = document.createElement("IMG");
-      image.loading = 'lazy'; 
-      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
-      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
-      code.parentNode.insertBefore(image, code);
-      code.style.display = 'none';
-    });
-  };
-  </script>
-  
-  
-  
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Life Story">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://ianjustin39.github.io//https://i.imgur.com/NYIZKq3.jpg">
+    <meta property="twitter:image" content="https://ianjustin39.github.io//https://i.imgur.com/NYIZKq3.jpg" />
+    
+
+    
+    <meta name="title" content="用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿" />
+    <meta property="og:title" content="用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿" />
+    <meta property="twitter:title" content="用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿" />
+    
+
+    
+    <meta name="description" content="從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。">
+    <meta property="og:description" content="從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。" />
+    <meta property="twitter:description" content="從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿 | Ian Blog</title>
+
+    <link rel="canonical" href="/build-blog/build_photograph_in_hugo/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 	ga('create', 'UA-165850720-1', 'auto');
 	
 	ga('send', 'pageview');
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-  
-  <meta charset="utf-8">
-<title>用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿 - Ian Tsai </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
-  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
-  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
-  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
-  
-    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
-    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
-    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
-  
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
-
-<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿">
-<meta itemprop="description" content="剛開始架設網站時就決定要在網站內架一個相簿，這篇會分享如何用Bootstrap&#43;Masonry&#43;magnificPopup建構屬於你自己的相片牆"><meta itemprop="datePublished" content="2020-05-06T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2020-05-06T00:00:00+00:00" />
-<meta itemprop="wordCount" content="302"><meta itemprop="image" content="https://i.imgur.com/SXMIgzm.png">
-<meta itemprop="keywords" content="Blog,Hugo,Bootstrap," /><meta property="og:title" content="用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿" />
-<meta property="og:description" content="剛開始架設網站時就決定要在網站內架一個相簿，這篇會分享如何用Bootstrap&#43;Masonry&#43;magnificPopup建構屬於你自己的相片牆" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/build-blog/build_photograph_in_hugo/" /><meta property="og:image" content="https://i.imgur.com/SXMIgzm.png" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2020-05-06T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-05-06T00:00:00+00:00" />
 
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://i.imgur.com/SXMIgzm.png"/>
 
-<meta name="twitter:title" content="用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿"/>
-<meta name="twitter:description" content="剛開始架設網站時就決定要在網站內架一個相簿，這篇會分享如何用Bootstrap&#43;Masonry&#43;magnificPopup建構屬於你自己的相片牆"/>
-<meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
-        <link rel="stylesheet" href="/ianlife/css/add-on.css">
-</head>
 
-  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
-  
-  
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Life Story</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">HOME</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/learning/">learning</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/life/">life</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/product/">product</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">ALL POST</a></li>
+                    
+                        <li><a href="/about//">ABOUT</a></li>
+                    
+		            
+                </ul>
+            </div>
+        </div>
+        
+    </div>
     
-<header id="site-header">
-  <nav id="site-nav">
-    <h1 class="nav-title">
-      <a href="/ianlife">
-        
-          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
-        
-      </a>
-    </h1>
-    <menu id="site-nav-menu" class="flyout-menu">
-      
-        
-          
-          
-            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/blog/" class="link"><i class='fas fa-pencil-alt'></i> Blog</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/life" class="link"><i class='fa fa-plane'></i> Life</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/learning" class="link"><i class='fa fa-book'></i> Learning</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/product" class="link"><i class='fas fa-box'></i> Product</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/tech" class="link"><i class='fa fa-laptop'></i> Tech</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
-          
-        
-      
-      
-      
-
-      <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
-        <span id="searchGlyph" class="glyphicon glyphicon-search"><i class="fas fa-search"></i></span></a>
-    </menu>
-    
-
-    
-    <a href="#lang-menu" class="lang-toggle" lang="zh">zh</a>
-    <a href="#site-nav-menu" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
-  </nav>
- 
- 
-  <menu id="lang-menu" class="flyout-menu">
-  <a href="#" lang="zh" class="link active">中文 (zh)</a>
-  
-    
-      
-        <a href="/ianlife/en" lang="en" class="no-lang link">English (en)</a>
-      
-    
-      
-    
-  
-</menu>
-
-  
-</header>
-
-<div id="modalSearch" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">文章搜尋</h4><button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-      <div class="modal-body">
-        <div class="aa-input-container" id="aa-input-container">
-  <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for titles or URIs..."
-    name="search" autocomplete="off" />
-  <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
-    <path
-      d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z" />
-  </svg>
-</div>
-<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/algoliasearch.min.js"></script>
-<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/autocomplete.min.js"></script>
+</nav>
 <script>
-  var client = algoliasearch("WTW32P5SNJ", "2e16477f048bc4528b166dfd1eb4804d");
-  var index = client.initIndex("blog");
-  autocomplete('#aa-search-input',
-    { hint: false }, {
-    source: autocomplete.sources.hits(index, { hitsPerPage: 20 }),
-    displayKey: 'name',
-    templates: {
-      suggestion: function (suggestion) {
-        return '<span>' + '<a href="' + suggestion.relpermalink + '">' +
-          suggestion.title + '</a></span>';
-      }
-    }
-  });
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
 
-  $('#searchGlyph').click(function() {
-    setTimeout(function(){
-      $('#aa-search-input').focus();
-    },300);
-  });
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
 </script>
 
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-    <div id="wrapper">
-      
-      <main id="site-main">
-        <article class="post">
-  <header>
-  <div class="title">
-    <a href="/ianlife/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84-blog"><p>Blog</p></a>
-    
-    <h3><a href="/ianlife/build-blog/build_photograph_in_hugo/">用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿</a></h3>
-    
-    
-  </div>
-  <div class="meta">
-    <time class="published" datetime="2020-05-06 00:00:00 &#43;0000 UTC">
-      May 6, 2020
-    </time>
-    
-    <span class="author">Ian Tsai</span>
-    
-    <p>2 minute read</p>
-    
-    <p>
-      <span id="busuanzi_container_page_pv">
-        PV: <span id="busuanzi_value_page_pv"></span>
-      </span>
-    </p>
-  </div>
-</header>
-
-  <section id="socnet-share">
-    
-  </section>
-  
-  <a href="/ianlife/build-blog/build_photograph_in_hugo/" class="image featured">
-    
-      <img src="https://i.imgur.com/SXMIgzm.png" alt="">
-    
-  </a>
 
 
-  <div class="content">
-    <p>剛開始架設網站時就決定要在網站內架一個相簿，這篇會分享如何用Bootstrap+Masonry+magnificPopup建構屬於你自己的相片牆</p>
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('https://i.imgur.com/SXMIgzm.png');
+         
+         
+        background-blend-mode: multiply;
+    }
+</style>
+
+    <header class="intro-header">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" href="/%20/tags/blog" title="Blog">
+                                Blog
+                            </a>
+                            
+                            <a class="tag" href="/%20/tags/hugo" title="Hugo">
+                                Hugo
+                            </a>
+                            
+                            <a class="tag" href="/%20/tags/bootstrap" title="Bootstrap">
+                                Bootstrap
+                            </a>
+                            
+                        </div>
+                        <h1>用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            
+                            Posted by
+                            
+                            Ian Tsai
+                            
+                            on
+                            Wednesday, May 6, 2020
+                            
+                            
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+
+                
+                
+                <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                    <div class="side-catalog">
+                        <hr class="hidden-sm hidden-xs">
+                        <h5>
+                            <a class="catalog-toggle" href="#">CATALOG</a>
+                        </h5>
+                        <ul class="catalog-body"></ul>
+
+                    <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianjustin39.github.io%2fbuild-blog%2fbuild_photograph_in_hugo%2f" width="100%"
+  frameborder=0></iframe>
+
+                    </div>
+                </div>
+                
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                    
+                    <p>剛開始架設網站時就決定要在網站內架一個相簿，這篇會分享如何用Bootstrap+Masonry+magnificPopup建構屬於你自己的相片牆</p>
 <p>當初試了滿多種方法，從一開始硬去寫到使用modal＋carousel，最後使用Bootstrap+Masonry+magnificPopup才達到我想要的效果。
 之後可能還是會加上輪播功能，但我們得先有相簿，才有辦法輪播ＸＤ</p>
 <p>那我們就開始吧！</p>
@@ -285,14 +276,14 @@ if (!doNotTrack) {
 <hr>
 <ul>
 <li>
-<h3 id=_事前準備>事前準備</h3>
+<h3 id="事前準備">事前準備</h3>
 </li>
 </ul>
 <p>因為我們是建立在Hugo的網站上，所以我們得先把這個相簿的連結按鈕、content資料夾及html layout準備好</p>
-<br>
-<h4 id=_0-1-連結按鈕>0-1. 連結按鈕</h4>
+<!-- raw HTML omitted -->
+<h4 id="0-1-連結按鈕">0-1. 連結按鈕</h4>
 <p>連結的部分就不在多說，去header裡面複製一個就可以了，按自己喜好做設定！</p>
-<h4 id=_0-2-content-folder>0-2. content folder</h4>
+<h4 id="0-2-content-folder">0-2. content folder</h4>
 <p>複製about的資料夾，裡面會有一個<code>_index.md</code>的檔案。</p>
 <p><em>若沒有about，可以找一個適合的複製來使用</em></p>
 <pre tabindex="0"><code>.
@@ -304,7 +295,7 @@ if (!doNotTrack) {
         |- _index.md (new)
 
 (只列出會用到的資料夾路徑)
-</code></pre><h4 id=_0-3-html-layout>0-3. html layout</h4>
+</code></pre><h4 id="0-3-html-layout">0-3. html layout</h4>
 <p>以我的為例子，我是將about的layout複製一份，改名叫photograph，然後一樣放到layout的資料夾下，與about同層，
 啟動server後你會發現photograph跟about頁面會一樣，這樣就算準備完成了。</p>
 <pre tabindex="0"><code>.
@@ -321,7 +312,7 @@ if (!doNotTrack) {
 (只列出會用到的資料夾路徑)
 </code></pre><hr>
 <p>**基本上about是一頁式的網頁，但我們想要的可以用不同的md檔去呈現不同篇的照片，所以這個部分需要做改寫。</p>
-<h4 id=_0-新增測試照片的markdown>0. 新增測試照片的markdown</h4>
+<h4 id="0-新增測試照片的markdown">0. 新增測試照片的markdown</h4>
 <p>在<code>photograph/</code>底下新增幾個markdown的檔案作為等等要呈現的照片範例，參數設定如下（可以行更改）</p>
 <pre tabindex="0"><code>+++
 title = &#34;日本 明治神宮&#34;
@@ -330,10 +321,10 @@ cover = &#34;image_url&#34;
 +++
 </code></pre><ul>
 <li>
-<h3 id=_開始製作>開始製作</h3>
+<h3 id="開始製作">開始製作</h3>
 </li>
 </ul>
-<h4 id=_1-_partialsheadhtml引入js-css>1. _partials/head.html引入js, css</h4>
+<h4 id="1-_partialsheadhtml引入js-css">1. _partials/head.html引入js, css</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">link</span> <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stylesheet&#34;</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;../css/magnific-popup.css&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;https://code.jquery.com/jquery-3.3.1.slim.min.js&#34;</span> <span style="color:#50fa7b">integrity</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo&#34;</span> <span style="color:#50fa7b">crossorigin</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;anonymous&#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;../js/jquery.magnific-popup.js&#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt;
@@ -341,8 +332,8 @@ cover = &#34;image_url&#34;
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js&#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">link</span> <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stylesheet&#34;</span> <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&#34;</span> <span style="color:#50fa7b">integrity</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&#34;</span> <span style="color:#50fa7b">crossorigin</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;anonymous&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js&#34;</span> <span style="color:#50fa7b">integrity</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1&#34;</span> <span style="color:#50fa7b">crossorigin</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;anonymous&#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt;
-</span></span></code></pre></div><p>magnific的js, css可以到<a href="https://github.com/dimsemenov/Magnific-Popup" target="_blank">here</a>下載</p>
-<h4 id=_2-改寫photographlisthtml>2. 改寫photograph/list.html</h4>
+</span></span></code></pre></div><p>magnific的js, css可以到<!-- raw HTML omitted -->here<!-- raw HTML omitted -->下載</p>
+<h4 id="2-改寫photographlisthtml">2. 改寫photograph/list.html</h4>
 <p>找到<code>&lt;div id=&quot;content&quot;&gt;</code>，這裡面就是連接<code>/content/photograph/_index.md</code>的內文所呈現的區塊</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">main</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;site-main&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">article</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;post&#34;</span>&gt;
@@ -380,15 +371,18 @@ cover = &#34;image_url&#34;
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">div</span>&gt;
 </span></span></code></pre></div><p><em>註1：這行事hugo的語法，抓取所有photpgraph下的.md檔案。（Section就是content內的分類）</em></p>
 <p><em>註2：.Render為將頁面倒到指定頁面，但一定要在<code>layout/_default</code>路徑下的頁面才有作用</em></p>
-<h4 id=_3-撰寫photo-singlehtml>3. 撰寫photo-single.html</h4>
+<h4 id="3-撰寫photo-singlehtml">3. 撰寫photo-single.html</h4>
 <p>寫入</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">div</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">img</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{{ .Params.cover }}&#34;</span> <span style="color:#50fa7b">alt</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;img-responsive&#34;</span>&gt; <span style="color:#6272a4">&lt;!-- 註3 --&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">div</span>&gt;
 </span></span></code></pre></div><p><em>註1：.Params.cover就是對應到第0步驟的參數</em></p>
 <p>到這步驟頁面應該會呈現如下</p>
-<p><img src="https://i.imgur.com/CrSHSpa.png" alt="範例1"></p>
-<h4 id=_4-套用masonry>4. 套用masonry</h4>
+<p>
+  <img src="https://i.imgur.com/CrSHSpa.png" alt="範例1">
+
+</p>
+<h4 id="4-套用masonry">4. 套用masonry</h4>
 <p>在photograph/list.html最下面加上這段script</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js&#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt; <span style="color:#6272a4">&lt;!-- 這如果剛剛有引入就不需要寫 --&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">script</span>&gt;
@@ -411,8 +405,11 @@ cover = &#34;image_url&#34;
 </span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">div</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">div</span>&gt;
 </span></span></code></pre></div><p>更改完後再看一次效果</p>
-<p><img src="https://i.imgur.com/JN6czkn.png" alt="範例2"></p>
-<h4 id=_5-套用magnific-popup>5. 套用magnific Popup</h4>
+<p>
+  <img src="https://i.imgur.com/JN6czkn.png" alt="範例2">
+
+</p>
+<h4 id="5-套用magnific-popup">5. 套用magnific Popup</h4>
 <p>回到<code>photo-signle.html</code>，最下面加上一段script，然後在最外層的<code>div</code>加上<code>class=&quot;parent-container&quot;</code>。</p>
 <p>為了讓圖片有連結，所以在<code>img</code>外加上<code>&lt;a&gt;</code>作為可點擊的連結。</p>
 <p>最後為增添一點效果所以在加入<code>title</code>的<code>div</code>。</p>
@@ -428,85 +425,54 @@ cover = &#34;image_url&#34;
 </span></span><span style="display:flex;"><span>  });
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">script</span>&gt;
 </span></span></code></pre></div><p>最後呈現的效果</p>
-<p><img src="https://i.imgur.com/SXMIgzm.png" alt="範例3">
-<img src="https://i.imgur.com/rgdrDPd.png" alt="範例4"></p>
+<p>
+  <img src="https://i.imgur.com/SXMIgzm.png" alt="範例3">
+
+
+
+  <img src="https://i.imgur.com/rgdrDPd.png" alt="範例4">
+
+</p>
 <hr>
 <p>為了相簿花了一段時間研究，可能某些部分有些遺漏，有問題都歡迎討論，也希望想要在自己網頁上建立相片牆的人，這篇可以幫助到你！！</p>
 <hr>
 <ul>
 <li>
-<h3 id=_references>References</h3>
+<h3 id="references">References</h3>
 </li>
 </ul>
 <ul>
-<li><a href="https://dimsemenov.com/plugins/magnific-popup/documentation.html" target="_blank">Magnific Popup Documentation</a></li>
-<li><a href="https://www.minwt.com/webdesign-dev/html/16943.html" target="_blank">Bootstrap+Masonry」讓網格系統也支援瀑布流排版</a></li>
+<li><!-- raw HTML omitted -->Magnific Popup Documentation<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->Bootstrap+Masonry」讓網格系統也支援瀑布流排版<!-- raw HTML omitted --></li>
 </ul>
 <hr>
-  </div>
-  <br>
-  <br>
-  <div class="pagination">
-  
-    <a href="/ianlife/build-blog/deploy_hugo_on_github/" class="button">
-      <div class="previous">
-        <div>部署Hugo個人網頁至GitHub</div>
-      </div>
-    </a>
-  
-  
-    <a href="/ianlife/design-pattern/what_is_design_pattern/" class="button">
-      <div class="next">
-        <div>什麼是Design Pattern?</div>
-      </div>
-    </a>
-  
-</div>
 
-  <footer>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <i class="fas fa-folder"></i>
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84-blog">建立自己的 Blog</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-  
-    
-    
-      <li class="tags">
-        <i class="fas fa-tags"></i>
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/blog">Blog</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/hugo">Hugo</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/bootstrap">Bootstrap</a></li>
-          
-        </ul>
-      </li>
-    
-  
-</ul>
 
-  </footer>
-</article>
+                    
+                    <hr>
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/build-blog/deploy_hugo_on_github/" data-toggle="tooltip" data-placement="top"
+                                title="部署Hugo個人網頁至GitHub">&larr;
+                                Previous Post</a>
+                        </li>
+                        
+                        
+                        <li class="next">
+                            <a href="/design-pattern/what_is_design_pattern/" data-toggle="tooltip" data-placement="top"
+                                title="什麼是Design Pattern?">Next
+                                Post &rarr;</a>
+                        </li>
+                        
+                    </ul>
+                    
 
-    <article class="post">
-        <div id="disqus_thread"></div>
+                    
+
+
+<div id="disqus-comment"></div>
+<div id="disqus_thread"></div>
 <script type="application/javascript">
     window.disqus_config = function () {
     
@@ -526,434 +492,212 @@ cover = &#34;image_url&#34;
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+                </div>
+
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+
+                    
+                    
+                </div>
+            </div>
+        </div>
     </article>
 
-
-
-
-
-        <div class="disqus markdown">
-          <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    
     
 
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:ianjustin39@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/ching-yu-tsai-19b53a147/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            <li>
+                <a target="_blank" href="https://www.instagram.com/ian.aapm/">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            
+            
+           
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="Life Story" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Life Story 2023
+                    <br>
+                    
+                </p>
+            </div>
         </div>
-      </main>
-      
-      <div id="page-sidebar">
-        
-	
-	
-	
-	
-		
-		
-		
-	
-
-		
-		<div>
-
-			
-			<div id="page-scrollspy" class="toc-nav">
-				
-				<ul class="nav nav-pills ml-0">
-					
-					<li class="nav-item pb-3 text-center">
-						<span class="font-weight-bold mb-2">- CATALOG - </span>
-					</li>
-
-					
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e4%ba%8b%e5%89%8d%e6%ba%96%e5%82%99">
-												 事前準備
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_0-1-%e9%80%a3%e7%b5%90%e6%8c%89%e9%88%95">
-												 0-1. 連結按鈕
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_0-2-content-folder">
-												 0-2. content folder
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_0-3-html-layout">
-												 0-3. html layout
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_0-%e6%96%b0%e5%a2%9e%e6%b8%ac%e8%a9%a6%e7%85%a7%e7%89%87%e7%9a%84markdown">
-												 0. 新增測試照片的markdown
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e9%96%8b%e5%a7%8b%e8%a3%bd%e4%bd%9c">
-												 開始製作
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_1-_partialsheadhtml%e5%bc%95%e5%85%a5js-css">
-												 1. _partials/head.html引入js, css
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_2-%e6%94%b9%e5%af%abphotographlisthtml">
-												 2. 改寫photograph/list.html
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_3-%e6%92%b0%e5%af%abphoto-singlehtml">
-												 3. 撰寫photo-single.html
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_4-%e5%a5%97%e7%94%a8masonry">
-												 4. 套用masonry
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_5-%e5%a5%97%e7%94%a8magnific-popup">
-												 5. 套用magnific Popup
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_references">
-												 References
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-
-				</ul>
-			</div>
-			
-
-		</div>
-		
-	
-
-        <iframe class="LikeCoin" height="235"
-  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2fbuild-blog%2fbuild_photograph_in_hugo%2f" width="100%"
-  frameborder=0></iframe>
- 
-        <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
-    <script src="/ianlife/js/add-on.js"></script>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-165850720-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-      </div>
     </div>
-    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
-  </body>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+
 </html>

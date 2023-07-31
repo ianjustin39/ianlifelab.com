@@ -1,289 +1,274 @@
-<!doctype html>
-<html lang="zh">
-  <head>
-  <meta content="Design Pattern, Structural Pattern, Flyweight Pattern, 享元模式" name="keywords">
-  <link rel="stylesheet" href="https://ianjustin39.github.io/ianlife/%20css/search.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
-  <link rel="stylesheet" href="../css/magnific-popup.css">
-  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  
-  
-  
-  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
-  <script src="/ianlife/js/bootstrap.js"></script>
-  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
-  
-  
-  
-  <script src="../js/jquery.magnific-popup.js"></script>
-  
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
-  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="/ianlife/js/toc.js"></script>
-  
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  
-  
-  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
-  <script>
-   window.onload = function () {
-    let plantumlPrefix = "language-plantuml";
-    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
-      let image = document.createElement("IMG");
-      image.loading = 'lazy'; 
-      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
-      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
-      code.parentNode.insertBefore(image, code);
-      code.style.display = 'none';
-    });
-  };
-  </script>
-  
-  
-  
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Life Story">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://ianjustin39.github.io//https://i.imgur.com/NYIZKq3.jpg">
+    <meta property="twitter:image" content="https://ianjustin39.github.io//https://i.imgur.com/NYIZKq3.jpg" />
+    
+
+    
+    <meta name="title" content="享元模式 | Flyweight Pattern" />
+    <meta property="og:title" content="享元模式 | Flyweight Pattern" />
+    <meta property="twitter:title" content="享元模式 | Flyweight Pattern" />
+    
+
+    
+    <meta name="description" content="享元模式是運用共享技術有效地支持大量細粒度的物件。他可以避免大量相似類的開銷，在軟體開發中如果需要生成大量細粒度的類別實體來表示數據，如果這些實體除了幾個參數外基本上都是相同的，這時候就可以使用享元模式來大幅度減少需要實體化類的數量。">
+    <meta property="og:description" content="享元模式是運用共享技術有效地支持大量細粒度的物件。他可以避免大量相似類的開銷，在軟體開發中如果需要生成大量細粒度的類別實體來表示數據，如果這些實體除了幾個參數外基本上都是相同的，這時候就可以使用享元模式來大幅度減少需要實體化類的數量。" />
+    <meta property="twitter:description" content="享元模式是運用共享技術有效地支持大量細粒度的物件。他可以避免大量相似類的開銷，在軟體開發中如果需要生成大量細粒度的類別實體來表示數據，如果這些實體除了幾個參數外基本上都是相同的，這時候就可以使用享元模式來大幅度減少需要實體化類的數量。" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>享元模式 | Flyweight Pattern | Ian Blog</title>
+
+    <link rel="canonical" href="/design-pattern/flyweight-pattern/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 	ga('create', 'UA-165850720-1', 'auto');
 	
 	ga('send', 'pageview');
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-  
-  <meta charset="utf-8">
-<title>享元模式 | Flyweight Pattern - Ian Tsai </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
-  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
-  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
-  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
-  
-    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
-    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
-    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
-  
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
-
-<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="享元模式 | Flyweight Pattern">
-<meta itemprop="description" content="享元模式是運用共享技術有效地支持大量細粒度的物件。他可以避免大量相似類的開銷，在軟體開發中如果需要生成大量細粒度的類別實體來表示數據，如果這些實體除了幾個參數外基本上都是相同的，這時候就可以使用享元模式來大幅度減少需要實體化類的數量。"><meta itemprop="datePublished" content="2020-09-27T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2020-09-27T00:00:00+00:00" />
-<meta itemprop="wordCount" content="715"><meta itemprop="image" content="https://i.imgur.com/Y24bRsj.png">
-<meta itemprop="keywords" content="Design Pattern,Structural Pattern," /><meta property="og:title" content="享元模式 | Flyweight Pattern" />
-<meta property="og:description" content="享元模式是運用共享技術有效地支持大量細粒度的物件。他可以避免大量相似類的開銷，在軟體開發中如果需要生成大量細粒度的類別實體來表示數據，如果這些實體除了幾個參數外基本上都是相同的，這時候就可以使用享元模式來大幅度減少需要實體化類的數量。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/flyweight-pattern/" /><meta property="og:image" content="https://i.imgur.com/Y24bRsj.png" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2020-09-27T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-09-27T00:00:00+00:00" />
 
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://i.imgur.com/Y24bRsj.png"/>
 
-<meta name="twitter:title" content="享元模式 | Flyweight Pattern"/>
-<meta name="twitter:description" content="享元模式是運用共享技術有效地支持大量細粒度的物件。他可以避免大量相似類的開銷，在軟體開發中如果需要生成大量細粒度的類別實體來表示數據，如果這些實體除了幾個參數外基本上都是相同的，這時候就可以使用享元模式來大幅度減少需要實體化類的數量。"/>
-<meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
-        <link rel="stylesheet" href="/ianlife/css/add-on.css">
-</head>
 
-  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
-  
-  
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Life Story</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">HOME</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/learning/">learning</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/life/">life</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/product/">product</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">ALL POST</a></li>
+                    
+                        <li><a href="/about//">ABOUT</a></li>
+                    
+		            
+                </ul>
+            </div>
+        </div>
+        
+    </div>
     
-<header id="site-header">
-  <nav id="site-nav">
-    <h1 class="nav-title">
-      <a href="/ianlife">
-        
-          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
-        
-      </a>
-    </h1>
-    <menu id="site-nav-menu" class="flyout-menu">
-      
-        
-          
-          
-            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/blog/" class="link"><i class='fas fa-pencil-alt'></i> Blog</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/life" class="link"><i class='fa fa-plane'></i> Life</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/learning" class="link"><i class='fa fa-book'></i> Learning</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/product" class="link"><i class='fas fa-box'></i> Product</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/tech" class="link"><i class='fa fa-laptop'></i> Tech</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
-          
-        
-      
-      
-      
-
-      <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
-        <span id="searchGlyph" class="glyphicon glyphicon-search"><i class="fas fa-search"></i></span></a>
-    </menu>
-    
-
-    
-    <a href="#lang-menu" class="lang-toggle" lang="zh">zh</a>
-    <a href="#site-nav-menu" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
-  </nav>
- 
- 
-  <menu id="lang-menu" class="flyout-menu">
-  <a href="#" lang="zh" class="link active">中文 (zh)</a>
-  
-    
-      
-        <a href="/ianlife/en" lang="en" class="no-lang link">English (en)</a>
-      
-    
-      
-    
-  
-</menu>
-
-  
-</header>
-
-<div id="modalSearch" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">文章搜尋</h4><button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-      <div class="modal-body">
-        <div class="aa-input-container" id="aa-input-container">
-  <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for titles or URIs..."
-    name="search" autocomplete="off" />
-  <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
-    <path
-      d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z" />
-  </svg>
-</div>
-<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/algoliasearch.min.js"></script>
-<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/autocomplete.min.js"></script>
+</nav>
 <script>
-  var client = algoliasearch("WTW32P5SNJ", "2e16477f048bc4528b166dfd1eb4804d");
-  var index = client.initIndex("blog");
-  autocomplete('#aa-search-input',
-    { hint: false }, {
-    source: autocomplete.sources.hits(index, { hitsPerPage: 20 }),
-    displayKey: 'name',
-    templates: {
-      suggestion: function (suggestion) {
-        return '<span>' + '<a href="' + suggestion.relpermalink + '">' +
-          suggestion.title + '</a></span>';
-      }
-    }
-  });
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
 
-  $('#searchGlyph').click(function() {
-    setTimeout(function(){
-      $('#aa-search-input').focus();
-    },300);
-  });
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
 </script>
 
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-    <div id="wrapper">
-      
-      <main id="site-main">
-        <article class="post">
-  <header>
-  <div class="title">
-    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
-    
-    <h3><a href="/ianlife/design-pattern/flyweight-pattern/">享元模式 | Flyweight Pattern</a></h3>
-    
-    
-    <p style="margin-top: 0px;">享元模式是運用共享技術有效地支持大量細粒度的物件。他可以避免大量相似類的開銷，在軟體開發中如果需要生成大量細粒度的類別實體來表示數據，如果這些實體除了幾個參數外基本上都是相同的，這時候就可以使用享元模式來大幅度減少需要實體化類的數量。</p>
-    
-  </div>
-  <div class="meta">
-    <time class="published" datetime="2020-09-27 00:00:00 &#43;0000 UTC">
-      September 27, 2020
-    </time>
-    
-    <span class="author">Ian Tsai</span>
-    
-    <p>4 minute read</p>
-    
-    <p>
-      <span id="busuanzi_container_page_pv">
-        PV: <span id="busuanzi_value_page_pv"></span>
-      </span>
-    </p>
-  </div>
-</header>
-
-  <section id="socnet-share">
-    
-  </section>
-  
-  <a href="/ianlife/design-pattern/flyweight-pattern/" class="image featured">
-    
-      <img src="https://i.imgur.com/Y24bRsj.png" alt="">
-    
-  </a>
 
 
-  <div class="content">
-    <p><strong><a href="https://ithelp.ithome.com.tw/articles/10245053" target="_blank">本系列文章同步分享於IT邦幫忙第12屆鐵人賽</a></strong></p>
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('https://i.imgur.com/Y24bRsj.png');
+         
+         
+        background-blend-mode: multiply;
+    }
+</style>
+
+    <header class="intro-header">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" href="/%20/tags/design-pattern" title="Design Pattern">
+                                Design Pattern
+                            </a>
+                            
+                            <a class="tag" href="/%20/tags/structural-pattern" title="Structural Pattern">
+                                Structural Pattern
+                            </a>
+                            
+                        </div>
+                        <h1>享元模式 | Flyweight Pattern</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            
+                            Posted by
+                            
+                            Ian Tsai
+                            
+                            on
+                            Sunday, September 27, 2020
+                            
+                            
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+
+                
+                
+                <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                    <div class="side-catalog">
+                        <hr class="hidden-sm hidden-xs">
+                        <h5>
+                            <a class="catalog-toggle" href="#">CATALOG</a>
+                        </h5>
+                        <ul class="catalog-body"></ul>
+
+                    <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianjustin39.github.io%2fdesign-pattern%2fflyweight-pattern%2f" width="100%"
+  frameborder=0></iframe>
+
+                    </div>
+                </div>
+                
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                    
+                    <p><strong><!-- raw HTML omitted -->本系列文章同步分享於IT邦幫忙第12屆鐵人賽<!-- raw HTML omitted --></strong></p>
 </br>
 <div>
     <div>
-        <h3 id=_Design-Pattern-Post-List>Design Pattern 系列文章導讀</h3>
+        <h3 id="Design-Pattern-Post-List">Design Pattern 系列文章導讀</h3>
     </div>
     <hr>
     <div>
@@ -368,22 +353,19 @@ if (!doNotTrack) {
     </ol>
 </div>
 
-<br>
-<br>
-<br>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_定義>定義</h3>
+<h3 id="定義">定義</h3>
 </li>
 </ul>
 <hr>
 <p><code>運用共享技術有效地支持大量細粒度的物件。</code></p>
 <p>享元模式是運用共享技術有效地支持大量細粒度的物件。他可以避免大量相似類的開銷，在軟體開發中如果需要生成大量細粒度的類別實體來表示數據，如果這些實體除了幾個參數外基本上都是相同的，這時候就可以使用享元模式來大幅度減少需要實體化類的數量。如果能把這些參數（指的這些類別實體不同的參數）移動類別實體外面，在方法調用時將他們傳遞進來，這樣就可以通過共享大幅度地減少單個實體的數目（這個也是享元模式的實現要領）。然而我們把類實體外面的參數稱為享元物件的外部狀態，把在享元物件內部定義稱為內部狀態。</p>
-<br>
-<br>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_內部狀態-vs-外部狀態>內部狀態 v.s. 外部狀態</h3>
+<h3 id="內部狀態-vs-外部狀態">內部狀態 v.s. 外部狀態</h3>
 </li>
 </ul>
 <hr>
@@ -392,11 +374,10 @@ if (!doNotTrack) {
 <h5 id="外部狀態">外部狀態</h5>
 <p><code>會隨著環境改變而產生變化的部分，故這部分不可共享。</code></p>
 <p>享元物件的外部狀態必須由Client保存。享元物件建立之後，在需要使用時將其傳入享元物件的內部。外部狀態之間是互相獨立的。</p>
-<br>
-<br>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_flyweight-pattern-成員>Flyweight Pattern 成員</h3>
+<h3 id="flyweight-pattern-成員">Flyweight Pattern 成員</h3>
 </li>
 </ul>
 <hr>
@@ -426,68 +407,29 @@ if (!doNotTrack) {
 </tr>
 </tbody>
 </table>
-<br>
-<img src='https://g.gravizo.com/svg?
-@startuml;
-skinparam linetype ortho;
-interface Flyweight;
-FlyweightFactory o-down- Flyweight;
-UnsharableFlyweight .up.> Flyweight;
-ConcreteFlyweight1 .up.> Flyweight;
-ConcreteFlyweight2 .up.> Flyweight;
-@enduml
-'>
-<br>
-<br>
-<br>
-<br>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_單純享元模式-vs-複合享元模式>單純享元模式 v.s. 複合享元模式</h3>
+<h3 id="單純享元模式-vs-複合享元模式">單純享元模式 v.s. 複合享元模式</h3>
 </li>
 </ul>
 <hr>
 <p>剛剛在介紹成員時有提到可以共享與不可以共享的部分，因為這樣，在實作中享元模式又分成單純享元模式以及複合享元模式。</p>
 <h5 id="單純享元模式">單純享元模式</h5>
 <p>所有實體享元物件都是可以共享的，不存在UnsharableFlyweight。</p>
-<br>
-<img src='https://g.gravizo.com/svg?
-@startuml;
-skinparam linetype ortho;
-interface Flyweight;
-FlyweightFactory o-down- Flyweight;
-ConcreteFlyweight1 .up.> Flyweight;
-ConcreteFlyweight2 .up.> Flyweight;
-@enduml
-'>
-<br>
-<br>
-<br>
+<!-- raw HTML omitted -->
 <h5 id="複合享元模式">複合享元模式</h5>
 <p>將單純享元物件使用組合形成複合享元物件，此物件不可共享。但若將其分解成單純享元物件，則可以。複合享元物件可對多個單純享元物件設定相同的外部狀態。</p>
-<br>
-<img src='https://g.gravizo.com/svg?
-@startuml;
-skinparam linetype ortho;
-interface Flyweight;
-FlyweightFactory o-down- Flyweight;
-ConcreteFlyweight .up.> Flyweight;
-UnsharableFlyweight .up.> Flyweight;
-UnsharableFlyweight o-down- Flyweight;
-@enduml
-'>
-<br>
-<br>
-<br>
-<br>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_flyweight-pattern-實作>Flyweight Pattern 實作</h3>
+<h3 id="flyweight-pattern-實作">Flyweight Pattern 實作</h3>
 </li>
 </ul>
 <hr>
 <p>看完了一堆定義以及解釋，現在來實作看看。在一間公司內，在錄取之後都會有員工資訊，也會有名片。假設名片是個類別，分別需要CTO、CEO以及COO的名片。而每個名片的實體，也只有資訊不一樣而已，這時就可以套用享元模式。</p>
-<h4 id=_單純享元模式-1>單純享元模式</h4>
+<h4 id="單純享元模式-1">單純享元模式</h4>
 <p>首先先建立抽象享元，將方法先定義好。而show()傳入的參數則是外部狀態。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#6272a4">//抽象享元角色
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">NameCard</span> <span style="color:#ff79c6">{</span>
@@ -548,7 +490,7 @@ ConcreteNameCard CEO is exist!!
 Hello!! I am CEO. This is my NameCard
 Create COONameCard!!
 Hello!! I am COO. Nice to meet you!!
-</code></pre><h4 id=_複合享元模式-1>複合享元模式</h4>
+</code></pre><h4 id="複合享元模式-1">複合享元模式</h4>
 <p>複合享元模式的抽象享元以及實體享元和單純享元一樣。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#6272a4">//抽象享元角色
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">NameCard</span> <span style="color:#ff79c6">{</span>
@@ -586,7 +528,7 @@ Hello!! I am COO. Nice to meet you!!
 </span></span><span style="display:flex;"><span>        nameCards<span style="color:#ff79c6">.</span><span style="color:#50fa7b">remove</span><span style="color:#ff79c6">(</span>type<span style="color:#ff79c6">);</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
-</span></span></code></pre></div><p>享元工廠內也新增了複合享元getNameCard()的方法，傳入參數從String改成List<String>。</p>
+</span></span></code></pre></div><p>享元工廠內也新增了複合享元getNameCard()的方法，傳入參數從String改成List<!-- raw HTML omitted -->。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#6272a4">//享元工廠角色
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">NameCardFactory</span> <span style="color:#ff79c6">{</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">private</span> <span style="color:#8be9fd;font-style:italic">static</span> NameCardFactory FACTORY <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> NameCardFactory<span style="color:#ff79c6">();</span>
@@ -644,24 +586,23 @@ ConcreteNameCard CTO is exist!!
 ConcreteNameCard COO is exist!!
 ConcreteNameCard CEO is exist!!
 false
-</code></pre><br>
-<br>
+</code></pre><!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_小結>小結</h3>
+<h3 id="小結">小結</h3>
 </li>
 </ul>
 <hr>
 <h5 id="flyweight-pattern的目標">Flyweight Pattern的目標</h5>
 <p><code>藉由共享來實現重用大量细粒度，減少需要建立的物件數量、避免大量類似物件的創建，進而提高資源使用率。</code></p>
-<br>
+<!-- raw HTML omitted -->
 <h5 id="flyweight-pattern的成員">Flyweight Pattern的成員</h5>
 <pre><code>Flyweight：為介面或抽象類別的接口，其中定義ConcreteFlyweight的方法，非享元的外部狀態以參數的形式通過方法傳入。
 ConcreteFlyweight：實體享元物件。
 UnsharableFlyweight：複合享元物件，不可共享。可分解成多個單純享元物件，則可共享。
 FlyweightFactory：負責建立及管理享元物件。當Client呼叫享元物件時，FlyweightFactory檢查是否存在符合要求的物件，存在則提供，不存在建立新的享元物件。
 </code></pre>
-<br>
+<!-- raw HTML omitted -->
 <h5 id="flyweight-pattern的優缺點">Flyweight Pattern的優缺點</h5>
 <pre><code>優點
 1. 相同的物件只需要保存一份，降低了系統中的物件數量，也跟著降低系統細顆粒度物件對記憶體的壓力。
@@ -670,96 +611,60 @@ FlyweightFactory：負責建立及管理享元物件。當Client呼叫享元物�
 1. 享元模式需要分離內部及外部狀態，這讓系統邏輯變得複雜化。
 2. 為了是可以共享，享元模式需要將享元物件的部分狀態外部化，而讀取外部狀態使得執行時間拉長。
 </code></pre>
-<br>
+<!-- raw HTML omitted -->
 <h5 id="flyweight-pattern的應用">Flyweight Pattern的應用</h5>
 <pre><code>1. 一個系統中有大量的物件，這些物件耗費大量的記憶體。
 2. 大部分物件可照內部狀態分組，且可將不同部分外部化，讓每一組只需保存一個內部狀態。
 </code></pre>
-<br>
-<br>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_範例程式碼>範例程式碼</h3>
+<h3 id="範例程式碼">範例程式碼</h3>
 </li>
 </ul>
 <hr>
-<p><em><a href="https://www.jdoodle.com/embed/v0/2kOn" target="_blank">範例1：單純享元模式</a></em></p>
-<p><em><a href="https://www.jdoodle.com/embed/v0/2kOq" target="_blank">範例2：複合享元模式</a></em></p>
-<br>
-<br>
+<p><em><!-- raw HTML omitted -->範例1：單純享元模式<!-- raw HTML omitted --></em></p>
+<p><em><!-- raw HTML omitted -->範例2：複合享元模式<!-- raw HTML omitted --></em></p>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_references>References</h3>
+<h3 id="references">References</h3>
 </li>
 </ul>
 <hr>
 <ul>
-<li><a href="https://juejin.im/post/6844903992858787848" target="_blank">23种设计模式之享元（Flyweight）模式</a></li>
-<li><a href="http://c.biancheng.net/view/1371.html" target="_blank">享元模式（详解版）</a></li>
-<li><a href="https://www.shuzhiduo.com/A/n2d99qPgdD/" target="_blank">设计模式21&mdash;设计模式之享元模式（Flyweight）（结构型）</a></li>
+<li><!-- raw HTML omitted -->23种设计模式之享元（Flyweight）模式<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->享元模式（详解版）<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->设计模式21&mdash;设计模式之享元模式（Flyweight）（结构型）<!-- raw HTML omitted --></li>
 </ul>
 
-  </div>
-  <br>
-  <br>
-  <div class="pagination">
-  
-    <a href="/ianlife/design-pattern/facede-pattern/" class="button">
-      <div class="previous">
-        <div>外觀模式 | Facade Pattern</div>
-      </div>
-    </a>
-  
-  
-    <a href="/ianlife/design-pattern/proxy-pattern/" class="button">
-      <div class="next">
-        <div>代理模式 | Proxy Pattern</div>
-      </div>
-    </a>
-  
-</div>
 
-  <footer>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <i class="fas fa-folder"></i>
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern">從生活中認識 Design Pattern</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-  
-    
-    
-      <li class="tags">
-        <i class="fas fa-tags"></i>
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-pattern">Design Pattern</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/structural-pattern">Structural Pattern</a></li>
-          
-        </ul>
-      </li>
-    
-  
-</ul>
 
-  </footer>
-</article>
+                    
+                    <hr>
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/design-pattern/facede-pattern/" data-toggle="tooltip" data-placement="top"
+                                title="外觀模式 | Facade Pattern">&larr;
+                                Previous Post</a>
+                        </li>
+                        
+                        
+                        <li class="next">
+                            <a href="/design-pattern/proxy-pattern/" data-toggle="tooltip" data-placement="top"
+                                title="代理模式 | Proxy Pattern">Next
+                                Post &rarr;</a>
+                        </li>
+                        
+                    </ul>
+                    
 
-    <article class="post">
-        <div id="disqus_thread"></div>
+                    
+
+
+<div id="disqus-comment"></div>
+<div id="disqus_thread"></div>
 <script type="application/javascript">
     window.disqus_config = function () {
     
@@ -779,380 +684,212 @@ FlyweightFactory：負責建立及管理享元物件。當Client呼叫享元物�
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+                </div>
+
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+
+                    
+                    
+                </div>
+            </div>
+        </div>
     </article>
 
-
-
-
-
-        <div class="disqus markdown">
-          <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    
     
 
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:ianjustin39@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/ching-yu-tsai-19b53a147/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            <li>
+                <a target="_blank" href="https://www.instagram.com/ian.aapm/">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            
+            
+           
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="Life Story" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Life Story 2023
+                    <br>
+                    
+                </p>
+            </div>
         </div>
-      </main>
-      
-      <div id="page-sidebar">
-        
-	
-	
-	
-	
-		
-		
-		
-	
-
-		
-		<div>
-
-			
-			<div id="page-scrollspy" class="toc-nav">
-				
-				<ul class="nav nav-pills ml-0">
-					
-					<li class="nav-item pb-3 text-center">
-						<span class="font-weight-bold mb-2">- CATALOG - </span>
-					</li>
-
-					
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_Design-Pattern-Post-List">
-												 Design Pattern 系列文章導讀
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%ae%9a%e7%be%a9">
-												 定義
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%85%a7%e9%83%a8%e7%8b%80%e6%85%8b-vs-%e5%a4%96%e9%83%a8%e7%8b%80%e6%85%8b">
-												 內部狀態 v.s. 外部狀態
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_flyweight-pattern-%e6%88%90%e5%93%a1">
-												 Flyweight Pattern 成員
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%96%ae%e7%b4%94%e4%ba%ab%e5%85%83%e6%a8%a1%e5%bc%8f-vs-%e8%a4%87%e5%90%88%e4%ba%ab%e5%85%83%e6%a8%a1%e5%bc%8f">
-												 單純享元模式 v.s. 複合享元模式
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_flyweight-pattern-%e5%af%a6%e4%bd%9c">
-												 Flyweight Pattern 實作
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%96%ae%e7%b4%94%e4%ba%ab%e5%85%83%e6%a8%a1%e5%bc%8f-1">
-												 單純享元模式
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e8%a4%87%e5%90%88%e4%ba%ab%e5%85%83%e6%a8%a1%e5%bc%8f-1">
-												 複合享元模式
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%b0%8f%e7%b5%90">
-												 小結
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e7%af%84%e4%be%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc">
-												 範例程式碼
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_references">
-												 References
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-
-				</ul>
-			</div>
-			
-
-		</div>
-		
-	
-
-        <iframe class="LikeCoin" height="235"
-  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2fdesign-pattern%2fflyweight-pattern%2f" width="100%"
-  frameborder=0></iframe>
- 
-        <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
-    <script src="/ianlife/js/add-on.js"></script>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-165850720-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-      </div>
     </div>
-    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
-  </body>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+
 </html>

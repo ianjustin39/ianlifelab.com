@@ -1,289 +1,278 @@
-<!doctype html>
-<html lang="zh">
-  <head>
-  <meta content="Design Pattern, Design Principle, 合成複用原則, 組合/聚合複用原則, CRP, CARP, Composite/Aggregate Reuse Principle, Composite Reuse Principle" name="keywords">
-  <link rel="stylesheet" href="https://ianjustin39.github.io/ianlife/%20css/search.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
-  <link rel="stylesheet" href="../css/magnific-popup.css">
-  <script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  
-  
-  
-  <script src="/ianlife/js/jquery-3.3.1.min.js"></script>
-  <script src="/ianlife/js/bootstrap.js"></script>
-  <script src="/ianlife/js/jquery.smooth-scroll.min.js"></script>
-  
-  
-  
-  <script src="../js/jquery.magnific-popup.js"></script>
-  
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
-  <script src="https://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="/ianlife/js/toc.js"></script>
-  
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  
-  
-  <script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js" integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
-  <script>
-   window.onload = function () {
-    let plantumlPrefix = "language-plantuml";
-    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function(code){
-      let image = document.createElement("IMG");
-      image.loading = 'lazy'; 
-      image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText);
-      console.log('http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(code.innerText))
-      code.parentNode.insertBefore(image, code);
-      code.style.display = 'none';
-    });
-  };
-  </script>
-  
-  
-  
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Life Story">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://ianjustin39.github.io//https://i.imgur.com/NYIZKq3.jpg">
+    <meta property="twitter:image" content="https://ianjustin39.github.io//https://i.imgur.com/NYIZKq3.jpg" />
+    
+
+    
+    <meta name="title" content="合成/聚合複用原則 | Composite/Aggregate Reuse Principle" />
+    <meta property="og:title" content="合成/聚合複用原則 | Composite/Aggregate Reuse Principle" />
+    <meta property="twitter:title" content="合成/聚合複用原則 | Composite/Aggregate Reuse Principle" />
+    
+
+    
+    <meta name="description" content="合成/聚合複用原則的在於當要重複使用套件時，應該先考慮使用組合/聚合的方式，其次才是繼承。而如果要使用繼承的話，則須符合里氏替換原則(LSP)。在這之前，要先了解什麼是合成？什麼是聚合？他們又與繼承差在哪？">
+    <meta property="og:description" content="合成/聚合複用原則的在於當要重複使用套件時，應該先考慮使用組合/聚合的方式，其次才是繼承。而如果要使用繼承的話，則須符合里氏替換原則(LSP)。在這之前，要先了解什麼是合成？什麼是聚合？他們又與繼承差在哪？" />
+    <meta property="twitter:description" content="合成/聚合複用原則的在於當要重複使用套件時，應該先考慮使用組合/聚合的方式，其次才是繼承。而如果要使用繼承的話，則須符合里氏替換原則(LSP)。在這之前，要先了解什麼是合成？什麼是聚合？他們又與繼承差在哪？" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>合成/聚合複用原則 | Composite/Aggregate Reuse Principle | Ian Blog</title>
+
+    <link rel="canonical" href="/design-pattern/composite-aggregate-reuse-principle/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 	ga('create', 'UA-165850720-1', 'auto');
 	
 	ga('send', 'pageview');
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-  
-  <meta charset="utf-8">
-<title>合成/聚合複用原則 | Composite/Aggregate Reuse Principle - Ian Tsai </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/ianlife/favicon/apple-touch-icon.png?v=1">
-  <link rel="icon" type="image/png" sizes="32x32" href="/ianlife/favicon/favicon-32x32.png?v=1">
-  <link rel="icon" type="image/png" sizes="16x16" href="/ianlife/favicon/favicon-16x16.png?v=1">
-  <link rel="manifest" href="/ianlife/favicon/site.webmanifest?v=1">
-  
-    <link rel="mask-icon" href="/ianlife/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
-    <link rel="shortcut icon" href="/ianlife/favicon/favicon.ico?v=1">
-    <meta name="msapplication-config" content="/ianlife/favicon/browserconfig.xml?v=1">
-  
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
-
-<meta name="generator" content="Hugo 0.101.0" /><meta itemprop="name" content="合成/聚合複用原則 | Composite/Aggregate Reuse Principle">
-<meta itemprop="description" content="合成/聚合複用原則的在於當要重複使用套件時，應該先考慮使用組合/聚合的方式，其次才是繼承。而如果要使用繼承的話，則須符合里氏替換原則(LSP)。在這之前，要先了解什麼是合成？什麼是聚合？他們又與繼承差在哪？"><meta itemprop="datePublished" content="2020-09-15T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2020-09-15T00:00:00+00:00" />
-<meta itemprop="wordCount" content="569"><meta itemprop="image" content="https://i.imgur.com/aMQKizj.png">
-<meta itemprop="keywords" content="Design Pattern,Design Principle,鐵人賽," /><meta property="og:title" content="合成/聚合複用原則 | Composite/Aggregate Reuse Principle" />
-<meta property="og:description" content="合成/聚合複用原則的在於當要重複使用套件時，應該先考慮使用組合/聚合的方式，其次才是繼承。而如果要使用繼承的話，則須符合里氏替換原則(LSP)。在這之前，要先了解什麼是合成？什麼是聚合？他們又與繼承差在哪？" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ianjustin39.github.io/ianlife/design-pattern/composite-aggregate-reuse-principle/" /><meta property="og:image" content="https://i.imgur.com/aMQKizj.png" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2020-09-15T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-09-15T00:00:00+00:00" />
 
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://i.imgur.com/aMQKizj.png"/>
 
-<meta name="twitter:title" content="合成/聚合複用原則 | Composite/Aggregate Reuse Principle"/>
-<meta name="twitter:description" content="合成/聚合複用原則的在於當要重複使用套件時，應該先考慮使用組合/聚合的方式，其次才是繼承。而如果要使用繼承的話，則須符合里氏替換原則(LSP)。在這之前，要先了解什麼是合成？什麼是聚合？他們又與繼承差在哪？"/>
-<meta name="twitter:site" content="@example"/>
-<link rel="stylesheet" href="/ianlife/css/bundle.min.599b7a92433b91b6dad4961b56383a1485bacd0948e189ce3e355f43df43ac2f.css" integrity="sha256-WZt6kkM7kbba1JYbVjg6FIW6zQlI4YnOPjVfQ99DrC8=">
-        <link rel="stylesheet" href="/ianlife/css/add-on.css">
-</head>
 
-  <body data-spy="scroll" data-target="#page-scrollspy" data-offset="120">
-  
-  
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Life Story</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">HOME</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/learning/">learning</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/life/">life</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/product/">product</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">ALL POST</a></li>
+                    
+                        <li><a href="/about//">ABOUT</a></li>
+                    
+		            
+                </ul>
+            </div>
+        </div>
+        
+    </div>
     
-<header id="site-header">
-  <nav id="site-nav">
-    <h1 class="nav-title">
-      <a href="/ianlife">
-        
-          <i class='fa fa-home'></i>&nbsp;&nbsp;&nbsp;Life Story
-        
-      </a>
-    </h1>
-    <menu id="site-nav-menu" class="flyout-menu">
-      
-        
-          
-          
-            <a href="/ianlife/about/" class="link"><i class='far fa-id-card'></i> About</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/blog/" class="link"><i class='fas fa-pencil-alt'></i> Blog</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/life" class="link"><i class='fa fa-plane'></i> Life</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/learning" class="link"><i class='fa fa-book'></i> Learning</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/product" class="link"><i class='fas fa-box'></i> Product</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/tech" class="link"><i class='fa fa-laptop'></i> Tech</a>
-          
-        
-      
-        
-          
-          
-            <a href="/ianlife/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
-          
-        
-      
-      
-      
-
-      <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
-        <span id="searchGlyph" class="glyphicon glyphicon-search"><i class="fas fa-search"></i></span></a>
-    </menu>
-    
-
-    
-    <a href="#lang-menu" class="lang-toggle" lang="zh">zh</a>
-    <a href="#site-nav-menu" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
-  </nav>
- 
- 
-  <menu id="lang-menu" class="flyout-menu">
-  <a href="#" lang="zh" class="link active">中文 (zh)</a>
-  
-    
-      
-        <a href="/ianlife/en" lang="en" class="no-lang link">English (en)</a>
-      
-    
-      
-    
-  
-</menu>
-
-  
-</header>
-
-<div id="modalSearch" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">文章搜尋</h4><button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-      <div class="modal-body">
-        <div class="aa-input-container" id="aa-input-container">
-  <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for titles or URIs..."
-    name="search" autocomplete="off" />
-  <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
-    <path
-      d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z" />
-  </svg>
-</div>
-<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/algoliasearch.min.js"></script>
-<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/autocomplete.min.js"></script>
+</nav>
 <script>
-  var client = algoliasearch("WTW32P5SNJ", "2e16477f048bc4528b166dfd1eb4804d");
-  var index = client.initIndex("blog");
-  autocomplete('#aa-search-input',
-    { hint: false }, {
-    source: autocomplete.sources.hits(index, { hitsPerPage: 20 }),
-    displayKey: 'name',
-    templates: {
-      suggestion: function (suggestion) {
-        return '<span>' + '<a href="' + suggestion.relpermalink + '">' +
-          suggestion.title + '</a></span>';
-      }
-    }
-  });
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
 
-  $('#searchGlyph').click(function() {
-    setTimeout(function(){
-      $('#aa-search-input').focus();
-    },300);
-  });
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
 </script>
 
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-    <div id="wrapper">
-      
-      <main id="site-main">
-        <article class="post">
-  <header>
-  <div class="title">
-    <a href="/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern"><p>2020 鐵人賽 | Design Pattern</p></a>
-    
-    <h3><a href="/ianlife/design-pattern/composite-aggregate-reuse-principle/">合成/聚合複用原則 | Composite/Aggregate Reuse Principle</a></h3>
-    
-    
-    <p style="margin-top: 0px;">合成/聚合複用原則的在於當要重複使用套件時，應該先考慮使用組合/聚合的方式，其次才是繼承。而如果要使用繼承的話，則須符合里氏替換原則(LSP)。在這之前，要先了解什麼是合成？什麼是聚合？他們又與繼承差在哪？</p>
-    
-  </div>
-  <div class="meta">
-    <time class="published" datetime="2020-09-15 00:00:00 &#43;0000 UTC">
-      September 15, 2020
-    </time>
-    
-    <span class="author">Ian Tsai</span>
-    
-    <p>3 minute read</p>
-    
-    <p>
-      <span id="busuanzi_container_page_pv">
-        PV: <span id="busuanzi_value_page_pv"></span>
-      </span>
-    </p>
-  </div>
-</header>
-
-  <section id="socnet-share">
-    
-  </section>
-  
-  <a href="/ianlife/design-pattern/composite-aggregate-reuse-principle/" class="image featured">
-    
-      <img src="https://i.imgur.com/aMQKizj.png" alt="">
-    
-  </a>
 
 
-  <div class="content">
-    <p><strong><a href="https://ithelp.ithome.com.tw/articles/10236782" target="_blank">本系列文章同步分享於IT邦幫忙第12屆鐵人賽</a></strong></p>
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('https://i.imgur.com/aMQKizj.png');
+         
+         
+        background-blend-mode: multiply;
+    }
+</style>
+
+    <header class="intro-header">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" href="/%20/tags/design-pattern" title="Design Pattern">
+                                Design Pattern
+                            </a>
+                            
+                            <a class="tag" href="/%20/tags/design-principle" title="Design Principle">
+                                Design Principle
+                            </a>
+                            
+                            <a class="tag" href="/%20/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD" title="鐵人賽">
+                                鐵人賽
+                            </a>
+                            
+                        </div>
+                        <h1>合成/聚合複用原則 | Composite/Aggregate Reuse Principle</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            
+                            Posted by
+                            
+                            Ian Tsai
+                            
+                            on
+                            Tuesday, September 15, 2020
+                            
+                            
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+
+                
+                
+                <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                    <div class="side-catalog">
+                        <hr class="hidden-sm hidden-xs">
+                        <h5>
+                            <a class="catalog-toggle" href="#">CATALOG</a>
+                        </h5>
+                        <ul class="catalog-body"></ul>
+
+                    <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianjustin39.github.io%2fdesign-pattern%2fcomposite-aggregate-reuse-principle%2f" width="100%"
+  frameborder=0></iframe>
+
+                    </div>
+                </div>
+                
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                    
+                    <p><strong><!-- raw HTML omitted -->本系列文章同步分享於IT邦幫忙第12屆鐵人賽<!-- raw HTML omitted --></strong></p>
 </br>
 <div>
     <div>
-        <h3 id=_Design-Pattern-Post-List>Design Pattern 系列文章導讀</h3>
+        <h3 id="Design-Pattern-Post-List">Design Pattern 系列文章導讀</h3>
     </div>
     <hr>
     <div>
@@ -368,28 +357,25 @@ if (!doNotTrack) {
     </ol>
 </div>
 
-<br>
-<br>
-<br>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_定義>定義</h3>
+<h3 id="定義">定義</h3>
 </li>
 </ul>
 <hr>
 <p><strong>盡量使用組合(contains-a)/聚合(has-a)方式來代替繼承(is-a)來達到重複使用的目的</strong></p>
 <p>在軟體開發中，一定會遇到套件重複使用的問題。CARP主要目的在於當要重複使用套件時，應該先考慮使用組合/聚合的方式，其次才是繼承。而如果要使用繼承的話，則須符合<a href="../liskov-substitution-principle">里氏替換原則(LSP)</a>。</p>
-<br>
-<br>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_合成-vs-聚合>合成 v.s 聚合</h3>
+<h3 id="合成-vs-聚合">合成 v.s 聚合</h3>
 </li>
 </ul>
 <hr>
 <p>在比較合成/聚合與繼承之間的差異性時，首先要先了解合成是什麼？聚合又是什麼？</p>
 <p>我們可以把這兩個行為理解成整體與部分對象的&quot;擁有&quot;關係。</p>
-<br>
+<!-- raw HTML omitted -->
 <h5 id="聚合班級與學生">聚合：班級與學生</h5>
 <p>在聚合中，部分對象及整體對象兩者的生命週期並沒有關聯，部分對象甚至可能超過整體對象。例如部分對象是學生，而整體對象是班級。一個班級畢業班級就不存在了，但學生依舊繼續存在於另一個整體對象，如大學或是某間公司。學生（部分對象）的生命週期並沒有因為班級（整體對象）結束而跟著結束。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Clazz</span> <span style="color:#ff79c6">{</span>
@@ -415,7 +401,7 @@ if (!doNotTrack) {
 </span></span></code></pre></div><p><strong>output</strong></p>
 <pre tabindex="0"><code>class點名！！
 student喊在！！
-</code></pre><br>
+</code></pre><!-- raw HTML omitted -->
 <h5 id="合成人與器官">合成：人與器官</h5>
 <p>相較於聚合，合成的擁有關係就相對強烈一點。部分對象以及整體對象的生命週期是一致的。如人與他的心臟。如果他人死了，那心臟也跟著停止跳動。相對於聚合，合成擁有較強的關聯性。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">People</span> <span style="color:#ff79c6">{</span>
@@ -442,11 +428,10 @@ student喊在！！
 <pre tabindex="0"><code>people走路！！
 heart跳一下！！
 </code></pre><p>經由上面兩個例子可以發現，Clazz及Student的關聯性低，就算Clazz結束了也跟Student無關。而相較於前一個例子，People與Heart的關係就比較緊密，若People生命週期結束了Heart也會跟著結束。</p>
-<br>
-<br>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_合成聚合-vs-繼承>合成/聚合 v.s. 繼承</h3>
+<h3 id="合成聚合-vs-繼承">合成/聚合 v.s. 繼承</h3>
 </li>
 </ul>
 <hr>
@@ -466,36 +451,15 @@ heart跳一下！！
 <li>繼承限制了整體的靈活性。由於從父類別繼承下來的實作是靜態的，不可能在執行時發生變化。</li>
 <li>合成/聚合的靈活性較高。合成/聚合執行時，新類別可以自由的引用與組合類別相同的對象。</li>
 </ul>
-<br>
-<br>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_實作compositeaggregate-reuse-principle>實作Composite/Aggregate Reuse Principle</h3>
+<h3 id="實作compositeaggregate-reuse-principle">實作Composite/Aggregate Reuse Principle</h3>
 </li>
 </ul>
 <hr>
 <p>剛剛簡述了一下合成/聚合以及繼承的差別，可能還有些模糊，那我們來舉個例子。車子有分電動車以及汽油車，各有白色及黑色兩款，如下：</p>
-<br>
-<img src='https://g.gravizo.com/svg?
-@startuml;
-abstract Car;
-ElectricCar -up-> Car;
-PetrolCar -up-> Car;
-BlackElectricCar -up-> ElectricCar;
-WhiteElectricCar -up-> ElectricCar;
-BlackPetrolCar -up-> PetrolCar;
-WhitePetrolCar -up-> PetrolCar;
-Car : +run();
-ElectricCar : +run();
-PetrolCar : +run();
-BlackElectricCar : +run();
-WhiteElectricCar : +run();
-BlackPetrolCar : +run();
-WhitePetrolCar : +run();
-@enduml
-'>
-<br>
-<br>
+<!-- raw HTML omitted -->
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Car</span> <span style="color:#ff79c6">{</span>
 </span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">run</span><span style="color:#ff79c6">();</span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
@@ -544,7 +508,7 @@ WhitePetrolCar : +run();
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>
 </span></span></code></pre></div><p><strong>output</strong></p>
 <pre tabindex="0"><code>白色電動車
-</code></pre><br>
+</code></pre><!-- raw HTML omitted -->
 <p>這是用繼承的方式去撰寫一個汽車的系統，我們可以用剛剛比較的三點來看看：</p>
 <ol>
 <li>
@@ -561,23 +525,7 @@ WhitePetrolCar : +run();
 </li>
 </ol>
 <p>現在來使用CARP來解決上述的問題。</p>
-<br>
-<img src='https://g.gravizo.com/svg?
-@startuml;
-abstract Car;
-interface Color;
-ElectricCar -up-> Car;
-PetrolCar -up-> Car;
-Color -right-o Car;
-Black .up.> Color;
-White .up.> Color;
-Car : +run();
-ElectricCar : +run();
-PetrolCar : +run();
-@enduml
-'>
-<br>
-<br>
+<!-- raw HTML omitted -->
 <p>建立一個interface Color，然後將這個interface合成到Car的抽象類別內。接著再由不同的顏色實作Color，如下：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">interface</span> <span style="color:#50fa7b">Color</span> <span style="color:#ff79c6">{</span>  <span style="color:#6272a4">// 抽出來建立介面
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>      <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">kind</span><span style="color:#ff79c6">();</span>
@@ -630,7 +578,7 @@ PetrolCar : +run();
 </span></span></code></pre></div><p><strong>output</strong></p>
 <pre tabindex="0"><code>白色
 電動車
-</code></pre><br>
+</code></pre><!-- raw HTML omitted -->
 <p>把Color拉出來建立一個介面。再經由不同的顏色去實作，最後類別Car再由合成的方式將Color引入，這是用CARP的方式做更改後的結果。現在依然用剛剛比較的三點來看看：</p>
 <ol>
 <li>
@@ -647,11 +595,10 @@ Color和Car沒有了相依，只需要選好車款，再把指定的顏色帶入
 </li>
 </ol>
 <p>經過班級與學生、人與器官的例子可以知道，耦合性聚合 &lt; 合成。從車子的例子了解了耦合性合成 &lt; 繼承。</p>
-<br>
-<br>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_小結>小結</h3>
+<h3 id="小結">小結</h3>
 </li>
 </ul>
 <hr>
@@ -663,104 +610,65 @@ Color和Car沒有了相依，只需要選好車款，再把指定的顏色帶入
 缺點
 1. 建造的系統會有較多的類別需要管理
 </code></pre>
-<br>
+<!-- raw HTML omitted -->
 <h5 id="carp的目標">CARP的目標</h5>
 <p><code>盡量使用組合(contains-a)/聚合(has-a)方式來代替繼承(is-a)來達到重複使用的目的</code></p>
-<br>
+<!-- raw HTML omitted -->
 <h5 id="合成以及聚合的差異">合成以及聚合的差異</h5>
 <pre><code>合成：部分對象以及整體對象的生命週期是一致的。
 聚合：部分對象的生命週期與整體對象沒有關聯，甚至可能更長。
 </code></pre>
-<br>
-<br>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_範例程式碼>範例程式碼</h3>
+<h3 id="範例程式碼">範例程式碼</h3>
 </li>
 </ul>
 <hr>
-<p><em><a href="https://www.jdoodle.com/embed/v0/2j1O" target="_blank">範例1：CARP-Aggregate</a></em></p>
-<p><em><a href="https://www.jdoodle.com/embed/v0/2j1Y" target="_blank">範例2：CARP-Composite</a></em></p>
-<p><em><a href="https://www.jdoodle.com/embed/v0/2j24" target="_blank">範例3：CARP-inherit</a></em></p>
-<p><em><a href="https://www.jdoodle.com/embed/v0/2j2b" target="_blank">範例4：CARP</a></em></p>
-<br>
-<br>
+<p><em><!-- raw HTML omitted -->範例1：CARP-Aggregate<!-- raw HTML omitted --></em></p>
+<p><em><!-- raw HTML omitted -->範例2：CARP-Composite<!-- raw HTML omitted --></em></p>
+<p><em><!-- raw HTML omitted -->範例3：CARP-inherit<!-- raw HTML omitted --></em></p>
+<p><em><!-- raw HTML omitted -->範例4：CARP<!-- raw HTML omitted --></em></p>
+<!-- raw HTML omitted -->
 <ul>
 <li>
-<h3 id=_references>References</h3>
+<h3 id="references">References</h3>
 </li>
 </ul>
 <hr>
 <ul>
-<li><a href="https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/634599/" target="_blank">軟體設計原則（七）合成/聚合複用原則(Composite/Aggregate Reuse Principle,CARP)</a></li>
-<li><a href="http://c.biancheng.net/view/1333.html" target="_blank">合成复用原则——面向对象设计原则</a></li>
-<li><a href="http://www.cunman.com/new/57984cdfa48149fa877bfc1014dd755d" target="_blank">程序员必会的设计模式七大原则之——合成复用原则</a></li>
+<li><!-- raw HTML omitted -->軟體設計原則（七）合成/聚合複用原則(Composite/Aggregate Reuse Principle,CARP)<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->合成复用原则——面向对象设计原则<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->程序员必会的设计模式七大原则之——合成复用原则<!-- raw HTML omitted --></li>
 </ul>
 
-  </div>
-  <br>
-  <br>
-  <div class="pagination">
-  
-    <a href="/ianlife/design-pattern/dependence-inversion-principle/" class="button">
-      <div class="previous">
-        <div>依賴反轉原則 | Dependency Inversion Principle</div>
-      </div>
-    </a>
-  
-  
-    <a href="/ianlife/design-pattern/law-of-demeter/" class="button">
-      <div class="next">
-        <div>迪米特法則 | Law of Demeter</div>
-      </div>
-    </a>
-  
-</div>
 
-  <footer>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <i class="fas fa-folder"></i>
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern">從生活中認識 Design Pattern</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-  
-    
-    
-      <li class="tags">
-        <i class="fas fa-tags"></i>
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-pattern">Design Pattern</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/design-principle">Design Principle</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://ianjustin39.github.io/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD">鐵人賽</a></li>
-          
-        </ul>
-      </li>
-    
-  
-</ul>
 
-  </footer>
-</article>
+                    
+                    <hr>
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/design-pattern/dependence-inversion-principle/" data-toggle="tooltip" data-placement="top"
+                                title="依賴反轉原則 | Dependency Inversion Principle">&larr;
+                                Previous Post</a>
+                        </li>
+                        
+                        
+                        <li class="next">
+                            <a href="/design-pattern/law-of-demeter/" data-toggle="tooltip" data-placement="top"
+                                title="迪米特法則 | Law of Demeter">Next
+                                Post &rarr;</a>
+                        </li>
+                        
+                    </ul>
+                    
 
-    <article class="post">
-        <div id="disqus_thread"></div>
+                    
+
+
+<div id="disqus-comment"></div>
+<div id="disqus_thread"></div>
 <script type="application/javascript">
     window.disqus_config = function () {
     
@@ -780,294 +688,212 @@ Color和Car沒有了相依，只需要選好車款，再把指定的顏色帶入
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+                </div>
+
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+
+                    
+                    
+                </div>
+            </div>
+        </div>
     </article>
 
-
-
-
-
-        <div class="disqus markdown">
-          <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    
     
 
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:ianjustin39@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/ching-yu-tsai-19b53a147/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            <li>
+                <a target="_blank" href="https://www.instagram.com/ian.aapm/">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            
+            
+           
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="Life Story" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Life Story 2023
+                    <br>
+                    
+                </p>
+            </div>
         </div>
-      </main>
-      
-      <div id="page-sidebar">
-        
-	
-	
-	
-	
-		
-		
-		
-	
-
-		
-		<div>
-
-			
-			<div id="page-scrollspy" class="toc-nav">
-				
-				<ul class="nav nav-pills ml-0">
-					
-					<li class="nav-item pb-3 text-center">
-						<span class="font-weight-bold mb-2">- CATALOG - </span>
-					</li>
-
-					
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_Design-Pattern-Post-List">
-												 Design Pattern 系列文章導讀
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%ae%9a%e7%be%a9">
-												 定義
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%90%88%e6%88%90-vs-%e8%81%9a%e5%90%88">
-												 合成 v.s 聚合
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%90%88%e6%88%90%e8%81%9a%e5%90%88-vs-%e7%b9%bc%e6%89%bf">
-												 合成/聚合 v.s. 繼承
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%af%a6%e4%bd%9ccompositeaggregate-reuse-principle">
-												 實作Composite/Aggregate Reuse Principle
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e5%b0%8f%e7%b5%90">
-												 小結
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_%e7%af%84%e4%be%8b%e7%a8%8b%e5%bc%8f%e7%a2%bc">
-												 範例程式碼
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#_references">
-												 References
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-
-				</ul>
-			</div>
-			
-
-		</div>
-		
-	
-
-        <iframe class="LikeCoin" height="235"
-  src="https://button.like.co/in/embed/ianjustin39/button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2fdesign-pattern%2fcomposite-aggregate-reuse-principle%2f" width="100%"
-  frameborder=0></iframe>
- 
-        <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/ianlife/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script><script src="/ianlife/js/bundle.min.01b9b47c134ac266b71a27f2f8ec421490741b8ba6e3aaca75bb6208ba887724.js" integrity="sha256-Abm0fBNKwma3Gify&#43;OxCFJB0G4um46rKdbtiCLqIdyQ="></script>
-    <script src="/ianlife/js/add-on.js"></script>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-165850720-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-      </div>
     </div>
-    <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
-  </body>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+
 </html>

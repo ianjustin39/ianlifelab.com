@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Life Story">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://ianjustin39.github.io//https://i.imgur.com/NYIZKq3.jpg">
+    <meta property="twitter:image" content="https://ianjustin39.github.io//https://i.imgur.com/NYIZKq3.jpg" />
+    
+
+    
+    <meta name="title" content="FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？" />
+    <meta property="og:title" content="FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？" />
+    <meta property="twitter:title" content="FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？" />
+    
+
+    
+    <meta name="description" content="FTX 的慘劇，論去中心化的重要性，錢包內的錢，才是自己的錢。">
+    <meta property="og:description" content="FTX 的慘劇，論去中心化的重要性，錢包內的錢，才是自己的錢。" />
+    <meta property="twitter:description" content="FTX 的慘劇，論去中心化的重要性，錢包內的錢，才是自己的錢。" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？ | Ian Blog</title>
+
+    <link rel="canonical" href="/post/technology/blockchain/ftx-is-gone/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Life Story</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">HOME</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/learning/">learning</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/life/">life</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/product/">product</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">ALL POST</a></li>
+                    
+                        <li><a href="/about//">ABOUT</a></li>
+                    
+		            
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('https://i.imgur.com/1hIsxvm.png');
+         
+         
+        background-blend-mode: multiply;
+    }
+</style>
+
+    <header class="intro-header">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" href="/%20/tags/blockchain" title="Blockchain">
+                                Blockchain
+                            </a>
+                            
+                        </div>
+                        <h1>FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            
+                            Posted by
+                            
+                            Ian Tsai
+                            
+                            on
+                            Monday, November 14, 2022
+                            
+                            
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+
+                
+                
+                <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                    <div class="side-catalog">
+                        <hr class="hidden-sm hidden-xs">
+                        <h5>
+                            <a class="catalog-toggle" href="#">CATALOG</a>
+                        </h5>
+                        <ul class="catalog-body"></ul>
+
+                    <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianjustin39.github.io%2fpost%2ftechnology%2fblockchain%2fftx-is-gone%2f" width="100%"
+  frameborder=0></iframe>
+
+                    </div>
+                </div>
+                
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                    
+                    <!-- raw HTML omitted -->
+<p>在 2022/05 發生 Luna 崩跌事件後，當大家還覺得為什麼最近市場的波動這麼小時，全球第二大加密貨幣交易所 FTX 在上週給了大家一個驚喜，因為被爆私自挪用用戶資金，導致交易所內發生了擠兌潮，以至於 FTX 不堪負荷，不但暫停用戶提領，更在一週內宣告破產，讓許多來不及逃難的用戶資金卡在 FTX 內沒辦法拿出來。</p>
+<p>（ 還錢～～～</p>
+<p>FTX 相關事件的文章或分析相信在網路上搜個關鍵字都可以找到很多資訊在這就不多加敘述，而本篇要來探討的並非 FTX 倒閉，而是身在加密貨幣的世界裡，要如何選擇存放資產的位置，才不會風險發生時被當成韭菜收割。</p>
+<!-- raw HTML omitted -->
+<h3 id="選擇大到不會倒的交易所">選擇大到不會倒的交易所？</h3>
+<hr>
+<p>大家在一開始接觸加密貨幣時，應該都會聽到『選一間你信任且大到不會倒的交易所，就可以開始把錢放進去買虛擬貨幣了』，相較於一些名不見經傳的交易所，世界排行前幾名的交易所的確安全許多，但 FTX 卻給了我們一個重擊，全球第二大的交易所不到一週就宣布破產，相信在 SBF 與 CZ 隔空交火時，大部分的人應該還沒想到會是這個結果。</p>
+<!-- raw HTML omitted -->
+<h3 id="區塊鏈的精神---去中心化">區塊鏈的精神 - 去中心化</h3>
+<hr>
+<p>交易所倒閉跟去中心化又有什麼關係呢？想必有接觸過區塊鏈都聽過『去中心化』一詞，那這又代表著什麼呢？在 Web2.0 的世界裡，科技巨頭 Facebook, Google 掌握著用戶的所有資料以及生殺大權，今天只要他們認為你不合乎平台規範，他們便可以將你封鎖（想想之前川普的 twitter）；而傳統金融也是，錢讓私有銀行管理，如果銀行營運出了什麼問題導致沒辦法領出現金，那你在銀行的錢錢就只是一串數字罷了（比如說前陣子中國四大銀行無法提領現金的狀況）。而區塊鏈的其中一個精神，就是不希望有一個集團或是一個機構來『操控』這一切，你的資產讓你自己保管，鏈上一切皆由參與者來共同決定這件事。</p>
+<p>講到這有沒有覺得，都已經投入了一個『去中心化』的世界了，卻還相信著『中心化』的機構，是不是有種矛盾的感覺？？🤣</p>
+<!-- raw HTML omitted -->
+<h3 id="被管理的資產">『被管理』的資產</h3>
+<hr>
+<p>加密貨幣的地址是以持有的註記詞經由一連串的協議及演算法導出的一串英數字，而註記詞會交由交易保管並不會提供給用戶，用戶只會獲得每個加密貨幣的地址，提供給別人接收加密貨幣。而當要發送交易時，需要發送『申請』，等交易所同意這筆交易，用戶才能將交易發送到區塊鏈上。從頭到尾的操作，都需要經過『交易所』的同意（除了存錢以外），雖然看起來是自己決定自己的資產要做什麼，但其實所有的一切都是由交易所決定，而不是自己，哪天交易所駁回你的請求，那我們也沒辦法用其他方式拯救自己的資產。</p>
+<p>
+  <img src="https://i.imgur.com/nphWSD7.png" alt="SBF">
+
+</p>
+<!-- raw HTML omitted -->
+<h3 id="not-your-keys-not-your-asset"><strong><strong>Not Your Keys, Not Your Asset</strong></strong></h3>
+<hr>
+<p>什麼是 Key？區塊鏈的每一筆交易都需要用 private key 簽署後得到一個 signature，並將這個 signature 連同交易發送到區塊鏈上驗證。而這個 key 也是由註記詞依照一串協議及演算法推導而成。剛剛提到在交易所發送一筆交易時都需『被同意』，同意後交易所會發送一筆用『我們的 key』簽署出來的簽章及交易到鏈上，當然他也可以不同意，這樣我們就沒辦法操控自己的資產。</p>
+<p>
+  <img src="https://i.imgur.com/VkA3rQd.png" alt="Key">
+
+</p>
+<p>而這把 Key 除了放在交易所內，也可以放在加密貨幣錢包中。只要持有錢包，所有的交易都不再需要被同意，任何交易行為都掌控在自己的手上。也就是說，我們有 100% 掌控錢包內資產的權力，就算有第二個 FTX 不給用戶提領也跟我們沒有關係，因為我們的 Key 在自己的手上不需要遷就其他團體或機構。</p>
+<!-- raw HTML omitted -->
+<h3 id="究竟是加密貨幣不安全還是對產業不了解">究竟是加密貨幣不安全，還是對產業不了解？</h3>
+<hr>
+<p>最後回到 FTX 事件，個人認為如果把 FTX 事件的原因歸咎於『加密貨幣就是不安全』的話，就不太合情理，畢竟中心化的機構，本來就伴隨著『人』這個最大的風險，十年夫妻也可能被戴綠帽，何況是一間交易所。不過這不代表不能把錢存在交易所內，只是做任何決定時需要知道其伴隨的風險，當風險發生時伴隨的傷害會不會影響到自己的生活甚至周遭的人，評估之下若是可以負擔的狀況，再來做這件事，不然如果心臟太小顆的話，還是把錢放在錢包內吧。</p>
+<p>
+  <img src="https://i.imgur.com/zSmYW7G.jpg" alt="Wallet">
+
+</p>
+<!-- raw HTML omitted -->
+
+
+
+                    
+                    <hr>
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/read/behavioural-addiction/" data-toggle="tooltip" data-placement="top"
+                                title="行為上癮，短影片是如何綁架你的時間">&larr;
+                                Previous Post</a>
+                        </li>
+                        
+                        
+                        <li class="next">
+                            <a href="/read/just-do-it/" data-toggle="tooltip" data-placement="top"
+                                title="就是因為『沒時間』，才什麼都能辦到">Next
+                                Post &rarr;</a>
+                        </li>
+                        
+                    </ul>
+                    
+
+                    
+
+
+<div id="disqus-comment"></div>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-ianjustin39-github-io-ianlife" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+                </div>
+
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:ianjustin39@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/ching-yu-tsai-19b53a147/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            <li>
+                <a target="_blank" href="https://www.instagram.com/ian.aapm/">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            
+            
+           
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="Life Story" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Life Story 2023
+                    <br>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+
+</html>
