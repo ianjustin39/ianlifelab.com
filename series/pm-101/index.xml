@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PM 101 on Life Story</title>
-    <link>https://ianjustin39.github.io/series/pm-101/</link>
+    <link>https://ianjustin39.github.io/ianlife/series/pm-101/</link>
     <description>Recent content in PM 101 on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 02 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/series/pm-101/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/series/pm-101/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>畫 Wireframe 目的是什麼？</title>
-      <link>https://ianjustin39.github.io/post/product/product/pm101-wireframe/</link>
+      <link>https://ianjustin39.github.io/ianlife/post/product/product/pm101-wireframe/</link>
       <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/post/product/product/pm101-wireframe/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/post/product/product/pm101-wireframe/</guid>
       <description>最近畫 Wireframe 的頻率有點高，也畫出了一些心得，中間也有遇到一些問題，剛好分享紀錄一下。
 什麼是 Wireframe 基本的 Wireframe 是一種低保真的設計原型，頁面上面沒有華麗的設計元素，只有匡線、文字資訊、架構排版等。 在一個新的需求出現時，會有非常多的不確定性，需要先確定產品要呈現什麼資訊給用戶、使用旅程是什麼、可能遇到什麼問題、我們想解決什麼問題等， 都需要考慮進去，所以若是太快進入 UI 設計，如果架構或是流程等部分需要做更改，可能會造成過多的資源消耗。
 畫 Wireframe 目的是什麼？ 我認為 Wireframe 階段主要考慮以下兩個部分：

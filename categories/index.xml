@@ -2,43 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Life Story</title>
-    <link>https://ianjustin39.github.io/categories/</link>
+    <link>https://ianjustin39.github.io/ianlife/categories/</link>
     <description>Recent content in Categories on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 27 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Learning</title>
-      <link>https://ianjustin39.github.io/categories/learning/</link>
+      <link>https://ianjustin39.github.io/ianlife/categories/learning/</link>
       <pubDate>Sun, 27 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/categories/learning/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/categories/learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>TECH</title>
-      <link>https://ianjustin39.github.io/categories/tech/</link>
+      <link>https://ianjustin39.github.io/ianlife/categories/tech/</link>
       <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/categories/tech/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/categories/tech/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PRODUCT</title>
-      <link>https://ianjustin39.github.io/categories/product/</link>
+      <link>https://ianjustin39.github.io/ianlife/categories/product/</link>
       <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/categories/product/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/categories/product/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LIFE</title>
-      <link>https://ianjustin39.github.io/categories/life/</link>
+      <link>https://ianjustin39.github.io/ianlife/categories/life/</link>
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/categories/life/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/categories/life/</guid>
       <description></description>
     </item>
     
