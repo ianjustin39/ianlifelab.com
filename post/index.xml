@@ -5,7 +5,21 @@
     <link>https://ianjustin39.github.io/ianlife/post/</link>
     <description>Recent content in Post on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 27 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>為什麼產品開發一定要有 Deadline？ 注意這五點提升團隊效率</title>
+      <link>https://ianjustin39.github.io/ianlife/post/product/product/why-need-deadline/</link>
+      <pubDate>Sat, 05 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/post/product/product/why-need-deadline/</guid>
+      <description>Deadline 的用途是什麼？ 產品經理在規劃產品路線圖（Roadmap）時常以會先做競品分析、市場分析或是用戶訪談，結著評估分析結果是否契合公司的年度或季度目標，最後再安排進 Roadmap 。這份 Roadmap 並非僅提供給產品跟技術團隊，行銷、業務、客服團隊也會根據 Roadmap 上即將釋出的功能去提前做準備，如與合作夥伴洽談、KOL 協作或是撰寫 FAQ 等，這時 Deadline 變得尤為重要，它成為各個團隊追蹤進度的標準。當 Deadline 一到，所有的任務都將完成，產品因此得以投入市場。不過若某團隊因為某些原因導致無法如期完成這項任務，則會影響到其他部門，甚至公司達成目標。
+因此， Deadline 不僅僅是產品發佈的時間點，同時也是團隊協作中的一個共同指標，避免有認知上的落差。
+Deadline 除了讓團隊有一致的目標，還能讓產品提早迭代 剛才我們提及，產品經理在策劃產品時有諸多因素需要考量。以區塊鏈產業來說，2021 年末是 NFT 風潮的高峰， 年初產品經理經過評估認為 NFT 將是今年的趨勢，因此規劃相關功能並預計年中完成並投入市場。若在 Deadline 之前完成，對於產品而言可以提早進入市場做測試、收集用戶反饋，進行迭代更新，等到 NFT 流量達到巔峰時，產品已經完成打磨，符合 80 甚至 90% 市場需求，行銷與業務部門也可以提前布局，讓產品更容易被市場關注，進而吸引大量的用戶。反之若錯失高峰後才完成，用戶早就已經找到習慣使用的產品，這時要再將其他產品的用戶轉換到自家產品將變得相當困難。
+是否每件事都需要設定一個 Deadline 以軟體產品為例，可能大部分公司都是以 Scrum 的方式在迭代產品。通常，這種方法不會明確產生一個絕對的 Deadline，或者說 Sprint 的最後一天即視為 Deadline。而 Scrum 作為開發的話會更專注在每個 Sprint 的 Sprint Goals ，有明確的 Goals 可以讓團隊在 Sprint 期間能夠專注目標衝刺。
+然而產品總是會有需要推出重大更新的時候，通常是基於市場趨勢的評估，或是發現有新的痛點或是機會的突破口，需要在特定的時間點完成特定任務，如果錯過時機，可能也就會錯失增長或盈利的機會。這就是為何必須有明確的 Deadline，以確保產品能在正確的時間點推向市場。
+以先前 NFT 的例子為例，若是在 2021/06 加密貨幣錢包推出 NFT 相關功能，早期的 NFT 玩家將優先選擇有支援 NFT 的錢包做使用，雖然功能可能不完整，但市場上暫無其他產品競爭，產品不僅獲取了早期玩家，還有時間可以做迭代更新，領先其他競爭對手。若是在 2021/12 NFT 流量最高時推出，也能吸引一些追隨NFT潮流進入市場的圈外玩家，但相較於 6 月，12 月時支援了 NFT 功能的錢包已更多，所以獲客成本相較於 6 月會高出一些。最後就是在流量往下掉時推出，市場或許認為 NFT 即將泡沫化，大部分玩家不再對 NFT 保持樂觀，這時產品要獲取用戶將極具挑戰。</description>
+    </item>
+    
     <item>
       <title>就是因為『沒時間』，才什麼都能辦到</title>
       <link>https://ianjustin39.github.io/ianlife/read/just-do-it/</link>
