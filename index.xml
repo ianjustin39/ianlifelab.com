@@ -796,17 +796,6 @@ Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都�
     </item>
     
     <item>
-      <title>About Me</title>
-      <link>https://ianjustin39.github.io/ianlife/about/</link>
-      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/about/</guid>
-      <description>我是IAN，一名軟體工程師
-blog紀錄學習心得以防腦容量不足忘記學了什麼，同時也分享自己的人生！！
-興趣是攝影及旅遊，也喜愛健身，目前正在朝0.5個巨巨的目標邁進</description>
-    </item>
-    
-    <item>
       <title>Photograph</title>
       <link>https://ianjustin39.github.io/ianlife/photograph/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
@@ -827,20 +816,20 @@ blog紀錄學習心得以防腦容量不足忘記學了什麼，同時也分享�
     </item>
     
     <item>
-      <title>Ian&#39;s Resume</title>
-      <link>https://ianjustin39.github.io/ianlife/resume/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/resume/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Posts Archive</title>
       <link>https://ianjustin39.github.io/ianlife/archive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ianjustin39.github.io/ianlife/archive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Resume</title>
+      <link>https://ianjustin39.github.io/ianlife/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/resume/</guid>
       <description></description>
     </item>
     
