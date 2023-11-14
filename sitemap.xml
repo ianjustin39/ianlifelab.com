@@ -2,22 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
+    <loc>https://ianjustin39.github.io/ianlife/tags/account-abstraction/</loc>
+    <lastmod>2023-11-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/life/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
+    <loc>https://ianjustin39.github.io/ianlife/tags/blockchain/</loc>
+    <lastmod>2023-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianjustin39.github.io/ianlife/categories/</loc>
+    <lastmod>2023-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/crypto-exchange/</loc>
+    <lastmod>2023-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/crypto-wallet/</loc>
+    <lastmod>2023-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianjustin39.github.io/ianlife/tags/eip-4337/</loc>
+    <lastmod>2023-11-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianjustin39.github.io/ianlife/post/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
+    <lastmod>2023-11-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianjustin39.github.io/ianlife/series/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
+    <lastmod>2023-11-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianjustin39.github.io/ianlife/tags/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
+    <lastmod>2023-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianjustin39.github.io/ianlife/categories/tech/</loc>
+    <lastmod>2023-11-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianjustin39.github.io/ianlife/</loc>
+    <lastmod>2023-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianjustin39.github.io/ianlife/post/technology/blockchain/exchange-and-wallet/</loc>
+    <lastmod>2023-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianjustin39.github.io/ianlife/series/%E5%8D%80%E5%A1%8A%E9%8F%88/</loc>
+    <lastmod>2023-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianjustin39.github.io/ianlife/categories/life/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianjustin39.github.io/ianlife/life/slow-down-your-life/</loc>
@@ -59,16 +83,7 @@
     <loc>https://ianjustin39.github.io/ianlife/read/just-do-it/</loc>
     <lastmod>2022-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/blockchain/</loc>
-    <lastmod>2022-11-14T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ianjustin39.github.io/ianlife/post/technology/blockchain/ftx-is-gone/</loc>
-    <lastmod>2022-11-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/tech/</loc>
-    <lastmod>2022-11-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/series/%E5%8D%80%E5%A1%8A%E9%8F%88/</loc>
     <lastmod>2022-11-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianjustin39.github.io/ianlife/read/behavioural-addiction/</loc>

@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Work Life Balance?">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://ianjustin39.github.io/ianlife//https://i.imgur.com/4x5T3HZ.jpg">
+    <meta property="twitter:image" content="https://ianjustin39.github.io/ianlife//https://i.imgur.com/4x5T3HZ.jpg" />
+    
+
+    
+    <meta name="title" content="EIP-4337" />
+    <meta property="og:title" content="EIP-4337" />
+    <meta property="twitter:title" content="EIP-4337" />
+    
+
+    
+    <meta name="description" content="從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。">
+    <meta property="og:description" content="從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。" />
+    <meta property="twitter:description" content="從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+    <meta name="google-site-verification" content="zuuW7hNy_wHvxLOBYVTEFg-sj9gxcQVWbEVp4_G50CY" />
+    <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師">
+    <link rel="shortcut icon" href="/ianlife/img/favicon.ico">
+
+    <title>EIP-4337 | Ian Blog</title>
+
+    <link rel="canonical" href="/ianlife/tags/eip-4337/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/ianlife/css/bootstrap.min.css">
+    
+
+    
+    <link rel="stylesheet" href="/ianlife/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/ianlife/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/ianlife/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/ianlife/js/jquery.min.js"></script>
+
+    
+    <script src="/ianlife/js/bootstrap.min.js"></script>
+
+    
+    <script src="/ianlife/js/hux-blog.min.js"></script>
+
+    
+    <script src="/ianlife/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/ianlife/">Work Life Balance?</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/ianlife/">HOME</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/ianlife/categories/learning/">learning</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/ianlife/categories/life/">life</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/ianlife/categories/product/">product</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/ianlife/categories/tech/">tech</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/ianlife/archive//">Article list</a></li>
+                    
+                        <li><a href="/ianlife/about//">ABOUT</a></li>
+                    
+		            
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<header class="intro-header" style="background-image: url('https://i.imgur.com/4x5T3HZ.jpg')">
+    <div class="container">
+        <div class="">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <h1>Work Life Balance? </h1>
+                    
+                    <span class="subheading">If you’re afraid to fail, then you’re probably going to fail.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+  
+<div data-pagefind-ignore="all" class="container">
+    <div class="">
+        
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+    
+    <section class="visible-md visible-lg" style="text-align: center;">
+        
+        <div class="short-about" >
+            
+            <a href="/ianlife/about">
+                <img src="https://ppt.cc/fJWmCx" alt="avatar" style="cursor: pointer; display: block; margin: 0 auto;" />
+            </a>        
+            
+            
+            <h4>Ian&#39;s Blog</h4>
+            
+            
+            <p>學習, 攝影, 健身, 記錄生活</p>
+            
+            
+            <ul class="list-inline">
+                
+                <li>
+                    <a href="mailto:ianjustin39@gmail.com">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    <a target="_blank" href="https://www.linkedin.com/in/ching-yu-tsai-19b53a147/">
+                        <span class="fa-stack fa-lg">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    <a target="_blank" href="https://www.instagram.com/ian.aapm/">
+                        <span class="fa-stack fa-lg">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    <section id="mini-bio" class="visible-md visible-lg">
+
+        <hr class="hidden-sm hidden-xs">
+        
+        <div id="tag-cloud" class="copyright" style="font-size: 0.5em;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-align: center;
+    text-transform: capitalize;">
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/account-abstraction"
+                style="font-size:0.5rem">account-abstraction</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/algolia"
+                style="font-size:0.5rem">algolia</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/algorithm"
+                style="font-size:1.209796168157509rem">algorithm</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/behavioural-pattern"
+                style="font-size:1.417077711907278rem">behavioural-pattern</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/blockchain"
+                style="font-size:1.3581875428107406rem">blockchain</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/blog"
+                style="font-size:1.1113851412715186rem">blog</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/bootstrap"
+                style="font-size:0.5rem">bootstrap</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/creational-pattern"
+                style="font-size:1.209796168157509rem">creational-pattern</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/crypto-exchange"
+                style="font-size:0.5rem">crypto-exchange</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/crypto-wallet"
+                style="font-size:0.5rem">crypto-wallet</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/data-structures"
+                style="font-size:0.8056925706357593rem">data-structures</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/design-pattern"
+                style="font-size:1.9850486985002116rem">design-pattern</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/design-principle"
+                style="font-size:1.417077711907278rem">design-principle</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/eip-4337"
+                style="font-size:0.5rem">eip-4337</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/ethereum"
+                style="font-size:0.5rem">ethereum</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/github"
+                style="font-size:0.5rem">github</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/hugo"
+                style="font-size:1.1113851412715186rem">hugo</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/product"
+                style="font-size:0.5rem">product</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/structural-pattern"
+                style="font-size:1.3581875428107406rem">structural-pattern</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/wireframe"
+                style="font-size:0.5rem">wireframe</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6"
+                style="font-size:1.417077711907278rem">好書推薦</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/%E6%95%B8%E4%BD%8D%E9%81%8A%E7%89%A7%E4%BD%8F%E5%93%AA%E8%A3%A1"
+                style="font-size:0.5rem">數位遊牧住哪裡</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/%E7%94%9F%E6%B4%BB%E9%9A%A8%E7%AD%86"
+                style="font-size:0.9845112612067316rem">生活隨筆</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97"
+                style="font-size:1.557522544439861rem">讀書心得</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD"
+                style="font-size:1.7495070233199608rem">鐵人賽</a>&nbsp;&nbsp;
+            
+            
+            
+            
+            
+            
+            
+            <a href="/ianlife/tags/%E9%9B%BB%E5%BD%B1%E5%BF%83%E5%BE%97"
+                style="font-size:0.5rem">電影心得</a>&nbsp;&nbsp;
+            
+        </div>
+    </section>
+    
+
+    
+    
+    <section class="visible-md visible-lg"  style="text-align: center;">
+        <hr class="hidden-sm hidden-xs">
+        
+        <ul class="list-inline">
+            
+            <li><a target="_blank" href="https://jumperc2p.github.io/InformisTry/">InformisTry-HankLee</a></li>
+            
+            <li><a target="_blank" href="https://take-a-chair.club/">我的讀書會 - 拉一張椅子</a></li>
+            
+        </ul>
+    </section>
+    
+    
+</div>
+        
+        
+   	    <div class="
+            col-lg-8 col-lg-offset-1
+            col-md-8 col-md-offset-1
+            col-sm-12
+            col-xs-12
+            post-container
+        ">
+            
+<div data-pagefind-ignore="all">
+
+<div class="post-preview">
+    <a href="https://ianjustin39.github.io/ianlife/post/technology/blockchain/exchange-and-wallet/">
+        <h2 class="post-title">
+            交易所推出錢包服務代表什麼？
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            『剛進入 Web3 的用戶』一直都是 Web3 錢包商或是交易所必爭的一塊，在相同競爭力的產品之下，哪個產品的進入門檻越低、使用起來越順手，就越有機會獲得用戶的青睞，以現在資訊這麼多的狀況下，停留在同一個產品的注意力並不會太久，市場又有這麼多的選擇時，如何短時間抓住用戶至關重要。
+        
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Ian Tsai on Tuesday, November 14, 2023
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+</div>
+
+            
+
+
+
+       	</div>
+	</div>
+</div>
+
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:ianjustin39@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/ching-yu-tsai-19b53a147/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            <li>
+                <a target="_blank" href="https://www.instagram.com/ian.aapm/">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Work Life Balance? 2023
+                    <br>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/ianlife\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+
+</html>

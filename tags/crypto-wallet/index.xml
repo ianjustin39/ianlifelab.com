@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crypto wallet on Work Life Balance?</title>
+    <link>https://ianjustin39.github.io/ianlife/tags/crypto-wallet/</link>
+    <description>Recent content in Crypto wallet on Work Life Balance?</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 14 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/tags/crypto-wallet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>交易所推出錢包服務代表什麼？</title>
+      <link>https://ianjustin39.github.io/ianlife/post/technology/blockchain/exchange-and-wallet/</link>
+      <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/post/technology/blockchain/exchange-and-wallet/</guid>
+      <description>錢包是踏入 Web3 的第一站但大家卻都選擇交易所？ 在幣圈打滾幾年的人應該都知道，如果要使用 Defi 或是進入元宇宙，都會需要自己建立一個加密貨幣的錢包，但交易所的用戶量始終大於錢包的用戶，明明錢包應該才是進入 Web3 的入口，為什麼大家卻選擇交易所呢？我認為有以下兩個原因
+交易所的操作性與 web2 一樣 大部分用戶是想要『投資賺錢』 過去的 web3 因為進入門檻實在太高，再加上未知的領域太多，導致一般人很難或是很怕進入這個領域，但隨著早期貢獻者的開拓以及技術的堆疊，現在進入 web3 的門檻已經不像以前一樣那麼高，而且各種應用的出現也是為了讓圈外人可以更簡單的進入這個產業。而錢包則從早期保護資產安全到中期可以連動多種 Dapp 到現在試著融入一般現實世界的生活。雖然幣圈老屁股不段強調 Not your key, not your crypto，一直呼籲菜鳥玩家要用錢包，把錢放在自己身上才是最安全的，連世界第二大的 FTX 都可以倒，只有把錢放在自己身上才沒有風險（還是有啊，忘記種子的話 XD），但為何大家還是去用交易所呢？
+主打去中心化的優勢？但用戶只在意好不好用，賺不賺得到錢 過去 web3 產業打著『自託管』、『去中心化是未來』的口號，試圖建立大家的『正確』的知識，但就算建構者不斷地呼籲這件事，時不時還是會有新聞報出哪間交易所其實是詐騙（如 2023 年的 JPEX），散戶們損失了幾個億等等，而這類新聞只要出現，就會發現錢包商的用戶短期內會有所增長，那為何大家不一開始就使用錢包而還要去用交易所呢？
+試想以前在教自己的長輩使用 Facebook 或 Line 等這些他們那個時代沒有的東西時，是不是會聽到『這太難了拉』、『你幫我用好舊好，讓我可以直接用』，把這個情境搬到 web3 似乎沒有違和感，『蛤建立錢包要抄註記詞喔，啊我弄丟了錢不就不見了』、『交易所可以用 google 登入誒，我用交易所就好了吧』、『我只是要買幣又沒有要玩 Dapp，交易比較方便拉』之類的聲音出現。因為自己建立錢包不但不方便，還有可能遺失『密碼』讓自己的錢不見，我只是想要投資買幣而已，與其相信自己不如相信交易所。
+AA 錢包的出現讓交易所也開始推出錢包服務 EIP-4337 Account Abstraction 協議出現之後，似乎開始改變了這個窘境(網路上有很多關於 AA 提供了什麼功能，在這邊就先不細談)，在以太坊上使用 AA 錢包，體驗跟 web2 一樣，可以用手機或是 email 來建立錢包，就算丟失了帳戶的 key 也可以通過朋友或家人的錢包來為你做『社交恢復』，如此一來傳統加密貨幣錢包帶來的不便（複雜的註記詞）及風險（弄丟註記詞）在 AA 上面就被解決了。
+AA 錢包的出現，也讓交易所有所警覺，先撇除交易所提供豐富的金融商品，相較於錢包，交易所的優勢在於『當用戶只是想買加密貨幣投資時，交易所有著與 web2 有著相同的用戶體驗，讓用戶可以不需要有額外的學習成本就可以持有加密貨幣』。現在 AA 錢包有著跟交易所類似的體驗，卻更忠於 web3 的去中心化的理念，用戶也可以『真正持有自己的資產』，交易所能不緊張嗎？與其把用戶拱手讓給錢包商，不如自己成為錢包商，讓用戶的資產可以『低成本的』在交易所以及自家錢包內轉換，憑藉著交易所豐富的金融商品及使用體驗來綁住這些用戶。</description>
+    </item>
+    
+  </channel>
+</rss>
