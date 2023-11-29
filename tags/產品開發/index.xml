@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>產品開發 on Life Story</title>
+    <title>產品開發 on Work Life Balance?</title>
     <link>https://ianjustin39.github.io/ianlife/tags/%E7%94%A2%E5%93%81%E9%96%8B%E7%99%BC/</link>
-    <description>Recent content in 產品開發 on Life Story</description>
+    <description>Recent content in 產品開發 on Work Life Balance?</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Fri, 21 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/tags/%E7%94%A2%E5%93%81%E9%96%8B%E7%99%BC/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/tags/%E7%94%A2%E5%93%81%E9%96%8B%E7%99%BC/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[創業天堂路] 創業是什麼？</title>
-      <link>https://ianjustin39.github.io/ianlife/blog/product/product/startup-agneepath-01/</link>
-      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
+      <title>關於你我的創業夢！</title>
+      <link>https://ianjustin39.github.io/ianlife/post/start-up/product/the-entrepreneurial-dream-of-us/</link>
+      <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/blog/product/product/startup-agneepath-01/</guid>
-      <description>現在創業的方式多種多樣，包括自媒體、線上課程、拍攝影片、部落格，以及產品開發等。身為一名工程師兼產品經理，我選擇了著手開發一個全新的產品。 我將透過這一系列的文章，記錄產品開發過程中所遇到的各種疑問和挑戰。如果您閱讀了這些文章後有任何感想，或是想和我交流討論，都歡迎在底下留言給我喔！期待和大家分享我的創業旅程！
-上班好還是創業好？ 上班還是創業，這是個令人深思的問題。剛踏入社會時，當老闆似乎讓人熱血沸騰，不再為他人打工，擁有自主安排時間和豐厚收入。 然而，在經歷了幾年的職場歷練，從工程師轉變為產品經理，再晉升為產品主管，也跟著老闆一起做事，讓我漸漸體會到兩者的不同。
-在上班時，擁有穩定的薪水和專業指導令人感到幸福，只需專注於履行職責，並獲得他人的指引和支持。 而若選擇創業，當初可能以為不用再替他人打工，但事實上，老闆就是在為客戶服務，因為客戶是維持收入的來源。 自主安排時間的想法也不盡如人意，因為大部分時間都投入在工作中，創業成為生活的一部分。 除了滿足自身的興趣，還必須思考如何讓公司盈利，以及如何打造受用戶歡迎的產品等種種挑戰。 初創時期更需要處理各種琐碎事務，讓人不禁懷疑自己是否走對了方向。 因此，選擇上班或創業都有其優缺點。上班提供穩定和專業支援，而創業則需要勇氣和毅力去克服各種困難。無論選擇何種道路，都是個人價值觀和目標的體現。
-那&amp;hellip;為何要創業？ 對我來說，這就是一個夢想而已吧。有些人夢想成為電影明星，有些人渴望成為大廚，而我希望能夠打造一個讓眾人受惠的產品。
-那&amp;hellip;會失敗嗎？ 新創公司的存活率大約只有 10%，而另外 90% 的公司在成立後三五年內就會倒閉。 這些資料是從網路上查到的，許多人看到後可能會想，&amp;ldquo;哇！那是不是去上班就好？&amp;rdquo; 正如剛才所提到的，每個人的選擇都不盡相同。 有人選擇成為演員，有人選擇成為廚師。相信在大家做出這些選擇時，應該不太會考慮&amp;quot;要是失敗了怎麼辦&amp;quot;，而是會思考&amp;quot;我要怎麼達成目標&amp;quot;。
-如果到時真的失敗了，那就把它化為養分，下一段路將會走得更順暢，所以不用為還沒發生的事情擔心，Just do it!!</description>
+      <guid>https://ianjustin39.github.io/ianlife/post/start-up/product/the-entrepreneurial-dream-of-us/</guid>
+      <description>產品終於上線拉！ 經過一陣子的開發跟測試，專為美容業打造的工作室管理神器 MeFresh 終於上線拉，過去幾個月在產品開發的過程中踩了不少的雷， 也被試用的用戶教育產品的易用性等，但這對於產品來說都是很好的養分，所以也想把這段路記下來， 或許之後回來看自己會覺得“當時的我怎麼如此的菜，這麼簡單的事都不會” XD
+起點！ 簡單聊聊做產品的初衷！
+以前是工程師的時候，對於做產品有些興趣，當初為了玩運彩還跟朋友特別寫了一支 Line 的報單機器人，想不到這產品最後賣了出去， 這件事不但打開的我對於『做產品』的興趣，也影響了我的職涯發展。
+或許也是被這個時代影響，總有『我就是要創造自己的一番事業』的感覺，之後也上了許多課程以及講座，也嘗試了幾個題目但都沒有好的結果， 這時的我不禁思考，是否應該先好好工作累積一些知識或能力，再重新開始看看。
+這段時間我依舊上了不少線上課程，但相較於之前課程內容的差異，我更專注於『產品』或是『商業』的課，我認為光有技術可能沒辦法做好一個產品， 『產品思維』可以幫助我跳脫工程師的框架，讓我更了解近市場及用戶的真實感受。
+至於怎麼再次開始做新的產品開發，有空再寫其他的文章分享給大家！！
+這個系列文主要是紀錄創業的過程，如產品開發踩了什麼坑、與夥伴合作遇到什麼困難、推薦大家 start-up 的好用工具等， 可能也會分享一些我對於創業過程中的心態的轉變，如何從一個創業菜鳥一步一步長大，希望也給正在這條路上的你一些鼓勵？！</description>
     </item>
     
   </channel>
