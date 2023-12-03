@@ -25,7 +25,7 @@
     </item>
     
     <item>
-      <title>Product</title>
+      <title>product</title>
       <link>https://ianjustin39.github.io/ianlife/tags/product/</link>
       <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
       
@@ -61,56 +61,20 @@
     </item>
     
     <item>
-      <title>Account Abstraction</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/account-abstraction/</link>
+      <title>Web3</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/web3/</link>
       <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/tags/account-abstraction/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/tags/web3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blockchain</title>
       <link>https://ianjustin39.github.io/ianlife/tags/blockchain/</link>
-      <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
       
       <guid>https://ianjustin39.github.io/ianlife/tags/blockchain/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Crypto exchange</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/crypto-exchange/</link>
-      <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/tags/crypto-exchange/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Crypto wallet</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/crypto-wallet/</link>
-      <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/tags/crypto-wallet/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>EIP-4337</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/eip-4337/</link>
-      <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/tags/eip-4337/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>wireframe</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/wireframe/</link>
-      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/tags/wireframe/</guid>
       <description></description>
     </item>
     
@@ -142,29 +106,20 @@
     </item>
     
     <item>
-      <title>Algolia</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/algolia/</link>
-      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/tags/algolia/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blog</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/blog/</link>
-      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>hugo</title>
       <link>https://ianjustin39.github.io/ianlife/tags/hugo/</link>
       <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ianjustin39.github.io/ianlife/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>建立 Blog</title>
+      <link>https://ianjustin39.github.io/ianlife/tags/%E5%BB%BA%E7%AB%8B-blog/</link>
+      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/tags/%E5%BB%BA%E7%AB%8B-blog/</guid>
       <description></description>
     </item>
     
@@ -178,15 +133,6 @@
     </item>
     
     <item>
-      <title>Behavioural Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/behavioural-pattern/</link>
-      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/tags/behavioural-pattern/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Design Pattern</title>
       <link>https://ianjustin39.github.io/ianlife/tags/design-pattern/</link>
       <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
@@ -196,56 +142,11 @@
     </item>
     
     <item>
-      <title>Structural Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/structural-pattern/</link>
-      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/tags/structural-pattern/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>鐵人賽</title>
       <link>https://ianjustin39.github.io/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD/</link>
-      <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://ianjustin39.github.io/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Creational Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/creational-pattern/</link>
-      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/tags/creational-pattern/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Design Principle</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/design-principle/</link>
-      <pubDate>Wed, 16 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/tags/design-principle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bootstrap</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/bootstrap/</link>
-      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/tags/bootstrap/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>github</title>
-      <link>https://ianjustin39.github.io/ianlife/tags/github/</link>
-      <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianjustin39.github.io/ianlife/tags/github/</guid>
       <description></description>
     </item>
     
