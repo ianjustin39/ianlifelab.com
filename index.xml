@@ -5,7 +5,23 @@
     <link>https://ianjustin39.github.io/ianlife/</link>
     <description>Recent content on Work Life Balance?</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 05 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>新產品不適合跑 Scrum？</title>
+      <link>https://ianjustin39.github.io/ianlife/post/start-up/start-up/do-not-use-scrum-before-new-pd-launch/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianjustin39.github.io/ianlife/post/start-up/start-up/do-not-use-scrum-before-new-pd-launch/</guid>
+      <description>Scrum 算是現在軟體公司內最主流的協作框架，藉由 sprint 來切割產品每次更新的 scpoe ，讓產品可以不斷地與用戶互動，從而打造最貼近用戶及市場的產品。 但並不是所有的產品或是團隊都適合執行 Scrum 這個框架，甚至 Scrum 會阻礙開發的進度。
+Scrum 的優勢在於小步快跑 Scrum 的優勢在於小步快跑，產品藉由每次的迭代更新，不斷地適應市場的改變與用戶的需求。 在執行 sprint 的過程中，會評估每個 task 所需要花的資源、每個 sprint 可以完成掉多少 task 以及定義每個 sprint 的 goals 等， 這些數據讓 PM 可以有效的管理產品的進度，同時也可以經由這些資訊與不同的部門合作，讓產品可以在市場上順利被推行。
+新產品還沒上線之前不適合跑 Scrum？ 為什麼會說產品還沒上市前不適合跑 Scrum 呢？剛剛有提到，Scrum 講求小步快跑，藉由產品的快速迭代獲取更多用戶反饋，進而打造更貼近市場的產品。 重點來了！『產品的快速迭代』來獲取反饋，但產品還沒上線，怎麼來迭代獲取反饋呢？ 同時 Scrum 中的會議也會大量使用掉團隊的時間，在產品發布之前更應該把時間放在開發產品上，盡量避免耗時太久的會議。
+在新產品上線之前，通常團隊或是 PM 會決定好新產品要有什麼功能，或是具備什麼條件，滿足這些需求推出市場才有意義。 所以在開發新產品時，團隊的目標並非迭代產品，而是完成可上線的產品，讓銷售部門可以順利的將產品推往市場。 這階段會更像是專案式的開發方式而非 Scrum。
+專案式的開發方式，就像接案公司承接甲方的案件一樣，有明確的交付日期以及交付項目，這些資訊通常會跟著發佈計畫做調整； 同理，在公司內部開發新產品時，也會有一個發布計畫，預計新產品需要在何時發布、發布時需要囊括哪些功能、預期帶來什麼效應等等， 若錯過此時機，可能發布的效果就不會如預期般理想。
+時效性的例子，我想以 Youtuber 是最好的範例，每年 Apple 新品發佈會，各大科技 YT 都會守在電腦前面，甚至有的被受邀出席 Apple 官方的實體發佈會， 在結束後分秒必爭的整理素材、剪輯後製、發布影片，為了就是要搭上發佈會後的這個黃金時段，因為這時流量最高，可能只要晚同業一兩天，流量就是天與地的差異。 產品的開發雖然沒有這麼極端，但邏輯卻非常相似。
+這是否代表用專案式開發方式，要完全捨棄 Scrum 用取代呢？
+新產品並非不適合 Scrum，而是看怎麼使用 其實並非新產品不適合 Scrum，而是不要拘泥於形式讓 Scrum 成了開發上的障礙。</description>
+    </item>
+    
     <item>
       <title>矽谷推崇的新創思維 - 為何要產品需要 MVP？</title>
       <link>https://ianjustin39.github.io/ianlife/post/start-up/start-up/why-need-mvp/</link>
