@@ -59,6 +59,9 @@
     
     
 
+    <link rel="stylesheet" href="/ianlife/css/carousel.css"/>
+    <script src="/ianlife/js/carousel.js"></script>
+
     
     <script src="/ianlife/js/jquery.min.js"></script>
 
@@ -73,6 +76,7 @@
 
     
     
+
 
 </head>
 
@@ -245,7 +249,7 @@ if (!doNotTrack) {
                 sidebar-container
                 catalog-container"
                 >
-                    <div class="side-catalog" style="margin-top: 40px;">
+                    <div class="side-catalog" style="margin-top: 100px;">
                         
                         
                         <ul class="catalog-body"></ul>
@@ -323,195 +327,21 @@ if (!doNotTrack) {
 
 
 
-
-
-
+<div id="carousel0" class="carousel" duration="3000" style="left: 50%; transform: translate(-50%,0); width:700px ;">
     
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-
-
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
-
-
-
-<style>
-    
-#slide-windowtop1 {
-    position: relative;
-    width: 700px;
-    height: 400px;
-    overflow: hidden;
-    top: 0px;
-     
-     
-    left: 50%;
-    transform: translate(-50%,0); 
-}
-
-#slides-listtop1 {
-    width: 700px;
-    height: 400px;
-    position: absolute;
-    margin: 0px;
-    padding: 0px;
-    -webkit-transform: translate3d(0px, 0px, 0px);
-    transform: translate3d(0px, 0px, 0px);
-    transition: all 0.66s ease;
-    -webkit-transition: all 0.66s ease;
-}
-
-.slidetop1 {
-    list-style: none;
-    position: relative;
-    float: left;
-    margin: 0;
-    padding: 0;
-    width: 700px;
-    height: 400px;
-    background: #ccc;
-    text-align: center;
-    line-height: 100%;
-    background-size: cover;
-    background-position: 50% 50%;
-    color: #fff;
-    -webkit-transform: translate3d(0px, 0px, 0px);
-    -webkit-transform-style: preserve-3d;
-}
-
-.nav {
-    position: relative;
-    z-index: 9;
-    top: 45%;
-    cursor: pointer;
-    color: #fff;
-    opacity: 0.7;
-    transition: all 0.66s ease;
-    -webkit-transition: all 0.66s ease;
-}
-
-.nav:hover {
-    opacity: 1.0;
-}
-
-#lefttop1 {
-    left: 3%;
-    float: left;
-}
-
-#righttop1 {
-    right: 3%;
-    float: right;
-}
-
-
- 
-@media (max-width: 480px) {
-    #slide-windowtop1 {
-        width: 100%;
-        height: 100;
-    }
-
-    #slides-listtop1 {
-        width: 100%;
-        height: 100;
-    }
-
-      
-
-     
-    } */
-}
-</style>
-
-
-<div id="slide-windowtop1">
-    <ol id="slides-listtop1"><li class="slidetop1" style="background-image:url(https://i.imgur.com/SopWXLz.jpg);"></li><li class="slidetop1" style="background-image:url(https://i.imgur.com/3it2V5J.jpg);"></li></ol>
-    <span class="nav fa fa-angle-double-left fa-3x" id="lefttop1"></span>
-    <span class="nav fa fa-angle-double-right fa-3x" id="righttop1"></span>
-</div>
-
-<script>
-sliderJQuery = jQuery.noConflict();
-sliderJQuery(function( $ ) {
-    $.global = new Object();
-    $.global.total = 0;
-
-    $(document).ready(function () {
-        var slideWindowWidth = $('#slide-windowtop1').width();
-        var slideCount = $('#slides-listtop1 li').length;
-        var totalSlidesWidth = slideCount * slideWindowWidth;
-
-        $.global.item = 0;
-        $.global.total = slideCount;
-
-        $('.slidetop1').css('width', slideWindowWidth + 'px');
-        $('#slides-listtop1').css('width', totalSlidesWidth + 'px');
-
-        $('#lefttop1').click(function () {
+    <ul>
+            <li id="c_slide1" style="min-width: calc(100%/); padding-bottom: 400px; background-image:url(https://i.imgur.com/SopWXLz.jpg);"></li>
             
-            resetAutoSlide();
-            performSlide('back');
-        });
-
-        $('#righttop1').click(function () {
-            resetAutoSlide();
-            performSlide('forward');
-        });
-
-    });
-
-    function performSlide(direction) {
-        if (direction == 'back') {
-            var nextSlideId = $.global.item - 1;
-        }
-        if (direction == 'forward') {
-            var nextSlideId = $.global.item + 1;
-        }
-
-        if (nextSlideId == -1) {
-             
-            moveCss($.global.total - 1);
-        } else if (nextSlideId == $.global.total) {
-             
-            moveCss(0);
-        } else {
-             
-            moveCss(nextSlideId);
-        }
-    }
-
-    function moveCss(nextSlideId) {
-        var slideWindowWidth = $('#slide-windowtop1').width();
-        var margin = slideWindowWidth * nextSlideId;
-
-        $('#slides-listtop1').css('transform', 'translate3d(-' + margin + 'px,0px,0px)');
-
-        $.global.item = nextSlideId;
-    }
-
-    
-      var autoSlide = parseInt("3000", 10);
-      var autoSlideInterval;
-      function resetAutoSlide(){
-        if(autoSlide) {
-          if(autoSlideInterval) {
-            clearInterval(autoSlideInterval);
-          }
-          autoSlideInterval = setInterval(function(){
-            performSlide('forward');
-          }, autoSlide)
-        }
-      }
-      resetAutoSlide();
-});
-</script>
-
-
-
-
-
+        </li>
+            <li id="c_slide2" style="min-width: calc(100%/); padding-bottom: 400px; background-image:url(https://i.imgur.com/3it2V5J.jpg);"></li>
+            
+        </li></ul>
+    <ol style="padding-inline-start: 0px;"><li><a href="#c_slide1"></a></li>
+        <li><a href="#c_slide2"></a></li>
+        </ol>
+    <div class="prev">&lsaquo;</div>
+    <div class="next">&rsaquo;</div>
+</div>
 <blockquote>
 <p><strong>Top1 EDIYA COFFEE</strong></p>
 <p>四樓有專門的讀書或辦公空間，幾乎每個座位都有插座，且網路很順，環境安靜不吵雜</p>
@@ -527,195 +357,29 @@ sliderJQuery(function( $ ) {
 
 
 
-
-
-
+<div id="carousel1" class="carousel" duration="3000" style="left: 50%; transform: translate(-50%,0); width:700px ;">
     
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-
-
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
-
-
-
-<style>
-    
-#slide-windowtop2 {
-    position: relative;
-    width: 700px;
-    height: 400px;
-    overflow: hidden;
-    top: 0px;
-     
-     
-    left: 50%;
-    transform: translate(-50%,0); 
-}
-
-#slides-listtop2 {
-    width: 700px;
-    height: 400px;
-    position: absolute;
-    margin: 0px;
-    padding: 0px;
-    -webkit-transform: translate3d(0px, 0px, 0px);
-    transform: translate3d(0px, 0px, 0px);
-    transition: all 0.66s ease;
-    -webkit-transition: all 0.66s ease;
-}
-
-.slidetop2 {
-    list-style: none;
-    position: relative;
-    float: left;
-    margin: 0;
-    padding: 0;
-    width: 700px;
-    height: 400px;
-    background: #ccc;
-    text-align: center;
-    line-height: 100%;
-    background-size: cover;
-    background-position: 50% 50%;
-    color: #fff;
-    -webkit-transform: translate3d(0px, 0px, 0px);
-    -webkit-transform-style: preserve-3d;
-}
-
-.nav {
-    position: relative;
-    z-index: 9;
-    top: 45%;
-    cursor: pointer;
-    color: #fff;
-    opacity: 0.7;
-    transition: all 0.66s ease;
-    -webkit-transition: all 0.66s ease;
-}
-
-.nav:hover {
-    opacity: 1.0;
-}
-
-#lefttop2 {
-    left: 3%;
-    float: left;
-}
-
-#righttop2 {
-    right: 3%;
-    float: right;
-}
-
-
- 
-@media (max-width: 480px) {
-    #slide-windowtop2 {
-        width: 100%;
-        height: 100;
-    }
-
-    #slides-listtop2 {
-        width: 100%;
-        height: 100;
-    }
-
-      
-
-     
-    } */
-}
-</style>
-
-
-<div id="slide-windowtop2">
-    <ol id="slides-listtop2"><li class="slidetop2" style="background-image:url(https://i.imgur.com/1PikY8g.jpg);"></li><li class="slidetop2" style="background-image:url(https://i.imgur.com/cNPaD8r.jpg);"></li><li class="slidetop2" style="background-image:url(https://i.imgur.com/ZA7oILC.jpg);"></li><li class="slidetop2" style="background-image:url(https://i.imgur.com/rl6w6Hc.jpg);"></li></ol>
-    <span class="nav fa fa-angle-double-left fa-3x" id="lefttop2"></span>
-    <span class="nav fa fa-angle-double-right fa-3x" id="righttop2"></span>
-</div>
-
-<script>
-sliderJQuery = jQuery.noConflict();
-sliderJQuery(function( $ ) {
-    $.global = new Object();
-    $.global.total = 0;
-
-    $(document).ready(function () {
-        var slideWindowWidth = $('#slide-windowtop2').width();
-        var slideCount = $('#slides-listtop2 li').length;
-        var totalSlidesWidth = slideCount * slideWindowWidth;
-
-        $.global.item = 0;
-        $.global.total = slideCount;
-
-        $('.slidetop2').css('width', slideWindowWidth + 'px');
-        $('#slides-listtop2').css('width', totalSlidesWidth + 'px');
-
-        $('#lefttop2').click(function () {
+    <ul>
+            <li id="c_slide1" style="min-width: calc(100%/); padding-bottom: 400px; background-image:url(https://i.imgur.com/1PikY8g.jpg);"></li>
             
-            resetAutoSlide();
-            performSlide('back');
-        });
-
-        $('#righttop2').click(function () {
-            resetAutoSlide();
-            performSlide('forward');
-        });
-
-    });
-
-    function performSlide(direction) {
-        if (direction == 'back') {
-            var nextSlideId = $.global.item - 1;
-        }
-        if (direction == 'forward') {
-            var nextSlideId = $.global.item + 1;
-        }
-
-        if (nextSlideId == -1) {
-             
-            moveCss($.global.total - 1);
-        } else if (nextSlideId == $.global.total) {
-             
-            moveCss(0);
-        } else {
-             
-            moveCss(nextSlideId);
-        }
-    }
-
-    function moveCss(nextSlideId) {
-        var slideWindowWidth = $('#slide-windowtop2').width();
-        var margin = slideWindowWidth * nextSlideId;
-
-        $('#slides-listtop2').css('transform', 'translate3d(-' + margin + 'px,0px,0px)');
-
-        $.global.item = nextSlideId;
-    }
-
-    
-      var autoSlide = parseInt("3000", 10);
-      var autoSlideInterval;
-      function resetAutoSlide(){
-        if(autoSlide) {
-          if(autoSlideInterval) {
-            clearInterval(autoSlideInterval);
-          }
-          autoSlideInterval = setInterval(function(){
-            performSlide('forward');
-          }, autoSlide)
-        }
-      }
-      resetAutoSlide();
-});
-</script>
-
-
-
-
-
+        </li>
+            <li id="c_slide2" style="min-width: calc(100%/); padding-bottom: 400px; background-image:url(https://i.imgur.com/cNPaD8r.jpg);"></li>
+            
+        </li>
+            <li id="c_slide3" style="min-width: calc(100%/); padding-bottom: 400px; background-image:url(https://i.imgur.com/ZA7oILC.jpg);"></li>
+            
+        </li>
+            <li id="c_slide4" style="min-width: calc(100%/); padding-bottom: 400px; background-image:url(https://i.imgur.com/rl6w6Hc.jpg);"></li>
+            
+        </li></ul>
+    <ol style="padding-inline-start: 0px;"><li><a href="#c_slide1"></a></li>
+        <li><a href="#c_slide2"></a></li>
+        <li><a href="#c_slide3"></a></li>
+        <li><a href="#c_slide4"></a></li>
+        </ol>
+    <div class="prev">&lsaquo;</div>
+    <div class="next">&rsaquo;</div>
+</div>
 <blockquote>
 <p><strong>Top2 Blackup coffee</strong></p>
 <p>這間有四層樓，靠邊或柱子的位子都有插座，網路很順，有時會有人聊天，但不影響工作。招牌海鹽咖啡必點，喝拎！！</p>
@@ -731,195 +395,25 @@ sliderJQuery(function( $ ) {
 
 
 
-
-
-
+<div id="carousel2" class="carousel" duration="3000" style="left: 50%; transform: translate(-50%,0); width:700px ;">
     
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-
-
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
-
-
-
-<style>
-    
-#slide-windowtop3 {
-    position: relative;
-    width: 700px;
-    height: 400px;
-    overflow: hidden;
-    top: 0px;
-     
-     
-    left: 50%;
-    transform: translate(-50%,0); 
-}
-
-#slides-listtop3 {
-    width: 700px;
-    height: 400px;
-    position: absolute;
-    margin: 0px;
-    padding: 0px;
-    -webkit-transform: translate3d(0px, 0px, 0px);
-    transform: translate3d(0px, 0px, 0px);
-    transition: all 0.66s ease;
-    -webkit-transition: all 0.66s ease;
-}
-
-.slidetop3 {
-    list-style: none;
-    position: relative;
-    float: left;
-    margin: 0;
-    padding: 0;
-    width: 700px;
-    height: 400px;
-    background: #ccc;
-    text-align: center;
-    line-height: 100%;
-    background-size: cover;
-    background-position: 50% 50%;
-    color: #fff;
-    -webkit-transform: translate3d(0px, 0px, 0px);
-    -webkit-transform-style: preserve-3d;
-}
-
-.nav {
-    position: relative;
-    z-index: 9;
-    top: 45%;
-    cursor: pointer;
-    color: #fff;
-    opacity: 0.7;
-    transition: all 0.66s ease;
-    -webkit-transition: all 0.66s ease;
-}
-
-.nav:hover {
-    opacity: 1.0;
-}
-
-#lefttop3 {
-    left: 3%;
-    float: left;
-}
-
-#righttop3 {
-    right: 3%;
-    float: right;
-}
-
-
- 
-@media (max-width: 480px) {
-    #slide-windowtop3 {
-        width: 100%;
-        height: 100;
-    }
-
-    #slides-listtop3 {
-        width: 100%;
-        height: 100;
-    }
-
-      
-
-     
-    } */
-}
-</style>
-
-
-<div id="slide-windowtop3">
-    <ol id="slides-listtop3"><li class="slidetop3" style="background-image:url(https://i.imgur.com/FEbjpzA.jpg);"></li><li class="slidetop3" style="background-image:url(https://i.imgur.com/18f0JtO.jpg);"></li><li class="slidetop3" style="background-image:url(https://i.imgur.com/Ldmg60F.jpg);"></li></ol>
-    <span class="nav fa fa-angle-double-left fa-3x" id="lefttop3"></span>
-    <span class="nav fa fa-angle-double-right fa-3x" id="righttop3"></span>
-</div>
-
-<script>
-sliderJQuery = jQuery.noConflict();
-sliderJQuery(function( $ ) {
-    $.global = new Object();
-    $.global.total = 0;
-
-    $(document).ready(function () {
-        var slideWindowWidth = $('#slide-windowtop3').width();
-        var slideCount = $('#slides-listtop3 li').length;
-        var totalSlidesWidth = slideCount * slideWindowWidth;
-
-        $.global.item = 0;
-        $.global.total = slideCount;
-
-        $('.slidetop3').css('width', slideWindowWidth + 'px');
-        $('#slides-listtop3').css('width', totalSlidesWidth + 'px');
-
-        $('#lefttop3').click(function () {
+    <ul>
+            <li id="c_slide1" style="min-width: calc(100%/); padding-bottom: 400px; background-image:url(https://i.imgur.com/FEbjpzA.jpg);"></li>
             
-            resetAutoSlide();
-            performSlide('back');
-        });
-
-        $('#righttop3').click(function () {
-            resetAutoSlide();
-            performSlide('forward');
-        });
-
-    });
-
-    function performSlide(direction) {
-        if (direction == 'back') {
-            var nextSlideId = $.global.item - 1;
-        }
-        if (direction == 'forward') {
-            var nextSlideId = $.global.item + 1;
-        }
-
-        if (nextSlideId == -1) {
-             
-            moveCss($.global.total - 1);
-        } else if (nextSlideId == $.global.total) {
-             
-            moveCss(0);
-        } else {
-             
-            moveCss(nextSlideId);
-        }
-    }
-
-    function moveCss(nextSlideId) {
-        var slideWindowWidth = $('#slide-windowtop3').width();
-        var margin = slideWindowWidth * nextSlideId;
-
-        $('#slides-listtop3').css('transform', 'translate3d(-' + margin + 'px,0px,0px)');
-
-        $.global.item = nextSlideId;
-    }
-
-    
-      var autoSlide = parseInt("3000", 10);
-      var autoSlideInterval;
-      function resetAutoSlide(){
-        if(autoSlide) {
-          if(autoSlideInterval) {
-            clearInterval(autoSlideInterval);
-          }
-          autoSlideInterval = setInterval(function(){
-            performSlide('forward');
-          }, autoSlide)
-        }
-      }
-      resetAutoSlide();
-});
-</script>
-
-
-
-
-
+        </li>
+            <li id="c_slide2" style="min-width: calc(100%/); padding-bottom: 400px; background-image:url(https://i.imgur.com/18f0JtO.jpg);"></li>
+            
+        </li>
+            <li id="c_slide3" style="min-width: calc(100%/); padding-bottom: 400px; background-image:url(https://i.imgur.com/Ldmg60F.jpg);"></li>
+            
+        </li></ul>
+    <ol style="padding-inline-start: 0px;"><li><a href="#c_slide1"></a></li>
+        <li><a href="#c_slide2"></a></li>
+        <li><a href="#c_slide3"></a></li>
+        </ol>
+    <div class="prev">&lsaquo;</div>
+    <div class="next">&rsaquo;</div>
+</div>
 <blockquote>
 <p><strong>Top3 CONGCAPHE</strong></p>
 <p>這間有四層樓，頂樓為室外咖啡廳，整體有種復古的感覺，靠窗或牆壁都有插座，網路還行，不過如果是在樓梯下面就會斷線。</p>
@@ -1095,6 +589,11 @@ sliderJQuery(function( $ ) {
 
 
 
+<link rel="stylesheet" href="/ianlife/css/carousel.css"/>
+<script src="/ianlife/js/carousel.js"></script>
+
+
+
 
 <script>
     function loadAsync(u, c) {
@@ -1151,7 +650,6 @@ sliderJQuery(function( $ ) {
         
         var P = $(_containerSelector), a, n, t, l, i, c;
         a = P.find('h1,h2,h3,h4,h5,h6');
-
         
         $(selector).html('')
 
