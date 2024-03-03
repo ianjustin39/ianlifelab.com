@@ -5,7 +5,29 @@
     <link>https://ianlifelab.com/</link>
     <description>Recent content on Own your life</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ianlifelab.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ianlifelab.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>還在自己畫流程圖嗎？學會下指令讓 ChatGPT &#43; Notion 幫你解決所有事情</title>
+      <link>https://ianlifelab.com/tech/drawing-flowcharts-with-ChatGPT-and-Notion/</link>
+      <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianlifelab.com/tech/drawing-flowcharts-with-ChatGPT-and-Notion/</guid>
+      <description>你的產品流程圖還在慢慢畫嗎？
+開發產品時產品經理需要畫很多圖，就算是自己創業或是做 Side project，把你龐大的思緒整理成有條理的流程圖或心智圖也要花上不少時間。 最近在設計產品的全新功能，使用 ChatGPT + Notion 組合後發現，這組合大大的降低我準備素材的時間，只需要直接將 Mermaid 程式碼放入 Notion 的程式碼 block 內就可以將流程圖呈現出來，不需要再用 Mirror 或是 Figma 一個一個拉，同時 Notion 為主要的產品管理平台， 等於我們使用了最少的工具及時間，就可以完成這些複雜的事情。
+該準備什麼素材給 ChatGPT？ 如何下 prompt 應該是大家比較在意的事情，但在下 prompt 之前，身為 PM 的你應該對於接下來要設計的新功能流程有一定程度上的了解， 如果沒有也沒關係，可以先問問 GPT ，看他對於你想要設計的新功能有什麼想法：
+在詢問時先告訴 GPT 他需要 cosplay 什麼角色，GPT 會依照角色跟問題給回答一個相對精準的答案
+註：回答的內容有點多截取部分做表示
+這時你可以檢查這個流程是不是跟你想像中的一樣，或是有哪些地方需要增減，這邊先假設他提供的流程符合我的需求， 所以我接續要求他把這段流程寫成 Mermaid 的語法：
+這時你便獲得了一串看似很複雜，自己要研究很久才看得懂的程式碼。不過不用擔心，你只需要將這段程式碼貼到 Notion 上， Notion 會自動幫你畫出整張流程圖
+若覺得流程圖直式很難看，你只需要將程式碼第一行的graph TD 改為 graph LR 那流程圖就會改為橫式，就看使用上篇好哪種方式呈現拉！
+LR：從左到右。
+RL：從右到左。
+TB or TD：從上到下。
+BT：從下到上。
+以流程圖來說，ChatGPT 產出的程式碼已經算堪用，畢竟流程只是要討論接下來如何實作該功能，但如果你希望更了解如何撰寫流程圖的話， 可以參考 Mermaid 的官方 Doc的資訊學習。
+Functional Map 也讓 GPT 來幫我完成吧 隨著產品越來越大，Functional Map (功能地圖) 的維護也越發困難&amp;hellip;，但不要擔心，一樣靠 GPT 可以幫助你完成這件事。</description>
+    </item>
+    
     <item>
       <title>數位遊牧住哪裡？充滿法式風情的越南首都 - 河內</title>
       <link>https://ianlifelab.com/life/hanoi-digital-nomadism/</link>

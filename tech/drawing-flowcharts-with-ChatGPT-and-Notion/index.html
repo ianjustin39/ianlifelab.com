@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Own your life">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://ianlifelab.com//https://i.imgur.com/HNaPaLS.png">
+    <meta property="twitter:image" content="https://ianlifelab.com//https://i.imgur.com/HNaPaLS.png" />
+    
+
+    
+    <meta name="title" content="還在自己畫流程圖嗎？學會下指令讓 ChatGPT &#43; Notion 幫你解決所有事情" />
+    <meta property="og:title" content="還在自己畫流程圖嗎？學會下指令讓 ChatGPT &#43; Notion 幫你解決所有事情" />
+    <meta property="twitter:title" content="還在自己畫流程圖嗎？學會下指令讓 ChatGPT &#43; Notion 幫你解決所有事情" />
+    
+
+    
+    <meta name="description" content="使用 ChatGPT &#43; Notion 幫你完成複雜的流程圖工作，節省你的工作時間同時提升溝通效率。">
+    <meta property="og:description" content="使用 ChatGPT &#43; Notion 幫你完成複雜的流程圖工作，節省你的工作時間同時提升溝通效率。" />
+    <meta property="twitter:description" content="使用 ChatGPT &#43; Notion 幫你完成複雜的流程圖工作，節省你的工作時間同時提升溝通效率。" />
+    
+
+    <meta name="keywords" content="ChatGPT, Notion, AI, Notion AI, ChatGPT畫流程圖, 流程圖, 怎麼畫流程圖, functional map, 功能地圖, AI 工具" />
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+    <meta name="google-site-verification" content="zuuW7hNy_wHvxLOBYVTEFg-sj9gxcQVWbEVp4_G50CY" />
+    <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師, 創業, 個人成長">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>還在自己畫流程圖嗎？學會下指令讓 ChatGPT &#43; Notion 幫你解決所有事情 | Ian&#39;s Blog</title>
+
+    <link rel="canonical" href="/tech/drawing-flowcharts-with-ChatGPT-and-Notion/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    <link rel="stylesheet" href="/css/carousel.css"/>
+    <script src="/js/carousel.js"></script>
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+
+</head>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
+
+    <div class="container-fluid"  style="background-color: rgba(0, 0, 0, 0.1) ">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Ian&#39;s Blog</a>
+            
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse" >
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">HOME</a>
+                    </li>
+                    
+                    
+		    
+                        <li><a href="/categories/start-up/">創業筆記</a></li>
+                    
+                        <li><a href="/categories/learning/">個人成長</a></li>
+                    
+                        <li><a href="/categories/nomads/">數位遊牧</a></li>
+                    
+                        <li><a href="/categories/product/">產品思維</a></li>
+                    
+                        <li><a href="/categories/tech/">科技探索</a></li>
+                    
+                        <li><a href="/categories/life/">生活隨筆</a></li>
+                    
+                        <li><a href="/archive/">所有文章</a></li>
+                    
+		            
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('https://i.imgur.com/6m0ct4x.jpg');
+         
+        background-color: rgb(128, 128, 128, 0.3);
+        background-blend-mode: multiply;
+    }
+</style>
+
+    <header class="intro-header">
+        
+        <div class="container">
+            <div class="">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" >
+                    <div class="post-heading" >
+                        <div class="tags">
+                            
+                            <a class="tag" href="/tags/chatgpt" title="ChatGPT">
+                                ChatGPT
+                            </a>
+                            
+                            <a class="tag" href="/tags/notion" title="Notion">
+                                Notion
+                            </a>
+                            
+                            <a class="tag" href="/tags/%E7%94%A2%E5%93%81%E9%96%8B%E7%99%BC" title="產品開發">
+                                產品開發
+                            </a>
+                            
+                        </div>
+                        <h1>還在自己畫流程圖嗎？學會下指令讓 ChatGPT &#43; Notion 幫你解決所有事情</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            
+                            Posted by
+                            
+                            Ian Tsai
+                            
+                            on
+                            Tuesday, March 5, 2024
+                            
+                            
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    
+    <article>
+        <div class="container">
+
+            <div class="">
+
+                
+                
+                <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container"
+                >
+                    <div class="side-catalog" style="margin-top: 100px;">
+                        
+                        
+                        <ul class="catalog-body"></ul>
+
+                    <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianlifelab.com%2ftech%2fdrawing-flowcharts-with-ChatGPT-and-Notion%2f" width="100%"
+  frameborder=0></iframe>
+
+                    </div>
+                </div>
+                
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                    
+                    <!-- raw HTML omitted -->
+<p>你的產品流程圖還在慢慢畫嗎？</p>
+<p>開發產品時產品經理需要畫很多圖，就算是自己創業或是做 Side project，把你龐大的思緒整理成有條理的流程圖或心智圖也要花上不少時間。
+最近在設計產品的全新功能，使用 ChatGPT + Notion 組合後發現，這組合大大的降低我準備素材的時間，只需要直接將 Mermaid 程式碼放入 Notion 的程式碼 block 內就可以將流程圖呈現出來，不需要再用 Mirror 或是 Figma 一個一個拉，同時 Notion 為主要的產品管理平台，
+等於我們使用了最少的工具及時間，就可以完成這些複雜的事情。</p>
+<h2 id="該準備什麼素材給-chatgpt">該準備什麼素材給 ChatGPT？</h2>
+<hr>
+<p>如何下 prompt 應該是大家比較在意的事情，但在下 prompt 之前，身為 PM 的你應該對於接下來要設計的新功能流程有一定程度上的了解，
+如果沒有也沒關係，可以先問問 GPT ，看他對於你想要設計的新功能有什麼想法：</p>
+<p>
+  <img src="https://i.imgur.com/i3qkvuw.png" alt="">
+
+</p>
+<p>在詢問時先告訴 GPT 他需要 cosplay 什麼角色，GPT 會依照角色跟問題給回答一個相對精準的答案</p>
+<p>
+  <img src="https://i.imgur.com/Onydj1i.png" alt="">
+
+</p>
+<p><em>註：回答的內容有點多截取部分做表示</em></p>
+<p>這時你可以檢查這個流程是不是跟你想像中的一樣，或是有哪些地方需要增減，這邊先假設他提供的流程符合我的需求，
+所以我接續要求他把這段流程寫成 Mermaid 的語法：</p>
+<p>
+  <img src="https://i.imgur.com/XBJH4zi.png" alt="">
+
+</p>
+<p>
+  <img src="https://i.imgur.com/aU4J3g7.png" alt="">
+
+</p>
+<p>這時你便獲得了一串看似很複雜，自己要研究很久才看得懂的程式碼。不過不用擔心，你只需要將這段程式碼貼到 Notion 上，
+Notion 會自動幫你畫出整張流程圖</p>
+<p>
+  <img src="https://i.imgur.com/O1fU9Hp.png" alt="">
+
+
+
+  <img src="https://i.imgur.com/6RaPz2S.png" alt="">
+
+</p>
+<p>若覺得流程圖直式很難看，你只需要將程式碼第一行的<code>graph TD</code> 改為 <code>graph LR</code> 那流程圖就會改為橫式，就看使用上篇好哪種方式呈現拉！</p>
+<blockquote>
+<p>LR：從左到右。</p>
+<p>RL：從右到左。</p>
+<p>TB or TD：從上到下。</p>
+<p>BT：從下到上。</p>
+</blockquote>
+<p>
+  <img src="https://i.imgur.com/nIQ0gLY.png" alt="">
+
+</p>
+<p>以流程圖來說，ChatGPT 產出的程式碼已經算堪用，畢竟流程只是要討論接下來如何實作該功能，但如果你希望更了解如何撰寫流程圖的話，
+可以參考 <a href="https://mermaid.js.org/intro/">Mermaid 的官方 Doc</a>的資訊學習。</p>
+<h2 id="functional-map-也讓-gpt-來幫我完成吧">Functional Map 也讓 GPT 來幫我完成吧</h2>
+<hr>
+<p>隨著產品越來越大，Functional Map (功能地圖) 的維護也越發困難&hellip;，但不要擔心，一樣靠 GPT 可以幫助你完成這件事。</p>
+<p>一樣以會員系統為例，假設以下是會員系統所包含的功能</p>
+<pre><code>用戶註冊與登入
+    註冊新會員
+    用戶登入/登出
+    第三方帳號登入（如Facebook、Google等）
+    忘記密碼/重設密碼
+    電子郵件驗證
+    雙因素認證（選擇性增加安全性）
+    個人資料管理
+
+編輯個人資料（如姓名、電子郵件、生日等）
+    更改密碼
+    上傳/更換頭像
+    管理聯絡資訊（如地址、電話號碼）
+    設定偏好（如接收通知的偏好）
+    會員專屬功能
+
+積分/獎勵計畫
+    會員專屬優惠與折扣
+    早鳥訪問新產品或活動
+    會員等級系統
+    訂單管理
+
+查看訂單歷史
+    訂單詳情與進度追蹤
+    退貨/換貨申請與管理
+    通訊偏好設定
+
+訂閱/取消訂閱電子報
+    管理推送通知設定
+    設定隱私偏好
+    安全性與隱私
+
+帳戶安全檢查
+    查看帳戶活動歷史
+    設定隱私權限（誰可以看到個人資料等）
+    客戶支援與互動
+
+會員專線或客服聯繫方式
+    常見問題（FAQ）與幫助中心
+    會員意見反饋
+</code></pre>
+<p>
+  <img src="https://i.imgur.com/Lzi0FMF.png" alt="">
+
+</p>
+<p>
+  <img src="https://i.imgur.com/Tp9L7yL.png" alt="">
+
+</p>
+<p>
+  <img src="https://i.imgur.com/LIh5vf4.png" alt="">
+
+</p>
+<p>
+  <img src="https://i.imgur.com/mFDH9Cm.png" alt="">
+
+</p>
+<p>如此一來，身為 PM 或是 Product Owner 的你，只需要好好的管理這份文字檔，剩下的交給 ChatGPT 來幫助你，
+不只節省你的時間，資料圖形化後也易於理解，降低與他人之間的溝通成本。</p>
+<h2 id="gpt-的提問-prompt">GPT 的提問 prompt</h2>
+<hr>
+<p>如果是連續提問的話，就不需要一直跟他說他是誰了，直接叫他做事即可，分開提問才需要告訴他他要 cosplay 什麼角色。
+另外文字流程跟功能列表，都用 bullet point 的方式呈現比較好，這樣比較不會過於凌亂。</p>
+<p><strong>流程圖</strong></p>
+<pre tabindex="0"><code>你身為一個資深的產品設計師，有非常豐富的產品經驗，
+現在我要在本來的[你的產品類型]內新增一個[你預計新增的功能]，
+請你依照列出[你預計新增的功能]的流程，撰寫一段 Mermaid 的程式碼。
+
+[新功能的文字流程]
+</code></pre><p><strong>Functional Map</strong></p>
+<pre tabindex="0"><code>你身為一個資深的產品設計師，有非常豐富的產品經驗，
+請依照以下列出的所有[功能]撰寫出一段 Mermaid 的程式碼。
+
+[功能列表]
+</code></pre>
+
+
+                    
+                    <hr>
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/life/hanoi-digital-nomadism/" data-toggle="tooltip" data-placement="top"
+                                title="數位遊牧住哪裡？充滿法式風情的越南首都 - 河內">&larr;
+                                Previous Post</a>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+                </div>
+
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+
+
+<footer>
+    <div class="container">
+        <div class="">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:ianjustin39@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/ching-yu-tsai-19b53a147/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            <li>
+                <a target="_blank" href="https://www.instagram.com/startup.note/">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Own your life 2024
+                    <br>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<link rel="stylesheet" href="/css/carousel.css"/>
+<script src="/js/carousel.js"></script>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+
+</html>
