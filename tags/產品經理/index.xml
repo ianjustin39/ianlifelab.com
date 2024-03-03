@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>產品經理 on Own your life</title>
-    <link>https://ianlifelab.com/tags/%E7%94%A2%E5%93%81%E7%B6%93%E7%90%86/</link>
+    <link>https://ianjustin39.github.io/ianlife/tags/%E7%94%A2%E5%93%81%E7%B6%93%E7%90%86/</link>
     <description>Recent content in 產品經理 on Own your life</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 27 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ianlifelab.com/tags/%E7%94%A2%E5%93%81%E7%B6%93%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/tags/%E7%94%A2%E5%93%81%E7%B6%93%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>誰說 sprint ticket 一定要 story point?</title>
-      <link>https://ianlifelab.com/post/product/product/does-ticket-must-need-story-point/</link>
+      <link>https://ianjustin39.github.io/ianlife/post/product/product/does-ticket-must-need-story-point/</link>
       <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/product/product/does-ticket-must-need-story-point/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/post/product/product/does-ticket-must-need-story-point/</guid>
       <description>有參與過敏捷開發的人一定聽過 story point，網路上也很多有關 story point 的解釋以及如了運用， 他主要是協助衡量團隊的開發狀況，讓 PM 可以再有一定的基準下去跟其他部門溝通，如產品行銷或是活動銷售等等。 但是不是真的有了 story point 就一定可以讓產品或專案順利進行？ 有沒有可能有了 story point 但還是遇到一堆狀況？
 永遠估不準的 Story Point 有沒有遇過這個狀況，在 sprint lanning 時團隊評估這個 sprint 可以完成 40 點，但 sprint 結束時卻只完成了 25~30 點， 常見的原因可能有這幾種：
 ticket 的點數估不準（如後端工程師估一同評估前端工程師的 ticket ） 評估 ticket 時忘記某個項目也要做（如 App 新功能只評估畫面開發，遺漏 API 串接） 實作 ticket 時出現預期之外問題或任務（在串接第三方平台時，回的參數與文件給的不同） 這些狀況都可能對在進行中的 sprint 造成一些風險，當然一般來說還是有辦法解決， 通常會在 Retrospective meeting 中去討論如何避免這次該遇到的困難，如後端工程師需要了解前端的開發不只有畫面，也包含邏輯； 與第三方廠商串接資料時需要先確認文件與實際提供的參數是否相同等事項，並期待下次再評估點數時可以更貼近團隊的狀況。
@@ -21,10 +21,10 @@ ticket 的點數估不準（如後端工程師估一同評估前端工程師的 
     
     <item>
       <title>為什麼產品開發一定要有 Deadline？ 注意這五點提升團隊效率</title>
-      <link>https://ianlifelab.com/post/product/product/why-need-deadline/</link>
+      <link>https://ianjustin39.github.io/ianlife/post/product/product/why-need-deadline/</link>
       <pubDate>Sat, 05 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/product/product/why-need-deadline/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/post/product/product/why-need-deadline/</guid>
       <description>Deadline 的用途是什麼？ 產品經理在規劃產品路線圖（Roadmap）時常以會先做競品分析、市場分析或是用戶訪談，結著評估分析結果是否契合公司的年度或季度目標，最後再安排進 Roadmap 。這份 Roadmap 並非僅提供給產品跟技術團隊，行銷、業務、客服團隊也會根據 Roadmap 上即將釋出的功能去提前做準備，如與合作夥伴洽談、KOL 協作或是撰寫 FAQ 等，這時 Deadline 變得尤為重要，它成為各個團隊追蹤進度的標準。當 Deadline 一到，所有的任務都將完成，產品因此得以投入市場。不過若某團隊因為某些原因導致無法如期完成這項任務，則會影響到其他部門，甚至公司達成目標。
 因此， Deadline 不僅僅是產品發佈的時間點，同時也是團隊協作中的一個共同指標，避免有認知上的落差。
 Deadline 除了讓團隊有一致的目標，還能讓產品提早迭代 剛才我們提及，產品經理在策劃產品時有諸多因素需要考量。以區塊鏈產業來說，2021 年末是 NFT 風潮的高峰， 年初產品經理經過評估認為 NFT 將是今年的趨勢，因此規劃相關功能並預計年中完成並投入市場。若在 Deadline 之前完成，對於產品而言可以提早進入市場做測試、收集用戶反饋，進行迭代更新，等到 NFT 流量達到巔峰時，產品已經完成打磨，符合 80 甚至 90% 市場需求，行銷與業務部門也可以提前布局，讓產品更容易被市場關注，進而吸引大量的用戶。反之若錯失高峰後才完成，用戶早就已經找到習慣使用的產品，這時要再將其他產品的用戶轉換到自家產品將變得相當困難。
@@ -35,10 +35,10 @@ Deadline 除了讓團隊有一致的目標，還能讓產品提早迭代 剛才�
     
     <item>
       <title>畫 Wireframe 目的是什麼？</title>
-      <link>https://ianlifelab.com/post/product/product/pm101-wireframe/</link>
+      <link>https://ianjustin39.github.io/ianlife/post/product/product/pm101-wireframe/</link>
       <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/product/product/pm101-wireframe/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/post/product/product/pm101-wireframe/</guid>
       <description>最近畫 Wireframe 的頻率有點高，也畫出了一些心得，中間也有遇到一些問題，剛好分享紀錄一下。
 什麼是 Wireframe 基本的 Wireframe 是一種低保真的設計原型，頁面上面沒有華麗的設計元素，只有匡線、文字資訊、架構排版等。 在一個新的需求出現時，會有非常多的不確定性，需要先確定產品要呈現什麼資訊給用戶、使用旅程是什麼、可能遇到什麼問題、我們想解決什麼問題等， 都需要考慮進去，所以若是太快進入 UI 設計，如果架構或是流程等部分需要做更改，可能會造成過多的資源消耗。
 畫 Wireframe 目的是什麼？ 我認為 Wireframe 階段主要考慮以下兩個部分：
