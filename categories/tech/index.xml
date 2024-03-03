@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TECH on Own your life</title>
-    <link>https://ianjustin39.github.io/ianlife/categories/tech/</link>
+    <link>https://ianlifelab.com/categories/tech/</link>
     <description>Recent content in TECH on Own your life</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 14 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ianlifelab.com/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>為何交易所也推出錢包服務？</title>
-      <link>https://ianjustin39.github.io/ianlife/post/technology/blockchain/exchange-and-wallet/</link>
+      <link>https://ianlifelab.com/post/technology/blockchain/exchange-and-wallet/</link>
       <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/post/technology/blockchain/exchange-and-wallet/</guid>
+      <guid>https://ianlifelab.com/post/technology/blockchain/exchange-and-wallet/</guid>
       <description>錢包是踏入 Web3 的第一站但大家卻都選擇交易所？ 在幣圈打滾幾年的人應該都知道，如果要使用 Defi 或是進入元宇宙，都會需要自己建立一個加密貨幣的錢包，但交易所的用戶量始終大於錢包的用戶，明明錢包應該才是進入 Web3 的入口，為什麼大家卻選擇交易所呢？我認為有以下兩個原因
 交易所的操作性與 web2 一樣 大部分用戶是想要『投資賺錢』 過去的 web3 因為進入門檻實在太高，再加上未知的領域太多，導致一般人很難或是很怕進入這個領域，但隨著早期貢獻者的開拓以及技術的堆疊，現在進入 web3 的門檻已經不像以前一樣那麼高，而且各種應用的出現也是為了讓圈外人可以更簡單的進入這個產業。而錢包則從早期保護資產安全到中期可以連動多種 Dapp 到現在試著融入一般現實世界的生活。雖然幣圈老屁股不斷強調 Not your key, not your crypto，一直呼籲菜鳥玩家要用錢包，把錢放在自己身上才是最安全的，連世界第二大的 FTX 都可以倒，只有把錢放在自己身上才沒有風險（還是有啊，忘記種子的話 XD），但為何大家還是去用交易所呢？
 主打去中心化的優勢？但用戶只在意好不好用，賺不賺得到錢 過去 web3 產業打著『自託管』、『去中心化是未來』的口號，試圖建立大家的『正確』的知識，但就算建構者不斷地呼籲這件事，時不時還是會有新聞報出哪間交易所其實是詐騙（如 2023 年的 JPEX），散戶們損失了幾個億等等，而這類新聞只要出現，就會發現錢包商的用戶短期內會有所增長，那為何大家不一開始就使用錢包而還要去用交易所呢？
@@ -22,10 +22,10 @@ AA 錢包的出現，也讓交易所有所警覺，先撇除交易所提供豐�
     
     <item>
       <title>FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？</title>
-      <link>https://ianjustin39.github.io/ianlife/post/technology/blockchain/ftx-is-gone/</link>
+      <link>https://ianlifelab.com/post/technology/blockchain/ftx-is-gone/</link>
       <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/post/technology/blockchain/ftx-is-gone/</guid>
+      <guid>https://ianlifelab.com/post/technology/blockchain/ftx-is-gone/</guid>
       <description>在 2022/05 發生 Luna 崩跌事件後，當大家還覺得為什麼最近市場的波動這麼小時，全球第二大加密貨幣交易所 FTX 在上週給了大家一個驚喜，因為被爆私自挪用用戶資金，導致交易所內發生了擠兌潮，以至於 FTX 不堪負荷，不但暫停用戶提領，更在一週內宣告破產，讓許多來不及逃難的用戶資金卡在 FTX 內沒辦法拿出來。
 （ 還錢～～～
 FTX 相關事件的文章或分析相信在網路上搜個關鍵字都可以找到很多資訊在這就不多加敘述，而本篇要來探討的並非 FTX 倒閉，而是身在加密貨幣的世界裡，要如何選擇存放資產的位置，才不會風險發生時被當成韭菜收割。
@@ -40,10 +40,10 @@ Not Your Keys, Not Your Asset 什麼是 Key？區塊鏈的每一筆交易都需�
     
     <item>
       <title>幣圈黑天鵝，前十大公鏈 Terra 如何從月球殞落</title>
-      <link>https://ianjustin39.github.io/ianlife/post/technology/blockchain/blockchain-black-swan-terra/</link>
+      <link>https://ianlifelab.com/post/technology/blockchain/blockchain-black-swan-terra/</link>
       <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/post/technology/blockchain/blockchain-black-swan-terra/</guid>
+      <guid>https://ianlifelab.com/post/technology/blockchain/blockchain-black-swan-terra/</guid>
       <description>一個星期前，Terra 還是市值前十的加密貨幣，其中包含近期最熱門的 Defi 項目 Anchor 也是大家趨之若鶩投資的項目之一， 甚至有很多投資人把大部分資產兌換成 UST 放到 Anchor 內。 但短短的一週 Luna 的價格卻從 80 跌到0.00001 美金，Anchor 中的 UST 資金也大量的撤離， 這中間與 UST 脫鉤有著莫大的關係，一個大家都以為會成功的項目是如何在短時間內跌落谷底， 自身參與了這個幣圈的重大事件 (韭菜？)，想說來紀錄一下。
 Terra 的模型 Terra 是一個擁有雙主鏈幣的區塊鏈，包含其算法穩定幣 Terra 及治理代幣 Luna，而 UST 為算法穩定幣 Terra 的一種。 由於 UST 並不像 USDC 有美元資產儲備抵押，需要依靠演算法及市場支撐與美金的掛鉤。
 所以當 UST 價格高於一美元時，代表供不應求，這時便會燃燒 Luna 並鑄造 UST，讓價格回穩到一美元， 而這中間也因為 Luna 的總量變小，進而提高了 Luna 的價格。
@@ -53,10 +53,10 @@ Terra 的模型 Terra 是一個擁有雙主鏈幣的區塊鏈，包含其算法�
     
     <item>
       <title>什麼是 Blockchain Bridges，運作原理是什麼?</title>
-      <link>https://ianjustin39.github.io/ianlife/post/technology/blockchain/blockchain-bridge/</link>
+      <link>https://ianlifelab.com/post/technology/blockchain/blockchain-bridge/</link>
       <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/post/technology/blockchain/blockchain-bridge/</guid>
+      <guid>https://ianlifelab.com/post/technology/blockchain/blockchain-bridge/</guid>
       <description>區塊鏈技術在近幾年來成長非常的快速，最早的 Bitcoin、Ethereum 到 Binance Chain 、 Polygon 、 Solana 等，每條鏈上都有各自的治理模式、協議、規則，甚至是 Defi、NFT、DAO 等多元化的應用也相繼出現。
 儘管近幾年出現的這麼多元的應用，但這些終究只能存在於單一條區塊鏈上，並沒有辦法與其他的區塊鏈互動，也就是說鏈與鏈之間並沒有互相操作性。每一條區塊鏈，就好比一座小島，試想在台灣的 Ian 想要跟在日本的 Justin 溝通訊息，該如何做到呢？現在的社會可以經由通訊軟體或是社群軟體，直接將訊息傳遞出去，也就是所謂 Web 2.0 的應用，同理，比特幣想要到以太坊上做應用，以現在的狀況來說，只有中心化交易所（還不能經由去中心化交易所 Dex）換成以太幣或是 ERC-20 token 才有辦法做到這件事。但若這樣操作手上便不在持有比特幣，這也跟當初想要以『比特幣在以太坊上做應用』的想法有所差異。
 什麼是 Bridges，運作原理是什麼？ 先來講講什麼是 Blockchain Bridge ，它是以什麼方式來解決互相操作性的問題。Bridge 允許兩條不同規則、不同協議的區塊鏈將他們的數據、代幣互相傳遞。以上述的例子來講，可以不經由交易所得換幣服務，直接再以太坊上使用自己持有的比特幣。
@@ -67,10 +67,10 @@ Bridges 種類 Bridges 又分為 One-Way Bridges &amp;amp; Two-Way Bridges，以
     
     <item>
       <title>無視礦工，以太坊的倫敦硬分叉</title>
-      <link>https://ianjustin39.github.io/ianlife/post/technology/blockchain/ethereum-london-hard-fork/</link>
+      <link>https://ianlifelab.com/post/technology/blockchain/ethereum-london-hard-fork/</link>
       <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/post/technology/blockchain/ethereum-london-hard-fork/</guid>
+      <guid>https://ianlifelab.com/post/technology/blockchain/ethereum-london-hard-fork/</guid>
       <description>前言 現今以太坊的手續費過於昂貴，交易者需要付出高額的手續費才可以完成交易。 這次的 Ethereum London Hard Fork （倫敦硬分叉）所做的更新，包含了 EIP-1559、EIP-3198、EIP-3238 三個提案， 其中 EIP-1559 也是這次比較備受關注的部分。
 EIP 是什麼？ EIP(Ethereum Improvement Proposals)，是為以太坊指定潛在新功能或流程的標準，包含提議更改的技術規範。通過 EIP 流程討論和開發以太坊的網絡升級和應用標準。
 提案一： EIP-1559（區塊鏈交易費用模型） EIP-1559 是對用戶在以太坊網絡上支付 gas 費用方式的更改。（由於現在以太坊交易手續費過高，降低對用戶的吸引力）
@@ -82,37 +82,37 @@ EIP 是什麼？ EIP(Ethereum Improvement Proposals)，是為以太坊指定潛�
     
     <item>
       <title>快速排序 - Quick Sort</title>
-      <link>https://ianjustin39.github.io/ianlife/algorithms/quick-sort/</link>
+      <link>https://ianlifelab.com/algorithms/quick-sort/</link>
       <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/algorithms/quick-sort/</guid>
+      <guid>https://ianlifelab.com/algorithms/quick-sort/</guid>
       <description></description>
     </item>
     
     <item>
       <title>合併排序 - Merge Sort</title>
-      <link>https://ianjustin39.github.io/ianlife/algorithms/merge-sort/</link>
+      <link>https://ianlifelab.com/algorithms/merge-sort/</link>
       <pubDate>Tue, 16 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/algorithms/merge-sort/</guid>
+      <guid>https://ianlifelab.com/algorithms/merge-sort/</guid>
       <description></description>
     </item>
     
     <item>
       <title>泡沫排序 - Bubble Sort</title>
-      <link>https://ianjustin39.github.io/ianlife/algorithms/bubble-sort/</link>
+      <link>https://ianlifelab.com/algorithms/bubble-sort/</link>
       <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/algorithms/bubble-sort/</guid>
+      <guid>https://ianlifelab.com/algorithms/bubble-sort/</guid>
       <description></description>
     </item>
     
     <item>
       <title>在 Hugo Blog 中加上 Algolia 文章搜索工具</title>
-      <link>https://ianjustin39.github.io/ianlife/build-blog/hugo-and-algolia/</link>
+      <link>https://ianlifelab.com/build-blog/hugo-and-algolia/</link>
       <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/build-blog/hugo-and-algolia/</guid>
+      <guid>https://ianlifelab.com/build-blog/hugo-and-algolia/</guid>
       <description>隨著文章越來越多，要找到以前寫的文章就越來越麻煩，所以就一直想尋找站內搜索的功能使用。之前有試用 google 的站內搜索功能，但總覺得整體不是很好看，也就沒有繼續使用。直到最近看到 Algolia ，可建立文章的索引，將資料上傳到 Algolia，再藉由串接 API 就可以完成搜索功能。
 接下來就開始建立站內搜索功能吧。
 註冊 Algolia 第一步就是要到 Algolia 註冊帳號，登入後會要求輸入一個 index（等等要用到這個 index），然後會以這個 index 建立一個 app ，接著選擇存取的國家（我是選日本），完成之後會有這個畫面。
@@ -124,306 +124,306 @@ hugo 生成索引文件 1. 修改 config.toml 修改./config.toml設定好需要
     
     <item>
       <title>字典樹 - Trie</title>
-      <link>https://ianjustin39.github.io/ianlife/algorithms/tries/</link>
+      <link>https://ianlifelab.com/algorithms/tries/</link>
       <pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/algorithms/tries/</guid>
+      <guid>https://ianlifelab.com/algorithms/tries/</guid>
       <description></description>
     </item>
     
     <item>
       <title>二分搜尋演算法 (Binary search algorithm) - 終極密碼</title>
-      <link>https://ianjustin39.github.io/ianlife/algorithms/binary-search/</link>
+      <link>https://ianlifelab.com/algorithms/binary-search/</link>
       <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/algorithms/binary-search/</guid>
+      <guid>https://ianlifelab.com/algorithms/binary-search/</guid>
       <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt;圖片來源&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>策略模式 | Strategy Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/strategy-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/strategy-pattern/</link>
       <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/strategy-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/strategy-pattern/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 定義一系列演算法，並將其封裝起來，使他們可以相互替換，演算法的變換不影響使用。</description>
     </item>
     
     <item>
       <title>觀察者模式 | Observer Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/observer-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/observer-pattern/</link>
       <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/observer-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/observer-pattern/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 多個物件之間存在著一對多的依賴關係，當一個物件發生改變時，所有跟他有關的物件都會被通知且更新。</description>
     </item>
     
     <item>
       <title>備忘錄模式 | Memento Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/memento-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/memento-pattern/</link>
       <pubDate>Sun, 04 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/memento-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/memento-pattern/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 在不破壞封裝的前提下，儲存一個物件的某個狀態，以便於需要的時候將物件恢復到原先儲存的狀態。</description>
     </item>
     
     <item>
       <title>狀態模式 | State Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/state-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/state-pattern/</link>
       <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/state-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/state-pattern/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 有狀態的物件，把複雜的邏輯判斷分配到不同的狀態物件中，允許狀態物件在其內部狀態發生改變時改變行為。</description>
     </item>
     
     <item>
       <title>中介者模式 | Mediator Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/mediator-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/mediator-pattern/</link>
       <pubDate>Fri, 02 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/mediator-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/mediator-pattern/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 定義一個 Mediator 物件用來封裝一組物件的互動方式。Mediator 藉由避免物件間相互直接的引用，從而降低它們之間的耦合程度，並且可以讓我們獨立地改變這些物件間的互動方式。</description>
     </item>
     
     <item>
       <title>迭代器模式 | Iterator Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/iterator-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/iterator-pattern/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/iterator-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/iterator-pattern/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 提供一種方法可以順序性讀取一個集合物件中的各個元素，而又不會暴露該物件的內部表示。</description>
     </item>
     
     <item>
       <title>命令模式 | Command Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/command-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/command-pattern/</link>
       <pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/command-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/command-pattern/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 The Command Pattern encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable operations.</description>
     </item>
     
     <item>
       <title>責任鏈模式 | Chain of Responsibility Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/chain-of-responsibility/</link>
+      <link>https://ianlifelab.com/design-pattern/chain-of-responsibility/</link>
       <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/chain-of-responsibility/</guid>
+      <guid>https://ianlifelab.com/design-pattern/chain-of-responsibility/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 將多個物件連成一條鏈，沿著這條鏈傳遞至每一個物件並處理請求。</description>
     </item>
     
     <item>
       <title>代理模式 | Proxy Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/proxy-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/proxy-pattern/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/proxy-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/proxy-pattern/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 爲其他物件提供一種代理以控制對這個物件的訪問。</description>
     </item>
     
     <item>
       <title>享元模式 | Flyweight Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/flyweight-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/flyweight-pattern/</link>
       <pubDate>Sun, 27 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/flyweight-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/flyweight-pattern/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 運用共享技術有效地支持大量細粒度的物件。</description>
     </item>
     
     <item>
       <title>外觀模式 | Facade Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/facede-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/facede-pattern/</link>
       <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/facede-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/facede-pattern/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 為子系統中的一組接口提供一個統一的高層接口，使得子系統更容易使用。</description>
     </item>
     
     <item>
       <title>裝飾者模式 | Decorator Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/decorator-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/decorator-pattern/</link>
       <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/decorator-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/decorator-pattern/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 裝飾模式動態將責任附加在物件上，若要擴展功能上，裝飾者提供比繼承更有彈性的替代方案。</description>
     </item>
     
     <item>
       <title>组合模式 | Composite Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/composite-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/composite-pattern/</link>
       <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/composite-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/composite-pattern/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 物件以樹狀結構組合，做為表現出整體-部分的階層關係。</description>
     </item>
     
     <item>
       <title>橋接模式 | Bridge Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/bridge-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/bridge-pattern/</link>
       <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/bridge-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/bridge-pattern/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 將抽象部分與實現部分分離，使它們都可以獨立的變化。</description>
     </item>
     
     <item>
       <title>適配器模式 | Adapter Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/adapter-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/adapter-pattern/</link>
       <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/adapter-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/adapter-pattern/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 The Adapter Pattern converts the interface of a class into another interface the clients expect.</description>
     </item>
     
     <item>
       <title>原型模式 | Prototype Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/prototype-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/prototype-pattern/</link>
       <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/prototype-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/prototype-pattern/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 用原型例項指定建立物件的種類，並且通過拷貝這些原型建立新的物件。</description>
     </item>
     
     <item>
       <title>生成器模式 | Builder Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/builder-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/builder-pattern/</link>
       <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/builder-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/builder-pattern/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 把一個複雜物件的建構與樣貌分離，如此相同的建構過程可以產生不同樣貌的物件</description>
     </item>
     
     <item>
       <title>抽象工廠模式 | Abstract Factory Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/abstract-factory-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/abstract-factory-pattern/</link>
       <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/abstract-factory-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/abstract-factory-pattern/</guid>
       <description></description>
     </item>
     
     <item>
       <title>工廠模式 | Factory Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/factory-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/factory-pattern/</link>
       <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/factory-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/factory-pattern/</guid>
       <description></description>
     </item>
     
     <item>
       <title>單例模式 | Singleton Pattern</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/singleton-pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/singleton-pattern/</link>
       <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/singleton-pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/singleton-pattern/</guid>
       <description></description>
     </item>
     
     <item>
       <title>迪米特法則 | Law of Demeter</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/law-of-demeter/</link>
+      <link>https://ianlifelab.com/design-pattern/law-of-demeter/</link>
       <pubDate>Wed, 16 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/law-of-demeter/</guid>
+      <guid>https://ianlifelab.com/design-pattern/law-of-demeter/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 各單元對其他單元所知應當有限：只瞭解與目前單元最相關之單元</description>
     </item>
     
     <item>
       <title>合成/聚合複用原則 | Composite/Aggregate Reuse Principle</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/composite-aggregate-reuse-principle/</link>
+      <link>https://ianlifelab.com/design-pattern/composite-aggregate-reuse-principle/</link>
       <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/composite-aggregate-reuse-principle/</guid>
+      <guid>https://ianlifelab.com/design-pattern/composite-aggregate-reuse-principle/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 盡量使用組合(contains-a)/聚合(has-a)方式來代替繼承(is-a)來達到重複使用的目的</description>
     </item>
     
     <item>
       <title>依賴反轉原則 | Dependency Inversion Principle</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/dependence-inversion-principle/</link>
+      <link>https://ianlifelab.com/design-pattern/dependence-inversion-principle/</link>
       <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/dependence-inversion-principle/</guid>
+      <guid>https://ianlifelab.com/design-pattern/dependence-inversion-principle/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 依賴反轉原則(DIP)的定義有兩點：</description>
     </item>
     
     <item>
       <title>介面隔離原則 | Interface Segregation Principle</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/interface-segregation-principle/</link>
+      <link>https://ianlifelab.com/design-pattern/interface-segregation-principle/</link>
       <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/interface-segregation-principle/</guid>
+      <guid>https://ianlifelab.com/design-pattern/interface-segregation-principle/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 Clients should not be forced to depend on methods that they do not use.</description>
     </item>
     
     <item>
       <title>里氏替換原則 | Liskov Substitution Principle</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/liskov-substitution-principle/</link>
+      <link>https://ianlifelab.com/design-pattern/liskov-substitution-principle/</link>
       <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/liskov-substitution-principle/</guid>
+      <guid>https://ianlifelab.com/design-pattern/liskov-substitution-principle/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 If for each object o1 of type S there is an object o2 of type T such that for all programs P defined in terms of T, the behavior of P is unchanged when o1 is substituted for o2 then S is a subtype of T.</description>
     </item>
     
     <item>
       <title>開閉原則 | Open/Closed Principle</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/open-closed-principle/</link>
+      <link>https://ianlifelab.com/design-pattern/open-closed-principle/</link>
       <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/open-closed-principle/</guid>
+      <guid>https://ianlifelab.com/design-pattern/open-closed-principle/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 Software entities like classes, modules and functions should be open for extension but closed for modifications.</description>
     </item>
     
     <item>
       <title>單一職責原則 | Single Responsibility Principle</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/single-responsibility-principle/</link>
+      <link>https://ianlifelab.com/design-pattern/single-responsibility-principle/</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/single-responsibility-principle/</guid>
+      <guid>https://ianlifelab.com/design-pattern/single-responsibility-principle/</guid>
       <description>本系列文章同步分享於IT邦幫忙第12屆鐵人賽
 Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都會遇到的一個課題， 這系列文會從Design Principles、各種design pattern到最後的Anti-Patterns &amp; Code Smells介紹下去，讓我們可以更了解各種pattern的使用時機與場合。 預計目標主題如下，若有哪部分不熟的章節可以直接點進去看 註：可以利用Online Java Compiler IDE 設計模式 - 入門篇 什麼是Design Pattern? Design Pattern的類型與原則 設計模式 - 原則篇 | Design Principles 單一職責原則 | Single Responsibility Principle 開閉原則 | Open/Closed Principle 里氏替換原則 | Liskov Substitution Principle 介面隔離原則 | Interface Segregation Principle 依賴反轉原則 | Dependency Inversion Principle 合成/聚合複用原則 | Composite/Aggregate Reuse Principle 迪米特法則 | Law of Demeter 設計模式 - 創建型模型篇 | Creational Patterns 單例模式 | Singleton Pattern 工廠模式 | Factory Pattern 抽象工廠模式 | Abstract Factory Pattern 生成器模式 | Builder Pattern 原型模式 | Prototype Pattern 設計模式 - 結構型模型篇 | Structural Patterns 適配器模式 | Adapter Pattern 橋接模式 | Bridge Pattern 组合模式 | Composite Pattern 裝飾者模式 | Decorator Pattern 外觀模式 | Facade Pattern 享元模式 | Flyweight Pattern 代理模式 | Proxy Pattern 設計模式 - 行為型模型篇 | Behavioural Patterns 責任鏈模式 | Chain of Responsibility Pattern 命令模式 | Command Pattern 迭代器模式 | Iterator Pattern 中介者模式 | Mediator Pattern 狀態模式 | State Pattern 備忘錄模式 | Memento Pattern 觀察者模式 | Observer Pattern Strategy Pattern Template Pattern Visitor Pattern Interpreter Pattern 設計模式 - 番外篇 Anti-Patterns Code Smells Design Pattern VS 演算法 定義 There should never be more than one reason for a class to change.</description>
     </item>
     
     <item>
       <title>Design Pattern的類型與原則</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/design-patterns-and-principle/</link>
+      <link>https://ianlifelab.com/design-pattern/design-patterns-and-principle/</link>
       <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/design-patterns-and-principle/</guid>
+      <guid>https://ianlifelab.com/design-pattern/design-patterns-and-principle/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;本系列文章同步分享於IT邦幫忙第12屆鐵人賽&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;</description>
     </item>
     
     <item>
       <title>什麼是Design Pattern?</title>
-      <link>https://ianjustin39.github.io/ianlife/design-pattern/what_is_design_pattern/</link>
+      <link>https://ianlifelab.com/design-pattern/what_is_design_pattern/</link>
       <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/design-pattern/what_is_design_pattern/</guid>
+      <guid>https://ianlifelab.com/design-pattern/what_is_design_pattern/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;本系列文章同步分享於IT邦幫忙第12屆鐵人賽&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;自從當上了工程師後，大多數時間都負責後端的程式開發，從最一開始設計api到現在sdk的經驗中，了解到一個好的程式架構及設計，不只可以讓後續維運成本降低，往後要擴充也會相對容易許多。&lt;/p&gt;</description>
@@ -431,29 +431,29 @@ Design Pattern 系列文章導讀 Design Pattern可以說是開發上大家都�
     
     <item>
       <title>用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿</title>
-      <link>https://ianjustin39.github.io/ianlife/build-blog/build_photograph_in_hugo/</link>
+      <link>https://ianlifelab.com/build-blog/build_photograph_in_hugo/</link>
       <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/build-blog/build_photograph_in_hugo/</guid>
+      <guid>https://ianlifelab.com/build-blog/build_photograph_in_hugo/</guid>
       <description>&lt;p&gt;剛開始架設網站時就決定要在網站內架一個相簿，這篇會分享如何用Bootstrap+Masonry+magnificPopup建構屬於你自己的相片牆&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>部署Hugo個人網頁至GitHub</title>
-      <link>https://ianjustin39.github.io/ianlife/build-blog/deploy_hugo_on_github/</link>
+      <link>https://ianlifelab.com/build-blog/deploy_hugo_on_github/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/build-blog/deploy_hugo_on_github/</guid>
+      <guid>https://ianlifelab.com/build-blog/deploy_hugo_on_github/</guid>
       <description>&lt;p&gt;之前用Hugo架設個人網站，但架設完成後還是需要部署到一個平台，才有辦法瀏覽，
 這篇就來分享如何將網頁部署到GitHub以及途中遇到的一些問題&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>使用Hugo建立個人網頁</title>
-      <link>https://ianjustin39.github.io/ianlife/build-blog/get_started_hugo/</link>
+      <link>https://ianlifelab.com/build-blog/get_started_hugo/</link>
       <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/build-blog/get_started_hugo/</guid>
+      <guid>https://ianlifelab.com/build-blog/get_started_hugo/</guid>
       <description>&lt;p&gt;一直有想要寫一些文章記錄生活，身為一個工程師，難免會有想要自己架設的靈魂（？，
 最近發現hugo可以快速架站，除了有template以外也可以自己更改裡面的配置
 ，對於一個前端小菜鳥來說，算是一大福音ＸＤ，於是開始了這條漫漫長路～&lt;/p&gt;</description>
