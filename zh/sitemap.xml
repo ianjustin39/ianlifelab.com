@@ -2,360 +2,360 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ianjustin39.github.io/ianlife/blog/</loc>
+    <loc>https://ianjustin39.github.io/blog/</loc>
     <lastmod>2022-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/</loc>
-    <lastmod>2022-11-27T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ianjustin39.github.io/ianlife/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ianjustin39.github.io/ianlife/categories/"
-                />
-  </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/learning/</loc>
-    <lastmod>2022-11-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/</loc>
+    <loc>https://ianjustin39.github.io/categories/</loc>
     <lastmod>2022-11-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ianjustin39.github.io/ianlife/en/"
+                href="https://ianjustin39.github.io/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://ianjustin39.github.io/ianlife/"
+                href="https://ianjustin39.github.io/categories/"
                 />
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/series/</loc>
+    <loc>https://ianjustin39.github.io/categories/learning/</loc>
+    <lastmod>2022-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianjustin39.github.io/</loc>
     <lastmod>2022-11-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ianjustin39.github.io/ianlife/en/series/"
+                href="https://ianjustin39.github.io/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://ianjustin39.github.io/ianlife/series/"
+                href="https://ianjustin39.github.io/"
                 />
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/</loc>
+    <loc>https://ianjustin39.github.io/series/</loc>
     <lastmod>2022-11-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ianjustin39.github.io/ianlife/en/tags/"
+                href="https://ianjustin39.github.io/en/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://ianjustin39.github.io/ianlife/tags/"
+                href="https://ianjustin39.github.io/series/"
                 />
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6/</loc>
+    <loc>https://ianjustin39.github.io/tags/</loc>
+    <lastmod>2022-11-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianjustin39.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianjustin39.github.io/tags/"
+                />
+  </url><url>
+    <loc>https://ianjustin39.github.io/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6/</loc>
     <lastmod>2022-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/read/just-do-it/</loc>
+    <loc>https://ianjustin39.github.io/read/just-do-it/</loc>
     <lastmod>2022-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%8F%BE%E5%9C%A8%E9%96%8B%E5%A7%8B%E8%AA%8D%E7%9C%9F%E8%AE%80%E6%9B%B8/</loc>
+    <loc>https://ianjustin39.github.io/series/%E5%BE%9E%E7%8F%BE%E5%9C%A8%E9%96%8B%E5%A7%8B%E8%AA%8D%E7%9C%9F%E8%AE%80%E6%9B%B8/</loc>
     <lastmod>2022-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97/</loc>
+    <loc>https://ianjustin39.github.io/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97/</loc>
     <lastmod>2022-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/blockchain/</loc>
+    <loc>https://ianjustin39.github.io/tags/blockchain/</loc>
     <lastmod>2022-11-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/ftx-is-gone/</loc>
+    <loc>https://ianjustin39.github.io/blog/technology/blockchain/ftx-is-gone/</loc>
     <lastmod>2022-11-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/tech/</loc>
+    <loc>https://ianjustin39.github.io/categories/tech/</loc>
     <lastmod>2022-11-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/series/%E5%8D%80%E5%A1%8A%E9%8F%88/</loc>
+    <loc>https://ianjustin39.github.io/series/%E5%8D%80%E5%A1%8A%E9%8F%88/</loc>
     <lastmod>2022-11-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/read/behavioural-addiction/</loc>
+    <loc>https://ianjustin39.github.io/read/behavioural-addiction/</loc>
     <lastmod>2022-07-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain-black-swan-terra/</loc>
+    <loc>https://ianjustin39.github.io/blog/technology/blockchain/blockchain-black-swan-terra/</loc>
     <lastmod>2022-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/series/pm-101/</loc>
+    <loc>https://ianjustin39.github.io/series/pm-101/</loc>
     <lastmod>2022-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/product/</loc>
+    <loc>https://ianjustin39.github.io/categories/product/</loc>
     <lastmod>2022-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/wireframe/</loc>
+    <loc>https://ianjustin39.github.io/tags/wireframe/</loc>
     <lastmod>2022-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/blog/product/product/pm101-wireframe/</loc>
+    <loc>https://ianjustin39.github.io/blog/product/product/pm101-wireframe/</loc>
     <lastmod>2022-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/read/give-and-take/</loc>
+    <loc>https://ianjustin39.github.io/read/give-and-take/</loc>
     <lastmod>2022-04-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain-bridge/</loc>
+    <loc>https://ianjustin39.github.io/blog/technology/blockchain/blockchain-bridge/</loc>
     <lastmod>2022-03-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/read/late-bloomers/</loc>
+    <loc>https://ianjustin39.github.io/read/late-bloomers/</loc>
     <lastmod>2022-03-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/read/reproducible-leadership/</loc>
+    <loc>https://ianjustin39.github.io/read/reproducible-leadership/</loc>
     <lastmod>2022-01-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/polkadot/</loc>
+    <loc>https://ianjustin39.github.io/blog/technology/blockchain/polkadot/</loc>
     <lastmod>2021-10-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/cosmos/</loc>
+    <loc>https://ianjustin39.github.io/blog/technology/blockchain/cosmos/</loc>
     <lastmod>2021-08-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/read/11-writing-lesson/</loc>
+    <loc>https://ianjustin39.github.io/read/11-writing-lesson/</loc>
     <lastmod>2021-07-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/read/understand-a-book/</loc>
+    <loc>https://ianjustin39.github.io/read/understand-a-book/</loc>
     <lastmod>2021-06-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/ethereum/</loc>
+    <loc>https://ianjustin39.github.io/tags/ethereum/</loc>
     <lastmod>2021-06-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/ethereum-london-hard-fork/</loc>
+    <loc>https://ianjustin39.github.io/blog/technology/blockchain/ethereum-london-hard-fork/</loc>
     <lastmod>2021-06-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/read/game-the-infinite-game/</loc>
+    <loc>https://ianjustin39.github.io/read/game-the-infinite-game/</loc>
     <lastmod>2021-05-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/read/ultralearning/</loc>
+    <loc>https://ianjustin39.github.io/read/ultralearning/</loc>
     <lastmod>2021-03-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/algorithm/</loc>
+    <loc>https://ianjustin39.github.io/tags/algorithm/</loc>
     <lastmod>2021-03-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/algorithms/quick-sort/</loc>
+    <loc>https://ianjustin39.github.io/algorithms/quick-sort/</loc>
     <lastmod>2021-03-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/series/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://ianjustin39.github.io/series/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-03-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/algorithms/merge-sort/</loc>
+    <loc>https://ianjustin39.github.io/algorithms/merge-sort/</loc>
     <lastmod>2021-03-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/algorithms/bubble-sort/</loc>
+    <loc>https://ianjustin39.github.io/algorithms/bubble-sort/</loc>
     <lastmod>2021-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/categories/life/</loc>
+    <loc>https://ianjustin39.github.io/categories/life/</loc>
     <lastmod>2021-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/series/%E7%9C%8B%E9%9B%BB%E5%BD%B1%E7%9A%84%E7%9C%81%E6%80%9D/</loc>
+    <loc>https://ianjustin39.github.io/series/%E7%9C%8B%E9%9B%BB%E5%BD%B1%E7%9A%84%E7%9C%81%E6%80%9D/</loc>
     <lastmod>2021-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/movie/plurality/</loc>
+    <loc>https://ianjustin39.github.io/movie/plurality/</loc>
     <lastmod>2021-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/%E9%9B%BB%E5%BD%B1%E5%BF%83%E5%BE%97/</loc>
+    <loc>https://ianjustin39.github.io/tags/%E9%9B%BB%E5%BD%B1%E5%BF%83%E5%BE%97/</loc>
     <lastmod>2021-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/algolia/</loc>
+    <loc>https://ianjustin39.github.io/tags/algolia/</loc>
     <lastmod>2021-03-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/blog/</loc>
+    <loc>https://ianjustin39.github.io/tags/blog/</loc>
     <lastmod>2021-03-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/hugo/</loc>
+    <loc>https://ianjustin39.github.io/tags/hugo/</loc>
     <lastmod>2021-03-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/build-blog/hugo-and-algolia/</loc>
+    <loc>https://ianjustin39.github.io/build-blog/hugo-and-algolia/</loc>
     <lastmod>2021-03-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84-blog/</loc>
+    <loc>https://ianjustin39.github.io/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84-blog/</loc>
     <lastmod>2021-03-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/life/a-cup-of-coffee/</loc>
+    <loc>https://ianjustin39.github.io/life/a-cup-of-coffee/</loc>
     <lastmod>2021-03-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/%E9%9A%A8%E6%89%8B%E5%AF%AB/</loc>
+    <loc>https://ianjustin39.github.io/tags/%E9%9A%A8%E6%89%8B%E5%AF%AB/</loc>
     <lastmod>2021-03-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/series/%E9%9A%A8%E6%89%8B%E5%AF%AB/</loc>
+    <loc>https://ianjustin39.github.io/series/%E9%9A%A8%E6%89%8B%E5%AF%AB/</loc>
     <lastmod>2021-03-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/data-structures/</loc>
+    <loc>https://ianjustin39.github.io/tags/data-structures/</loc>
     <lastmod>2021-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/algorithms/tries/</loc>
+    <loc>https://ianjustin39.github.io/algorithms/tries/</loc>
     <lastmod>2021-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/algorithms/binary-search/</loc>
+    <loc>https://ianjustin39.github.io/algorithms/binary-search/</loc>
     <lastmod>2021-03-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/read/40-years-old/</loc>
+    <loc>https://ianjustin39.github.io/read/40-years-old/</loc>
     <lastmod>2021-02-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/read/atom-habits/</loc>
+    <loc>https://ianjustin39.github.io/read/atom-habits/</loc>
     <lastmod>2021-01-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/photograph/20201117-jiaminglake/</loc>
+    <loc>https://ianjustin39.github.io/photograph/20201117-jiaminglake/</loc>
     <lastmod>2020-11-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/behavioural-pattern/</loc>
+    <loc>https://ianjustin39.github.io/tags/behavioural-pattern/</loc>
     <lastmod>2020-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/design-pattern/</loc>
+    <loc>https://ianjustin39.github.io/tags/design-pattern/</loc>
     <lastmod>2020-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern/</loc>
+    <loc>https://ianjustin39.github.io/series/%E5%BE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD%E8%AA%8D%E8%AD%98-design-pattern/</loc>
     <lastmod>2020-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/strategy-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/strategy-pattern/</loc>
     <lastmod>2020-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/observer-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/observer-pattern/</loc>
     <lastmod>2020-10-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/memento-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/memento-pattern/</loc>
     <lastmod>2020-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/state-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/state-pattern/</loc>
     <lastmod>2020-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/mediator-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/mediator-pattern/</loc>
     <lastmod>2020-10-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/iterator-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/iterator-pattern/</loc>
     <lastmod>2020-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/command-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/command-pattern/</loc>
     <lastmod>2020-09-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/chain-of-responsibility/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/chain-of-responsibility/</loc>
     <lastmod>2020-09-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/structural-pattern/</loc>
+    <loc>https://ianjustin39.github.io/tags/structural-pattern/</loc>
     <lastmod>2020-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/proxy-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/proxy-pattern/</loc>
     <lastmod>2020-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/flyweight-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/flyweight-pattern/</loc>
     <lastmod>2020-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/facede-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/facede-pattern/</loc>
     <lastmod>2020-09-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/decorator-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/decorator-pattern/</loc>
     <lastmod>2020-09-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/composite-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/composite-pattern/</loc>
     <lastmod>2020-09-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD/</loc>
+    <loc>https://ianjustin39.github.io/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD/</loc>
     <lastmod>2020-09-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/bridge-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/bridge-pattern/</loc>
     <lastmod>2020-09-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/adapter-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/adapter-pattern/</loc>
     <lastmod>2020-09-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/creational-pattern/</loc>
+    <loc>https://ianjustin39.github.io/tags/creational-pattern/</loc>
     <lastmod>2020-09-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/prototype-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/prototype-pattern/</loc>
     <lastmod>2020-09-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/builder-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/builder-pattern/</loc>
     <lastmod>2020-09-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/abstract-factory-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/abstract-factory-pattern/</loc>
     <lastmod>2020-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/factory-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/factory-pattern/</loc>
     <lastmod>2020-09-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/singleton-pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/singleton-pattern/</loc>
     <lastmod>2020-09-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/design-principle/</loc>
+    <loc>https://ianjustin39.github.io/tags/design-principle/</loc>
     <lastmod>2020-09-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/law-of-demeter/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/law-of-demeter/</loc>
     <lastmod>2020-09-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/composite-aggregate-reuse-principle/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/composite-aggregate-reuse-principle/</loc>
     <lastmod>2020-09-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/dependence-inversion-principle/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/dependence-inversion-principle/</loc>
     <lastmod>2020-09-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/interface-segregation-principle/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/interface-segregation-principle/</loc>
     <lastmod>2020-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/liskov-substitution-principle/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/liskov-substitution-principle/</loc>
     <lastmod>2020-09-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/open-closed-principle/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/open-closed-principle/</loc>
     <lastmod>2020-09-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/single-responsibility-principle/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/single-responsibility-principle/</loc>
     <lastmod>2020-09-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/design-patterns-and-principle/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/design-patterns-and-principle/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/design-pattern/what_is_design_pattern/</loc>
+    <loc>https://ianjustin39.github.io/design-pattern/what_is_design_pattern/</loc>
     <lastmod>2020-09-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/bootstrap/</loc>
+    <loc>https://ianjustin39.github.io/tags/bootstrap/</loc>
     <lastmod>2020-05-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/build-blog/build_photograph_in_hugo/</loc>
+    <loc>https://ianjustin39.github.io/build-blog/build_photograph_in_hugo/</loc>
     <lastmod>2020-05-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/tags/github/</loc>
+    <loc>https://ianjustin39.github.io/tags/github/</loc>
     <lastmod>2020-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/build-blog/deploy_hugo_on_github/</loc>
+    <loc>https://ianjustin39.github.io/build-blog/deploy_hugo_on_github/</loc>
     <lastmod>2020-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/about/</loc>
+    <loc>https://ianjustin39.github.io/about/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ianjustin39.github.io/ianlife/en/about/"
+                href="https://ianjustin39.github.io/en/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://ianjustin39.github.io/ianlife/about/"
+                href="https://ianjustin39.github.io/about/"
                 />
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/photograph/</loc>
+    <loc>https://ianjustin39.github.io/photograph/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ianjustin39.github.io/ianlife/en/photograph/"
+                href="https://ianjustin39.github.io/en/photograph/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://ianjustin39.github.io/ianlife/photograph/"
+                href="https://ianjustin39.github.io/photograph/"
                 />
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/build-blog/get_started_hugo/</loc>
+    <loc>https://ianjustin39.github.io/build-blog/get_started_hugo/</loc>
     <lastmod>2020-04-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianjustin39.github.io/ianlife/contact/</loc>
+    <loc>https://ianjustin39.github.io/contact/</loc>
   </url>
 </urlset>

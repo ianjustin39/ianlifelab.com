@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Polkadot payload on Life Story</title>
-    <link>https://ianjustin39.github.io/ianlife/tags/polkadot-payload/</link>
+    <link>https://ianjustin39.github.io/tags/polkadot-payload/</link>
     <description>Recent content in Polkadot payload on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Mon, 11 Oct 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ianjustin39.github.io/ianlife/tags/polkadot-payload/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ianjustin39.github.io/tags/polkadot-payload/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Polkadot Parse</title>
-      <link>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain/polkadot/</link>
+      <link>https://ianjustin39.github.io/blog/technology/blockchain/blockchain/polkadot/</link>
       <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/blog/technology/blockchain/blockchain/polkadot/</guid>
+      <guid>https://ianjustin39.github.io/blog/technology/blockchain/blockchain/polkadot/</guid>
       <description>What is DOT? DOT is the native token of the Polkadot network in a similar way that BTC is the native token of Bitcoin or ether is the native token of the Ethereum blockchain.
 The smallest unit of account in a Substrate network (Polkadot, Kusama, etc.) is the Planck. Kusama tokens (KSM) are equal to 1e12 Planck, and Polkadot mainnet DOT are equal to 1e10 Planck.
 1 Dot (DOT) = 10000000000 Planck</description>

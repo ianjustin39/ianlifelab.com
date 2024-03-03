@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>資料結構與演算法 on Own your life</title>
-    <link>https://ianjustin39.github.io/ianlife/series/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95/</link>
+    <link>https://ianjustin39.github.io/series/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95/</link>
     <description>Recent content in 資料結構與演算法 on Own your life</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 17 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/series/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/series/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E8%88%87%E6%BC%94%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>快速排序 - Quick Sort</title>
-      <link>https://ianjustin39.github.io/ianlife/algorithms/quick-sort/</link>
+      <link>https://ianjustin39.github.io/algorithms/quick-sort/</link>
       <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/algorithms/quick-sort/</guid>
+      <guid>https://ianjustin39.github.io/algorithms/quick-sort/</guid>
       <description></description>
     </item>
     
     <item>
       <title>合併排序 - Merge Sort</title>
-      <link>https://ianjustin39.github.io/ianlife/algorithms/merge-sort/</link>
+      <link>https://ianjustin39.github.io/algorithms/merge-sort/</link>
       <pubDate>Tue, 16 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/algorithms/merge-sort/</guid>
+      <guid>https://ianjustin39.github.io/algorithms/merge-sort/</guid>
       <description></description>
     </item>
     
     <item>
       <title>泡沫排序 - Bubble Sort</title>
-      <link>https://ianjustin39.github.io/ianlife/algorithms/bubble-sort/</link>
+      <link>https://ianjustin39.github.io/algorithms/bubble-sort/</link>
       <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/algorithms/bubble-sort/</guid>
+      <guid>https://ianjustin39.github.io/algorithms/bubble-sort/</guid>
       <description></description>
     </item>
     
     <item>
       <title>字典樹 - Trie</title>
-      <link>https://ianjustin39.github.io/ianlife/algorithms/tries/</link>
+      <link>https://ianjustin39.github.io/algorithms/tries/</link>
       <pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/algorithms/tries/</guid>
+      <guid>https://ianjustin39.github.io/algorithms/tries/</guid>
       <description></description>
     </item>
     
     <item>
       <title>二分搜尋演算法 (Binary search algorithm) - 終極密碼</title>
-      <link>https://ianjustin39.github.io/ianlife/algorithms/binary-search/</link>
+      <link>https://ianjustin39.github.io/algorithms/binary-search/</link>
       <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/algorithms/binary-search/</guid>
+      <guid>https://ianjustin39.github.io/algorithms/binary-search/</guid>
       <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt;圖片來源&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>產品工具包 on Own your life</title>
-    <link>https://ianjustin39.github.io/ianlife/tags/%E7%94%A2%E5%93%81%E5%B7%A5%E5%85%B7%E5%8C%85/</link>
+    <link>https://ianjustin39.github.io/tags/%E7%94%A2%E5%93%81%E5%B7%A5%E5%85%B7%E5%8C%85/</link>
     <description>Recent content in 產品工具包 on Own your life</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 07 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/tags/%E7%94%A2%E5%93%81%E5%B7%A5%E5%85%B7%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/tags/%E7%94%A2%E5%93%81%E5%B7%A5%E5%85%B7%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>新產品不適合跑 Scrum？</title>
-      <link>https://ianjustin39.github.io/ianlife/post/start-up/start-up/do-not-use-scrum-before-new-pd-launch/</link>
+      <link>https://ianjustin39.github.io/post/start-up/start-up/do-not-use-scrum-before-new-pd-launch/</link>
       <pubDate>Thu, 07 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/post/start-up/start-up/do-not-use-scrum-before-new-pd-launch/</guid>
+      <guid>https://ianjustin39.github.io/post/start-up/start-up/do-not-use-scrum-before-new-pd-launch/</guid>
       <description>Scrum 算是現在軟體公司內最主流的協作框架，藉由 sprint 來切割產品每次更新的 scope ，讓產品可以不斷地與用戶互動，從而打造最貼近用戶及市場的產品。 但並不是所有的產品或是團隊都適合執行 Scrum 這個框架，甚至 Scrum 會阻礙開發的進度。
 Scrum 的優勢在於小步快跑 Scrum 的優勢在於小步快跑，產品藉由每次的迭代更新，不斷地適應市場的改變與用戶的需求。 在執行 sprint 的過程中，會評估每個 task 所需要花的資源、每個 sprint 可以完成掉多少 task 以及定義每個 sprint 的 goals 等， 這些數據讓 PM 可以有效的管理產品的進度，同時也可以經由這些資訊與不同的部門合作，讓產品可以在市場上順利被推行。
 新產品還沒上線之前不適合跑 Scrum？ 為什麼會說產品還沒上市前不適合跑 Scrum 呢？剛剛有提到，Scrum 講求小步快跑，藉由產品的快速迭代獲取更多用戶反饋，進而打造更貼近市場的產品。 重點來了！『產品的快速迭代』來獲取反饋，但產品還沒上線，怎麼來迭代獲取反饋呢？ 同時 Scrum 中的會議也會大量使用掉團隊的時間，在產品發布之前更應該把時間放在開發產品上，盡量避免耗時太久的會議。
@@ -24,10 +24,10 @@ Scrum 的優勢在於小步快跑 Scrum 的優勢在於小步快跑，產品藉�
     
     <item>
       <title>矽谷推崇的新創思維 - 為何要產品需要 MVP？</title>
-      <link>https://ianjustin39.github.io/ianlife/post/start-up/start-up/why-need-mvp/</link>
+      <link>https://ianjustin39.github.io/post/start-up/start-up/why-need-mvp/</link>
       <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/post/start-up/start-up/why-need-mvp/</guid>
+      <guid>https://ianjustin39.github.io/post/start-up/start-up/why-need-mvp/</guid>
       <description>MVP 是那個 MVP 嗎？ 在軟體產業中，MVP （最小可行性產品）這個詞大家應該不陌生，但在工作上卻不太容易去接觸到，因為在我們進入公司時， 大部分的公司都已經有一個穩定的產品，或是已經經過打磨驗證的產品，這讓我們要從如何去實踐 MVP 這套理論的機會也變得比較困難。 所以大家可能都有『產品最好先推出 MVP 』的概念，但卻很少有實際執行 MVP 的經驗。
 產品推出 MVP 會帶給你什麼好處？ 一定要推 MVP 嗎？以前的產品也沒 MVP 照樣有人買單啊！
 說到早期產品開發，通常會經歷開會討論需求、確認規格、執行開發、功能測試、產品發佈等階段，中間可能還會有需求變更的環節、溝通落差等還環節讓時間延遲， 前後加起來可能 12~18 個月甚至更久，但早期的產品仍能獲得了成功，為何現在不行呢？ 相比十年前，現今社會的變化速度太快，以前可能五年市場才會出現變化，現在可能一年甚至更短，市場或是人們的習慣就會被改變。

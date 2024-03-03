@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Algolia on Work Life Balance?</title>
-    <link>https://ianjustin39.github.io/ianlife/tags/algolia/</link>
+    <link>https://ianjustin39.github.io/tags/algolia/</link>
     <description>Recent content in Algolia on Work Life Balance?</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/tags/algolia/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/tags/algolia/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在 Hugo Blog 中加上 Algolia 文章搜索工具</title>
-      <link>https://ianjustin39.github.io/ianlife/build-blog/hugo-and-algolia/</link>
+      <link>https://ianjustin39.github.io/build-blog/hugo-and-algolia/</link>
       <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/build-blog/hugo-and-algolia/</guid>
+      <guid>https://ianjustin39.github.io/build-blog/hugo-and-algolia/</guid>
       <description>隨著文章越來越多，要找到以前寫的文章就越來越麻煩，所以就一直想尋找站內搜索的功能使用。之前有試用 google 的站內搜索功能，但總覺得整體不是很好看，也就沒有繼續使用。直到最近看到 Algolia ，可建立文章的索引，將資料上傳到 Algolia，再藉由串接 API 就可以完成搜索功能。
 接下來就開始建立站內搜索功能吧。
 註冊 Algolia 第一步就是要到 Algolia 註冊帳號，登入後會要求輸入一個 index（等等要用到這個 index），然後會以這個 index 建立一個 app ，接著選擇存取的國家（我是選日本），完成之後會有這個畫面。

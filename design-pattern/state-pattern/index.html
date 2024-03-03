@@ -11,8 +11,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="https://ianjustin39.github.io/ianlife//https://i.imgur.com/HNaPaLS.png">
-    <meta property="twitter:image" content="https://ianjustin39.github.io/ianlife//https://i.imgur.com/HNaPaLS.png" />
+    <meta property="og:image" content="https://ianjustin39.github.io//https://i.imgur.com/HNaPaLS.png">
+    <meta property="twitter:image" content="https://ianjustin39.github.io//https://i.imgur.com/HNaPaLS.png" />
     
 
     
@@ -35,44 +35,44 @@
     
     <meta name="google-site-verification" content="zuuW7hNy_wHvxLOBYVTEFg-sj9gxcQVWbEVp4_G50CY" />
     <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師, 創業, 個人成長">
-    <link rel="shortcut icon" href="/ianlife/img/favicon.ico">
+    <link rel="shortcut icon" href="/img/favicon.ico">
 
     <title>狀態模式 | State Pattern | Ian&#39;s Blog</title>
 
-    <link rel="canonical" href="/ianlife/design-pattern/state-pattern/">
+    <link rel="canonical" href="/design-pattern/state-pattern/">
 
     
     
     
-    <link rel="stylesheet" href="/ianlife/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     
 
     
-    <link rel="stylesheet" href="/ianlife/css/hugo-theme-cleanwhite.min.css">
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
 
     
-    <link rel="stylesheet" href="/ianlife/css/zanshang.css">
+    <link rel="stylesheet" href="/css/zanshang.css">
 
     
-    <link rel="stylesheet" href="/ianlife/css/font-awesome.all.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
 
     
     
 
-    <link rel="stylesheet" href="/ianlife/css/carousel.css"/>
-    <script src="/ianlife/js/carousel.js"></script>
+    <link rel="stylesheet" href="/css/carousel.css"/>
+    <script src="/js/carousel.js"></script>
 
     
-    <script src="/ianlife/js/jquery.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
 
     
-    <script src="/ianlife/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
     
-    <script src="/ianlife/js/hux-blog.min.js"></script>
+    <script src="/js/hux-blog.min.js"></script>
 
     
-    <script src="/ianlife/js/lazysizes.min.js"></script>
+    <script src="/js/lazysizes.min.js"></script>
 
     
     
@@ -114,7 +114,7 @@ if (!doNotTrack) {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/ianlife/">Ian&#39;s Blog</a>
+            <a class="navbar-brand" href="/">Ian&#39;s Blog</a>
             
         </div>
 
@@ -124,22 +124,22 @@ if (!doNotTrack) {
             <div class="navbar-collapse" >
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="/ianlife/">HOME</a>
+                        <a href="/">HOME</a>
                     </li>
                     
                     
 		    
-                        <li><a href="/ianlife/categories/start-up/">創業筆記</a></li>
+                        <li><a href="/categories/start-up/">創業筆記</a></li>
                     
-                        <li><a href="/ianlife/categories/learning/">個人成長</a></li>
+                        <li><a href="/categories/learning/">個人成長</a></li>
                     
-                        <li><a href="/ianlife/categories/nomads/">數位遊牧</a></li>
+                        <li><a href="/categories/nomads/">數位遊牧</a></li>
                     
-                        <li><a href="/ianlife/categories/product/">產品思維</a></li>
+                        <li><a href="/categories/product/">產品思維</a></li>
                     
-                        <li><a href="/ianlife/categories/life/">生活隨筆</a></li>
+                        <li><a href="/categories/life/">生活隨筆</a></li>
                     
-                        <li><a href="/ianlife/archive/">所有文章</a></li>
+                        <li><a href="/archive/">所有文章</a></li>
                     
 		            
                 </ul>
@@ -188,7 +188,7 @@ if (!doNotTrack) {
 
 <style type="text/css">
     header.intro-header {
-        background-image: url('/ianlife/');
+        background-image: url('/');
          
         background-color: rgb(128, 128, 128, 0.3);
         background-blend-mode: multiply;
@@ -203,11 +203,11 @@ if (!doNotTrack) {
                     <div class="post-heading" >
                         <div class="tags">
                             
-                            <a class="tag" href="/ianlife/tags/design-pattern" title="Design Pattern">
+                            <a class="tag" href="/tags/design-pattern" title="Design Pattern">
                                 Design Pattern
                             </a>
                             
-                            <a class="tag" href="/ianlife/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD" title="鐵人賽">
+                            <a class="tag" href="/tags/%E9%90%B5%E4%BA%BA%E8%B3%BD" title="鐵人賽">
                                 鐵人賽
                             </a>
                             
@@ -255,7 +255,7 @@ if (!doNotTrack) {
                         <ul class="catalog-body"></ul>
 
                     <iframe class="LikeCoin" height="235"
-  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianjustin39.github.io%2fianlife%2fdesign-pattern%2fstate-pattern%2f" width="100%"
+  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianjustin39.github.io%2fdesign-pattern%2fstate-pattern%2f" width="100%"
   frameborder=0></iframe>
 
                     </div>
@@ -557,14 +557,14 @@ ConcreteState：實現State所定義的方法。
                     <ul class="pager">
                         
                         <li class="previous">
-                            <a href="/ianlife/design-pattern/mediator-pattern/" data-toggle="tooltip" data-placement="top"
+                            <a href="/design-pattern/mediator-pattern/" data-toggle="tooltip" data-placement="top"
                                 title="中介者模式 | Mediator Pattern">&larr;
                                 Previous Post</a>
                         </li>
                         
                         
                         <li class="next">
-                            <a href="/ianlife/design-pattern/memento-pattern/" data-toggle="tooltip" data-placement="top"
+                            <a href="/design-pattern/memento-pattern/" data-toggle="tooltip" data-placement="top"
                                 title="備忘錄模式 | Memento Pattern">Next
                                 Post &rarr;</a>
                         </li>
@@ -678,8 +678,8 @@ ConcreteState：實現State所定義的方法。
 
 
 
-<link rel="stylesheet" href="/ianlife/css/carousel.css"/>
-<script src="/ianlife/js/carousel.js"></script>
+<link rel="stylesheet" href="/css/carousel.css"/>
+<script src="/js/carousel.js"></script>
 
 
 
@@ -765,7 +765,7 @@ ConcreteState：實現State所定義的方法。
     
 
 
-    loadAsync("\/ianlife\/js\/jquery.nav.js", function () {
+    loadAsync("\/js\/jquery.nav.js", function () {
         $('.catalog-body').onePageNav({
             currentClass: "active",
             changeHash: !1,

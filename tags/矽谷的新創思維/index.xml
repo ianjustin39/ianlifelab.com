@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>矽谷的新創思維 on Own your life</title>
-    <link>https://ianjustin39.github.io/ianlife/tags/%E7%9F%BD%E8%B0%B7%E7%9A%84%E6%96%B0%E5%89%B5%E6%80%9D%E7%B6%AD/</link>
+    <link>https://ianjustin39.github.io/tags/%E7%9F%BD%E8%B0%B7%E7%9A%84%E6%96%B0%E5%89%B5%E6%80%9D%E7%B6%AD/</link>
     <description>Recent content in 矽谷的新創思維 on Own your life</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 05 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/tags/%E7%9F%BD%E8%B0%B7%E7%9A%84%E6%96%B0%E5%89%B5%E6%80%9D%E7%B6%AD/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/tags/%E7%9F%BD%E8%B0%B7%E7%9A%84%E6%96%B0%E5%89%B5%E6%80%9D%E7%B6%AD/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>矽谷推崇的新創思維 - 為何要產品需要 MVP？</title>
-      <link>https://ianjustin39.github.io/ianlife/post/start-up/start-up/why-need-mvp/</link>
+      <link>https://ianjustin39.github.io/post/start-up/start-up/why-need-mvp/</link>
       <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/post/start-up/start-up/why-need-mvp/</guid>
+      <guid>https://ianjustin39.github.io/post/start-up/start-up/why-need-mvp/</guid>
       <description>MVP 是那個 MVP 嗎？ 在軟體產業中，MVP （最小可行性產品）這個詞大家應該不陌生，但在工作上卻不太容易去接觸到，因為在我們進入公司時， 大部分的公司都已經有一個穩定的產品，或是已經經過打磨驗證的產品，這讓我們要從如何去實踐 MVP 這套理論的機會也變得比較困難。 所以大家可能都有『產品最好先推出 MVP 』的概念，但卻很少有實際執行 MVP 的經驗。
 產品推出 MVP 會帶給你什麼好處？ 一定要推 MVP 嗎？以前的產品也沒 MVP 照樣有人買單啊！
 說到早期產品開發，通常會經歷開會討論需求、確認規格、執行開發、功能測試、產品發佈等階段，中間可能還會有需求變更的環節、溝通落差等還環節讓時間延遲， 前後加起來可能 12~18 個月甚至更久，但早期的產品仍能獲得了成功，為何現在不行呢？ 相比十年前，現今社會的變化速度太快，以前可能五年市場才會出現變化，現在可能一年甚至更短，市場或是人們的習慣就會被改變。

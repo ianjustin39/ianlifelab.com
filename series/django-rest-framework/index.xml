@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Django Rest framework on Life Story</title>
-    <link>https://ianjustin39.github.io/ianlife/series/django-rest-framework/</link>
+    <link>https://ianjustin39.github.io/series/django-rest-framework/</link>
     <description>Recent content in Django Rest framework on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 16 May 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ianjustin39.github.io/ianlife/series/django-rest-framework/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ianjustin39.github.io/series/django-rest-framework/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>用 JWT 實作 Django rest 身份驗證</title>
-      <link>https://ianjustin39.github.io/ianlife/django-rest-framework/jwt-auth/</link>
+      <link>https://ianjustin39.github.io/django-rest-framework/jwt-auth/</link>
       <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/django-rest-framework/jwt-auth/</guid>
+      <guid>https://ianjustin39.github.io/django-rest-framework/jwt-auth/</guid>
       <description>前言  現在各種應用程式（app, web）都可以透過對 api 發送請求達到獲取資料、傳遞訊息的行為，但有些服務並不適合開放給所有人使用，這時就需要思考如何驗證或授權發送請求的應用程式，jwt 為其中的一個解決方案。 對 api 發送請求的應用程式可以將 jwt 產生的 token 存在 localstorage ，並且每次發送請求時只要將 token 帶入即可使用 api 服務，這樣就解決了 api 身份驗證的問題。
  JSON Web Token (JWT)   JWT 介紹 先簡單介紹一下 JSON Web Token ，JWT 是一個開放標準（RFC 7519），它定義了一種簡潔且（compact）自包含（self-contained）的方式，用於在各方之間安全地將信息作為JSON對像傳輸。由於此信息是經過數字簽章的，因此可以被驗證和信任。可以使用秘密（使用HMAC算法）或使用RSA或ECDSA的公鑰/私鑰對對JWT進行簽章。
 來源Introduction to JSON Web Tokens

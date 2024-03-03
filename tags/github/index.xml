@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>github on Work Life Balance?</title>
-    <link>https://ianjustin39.github.io/ianlife/tags/github/</link>
+    <link>https://ianjustin39.github.io/tags/github/</link>
     <description>Recent content in github on Work Life Balance?</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 02 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>部署Hugo個人網頁至GitHub</title>
-      <link>https://ianjustin39.github.io/ianlife/build-blog/deploy_hugo_on_github/</link>
+      <link>https://ianjustin39.github.io/build-blog/deploy_hugo_on_github/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/build-blog/deploy_hugo_on_github/</guid>
+      <guid>https://ianjustin39.github.io/build-blog/deploy_hugo_on_github/</guid>
       <description>&lt;p&gt;之前用Hugo架設個人網站，但架設完成後還是需要部署到一個平台，才有辦法瀏覽，
 這篇就來分享如何將網頁部署到GitHub以及途中遇到的一些問題&lt;/p&gt;</description>
     </item>

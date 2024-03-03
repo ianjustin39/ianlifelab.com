@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ethereum on Own your life</title>
-    <link>https://ianjustin39.github.io/ianlife/tags/ethereum/</link>
+    <link>https://ianjustin39.github.io/tags/ethereum/</link>
     <description>Recent content in Ethereum on Own your life</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 16 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/tags/ethereum/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/tags/ethereum/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>無視礦工，以太坊的倫敦硬分叉</title>
-      <link>https://ianjustin39.github.io/ianlife/post/technology/blockchain/ethereum-london-hard-fork/</link>
+      <link>https://ianjustin39.github.io/post/technology/blockchain/ethereum-london-hard-fork/</link>
       <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/post/technology/blockchain/ethereum-london-hard-fork/</guid>
+      <guid>https://ianjustin39.github.io/post/technology/blockchain/ethereum-london-hard-fork/</guid>
       <description>前言 現今以太坊的手續費過於昂貴，交易者需要付出高額的手續費才可以完成交易。 這次的 Ethereum London Hard Fork （倫敦硬分叉）所做的更新，包含了 EIP-1559、EIP-3198、EIP-3238 三個提案， 其中 EIP-1559 也是這次比較備受關注的部分。
 EIP 是什麼？ EIP(Ethereum Improvement Proposals)，是為以太坊指定潛在新功能或流程的標準，包含提議更改的技術規範。通過 EIP 流程討論和開發以太坊的網絡升級和應用標準。
 提案一： EIP-1559（區塊鏈交易費用模型） EIP-1559 是對用戶在以太坊網絡上支付 gas 費用方式的更改。（由於現在以太坊交易手續費過高，降低對用戶的吸引力）

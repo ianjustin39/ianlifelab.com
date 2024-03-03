@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Scrum on Own your life</title>
-    <link>https://ianjustin39.github.io/ianlife/tags/scrum/</link>
+    <link>https://ianjustin39.github.io/tags/scrum/</link>
     <description>Recent content in Scrum on Own your life</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 07 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/tags/scrum/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/tags/scrum/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>新產品不適合跑 Scrum？</title>
-      <link>https://ianjustin39.github.io/ianlife/post/start-up/start-up/do-not-use-scrum-before-new-pd-launch/</link>
+      <link>https://ianjustin39.github.io/post/start-up/start-up/do-not-use-scrum-before-new-pd-launch/</link>
       <pubDate>Thu, 07 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/post/start-up/start-up/do-not-use-scrum-before-new-pd-launch/</guid>
+      <guid>https://ianjustin39.github.io/post/start-up/start-up/do-not-use-scrum-before-new-pd-launch/</guid>
       <description>Scrum 算是現在軟體公司內最主流的協作框架，藉由 sprint 來切割產品每次更新的 scope ，讓產品可以不斷地與用戶互動，從而打造最貼近用戶及市場的產品。 但並不是所有的產品或是團隊都適合執行 Scrum 這個框架，甚至 Scrum 會阻礙開發的進度。
 Scrum 的優勢在於小步快跑 Scrum 的優勢在於小步快跑，產品藉由每次的迭代更新，不斷地適應市場的改變與用戶的需求。 在執行 sprint 的過程中，會評估每個 task 所需要花的資源、每個 sprint 可以完成掉多少 task 以及定義每個 sprint 的 goals 等， 這些數據讓 PM 可以有效的管理產品的進度，同時也可以經由這些資訊與不同的部門合作，讓產品可以在市場上順利被推行。
 新產品還沒上線之前不適合跑 Scrum？ 為什麼會說產品還沒上市前不適合跑 Scrum 呢？剛剛有提到，Scrum 講求小步快跑，藉由產品的快速迭代獲取更多用戶反饋，進而打造更貼近市場的產品。 重點來了！『產品的快速迭代』來獲取反饋，但產品還沒上線，怎麼來迭代獲取反饋呢？ 同時 Scrum 中的會議也會大量使用掉團隊的時間，在產品發布之前更應該把時間放在開發產品上，盡量避免耗時太久的會議。
@@ -24,10 +24,10 @@ Scrum 的優勢在於小步快跑 Scrum 的優勢在於小步快跑，產品藉�
     
     <item>
       <title>誰說 sprint ticket 一定要 story point?</title>
-      <link>https://ianjustin39.github.io/ianlife/post/product/product/does-ticket-must-need-story-point/</link>
+      <link>https://ianjustin39.github.io/post/product/product/does-ticket-must-need-story-point/</link>
       <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/ianlife/post/product/product/does-ticket-must-need-story-point/</guid>
+      <guid>https://ianjustin39.github.io/post/product/product/does-ticket-must-need-story-point/</guid>
       <description>有參與過敏捷開發的人一定聽過 story point，網路上也很多有關 story point 的解釋以及如了運用， 他主要是協助衡量團隊的開發狀況，讓 PM 可以再有一定的基準下去跟其他部門溝通，如產品行銷或是活動銷售等等。 但是不是真的有了 story point 就一定可以讓產品或專案順利進行？ 有沒有可能有了 story point 但還是遇到一堆狀況？
 永遠估不準的 Story Point 有沒有遇過這個狀況，在 sprint lanning 時團隊評估這個 sprint 可以完成 40 點，但 sprint 結束時卻只完成了 25~30 點， 常見的原因可能有這幾種：
 ticket 的點數估不準（如後端工程師估一同評估前端工程師的 ticket ） 評估 ticket 時忘記某個項目也要做（如 App 新功能只評估畫面開發，遺漏 API 串接） 實作 ticket 時出現預期之外問題或任務（在串接第三方平台時，回的參數與文件給的不同） 這些狀況都可能對在進行中的 sprint 造成一些風險，當然一般來說還是有辦法解決， 通常會在 Retrospective meeting 中去討論如何避免這次該遇到的困難，如後端工程師需要了解前端的開發不只有畫面，也包含邏輯； 與第三方廠商串接資料時需要先確認文件與實際提供的參數是否相同等事項，並期待下次再評估點數時可以更貼近團隊的狀況。
