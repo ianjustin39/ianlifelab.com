@@ -2,79 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ianjustin39.github.io/en/about/</loc>
+    <loc>https://ianlifelab.com/en/about/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://ianjustin39.github.io/about/"
+                href="https://ianlifelab.com/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ianjustin39.github.io/en/about/"
+                href="https://ianlifelab.com/en/about/"
                 />
   </url><url>
-    <loc>https://ianjustin39.github.io/en/</loc>
+    <loc>https://ianlifelab.com/en/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://ianjustin39.github.io/"
+                href="https://ianlifelab.com/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ianjustin39.github.io/en/"
+                href="https://ianlifelab.com/en/"
                 />
   </url><url>
-    <loc>https://ianjustin39.github.io/en/photograph/</loc>
+    <loc>https://ianlifelab.com/en/photograph/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://ianjustin39.github.io/photograph/"
+                href="https://ianlifelab.com/photograph/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ianjustin39.github.io/en/photograph/"
+                href="https://ianlifelab.com/en/photograph/"
                 />
   </url><url>
-    <loc>https://ianjustin39.github.io/en/categories/</loc>
+    <loc>https://ianlifelab.com/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://ianjustin39.github.io/categories/"
+                href="https://ianlifelab.com/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ianjustin39.github.io/en/categories/"
+                href="https://ianlifelab.com/en/categories/"
                 />
   </url><url>
-    <loc>https://ianjustin39.github.io/en/series/</loc>
+    <loc>https://ianlifelab.com/en/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://ianjustin39.github.io/series/"
+                href="https://ianlifelab.com/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ianjustin39.github.io/en/series/"
+                href="https://ianlifelab.com/en/series/"
                 />
   </url><url>
-    <loc>https://ianjustin39.github.io/en/tags/</loc>
+    <loc>https://ianlifelab.com/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://ianjustin39.github.io/tags/"
+                href="https://ianlifelab.com/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ianjustin39.github.io/en/tags/"
+                href="https://ianlifelab.com/en/tags/"
                 />
   </url>
 </urlset>

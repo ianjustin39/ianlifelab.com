@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>magnific Popup on Life Story</title>
-    <link>https://ianjustin39.github.io/tags/magnific-popup/</link>
+    <link>https://ianlifelab.com/tags/magnific-popup/</link>
     <description>Recent content in magnific Popup on Life Story</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Wed, 06 May 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ianjustin39.github.io/tags/magnific-popup/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ianlifelab.com/tags/magnific-popup/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿</title>
-      <link>https://ianjustin39.github.io/build-blog/build_photograph_in_hugo/</link>
+      <link>https://ianlifelab.com/build-blog/build_photograph_in_hugo/</link>
       <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianjustin39.github.io/build-blog/build_photograph_in_hugo/</guid>
+      <guid>https://ianlifelab.com/build-blog/build_photograph_in_hugo/</guid>
       <description>&lt;p&gt;剛開始架設網站時就決定要在網站內架一個相簿，這篇會分享如何用Bootstrap+Masonry+magnificPopup建構屬於你自己的相片牆&lt;/p&gt;</description>
     </item>
     
