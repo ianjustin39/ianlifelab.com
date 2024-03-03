@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>建立自己的 Blog on Own your life</title>
-    <link>https://ianlifelab.com/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84-blog/</link>
+    <link>https://ianjustin39.github.io/ianlife/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84-blog/</link>
     <description>Recent content in 建立自己的 Blog on Own your life</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ianlifelab.com/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84-blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ianjustin39.github.io/ianlife/series/%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84-blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在 Hugo Blog 中加上 Algolia 文章搜索工具</title>
-      <link>https://ianlifelab.com/build-blog/hugo-and-algolia/</link>
+      <link>https://ianjustin39.github.io/ianlife/build-blog/hugo-and-algolia/</link>
       <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/build-blog/hugo-and-algolia/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/build-blog/hugo-and-algolia/</guid>
       <description>隨著文章越來越多，要找到以前寫的文章就越來越麻煩，所以就一直想尋找站內搜索的功能使用。之前有試用 google 的站內搜索功能，但總覺得整體不是很好看，也就沒有繼續使用。直到最近看到 Algolia ，可建立文章的索引，將資料上傳到 Algolia，再藉由串接 API 就可以完成搜索功能。
 接下來就開始建立站內搜索功能吧。
 註冊 Algolia 第一步就是要到 Algolia 註冊帳號，登入後會要求輸入一個 index（等等要用到這個 index），然後會以這個 index 建立一個 app ，接著選擇存取的國家（我是選日本），完成之後會有這個畫面。
@@ -23,29 +23,29 @@ hugo 生成索引文件 1. 修改 config.toml 修改./config.toml設定好需要
     
     <item>
       <title>用Bootstrap &#43; Masonry &#43; magnific Popup架設個人相簿</title>
-      <link>https://ianlifelab.com/build-blog/build_photograph_in_hugo/</link>
+      <link>https://ianjustin39.github.io/ianlife/build-blog/build_photograph_in_hugo/</link>
       <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/build-blog/build_photograph_in_hugo/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/build-blog/build_photograph_in_hugo/</guid>
       <description>&lt;p&gt;剛開始架設網站時就決定要在網站內架一個相簿，這篇會分享如何用Bootstrap+Masonry+magnificPopup建構屬於你自己的相片牆&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>部署Hugo個人網頁至GitHub</title>
-      <link>https://ianlifelab.com/build-blog/deploy_hugo_on_github/</link>
+      <link>https://ianjustin39.github.io/ianlife/build-blog/deploy_hugo_on_github/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/build-blog/deploy_hugo_on_github/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/build-blog/deploy_hugo_on_github/</guid>
       <description>&lt;p&gt;之前用Hugo架設個人網站，但架設完成後還是需要部署到一個平台，才有辦法瀏覽，
 這篇就來分享如何將網頁部署到GitHub以及途中遇到的一些問題&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>使用Hugo建立個人網頁</title>
-      <link>https://ianlifelab.com/build-blog/get_started_hugo/</link>
+      <link>https://ianjustin39.github.io/ianlife/build-blog/get_started_hugo/</link>
       <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/build-blog/get_started_hugo/</guid>
+      <guid>https://ianjustin39.github.io/ianlife/build-blog/get_started_hugo/</guid>
       <description>&lt;p&gt;一直有想要寫一些文章記錄生活，身為一個工程師，難免會有想要自己架設的靈魂（？，
 最近發現hugo可以快速架站，除了有template以外也可以自己更改裡面的配置
 ，對於一個前端小菜鳥來說，算是一大福音ＸＤ，於是開始了這條漫漫長路～&lt;/p&gt;</description>
