@@ -16,15 +16,15 @@
     
 
     
-    <meta name="title" content="Resume" />
-    <meta property="og:title" content="Resume" />
-    <meta property="twitter:title" content="Resume" />
+    <meta name="title" content="關於bug🐛修不修這件事" />
+    <meta property="og:title" content="關於bug🐛修不修這件事" />
+    <meta property="twitter:title" content="關於bug🐛修不修這件事" />
     
 
     
-    <meta name="description" content="Ching Yu Tsai&#39;s Resume.">
-    <meta property="og:description" content="Ching Yu Tsai&#39;s Resume." />
-    <meta property="twitter:description" content="Ching Yu Tsai&#39;s Resume." />
+    <meta name="description" content="從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。">
+    <meta property="og:description" content="從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。" />
+    <meta property="twitter:description" content="從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。" />
     
 
     <meta name="keywords" content="" />
@@ -37,9 +37,9 @@
     <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師, 創業, 個人成長">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Resume | Ian&#39;s Blog</title>
+    <title>關於bug🐛修不修這件事 | Ian&#39;s Blog</title>
 
-    <link rel="canonical" href="/resume/">
+    <link rel="canonical" href="/threads/20240328_fix-bug-or-not/">
 
     
     
@@ -109,6 +109,80 @@ if (!doNotTrack) {
 
 
 
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
+
+    <div class="container-fluid"  style="background-color: rgba(0, 0, 0, 0.1) ">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Ian&#39;s Blog</a>
+            
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse" >
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">HOME</a>
+                    </li>
+                    
+                    
+		    
+                        <li><a href="/categories/start-up/">創業筆記</a></li>
+                    
+                        <li><a href="/categories/nomads/">數位遊牧</a></li>
+                    
+                        <li><a href="/categories/learning/">個人成長</a></li>
+                    
+                        <li><a href="/archive/">所有文章</a></li>
+                    
+		            
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
 
 
 
@@ -132,16 +206,16 @@ if (!doNotTrack) {
                         <div class="tags">
                             
                         </div>
-                        <h1>Resume</h1>
+                        <h1>關於bug🐛修不修這件事</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             
                             Posted by
                             
-                            Your Life, Your Lab
+                            Ian Tsai
                             
                             on
-                            Monday, January 1, 0001
+                            Thursday, March 28, 2024
                             
                             
                             
@@ -175,7 +249,7 @@ if (!doNotTrack) {
                         <ul class="catalog-body"></ul>
 
                     <iframe class="LikeCoin" height="235"
-  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianlifelab.com%2fresume%2f" width="100%"
+  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianlifelab.com%2fthreads%2f20240328_fix-bug-or-not%2f" width="100%"
   frameborder=0></iframe>
 
                     </div>
@@ -195,10 +269,16 @@ if (!doNotTrack) {
                     <hr>
                     <ul class="pager">
                         
+                        <li class="previous">
+                            <a href="/threads/20240320_survey-or-interview/" data-toggle="tooltip" data-placement="top"
+                                title="問券 vs 訪談 哪個適合探索需求">&larr;
+                                Previous Post</a>
+                        </li>
+                        
                         
                         <li class="next">
-                            <a href="/archive/" data-toggle="tooltip" data-placement="top"
-                                title="Posts Archive">Next
+                            <a href="/threads/20240426_follow-trend/" data-toggle="tooltip" data-placement="top"
+                                title="產品究竟要不要跟著潮流起舞？">Next
                                 Post &rarr;</a>
                         </li>
                         

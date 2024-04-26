@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Threads on Your Life, Your Lab</title>
+    <link>https://ianlifelab.com/threads/</link>
+    <description>Recent content in Threads on Your Life, Your Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 26 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ianlifelab.com/threads/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>產品究竟要不要跟著潮流起舞？</title>
+      <link>https://ianlifelab.com/threads/20240426_follow-trend/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianlifelab.com/threads/20240426_follow-trend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>關於bug🐛修不修這件事</title>
+      <link>https://ianlifelab.com/threads/20240328_fix-bug-or-not/</link>
+      <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianlifelab.com/threads/20240328_fix-bug-or-not/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>問券 vs 訪談 哪個適合探索需求</title>
+      <link>https://ianlifelab.com/threads/20240320_survey-or-interview/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianlifelab.com/threads/20240320_survey-or-interview/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
