@@ -698,15 +698,6 @@ hugo 生成索引文件 1. 修改 config.toml 修改./config.toml設定好需要
     </item>
     
     <item>
-      <title>Photograph</title>
-      <link>https://ianlifelab.com/photograph/</link>
-      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianlifelab.com/photograph/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>使用Hugo建立個人網頁</title>
       <link>https://ianlifelab.com/build-blog/get_started_hugo/</link>
       <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>

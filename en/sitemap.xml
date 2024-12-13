@@ -15,19 +15,6 @@
                 href="https://ianlifelab.com/en/about/"
                 />
   </url><url>
-    <loc>https://ianlifelab.com/en/</loc>
-    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ianlifelab.com/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ianlifelab.com/en/"
-                />
-  </url><url>
     <loc>https://ianlifelab.com/en/photograph/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -41,6 +28,19 @@
                 href="https://ianlifelab.com/en/photograph/"
                 />
   </url><url>
+    <loc>https://ianlifelab.com/en/</loc>
+    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianlifelab.com/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianlifelab.com/en/"
+                />
+  </url><url>
     <loc>https://ianlifelab.com/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -51,6 +51,30 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://ianlifelab.com/en/categories/"
+                />
+  </url><url>
+    <loc>https://ianlifelab.com/en/contact/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianlifelab.com/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianlifelab.com/en/contact/"
+                />
+  </url><url>
+    <loc>https://ianlifelab.com/en/archive/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianlifelab.com/archive/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianlifelab.com/en/archive/"
                 />
   </url><url>
     <loc>https://ianlifelab.com/en/series/</loc>
