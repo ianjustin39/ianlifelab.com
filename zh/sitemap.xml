@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ianlifelab.com/categories/</loc>
-    <lastmod>2024-12-11T00:00:00+00:00</lastmod>
+    <lastmod>2024-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -15,11 +15,14 @@
                 href="https://ianlifelab.com/categories/"
                 />
   </url><url>
+    <loc>https://ianlifelab.com/categories/life/</loc>
+    <lastmod>2024-12-31T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://ianlifelab.com/post/</loc>
-    <lastmod>2024-12-11T00:00:00+00:00</lastmod>
+    <lastmod>2024-12-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianlifelab.com/series/</loc>
-    <lastmod>2024-12-11T00:00:00+00:00</lastmod>
+    <lastmod>2024-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -31,11 +34,8 @@
                 href="https://ianlifelab.com/series/"
                 />
   </url><url>
-    <loc>https://ianlifelab.com/categories/start-up/</loc>
-    <lastmod>2024-12-11T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ianlifelab.com/tags/</loc>
-    <lastmod>2024-12-11T00:00:00+00:00</lastmod>
+    <lastmod>2024-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -48,7 +48,7 @@
                 />
   </url><url>
     <loc>https://ianlifelab.com/</loc>
-    <lastmod>2024-12-11T00:00:00+00:00</lastmod>
+    <lastmod>2024-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -59,6 +59,18 @@
                 hreflang="zh"
                 href="https://ianlifelab.com/"
                 />
+  </url><url>
+    <loc>https://ianlifelab.com/tags/%E7%94%9F%E6%B4%BB%E9%9A%A8%E7%AD%86/</loc>
+    <lastmod>2024-12-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianlifelab.com/series/%E7%94%9F%E6%B4%BB%E9%9A%A8%E7%AD%86/</loc>
+    <lastmod>2024-12-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianlifelab.com/life/one-word-for-2024-and-2025/</loc>
+    <lastmod>2024-12-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianlifelab.com/categories/start-up/</loc>
+    <lastmod>2024-12-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianlifelab.com/tags/%E7%94%A2%E5%93%81%E6%80%9D%E7%B6%AD/</loc>
     <lastmod>2024-12-11T00:00:00+00:00</lastmod>
@@ -72,16 +84,7 @@
     <loc>https://ianlifelab.com/post/start-up/start-up/what-are-users-thinking/</loc>
     <lastmod>2024-12-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianlifelab.com/categories/life/</loc>
-    <lastmod>2024-04-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ianlifelab.com/categories/nomads/</loc>
-    <lastmod>2024-04-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ianlifelab.com/tags/%E7%94%9F%E6%B4%BB%E9%9A%A8%E7%AD%86/</loc>
-    <lastmod>2024-04-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ianlifelab.com/series/%E7%94%9F%E6%B4%BB%E9%9A%A8%E7%AD%86/</loc>
     <lastmod>2024-04-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianlifelab.com/tags/%E6%95%B8%E4%BD%8D%E9%81%8A%E7%89%A7%E4%BD%8F%E5%93%AA%E8%A3%A1/</loc>
