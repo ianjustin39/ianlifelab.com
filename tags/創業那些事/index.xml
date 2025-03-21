@@ -5,7 +5,23 @@
     <link>https://ianlifelab.com/tags/%E5%89%B5%E6%A5%AD%E9%82%A3%E4%BA%9B%E4%BA%8B/</link>
     <description>Recent content in 創業那些事 on Your Life, Your Lab</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 11 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ianlifelab.com/tags/%E5%89%B5%E6%A5%AD%E9%82%A3%E4%BA%9B%E4%BA%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ianlifelab.com/tags/%E5%89%B5%E6%A5%AD%E9%82%A3%E4%BA%9B%E4%BA%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI 焦慮！AI 時代的 PM 該怎麼生存？</title>
+      <link>https://ianlifelab.com/post/product/product/ai-and-product-manager/</link>
+      <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianlifelab.com/post/product/product/ai-and-product-manager/</guid>
+      <description>在 AI 大量發生後的這段時間，社群上一直充斥著『XXX 是不是會被 AI 取代？』、『YY 公司導入 AI 降低了 n% 的人力成本』等資訊， 究竟 PM 會隨著這股 AI 浪潮被取代？還是會有不一樣的機會出現？
+AI 可以幫助我們做什麼？ 想起剛出社會當軟體工程師時，遇到一個 bug 要爬各種 Stack Overflow 找問題出在哪，然後不斷地 try-and-error， 而現在只需要把問題丟給 AI 就可以用最短的時間內找到方法，甚至叫他優化程式碼，這能不香嗎？
+過去一個 PM 想要推出一個功能，從發想到 prototype，除非 PM 本身會設計會寫程式，不然光靠 PM 一個人很難做到這件事。 但現在，PM 只要會畫圖，就可以讓會畫圖的 AI 幫忙產出 wireframe，接著再把 wireframe 放到會寫程式的 AI 就可以產出一個 prototype 了。
+不只 prototype，連整理數據、整理訪談資料、整理研究資料、製作簡報等，這些 PM 平常要做的事情，都有對應的 AI 可以幫忙， 這大幅提升了工作的效率，也降低了許多決策的門檻。
+在做 MeFresh 這個產品時，我當然也使用了 ChatGPT 幫助我解決我遇到的很多問題，比方說我希望點擊按鈕時有個動畫效果，但我以往是後端工程師不會做動畫怎麼辦？ GPT 很快地幫我找到了解法，並解釋了對應的參數，在使用這段程式碼後 app 也確實產生了動畫效果，只要去調整參數讓效果更貼近我所想像的就好了。
+再產品的部分，我也請 GPT 幫我找尋國內外類似的產品、甚至每個國家使用不同類型產品的習慣，讓我可以更有目標的去知道要分析哪些產品，而不會像無頭蒼蠅一樣亂撞。
+AI 確實幫助了工作上『效率』、『速度』的提升，但&amp;hellip;它有沒有副作用呢？
+提升效率而非代替成長？ AI 確實可以提升效率，但他不一定可以幫助你解決所有問題。 若直接搬運程式碼，可能造成 app 不相容或是隱藏的 bug；若直接將 AI 給的分析資訊拿去做產品決策，也可能導致錯誤發生。</description>
+    </item>
+    
     <item>
       <title>用戶應該會這樣做？『我覺得』不一定是真的！</title>
       <link>https://ianlifelab.com/post/start-up/start-up/what-are-users-thinking/</link>

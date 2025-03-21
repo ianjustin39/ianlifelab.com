@@ -2,8 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ianlifelab.com/post/product/product/ai-and-product-manager/</loc>
+    <lastmod>2025-03-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianlifelab.com/tags/ai-%E6%B5%AA%E6%BD%AE/</loc>
+    <lastmod>2025-03-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://ianlifelab.com/categories/</loc>
-    <lastmod>2024-12-31T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -15,10 +21,45 @@
                 href="https://ianlifelab.com/categories/"
                 />
   </url><url>
-    <loc>https://ianlifelab.com/categories/life/</loc>
-    <lastmod>2024-12-31T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ianlifelab.com/post/</loc>
+    <lastmod>2025-03-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianlifelab.com/categories/product/</loc>
+    <lastmod>2025-03-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianlifelab.com/tags/</loc>
+    <lastmod>2025-03-20T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianlifelab.com/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianlifelab.com/tags/"
+                />
+  </url><url>
+    <loc>https://ianlifelab.com/</loc>
+    <lastmod>2025-03-20T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianlifelab.com/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianlifelab.com/"
+                />
+  </url><url>
+    <loc>https://ianlifelab.com/tags/%E7%94%A2%E5%93%81%E7%B6%93%E7%90%86/</loc>
+    <lastmod>2025-03-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianlifelab.com/tags/%E5%89%B5%E6%A5%AD%E9%82%A3%E4%BA%9B%E4%BA%8B/</loc>
+    <lastmod>2025-03-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianlifelab.com/categories/life/</loc>
     <lastmod>2024-12-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianlifelab.com/series/</loc>
@@ -34,32 +75,6 @@
                 href="https://ianlifelab.com/series/"
                 />
   </url><url>
-    <loc>https://ianlifelab.com/tags/</loc>
-    <lastmod>2024-12-31T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ianlifelab.com/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ianlifelab.com/tags/"
-                />
-  </url><url>
-    <loc>https://ianlifelab.com/</loc>
-    <lastmod>2024-12-31T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ianlifelab.com/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ianlifelab.com/"
-                />
-  </url><url>
     <loc>https://ianlifelab.com/tags/%E7%94%9F%E6%B4%BB%E9%9A%A8%E7%AD%86/</loc>
     <lastmod>2024-12-31T00:00:00+00:00</lastmod>
   </url><url>
@@ -73,9 +88,6 @@
     <lastmod>2024-12-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianlifelab.com/tags/%E7%94%A2%E5%93%81%E6%80%9D%E7%B6%AD/</loc>
-    <lastmod>2024-12-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ianlifelab.com/tags/%E5%89%B5%E6%A5%AD%E9%82%A3%E4%BA%9B%E4%BA%8B/</loc>
     <lastmod>2024-12-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianlifelab.com/series/%E5%89%B5%E6%A5%AD%E9%82%A3%E4%BA%9B%E4%BA%8B/</loc>
@@ -106,9 +118,6 @@
     <lastmod>2024-03-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianlifelab.com/tags/notion/</loc>
-    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ianlifelab.com/categories/product/</loc>
     <lastmod>2024-03-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianlifelab.com/categories/tech/</loc>
@@ -146,9 +155,6 @@
   </url><url>
     <loc>https://ianlifelab.com/read/create-dreams/</loc>
     <lastmod>2023-12-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ianlifelab.com/tags/%E7%94%A2%E5%93%81%E7%B6%93%E7%90%86/</loc>
-    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianlifelab.com/post/product/product/does-ticket-must-need-story-point/</loc>
     <lastmod>2023-11-27T00:00:00+00:00</lastmod>
