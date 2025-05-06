@@ -5,7 +5,23 @@
     <link>https://ianlifelab.com/series/%E7%94%9F%E6%B4%BB%E9%9A%A8%E7%AD%86/</link>
     <description>Recent content in 生活隨筆 on Your Life, Your Lab</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 31 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ianlifelab.com/series/%E7%94%9F%E6%B4%BB%E9%9A%A8%E7%AD%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ianlifelab.com/series/%E7%94%9F%E6%B4%BB%E9%9A%A8%E7%AD%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>做產品不要害怕被用戶拒絕！</title>
+      <link>https://ianlifelab.com/post/start-up/start-up/do-you-really-understand-rest/</link>
+      <pubDate>Tue, 06 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianlifelab.com/post/start-up/start-up/do-you-really-understand-rest/</guid>
+      <description>📝 當用戶說『我不需要你的產品』 剛開始開發產品時，為了可以獲得用戶反饋，所以想辦法找了許多使用者使用。以健身產業做例子，健身產業中有大型健身房、小型健身房、個人健身工作室以及自由教練等，每個群體的需求都不一樣，當時我定義了產品 TA 為自由教練，所以想盡辦法找了能找到的自由教練使用產品，並定期訪談這些教練的使用體驗，其中一個教練這樣跟我說：
+『我所有學生的上課紀錄在 google 行事曆內，你的產品沒辦法讓我直接轉移 google 的資料，我要一個一個重新輸入太浪費時間。而且我也當教練十幾年了，會來找我訓練的學生基本上我都記得住他們的問題，不太需要再做紀錄，而且光訓練這些學生我的時間就被排滿了。所以基本上我不太需要你的產品』。（註：健身產業是舉例。）
+聽完這段對話簡直晴天霹靂⚡，但我並沒有難過得太久，反而在思考整理過後知道了幾件事：
+有十幾年經驗的健身教練並不是產品的 TA 有一套自己固定工作流程的人，要再導入新流程反而增加他們的負擔 『紀錄』這件事，對於比較早進入健身產業的教練來說並不是太重要 比起一直說『不錯呀』、『還行吧』的回應，我更喜歡直接點出問題的用戶。因為這可快速讓我知道原來這個功能甚至這個產品還有可以改進的地方，或是我們可以更聚焦於哪類的 TA。所以在這之後我再尋找用戶試用時，就會盡量撇除這幾種類型的用戶，讓我可以獲得更精準的用戶反饋。
+📝 過濾需求而不是照單全收 用戶所提的任何需求都不一定是他真正需要的，甚至他根本不知道他想要哪些功能。產品很需要用戶給予反饋，但並非所有的需求都要接受。
+你可以試試以下幾個面向來評估這個需求是Must, Should or Nice to have：（這邊先撇除 Bug 相關問題）
+提出需求的用戶與產品的目標用戶是否一致？ 這個需求是否解決目標用戶的主要問題？或是可以提升目標用戶的使用體驗？ 產品自身有沒有類似的解決方案可以先使用？還是必須實作一個新的？ 完成這個需求需要花多少資源，是否會擠壓到本來預計安排的任務？ 若評估完這個用戶提出的需求必須擁有，沒有會影響到產品使用，那就安排時間整合；若判斷是應該需要，但目前有產品功能有替代方案，那就安排未來有資源時優先整合；若是有很好、沒有沒差的需求，可以等有資源有時間，或是做某項功能時可以用很低成本一起實作時再來考慮。
+🤗 總結 用戶願意提出反饋，代表對於產品來說還是有些期待，對於產品來說是很好的事情。但同時也要過濾用戶提估的意見，才不會最後做出一堆看似符合用戶實際上卻沒解決問題的功能。</description>
+    </item>
+    
     <item>
       <title>一個字回顧 2024、一個字期許 2025</title>
       <link>https://ianlifelab.com/life/one-word-for-2024-and-2025/</link>
