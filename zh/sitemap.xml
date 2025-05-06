@@ -15,9 +15,6 @@
                 href="https://ianlifelab.com/categories/"
                 />
   </url><url>
-    <loc>https://ianlifelab.com/categories/life/</loc>
-    <lastmod>2025-05-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ianlifelab.com/post/</loc>
     <lastmod>2025-05-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -92,6 +89,9 @@
   </url><url>
     <loc>https://ianlifelab.com/categories/product/</loc>
     <lastmod>2025-03-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianlifelab.com/categories/life/</loc>
+    <lastmod>2024-12-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianlifelab.com/tags/%E7%94%9F%E6%B4%BB%E9%9A%A8%E7%AD%86/</loc>
     <lastmod>2024-12-31T00:00:00+00:00</lastmod>

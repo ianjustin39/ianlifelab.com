@@ -7,15 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 06 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ianlifelab.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>LIFE</title>
-      <link>https://ianlifelab.com/categories/life/</link>
-      <pubDate>Tue, 06 May 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://ianlifelab.com/categories/life/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>START-UP</title>
       <link>https://ianlifelab.com/categories/start-up/</link>
       <pubDate>Tue, 06 May 2025 00:00:00 +0000</pubDate>
@@ -30,6 +21,15 @@
       <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>https://ianlifelab.com/categories/product/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LIFE</title>
+      <link>https://ianlifelab.com/categories/life/</link>
+      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://ianlifelab.com/categories/life/</guid>
       <description></description>
     </item>
     
