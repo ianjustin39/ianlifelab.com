@@ -16,9 +16,9 @@
     
 
     
-    <meta name="title" content="" />
-    <meta property="og:title" content="" />
-    <meta property="twitter:title" content="" />
+    <meta name="title" content="Portfolio" />
+    <meta property="og:title" content="Portfolio" />
+    <meta property="twitter:title" content="Portfolio" />
     
 
     
@@ -37,9 +37,9 @@
     <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師, 創業, 個人成長">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Post | Ian&#39;s Blog</title>
+    <title>Portfolio | Ian&#39;s Blog</title>
 
-    <link rel="canonical" href="/post/">
+    <link rel="canonical" href="/en/portfolio/">
 
     
     
@@ -120,7 +120,7 @@ if (!doNotTrack) {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Ian&#39;s Blog</a>
+            <a class="navbar-brand" href="/en/">Ian&#39;s Blog</a>
             
         </div>
 
@@ -130,16 +130,20 @@ if (!doNotTrack) {
             <div class="navbar-collapse" >
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="/">HOME</a>
+                        <a href="/en/">HOME</a>
                     </li>
                     
                     
 		            
-                        <li><a href="/portfolio/">作品集</a></li>
+                        <li><a href="/en/categories/career/">Career</a></li>
                     
-                        <li><a href="/archive/">所有文章</a></li>
+                        <li><a href="/en/categories/product/">Product</a></li>
                     
-                        <li><a href="/subscription/">訂閱有趣的東西！！</a></li>
+                        <li><a href="/en/categories/learning/">Learning</a></li>
+                    
+                        <li><a href="/en/archive/">Archive</a></li>
+                    
+                        <li><a href="/en/about//">About</a></li>
                     
 		            
                 </ul>
@@ -181,14 +185,254 @@ if (!doNotTrack) {
 
 
 
-<header class="intro-header" style="background-image: url('https://i.imgur.com/HNaPaLS.png')">
+<style>
+    body { font-family: sans-serif; line-height: 1.6; color: #333; }
+    .post-container { margin: auto; max-width: 1200px; padding-right: 50px; padding-left: 50px; }
+    .page-container { margin: auto;max-width: 1000px; }
+     
+    .timeline-container {
+    max-width: 960px;  
+    margin: 0 auto;  
+    padding: 0 20px;  
+    box-sizing: border-box;  
+    }
+
+     
+    .timeline {
+        position: relative;
+        padding: 20px 0;
+    }
+
+    .timeline h4 {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+
+    .timeline p {
+        margin-top: 4px;
+        margin-bottom: 0px;
+    }
+
+    .timeline::before {
+         
+        content: '';
+        position: absolute;
+        left: 20px;  
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background: #ddd;
+    }
+
+    .timeline-item {
+         
+         
+        justify-content: center;  
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 60px;  
+    }
+
+     
+    .timeline-item:nth-child(odd) {
+        flex-direction: row;  
+    }
+
+    .timeline-date {
+         
+        text-align: left;  
+         
+        padding-top: 0px;
+        color: #555;
+         
+    }
+
+    .timeline-content {
+        width: 100%;  
+         
+        padding: 20px;
+        border-radius: 8px;
+         
+        position: relative;
+         
+    }
+
+     
+    .timeline-item .timeline-content::before {
+        content: '';
+        position: absolute;
+        left: -10px;  
+        top: 20px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid #f9f9f9;  
+    }
+
+     
+    .timeline-item:nth-child(even) .timeline-content::before {
+         
+        border: none;
+    }
+
+
+    .timeline-dot {
+        width: 15px;
+        height: 15px;
+        background: black;
+        border-radius: 50%;
+        position: absolute;
+        left: 21px;  
+        top: 25px;
+        transform: translateX(-50%);  
+        z-index: 1;
+    }
+
+    .timeline-content h2 {
+        margin-top: 0;
+        color: black;
+    }
+
+    .timeline-content .tags span {
+        display: inline-block;
+         
+        color: #404040;
+         
+        border-radius: 4px;
+        margin-right: 5px;
+        font-size: 0.9em;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        font-style: italic;
+    }
+
+
+    .timeline-content .type span {
+        display: inline-block;
+         
+        color: #404040;
+         
+        border-radius: 4px;
+        margin-right: 5px;
+        font-size: 0.9em;
+        margin-bottom: 6px;
+        margin-top: 6px;
+        font-style: italic;
+    }
+
+    .timeline-content p {
+        margin-bottom: 0px;
+        color: rgb(163, 163, 163);
+    }
+
+    .timeline-content a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .timeline-content a:hover {
+        text-decoration: underline;
+    }
+
+    .project-type span {
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-right: 10px;
+        padding-left: 10px;
+        border-radius: 4px;
+        margin-top: 10px;
+    }
+
+    .status-in-progress {
+        background-color: rgba(48,209,88,0.2);
+        color: rgba(48,209,88,1.2);  
+    }
+
+    .status-done {
+        background-color: rgba(255,163,186,0.2);
+        color: rgba(255,163,186,1.2);  
+    }
+
+    .type-personal {
+        background-color: rgba(151,198,240,0.2);
+        color: rgba(151,198,240,1.2);  
+    }
+
+    .type-company {
+        background-color: rgba(255,191,105,0.2);
+        color: rgba(255,191,105,1.2);
+    }
+    header.intro-header {
+        background-image: url('https://i.imgur.com/gZfLq5v.jpg');
+         
+         
+         
+        height: 500px;
+    }
+
+    @media (max-width: 768px) {
+
+        .post-container {  padding-right: 30px; padding-left: 30px; }   
+        .timeline::before {
+            left: 20px;  
+        }
+
+        .timeline-item {
+            flex-direction: column;  
+            align-items: center;  
+            margin-left: 0;
+            padding-left: 60px;  
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: column;  
+        }
+
+        .timeline-date {
+            width: 100%;
+            text-align: left;
+            margin-bottom: 10px;
+            padding-left: 0;  
+        }
+
+        .timeline-content {
+            width: 100%;  
+            margin-left: 0;  
+            margin-top: 0;
+        }
+
+         
+        .timeline-item .timeline-content::before {
+            border: none;
+        }
+
+        .timeline-dot {
+            left: 20px;  
+            transform: translateX(-50%);  
+        }
+
+        header.intro-header {
+            background-image: url('https://i.imgur.com/gZfLq5v.jpg');
+             
+             
+             
+            height: 330px;
+        }
+    }
+
+  
+</style>
+
+    <header class="intro-header">
+    
     <div class="container">
         <div class="">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>Your Life, Your Lab </h1>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
                     
-                    <span class="subheading">Accept who you are and own your life.</span>
+                    
                 </div>
             </div>
         </div>
@@ -197,31 +441,30 @@ if (!doNotTrack) {
 
 
 
+<body data-spy="scroll" data-target="#top-navbar" data-offset="100">
+     <div class="post-container">
 
-<article>
-    <div class="container">
-        <div class="">
-            
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                post-container">
+        
+        <p>哈囉，我是Mina, 我是一個Python 後端軟體開發工程師，擁有不同領域的專案及產品開發經驗。這頁是我的作品集，會列出所有過去參與過的專案跟產品，包括個人開發的項目。
+後端軟體工程目前還是我主要的耕耘領域，大部分都專職於Python程式語言，少部分接觸過Java語言。
+2022年4月開始，涉略學習前端軟體開發，學習Vue.js和Nuxt框架，之後繼續鑽研後端領域跟探索前端領域。</p>
 
-         	
-                
-
-            </div>
+    </div>
+    <div class="page-container">
+        <div class="timeline">
             
             
+            
+            
 
-                
-                
-
-                
-                
+            
+                <p>目前沒有作品集資料。</p>
+            
         </div>
     </div>
-</article>
+</body>
+
+
 
 
 

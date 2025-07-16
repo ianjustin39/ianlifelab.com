@@ -41,6 +41,19 @@
                 href="https://ianlifelab.com/en/"
                 />
   </url><url>
+    <loc>https://ianlifelab.com/en/resume/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianlifelab.com/resume/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianlifelab.com/en/resume/"
+                />
+  </url><url>
     <loc>https://ianlifelab.com/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -63,6 +76,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://ianlifelab.com/en/contact/"
+                />
+  </url><url>
+    <loc>https://ianlifelab.com/en/portfolio/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianlifelab.com/portfolio/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianlifelab.com/en/portfolio/"
                 />
   </url><url>
     <loc>https://ianlifelab.com/en/archive/</loc>
