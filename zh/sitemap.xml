@@ -308,19 +308,6 @@
     <loc>https://ianlifelab.com/build-blog/get_started_hugo/</loc>
     <lastmod>2020-04-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ianlifelab.com/resume/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ianlifelab.com/en/resume/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://ianlifelab.com/resume/"
-                />
-  </url><url>
     <loc>https://ianlifelab.com/contact/</loc>
     <xhtml:link
                 rel="alternate"
@@ -343,6 +330,18 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://ianlifelab.com/portfolio/"
+                />
+  </url><url>
+    <loc>https://ianlifelab.com/resume/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ianlifelab.com/en/resume/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://ianlifelab.com/resume/"
                 />
   </url><url>
     <loc>https://ianlifelab.com/archive/</loc>
