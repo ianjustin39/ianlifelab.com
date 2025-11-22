@@ -182,15 +182,34 @@ if (!doNotTrack) {
 
 
 <style>
-    body { font-family: sans-serif; line-height: 1.6; color: #333; }
-    .post-container { margin: auto; max-width: 1200px; padding-right: 50px; padding-left: 50px; }
-    .page-container { margin: auto;max-width: 1000px; }
+    body {
+        font-family: sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    .post-container {
+        margin: auto;
+        max-width: 1200px;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .page-container {
+        margin: auto;
+        max-width: 1000px;
+    }
+
      
     .timeline-container {
-    max-width: 960px;  
-    margin: 0 auto;  
-    padding: 0 20px;  
-    box-sizing: border-box;  
+        max-width: 960px;
+         
+        margin: 0 auto;
+         
+        padding: 0 20px;
+         
+        box-sizing: border-box;
+         
     }
 
      
@@ -214,7 +233,8 @@ if (!doNotTrack) {
          
         content: '';
         position: absolute;
-        left: 20px;  
+        left: 20px;
+         
         top: 0;
         width: 2px;
         height: 100%;
@@ -224,20 +244,24 @@ if (!doNotTrack) {
     .timeline-item {
          
          
-        justify-content: center;  
+        justify-content: center;
+         
         margin-bottom: 10px;
         position: relative;
-        padding-left: 60px;  
+        padding-left: 60px;
+         
     }
 
      
     .timeline-item:nth-child(odd) {
-        flex-direction: row;  
+        flex-direction: row;
+         
     }
 
     .timeline-date {
          
-        text-align: left;  
+        text-align: left;
+         
          
         padding-top: 0px;
         color: #555;
@@ -245,7 +269,8 @@ if (!doNotTrack) {
     }
 
     .timeline-content {
-        width: 100%;  
+        width: 100%;
+         
          
         padding: 20px;
         border-radius: 8px;
@@ -258,13 +283,15 @@ if (!doNotTrack) {
     .timeline-item .timeline-content::before {
         content: '';
         position: absolute;
-        left: -10px;  
+        left: -10px;
+         
         top: 20px;
         width: 0;
         height: 0;
         border-top: 10px solid transparent;
         border-bottom: 10px solid transparent;
-        border-right: 10px solid #f9f9f9;  
+        border-right: 10px solid #f9f9f9;
+         
     }
 
      
@@ -280,9 +307,11 @@ if (!doNotTrack) {
         background: black;
         border-radius: 50%;
         position: absolute;
-        left: 21px;  
+        left: 21px;
+         
         top: 25px;
-        transform: translateX(-50%);  
+        transform: translateX(-50%);
+         
         z-index: 1;
     }
 
@@ -339,28 +368,38 @@ if (!doNotTrack) {
         padding-left: 6px;
         border-radius: 4px;
         margin-top: 10px;
-        font-size:smaller;
+        font-size: smaller;
     }
 
     .status-in-progress {
-        background-color: rgba(48,209,88,0.2);
-        color: rgba(48,209,88,1.2);  
+        background-color: rgba(48, 209, 88, 0.2);
+        color: rgba(48, 209, 88, 1.2);
+         
     }
 
     .status-done {
-        background-color: rgba(255,163,186,0.2);
-        color: rgba(255,163,186,1.2);  
+        background-color: rgba(255, 163, 186, 0.2);
+        color: rgba(255, 163, 186, 1.2);
+         
+    }
+
+    .labels {
+        background-color: rgba(255, 207, 163, 0.2);
+        color: rgba(255, 163, 186, 1.2);
+         
     }
 
     .type-personal {
-        background-color: rgba(151,198,240,0.2);
-        color: rgba(151,198,240,1.2);  
+        background-color: rgba(151, 198, 240, 0.2);
+        color: rgba(151, 198, 240, 1.2);
+         
     }
 
     .type-company {
-        background-color: rgba(255,191,105,0.2);
-        color: rgba(255,191,105,1.2);
+        background-color: rgba(255, 191, 105, 0.2);
+        color: rgba(255, 191, 105, 1.2);
     }
+
     header.intro-header {
         background-image: url('https://i.imgur.com/gZfLq5v.jpg');
          
@@ -371,32 +410,44 @@ if (!doNotTrack) {
 
     @media (max-width: 768px) {
 
-        .post-container {  padding-right: 30px; padding-left: 30px; }   
+        .post-container {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+
         .timeline::before {
-            left: 20px;  
+            left: 20px;
+             
         }
 
         .timeline-item {
-            flex-direction: column;  
-            align-items: center;  
+            flex-direction: column;
+             
+            align-items: center;
+             
             margin-left: 0;
-            padding-left: 60px;  
+            padding-left: 60px;
+             
         }
 
         .timeline-item:nth-child(odd) {
-            flex-direction: column;  
+            flex-direction: column;
+             
         }
 
         .timeline-date {
             width: 100%;
             text-align: left;
             margin-bottom: 10px;
-            padding-left: 0;  
+            padding-left: 0;
+             
         }
 
         .timeline-content {
-            width: 100%;  
-            margin-left: 0;  
+            width: 100%;
+             
+            margin-left: 0;
+             
             margin-top: 0;
         }
 
@@ -406,8 +457,10 @@ if (!doNotTrack) {
         }
 
         .timeline-dot {
-            left: 20px;  
-            transform: translateX(-50%);  
+            left: 20px;
+             
+            transform: translateX(-50%);
+             
         }
 
         header.intro-header {
@@ -418,50 +471,48 @@ if (!doNotTrack) {
             height: 330px;
         }
     }
-
-  
 </style>
 
     <header class="intro-header">
-    
-    <div class="container">
-        <div class="">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    
-                    
+        
+        <div class="container">
+            <div class="">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
+    
 
+    <body data-spy="scroll" data-target="#top-navbar" data-offset="100">
+        <div class="post-container">
 
-<body data-spy="scroll" data-target="#top-navbar" data-offset="100">
-     <div class="post-container">
-
-        
-        
-    </div>
-    <div class="page-container">
-        <div class="timeline">
             
             
-            
+        </div>
+        <div class="page-container">
+            <div class="timeline">
+
                 
-            
-            
+                
+                
+                
 
-            
+
+                
                 
                 
                 <div class="timeline-item">
                     
-                    
+
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <p class="timeline-date">2023/01 ~ Present</p> 
+                        <p class="timeline-date">2023/01 ~ Present</p>
                         <div class="project-type">
                             <h4>MeFresh - Beauty Booking SAAS System</h4>
                             
@@ -469,6 +520,7 @@ if (!doNotTrack) {
                             
                             
                             <span class="status-in-progress">In Progress (Launched)</span>
+                            
                             
                         </div>
                         <p>Drawing on the experience of past product managers and engineers, I built this product from scratch—a customer management system specifically designed for beauticians.</p>
@@ -497,7 +549,7 @@ if (!doNotTrack) {
                             
                         </div>
                         
-                        
+
 
                         
                         <div class="hide-on-mobile" style="display: flex; flex: 2; margin-top: 10px; max-width: 500px;">
@@ -505,9 +557,10 @@ if (!doNotTrack) {
                                 style="margin-top: 0 ;max-width: 80%; height: auto; border-radius: 0px;">
                         </div>
                         
+
                         
-                         
-                        <p><a href="https://www.mefreshapp.com/" target="_blank" rel="noopener noreferrer">Official Website</a></p>
+                        <p><a href="https://www.mefreshapp.com/" target="_blank" rel="noopener noreferrer">Official
+                                Website</a></p>
                         
                         
                         
@@ -516,14 +569,15 @@ if (!doNotTrack) {
                 
                 <div class="timeline-item">
                     
-                    
+
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <p class="timeline-date">Sep 2022 - Dec 2022</p> 
+                        <p class="timeline-date">Sep 2022 - Dec 2022</p>
                         <div class="project-type">
                             <h4>Crypto Software Wallet</h4>
                             
                             <span class="type-company">Company</span>
+                            
                             
                             
                             
@@ -544,7 +598,7 @@ if (!doNotTrack) {
                             
                         </div>
                         
-                        
+
 
                         
                         <div class="hide-on-mobile" style="display: flex; flex: 2; margin-top: 10px; max-width: 500px;">
@@ -552,7 +606,7 @@ if (!doNotTrack) {
                                 style="margin-top: 0 ;max-width: 80%; height: auto; border-radius: 0px;">
                         </div>
                         
-                        
+
                         
                         
                         
@@ -561,14 +615,15 @@ if (!doNotTrack) {
                 
                 <div class="timeline-item">
                     
-                    
+
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <p class="timeline-date">Oct 2022 - Dec 2022</p> 
+                        <p class="timeline-date">Oct 2022 - Dec 2022</p>
                         <div class="project-type">
                             <h4>[Internal Innovation Project] Launchpad Coin Issuance Platform</h4>
                             
                             <span class="type-company">Company</span>
+                            
                             
                             
                             
@@ -591,10 +646,10 @@ if (!doNotTrack) {
                             
                         </div>
                         
-                        
+
 
                         
-                        
+
                         
                         
                         
@@ -603,14 +658,15 @@ if (!doNotTrack) {
                 
                 <div class="timeline-item">
                     
-                    
+
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <p class="timeline-date">Jul 2021 - Dec 2021</p> 
+                        <p class="timeline-date">Jul 2021 - Dec 2021</p>
                         <div class="project-type">
                             <h4>Hardware wallet collaboration with celebrity NFT project</h4>
                             
                             <span class="type-company">Company</span>
+                            
                             
                             
                             
@@ -625,7 +681,7 @@ if (!doNotTrack) {
                             
                         </div>
                         
-                        
+
 
                         
                         <div class="hide-on-mobile" style="display: flex; flex: 2; margin-top: 10px; max-width: 500px;">
@@ -633,7 +689,7 @@ if (!doNotTrack) {
                                 style="margin-top: 0 ;max-width: 80%; height: auto; border-radius: 0px;">
                         </div>
                         
-                        
+
                         
                         
                         
@@ -642,14 +698,15 @@ if (!doNotTrack) {
                 
                 <div class="timeline-item">
                     
-                    
+
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <p class="timeline-date">May 2020 - Jul 2021</p> 
+                        <p class="timeline-date">May 2020 - Jul 2021</p>
                         <div class="project-type">
                             <h4>Hardware Crypto Wallet SDK</h4>
                             
                             <span class="type-company">Company</span>
+                            
                             
                             
                             
@@ -666,11 +723,11 @@ if (!doNotTrack) {
                             
                         </div>
                         
+
+
                         
 
                         
-                        
-                         
                         <p><a href="https://github.com/CoolBitX-Technology/coolwallet-sdk" target="_blank" rel="noopener noreferrer">View on Github</a></p>
                         
                         
@@ -680,10 +737,10 @@ if (!doNotTrack) {
                 
                 <div class="timeline-item">
                     
-                    
+
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <p class="timeline-date">Oct 2017 - Mar 2019</p> 
+                        <p class="timeline-date">Oct 2017 - Mar 2019</p>
                         <div class="project-type">
                             <h4>第 12 屆 iThome 鐵人賽 - Design pattern</h4>
                             
@@ -691,6 +748,7 @@ if (!doNotTrack) {
                             
                             
                             <span class="status-done">Done</span>
+                            
                             
                         </div>
                         <p>Completed a 30-day challenge of writing technical articles on design patterns.</p>
@@ -701,11 +759,11 @@ if (!doNotTrack) {
                             
                         </div>
                         
+
+
                         
 
                         
-                        
-                         
                         
                         <p><a href="https://ithelp.ithome.com.tw/users/20128314/ironman/3070?page=1" target="_blank" rel="noopener noreferrer">View More</a></p>
                         
@@ -716,14 +774,15 @@ if (!doNotTrack) {
                 
                 <div class="timeline-item">
                     
-                    
+
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <p class="timeline-date">Oct 2017 - Mar 2019</p> 
+                        <p class="timeline-date">Oct 2017 - Mar 2019</p>
                         <div class="project-type">
                             <h4>Bank Middle-Platform System</h4>
                             
                             <span class="type-company">Company</span>
+                            
                             
                             
                             
@@ -740,10 +799,10 @@ if (!doNotTrack) {
                             
                         </div>
                         
-                        
+
 
                         
-                        
+
                         
                         
                         
@@ -752,10 +811,10 @@ if (!doNotTrack) {
                 
                 <div class="timeline-item">
                     
-                    
+
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <p class="timeline-date">Jan 2017 - 2019</p> 
+                        <p class="timeline-date">Jan 2017 - 2019</p>
                         <div class="project-type">
                             <h4>Line Ordering Robot</h4>
                             
@@ -763,6 +822,7 @@ if (!doNotTrack) {
                             
                             
                             <span class="status-done">Done</span>
+                            
                             
                         </div>
                         <p>經由爬蟲系統抓取過去五年的資料，並配合金融邏輯策略將下單資訊在 Line 機器人上推播。</p>
@@ -781,21 +841,21 @@ if (!doNotTrack) {
                             
                         </div>
                         
-                        
+
 
                         
-                        
+
                         
                         
                         
                     </div>
                 </div>
                 
-            
+                
+            </div>
         </div>
-    </div>
-</body>
-
+    </body>
+    
 
 
 
