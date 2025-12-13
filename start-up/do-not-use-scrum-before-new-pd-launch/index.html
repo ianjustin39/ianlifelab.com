@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Your Life, Your Lab">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://ianlifelab.com//https://i.imgur.com/HNaPaLS.png">
+    <meta property="twitter:image" content="https://ianlifelab.com//https://i.imgur.com/HNaPaLS.png" />
+    
+
+    
+    <meta name="title" content="新產品不適合跑 Scrum？" />
+    <meta property="og:title" content="新產品不適合跑 Scrum？" />
+    <meta property="twitter:title" content="新產品不適合跑 Scrum？" />
+    
+
+    
+    <meta name="description" content="Scrum 是矽谷推崇的一種工作模式，許多軟體公司都有引入 Scrum 作為團隊協作的框架，但並非所有狀況都適合 Scrum。">
+    <meta property="og:description" content="Scrum 是矽谷推崇的一種工作模式，許多軟體公司都有引入 Scrum 作為團隊協作的框架，但並非所有狀況都適合 Scrum。" />
+    <meta property="twitter:description" content="Scrum 是矽谷推崇的一種工作模式，許多軟體公司都有引入 Scrum 作為團隊協作的框架，但並非所有狀況都適合 Scrum。" />
+    
+
+    <meta name="keywords" content="創業, 新創, startup, 產品經理, 斜槓" />
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+    <meta name="google-site-verification" content="zuuW7hNy_wHvxLOBYVTEFg-sj9gxcQVWbEVp4_G50CY" />
+    <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師, 創業, 個人成長">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>新產品不適合跑 Scrum？ | Ian&#39;s Blog</title>
+
+    <link rel="canonical" href="/start-up/do-not-use-scrum-before-new-pd-launch/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    <link rel="stylesheet" href="/css/carousel.css"/>
+    <script src="/js/carousel.js"></script>
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+    
+    <style>
+         
+        iframe[src*=ads-iframe]{display:none!important;}
+        div[id*=disqus][style*=margin]{display:none!important;}
+    </style>
+    
+</head>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
+
+    <div class="container-fluid"  style="background-color: rgba(0, 0, 0, 0.1) ">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Ian&#39;s Blog</a>
+            
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse" >
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">HOME</a>
+                    </li>
+                    
+                    
+		            
+                        <li><a href="/about/">About</a></li>
+                    
+                        <li><a href="/portfolio/">Portfolio</a></li>
+                    
+                        <li><a href="/archive/">Archive</a></li>
+                    
+		            
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('https://i.imgur.com/gZfLq5v.jpg');
+         
+        background-color: rgb(128, 128, 128, 0.3);
+        background-blend-mode: multiply;
+    }
+</style>
+
+    <header class="intro-header">
+        
+        <div class="container">
+            <div class="">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" >
+                    <div class="post-heading" >
+                        <div class="tags">
+                            
+                            <a class="tag" href="/tags/%E5%89%B5%E6%A5%AD%E9%82%A3%E4%BA%9B%E4%BA%8B" title="創業那些事">
+                                創業那些事
+                            </a>
+                            
+                            <a class="tag" href="/tags/%E7%94%A2%E5%93%81%E9%96%8B%E7%99%BC" title="產品開發">
+                                產品開發
+                            </a>
+                            
+                            <a class="tag" href="/tags/scrum" title="Scrum">
+                                Scrum
+                            </a>
+                            
+                        </div>
+                        <h1>新產品不適合跑 Scrum？</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            
+                            Posted by
+                            
+                            Ian Tsai
+                            
+                            on
+                            Thursday, December 7, 2023
+                            
+                            
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    
+    <article>
+        <div class="container">
+
+            <div class="">
+
+                
+                
+                <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container"
+                >
+                    <div class="side-catalog" style="margin-top: 100px;">
+                        
+                        
+                        <ul class="catalog-body"></ul>
+
+                    <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianlifelab.com%2fstart-up%2fdo-not-use-scrum-before-new-pd-launch%2f" width="100%"
+  frameborder=0></iframe>
+
+                    </div>
+                </div>
+                
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                    
+                    <!-- raw HTML omitted -->
+<p>Scrum 算是現在軟體公司內最主流的協作框架，藉由 sprint 來切割產品每次更新的 scope ，讓產品可以不斷地與用戶互動，從而打造最貼近用戶及市場的產品。
+但並不是所有的產品或是團隊都適合執行 Scrum 這個框架，甚至 Scrum 會阻礙開發的進度。</p>
+<h2 id="scrum-的優勢在於小步快跑">Scrum 的優勢在於小步快跑</h2>
+<hr>
+<p>Scrum 的優勢在於小步快跑，產品藉由每次的迭代更新，不斷地適應市場的改變與用戶的需求。
+在執行 sprint 的過程中，會評估每個 task 所需要花的資源、每個 sprint 可以完成掉多少 task 以及定義每個 sprint 的 goals 等，
+這些數據讓 PM 可以有效的管理產品的進度，同時也可以經由這些資訊與不同的部門合作，讓產品可以在市場上順利被推行。</p>
+<!-- raw HTML omitted -->
+<h2 id="新產品還沒上線之前不適合跑-scrum">新產品還沒上線之前不適合跑 Scrum？</h2>
+<hr>
+<p>為什麼會說產品還沒上市前不適合跑 Scrum 呢？剛剛有提到，Scrum 講求小步快跑，藉由產品的快速迭代獲取更多用戶反饋，進而打造更貼近市場的產品。
+重點來了！『產品的快速迭代』來獲取反饋，但產品還沒上線，怎麼來迭代獲取反饋呢？
+同時 Scrum 中的會議也會大量使用掉團隊的時間，在產品發布之前更應該把時間放在開發產品上，盡量避免耗時太久的會議。</p>
+<p>在新產品上線之前，通常團隊或是 PM 會決定好新產品要有什麼功能，或是具備什麼條件，滿足這些需求推出市場才有意義。
+所以在開發新產品時，團隊的目標並非迭代產品，而是<strong>完成可上線的產品</strong>，讓銷售部門可以順利的將產品推往市場。
+這階段會更像是專案式的開發方式而非 Scrum。</p>
+<p>專案式的開發方式，就像接案公司承接甲方的案件一樣，有明確的交付日期以及交付項目，這些資訊通常會跟著發佈計畫做調整；
+同理，在公司內部開發新產品時，也會有一個發布計畫，預計新產品需要在何時發布、發布時需要囊括哪些功能、預期帶來什麼效應等等，
+若錯過此時機，可能發布的效果就不會如預期般理想。</p>
+<p>時效性的例子，我想以 Youtuber 是最好的範例，每年 Apple 新品發佈會，各大科技 YT 都會守在電腦前面，甚至有的被受邀出席 Apple 官方的實體發佈會，
+在結束後分秒必爭的整理素材、剪輯後製、發布影片，為了就是要搭上發佈會後的這個黃金時段，因為這時流量最高，可能只要晚同業一兩天，流量就是天與地的差異。
+產品的開發雖然沒有這麼極端，但邏輯卻非常相似。</p>
+<p>這是否代表用專案式開發方式，要完全捨棄 Scrum 用取代呢？</p>
+<h2 id="新產品並非不適合-scrum而是看怎麼使用">新產品並非不適合 Scrum，而是看怎麼使用</h2>
+<hr>
+<p>其實並非新產品不適合 Scrum，而是不要拘泥於形式讓 Scrum 成了開發上的障礙，如開發不完就遞延，這可能會影響到產品上線的標準。</p>
+<p>怎麼將專案型開發流程融入 Scrum 呢？以一個開發時長為期 12 週的產品為例子，雖然這個產品還是有既定的專案規劃，如交付項目、交付日期等，
+但仍然可以依照開發時長可以切成數個 sprint ，每個 sprint 的會議只需包含了 planning, retrospective, review 以及 daily standup 即可。
+由於所需完成的任務在 kick-off meeting 中已經決定，理論上不太需要再花大把的時間去開 refinement meeting，但如果有需求變更，仍可招開會議討論。
+而這些會議主要是讓 PM 可以順利追蹤產品進度，同時也讓團隊可以不斷優化彼此合作的模式。</p>
+<p>乍看之下似乎跟原本的模式相同，但其實目的卻差很多，<strong>新產品的目標是在交付日期前完成，Scrum 是讓團隊的協作可以更順利</strong>；
+而既有產品執行 Scrum 的目標則是讓團隊與產品可以快速適應市場的變化。</p>
+<h2 id="讓團隊保有彈性不拘泥於框架">讓團隊保有彈性、不拘泥於框架</h2>
+<hr>
+<p>不管是 Scrum 、 Waterfall 或是專案式開發，都只是一個形式，都要依照團隊的狀況去選擇適合的開發方式，
+而不是盲目的追求形式，認為有使用某個框架就是遵從了該框架的精神，
+相較於拘泥於形式，讓團隊保有一點可以應付各種事情的彈性可能是較好的選擇。</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+
+
+                    
+                    <hr>
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/start-up/why-need-mvp/" data-toggle="tooltip" data-placement="top"
+                                title="矽谷推崇的新創思維 - 為何要產品需要 MVP？">&larr;
+                                Previous Post</a>
+                        </li>
+                        
+                        
+                        <li class="next">
+                            <a href="/nomads/hanoi-digital-nomadism/" data-toggle="tooltip" data-placement="top"
+                                title="數位遊牧住哪裡？90 天旅居計畫第二站 - 越南河內">Next
+                                Post &rarr;</a>
+                        </li>
+                        
+                    </ul>
+                    
+
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+                </div>
+
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+
+
+<footer>
+    <div class="container">
+        <div class="">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/ian.tsai.54/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+            
+            <li>
+                <a href="/subscription">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-bell fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            
+            
+            <li>
+                <a href="mailto:ianjustin39@gmail.com">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Your Life, Your Lab 2025
+                    <br>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<link rel="stylesheet" href="/css/carousel.css"/>
+<script src="/js/carousel.js"></script>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+
+</html>

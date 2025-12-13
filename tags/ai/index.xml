@@ -8,10 +8,10 @@
     <lastBuildDate>Thu, 20 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ianlifelab.com/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI 時代的 PM 該怎麼生存？</title>
-      <link>https://ianlifelab.com/post/product/product/ai-and-product-manager/</link>
+      <link>https://ianlifelab.com/product/ai-and-product-manager/</link>
       <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/product/product/ai-and-product-manager/</guid>
+      <guid>https://ianlifelab.com/product/ai-and-product-manager/</guid>
       <description>在 AI 大量發生後的這段時間，社群上一直充斥著『XXX 是不是會被 AI 取代？』、『YY 公司導入 AI 降低了 n% 的人力成本』等資訊， 究竟 PM 會隨著這股 AI 浪潮被取代？還是會有不一樣的機會出現？
 AI 可以幫助我們做什麼？ 想起剛出社會當軟體工程師時，遇到一個 bug 要爬各種 Stack Overflow 找問題出在哪，然後不斷地 try-and-error， 而現在只需要把問題丟給 AI 就可以用最短的時間內找到方法，甚至叫他優化程式碼，這能不香嗎？
 過去一個 PM 想要推出一個功能，從發想到 prototype，除非 PM 本身會設計會寫程式，不然光靠 PM 一個人很難做到這件事。 但現在，PM 只要會畫圖，就可以讓會畫圖的 AI 幫忙產出 wireframe，接著再把 wireframe 放到會寫程式的 AI 就可以產出一個 prototype 了。

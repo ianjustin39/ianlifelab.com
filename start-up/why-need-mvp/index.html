@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Your Life, Your Lab">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://ianlifelab.com//https://i.imgur.com/HNaPaLS.png">
+    <meta property="twitter:image" content="https://ianlifelab.com//https://i.imgur.com/HNaPaLS.png" />
+    
+
+    
+    <meta name="title" content="矽谷推崇的新創思維 - 為何要產品需要 MVP？" />
+    <meta property="og:title" content="矽谷推崇的新創思維 - 為何要產品需要 MVP？" />
+    <meta property="twitter:title" content="矽谷推崇的新創思維 - 為何要產品需要 MVP？" />
+    
+
+    
+    <meta name="description" content="推出 MVP 來測試產品是矽谷推崇的新創思維之一，但大部分公司都已經有穩定的產品，工作上我們不太容易有執行 MVP 的經驗，究竟 MVP 對產品帶來的益處是什麼？我們又可以用什麼方法來獲取實踐 MVP 的理論呢？">
+    <meta property="og:description" content="推出 MVP 來測試產品是矽谷推崇的新創思維之一，但大部分公司都已經有穩定的產品，工作上我們不太容易有執行 MVP 的經驗，究竟 MVP 對產品帶來的益處是什麼？我們又可以用什麼方法來獲取實踐 MVP 的理論呢？" />
+    <meta property="twitter:description" content="推出 MVP 來測試產品是矽谷推崇的新創思維之一，但大部分公司都已經有穩定的產品，工作上我們不太容易有執行 MVP 的經驗，究竟 MVP 對產品帶來的益處是什麼？我們又可以用什麼方法來獲取實踐 MVP 的理論呢？" />
+    
+
+    <meta name="keywords" content="創業, 新創, startup, 產品經理, 斜槓, MVP, MVP是什麼, 矽谷新創思維" />
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+    <meta name="google-site-verification" content="zuuW7hNy_wHvxLOBYVTEFg-sj9gxcQVWbEVp4_G50CY" />
+    <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師, 創業, 個人成長">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>矽谷推崇的新創思維 - 為何要產品需要 MVP？ | Ian&#39;s Blog</title>
+
+    <link rel="canonical" href="/start-up/why-need-mvp/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    <link rel="stylesheet" href="/css/carousel.css"/>
+    <script src="/js/carousel.js"></script>
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+    
+    <style>
+         
+        iframe[src*=ads-iframe]{display:none!important;}
+        div[id*=disqus][style*=margin]{display:none!important;}
+    </style>
+    
+</head>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
+
+    <div class="container-fluid"  style="background-color: rgba(0, 0, 0, 0.1) ">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Ian&#39;s Blog</a>
+            
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse" >
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">HOME</a>
+                    </li>
+                    
+                    
+		            
+                        <li><a href="/about/">About</a></li>
+                    
+                        <li><a href="/portfolio/">Portfolio</a></li>
+                    
+                        <li><a href="/archive/">Archive</a></li>
+                    
+		            
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('https://i.imgur.com/gZfLq5v.jpg');
+         
+        background-color: rgb(128, 128, 128, 0.3);
+        background-blend-mode: multiply;
+    }
+</style>
+
+    <header class="intro-header">
+        
+        <div class="container">
+            <div class="">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" >
+                    <div class="post-heading" >
+                        <div class="tags">
+                            
+                            <a class="tag" href="/tags/%E5%89%B5%E6%A5%AD%E9%82%A3%E4%BA%9B%E4%BA%8B" title="創業那些事">
+                                創業那些事
+                            </a>
+                            
+                            <a class="tag" href="/tags/%E7%94%A2%E5%93%81%E9%96%8B%E7%99%BC" title="產品開發">
+                                產品開發
+                            </a>
+                            
+                        </div>
+                        <h1>矽谷推崇的新創思維 - 為何要產品需要 MVP？</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            
+                            Posted by
+                            
+                            Ian Tsai
+                            
+                            on
+                            Tuesday, December 5, 2023
+                            
+                            
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    
+    <article>
+        <div class="container">
+
+            <div class="">
+
+                
+                
+                <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container"
+                >
+                    <div class="side-catalog" style="margin-top: 100px;">
+                        
+                        
+                        <ul class="catalog-body"></ul>
+
+                    <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianlifelab.com%2fstart-up%2fwhy-need-mvp%2f" width="100%"
+  frameborder=0></iframe>
+
+                    </div>
+                </div>
+                
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                    
+                    <!-- raw HTML omitted -->
+<h2 id="mvp-是那個-mvp-嗎">MVP 是那個 MVP 嗎？</h2>
+<hr>
+<p>在軟體產業中，MVP （最小可行性產品）這個詞大家應該不陌生，但在工作上卻不太容易去接觸到，因為在我們進入公司時，
+大部分的公司都已經有一個穩定的產品，或是已經經過打磨驗證的產品，這讓我們要從如何去實踐 MVP 這套理論的機會也變得比較困難。
+所以大家可能都有『產品最好先推出 MVP 』的概念，但卻很少有實際執行 MVP 的經驗。</p>
+<h2 id="產品推出-mvp-會帶給你什麼好處">產品推出 MVP 會帶給你什麼好處？</h2>
+<hr>
+<p>一定要推 MVP 嗎？以前的產品也沒 MVP 照樣有人買單啊！</p>
+<p>說到早期產品開發，通常會經歷開會討論需求、確認規格、執行開發、功能測試、產品發佈等階段，中間可能還會有需求變更的環節、溝通落差等還環節讓時間延遲，
+前後加起來可能 12~18 個月甚至更久，但早期的產品仍能獲得了成功，為何現在不行呢？
+相比十年前，現今社會的變化速度太快，以前可能五年市場才會出現變化，現在可能一年甚至更短，市場或是人們的習慣就會被改變。</p>
+<p>以一個遊戲為例，約莫十年前日本推出一款遊戲叫龍族拼圖，當時風靡遊戲市場一大段時間，還記得當時一隻 T1 角色可以稱霸遊戲半年一年沒問題，
+但現在遊戲的選擇太多，遊戲商為了讓玩家花更多注意力在遊戲上，遊戲不斷推出新的挑戰刺激玩家，副本 Meta 不斷改變，
+上個月人人搶著抽的 T1 的角色，這個月在 PTT 可能就出現『XX 是不是過氣』的類似留言。</p>
+<p>產品市場也是，現在環境以及用戶的習慣變化的太快速，如果花一兩年的時間開發產品，可能產品已經沒辦法滿足現在客戶的需求了。
+而經由 MVP 提早接觸市場，我認為對產品有以下三個好處：</p>
+<h4 id="1-確認產品的方向">1. 確認產品的方向</h4>
+<p>我想拍拍圈（PopChill）是個不錯的例子，當初拍拍圈的產品想要做社群電商，像是 IG 裡面內建電商的功能一樣，
+推出之後發現這個題目似乎跟當初預期的效果不一樣，最終他們決定要把題目改為『精品二手拍賣』，現在的成果就非常的好。
+試想要是拍拍圈產品做了一兩年都沒推出市場，花了大把資源卻發現選錯題目，到時改題目的成本會不會更高？</p>
+<p>產品提早接觸市場，不但可以驗證產品是否有解決市場上的問題，也可評估產品的方向是否需要改變。</p>
+<h4 id="2-確認產品功能是否真的被需要">2. 確認產品功能是否真的被需要</h4>
+<p>做產品的人有時會掉入『我要打造最強產品』漩渦，而忽略了市場需求及聲音。
+團隊可能從市場發現某些需求，或是經由訪談找到了用戶沒被滿足的痛點，讓產品有機會從這些點切入，
+但這些都停留在『我們覺得用戶需要』的階段，但我們不知道的是，可能這些需求對於用戶來說不夠痛，他們有其他替代品可以使用，
+有或是推出的產品雖然解決了問題，但因為設計不良讓用戶花更多的時間適應產品，以至於用戶們不買單。
+推出 MVP 可以驗證我們的假設，同時團隊可以從先行使用的用戶中獲得的反饋去優化產品，讓產品可以更貼近用戶的需求，解決他們實務上的問題。</p>
+<h4 id="3-確認產品-ta-是否與預期的相似">3. 確認產品 TA 是否與預期的相似</h4>
+<p>一開始在設計產品時，團隊一定會依照某些標準去 target 一些用戶為產品的 TA，試著以這些 TA 的輪廓來規劃產品的解決方案。
+這跟第二點類似，這些 TA 是『我們認為的 TA』，實際上可能不是，比方說一個加密貨幣錢包商，認為所有接觸加密貨幣的人都是錢包的 TA，
+但推出產品後發現，相比於錢包，專業交易員更喜歡使用交易所，不只是交易所提供豐富的衍生性金融商品，交易所在交易上對於交易員來說比錢包方便很多。
+這時團隊就會了解要把交易員剔除在目標客戶之外，關於交易相關的功能優先度就變得不是那麼的高。</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="一定要-0-到-1-的產品才能實踐-mvp-嗎">一定要 0 到 1 的產品才能實踐 MVP 嗎？</h2>
+<hr>
+<p>看到這可能還是有人會覺得『啊我進公司時就已經有產品了，我要怎麼去實踐 MVP 這套理論？』</p>
+<p>以現在軟體發展的速度來看，產品為了脫穎而出，不少公司都願意付出一些成本來試錯創新，甚至會成立創新部門，讓這個部門來研發各種創新的功能，
+如科技巨頭、傳統金融公司為了跟上 Web3, AI 的潮流，都有成立對應的創新部門來對應這些變化。他們不一定要打造全新的產品，
+也可以是在原本的產品上運用這些技術，讓產品有不同的競爭力。比方說 IG 支援了 NFT 大頭貼、X 可以用 btc 來支付 tip 等都使類似的案例。</p>
+<p>所以要實踐 MVP 不一定要從零開始打造產品，在既有的產品上增加一個全新的功能，推出市場讓用戶使用並獲取反饋也是一種方法。</p>
+<!-- raw HTML omitted -->
+<h2 id="做-side-project-也是實踐-mvp-的好方法">做 Side project 也是實踐 MVP 的好方法</h2>
+<hr>
+<p>除了工作上的實作，自己做一個 Side Project 也是很好的一個選擇，如果你擁有技術能力，給自己三個月的時間打造一款產品 MVP 並尋找初始用戶，
+搜集他們的回饋並不斷地打磨產品，或是你與一兩個志同道合的夥伴以繼進行這個 project。
+如果沒有技術能力，也可以用 figma 打造一個 prototype 並找用戶做訪談，讓他們試用看看你的 prototype 產品並同時做更深入的需求探索。</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+
+
+                    
+                    <hr>
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/read/create-dreams/" data-toggle="tooltip" data-placement="top"
+                                title="矽谷阿雅 - 追不到夢想就創一個!">&larr;
+                                Previous Post</a>
+                        </li>
+                        
+                        
+                        <li class="next">
+                            <a href="/start-up/do-not-use-scrum-before-new-pd-launch/" data-toggle="tooltip" data-placement="top"
+                                title="新產品不適合跑 Scrum？">Next
+                                Post &rarr;</a>
+                        </li>
+                        
+                    </ul>
+                    
+
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+                </div>
+
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+
+
+<footer>
+    <div class="container">
+        <div class="">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/ian.tsai.54/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+            
+            <li>
+                <a href="/subscription">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-bell fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            
+            
+            <li>
+                <a href="mailto:ianjustin39@gmail.com">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Your Life, Your Lab 2025
+                    <br>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<link rel="stylesheet" href="/css/carousel.css"/>
+<script src="/js/carousel.js"></script>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+
+</html>

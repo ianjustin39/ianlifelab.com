@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Your Life, Your Lab">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://ianlifelab.com//https://i.imgur.com/HNaPaLS.png">
+    <meta property="twitter:image" content="https://ianlifelab.com//https://i.imgur.com/HNaPaLS.png" />
+    
+
+    
+    <meta name="title" content="做產品不要害怕被用戶拒絕！" />
+    <meta property="og:title" content="做產品不要害怕被用戶拒絕！" />
+    <meta property="twitter:title" content="做產品不要害怕被用戶拒絕！" />
+    
+
+    
+    <meta name="description" content="用戶願意提出反饋，代表對於產品來說還是有些期待，對於產品來說是很好的事情。但同時也要過濾用戶提估的意見，才不會最後做出一堆看似符合用戶實際上卻沒解決問題的功能。">
+    <meta property="og:description" content="用戶願意提出反饋，代表對於產品來說還是有些期待，對於產品來說是很好的事情。但同時也要過濾用戶提估的意見，才不會最後做出一堆看似符合用戶實際上卻沒解決問題的功能。" />
+    <meta property="twitter:description" content="用戶願意提出反饋，代表對於產品來說還是有些期待，對於產品來說是很好的事情。但同時也要過濾用戶提估的意見，才不會最後做出一堆看似符合用戶實際上卻沒解決問題的功能。" />
+    
+
+    <meta name="keywords" content="創業, 新創, startup, 產品經理, 斜槓" />
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+    <meta name="google-site-verification" content="zuuW7hNy_wHvxLOBYVTEFg-sj9gxcQVWbEVp4_G50CY" />
+    <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師, 創業, 個人成長">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>做產品不要害怕被用戶拒絕！ | Ian&#39;s Blog</title>
+
+    <link rel="canonical" href="/start-up/do-not-be-afraid-of-being-rejected-by-users/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    <link rel="stylesheet" href="/css/carousel.css"/>
+    <script src="/js/carousel.js"></script>
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+    
+    <style>
+         
+        iframe[src*=ads-iframe]{display:none!important;}
+        div[id*=disqus][style*=margin]{display:none!important;}
+    </style>
+    
+</head>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
+
+    <div class="container-fluid"  style="background-color: rgba(0, 0, 0, 0.1) ">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Ian&#39;s Blog</a>
+            
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse" >
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">HOME</a>
+                    </li>
+                    
+                    
+		            
+                        <li><a href="/about/">About</a></li>
+                    
+                        <li><a href="/portfolio/">Portfolio</a></li>
+                    
+                        <li><a href="/archive/">Archive</a></li>
+                    
+		            
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('https://i.imgur.com/gZfLq5v.jpg');
+         
+        background-color: rgb(128, 128, 128, 0.3);
+        background-blend-mode: multiply;
+    }
+</style>
+
+    <header class="intro-header">
+        
+        <div class="container">
+            <div class="">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" >
+                    <div class="post-heading" >
+                        <div class="tags">
+                            
+                            <a class="tag" href="/tags/%E5%89%B5%E6%A5%AD%E9%82%A3%E4%BA%9B%E4%BA%8B" title="創業那些事">
+                                創業那些事
+                            </a>
+                            
+                            <a class="tag" href="/tags/%E5%89%B5%E6%A5%AD%E5%BF%83%E6%85%8B" title="創業心態">
+                                創業心態
+                            </a>
+                            
+                            <a class="tag" href="/tags/%E7%94%A2%E5%93%81%E7%B6%93%E7%90%86" title="產品經理">
+                                產品經理
+                            </a>
+                            
+                            <a class="tag" href="/tags/%E7%94%A2%E5%93%81%E6%80%9D%E7%B6%AD" title="產品思維">
+                                產品思維
+                            </a>
+                            
+                        </div>
+                        <h1>做產品不要害怕被用戶拒絕！</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            
+                            Posted by
+                            
+                            Ian Tsai
+                            
+                            on
+                            Tuesday, May 6, 2025
+                            
+                            
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    
+    <article>
+        <div class="container">
+
+            <div class="">
+
+                
+                
+                <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container"
+                >
+                    <div class="side-catalog" style="margin-top: 100px;">
+                        
+                        
+                        <ul class="catalog-body"></ul>
+
+                    <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianlifelab.com%2fstart-up%2fdo-not-be-afraid-of-being-rejected-by-users%2f" width="100%"
+  frameborder=0></iframe>
+
+                    </div>
+                </div>
+                
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                    
+                    <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="當用戶說我不需要你的產品">📝 當用戶說『我不需要你的產品』</h1>
+<p>剛開始開發產品時，為了可以獲得用戶反饋，所以想辦法找了許多使用者使用。以健身產業做例子，健身產業中有大型健身房、小型健身房、個人健身工作室以及自由教練等，每個群體的需求都不一樣，當時我定義了產品 TA 為自由教練，所以想盡辦法找了能找到的自由教練使用產品，並定期訪談這些教練的使用體驗，其中一個教練這樣跟我說：</p>
+<p>『我所有學生的上課紀錄在 google 行事曆內，你的產品沒辦法讓我直接轉移 google 的資料，我要一個一個重新輸入太浪費時間。而且我也當教練十幾年了，會來找我訓練的學生基本上我都記得住他們的問題，不太需要再做紀錄，而且光訓練這些學生我的時間就被排滿了。<strong>所以基本上我不太需要你的產品</strong>』。（<em>註：健身產業是舉例。）</em></p>
+<p>聽完這段對話簡直晴天霹靂⚡，但我並沒有難過得太久，反而在思考整理過後知道了幾件事：</p>
+<ol>
+<li>有十幾年經驗的健身教練並不是產品的 TA</li>
+<li>有一套自己固定工作流程的人，要再導入新流程反而增加他們的負擔</li>
+<li>『紀錄』這件事，對於比較早進入健身產業的教練來說並不是太重要</li>
+</ol>
+<p>比起一直說『不錯呀』、『還行吧』的回應，我更喜歡直接點出問題的用戶。因為這可快速讓我知道原來這個功能甚至這個產品還有可以改進的地方，或是我們可以更聚焦於哪類的 TA。所以在這之後我再尋找用戶試用時，就會盡量撇除這幾種類型的用戶，讓我可以獲得更精準的用戶反饋。</p>
+<h1 id="過濾需求而不是照單全收">📝 過濾需求而不是照單全收</h1>
+<p>
+  <img src="https://i.imgur.com/iu9I6dc.jpg" alt="Untitled">
+
+</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>用戶所提的任何需求都不一定是他真正需要的，甚至他根本不知道他想要哪些功能。產品很需要用戶給予反饋，但並非所有的需求都要接受。</p>
+<p>你可以試試以下幾個面向來評估這個需求是Must, Should or Nice to have：（這邊先撇除 Bug 相關問題）</p>
+<ol>
+<li>提出需求的用戶與產品的目標用戶是否一致？</li>
+<li>這個需求是否解決目標用戶的主要問題？或是可以提升目標用戶的使用體驗？</li>
+<li>產品自身有沒有類似的解決方案可以先使用？還是必須實作一個新的？</li>
+<li>完成這個需求需要花多少資源，是否會擠壓到本來預計安排的任務？</li>
+</ol>
+<p>若評估完這個用戶提出的需求必須擁有，沒有會影響到產品使用，那就安排時間整合；若判斷是應該需要，但目前有產品功能有替代方案，那就安排未來有資源時優先整合；若是有很好、沒有沒差的需求，可以等有資源有時間，或是做某項功能時可以用很低成本一起實作時再來考慮。</p>
+<h1 id="-總結">🤗 總結</h1>
+<p>用戶願意提出反饋，代表對於產品來說還是有些期待，對於產品來說是很好的事情。但同時也要過濾用戶提估的意見，才不會最後做出一堆看似符合用戶實際上卻沒解決問題的功能。</p>
+
+
+
+                    
+                    <hr>
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/start-up/do-you-have-to-innovate/" data-toggle="tooltip" data-placement="top"
+                                title="做產品一定要創新嗎？">&larr;
+                                Previous Post</a>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+                </div>
+
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+
+
+<footer>
+    <div class="container">
+        <div class="">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/ian.tsai.54/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+            
+            <li>
+                <a href="/subscription">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-bell fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            
+            
+            <li>
+                <a href="mailto:ianjustin39@gmail.com">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Your Life, Your Lab 2025
+                    <br>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<link rel="stylesheet" href="/css/carousel.css"/>
+<script src="/js/carousel.js"></script>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+
+</html>

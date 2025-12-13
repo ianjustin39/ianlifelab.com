@@ -8,10 +8,10 @@
     <lastBuildDate>Tue, 06 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ianlifelab.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>做產品不要害怕被用戶拒絕！</title>
-      <link>https://ianlifelab.com/post/start-up/start-up/do-not-be-afraid-of-being-rejected-by-users/</link>
+      <link>https://ianlifelab.com/start-up/do-not-be-afraid-of-being-rejected-by-users/</link>
       <pubDate>Tue, 06 May 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/start-up/start-up/do-not-be-afraid-of-being-rejected-by-users/</guid>
+      <guid>https://ianlifelab.com/start-up/do-not-be-afraid-of-being-rejected-by-users/</guid>
       <description>📝 當用戶說『我不需要你的產品』 剛開始開發產品時，為了可以獲得用戶反饋，所以想辦法找了許多使用者使用。以健身產業做例子，健身產業中有大型健身房、小型健身房、個人健身工作室以及自由教練等，每個群體的需求都不一樣，當時我定義了產品 TA 為自由教練，所以想盡辦法找了能找到的自由教練使用產品，並定期訪談這些教練的使用體驗，其中一個教練這樣跟我說：
 『我所有學生的上課紀錄在 google 行事曆內，你的產品沒辦法讓我直接轉移 google 的資料，我要一個一個重新輸入太浪費時間。而且我也當教練十幾年了，會來找我訓練的學生基本上我都記得住他們的問題，不太需要再做紀錄，而且光訓練這些學生我的時間就被排滿了。所以基本上我不太需要你的產品』。（註：健身產業是舉例。）
 聽完這段對話簡直晴天霹靂⚡，但我並沒有難過得太久，反而在思考整理過後知道了幾件事：
@@ -24,10 +24,10 @@
     
     <item>
       <title>做產品一定要創新嗎？</title>
-      <link>https://ianlifelab.com/post/start-up/start-up/do-you-have-to-innovate/</link>
+      <link>https://ianlifelab.com/start-up/do-you-have-to-innovate/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/start-up/start-up/do-you-have-to-innovate/</guid>
+      <guid>https://ianlifelab.com/start-up/do-you-have-to-innovate/</guid>
       <description>📝 這個產品有人做過了 有人說 Apple、Facebook、Instagram、Airbnb 等這些世界頂尖個科技公司是因為他們自己創造了新的需求、改變了人們的生活型態，造就了這些公司今天的成功！
 回到我們所處的這個時代，要在製作產品上尋找『創新』我認為難度是比以前高很多，再加上就算找到了，也不一定有雄厚的資本可以與科技巨頭抗衡。但如果產品不創新，又會跟不上時代，那我們該怎麼辦？
 這邊分享幾個故事給大家：
@@ -45,10 +45,10 @@
     
     <item>
       <title>AI 時代的 PM 該怎麼生存？</title>
-      <link>https://ianlifelab.com/post/product/product/ai-and-product-manager/</link>
+      <link>https://ianlifelab.com/product/ai-and-product-manager/</link>
       <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/product/product/ai-and-product-manager/</guid>
+      <guid>https://ianlifelab.com/product/ai-and-product-manager/</guid>
       <description>在 AI 大量發生後的這段時間，社群上一直充斥著『XXX 是不是會被 AI 取代？』、『YY 公司導入 AI 降低了 n% 的人力成本』等資訊， 究竟 PM 會隨著這股 AI 浪潮被取代？還是會有不一樣的機會出現？
 AI 可以幫助我們做什麼？ 想起剛出社會當軟體工程師時，遇到一個 bug 要爬各種 Stack Overflow 找問題出在哪，然後不斷地 try-and-error， 而現在只需要把問題丟給 AI 就可以用最短的時間內找到方法，甚至叫他優化程式碼，這能不香嗎？
 過去一個 PM 想要推出一個功能，從發想到 prototype，除非 PM 本身會設計會寫程式，不然光靠 PM 一個人很難做到這件事。 但現在，PM 只要會畫圖，就可以讓會畫圖的 AI 幫忙產出 wireframe，接著再把 wireframe 放到會寫程式的 AI 就可以產出一個 prototype 了。
@@ -80,10 +80,10 @@ AI 確實幫助了工作上『效率』、『速度』的提升，但&amp;hellip
     
     <item>
       <title>用戶應該會這樣做？『我覺得』不一定是真的！</title>
-      <link>https://ianlifelab.com/post/start-up/start-up/what-are-users-thinking/</link>
+      <link>https://ianlifelab.com/start-up/what-are-users-thinking/</link>
       <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/start-up/start-up/what-are-users-thinking/</guid>
+      <guid>https://ianlifelab.com/start-up/what-are-users-thinking/</guid>
       <description>開始做 MeFresh 後，我踩了不少的坑，其中一個就是 UX 上的『我覺得』！
 這是什麼意思？
 舉個例，我覺得開一間店會需要先將『商品』、『服務時間』、『店家資訊』等事項都準備好後，才會開始攬客，但實際上美容師在使用一個軟體產品時卻不是這個樣子。
@@ -129,10 +129,10 @@ AI 確實幫助了工作上『效率』、『速度』的提升，但&amp;hellip
     
     <item>
       <title>你真的懂的『休息』嗎？假裝休息比不休息更糟糕！</title>
-      <link>https://ianlifelab.com/post/start-up/start-up/do-you-really-understand-rest/</link>
+      <link>https://ianlifelab.com/start-up/do-you-really-understand-rest/</link>
       <pubDate>Sat, 23 Mar 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/start-up/start-up/do-you-really-understand-rest/</guid>
+      <guid>https://ianlifelab.com/start-up/do-you-really-understand-rest/</guid>
       <description>你的休假日在幹嘛呢？與家人出遊但仍心繫著工作嗎？還是在擔心下週的產品發佈會有沒有意外？ 甚至在怕老闆是不是會臨時打給你呢？結果整個休假過完，什麼事都沒發生，但你卻沒有真正休息到。
 如果你是個創業者，你甚至會覺得休息是奢侈的，無時無可都在思考怎麼打造產品、怎麼獲取用戶、怎麼拓展市場， 各種不確定性壓得你喘不過氣，甚至讓你有『上班真的比較舒服』的想法。
 試著將時間『留白』 『留白』在現代設計來說是一個很重要的觀念，以往我們會希望『將我們想傳達的所有資訊放入有限的空間內』，但這也造就了一個問題， 畫面的的資訊過多，主要及次要資訊都擠在一起，沒辦法傳遞主要資訊給觀看者，大多數第一次看到內容的人，並不會知道這份設計主要想傳達什麼訊息， 過多的資訊對他們來說反而是雜訊，讓他們沒辦法找到真正核心訊息。適度的留白不只可以凸現設計想傳達的主要資訊， 同時也降低了過量資訊讓觀看者產生的壓力，提升了整體觀看體驗。
@@ -196,10 +196,10 @@ Functional Map 也讓 GPT 來幫我完成吧 隨著產品越來越大，Function
     
     <item>
       <title>新產品不適合跑 Scrum？</title>
-      <link>https://ianlifelab.com/post/start-up/start-up/do-not-use-scrum-before-new-pd-launch/</link>
+      <link>https://ianlifelab.com/start-up/do-not-use-scrum-before-new-pd-launch/</link>
       <pubDate>Thu, 07 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/start-up/start-up/do-not-use-scrum-before-new-pd-launch/</guid>
+      <guid>https://ianlifelab.com/start-up/do-not-use-scrum-before-new-pd-launch/</guid>
       <description>Scrum 算是現在軟體公司內最主流的協作框架，藉由 sprint 來切割產品每次更新的 scope ，讓產品可以不斷地與用戶互動，從而打造最貼近用戶及市場的產品。 但並不是所有的產品或是團隊都適合執行 Scrum 這個框架，甚至 Scrum 會阻礙開發的進度。
 Scrum 的優勢在於小步快跑 Scrum 的優勢在於小步快跑，產品藉由每次的迭代更新，不斷地適應市場的改變與用戶的需求。 在執行 sprint 的過程中，會評估每個 task 所需要花的資源、每個 sprint 可以完成掉多少 task 以及定義每個 sprint 的 goals 等， 這些數據讓 PM 可以有效的管理產品的進度，同時也可以經由這些資訊與不同的部門合作，讓產品可以在市場上順利被推行。
 新產品還沒上線之前不適合跑 Scrum？ 為什麼會說產品還沒上市前不適合跑 Scrum 呢？剛剛有提到，Scrum 講求小步快跑，藉由產品的快速迭代獲取更多用戶反饋，進而打造更貼近市場的產品。 重點來了！『產品的快速迭代』來獲取反饋，但產品還沒上線，怎麼來迭代獲取反饋呢？ 同時 Scrum 中的會議也會大量使用掉團隊的時間，在產品發布之前更應該把時間放在開發產品上，盡量避免耗時太久的會議。
@@ -212,10 +212,10 @@ Scrum 的優勢在於小步快跑 Scrum 的優勢在於小步快跑，產品藉�
     
     <item>
       <title>矽谷推崇的新創思維 - 為何要產品需要 MVP？</title>
-      <link>https://ianlifelab.com/post/start-up/start-up/why-need-mvp/</link>
+      <link>https://ianlifelab.com/start-up/why-need-mvp/</link>
       <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/start-up/start-up/why-need-mvp/</guid>
+      <guid>https://ianlifelab.com/start-up/why-need-mvp/</guid>
       <description>MVP 是那個 MVP 嗎？ 在軟體產業中，MVP （最小可行性產品）這個詞大家應該不陌生，但在工作上卻不太容易去接觸到，因為在我們進入公司時， 大部分的公司都已經有一個穩定的產品，或是已經經過打磨驗證的產品，這讓我們要從如何去實踐 MVP 這套理論的機會也變得比較困難。 所以大家可能都有『產品最好先推出 MVP 』的概念，但卻很少有實際執行 MVP 的經驗。
 產品推出 MVP 會帶給你什麼好處？ 一定要推 MVP 嗎？以前的產品也沒 MVP 照樣有人買單啊！
 說到早期產品開發，通常會經歷開會討論需求、確認規格、執行開發、功能測試、產品發佈等階段，中間可能還會有需求變更的環節、溝通落差等還環節讓時間延遲， 前後加起來可能 12~18 個月甚至更久，但早期的產品仍能獲得了成功，為何現在不行呢？ 相比十年前，現今社會的變化速度太快，以前可能五年市場才會出現變化，現在可能一年甚至更短，市場或是人們的習慣就會被改變。
@@ -249,10 +249,10 @@ Scrum 的優勢在於小步快跑 Scrum 的優勢在於小步快跑，產品藉�
     
     <item>
       <title>誰說 sprint ticket 一定要 story point?</title>
-      <link>https://ianlifelab.com/post/product/product/does-ticket-must-need-story-point/</link>
+      <link>https://ianlifelab.com/product/does-ticket-must-need-story-point/</link>
       <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/product/product/does-ticket-must-need-story-point/</guid>
+      <guid>https://ianlifelab.com/product/does-ticket-must-need-story-point/</guid>
       <description>有參與過敏捷開發的人一定聽過 story point，網路上也很多有關 story point 的解釋以及如了運用， 他主要是協助衡量團隊的開發狀況，讓 PM 可以再有一定的基準下去跟其他部門溝通，如產品行銷或是活動銷售等等。 但是不是真的有了 story point 就一定可以讓產品或專案順利進行？ 有沒有可能有了 story point 但還是遇到一堆狀況？
 永遠估不準的 Story Point 有沒有遇過這個狀況，在 sprint lanning 時團隊評估這個 sprint 可以完成 40 點，但 sprint 結束時卻只完成了 25~30 點， 常見的原因可能有這幾種：
 ticket 的點數估不準（如後端工程師估一同評估前端工程師的 ticket ） 評估 ticket 時忘記某個項目也要做（如 App 新功能只評估畫面開發，遺漏 API 串接） 實作 ticket 時出現預期之外問題或任務（在串接第三方平台時，回的參數與文件給的不同） 這些狀況都可能對在進行中的 sprint 造成一些風險，當然一般來說還是有辦法解決， 通常會在 Retrospective meeting 中去討論如何避免這次該遇到的困難，如後端工程師需要了解前端的開發不只有畫面，也包含邏輯； 與第三方廠商串接資料時需要先確認文件與實際提供的參數是否相同等事項，並期待下次再評估點數時可以更貼近團隊的狀況。
@@ -286,10 +286,10 @@ ticket 的點數估不準（如後端工程師估一同評估前端工程師的 
     
     <item>
       <title>為何交易所也推出錢包服務？</title>
-      <link>https://ianlifelab.com/post/technology/blockchain/exchange-and-wallet/</link>
+      <link>https://ianlifelab.com/exchange-and-wallet/</link>
       <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/technology/blockchain/exchange-and-wallet/</guid>
+      <guid>https://ianlifelab.com/exchange-and-wallet/</guid>
       <description>錢包是踏入 Web3 的第一站但大家卻都選擇交易所？ 在幣圈打滾幾年的人應該都知道，如果要使用 Defi 或是進入元宇宙，都會需要自己建立一個加密貨幣的錢包，但交易所的用戶量始終大於錢包的用戶，明明錢包應該才是進入 Web3 的入口，為什麼大家卻選擇交易所呢？我認為有以下兩個原因
 交易所的操作性與 web2 一樣 大部分用戶是想要『投資賺錢』 過去的 web3 因為進入門檻實在太高，再加上未知的領域太多，導致一般人很難或是很怕進入這個領域，但隨著早期貢獻者的開拓以及技術的堆疊，現在進入 web3 的門檻已經不像以前一樣那麼高，而且各種應用的出現也是為了讓圈外人可以更簡單的進入這個產業。而錢包則從早期保護資產安全到中期可以連動多種 Dapp 到現在試著融入一般現實世界的生活。雖然幣圈老屁股不斷強調 Not your key, not your crypto，一直呼籲菜鳥玩家要用錢包，把錢放在自己身上才是最安全的，連世界第二大的 FTX 都可以倒，只有把錢放在自己身上才沒有風險（還是有啊，忘記種子的話 XD），但為何大家還是去用交易所呢？
 主打去中心化的優勢？但用戶只在意好不好用，賺不賺得到錢 過去 web3 產業打著『自託管』、『去中心化是未來』的口號，試圖建立大家的『正確』的知識，但就算建構者不斷地呼籲這件事，時不時還是會有新聞報出哪間交易所其實是詐騙（如 2023 年的 JPEX），散戶們損失了幾個億等等，而這類新聞只要出現，就會發現錢包商的用戶短期內會有所增長，那為何大家不一開始就使用錢包而還要去用交易所呢？
@@ -337,10 +337,10 @@ AA 錢包的出現，也讓交易所有所警覺，先撇除交易所提供豐�
     
     <item>
       <title>為什麼產品開發一定要有 Deadline？ 注意這五點提升團隊效率</title>
-      <link>https://ianlifelab.com/post/product/product/why-need-deadline/</link>
+      <link>https://ianlifelab.com/product/why-need-Deadline/</link>
       <pubDate>Sat, 05 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/product/product/why-need-deadline/</guid>
+      <guid>https://ianlifelab.com/product/why-need-Deadline/</guid>
       <description>Deadline 的用途是什麼？ 產品經理在規劃產品路線圖（Roadmap）時常以會先做競品分析、市場分析或是用戶訪談，結著評估分析結果是否契合公司的年度或季度目標，最後再安排進 Roadmap 。這份 Roadmap 並非僅提供給產品跟技術團隊，行銷、業務、客服團隊也會根據 Roadmap 上即將釋出的功能去提前做準備，如與合作夥伴洽談、KOL 協作或是撰寫 FAQ 等，這時 Deadline 變得尤為重要，它成為各個團隊追蹤進度的標準。當 Deadline 一到，所有的任務都將完成，產品因此得以投入市場。不過若某團隊因為某些原因導致無法如期完成這項任務，則會影響到其他部門，甚至公司達成目標。
 因此， Deadline 不僅僅是產品發佈的時間點，同時也是團隊協作中的一個共同指標，避免有認知上的落差。
 Deadline 除了讓團隊有一致的目標，還能讓產品提早迭代 剛才我們提及，產品經理在策劃產品時有諸多因素需要考量。以區塊鏈產業來說，2021 年末是 NFT 風潮的高峰， 年初產品經理經過評估認為 NFT 將是今年的趨勢，因此規劃相關功能並預計年中完成並投入市場。若在 Deadline 之前完成，對於產品而言可以提早進入市場做測試、收集用戶反饋，進行迭代更新，等到 NFT 流量達到巔峰時，產品已經完成打磨，符合 80 甚至 90% 市場需求，行銷與業務部門也可以提前布局，讓產品更容易被市場關注，進而吸引大量的用戶。反之若錯失高峰後才完成，用戶早就已經找到習慣使用的產品，這時要再將其他產品的用戶轉換到自家產品將變得相當困難。
@@ -371,10 +371,10 @@ Deadline 除了讓團隊有一致的目標，還能讓產品提早迭代 剛才�
     
     <item>
       <title>FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？</title>
-      <link>https://ianlifelab.com/post/technology/blockchain/ftx-is-gone/</link>
+      <link>https://ianlifelab.com/ftx-is-gone/</link>
       <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/technology/blockchain/ftx-is-gone/</guid>
+      <guid>https://ianlifelab.com/ftx-is-gone/</guid>
       <description>在 2022/05 發生 Luna 崩跌事件後，當大家還覺得為什麼最近市場的波動這麼小時，全球第二大加密貨幣交易所 FTX 在上週給了大家一個驚喜，因為被爆私自挪用用戶資金，導致交易所內發生了擠兌潮，以至於 FTX 不堪負荷，不但暫停用戶提領，更在一週內宣告破產，讓許多來不及逃難的用戶資金卡在 FTX 內沒辦法拿出來。
 （ 還錢～～～
 FTX 相關事件的文章或分析相信在網路上搜個關鍵字都可以找到很多資訊在這就不多加敘述，而本篇要來探討的並非 FTX 倒閉，而是身在加密貨幣的世界裡，要如何選擇存放資產的位置，才不會風險發生時被當成韭菜收割。
@@ -415,10 +415,10 @@ B = MAT 當然，觸發行為有很多種，例如當今天我發表了一篇文
     
     <item>
       <title>幣圈黑天鵝，前十大公鏈 Terra 如何從月球殞落</title>
-      <link>https://ianlifelab.com/post/technology/blockchain/blockchain-black-swan-terra/</link>
+      <link>https://ianlifelab.com/blockchain-black-swan-terra/</link>
       <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/technology/blockchain/blockchain-black-swan-terra/</guid>
+      <guid>https://ianlifelab.com/blockchain-black-swan-terra/</guid>
       <description>一個星期前，Terra 還是市值前十的加密貨幣，其中包含近期最熱門的 Defi 項目 Anchor 也是大家趨之若鶩投資的項目之一， 甚至有很多投資人把大部分資產兌換成 UST 放到 Anchor 內。 但短短的一週 Luna 的價格卻從 80 跌到0.00001 美金，Anchor 中的 UST 資金也大量的撤離， 這中間與 UST 脫鉤有著莫大的關係，一個大家都以為會成功的項目是如何在短時間內跌落谷底， 自身參與了這個幣圈的重大事件 (韭菜？)，想說來紀錄一下。
 Terra 的模型 Terra 是一個擁有雙主鏈幣的區塊鏈，包含其算法穩定幣 Terra 及治理代幣 Luna，而 UST 為算法穩定幣 Terra 的一種。 由於 UST 並不像 USDC 有美元資產儲備抵押，需要依靠演算法及市場支撐與美金的掛鉤。
 所以當 UST 價格高於一美元時，代表供不應求，這時便會燃燒 Luna 並鑄造 UST，讓價格回穩到一美元， 而這中間也因為 Luna 的總量變小，進而提高了 Luna 的價格。
@@ -428,10 +428,10 @@ Terra 的模型 Terra 是一個擁有雙主鏈幣的區塊鏈，包含其算法�
     
     <item>
       <title>畫 Wireframe 目的是什麼？</title>
-      <link>https://ianlifelab.com/post/product/product/pm101-wireframe/</link>
+      <link>https://ianlifelab.com/product/pm101-wireframe/</link>
       <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/product/product/pm101-wireframe/</guid>
+      <guid>https://ianlifelab.com/product/pm101-wireframe/</guid>
       <description>最近畫 Wireframe 的頻率有點高，也畫出了一些心得，中間也有遇到一些問題，剛好分享紀錄一下。
 什麼是 Wireframe 基本的 Wireframe 是一種低保真的設計原型，頁面上面沒有華麗的設計元素，只有匡線、文字資訊、架構排版等。 在一個新的需求出現時，會有非常多的不確定性，需要先確定產品要呈現什麼資訊給用戶、使用旅程是什麼、可能遇到什麼問題、我們想解決什麼問題等， 都需要考慮進去，所以若是太快進入 UI 設計，如果架構或是流程等部分需要做更改，可能會造成過多的資源消耗。
 畫 Wireframe 目的是什麼？ 我認為 Wireframe 階段主要考慮以下兩個部分：
@@ -473,10 +473,10 @@ Wireframe 常見的錯誤 第一次畫 Wireframe 的人很有可能落入『濫�
     
     <item>
       <title>什麼是 Blockchain Bridges，運作原理是什麼?</title>
-      <link>https://ianlifelab.com/post/technology/blockchain/blockchain-bridge/</link>
+      <link>https://ianlifelab.com/blockchain-bridge/</link>
       <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/technology/blockchain/blockchain-bridge/</guid>
+      <guid>https://ianlifelab.com/blockchain-bridge/</guid>
       <description>區塊鏈技術在近幾年來成長非常的快速，最早的 Bitcoin、Ethereum 到 Binance Chain 、 Polygon 、 Solana 等，每條鏈上都有各自的治理模式、協議、規則，甚至是 Defi、NFT、DAO 等多元化的應用也相繼出現。
 儘管近幾年出現的這麼多元的應用，但這些終究只能存在於單一條區塊鏈上，並沒有辦法與其他的區塊鏈互動，也就是說鏈與鏈之間並沒有互相操作性。每一條區塊鏈，就好比一座小島，試想在台灣的 Ian 想要跟在日本的 Justin 溝通訊息，該如何做到呢？現在的社會可以經由通訊軟體或是社群軟體，直接將訊息傳遞出去，也就是所謂 Web 2.0 的應用，同理，比特幣想要到以太坊上做應用，以現在的狀況來說，只有中心化交易所（還不能經由去中心化交易所 Dex）換成以太幣或是 ERC-20 token 才有辦法做到這件事。但若這樣操作手上便不在持有比特幣，這也跟當初想要以『比特幣在以太坊上做應用』的想法有所差異。
 什麼是 Bridges，運作原理是什麼？ 先來講講什麼是 Blockchain Bridge ，它是以什麼方式來解決互相操作性的問題。Bridge 允許兩條不同規則、不同協議的區塊鏈將他們的數據、代幣互相傳遞。以上述的例子來講，可以不經由交易所得換幣服務，直接再以太坊上使用自己持有的比特幣。
@@ -587,10 +587,10 @@ Bridges 種類 Bridges 又分為 One-Way Bridges &amp;amp; Two-Way Bridges，以
     
     <item>
       <title>無視礦工，以太坊的倫敦硬分叉</title>
-      <link>https://ianlifelab.com/post/technology/blockchain/ethereum-london-hard-fork/</link>
+      <link>https://ianlifelab.com/ethereum-london-hard-fork/</link>
       <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/technology/blockchain/ethereum-london-hard-fork/</guid>
+      <guid>https://ianlifelab.com/ethereum-london-hard-fork/</guid>
       <description>前言 現今以太坊的手續費過於昂貴，交易者需要付出高額的手續費才可以完成交易。 這次的 Ethereum London Hard Fork （倫敦硬分叉）所做的更新，包含了 EIP-1559、EIP-3198、EIP-3238 三個提案， 其中 EIP-1559 也是這次比較備受關注的部分。
 EIP 是什麼？ EIP(Ethereum Improvement Proposals)，是為以太坊指定潛在新功能或流程的標準，包含提議更改的技術規範。通過 EIP 流程討論和開發以太坊的網絡升級和應用標準。
 提案一： EIP-1559（區塊鏈交易費用模型） EIP-1559 是對用戶在以太坊網絡上支付 gas 費用方式的更改。（由於現在以太坊交易手續費過高，降低對用戶的吸引力）

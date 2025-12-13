@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Your Life, Your Lab">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://ianlifelab.com//https://i.imgur.com/HNaPaLS.png">
+    <meta property="twitter:image" content="https://ianlifelab.com//https://i.imgur.com/HNaPaLS.png" />
+    
+
+    
+    <meta name="title" content="為何交易所也推出錢包服務？" />
+    <meta property="og:title" content="為何交易所也推出錢包服務？" />
+    <meta property="twitter:title" content="為何交易所也推出錢包服務？" />
+    
+
+    
+    <meta name="description" content="『剛進入 Web3 的用戶』一直都是 Web3 錢包商或是交易所必爭的一塊，在相同競爭力的產品之下，哪個產品的進入門檻越低、使用起來越順手，就越有機會獲得用戶的青睞，以現在資訊這麼多的狀況下，停留在同一個產品的注意力並不會太久，市場又有這麼多的選擇時，如何短時間抓住用戶至關重要。">
+    <meta property="og:description" content="『剛進入 Web3 的用戶』一直都是 Web3 錢包商或是交易所必爭的一塊，在相同競爭力的產品之下，哪個產品的進入門檻越低、使用起來越順手，就越有機會獲得用戶的青睞，以現在資訊這麼多的狀況下，停留在同一個產品的注意力並不會太久，市場又有這麼多的選擇時，如何短時間抓住用戶至關重要。" />
+    <meta property="twitter:description" content="『剛進入 Web3 的用戶』一直都是 Web3 錢包商或是交易所必爭的一塊，在相同競爭力的產品之下，哪個產品的進入門檻越低、使用起來越順手，就越有機會獲得用戶的青睞，以現在資訊這麼多的狀況下，停留在同一個產品的注意力並不會太久，市場又有這麼多的選擇時，如何短時間抓住用戶至關重要。" />
+    
+
+    <meta name="keywords" content="Blockchain, Crypto wallet, Web3 wallet, crypto exchange, EIP-4337, Account Abstraction" />
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+    <meta name="google-site-verification" content="zuuW7hNy_wHvxLOBYVTEFg-sj9gxcQVWbEVp4_G50CY" />
+    <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師, 創業, 個人成長">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>為何交易所也推出錢包服務？ | Ian&#39;s Blog</title>
+
+    <link rel="canonical" href="/exchange-and-wallet/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    <link rel="stylesheet" href="/css/carousel.css"/>
+    <script src="/js/carousel.js"></script>
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+    
+    <style>
+         
+        iframe[src*=ads-iframe]{display:none!important;}
+        div[id*=disqus][style*=margin]{display:none!important;}
+    </style>
+    
+</head>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
+
+    <div class="container-fluid"  style="background-color: rgba(0, 0, 0, 0.1) ">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Ian&#39;s Blog</a>
+            
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse" >
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">HOME</a>
+                    </li>
+                    
+                    
+		            
+                        <li><a href="/about/">About</a></li>
+                    
+                        <li><a href="/portfolio/">Portfolio</a></li>
+                    
+                        <li><a href="/archive/">Archive</a></li>
+                    
+		            
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('https://i.imgur.com/vwxD46F.jpg');
+         
+        background-color: rgb(128, 128, 128, 0.3);
+        background-blend-mode: multiply;
+    }
+</style>
+
+    <header class="intro-header">
+        
+        <div class="container">
+            <div class="">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" >
+                    <div class="post-heading" >
+                        <div class="tags">
+                            
+                            <a class="tag" href="/tags/web3" title="Web3">
+                                Web3
+                            </a>
+                            
+                        </div>
+                        <h1>為何交易所也推出錢包服務？</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            
+                            Posted by
+                            
+                            Ian Tsai
+                            
+                            on
+                            Tuesday, November 14, 2023
+                            
+                            
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    
+    <article>
+        <div class="container">
+
+            <div class="">
+
+                
+                
+                <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container"
+                >
+                    <div class="side-catalog" style="margin-top: 100px;">
+                        
+                        
+                        <ul class="catalog-body"></ul>
+
+                    <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianlifelab.com%2fexchange-and-wallet%2f" width="100%"
+  frameborder=0></iframe>
+
+                    </div>
+                </div>
+                
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                    
+                    <!-- raw HTML omitted -->
+<h1 id="錢包是踏入-web3-的第一站但大家卻都選擇交易所">錢包是踏入 Web3 的第一站但大家卻都選擇交易所？</h1>
+<p>在幣圈打滾幾年的人應該都知道，如果要使用 Defi 或是進入元宇宙，都會需要自己建立一個加密貨幣的錢包，但交易所的用戶量始終大於錢包的用戶，明明錢包應該才是進入 Web3 的入口，為什麼大家卻選擇交易所呢？我認為有以下兩個原因</p>
+<ol>
+<li>交易所的操作性與 web2 一樣</li>
+<li>大部分用戶是想要『投資賺錢』</li>
+</ol>
+<p>過去的 web3 因為進入門檻實在太高，再加上未知的領域太多，導致一般人很難或是很怕進入這個領域，但隨著早期貢獻者的開拓以及技術的堆疊，現在進入 web3 的門檻已經不像以前一樣那麼高，而且各種應用的出現也是為了讓圈外人可以更簡單的進入這個產業。而錢包則從早期保護資產安全到中期可以連動多種 Dapp 到現在試著融入一般現實世界的生活。雖然幣圈老屁股不斷強調 <strong>Not your key, not your crypto</strong>，一直呼籲菜鳥玩家要用錢包，把錢放在自己身上才是最安全的，連世界第二大的 FTX 都可以倒，只有把錢放在自己身上才沒有風險（還是有啊，忘記種子的話 XD），但為何大家還是去用交易所呢？</p>
+<h1 id="主打去中心化的優勢但用戶只在意好不好用賺不賺得到錢">主打去中心化的優勢？但用戶只在意好不好用，賺不賺得到錢</h1>
+<p>過去 web3 產業打著『自託管』、『去中心化是未來』的口號，試圖建立大家的『正確』的知識，但就算建構者不斷地呼籲這件事，時不時還是會有新聞報出哪間交易所其實是詐騙（如 2023 年的 JPEX），散戶們損失了幾個億等等，而這類新聞只要出現，就會發現錢包商的用戶短期內會有所增長，那為何大家不一開始就使用錢包而還要去用交易所呢？</p>
+<p>試想以前在教自己的長輩使用 Facebook 或 Line 等這些他們那個時代沒有的東西時，是不是會聽到『這太難了拉』、『你幫我設定好，讓我可以直接用』，把這個情境搬到 web3 似乎沒有違和感，『蛤建立錢包要抄註記詞喔，啊我弄丟了錢不就不見了』、『交易所可以用 google 登入誒，我用交易所就好了吧』、『我只是要買幣又沒有要玩 Dapp，交易比較方便拉』之類的聲音出現。因為自己建立錢包不但不方便，還有可能遺失『密碼』讓自己的錢不見，我只是想要投資買幣而已，與其相信自己不如相信交易所。</p>
+<h1 id="aa-錢包的出現讓交易所也開始推出錢包服務">AA 錢包的出現讓交易所也開始推出錢包服務</h1>
+<p>EIP-4337 Account Abstraction 協議出現之後，似乎開始改變了這個窘境(網路上有很多關於 AA 提供了什麼功能，在這邊就先不細談)，在以太坊上使用 AA 錢包，體驗跟 web2 一樣，可以用手機或是 email 來建立錢包，就算丟失了帳戶的 key 也可以通過朋友或家人的錢包來為你做『社交恢復』，如此一來傳統加密貨幣錢包帶來的不便（複雜的註記詞）及風險（弄丟註記詞）在 AA 上面就被解決了。</p>
+<p>AA 錢包的出現，也讓交易所有所警覺，先撇除交易所提供豐富的金融商品，相較於錢包，交易所的優勢在於『當用戶只是想買加密貨幣投資時，交易所有著與 web2 有著相同的用戶體驗，讓用戶可以不需要有額外的學習成本就可以持有加密貨幣』。現在 AA 錢包有著跟交易所類似的體驗，卻更忠於 web3 的去中心化的理念，用戶也可以『真正持有自己的資產』，交易所能不緊張嗎？與其把用戶拱手讓給錢包商，不如自己成為錢包商，讓用戶的資產可以『低成本的』在交易所以及自家錢包內轉換，憑藉著交易所豐富的金融商品及使用體驗來綁住這些用戶。</p>
+<h1 id="降低進入門檻才是將-web2-用戶導入-web3-的關鍵">降低進入門檻才是將 Web2 用戶導入 Web3 的關鍵</h1>
+<p>『剛進入 Web3 的用戶』一直都是 Web3 錢包商或是交易所必爭的一塊，在相同競爭力的產品之下，哪個產品的進入門檻越低、使用起來越順手，就越有機會獲得用戶的青睞，以現在資訊這麼多的狀況下，停留在同一個產品的注意力並不會太久，市場又有這麼多的選擇時，如何短時間抓住用戶至關重要。</p>
+<h1 id="如何在生活中實際應用可能是下一步">如何在生活中實際應用可能是下一步？</h1>
+<p>等到一定比例的人都進入了 web3 ，擁有錢包以及加密貨幣，下一階段就會是怎麼將 web3 真正融入生活，讓大家不會認為 web3 = 加密貨幣 = 投資商品，比方說生活中的支付、鏈上保險（紀錄都在鏈上，可以快速出險減少作業時間）、犯罪記錄（不會有因為人情或是背景問題來隱匿紀錄）、官方證書（不會有真假論文事件？）等，真正運用 web3 的技術來解決目前不斷出現的問題。</p>
+
+
+
+                    
+                    <hr>
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/life/slow-down-your-life/" data-toggle="tooltip" data-placement="top"
+                                title="人生不是只有加速鍵">&larr;
+                                Previous Post</a>
+                        </li>
+                        
+                        
+                        <li class="next">
+                            <a href="/nomads/busan-digital-nomadism/" data-toggle="tooltip" data-placement="top"
+                                title="數位遊牧住哪裡？90 天旅居計畫第一站 - 韓國釜山">Next
+                                Post &rarr;</a>
+                        </li>
+                        
+                    </ul>
+                    
+
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+                </div>
+
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+
+
+<footer>
+    <div class="container">
+        <div class="">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/ian.tsai.54/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+            
+            <li>
+                <a href="/subscription">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-bell fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            
+            
+            <li>
+                <a href="mailto:ianjustin39@gmail.com">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Your Life, Your Lab 2025
+                    <br>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<link rel="stylesheet" href="/css/carousel.css"/>
+<script src="/js/carousel.js"></script>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+
+</html>

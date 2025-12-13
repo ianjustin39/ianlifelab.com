@@ -8,10 +8,10 @@
     <lastBuildDate>Tue, 06 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ianlifelab.com/tags/%E7%94%A2%E5%93%81%E7%B6%93%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>做產品不要害怕被用戶拒絕！</title>
-      <link>https://ianlifelab.com/post/start-up/start-up/do-not-be-afraid-of-being-rejected-by-users/</link>
+      <link>https://ianlifelab.com/start-up/do-not-be-afraid-of-being-rejected-by-users/</link>
       <pubDate>Tue, 06 May 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/start-up/start-up/do-not-be-afraid-of-being-rejected-by-users/</guid>
+      <guid>https://ianlifelab.com/start-up/do-not-be-afraid-of-being-rejected-by-users/</guid>
       <description>📝 當用戶說『我不需要你的產品』 剛開始開發產品時，為了可以獲得用戶反饋，所以想辦法找了許多使用者使用。以健身產業做例子，健身產業中有大型健身房、小型健身房、個人健身工作室以及自由教練等，每個群體的需求都不一樣，當時我定義了產品 TA 為自由教練，所以想盡辦法找了能找到的自由教練使用產品，並定期訪談這些教練的使用體驗，其中一個教練這樣跟我說：
 『我所有學生的上課紀錄在 google 行事曆內，你的產品沒辦法讓我直接轉移 google 的資料，我要一個一個重新輸入太浪費時間。而且我也當教練十幾年了，會來找我訓練的學生基本上我都記得住他們的問題，不太需要再做紀錄，而且光訓練這些學生我的時間就被排滿了。所以基本上我不太需要你的產品』。（註：健身產業是舉例。）
 聽完這段對話簡直晴天霹靂⚡，但我並沒有難過得太久，反而在思考整理過後知道了幾件事：
@@ -24,10 +24,10 @@
     
     <item>
       <title>做產品一定要創新嗎？</title>
-      <link>https://ianlifelab.com/post/start-up/start-up/do-you-have-to-innovate/</link>
+      <link>https://ianlifelab.com/start-up/do-you-have-to-innovate/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/start-up/start-up/do-you-have-to-innovate/</guid>
+      <guid>https://ianlifelab.com/start-up/do-you-have-to-innovate/</guid>
       <description>📝 這個產品有人做過了 有人說 Apple、Facebook、Instagram、Airbnb 等這些世界頂尖個科技公司是因為他們自己創造了新的需求、改變了人們的生活型態，造就了這些公司今天的成功！
 回到我們所處的這個時代，要在製作產品上尋找『創新』我認為難度是比以前高很多，再加上就算找到了，也不一定有雄厚的資本可以與科技巨頭抗衡。但如果產品不創新，又會跟不上時代，那我們該怎麼辦？
 這邊分享幾個故事給大家：
@@ -45,10 +45,10 @@
     
     <item>
       <title>AI 時代的 PM 該怎麼生存？</title>
-      <link>https://ianlifelab.com/post/product/product/ai-and-product-manager/</link>
+      <link>https://ianlifelab.com/product/ai-and-product-manager/</link>
       <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/product/product/ai-and-product-manager/</guid>
+      <guid>https://ianlifelab.com/product/ai-and-product-manager/</guid>
       <description>在 AI 大量發生後的這段時間，社群上一直充斥著『XXX 是不是會被 AI 取代？』、『YY 公司導入 AI 降低了 n% 的人力成本』等資訊， 究竟 PM 會隨著這股 AI 浪潮被取代？還是會有不一樣的機會出現？
 AI 可以幫助我們做什麼？ 想起剛出社會當軟體工程師時，遇到一個 bug 要爬各種 Stack Overflow 找問題出在哪，然後不斷地 try-and-error， 而現在只需要把問題丟給 AI 就可以用最短的時間內找到方法，甚至叫他優化程式碼，這能不香嗎？
 過去一個 PM 想要推出一個功能，從發想到 prototype，除非 PM 本身會設計會寫程式，不然光靠 PM 一個人很難做到這件事。 但現在，PM 只要會畫圖，就可以讓會畫圖的 AI 幫忙產出 wireframe，接著再把 wireframe 放到會寫程式的 AI 就可以產出一個 prototype 了。
@@ -61,10 +61,10 @@ AI 確實幫助了工作上『效率』、『速度』的提升，但&amp;hellip
     
     <item>
       <title>誰說 sprint ticket 一定要 story point?</title>
-      <link>https://ianlifelab.com/post/product/product/does-ticket-must-need-story-point/</link>
+      <link>https://ianlifelab.com/product/does-ticket-must-need-story-point/</link>
       <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/product/product/does-ticket-must-need-story-point/</guid>
+      <guid>https://ianlifelab.com/product/does-ticket-must-need-story-point/</guid>
       <description>有參與過敏捷開發的人一定聽過 story point，網路上也很多有關 story point 的解釋以及如了運用， 他主要是協助衡量團隊的開發狀況，讓 PM 可以再有一定的基準下去跟其他部門溝通，如產品行銷或是活動銷售等等。 但是不是真的有了 story point 就一定可以讓產品或專案順利進行？ 有沒有可能有了 story point 但還是遇到一堆狀況？
 永遠估不準的 Story Point 有沒有遇過這個狀況，在 sprint lanning 時團隊評估這個 sprint 可以完成 40 點，但 sprint 結束時卻只完成了 25~30 點， 常見的原因可能有這幾種：
 ticket 的點數估不準（如後端工程師估一同評估前端工程師的 ticket ） 評估 ticket 時忘記某個項目也要做（如 App 新功能只評估畫面開發，遺漏 API 串接） 實作 ticket 時出現預期之外問題或任務（在串接第三方平台時，回的參數與文件給的不同） 這些狀況都可能對在進行中的 sprint 造成一些風險，當然一般來說還是有辦法解決， 通常會在 Retrospective meeting 中去討論如何避免這次該遇到的困難，如後端工程師需要了解前端的開發不只有畫面，也包含邏輯； 與第三方廠商串接資料時需要先確認文件與實際提供的參數是否相同等事項，並期待下次再評估點數時可以更貼近團隊的狀況。
@@ -74,10 +74,10 @@ ticket 的點數估不準（如後端工程師估一同評估前端工程師的 
     
     <item>
       <title>為什麼產品開發一定要有 Deadline？ 注意這五點提升團隊效率</title>
-      <link>https://ianlifelab.com/post/product/product/why-need-deadline/</link>
+      <link>https://ianlifelab.com/product/why-need-Deadline/</link>
       <pubDate>Sat, 05 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/product/product/why-need-deadline/</guid>
+      <guid>https://ianlifelab.com/product/why-need-Deadline/</guid>
       <description>Deadline 的用途是什麼？ 產品經理在規劃產品路線圖（Roadmap）時常以會先做競品分析、市場分析或是用戶訪談，結著評估分析結果是否契合公司的年度或季度目標，最後再安排進 Roadmap 。這份 Roadmap 並非僅提供給產品跟技術團隊，行銷、業務、客服團隊也會根據 Roadmap 上即將釋出的功能去提前做準備，如與合作夥伴洽談、KOL 協作或是撰寫 FAQ 等，這時 Deadline 變得尤為重要，它成為各個團隊追蹤進度的標準。當 Deadline 一到，所有的任務都將完成，產品因此得以投入市場。不過若某團隊因為某些原因導致無法如期完成這項任務，則會影響到其他部門，甚至公司達成目標。
 因此， Deadline 不僅僅是產品發佈的時間點，同時也是團隊協作中的一個共同指標，避免有認知上的落差。
 Deadline 除了讓團隊有一致的目標，還能讓產品提早迭代 剛才我們提及，產品經理在策劃產品時有諸多因素需要考量。以區塊鏈產業來說，2021 年末是 NFT 風潮的高峰， 年初產品經理經過評估認為 NFT 將是今年的趨勢，因此規劃相關功能並預計年中完成並投入市場。若在 Deadline 之前完成，對於產品而言可以提早進入市場做測試、收集用戶反饋，進行迭代更新，等到 NFT 流量達到巔峰時，產品已經完成打磨，符合 80 甚至 90% 市場需求，行銷與業務部門也可以提前布局，讓產品更容易被市場關注，進而吸引大量的用戶。反之若錯失高峰後才完成，用戶早就已經找到習慣使用的產品，這時要再將其他產品的用戶轉換到自家產品將變得相當困難。
@@ -88,10 +88,10 @@ Deadline 除了讓團隊有一致的目標，還能讓產品提早迭代 剛才�
     
     <item>
       <title>畫 Wireframe 目的是什麼？</title>
-      <link>https://ianlifelab.com/post/product/product/pm101-wireframe/</link>
+      <link>https://ianlifelab.com/product/pm101-wireframe/</link>
       <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ianlifelab.com/post/product/product/pm101-wireframe/</guid>
+      <guid>https://ianlifelab.com/product/pm101-wireframe/</guid>
       <description>最近畫 Wireframe 的頻率有點高，也畫出了一些心得，中間也有遇到一些問題，剛好分享紀錄一下。
 什麼是 Wireframe 基本的 Wireframe 是一種低保真的設計原型，頁面上面沒有華麗的設計元素，只有匡線、文字資訊、架構排版等。 在一個新的需求出現時，會有非常多的不確定性，需要先確定產品要呈現什麼資訊給用戶、使用旅程是什麼、可能遇到什麼問題、我們想解決什麼問題等， 都需要考慮進去，所以若是太快進入 UI 設計，如果架構或是流程等部分需要做更改，可能會造成過多的資源消耗。
 畫 Wireframe 目的是什麼？ 我認為 Wireframe 階段主要考慮以下兩個部分：

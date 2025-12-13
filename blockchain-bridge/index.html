@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Your Life, Your Lab">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://ianlifelab.com//https://i.imgur.com/HNaPaLS.png">
+    <meta property="twitter:image" content="https://ianlifelab.com//https://i.imgur.com/HNaPaLS.png" />
+    
+
+    
+    <meta name="title" content="什麼是 Blockchain Bridges，運作原理是什麼?" />
+    <meta property="og:title" content="什麼是 Blockchain Bridges，運作原理是什麼?" />
+    <meta property="twitter:title" content="什麼是 Blockchain Bridges，運作原理是什麼?" />
+    
+
+    
+    <meta name="description" content="Blockchain Bridge 允許了兩條不同規則、不同協議的區塊鏈將他們的數據、代幣互相傳遞。">
+    <meta property="og:description" content="Blockchain Bridge 允許了兩條不同規則、不同協議的區塊鏈將他們的數據、代幣互相傳遞。" />
+    <meta property="twitter:description" content="Blockchain Bridge 允許了兩條不同規則、不同協議的區塊鏈將他們的數據、代幣互相傳遞。" />
+    
+
+    <meta name="keywords" content="crypto bridge, blochchain bridge, What is a Crypto Bridge?, What Are Blockchain Bridges" />
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+    <meta name="google-site-verification" content="zuuW7hNy_wHvxLOBYVTEFg-sj9gxcQVWbEVp4_G50CY" />
+    <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師, 創業, 個人成長">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>什麼是 Blockchain Bridges，運作原理是什麼? | Ian&#39;s Blog</title>
+
+    <link rel="canonical" href="/blockchain-bridge/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    <link rel="stylesheet" href="/css/carousel.css"/>
+    <script src="/js/carousel.js"></script>
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+    
+    <style>
+         
+        iframe[src*=ads-iframe]{display:none!important;}
+        div[id*=disqus][style*=margin]{display:none!important;}
+    </style>
+    
+</head>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165850720-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
+
+    <div class="container-fluid"  style="background-color: rgba(0, 0, 0, 0.1) ">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Ian&#39;s Blog</a>
+            
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse" >
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">HOME</a>
+                    </li>
+                    
+                    
+		            
+                        <li><a href="/about/">About</a></li>
+                    
+                        <li><a href="/portfolio/">Portfolio</a></li>
+                    
+                        <li><a href="/archive/">Archive</a></li>
+                    
+		            
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('https://i.imgur.com/ezgfepk.png');
+         
+        background-color: rgb(128, 128, 128, 0.3);
+        background-blend-mode: multiply;
+    }
+</style>
+
+    <header class="intro-header">
+        
+        <div class="container">
+            <div class="">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" >
+                    <div class="post-heading" >
+                        <div class="tags">
+                            
+                            <a class="tag" href="/tags/blockchain" title="Blockchain">
+                                Blockchain
+                            </a>
+                            
+                        </div>
+                        <h1>什麼是 Blockchain Bridges，運作原理是什麼?</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            
+                            Posted by
+                            
+                            Ian Tsai
+                            
+                            on
+                            Thursday, March 31, 2022
+                            
+                            
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    
+    <article>
+        <div class="container">
+
+            <div class="">
+
+                
+                
+                <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container"
+                >
+                    <div class="side-catalog" style="margin-top: 100px;">
+                        
+                        
+                        <ul class="catalog-body"></ul>
+
+                    <iframe class="LikeCoin" height="235"
+  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianlifelab.com%2fblockchain-bridge%2f" width="100%"
+  frameborder=0></iframe>
+
+                    </div>
+                </div>
+                
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                    
+                    <!-- raw HTML omitted -->
+<p>區塊鏈技術在近幾年來成長非常的快速，最早的 Bitcoin、Ethereum 到 Binance Chain 、 Polygon 、 Solana 等，每條鏈上都有各自的治理模式、協議、規則，甚至是 Defi、NFT、DAO 等多元化的應用也相繼出現。</p>
+<p>儘管近幾年出現的這麼多元的應用，但這些終究只能存在於單一條區塊鏈上，並沒有辦法與其他的區塊鏈互動，也就是說鏈與鏈之間並沒有互相操作性。每一條區塊鏈，就好比一座小島，試想在台灣的 Ian 想要跟在日本的 Justin 溝通訊息，該如何做到呢？現在的社會可以經由通訊軟體或是社群軟體，直接將訊息傳遞出去，也就是所謂 Web 2.0 的應用，同理，比特幣想要到以太坊上做應用，以現在的狀況來說，只有中心化交易所（還不能經由去中心化交易所 Dex）換成以太幣或是 ERC-20 token 才有辦法做到這件事。但若這樣操作手上便不在持有比特幣，這也跟當初想要以『比特幣在以太坊上做應用』的想法有所差異。</p>
+<!-- raw HTML omitted -->
+<h3 id="什麼是-bridges運作原理是什麼">什麼是 Bridges，運作原理是什麼？</h3>
+<hr>
+<p>先來講講什麼是 Blockchain Bridge ，它是以什麼方式來解決互相操作性的問題。Bridge 允許兩條不同規則、不同協議的區塊鏈將他們的數據、代幣互相傳遞。以上述的例子來講，可以不經由交易所得換幣服務，直接再以太坊上使用自己持有的比特幣。</p>
+<p>在你希望將自己的一部分比特幣轉移到以太坊上時， Blockchain Bridge 會先將你比特幣鎖在所使用的 Bridge 上，並在以太坊上建立等同價值的比特幣代幣（稱作 wBTC），此時便可以使用 wBTC 去操作以太坊上的 Dapp 。相反，當你認為不需要繼續在以太坊上，想要換回比特幣時，只需要做反向的行為，以太坊上的 wBTC 會被燒毀，而同等價值的比特幣則會回到你的手上。但必須注意的是，若用 Bridge 將 10 BTC 換成 10 wBTC，換回時卻只有 9 wBTC 的話，也只能取得 9 BTC。</p>
+<p>簡單來說，經由 Bridge 是將你的加密貨幣『複製』一份到別條鏈上，讓他符合另一條鏈的規範與協議，可以操作上面的各種應用。</p>
+<!-- raw HTML omitted -->
+<h3 id="bridges-種類">Bridges 種類</h3>
+<hr>
+<p>Bridges 又分為 One-Way Bridges &amp; Two-Way Bridges，以及 Trust-Based &amp; Trustless Bridges。</p>
+<p>One-Way Bridges 的意思就是，只能Ａ鏈到Ｂ鏈，不能相反操作，Two-Way Bridges 則是可以互相跨越。而 Trust-Based Bridges 則是有一個中心化集團來控制這個 Bridge， Trustless Bridge 則是由程式協議來操作這項服務。</p>
+<p>比方說剛剛提到的 BTC 換到以太坊上的 wBTC 就不僅是一個 One-Way Bridge，同時也是 Trust-Based Bridge。它只可以比特幣到以太坊，不可以相反操作，且是經由 BitGo 這間公司來做打包交換這件事。Wormhole 就是 Two-Way Bridge，不管你在 Solana 或是以太坊上都可以互相交換，而 Wormhole 是用合約協議的方式來做到跨鏈，並沒有一個集團或是企業來控制這項服務。</p>
+<!-- raw HTML omitted -->
+<h3 id="為何要用-bridges">為何要用 Bridges</h3>
+<hr>
+<p>可能大家會想，都已經有交易所了可以換幣了，那為何還需要 Bridge 呢？如同第一段所講，持有比特幣的人想要再以太坊上做更多的應用，但另一方面又想持有比特幣，以交易所來說是沒辦法達成這件事。第二點是，在不同的鏈上的手續費及速度上也會有差異，比方說在以太坊上交易必須要耗費大量的時間及手續費，若經由 Bridge 的方式轉移到 Polygon 上，便大大降低了這些成本。</p>
+<p>當然 Bridge 有許多好處，同時也帶有一些隱藏的風險，比方說大家會問 Trust-Based &amp; Trustless Bridges 哪個比較好，其實這沒有一定的答案。或許部分人會覺得讓某集團控制會有一定的風險，不如選擇 Trustless Bridges 會比較安全，但其實 Trustless Bridges 也會有被駭客攻擊的風險。最終還是要評估自己承受風險的程度以及使否有對正在使用的 Bridge 有所了解。</p>
+<p>
+  <img src="https://i.imgur.com/3k79a4e.png" alt="">
+
+</p>
+<!-- raw HTML omitted -->
+<h3 id="references">References</h3>
+<hr>
+<ul>
+<li><!-- raw HTML omitted -->What is a Crypto Bridge?<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->What Are Blockchain Bridges and Why Do We Need Them?<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->What Are Blockchain Bridges?<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->What Are Blockchain Bridges and How Do They Work?<!-- raw HTML omitted --></li>
+</ul>
+
+
+
+                    
+                    <hr>
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/read/late-bloomers/" data-toggle="tooltip" data-placement="top"
+                                title="大器可以晚成">&larr;
+                                Previous Post</a>
+                        </li>
+                        
+                        
+                        <li class="next">
+                            <a href="/read/give-and-take/" data-toggle="tooltip" data-placement="top"
+                                title="給予 - 施比受更有福，給予的力量">Next
+                                Post &rarr;</a>
+                        </li>
+                        
+                    </ul>
+                    
+
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    
+    
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+                </div>
+
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+
+
+<footer>
+    <div class="container">
+        <div class="">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/ian.tsai.54/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+            
+            <li>
+                <a href="/subscription">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-bell fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            
+            
+            <li>
+                <a href="mailto:ianjustin39@gmail.com">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Your Life, Your Lab 2025
+                    <br>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<link rel="stylesheet" href="/css/carousel.css"/>
+<script src="/js/carousel.js"></script>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+
+</html>
