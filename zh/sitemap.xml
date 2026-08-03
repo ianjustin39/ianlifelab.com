@@ -2,11 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ianlifelab.com/tags/ai/</loc>
-    <lastmod>2026-02-28T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ianlifelab.com/categories/</loc>
-    <lastmod>2026-02-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-05-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,10 +16,10 @@
                 />
   </url><url>
     <loc>https://ianlifelab.com/post/</loc>
-    <lastmod>2026-02-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianlifelab.com/series/</loc>
-    <lastmod>2026-02-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-05-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -34,8 +31,11 @@
                 href="https://ianlifelab.com/series/"
                 />
   </url><url>
+    <loc>https://ianlifelab.com/categories/start-up/</loc>
+    <lastmod>2025-05-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://ianlifelab.com/tags/</loc>
-    <lastmod>2026-02-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-05-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -47,11 +47,8 @@
                 href="https://ianlifelab.com/tags/"
                 />
   </url><url>
-    <loc>https://ianlifelab.com/categories/tech/</loc>
-    <lastmod>2026-02-28T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ianlifelab.com/</loc>
-    <lastmod>2026-02-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-05-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -62,18 +59,6 @@
                 hreflang="zh"
                 href="https://ianlifelab.com/"
                 />
-  </url><url>
-    <loc>https://ianlifelab.com/tags/%E9%9A%A8%E7%AD%86/</loc>
-    <lastmod>2026-02-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ianlifelab.com/learning/ai-experience-2026/</loc>
-    <lastmod>2026-02-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ianlifelab.com/series/%E5%AD%B8%E7%BF%92%E9%9A%A8%E7%AD%86/</loc>
-    <lastmod>2026-02-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ianlifelab.com/categories/start-up/</loc>
-    <lastmod>2025-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianlifelab.com/tags/%E7%94%A2%E5%93%81%E7%B6%93%E7%90%86/</loc>
     <lastmod>2025-05-06T00:00:00+00:00</lastmod>
@@ -95,6 +80,9 @@
   </url><url>
     <loc>https://ianlifelab.com/start-up/do-you-have-to-innovate/</loc>
     <lastmod>2025-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianlifelab.com/tags/ai/</loc>
+    <lastmod>2025-03-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianlifelab.com/product/ai-and-product-manager/</loc>
     <lastmod>2025-03-20T00:00:00+00:00</lastmod>
@@ -136,6 +124,9 @@
     <lastmod>2024-03-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianlifelab.com/tags/notion/</loc>
+    <lastmod>2024-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ianlifelab.com/categories/tech/</loc>
     <lastmod>2024-03-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ianlifelab.com/tags/%E7%94%A2%E5%93%81%E9%96%8B%E7%99%BC/</loc>
