@@ -1,25 +1,170 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>Ethereum on Your Life, Your Lab</title>
+    <title>Ethereum · Your Life, Your Lab</title>
     <link>https://ianlifelab.com/tags/ethereum/</link>
-    <description>Recent content in Ethereum on Your Life, Your Lab</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 16 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ianlifelab.com/tags/ethereum/index.xml" rel="self" type="application/rss+xml" />
+    <description>從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。</description>
+    <generator>Hugo</generator>
+    <language>zh-Hant-TW</language>
+    <lastBuildDate>Wed, 16 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ianlifelab.com/tags/ethereum/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>無視礦工，以太坊的倫敦硬分叉</title>
       <link>https://ianlifelab.com/ethereum-london-hard-fork/</link>
       <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
-      
+      <dc:creator>Ian Tsai</dc:creator>
       <guid>https://ianlifelab.com/ethereum-london-hard-fork/</guid>
-      <description>前言 現今以太坊的手續費過於昂貴，交易者需要付出高額的手續費才可以完成交易。 這次的 Ethereum London Hard Fork （倫敦硬分叉）所做的更新，包含了 EIP-1559、EIP-3198、EIP-3238 三個提案， 其中 EIP-1559 也是這次比較備受關注的部分。
-EIP 是什麼？ EIP(Ethereum Improvement Proposals)，是為以太坊指定潛在新功能或流程的標準，包含提議更改的技術規範。通過 EIP 流程討論和開發以太坊的網絡升級和應用標準。
-提案一： EIP-1559（區塊鏈交易費用模型） EIP-1559 是對用戶在以太坊網絡上支付 gas 費用方式的更改。（由於現在以太坊交易手續費過高，降低對用戶的吸引力）
-以往：礦工可以賺的收入「挖礦獎勵」跟「 100% Gas fee 」 EIP 1559 ： gas fee 分為基礎費（base fee）和小費兩種，給礦工的是「小費」； base fee 的 50% 會直接銷毀。 EIP-1559 也導入目標塊容量機制，每個區塊的基本費用根據網絡需求而變化。如果一個區塊的交易量超過 50%，則基本費用將增加，低於 50% 的話基本費則會下降。 而基本費可能會隨著交易加入 block 時發生改變，可以先將 price 設定成願意支付的上限，最後沒用到的部分會退還。
-這個提案重點在於基本費會被銷毀，並不會所有的 gas fee 都讓礦工拿走。而也藉由『銷毀』機制，讓以太幣的供應量下降，避免通貨膨脹。
-交易格式的差異 以下部分段程式碼是從 EIP-1559 擷取。
-新交易格式內的 base_fee_per_gas ＆ priority_fee_per_gas 取代了以往的 Legacy Ethereum transactions 的 gas_price。 但 EIP-1559 可以相容 Legacy Ethereum transactions 的格式。 雖然現有的交易格式仍然有效且也被包含在 block 中，不過 Legacy transactions 沒辦法享有新的 pricing system 所帶來的優點。</description>
+      <category>科技探索</category>
+      <description>Ethereum London Hard Fork （倫敦硬分叉）所做的更新，包含了 EIP-1559、EIP-3198、EIP-3238 三個提案，其中 EIP-1559 也是這次比較備受關注的部分， EIP-1559 可能會改變以太坊的交易費用模型。</description>
+      <content:encoded><![CDATA[<br>
+<br>
+<br>
+<h4 id="前言">前言</h4><hr>
+<p>現今以太坊的手續費過於昂貴，交易者需要付出高額的手續費才可以完成交易。
+這次的 Ethereum London Hard Fork （倫敦硬分叉）所做的更新，包含了 EIP-1559、EIP-3198、EIP-3238 三個提案，
+其中 EIP-1559 也是這次比較備受關注的部分。</p>
+<br>
+<h4 id="eip-是什麼">EIP 是什麼？</h4><hr>
+<p>EIP(Ethereum Improvement Proposals)，是為以太坊指定潛在新功能或流程的標準，包含提議更改的技術規範。通過 EIP 流程討論和開發以太坊的網絡升級和應用標準。</p>
+<br>
+<h4 id="提案一-eip-1559區塊鏈交易費用模型">提案一： EIP-1559（區塊鏈交易費用模型）</h4><hr>
+<p>EIP-1559 是對用戶在以太坊網絡上支付 gas 費用方式的更改。（由於現在以太坊交易手續費過高，降低對用戶的吸引力）</p>
+<ul>
+<li>以往：礦工可以賺的收入「挖礦獎勵」跟「 100% Gas fee 」</li>
+<li>EIP 1559 ： gas fee 分為基礎費（base fee）和小費兩種，給礦工的是「小費」； base fee 的 50% 會直接銷毀。</li>
+</ul>
+<p>EIP-1559 也導入目標塊容量機制，每個區塊的基本費用根據網絡需求而變化。如果一個區塊的交易量超過 50%，則基本費用將增加，低於 50% 的話基本費則會下降。
+而基本費可能會隨著交易加入 block 時發生改變，可以先將 price 設定成願意支付的上限，最後沒用到的部分會退還。</p>
+<p>這個提案重點在於基本費會被銷毀，並不會所有的 gas fee 都讓礦工拿走。而也藉由『銷毀』機制，讓以太幣的供應量下降，避免通貨膨脹。</p>
+<br>
+<h5 id="交易格式的差異">交易格式的差異</h5><p>以下部分段程式碼是從
+<a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md" target="_blank">EIP-1559</a>
+擷取。</p>
+<p>新交易格式內的 <strong>base_fee_per_gas</strong> ＆ <strong>priority_fee_per_gas</strong> 取代了以往的 <strong>Legacy Ethereum transactions</strong> 的 <strong>gas_price</strong>。
+但 EIP-1559 <strong>可以相容</strong> Legacy Ethereum transactions 的格式。
+雖然現有的交易格式仍然有效且也被包含在 block 中，不過 Legacy transactions <strong>沒辦法</strong>享有新的 pricing system 所帶來的優點。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>@dataclass
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">TransactionLegacy</span>:
+</span></span><span style="display:flex;"><span>	signer_nonce: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>	gas_price: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>	gas_limit: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>	destination: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>	amount: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>	payload: <span style="color:#8be9fd;font-style:italic">bytes</span> <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">bytes</span>()
+</span></span><span style="display:flex;"><span>	v: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>	r: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>	s: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@dataclass
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Transaction1559Payload</span>:
+</span></span><span style="display:flex;"><span>	chain_id: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>	signer_nonce: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>	max_priority_fee_per_gas: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>	max_fee_per_gas: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>	gas_limit: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>	destination: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>	amount: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>	payload: <span style="color:#8be9fd;font-style:italic">bytes</span> <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">bytes</span>()
+</span></span><span style="display:flex;"><span>	access_list: List[Tuple[<span style="color:#8be9fd;font-style:italic">int</span>, List[<span style="color:#8be9fd;font-style:italic">int</span>]]] <span style="color:#ff79c6">=</span> field(default_factory<span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">list</span>)
+</span></span><span style="display:flex;"><span>	signature_y_parity: <span style="color:#8be9fd;font-style:italic">bool</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">False</span>
+</span></span><span style="display:flex;"><span>	signature_r: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>	signature_s: <span style="color:#8be9fd;font-style:italic">int</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">---</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">normalize_transaction</span>(self, transaction: Transaction, signer_address: <span style="color:#8be9fd;font-style:italic">int</span>) <span style="color:#ff79c6">-&gt;</span> NormalizedTransaction:
+</span></span><span style="display:flex;"><span>		<span style="color:#6272a4"># legacy transactions</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">if</span> <span style="color:#8be9fd;font-style:italic">isinstance</span>(transaction, TransactionLegacy):
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">return</span> NormalizedTransaction(
+</span></span><span style="display:flex;"><span>				signer_address <span style="color:#ff79c6">=</span> signer_address,
+</span></span><span style="display:flex;"><span>				signer_nonce <span style="color:#ff79c6">=</span> transaction<span style="color:#ff79c6">.</span>signer_nonce,
+</span></span><span style="display:flex;"><span>				gas_limit <span style="color:#ff79c6">=</span> transaction<span style="color:#ff79c6">.</span>gas_limit,
+</span></span><span style="display:flex;"><span>				max_priority_fee_per_gas <span style="color:#ff79c6">=</span> transaction<span style="color:#ff79c6">.</span>gas_price,
+</span></span><span style="display:flex;"><span>				max_fee_per_gas <span style="color:#ff79c6">=</span> transaction<span style="color:#ff79c6">.</span>gas_price,
+</span></span><span style="display:flex;"><span>				destination <span style="color:#ff79c6">=</span> transaction<span style="color:#ff79c6">.</span>destination,
+</span></span><span style="display:flex;"><span>				amount <span style="color:#ff79c6">=</span> transaction<span style="color:#ff79c6">.</span>amount,
+</span></span><span style="display:flex;"><span>				payload <span style="color:#ff79c6">=</span> transaction<span style="color:#ff79c6">.</span>payload,
+</span></span><span style="display:flex;"><span>				access_list <span style="color:#ff79c6">=</span> [],
+</span></span><span style="display:flex;"><span>			)
+</span></span><span style="display:flex;"><span>		<span style="color:#6272a4"># 1559 transactions</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">elif</span> <span style="color:#8be9fd;font-style:italic">isinstance</span>(transaction, Transaction1559Envelope):
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">return</span> NormalizedTransaction(
+</span></span><span style="display:flex;"><span>				signer_address <span style="color:#ff79c6">=</span> signer_address,
+</span></span><span style="display:flex;"><span>				signer_nonce <span style="color:#ff79c6">=</span> transaction<span style="color:#ff79c6">.</span>payload<span style="color:#ff79c6">.</span>signer_nonce,
+</span></span><span style="display:flex;"><span>				gas_limit <span style="color:#ff79c6">=</span> transaction<span style="color:#ff79c6">.</span>payload<span style="color:#ff79c6">.</span>gas_limit,
+</span></span><span style="display:flex;"><span>				max_priority_fee_per_gas <span style="color:#ff79c6">=</span> transaction<span style="color:#ff79c6">.</span>payload<span style="color:#ff79c6">.</span>max_priority_fee_per_gas,
+</span></span><span style="display:flex;"><span>				max_fee_per_gas <span style="color:#ff79c6">=</span> transaction<span style="color:#ff79c6">.</span>payload<span style="color:#ff79c6">.</span>max_fee_per_gas,
+</span></span><span style="display:flex;"><span>				destination <span style="color:#ff79c6">=</span> transaction<span style="color:#ff79c6">.</span>payload<span style="color:#ff79c6">.</span>destination,
+</span></span><span style="display:flex;"><span>				amount <span style="color:#ff79c6">=</span> transaction<span style="color:#ff79c6">.</span>payload<span style="color:#ff79c6">.</span>amount,
+</span></span><span style="display:flex;"><span>				payload <span style="color:#ff79c6">=</span> transaction<span style="color:#ff79c6">.</span>payload<span style="color:#ff79c6">.</span>payload,
+</span></span><span style="display:flex;"><span>				access_list <span style="color:#ff79c6">=</span> transaction<span style="color:#ff79c6">.</span>payload<span style="color:#ff79c6">.</span>access_list,
+</span></span><span style="display:flex;"><span>			)
+</span></span><span style="display:flex;"><span>		<span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">raise</span> Exception(<span style="color:#f1fa8c">&#39;invalid transaction: unexpected number of items&#39;</span>)
+</span></span></code></pre></div><br>
+<h5 id="計算-gas-fee">計算 gas fee</h5><p>gas fee 會分為基礎費和小費兩種，base fee 會直接銷毀，「小費」會給礦工，沒有用到的部分則會返回給交易者。</p>
+<p>這邊第一步會判斷地址的 balance 是否有辦法負擔 <strong>base fee</strong>，如果有的話就會繼續往下計算 <strong>fee_per_gas</strong> 以及 <strong>priority_fee_per_gas</strong>，這邊就不逐一解釋程式碼了。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> unnormalized_transaction <span style="color:#ff79c6">in</span> transactions:
+</span></span><span style="display:flex;"><span>			<span style="color:#6272a4"># Note: this validates transaction signature and chain ID which must happen before we normalize below since normalized transactions don&#39;t include signature or chain ID</span>
+</span></span><span style="display:flex;"><span>			signer_address <span style="color:#ff79c6">=</span> self<span style="color:#ff79c6">.</span>validate_and_recover_signer_address(unnormalized_transaction)
+</span></span><span style="display:flex;"><span>			transaction <span style="color:#ff79c6">=</span> self<span style="color:#ff79c6">.</span>normalize_transaction(unnormalized_transaction, signer_address)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			signer <span style="color:#ff79c6">=</span> self<span style="color:#ff79c6">.</span>account(signer_address)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			signer<span style="color:#ff79c6">.</span>balance <span style="color:#ff79c6">-=</span> transaction<span style="color:#ff79c6">.</span>amount
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">assert</span> signer<span style="color:#ff79c6">.</span>balance <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">0</span>, <span style="color:#f1fa8c">&#39;invalid transaction: signer does not have enough ETH to cover attached value&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			<span style="color:#6272a4"># ensure that the user was willing to at least pay the base fee</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">assert</span> transaction<span style="color:#ff79c6">.</span>max_fee_per_gas <span style="color:#ff79c6">&gt;=</span> block<span style="color:#ff79c6">.</span>base_fee_per_gas
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			<span style="color:#6272a4"># The first two of these four rules are implicit due to the next two rules</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#6272a4"># Prevent impossibly large numbers</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">assert</span> transaction<span style="color:#ff79c6">.</span>max_fee_per_gas <span style="color:#ff79c6">&lt;</span> <span style="color:#bd93f9">2</span><span style="color:#ff79c6">**</span><span style="color:#bd93f9">256</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#6272a4"># Prevent impossibly large numbers</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">assert</span> transaction<span style="color:#ff79c6">.</span>max_priority_fee_per_gas <span style="color:#ff79c6">&lt;</span> <span style="color:#bd93f9">2</span><span style="color:#ff79c6">**</span><span style="color:#bd93f9">256</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#6272a4"># The total must be the larger of the two</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">assert</span> transaction<span style="color:#ff79c6">.</span>max_fee_per_gas <span style="color:#ff79c6">&gt;=</span> transaction<span style="color:#ff79c6">.</span>max_priority_fee_per_gas
+</span></span><span style="display:flex;"><span>			<span style="color:#6272a4"># the signer must be able to afford the transaction</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">assert</span> signer<span style="color:#ff79c6">.</span>balance <span style="color:#ff79c6">&gt;=</span> transaction<span style="color:#ff79c6">.</span>gas_limit <span style="color:#ff79c6">*</span> transaction<span style="color:#ff79c6">.</span>max_fee_per_gas
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			<span style="color:#6272a4"># priority fee is capped because the base fee is filled first</span>
+</span></span><span style="display:flex;"><span>			priority_fee_per_gas <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">min</span>(transaction<span style="color:#ff79c6">.</span>max_priority_fee_per_gas, transaction<span style="color:#ff79c6">.</span>max_fee_per_gas <span style="color:#ff79c6">-</span> block<span style="color:#ff79c6">.</span>base_fee_per_gas)
+</span></span><span style="display:flex;"><span>			<span style="color:#6272a4"># signer pays both the priority fee and the base fee</span>
+</span></span><span style="display:flex;"><span>			effective_gas_price <span style="color:#ff79c6">=</span> priority_fee_per_gas <span style="color:#ff79c6">+</span> block<span style="color:#ff79c6">.</span>base_fee_per_gas
+</span></span><span style="display:flex;"><span>			signer<span style="color:#ff79c6">.</span>balance <span style="color:#ff79c6">-=</span> transaction<span style="color:#ff79c6">.</span>gas_limit <span style="color:#ff79c6">*</span> effective_gas_price
+</span></span><span style="display:flex;"><span>			<span style="color:#ff79c6">assert</span> signer<span style="color:#ff79c6">.</span>balance <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">0</span>, <span style="color:#f1fa8c">&#39;invalid transaction: signer does not have enough ETH to cover gas&#39;</span>
+</span></span><span style="display:flex;"><span>			gas_used <span style="color:#ff79c6">=</span> self<span style="color:#ff79c6">.</span>execute_transaction(transaction, effective_gas_price)
+</span></span><span style="display:flex;"><span>			gas_refund <span style="color:#ff79c6">=</span> transaction<span style="color:#ff79c6">.</span>gas_limit <span style="color:#ff79c6">-</span> gas_used
+</span></span><span style="display:flex;"><span>			cumulative_transaction_gas_used <span style="color:#ff79c6">+=</span> gas_used
+</span></span><span style="display:flex;"><span>			<span style="color:#6272a4"># signer gets refunded for unused gas</span>
+</span></span><span style="display:flex;"><span>			signer<span style="color:#ff79c6">.</span>balance <span style="color:#ff79c6">+=</span> gas_refund <span style="color:#ff79c6">*</span> effective_gas_price
+</span></span><span style="display:flex;"><span>			<span style="color:#6272a4"># miner only receives the priority fee; note that the base fee is not given to anyone (it is burned)</span>
+</span></span><span style="display:flex;"><span>			self<span style="color:#ff79c6">.</span>account(block<span style="color:#ff79c6">.</span>author)<span style="color:#ff79c6">.</span>balance <span style="color:#ff79c6">+=</span> gas_used <span style="color:#ff79c6">*</span> priority_fee_per_gas
+</span></span></code></pre></div><br>
+<h5 id="交易順序">交易順序</h5><p>多數的人不會在 <strong>priority fees</strong> 去做競爭，所以基本上以相同優先度會依照交易時間來進行排序。</p>
+<br>
+<h4 id="提案二-eip-3198basefee-操作碼">提案二： EIP-3198（BASEFEE 操作碼）</h4><hr>
+<p>固定費用 base fee 的實際原始碼。</p>
+<br>
+<h4 id="提案三-eip-3238difficulty-bomb-delay">提案三： EIP-3238（Difficulty Bomb Delay）</h4><hr>
+<p>難度炸彈是以太坊在 2015 年加入的一段程式碼，透過逐步增加區塊鏈挖礦難度，主要是為了減低以太坊被開發的速度。
+EIP-3238 主要是延遲難度炸彈，原本炸彈難題這次將預定在 2021/7 發生，這次預計延到 2022 年第二季度左右才會發生。
+過去以太坊也曾爆過三次炸彈難題，並手動調整把難度調回爆炸前的程度。</p>
+<br>
+<h4 id="小結">小結</h4><hr>
+<p>由於本身是開發人員，不是投資人或是礦工，所以比較關心交易格式有沒有發生變化，是否可以相容，對於此次更新對於以太坊生態的影響可能沒有各界大佬清楚，還請見諒ＸＤ</p>
+<br>
+<br>
+<h4 id="references">References</h4><hr>
+<ul>
+<li><a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3198.md" target="_blank">EIP-3198</a></li>
+<li><a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3238.md" target="_blank">EIP-3238</a></li>
+<li><a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md" target="_blank">EIP-1559</a></li>
+<li><a href="https://ethereum.org/zh-tw/eips/" target="_blank">Introduction to Ethereum Improvement Proposals (EIPs)</a></li>
+</ul>
+]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

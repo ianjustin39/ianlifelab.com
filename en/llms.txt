@@ -1,0 +1,22 @@
+# Your Life, Your Lab (Ian's Blog)
+
+> From chemistry to software engineering, and from engineering to product management — an ordinary person who keeps trying new things.
+
+Author: Ian Tsai — https://ianlifelab.com/en/about/
+Accept who you are and own your life.
+
+I am IAN, a former software engineer who became a product manager because of my interest in products.
+This blog is a place to record my learning experience in case I don&rsquo;t have enough brain capacity to remember what I&rsquo;ve learned, and also to share my life!
+
+## The path so far
+
+- Chemistry: Where it all started
+- Software engineer: From chemistry into software
+- Product manager: Switched careers out of a love for products
+- Digital nomad: Chiang Mai, Busan, Hanoi, Kuala Lumpur
+- Founder: MeFresh, FollowMate
+
+## Things I've built
+
+- [MeFresh](https://www.mefreshapp.com/): Booking and client management for beauty pros
+- [FollowMate](https://www.followmate.cubelab3.com/): Turns what you agree on in LINE chats into to-dos

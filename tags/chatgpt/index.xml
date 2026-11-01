@@ -1,32 +1,150 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>ChatGPT on Your Life, Your Lab</title>
+    <title>ChatGPT · Your Life, Your Lab</title>
     <link>https://ianlifelab.com/tags/chatgpt/</link>
-    <description>Recent content in ChatGPT on Your Life, Your Lab</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 05 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ianlifelab.com/tags/chatgpt/index.xml" rel="self" type="application/rss+xml" />
+    <description>從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。</description>
+    <generator>Hugo</generator>
+    <language>zh-Hant-TW</language>
+    <lastBuildDate>Tue, 05 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ianlifelab.com/tags/chatgpt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>還在自己畫流程圖嗎？學會下指令讓 ChatGPT &#43; Notion 幫你解決所有事情</title>
       <link>https://ianlifelab.com/tech/drawing-flowcharts-with-ChatGPT-and-Notion/</link>
       <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
-      
+      <dc:creator>Ian Tsai</dc:creator>
       <guid>https://ianlifelab.com/tech/drawing-flowcharts-with-ChatGPT-and-Notion/</guid>
-      <description>你的產品流程圖還在慢慢畫嗎？
-開發產品時產品經理需要畫很多圖，就算是自己創業或是做 Side project，把你龐大的思緒整理成有條理的流程圖或心智圖也要花上不少時間。 最近在設計產品的全新功能，使用 ChatGPT + Notion 組合後發現，這組合大大的降低我準備素材的時間，只需要直接將 Mermaid 程式碼放入 Notion 的程式碼 block 內就可以將流程圖呈現出來，不需要再用 Mirror 或是 Figma 一個一個拉，同時 Notion 為主要的產品管理平台， 等於我們使用了最少的工具及時間，就可以完成這些複雜的事情。
-該準備什麼素材給 ChatGPT？ 如何下 prompt 應該是大家比較在意的事情，但在下 prompt 之前，身為 PM 的你應該對於接下來要設計的新功能流程有一定程度上的了解， 如果沒有也沒關係，可以先問問 GPT ，看他對於你想要設計的新功能有什麼想法：
-在詢問時先告訴 GPT 他需要 cosplay 什麼角色，GPT 會依照角色跟問題給回答一個相對精準的答案
-註：回答的內容有點多截取部分做表示
-這時你可以檢查這個流程是不是跟你想像中的一樣，或是有哪些地方需要增減，這邊先假設他提供的流程符合我的需求， 所以我接續要求他把這段流程寫成 Mermaid 的語法：
-這時你便獲得了一串看似很複雜，自己要研究很久才看得懂的程式碼。不過不用擔心，你只需要將這段程式碼貼到 Notion 上， Notion 會自動幫你畫出整張流程圖
-若覺得流程圖直式很難看，你只需要將程式碼第一行的graph TD 改為 graph LR 那流程圖就會改為橫式，就看使用上篇好哪種方式呈現拉！
-LR：從左到右。
-RL：從右到左。
-TB or TD：從上到下。
-BT：從下到上。
-以流程圖來說，ChatGPT 產出的程式碼已經算堪用，畢竟流程只是要討論接下來如何實作該功能，但如果你希望更了解如何撰寫流程圖的話， 可以參考 Mermaid 的官方 Doc的資訊學習。
-Functional Map 也讓 GPT 來幫我完成吧 隨著產品越來越大，Functional Map (功能地圖) 的維護也越發困難&amp;hellip;，但不要擔心，一樣靠 GPT 可以幫助你完成這件事。</description>
+      <category>產品思維</category>
+      <description>使用 ChatGPT &#43; Notion 幫你完成複雜的流程圖工作，節省你的工作時間同時提升溝通效率。</description>
+      <content:encoded><![CDATA[<br>
+<br>
+<p>你的產品流程圖還在慢慢畫嗎？</p>
+<p>開發產品時產品經理需要畫很多圖，就算是自己創業或是做 Side project，把你龐大的思緒整理成有條理的流程圖或心智圖也要花上不少時間。
+最近在設計產品的全新功能，使用 ChatGPT + Notion 組合後發現，這組合大大的降低我準備素材的時間，只需要直接將 Mermaid 程式碼放入 Notion 的程式碼 block 內就可以將流程圖呈現出來，不需要再用 Mirror 或是 Figma 一個一個拉，同時 Notion 為主要的產品管理平台，
+等於我們使用了最少的工具及時間，就可以完成這些複雜的事情。</p>
+<h3 id="該準備什麼素材給-chatgpt">該準備什麼素材給 ChatGPT？</h3><hr>
+<p>如何下 prompt 應該是大家比較在意的事情，但在下 prompt 之前，身為 PM 的你應該對於接下來要設計的新功能流程有一定程度上的了解，
+如果沒有也沒關係，可以先問問 GPT ，看他對於你想要設計的新功能有什麼想法：</p>
+<p>
+  <img src="https://i.imgur.com/i3qkvuw.png" alt="還在自己畫流程圖嗎？學會下指令讓 ChatGPT &#43; Notion 幫你解決所有事情" loading="lazy" decoding="async">
+
+</p>
+<p>在詢問時先告訴 GPT 他需要 cosplay 什麼角色，GPT 會依照角色跟問題給回答一個相對精準的答案</p>
+<p>
+  <img src="https://i.imgur.com/Onydj1i.png" alt="還在自己畫流程圖嗎？學會下指令讓 ChatGPT &#43; Notion 幫你解決所有事情" loading="lazy" decoding="async">
+
+</p>
+<p><em>註：回答的內容有點多截取部分做表示</em></p>
+<p>這時你可以檢查這個流程是不是跟你想像中的一樣，或是有哪些地方需要增減，這邊先假設他提供的流程符合我的需求，
+所以我接續要求他把這段流程寫成 Mermaid 的語法：</p>
+<p>
+  <img src="https://i.imgur.com/XBJH4zi.png" alt="還在自己畫流程圖嗎？學會下指令讓 ChatGPT &#43; Notion 幫你解決所有事情" loading="lazy" decoding="async">
+
+</p>
+<p>
+  <img src="https://i.imgur.com/aU4J3g7.png" alt="還在自己畫流程圖嗎？學會下指令讓 ChatGPT &#43; Notion 幫你解決所有事情" loading="lazy" decoding="async">
+
+</p>
+<p>這時你便獲得了一串看似很複雜，自己要研究很久才看得懂的程式碼。不過不用擔心，你只需要將這段程式碼貼到 Notion 上，
+Notion 會自動幫你畫出整張流程圖</p>
+<p>
+  <img src="https://i.imgur.com/O1fU9Hp.png" alt="還在自己畫流程圖嗎？學會下指令讓 ChatGPT &#43; Notion 幫你解決所有事情" loading="lazy" decoding="async">
+
+
+
+  <img src="https://i.imgur.com/6RaPz2S.png" alt="還在自己畫流程圖嗎？學會下指令讓 ChatGPT &#43; Notion 幫你解決所有事情" loading="lazy" decoding="async">
+
+</p>
+<p>若覺得流程圖直式很難看，你只需要將程式碼第一行的<code>graph TD</code> 改為 <code>graph LR</code> 那流程圖就會改為橫式，就看使用上篇好哪種方式呈現拉！</p>
+<blockquote>
+<p>LR：從左到右。</p>
+<p>RL：從右到左。</p>
+<p>TB or TD：從上到下。</p>
+<p>BT：從下到上。</p>
+</blockquote>
+<p>
+  <img src="https://i.imgur.com/nIQ0gLY.png" alt="還在自己畫流程圖嗎？學會下指令讓 ChatGPT &#43; Notion 幫你解決所有事情" loading="lazy" decoding="async">
+
+</p>
+<p>以流程圖來說，ChatGPT 產出的程式碼已經算堪用，畢竟流程只是要討論接下來如何實作該功能，但如果你希望更了解如何撰寫流程圖的話，
+可以參考 <a href="https://mermaid.js.org/intro/">Mermaid 的官方 Doc</a>的資訊學習。</p>
+<h3 id="functional-map-也讓-gpt-來幫我完成吧">Functional Map 也讓 GPT 來幫我完成吧</h3><hr>
+<p>隨著產品越來越大，Functional Map (功能地圖) 的維護也越發困難&hellip;，但不要擔心，一樣靠 GPT 可以幫助你完成這件事。</p>
+<p>一樣以會員系統為例，假設以下是會員系統所包含的功能</p>
+<pre><code>用戶註冊與登入
+    註冊新會員
+    用戶登入/登出
+    第三方帳號登入（如Facebook、Google等）
+    忘記密碼/重設密碼
+    電子郵件驗證
+    雙因素認證（選擇性增加安全性）
+    個人資料管理
+
+編輯個人資料（如姓名、電子郵件、生日等）
+    更改密碼
+    上傳/更換頭像
+    管理聯絡資訊（如地址、電話號碼）
+    設定偏好（如接收通知的偏好）
+    會員專屬功能
+
+積分/獎勵計畫
+    會員專屬優惠與折扣
+    早鳥訪問新產品或活動
+    會員等級系統
+    訂單管理
+
+查看訂單歷史
+    訂單詳情與進度追蹤
+    退貨/換貨申請與管理
+    通訊偏好設定
+
+訂閱/取消訂閱電子報
+    管理推送通知設定
+    設定隱私偏好
+    安全性與隱私
+
+帳戶安全檢查
+    查看帳戶活動歷史
+    設定隱私權限（誰可以看到個人資料等）
+    客戶支援與互動
+
+會員專線或客服聯繫方式
+    常見問題（FAQ）與幫助中心
+    會員意見反饋
+</code></pre>
+<p>
+  <img src="https://i.imgur.com/Lzi0FMF.png" alt="還在自己畫流程圖嗎？學會下指令讓 ChatGPT &#43; Notion 幫你解決所有事情" loading="lazy" decoding="async">
+
+</p>
+<p>
+  <img src="https://i.imgur.com/Tp9L7yL.png" alt="還在自己畫流程圖嗎？學會下指令讓 ChatGPT &#43; Notion 幫你解決所有事情" loading="lazy" decoding="async">
+
+</p>
+<p>
+  <img src="https://i.imgur.com/LIh5vf4.png" alt="還在自己畫流程圖嗎？學會下指令讓 ChatGPT &#43; Notion 幫你解決所有事情" loading="lazy" decoding="async">
+
+</p>
+<p>
+  <img src="https://i.imgur.com/mFDH9Cm.png" alt="還在自己畫流程圖嗎？學會下指令讓 ChatGPT &#43; Notion 幫你解決所有事情" loading="lazy" decoding="async">
+
+</p>
+<p>如此一來，身為 PM 或是 Product Owner 的你，只需要好好的管理這份文字檔，剩下的交給 ChatGPT 來幫助你，
+不只節省你的時間，資料圖形化後也易於理解，降低與他人之間的溝通成本。</p>
+<h3 id="gpt-的提問-prompt">GPT 的提問 prompt</h3><hr>
+<p>如果是連續提問的話，就不需要一直跟他說他是誰了，直接叫他做事即可，分開提問才需要告訴他他要 cosplay 什麼角色。
+另外文字流程跟功能列表，都用 bullet point 的方式呈現比較好，這樣比較不會過於凌亂。</p>
+<p><strong>流程圖</strong></p>
+<pre tabindex="0"><code>你身為一個資深的產品設計師，有非常豐富的產品經驗，
+現在我要在本來的[你的產品類型]內新增一個[你預計新增的功能]，
+請你依照列出[你預計新增的功能]的流程，撰寫一段 Mermaid 的程式碼。
+
+[新功能的文字流程]
+</code></pre><p><strong>Functional Map</strong></p>
+<pre tabindex="0"><code>你身為一個資深的產品設計師，有非常豐富的產品經驗，
+請依照以下列出的所有[功能]撰寫出一段 Mermaid 的程式碼。
+
+[功能列表]
+</code></pre>]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

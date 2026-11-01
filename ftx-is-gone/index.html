@@ -1,544 +1,189 @@
 <!DOCTYPE html>
-<html lang="">
-
+<html lang="zh-Hant-TW">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？ | Ian&#39;s Blog</title>
+  <meta name="description" content="FTX 的慘劇，論去中心化的重要性，錢包內的錢，才是自己的錢。">
+  <meta name="author" content="Ian Tsai">
+  <meta name="keywords" content="Web2.0, Web3.0">
+  <link rel="canonical" href="https://ianlifelab.com/ftx-is-gone/">
+  <link rel="alternate" hreflang="zh-Hant-TW" href="https://ianlifelab.com/ftx-is-gone/">
+  <meta property="og:site_name" content="Your Life, Your Lab">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:title" content="FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？">
+  <meta property="og:description" content="FTX 的慘劇，論去中心化的重要性，錢包內的錢，才是自己的錢。">
+  <meta property="og:url" content="https://ianlifelab.com/ftx-is-gone/">
+  <meta property="og:image" content="https://i.imgur.com/1hIsxvmh.png">
+  <meta property="og:image:alt" content="FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？">
+  <meta property="article:published_time" content="2022-11-14T00:00:00&#43;00:00">
+  <meta property="article:modified_time" content="2025-12-13T21:34:08&#43;08:00">
+  <meta property="article:author" content="Ian Tsai">
+  <meta property="article:section" content="科技探索">
+  <meta property="article:tag" content="Blockchain">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？">
+  <meta name="twitter:description" content="FTX 的慘劇，論去中心化的重要性，錢包內的錢，才是自己的錢。">
+  <meta name="twitter:image" content="https://i.imgur.com/1hIsxvmh.png">
+  <meta name="google-site-verification" content="zuuW7hNy_wHvxLOBYVTEFg-sj9gxcQVWbEVp4_G50CY">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="/img/favicon.ico">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://ianlifelab.com/#website","@type":"WebSite","alternateName":"Ian's Blog","author":{"@id":"https://ianlifelab.com/#person"},"description":"從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。","inLanguage":"zh-Hant-TW","name":"Your Life, Your Lab","url":"https://ianlifelab.com/"},{"@id":"https://ianlifelab.com/#person","@type":"Person","description":"從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。","image":"https://i.imgur.com/BprdDjb.png","knowsAbout":["創業筆記","數位遊牧","學習成長","產品思維","科技探索","生活隨筆"],"name":"Ian Tsai","sameAs":["https://www.facebook.com/ian.tsai.54/"],"url":"https://ianlifelab.com/about/"},{"@id":"https://ianlifelab.com/ftx-is-gone/#article","@type":"BlogPosting","articleSection":"科技探索","author":{"@id":"https://ianlifelab.com/#person","@type":"Person","name":"Ian Tsai"},"dateModified":"2025-12-13T21:34:08+08:00","datePublished":"2022-11-14T00:00:00+00:00","description":"FTX 的慘劇，論去中心化的重要性，錢包內的錢，才是自己的錢。","headline":"FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？","image":"https://i.imgur.com/1hIsxvmh.png","inLanguage":"zh-Hant-TW","isPartOf":{"@id":"https://ianlifelab.com/#website"},"keywords":"Blockchain","mainEntityOfPage":"https://ianlifelab.com/ftx-is-gone/","publisher":{"@id":"https://ianlifelab.com/#person"},"url":"https://ianlifelab.com/ftx-is-gone/","wordCount":1497},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://ianlifelab.com/","name":"首頁","position":1},{"@type":"ListItem","item":"https://ianlifelab.com/archive/","name":"全部文章","position":2},{"@type":"ListItem","item":"https://ianlifelab.com/categories/tech","name":"科技探索","position":3},{"@type":"ListItem","item":"https://ianlifelab.com/ftx-is-gone/","name":"FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？","position":4}]}]}</script>
 
-    
-    <meta property="og:site_name" content="Your Life, Your Lab">
-    <meta property="og:type" content="article">
-
-    
-    <meta property="og:image" content="https://ianlifelab.com//https://i.imgur.com/HNaPaLS.png">
-    <meta property="twitter:image" content="https://ianlifelab.com//https://i.imgur.com/HNaPaLS.png" />
-    
-
-    
-    <meta name="title" content="FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？" />
-    <meta property="og:title" content="FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？" />
-    <meta property="twitter:title" content="FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？" />
-    
-
-    
-    <meta name="description" content="FTX 的慘劇，論去中心化的重要性，錢包內的錢，才是自己的錢。">
-    <meta property="og:description" content="FTX 的慘劇，論去中心化的重要性，錢包內的錢，才是自己的錢。" />
-    <meta property="twitter:description" content="FTX 的慘劇，論去中心化的重要性，錢包內的錢，才是自己的錢。" />
-    
-
-    <meta name="keywords" content="Web2.0, Web3.0" />
-
-    
-    <meta property="twitter:card" content="summary" />
-    
-    
-    <meta name="google-site-verification" content="zuuW7hNy_wHvxLOBYVTEFg-sj9gxcQVWbEVp4_G50CY" />
-    <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師, 創業, 個人成長">
-    <link rel="shortcut icon" href="/img/favicon.ico">
-
-    <title>FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？ | Ian&#39;s Blog</title>
-
-    <link rel="canonical" href="/ftx-is-gone/">
-
-    
-    
-    
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    
-
-    
-    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
-
-    
-    <link rel="stylesheet" href="/css/zanshang.css">
-
-    
-    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
-
-    
-    
-
-    <link rel="stylesheet" href="/css/carousel.css"/>
-    <script src="/js/carousel.js"></script>
-
-    
-    <script src="/js/jquery.min.js"></script>
-
-    
-    <script src="/js/bootstrap.min.js"></script>
-
-    
-    <script src="/js/hux-blog.min.js"></script>
-
-    
-    <script src="/js/lazysizes.min.js"></script>
-
-    
-    
-
-    
-    <style>
-         
-        iframe[src*=ads-iframe]{display:none!important;}
-        div[id*=disqus][style*=margin]{display:none!important;}
-    </style>
-    
-</head>
-
-
-
-<script type="application/javascript">
+  <link rel="stylesheet" href="/css/site.min.6ac29712ec9e8fd8ebc4d1809673c58bc1fce7e29d0d0beee8882020b6e6cded.css" integrity="sha256-asKXEuyej9jrxNGAlnPFi8H85&#43;KdDQvu6IggILbmze0=">
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8R1TNFBGJP"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-165850720-1', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-8R1TNFBGJP', { 'anonymize_ip': false });
 }
 </script>
 
+</head>
 
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+<div class="page">
+  <div class="nav-wrap">
+  <nav class="nav glass" aria-label="主選單">
+    <a class="brand" href="/"><span class="brand-name">Ian&#39;s Blog</span></a>
+    <div class="nav-slot"></div>
+    <ul class="links">
+      <li><a href="/archive/" aria-current="page">文章</a></li>
+      <li><a href="/about/">關於</a></li>
+    </ul>
+    <span class="sep" aria-hidden="true"></span>
+    <form class="search" id="search" action="/archive/" role="search">
+      <label class="sr-only" for="q">搜尋文章</label>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="4.75"/><path d="M10.5 10.5 14 14"/></svg>
+      <input type="search" id="q" name="q" placeholder="搜尋標題或摘要" autocomplete="off">
+    </form>
+  </nav>
+</div>
 
+  <main id="main" class="layout no-toc">
 
-
-
-
-
-
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
-
-    <div class="container-fluid"  style="background-color: rgba(0, 0, 0, 0.1) ">
-        
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Ian&#39;s Blog</a>
-            
-        </div>
-
-        
-        
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse" >
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">HOME</a>
-                    </li>
-                    
-                    
-		            
-                        <li><a href="/about/">About</a></li>
-                    
-                        <li><a href="/archive/">Archive</a></li>
-                    
-		            
-                </ul>
-            </div>
-        </div>
-        
-    </div>
-    
-</nav>
-<script>
-    
-    
-    
-    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
-
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        
-            $navbar.className = " ";
-            
-            setTimeout(function(){
-                
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
-</script>
-
-
-
-
-
-
-
-
-
-<style type="text/css">
-    header.intro-header {
-        background-image: url('https://i.imgur.com/1hIsxvm.png');
-         
-        background-color: rgb(128, 128, 128, 0.3);
-        background-blend-mode: multiply;
-    }
-</style>
-
-    <header class="intro-header">
-        
-        <div class="container">
-            <div class="">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" >
-                    <div class="post-heading" >
-                        <div class="tags">
-                            
-                            <a class="tag" href="/tags/blockchain" title="Blockchain">
-                                Blockchain
-                            </a>
-                            
-                        </div>
-                        <h1>FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？</h1>
-                        <h2 class="subheading"></h2>
-                        <span class="meta">
-                            
-                            Posted by
-                            
-                            Ian Tsai
-                            
-                            on
-                            Monday, November 14, 2022
-                            
-                            
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="col">
+    <header class="head">
+      <nav class="crumbs" aria-label="麵包屑"><a href="/archive/">全部文章</a><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg><a href="/categories/tech">科技探索</a>
+      </nav>
+      <h1>FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？</h1>
+      <div class="meta"><span class="byline">Ian Tsai</span><span class="divider" aria-hidden="true"></span><span class="topic" style="--c:#007aff"><i class="dot" aria-hidden="true"></i>科技探索</span><span class="divider" aria-hidden="true"></span>
+        <time datetime="2022-11-14">2022.11.14</time>
+        <span class="divider" aria-hidden="true"></span>
+        <span>約 3 分鐘</span>
+      </div>
+      <p class="lede">FTX 的慘劇，論去中心化的重要性，錢包內的錢，才是自己的錢。</p>
     </header>
-    
 
-
-    
-    <article>
-        <div class="container">
-
-            <div class="">
-
-                
-                
-                <div class="
-                col-lg-2 col-lg-offset-0
-                visible-lg-block
-                sidebar-container
-                catalog-container"
-                >
-                    <div class="side-catalog" style="margin-top: 100px;">
-                        
-                        
-                        <ul class="catalog-body"></ul>
-
-                    <iframe class="LikeCoin" height="235"
-  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianlifelab.com%2fftx-is-gone%2f" width="100%"
-  frameborder=0></iframe>
-
-                    </div>
-                </div>
-                
-                
-                <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                post-container">
-
-                    
-                    <!-- raw HTML omitted -->
+    <div class="body">
+      <article class="sheet">
+        <figure class="hero-img"><img src="https://i.imgur.com/1hIsxvmh.png" referrerpolicy="no-referrer" alt=""></figure>
+        <div class="prose">
+          <br>
+<br>
 <p>在 2022/05 發生 Luna 崩跌事件後，當大家還覺得為什麼最近市場的波動這麼小時，全球第二大加密貨幣交易所 FTX 在上週給了大家一個驚喜，因為被爆私自挪用用戶資金，導致交易所內發生了擠兌潮，以至於 FTX 不堪負荷，不但暫停用戶提領，更在一週內宣告破產，讓許多來不及逃難的用戶資金卡在 FTX 內沒辦法拿出來。</p>
 <p>（ 還錢～～～</p>
 <p>FTX 相關事件的文章或分析相信在網路上搜個關鍵字都可以找到很多資訊在這就不多加敘述，而本篇要來探討的並非 FTX 倒閉，而是身在加密貨幣的世界裡，要如何選擇存放資產的位置，才不會風險發生時被當成韭菜收割。</p>
-<!-- raw HTML omitted -->
-<h3 id="選擇大到不會倒的交易所">選擇大到不會倒的交易所？</h3>
-<hr>
+<br>
+<h4 id="選擇大到不會倒的交易所">選擇大到不會倒的交易所？</h4><hr>
 <p>大家在一開始接觸加密貨幣時，應該都會聽到『選一間你信任且大到不會倒的交易所，就可以開始把錢放進去買虛擬貨幣了』，相較於一些名不見經傳的交易所，世界排行前幾名的交易所的確安全許多，但 FTX 卻給了我們一個重擊，全球第二大的交易所不到一週就宣布破產，相信在 SBF 與 CZ 隔空交火時，大部分的人應該還沒想到會是這個結果。</p>
-<!-- raw HTML omitted -->
-<h3 id="區塊鏈的精神---去中心化">區塊鏈的精神 - 去中心化</h3>
-<hr>
+<br>
+<h4 id="區塊鏈的精神---去中心化">區塊鏈的精神 - 去中心化</h4><hr>
 <p>交易所倒閉跟去中心化又有什麼關係呢？想必有接觸過區塊鏈都聽過『去中心化』一詞，那這又代表著什麼呢？在 Web2.0 的世界裡，科技巨頭 Facebook, Google 掌握著用戶的所有資料以及生殺大權，今天只要他們認為你不合乎平台規範，他們便可以將你封鎖（想想之前川普的 twitter）；而傳統金融也是，錢讓私有銀行管理，如果銀行營運出了什麼問題導致沒辦法領出現金，那你在銀行的錢錢就只是一串數字罷了（比如說前陣子中國四大銀行無法提領現金的狀況）。而區塊鏈的其中一個精神，就是不希望有一個集團或是一個機構來『操控』這一切，你的資產讓你自己保管，鏈上一切皆由參與者來共同決定這件事。</p>
 <p>講到這有沒有覺得，都已經投入了一個『去中心化』的世界了，卻還相信著『中心化』的機構，是不是有種矛盾的感覺？？🤣</p>
-<!-- raw HTML omitted -->
-<h3 id="被管理的資產">『被管理』的資產</h3>
-<hr>
+<br>
+<h4 id="被管理的資產">『被管理』的資產</h4><hr>
 <p>加密貨幣的地址是以持有的註記詞經由一連串的協議及演算法導出的一串英數字，而註記詞會交由交易保管並不會提供給用戶，用戶只會獲得每個加密貨幣的地址，提供給別人接收加密貨幣。而當要發送交易時，需要發送『申請』，等交易所同意這筆交易，用戶才能將交易發送到區塊鏈上。從頭到尾的操作，都需要經過『交易所』的同意（除了存錢以外），雖然看起來是自己決定自己的資產要做什麼，但其實所有的一切都是由交易所決定，而不是自己，哪天交易所駁回你的請求，那我們也沒辦法用其他方式拯救自己的資產。</p>
 <p>
-  <img src="https://i.imgur.com/nphWSD7.png" alt="SBF">
+  <img src="https://i.imgur.com/nphWSD7.png" alt="SBF" loading="lazy" decoding="async">
 
 </p>
-<!-- raw HTML omitted -->
-<h3 id="not-your-keys-not-your-asset"><strong><strong>Not Your Keys, Not Your Asset</strong></strong></h3>
-<hr>
+<br>
+<h4 id="not-your-keys-not-your-asset"><strong><strong>Not Your Keys, Not Your Asset</strong></strong></h4><hr>
 <p>什麼是 Key？區塊鏈的每一筆交易都需要用 private key 簽署後得到一個 signature，並將這個 signature 連同交易發送到區塊鏈上驗證。而這個 key 也是由註記詞依照一串協議及演算法推導而成。剛剛提到在交易所發送一筆交易時都需『被同意』，同意後交易所會發送一筆用『我們的 key』簽署出來的簽章及交易到鏈上，當然他也可以不同意，這樣我們就沒辦法操控自己的資產。</p>
 <p>
-  <img src="https://i.imgur.com/VkA3rQd.png" alt="Key">
+  <img src="https://i.imgur.com/VkA3rQd.png" alt="Key" loading="lazy" decoding="async">
 
 </p>
 <p>而這把 Key 除了放在交易所內，也可以放在加密貨幣錢包中。只要持有錢包，所有的交易都不再需要被同意，任何交易行為都掌控在自己的手上。也就是說，我們有 100% 掌控錢包內資產的權力，就算有第二個 FTX 不給用戶提領也跟我們沒有關係，因為我們的 Key 在自己的手上不需要遷就其他團體或機構。</p>
-<!-- raw HTML omitted -->
-<h3 id="究竟是加密貨幣不安全還是對產業不了解">究竟是加密貨幣不安全，還是對產業不了解？</h3>
-<hr>
+<br>
+<h4 id="究竟是加密貨幣不安全還是對產業不了解">究竟是加密貨幣不安全，還是對產業不了解？</h4><hr>
 <p>最後回到 FTX 事件，個人認為如果把 FTX 事件的原因歸咎於『加密貨幣就是不安全』的話，就不太合情理，畢竟中心化的機構，本來就伴隨著『人』這個最大的風險，十年夫妻也可能被戴綠帽，何況是一間交易所。不過這不代表不能把錢存在交易所內，只是做任何決定時需要知道其伴隨的風險，當風險發生時伴隨的傷害會不會影響到自己的生活甚至周遭的人，評估之下若是可以負擔的狀況，再來做這件事，不然如果心臟太小顆的話，還是把錢放在錢包內吧。</p>
 <p>
-  <img src="https://i.imgur.com/zSmYW7G.jpg" alt="Wallet">
+  <img src="https://i.imgur.com/zSmYW7G.jpg" alt="Wallet" loading="lazy" decoding="async">
 
 </p>
-<!-- raw HTML omitted -->
+<br>
 
-
-
-                    
-                    <hr>
-                    <ul class="pager">
-                        
-                        <li class="previous">
-                            <a href="/read/behavioural-addiction/" data-toggle="tooltip" data-placement="top"
-                                title="行為上癮，短影片是如何綁架你的時間">&larr;
-                                Previous Post</a>
-                        </li>
-                        
-                        
-                        <li class="next">
-                            <a href="/read/just-do-it/" data-toggle="tooltip" data-placement="top"
-                                title="就是因為『沒時間』，才什麼都能辦到">Next
-                                Post &rarr;</a>
-                        </li>
-                        
-                    </ul>
-                    
-
-                    <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    
-    
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-
-                </div>
-
-
-                
-                <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-
-                    
-                    
-                </div>
-            </div>
         </div>
-    </article>
-
-    
-
-
-<footer>
-    <div class="container">
-        <div class="">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">                  
-                    
-                    
-                    
-                    
-                    <li>
-                        <a target="_blank" href="https://www.facebook.com/ian.tsai.54/">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-		           
-
-		            
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-            
-            
-            
-            
-            <li>
-                <a href="/subscription">
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-bell fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-            </li>
-            
-            
-            <li>
-                <a href="mailto:ianjustin39@gmail.com">
-                    <span class="fa-stack fa-lg">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-            </li>
-           
-             </ul>
-		<p class="copyright text-muted">
-                    Copyright &copy; Your Life, Your Lab 2026
-                    <br>
-                    
-                </p>
-            </div>
+        <div class="tags" aria-label="標籤"><a href="/tags/blockchain/">#Blockchain</a>
         </div>
+      </article>
+      <section class="author-card" aria-label="作者"><img class="avatar" src="https://i.imgur.com/BprdDjb.png" referrerpolicy="no-referrer" width="72" height="72" alt="">
+        <div>
+          <h3>Ian Tsai</h3><p>從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。</p>
+        </div><a class="pill" href="/about/">關於我<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </section>
+      <nav class="pn" aria-label="上一篇與下一篇">
+        <a href="/read/behavioural-addiction/" rel="prev">
+          <small><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>上一篇 · 2022.07.27</small>
+          <strong>行為上癮，短影片是如何綁架你的時間</strong>
+        </a>
+        <a class="right" href="/read/just-do-it/" rel="next">
+          <small>下一篇 · 2022.11.27<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></small>
+          <strong>就是因為『沒時間』，才什麼都能辦到</strong>
+        </a>
+      </nav>
+      <section class="related" aria-labelledby="rel-title">
+        <h2 id="rel-title">同主題文章</h2>
+        <ol class="post-list">
+          <li data-topics="tech"><a class="row" href="/exchange-and-wallet/"><img class="thumb" src="https://i.imgur.com/vwxD46Fl.jpg" referrerpolicy="no-referrer" loading="lazy" alt=""><span class="row-main">
+    <span class="ttl">為何交易所也推出錢包服務？</span>
+    <span class="row-meta"><span class="topic" style="--c:#007aff"><i class="dot" aria-hidden="true"></i>科技探索</span><span class="divider" aria-hidden="true"></span><time datetime="2023-11-14">2023.11.14</time>
+    </span>
+  </span>
+  <span class="go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+</a></li>
+          <li data-topics="tech"><a class="row" href="/blockchain-black-swan-terra/"><img class="thumb" src="https://cryptoslate.com/wp-content/themes/cryptoslate-2020/imgresize/timthumb.php?src=https://cryptoslate.com/wp-content/uploads/2022/05/image_2022-05-12_183420522.png&amp;w=600&amp;h=315&amp;q=75" referrerpolicy="no-referrer" loading="lazy" alt=""><span class="row-main">
+    <span class="ttl">幣圈黑天鵝，前十大公鏈 Terra 如何從月球殞落</span>
+    <span class="row-meta"><span class="topic" style="--c:#007aff"><i class="dot" aria-hidden="true"></i>科技探索</span><span class="divider" aria-hidden="true"></span><time datetime="2022-05-12">2022.05.12</time>
+    </span>
+  </span>
+  <span class="go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+</a></li>
+          <li data-topics="tech"><a class="row" href="/blockchain-bridge/"><img class="thumb" src="https://i.imgur.com/ezgfepkl.png" referrerpolicy="no-referrer" loading="lazy" alt=""><span class="row-main">
+    <span class="ttl">什麼是 Blockchain Bridges，運作原理是什麼?</span>
+    <span class="row-meta"><span class="topic" style="--c:#007aff"><i class="dot" aria-hidden="true"></i>科技探索</span><span class="divider" aria-hidden="true"></span><time datetime="2022-03-31">2022.03.31</time>
+    </span>
+  </span>
+  <span class="go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+</a></li>
+        </ol>
+      </section>
     </div>
+  </div>
+</main>
+
+  <footer class="footer container">
+  <div class="footer-bar">
+    <a class="footer-brand" href="/"><span class="brand-name">Ian&#39;s Blog</span></a>
+    <nav class="footer-links" aria-label="頁尾選單">
+      <a href="/archive/">文章</a>
+      <a href="/about/">關於</a>
+      <a href="/en/" lang="en" hreflang="en">English</a>
+    </nav>
+    <p class="copy num">© 2020–2025 Ian Tsai</p>
+  </div>
 </footer>
 
-
-
-<link rel="stylesheet" href="/css/carousel.css"/>
-<script src="/js/carousel.js"></script>
-
-
-
-
-<script>
-    function loadAsync(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-
-
-
-
-
-
-<script>
-    
-    if($('#tag_cloud').length !== 0){
-        loadAsync("/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
-
-
-<script>
-    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script>
-
-
-
-
-
-
-<script type="text/javascript">
-    function generateCatalog(selector) {
-
-        
-        
-        
-        
-            _containerSelector = 'div.post-container'
-        
-
-        
-        var P = $(_containerSelector), a, n, t, l, i, c;
-        a = P.find('h1,h2,h3,h4,h5,h6');
-        
-        $(selector).html('')
-
-        
-        a.each(function () {
-            n = $(this).prop('tagName').toLowerCase();
-            i = "#" + $(this).prop('id');
-            t = $(this).text();
-            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
-            l = $('<li class="' + n + '_nav"></li>').append(c);
-            $(selector).append(l);
-        });
-        return true;
-    }
-
-    generateCatalog(".catalog-body");
-
-    
-    $(".catalog-toggle").click((function (e) {
-        e.preventDefault();
-        $('.side-catalog').toggleClass("fold")
-    }))
-
-    
-
-
-    loadAsync("\/js\/jquery.nav.js", function () {
-        $('.catalog-body').onePageNav({
-            currentClass: "active",
-            changeHash: !1,
-            easing: "swing",
-            filter: "",
-            scrollSpeed: 700,
-            scrollOffset: 0,
-            scrollThreshold: .2,
-            begin: null,
-            end: null,
-            scrollChange: null,
-            padding: 80
-        });
-    });
-</script>
-
-
-
-
-
-
+</div>
+<script src="/js/site.min.4f013e0757b6f0420dabc192afac611124bc21457da21834dac6be075b403376.js" integrity="sha256-TwE&#43;B1e28EINq8GSr6xhESS8IUV9ohg02sa&#43;B1tAM3Y=" defer></script>
 </body>
-
 </html>

@@ -1,279 +1,121 @@
 <!DOCTYPE html>
-<html lang="">
-
+<html lang="zh-Hant-TW">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>矽谷推崇的新創思維 - 為何要產品需要 MVP？ | Ian&#39;s Blog</title>
+  <meta name="description" content="推出 MVP 來測試產品是矽谷推崇的新創思維之一，但大部分公司都已經有穩定的產品，工作上我們不太容易有執行 MVP 的經驗，究竟 MVP 對產品帶來的益處是什麼？我們又可以用什麼方法來獲取實踐 MVP 的理論呢？">
+  <meta name="author" content="Ian Tsai">
+  <meta name="keywords" content="創業, 新創, StartUp, 產品經理, 斜槓, MVP, MVP是什麼, 矽谷新創思維">
+  <link rel="canonical" href="https://ianlifelab.com/start-up/why-need-mvp/">
+  <link rel="alternate" hreflang="zh-Hant-TW" href="https://ianlifelab.com/start-up/why-need-mvp/">
+  <meta property="og:site_name" content="Your Life, Your Lab">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:title" content="矽谷推崇的新創思維 - 為何要產品需要 MVP？">
+  <meta property="og:description" content="推出 MVP 來測試產品是矽谷推崇的新創思維之一，但大部分公司都已經有穩定的產品，工作上我們不太容易有執行 MVP 的經驗，究竟 MVP 對產品帶來的益處是什麼？我們又可以用什麼方法來獲取實踐 MVP 的理論呢？">
+  <meta property="og:url" content="https://ianlifelab.com/start-up/why-need-mvp/">
+  <meta property="og:image" content="https://i.imgur.com/gZfLq5vh.jpg">
+  <meta property="og:image:alt" content="矽谷推崇的新創思維 - 為何要產品需要 MVP？">
+  <meta property="article:published_time" content="2023-12-05T00:00:00&#43;00:00">
+  <meta property="article:modified_time" content="2026-08-07T17:18:20&#43;08:00">
+  <meta property="article:author" content="Ian Tsai">
+  <meta property="article:section" content="創業筆記">
+  <meta property="article:tag" content="創業那些事">
+  <meta property="article:tag" content="產品開發">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="矽谷推崇的新創思維 - 為何要產品需要 MVP？">
+  <meta name="twitter:description" content="推出 MVP 來測試產品是矽谷推崇的新創思維之一，但大部分公司都已經有穩定的產品，工作上我們不太容易有執行 MVP 的經驗，究竟 MVP 對產品帶來的益處是什麼？我們又可以用什麼方法來獲取實踐 MVP 的理論呢？">
+  <meta name="twitter:image" content="https://i.imgur.com/gZfLq5vh.jpg">
+  <meta name="google-site-verification" content="zuuW7hNy_wHvxLOBYVTEFg-sj9gxcQVWbEVp4_G50CY">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="/img/favicon.ico">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://ianlifelab.com/#website","@type":"WebSite","alternateName":"Ian's Blog","author":{"@id":"https://ianlifelab.com/#person"},"description":"從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。","inLanguage":"zh-Hant-TW","name":"Your Life, Your Lab","url":"https://ianlifelab.com/"},{"@id":"https://ianlifelab.com/#person","@type":"Person","description":"從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。","image":"https://i.imgur.com/BprdDjb.png","knowsAbout":["創業筆記","數位遊牧","學習成長","產品思維","科技探索","生活隨筆"],"name":"Ian Tsai","sameAs":["https://www.facebook.com/ian.tsai.54/"],"url":"https://ianlifelab.com/about/"},{"@id":"https://ianlifelab.com/start-up/why-need-mvp/#article","@type":"BlogPosting","articleSection":"創業筆記","author":{"@id":"https://ianlifelab.com/#person","@type":"Person","name":"Ian Tsai"},"dateModified":"2026-08-07T17:18:20+08:00","datePublished":"2023-12-05T00:00:00+00:00","description":"推出 MVP 來測試產品是矽谷推崇的新創思維之一，但大部分公司都已經有穩定的產品，工作上我們不太容易有執行 MVP 的經驗，究竟 MVP 對產品帶來的益處是什麼？我們又可以用什麼方法來獲取實踐 MVP 的理論呢？","headline":"矽谷推崇的新創思維 - 為何要產品需要 MVP？","image":"https://i.imgur.com/gZfLq5vh.jpg","inLanguage":"zh-Hant-TW","isPartOf":{"@id":"https://ianlifelab.com/#website"},"keywords":"創業那些事, 產品開發","mainEntityOfPage":"https://ianlifelab.com/start-up/why-need-mvp/","publisher":{"@id":"https://ianlifelab.com/#person"},"url":"https://ianlifelab.com/start-up/why-need-mvp/","wordCount":1791},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://ianlifelab.com/","name":"首頁","position":1},{"@type":"ListItem","item":"https://ianlifelab.com/archive/","name":"全部文章","position":2},{"@type":"ListItem","item":"https://ianlifelab.com/categories/start-up","name":"創業筆記","position":3},{"@type":"ListItem","item":"https://ianlifelab.com/start-up/why-need-mvp/","name":"矽谷推崇的新創思維 - 為何要產品需要 MVP？","position":4}]}]}</script>
 
-    
-    <meta property="og:site_name" content="Your Life, Your Lab">
-    <meta property="og:type" content="article">
-
-    
-    <meta property="og:image" content="https://ianlifelab.com//https://i.imgur.com/HNaPaLS.png">
-    <meta property="twitter:image" content="https://ianlifelab.com//https://i.imgur.com/HNaPaLS.png" />
-    
-
-    
-    <meta name="title" content="矽谷推崇的新創思維 - 為何要產品需要 MVP？" />
-    <meta property="og:title" content="矽谷推崇的新創思維 - 為何要產品需要 MVP？" />
-    <meta property="twitter:title" content="矽谷推崇的新創思維 - 為何要產品需要 MVP？" />
-    
-
-    
-    <meta name="description" content="推出 MVP 來測試產品是矽谷推崇的新創思維之一，但大部分公司都已經有穩定的產品，工作上我們不太容易有執行 MVP 的經驗，究竟 MVP 對產品帶來的益處是什麼？我們又可以用什麼方法來獲取實踐 MVP 的理論呢？">
-    <meta property="og:description" content="推出 MVP 來測試產品是矽谷推崇的新創思維之一，但大部分公司都已經有穩定的產品，工作上我們不太容易有執行 MVP 的經驗，究竟 MVP 對產品帶來的益處是什麼？我們又可以用什麼方法來獲取實踐 MVP 的理論呢？" />
-    <meta property="twitter:description" content="推出 MVP 來測試產品是矽谷推崇的新創思維之一，但大部分公司都已經有穩定的產品，工作上我們不太容易有執行 MVP 的經驗，究竟 MVP 對產品帶來的益處是什麼？我們又可以用什麼方法來獲取實踐 MVP 的理論呢？" />
-    
-
-    <meta name="keywords" content="創業, 新創, StartUp, 產品經理, 斜槓, MVP, MVP是什麼, 矽谷新創思維" />
-
-    
-    <meta property="twitter:card" content="summary" />
-    
-    
-    <meta name="google-site-verification" content="zuuW7hNy_wHvxLOBYVTEFg-sj9gxcQVWbEVp4_G50CY" />
-    <meta name="keyword"  content="Product manager, 產品經理, 區塊鏈, 轉職, 工程師, 創業, 個人成長">
-    <link rel="shortcut icon" href="/img/favicon.ico">
-
-    <title>矽谷推崇的新創思維 - 為何要產品需要 MVP？ | Ian&#39;s Blog</title>
-
-    <link rel="canonical" href="/start-up/why-need-mvp/">
-
-    
-    
-    
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    
-
-    
-    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
-
-    
-    <link rel="stylesheet" href="/css/zanshang.css">
-
-    
-    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
-
-    
-    
-
-    <link rel="stylesheet" href="/css/carousel.css"/>
-    <script src="/js/carousel.js"></script>
-
-    
-    <script src="/js/jquery.min.js"></script>
-
-    
-    <script src="/js/bootstrap.min.js"></script>
-
-    
-    <script src="/js/hux-blog.min.js"></script>
-
-    
-    <script src="/js/lazysizes.min.js"></script>
-
-    
-    
-
-    
-    <style>
-         
-        iframe[src*=ads-iframe]{display:none!important;}
-        div[id*=disqus][style*=margin]{display:none!important;}
-    </style>
-    
-</head>
-
-
-
-<script type="application/javascript">
+  <link rel="stylesheet" href="/css/site.min.6ac29712ec9e8fd8ebc4d1809673c58bc1fce7e29d0d0beee8882020b6e6cded.css" integrity="sha256-asKXEuyej9jrxNGAlnPFi8H85&#43;KdDQvu6IggILbmze0=">
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8R1TNFBGJP"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-165850720-1', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-8R1TNFBGJP', { 'anonymize_ip': false });
 }
 </script>
 
+</head>
 
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+<div class="page">
+  <div class="nav-wrap">
+  <nav class="nav glass" aria-label="主選單">
+    <a class="brand" href="/"><span class="brand-name">Ian&#39;s Blog</span></a>
+    <div class="nav-slot"></div>
+    <ul class="links">
+      <li><a href="/archive/" aria-current="page">文章</a></li>
+      <li><a href="/about/">關於</a></li>
+    </ul>
+    <span class="sep" aria-hidden="true"></span>
+    <form class="search" id="search" action="/archive/" role="search">
+      <label class="sr-only" for="q">搜尋文章</label>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="4.75"/><path d="M10.5 10.5 14 14"/></svg>
+      <input type="search" id="q" name="q" placeholder="搜尋標題或摘要" autocomplete="off">
+    </form>
+  </nav>
+</div>
 
-
-
-
-
-
-
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top"  style="background-color: rgb(128, 128, 128, 0.1);">
-
-    <div class="container-fluid"  style="background-color: rgba(0, 0, 0, 0.1) ">
-        
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Ian&#39;s Blog</a>
-            
-        </div>
-
-        
-        
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse" >
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">HOME</a>
-                    </li>
-                    
-                    
-		            
-                        <li><a href="/about/">About</a></li>
-                    
-                        <li><a href="/archive/">Archive</a></li>
-                    
-		            
-                </ul>
-            </div>
-        </div>
-        
-    </div>
-    
+  <main id="main" class="layout">
+  <aside class="toc-wrap" aria-label="本篇目錄">
+    <details class="toc" open>
+      <summary>本篇目錄<span class="chev"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></summary>
+      <div class="bar" role="progressbar" aria-label="閱讀進度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#mvp-是那個-mvp-嗎">MVP 是那個 MVP 嗎？</a></li>
+        <li><a href="#產品推出-mvp-會帶給你什麼好處">產品推出 MVP 會帶給你什麼好處？</a></li>
+        <li><a href="#一定要-0-到-1-的產品才能實踐-mvp-嗎">一定要 0 到 1 的產品才能實踐 MVP 嗎？</a></li>
+        <li><a href="#做-side-project-也是實踐-mvp-的好方法">做 Side project 也是實踐 MVP 的好方法</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
-<script>
-    
-    
-    
-    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
+      <div class="toc-actions">
+        <button type="button" id="copy" data-done="已複製連結" data-fail="無法複製，請手動複製網址"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 9.5l3-3M7 4.6l1.2-1.2a2.8 2.8 0 014 4L11 8.6M9 11.4l-1.2 1.2a2.8 2.8 0 01-4-4L5 7.4"/></svg><span>複製文章連結</span></button>
+        <a href="#main"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4"/></svg><span>回到頂端</span></a>
+      </div>
+    </details>
+  </aside>
 
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        
-            $navbar.className = " ";
-            
-            setTimeout(function(){
-                
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
-</script>
-
-
-
-
-
-
-
-
-
-<style type="text/css">
-    header.intro-header {
-        background-image: url('https://i.imgur.com/gZfLq5v.jpg');
-         
-        background-color: rgb(128, 128, 128, 0.3);
-        background-blend-mode: multiply;
-    }
-</style>
-
-    <header class="intro-header">
-        
-        <div class="container">
-            <div class="">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" >
-                    <div class="post-heading" >
-                        <div class="tags">
-                            
-                            <a class="tag" href="/tags/%E5%89%B5%E6%A5%AD%E9%82%A3%E4%BA%9B%E4%BA%8B" title="創業那些事">
-                                創業那些事
-                            </a>
-                            
-                            <a class="tag" href="/tags/%E7%94%A2%E5%93%81%E9%96%8B%E7%99%BC" title="產品開發">
-                                產品開發
-                            </a>
-                            
-                        </div>
-                        <h1>矽谷推崇的新創思維 - 為何要產品需要 MVP？</h1>
-                        <h2 class="subheading"></h2>
-                        <span class="meta">
-                            
-                            Posted by
-                            
-                            Ian Tsai
-                            
-                            on
-                            Tuesday, December 5, 2023
-                            
-                            
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="col">
+    <header class="head">
+      <nav class="crumbs" aria-label="麵包屑"><a href="/archive/">全部文章</a><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg><a href="/categories/start-up">創業筆記</a>
+      </nav>
+      <h1>矽谷推崇的新創思維 - 為何要產品需要 MVP？</h1>
+      <div class="meta"><span class="byline">Ian Tsai</span><span class="divider" aria-hidden="true"></span><span class="topic" style="--c:#ff375f"><i class="dot" aria-hidden="true"></i>創業筆記</span><span class="divider" aria-hidden="true"></span>
+        <time datetime="2023-12-05">2023.12.05</time>
+        <span class="divider" aria-hidden="true"></span>
+        <span>約 4 分鐘</span>
+      </div>
+      <p class="lede">推出 MVP 來測試產品是矽谷推崇的新創思維之一，但大部分公司都已經有穩定的產品，工作上我們不太容易有執行 MVP 的經驗，究竟 MVP 對產品帶來的益處是什麼？我們又可以用什麼方法來獲取實踐 MVP 的理論呢？</p>
     </header>
-    
 
-
-    
-    <article>
-        <div class="container">
-
-            <div class="">
-
-                
-                
-                <div class="
-                col-lg-2 col-lg-offset-0
-                visible-lg-block
-                sidebar-container
-                catalog-container"
-                >
-                    <div class="side-catalog" style="margin-top: 100px;">
-                        
-                        
-                        <ul class="catalog-body"></ul>
-
-                    <iframe class="LikeCoin" height="235"
-  src="https://button.like.co/in/embed//button?referrer=https%3a%2f%2fianlifelab.com%2fstart-up%2fwhy-need-mvp%2f" width="100%"
-  frameborder=0></iframe>
-
-                    </div>
-                </div>
-                
-                
-                <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                post-container">
-
-                    
-                    <!-- raw HTML omitted -->
-<h2 id="mvp-是那個-mvp-嗎">MVP 是那個 MVP 嗎？</h2>
-<hr>
+    <div class="body">
+      <article class="sheet">
+        <figure class="hero-img"><img src="https://i.imgur.com/gZfLq5vh.jpg" referrerpolicy="no-referrer" alt=""></figure>
+        <div class="prose">
+          <br>
+<br>
+<h3 id="mvp-是那個-mvp-嗎">MVP 是那個 MVP 嗎？</h3><hr>
 <p>在軟體產業中，MVP （最小可行性產品）這個詞大家應該不陌生，但在工作上卻不太容易去接觸到，因為在我們進入公司時，
 大部分的公司都已經有一個穩定的產品，或是已經經過打磨驗證的產品，這讓我們要從如何去實踐 MVP 這套理論的機會也變得比較困難。
 所以大家可能都有『產品最好先推出 MVP 』的概念，但卻很少有實際執行 MVP 的經驗。</p>
-<h2 id="產品推出-mvp-會帶給你什麼好處">產品推出 MVP 會帶給你什麼好處？</h2>
-<hr>
+<h3 id="產品推出-mvp-會帶給你什麼好處">產品推出 MVP 會帶給你什麼好處？</h3><hr>
 <p>一定要推 MVP 嗎？以前的產品也沒 MVP 照樣有人買單啊！</p>
 <p>說到早期產品開發，通常會經歷開會討論需求、確認規格、執行開發、功能測試、產品發佈等階段，中間可能還會有需求變更的環節、溝通落差等還環節讓時間延遲，
 前後加起來可能 12~18 個月甚至更久，但早期的產品仍能獲得了成功，為何現在不行呢？
@@ -283,278 +125,133 @@ if (!doNotTrack) {
 上個月人人搶著抽的 T1 的角色，這個月在 PTT 可能就出現『XX 是不是過氣』的類似留言。</p>
 <p>產品市場也是，現在環境以及用戶的習慣變化的太快速，如果花一兩年的時間開發產品，可能產品已經沒辦法滿足現在客戶的需求了。
 而經由 MVP 提早接觸市場，我認為對產品有以下三個好處：</p>
-<h4 id="1-確認產品的方向">1. 確認產品的方向</h4>
-<p>我想拍拍圈（PopChill）是個不錯的例子，當初拍拍圈的產品想要做社群電商，像是 IG 裡面內建電商的功能一樣，
+<h5 id="1-確認產品的方向">1. 確認產品的方向</h5><p>我想拍拍圈（PopChill）是個不錯的例子，當初拍拍圈的產品想要做社群電商，像是 IG 裡面內建電商的功能一樣，
 推出之後發現這個題目似乎跟當初預期的效果不一樣，最終他們決定要把題目改為『精品二手拍賣』，現在的成果就非常的好。
 試想要是拍拍圈產品做了一兩年都沒推出市場，花了大把資源卻發現選錯題目，到時改題目的成本會不會更高？</p>
 <p>產品提早接觸市場，不但可以驗證產品是否有解決市場上的問題，也可評估產品的方向是否需要改變。</p>
-<h4 id="2-確認產品功能是否真的被需要">2. 確認產品功能是否真的被需要</h4>
-<p>做產品的人有時會掉入『我要打造最強產品』漩渦，而忽略了市場需求及聲音。
+<h5 id="2-確認產品功能是否真的被需要">2. 確認產品功能是否真的被需要</h5><p>做產品的人有時會掉入『我要打造最強產品』漩渦，而忽略了市場需求及聲音。
 團隊可能從市場發現某些需求，或是經由訪談找到了用戶沒被滿足的痛點，讓產品有機會從這些點切入，
 但這些都停留在『我們覺得用戶需要』的階段，但我們不知道的是，可能這些需求對於用戶來說不夠痛，他們有其他替代品可以使用，
 有或是推出的產品雖然解決了問題，但因為設計不良讓用戶花更多的時間適應產品，以至於用戶們不買單。
 推出 MVP 可以驗證我們的假設，同時團隊可以從先行使用的用戶中獲得的反饋去優化產品，讓產品可以更貼近用戶的需求，解決他們實務上的問題。</p>
-<h4 id="3-確認產品-ta-是否與預期的相似">3. 確認產品 TA 是否與預期的相似</h4>
-<p>一開始在設計產品時，團隊一定會依照某些標準去 target 一些用戶為產品的 TA，試著以這些 TA 的輪廓來規劃產品的解決方案。
+<h5 id="3-確認產品-ta-是否與預期的相似">3. 確認產品 TA 是否與預期的相似</h5><p>一開始在設計產品時，團隊一定會依照某些標準去 target 一些用戶為產品的 TA，試著以這些 TA 的輪廓來規劃產品的解決方案。
 這跟第二點類似，這些 TA 是『我們認為的 TA』，實際上可能不是，比方說一個加密貨幣錢包商，認為所有接觸加密貨幣的人都是錢包的 TA，
 但推出產品後發現，相比於錢包，專業交易員更喜歡使用交易所，不只是交易所提供豐富的衍生性金融商品，交易所在交易上對於交易員來說比錢包方便很多。
 這時團隊就會了解要把交易員剔除在目標客戶之外，關於交易相關的功能優先度就變得不是那麼的高。</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<h2 id="一定要-0-到-1-的產品才能實踐-mvp-嗎">一定要 0 到 1 的產品才能實踐 MVP 嗎？</h2>
-<hr>
+<br>
+<br>
+<h3 id="一定要-0-到-1-的產品才能實踐-mvp-嗎">一定要 0 到 1 的產品才能實踐 MVP 嗎？</h3><hr>
 <p>看到這可能還是有人會覺得『啊我進公司時就已經有產品了，我要怎麼去實踐 MVP 這套理論？』</p>
 <p>以現在軟體發展的速度來看，產品為了脫穎而出，不少公司都願意付出一些成本來試錯創新，甚至會成立創新部門，讓這個部門來研發各種創新的功能，
 如科技巨頭、傳統金融公司為了跟上 Web3, AI 的潮流，都有成立對應的創新部門來對應這些變化。他們不一定要打造全新的產品，
 也可以是在原本的產品上運用這些技術，讓產品有不同的競爭力。比方說 IG 支援了 NFT 大頭貼、X 可以用 btc 來支付 tip 等都使類似的案例。</p>
 <p>所以要實踐 MVP 不一定要從零開始打造產品，在既有的產品上增加一個全新的功能，推出市場讓用戶使用並獲取反饋也是一種方法。</p>
-<!-- raw HTML omitted -->
-<h2 id="做-side-project-也是實踐-mvp-的好方法">做 Side project 也是實踐 MVP 的好方法</h2>
-<hr>
+<br>
+<h3 id="做-side-project-也是實踐-mvp-的好方法">做 Side project 也是實踐 MVP 的好方法</h3><hr>
 <p>除了工作上的實作，自己做一個 Side Project 也是很好的一個選擇，如果你擁有技術能力，給自己三個月的時間打造一款產品 MVP 並尋找初始用戶，
 搜集他們的回饋並不斷地打磨產品，或是你與一兩個志同道合的夥伴以繼進行這個 project。
 如果沒有技術能力，也可以用 figma 打造一個 prototype 並找用戶做訪談，讓他們試用看看你的 prototype 產品並同時做更深入的需求探索。</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<br>
+<!-- 
 
+<br>
 
-
-                    
-                    <hr>
-                    <ul class="pager">
-                        
-                        <li class="previous">
-                            <a href="/read/create-dreams/" data-toggle="tooltip" data-placement="top"
-                                title="矽谷阿雅 - 追不到夢想就創一個!">&larr;
-                                Previous Post</a>
-                        </li>
-                        
-                        
-                        <li class="next">
-                            <a href="/start-up/do-not-use-scrum-before-new-pd-launch/" data-toggle="tooltip" data-placement="top"
-                                title="新產品不適合跑 Scrum？">Next
-                                Post &rarr;</a>
-                        </li>
-                        
-                    </ul>
-                    
-
-                    <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    
-    
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'https-ianjustin39-github-io-ianlife';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-
-                </div>
-
-
-                
-                <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-
-                    
-                    
-                </div>
-            </div>
-        </div>
-    </article>
-
-    
-
-
-<footer>
-    <div class="container">
-        <div class="">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">                  
-                    
-                    
-                    
-                    
-                    <li>
-                        <a target="_blank" href="https://www.facebook.com/ian.tsai.54/">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-		           
-
-		            
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-            
-            
-            
-            
-            <li>
-                <a href="/subscription">
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-bell fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-            </li>
-            
-            
-            <li>
-                <a href="mailto:ianjustin39@gmail.com">
-                    <span class="fa-stack fa-lg">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-            </li>
-           
-             </ul>
-		<p class="copyright text-muted">
-                    Copyright &copy; Your Life, Your Lab 2026
-                    <br>
-                    
-                </p>
-            </div>
-        </div>
+<div>
+    <div>
+        <h2 id="start-up">新創產品工具包讓開啟你的產品之路</h2>
     </div>
+    <hr>
+    <div>
+        <span>
+            看了這麼多產品相關的知識，卻沒有機會實際運用嗎？何不試試自己製作一個產品或是 Side Project 來驗證一下呢？
+            我正在準備新創產品工具包，這裡面包含了一些我過去自己開發產品實用的工具或模板，
+            如『用 notion 做產品管理』、『用 notion 作為產品的公開 wiki』或是『怎麼自己從零開始設計網站 mockup』等資訊。
+            如果你對此工具包以及如何打造產品有興趣的話，可以關注我的 IG 
+            <a href="https://www.instagram.com/startup.note/" target="_blank"><b>@startup.note</b></a>
+            以及
+            <a href="https://ianlifelab.com/categories/start-up/" target="_blank"><b>創業那些事</b></a>
+            系列文，讓你擁有好用工具的同時也可以避開我踩過的坑。
+        </span>
+    </div>
+</div>
+
+
+<br>
+<hr>
+<br>
+<div>
+    <div>
+        <span>
+            關於
+            <a href="https://ianlifelab.com/categories/start-up/" target="_blank"><b>創業那些事</b></a>
+            系列文，主要是紀錄從 0 開始打造 MeFresh 產品的一些經驗，包含踩過什麼坑、跟夥伴吵架怎麼辦、遇到問題怎麼解決以及經歷這些事後的心境轉換，希望這些經驗也可以幫助到正在閱讀這系列文章的你。
+        </span>
+    </div>
+</div>
+<br>
+ -->
+        </div>
+        <div class="tags" aria-label="標籤"><a href="/tags/%E5%89%B5%E6%A5%AD%E9%82%A3%E4%BA%9B%E4%BA%8B/">#創業那些事</a><a href="/tags/%E7%94%A2%E5%93%81%E9%96%8B%E7%99%BC/">#產品開發</a>
+        </div>
+      </article>
+      <section class="author-card" aria-label="作者"><img class="avatar" src="https://i.imgur.com/BprdDjb.png" referrerpolicy="no-referrer" width="72" height="72" alt="">
+        <div>
+          <h3>Ian Tsai</h3><p>從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。</p>
+        </div><a class="pill" href="/about/">關於我<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </section>
+      <nav class="pn" aria-label="上一篇與下一篇">
+        <a href="/read/create-dreams/" rel="prev">
+          <small><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>上一篇 · 2023.12.02</small>
+          <strong>矽谷阿雅 - 追不到夢想就創一個!</strong>
+        </a>
+        <a class="right" href="/start-up/do-not-use-scrum-before-new-pd-launch/" rel="next">
+          <small>下一篇 · 2023.12.07<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></small>
+          <strong>新產品不適合跑 Scrum？</strong>
+        </a>
+      </nav>
+      <section class="related" aria-labelledby="rel-title">
+        <h2 id="rel-title">同主題文章</h2>
+        <ol class="post-list">
+          <li data-topics="start-up"><a class="row" href="/start-up/do-not-be-afraid-of-being-rejected-by-users/"><img class="thumb" src="https://i.imgur.com/gZfLq5vl.jpg" referrerpolicy="no-referrer" loading="lazy" alt=""><span class="row-main">
+    <span class="ttl">做產品不要害怕被用戶拒絕！</span>
+    <span class="row-meta"><span class="topic" style="--c:#ff375f"><i class="dot" aria-hidden="true"></i>創業筆記</span><span class="divider" aria-hidden="true"></span><time datetime="2025-05-06">2025.05.06</time>
+    </span>
+  </span>
+  <span class="go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+</a></li>
+          <li data-topics="start-up"><a class="row" href="/start-up/do-you-have-to-innovate/"><img class="thumb" src="https://i.imgur.com/gZfLq5vl.jpg" referrerpolicy="no-referrer" loading="lazy" alt=""><span class="row-main">
+    <span class="ttl">做產品一定要創新嗎？</span>
+    <span class="row-meta"><span class="topic" style="--c:#ff375f"><i class="dot" aria-hidden="true"></i>創業筆記</span><span class="divider" aria-hidden="true"></span><time datetime="2025-04-30">2025.04.30</time>
+    </span>
+  </span>
+  <span class="go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+</a></li>
+          <li data-topics="start-up"><a class="row" href="/start-up/what-are-users-thinking/"><img class="thumb" src="https://i.imgur.com/gZfLq5vl.jpg" referrerpolicy="no-referrer" loading="lazy" alt=""><span class="row-main">
+    <span class="ttl">用戶應該會這樣做？『我覺得』不一定是真的！</span>
+    <span class="row-meta"><span class="topic" style="--c:#ff375f"><i class="dot" aria-hidden="true"></i>創業筆記</span><span class="divider" aria-hidden="true"></span><time datetime="2024-12-11">2024.12.11</time>
+    </span>
+  </span>
+  <span class="go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+</a></li>
+        </ol>
+      </section>
+    </div>
+  </div>
+</main>
+
+  <footer class="footer container">
+  <div class="footer-bar">
+    <a class="footer-brand" href="/"><span class="brand-name">Ian&#39;s Blog</span></a>
+    <nav class="footer-links" aria-label="頁尾選單">
+      <a href="/archive/">文章</a>
+      <a href="/about/">關於</a>
+      <a href="/en/" lang="en" hreflang="en">English</a>
+    </nav>
+    <p class="copy num">© 2020–2025 Ian Tsai</p>
+  </div>
 </footer>
 
-
-
-<link rel="stylesheet" href="/css/carousel.css"/>
-<script src="/js/carousel.js"></script>
-
-
-
-
-<script>
-    function loadAsync(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-
-
-
-
-
-
-<script>
-    
-    if($('#tag_cloud').length !== 0){
-        loadAsync("/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
-
-
-<script>
-    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script>
-
-
-
-
-
-
-<script type="text/javascript">
-    function generateCatalog(selector) {
-
-        
-        
-        
-        
-            _containerSelector = 'div.post-container'
-        
-
-        
-        var P = $(_containerSelector), a, n, t, l, i, c;
-        a = P.find('h1,h2,h3,h4,h5,h6');
-        
-        $(selector).html('')
-
-        
-        a.each(function () {
-            n = $(this).prop('tagName').toLowerCase();
-            i = "#" + $(this).prop('id');
-            t = $(this).text();
-            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
-            l = $('<li class="' + n + '_nav"></li>').append(c);
-            $(selector).append(l);
-        });
-        return true;
-    }
-
-    generateCatalog(".catalog-body");
-
-    
-    $(".catalog-toggle").click((function (e) {
-        e.preventDefault();
-        $('.side-catalog').toggleClass("fold")
-    }))
-
-    
-
-
-    loadAsync("\/js\/jquery.nav.js", function () {
-        $('.catalog-body').onePageNav({
-            currentClass: "active",
-            changeHash: !1,
-            easing: "swing",
-            filter: "",
-            scrollSpeed: 700,
-            scrollOffset: 0,
-            scrollThreshold: .2,
-            begin: null,
-            end: null,
-            scrollChange: null,
-            padding: 80
-        });
-    });
-</script>
-
-
-
-
-
-
+</div>
+<script src="/js/site.min.4f013e0757b6f0420dabc192afac611124bc21457da21834dac6be075b403376.js" integrity="sha256-TwE&#43;B1e28EINq8GSr6xhESS8IUV9ohg02sa&#43;B1tAM3Y=" defer></script>
 </body>
-
 </html>

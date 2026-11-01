@@ -1,26 +1,63 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>AI on Your Life, Your Lab</title>
+    <title>AI · Your Life, Your Lab</title>
     <link>https://ianlifelab.com/tags/ai/</link>
-    <description>Recent content in AI on Your Life, Your Lab</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 20 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ianlifelab.com/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <description>從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。</description>
+    <generator>Hugo</generator>
+    <language>zh-Hant-TW</language>
+    <lastBuildDate>Thu, 20 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ianlifelab.com/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI 時代的 PM 該怎麼生存？</title>
       <link>https://ianlifelab.com/product/ai-and-product-manager/</link>
       <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
-      
+      <dc:creator>Ian Tsai</dc:creator>
       <guid>https://ianlifelab.com/product/ai-and-product-manager/</guid>
-      <description>在 AI 大量發生後的這段時間，社群上一直充斥著『XXX 是不是會被 AI 取代？』、『YY 公司導入 AI 降低了 n% 的人力成本』等資訊， 究竟 PM 會隨著這股 AI 浪潮被取代？還是會有不一樣的機會出現？
-AI 可以幫助我們做什麼？ 想起剛出社會當軟體工程師時，遇到一個 bug 要爬各種 Stack Overflow 找問題出在哪，然後不斷地 try-and-error， 而現在只需要把問題丟給 AI 就可以用最短的時間內找到方法，甚至叫他優化程式碼，這能不香嗎？
-過去一個 PM 想要推出一個功能，從發想到 prototype，除非 PM 本身會設計會寫程式，不然光靠 PM 一個人很難做到這件事。 但現在，PM 只要會畫圖，就可以讓會畫圖的 AI 幫忙產出 wireframe，接著再把 wireframe 放到會寫程式的 AI 就可以產出一個 prototype 了。
-不只 prototype，連整理數據、整理訪談資料、整理研究資料、製作簡報等，這些 PM 平常要做的事情，都有對應的 AI 可以幫忙， 這大幅提升了工作的效率，也降低了許多決策的門檻。
-在做 MeFresh 這個產品時，我當然也使用了 ChatGPT 幫助我解決我遇到的很多問題，比方說我希望點擊按鈕時有個動畫效果，但我以往是後端工程師不會做動畫怎麼辦？ GPT 很快地幫我找到了解法，並解釋了對應的參數，在使用這段程式碼後 app 也確實產生了動畫效果，只要去調整參數讓效果更貼近我所想像的就好了。
-再產品的部分，我也請 GPT 幫我找尋國內外類似的產品、甚至每個國家使用不同類型產品的習慣，讓我可以更有目標的去知道要分析哪些產品，而不會像無頭蒼蠅一樣亂撞。
-AI 確實幫助了工作上『效率』、『速度』的提升，但&amp;hellip;它有沒有副作用呢？
-提升效率而非代替成長？ AI 確實可以提升效率，但他不一定可以幫助你解決所有問題。 若直接搬運程式碼，可能造成 app 不相容或是隱藏的 bug；若直接將 AI 給的分析資訊拿去做產品決策，也可能導致錯誤發生。</description>
+      <category>產品思維</category>
+      <description>產品經理會是 AI 浪潮下被取代的一員嗎？AI 幫助我們提升效率的同時，也代替我們成長？如何與 AI 並存是 PM 該思考的下一步。</description>
+      <content:encoded><![CDATA[<br>
+<br>
+<p>在 AI 大量發生後的這段時間，社群上一直充斥著『XXX 是不是會被 AI 取代？』、『YY 公司導入 AI 降低了 n% 的人力成本』等資訊，
+究竟 PM 會隨著這股 AI 浪潮被取代？還是會有不一樣的機會出現？</p>
+<h3 id="ai-可以幫助我們做什麼">AI 可以幫助我們做什麼？</h3><hr>
+<p>想起剛出社會當軟體工程師時，遇到一個 bug 要爬各種 Stack Overflow 找問題出在哪，然後不斷地 try-and-error，
+而現在只需要把問題丟給 AI 就可以用最短的時間內找到方法，甚至叫他優化程式碼，這能不香嗎？</p>
+<p>過去一個 PM 想要推出一個功能，從發想到 prototype，除非 PM 本身會設計會寫程式，不然光靠 PM 一個人很難做到這件事。
+但現在，PM 只要會畫圖，就可以讓會畫圖的 AI 幫忙產出 wireframe，接著再把 wireframe 放到會寫程式的 AI 就可以產出一個 prototype 了。</p>
+<p>不只 prototype，連整理數據、整理訪談資料、整理研究資料、製作簡報等，這些 PM 平常要做的事情，都有對應的 AI 可以幫忙，
+這大幅提升了工作的效率，也降低了許多決策的門檻。</p>
+<p>在做 MeFresh 這個產品時，我當然也使用了 ChatGPT 幫助我解決我遇到的很多問題，比方說我希望點擊按鈕時有個動畫效果，但我以往是後端工程師不會做動畫怎麼辦？
+GPT 很快地幫我找到了解法，並解釋了對應的參數，在使用這段程式碼後 app 也確實產生了動畫效果，只要去調整參數讓效果更貼近我所想像的就好了。</p>
+<p>再產品的部分，我也請 GPT 幫我找尋國內外類似的產品、甚至每個國家使用不同類型產品的習慣，讓我可以更有目標的去知道要分析哪些產品，而不會像無頭蒼蠅一樣亂撞。</p>
+<p>AI 確實幫助了工作上『效率』、『速度』的提升，但&hellip;它有沒有副作用呢？</p>
+<h3 id="提升效率而非代替成長">提升效率而非代替成長？</h3><hr>
+<p>AI 確實可以提升效率，但他不一定可以幫助你解決所有問題。
+若直接搬運程式碼，可能造成 app 不相容或是隱藏的 bug；若直接將 AI 給的分析資訊拿去做產品決策，也可能導致錯誤發生。</p>
+<p>最重要的是 AI 沒辦法『幫助我們成長』，試想所有事情都讓 AI 做，就像請了一個工具人叫他做所有你該做的事，
+等到有一天工具人學會所有的事情後就你就會被他所取代。AI 也是一樣，若我們沒有在使用 AI 的狀況下加入自己的判斷，並藉由 AI 提升自己的能力，
+那總有一天我們也會被 AI 取代，因為在成長的是 AI 並不是我們。</p>
+<p>若你還在做一個 AI 搬運工，不管你是不是 PM ，最後可能真的會被 AI 取代，就如同早期被新鮮的肝取代樣！</p>
+<h3 id="pm-的不可被取代性">PM 的不可被取代性？</h3><hr>
+<p>我認為 PM 的價值在於『與人的溝通』，包含與用戶的溝通、與同事的溝通等，以及『任務安排』，如 roadmap 的規劃、開發任務的異動等。</p>
+<p>與人的溝通是指什麼？產品的需求多半來自於人，人的想法與行為隨時會改變，所以產品才會安排用戶訪談或是問券調查，目的就是希望知道用戶的需求在哪邊，
+尤其是用戶訪談更能知道用戶遇到了什麼問題，我們需要如何幫助他們解決。
+同時需求也可能來自於內部，比方說老闆發現了什麼機會、業務與客戶談完後轉需求進來等，這些有都是需要 PM 去做溝通協調的部分。
+如果這些全部都丟給 AI 做，改了個 prompt 結果就不一樣了，我想應該誰也不服誰吧！</p>
+<p>再來產品需求就會需要進行開發，但當過 PM 的應該都知道，開發資源總是有限，PM 需要去與安排所有的任務優先級，並與不同的部門溝通所需要的資源。
+任務安排也不是一成不變，PM 仍需要依照市場狀況、用戶反饋來動態調整任務的優先順序。
+若臨時來了一個大 bug 影響到用戶的體驗，那勢必需要先把其他任務往後移，優先將問題解決，以免造成過多的用戶流失。</p>
+<h3 id="ai-工具那麼多我到底要學哪個">AI 工具那麼多，我到底要學哪個？</h3><hr>
+<p>回歸到 PM 為何要用 AI？使用 AI 是為了幫助我們更有效率的完成工作及任務，市面上有許不同的 AI 模型，各有各的好壞，
+應該先知道自己『希望 AI 幫我們處理什麼事？』，比方說希望幫忙將文字轉為流程圖、或是整理會議資料，那 ChatGPT 就可以滿足 80% 以上的需求；
+若是要畫影片封面照片，midjourney 可以完成這項任務。</p>
+<p>當有新的 AI 產品出來時，我認為可以先抱持著開放的態度使用看看，
+多看不同的產品的差異在哪，但同時也不用過於焦慮，就如同程式語言有很多種，各有各的對應的領域，不需要因為多出了一種語言就產生焦慮感。</p>
+<p>
+  <img src="https://i.imgur.com/czaRmFx.jpg" alt="AI 時代的 PM 該怎麼生存？" loading="lazy" decoding="async">
+
+</p>
+]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

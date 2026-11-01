@@ -1,0 +1,77 @@
+# Your Life, Your Lab (Ian's Blog)
+
+> 從化學系到工程師，再從工程師到產品經理，一個不斷接觸新事物的普通人。
+
+作者: Ian Tsai — https://ianlifelab.com/about/
+Accept who you are and own your life.
+
+我是IAN，曾經是一名軟體工程師，因為對產品有興趣從而轉職成產品經理。
+這個 blog 是紀錄學習心得以防腦容量不足忘記學了什麼的地方，同時也分享自己的人生！！
+
+## 一路走來
+
+- 化學系: 一切的起點
+- 軟體工程師: 從化學轉進軟體開發
+- 產品經理: 因為對產品有興趣而轉職
+- 數位遊牧: 清邁、釜山、河內、吉隆坡
+- 創業: MeFresh、FollowMate
+
+## 我做的產品
+
+- [MeFresh](https://www.mefreshapp.com/): I美業預約與顧客管理系統
+- [FollowMate](https://www.followmate.cubelab3.com/): 把 LINE 聊天裡的交辦整理成待辦
+
+## 主題
+
+- [創業筆記](https://ianlifelab.com/categories/start-up): 5 篇
+- [數位遊牧](https://ianlifelab.com/categories/nomads): 4 篇
+- [學習成長](https://ianlifelab.com/categories/learning): 12 篇
+- [產品思維](https://ianlifelab.com/categories/product): 7 篇
+- [科技探索](https://ianlifelab.com/categories/tech): 10 篇
+- [生活隨筆](https://ianlifelab.com/categories/life): 9 篇
+
+## 全部文章
+
+- [做產品不要害怕被用戶拒絕！](https://ianlifelab.com/start-up/do-not-be-afraid-of-being-rejected-by-users/) (2025-05-06): 用戶願意提出反饋，代表對於產品來說還是有些期待，對於產品來說是很好的事情。但同時也要過濾用戶提估的意見，才不會最後做出一堆看似符合用戶實際上卻沒解決問題的功能。
+- [做產品一定要創新嗎？](https://ianlifelab.com/start-up/do-you-have-to-innovate/) (2025-04-30): 先驅者、創新者等創造全新的需求確實有機會讓產品大賣，甚至改變大家的生活，但在成功之前所需要付出的成本也高非常的多；反之後進者雖然較晚加入，但相對不需要負擔大量的前期探索成本，只需要將資源放在差異化或是尋找尚未被解決的問題即可。
+- [AI 時代的 PM 該怎麼生存？](https://ianlifelab.com/product/ai-and-product-manager/) (2025-03-20): 產品經理會是 AI 浪潮下被取代的一員嗎？AI 幫助我們提升效率的同時，也代替我們成長？如何與 AI 並存是 PM 該思考的下一步。
+- [一個字回顧 2024、一個字期許 2025](https://ianlifelab.com/life/one-word-for-2024-and-2025/) (2024-12-31): 2024 一整年，我想只有『亂』一個字可以代表我今年遭遇的種種事件，本以為在新創環境待久的我應該很習慣在混亂中求生存，但混亂中伴隨的不確定性、焦慮、躁動也對身心造成了不小的影響。
+- [用戶應該會這樣做？『我覺得』不一定是真的！](https://ianlifelab.com/start-up/what-are-users-thinking/) (2024-12-11): 我覺得開一間店會需要先將『商品』、『服務時間』、『店家資訊』等事項都準備好後，才會開始攬客，但實際上用戶在使用一個軟體產品時卻不是我想的這個樣子。
+- [數位遊牧住哪裡？90 天旅居計畫最終站 - 馬來西亞吉隆坡](https://ianlifelab.com/nomads/Kuala-Lumpur-digital-nomadism/) (2024-04-07): 吉隆坡其實並不在我的旅遊清單上，因為吉隆坡跟台灣的文化相似度很高，似乎要去檳城或沙巴才會有不一樣的體驗，所以讓我對這個城市興趣缺缺。但吉隆坡在數位遊牧的城市中排名不低，所以決定這次的旅居最後一站決定來到吉隆坡嘗試看看。
+- [你真的懂的『休息』嗎？假裝休息比不休息更糟糕！](https://ianlifelab.com/start-up/do-you-really-understand-rest/) (2024-03-23): 完全休息不代表要出去旅遊或是放長假，他可以是一天、一個下午甚至一兩個小時。這段時間放下所有工作相關的事物，不管是手機還是電腦，選擇一件你認為可以清空大腦、完全放鬆的事情，比方說散步、畫畫、擼貓等等，要知道這段時間並不浪費，他是在回復你的精神能量、重整你的大腦，讓你可以用更好的狀態面對接下來的事情。
+- [還在自己畫流程圖嗎？學會下指令讓 ChatGPT + Notion 幫你解決所有事情](https://ianlifelab.com/tech/drawing-flowcharts-with-ChatGPT-and-Notion/) (2024-03-05): 使用 ChatGPT + Notion 幫你完成複雜的流程圖工作，節省你的工作時間同時提升溝通效率。
+- [數位遊牧住哪裡？90 天旅居計畫第二站 - 越南河內](https://ianlifelab.com/nomads/hanoi-digital-nomadism/) (2024-03-02): 越南在大家的印象中通常是不安全，相比於鄰近的泰國，越南數位遊牧似乎比較少人去，聽到最多的應該是富國島旅遊。但越南還是有許多地方吸引著我們，如被列為世界遺產的下龍灣，或是因為殖民所遺留的法式街道、飲食文化等等，所以最後決定越南河內為這次為期三個月數位遊牧的第二站。
+- [新產品不適合跑 Scrum？](https://ianlifelab.com/start-up/do-not-use-scrum-before-new-pd-launch/) (2023-12-07): Scrum 是矽谷推崇的一種工作模式，許多軟體公司都有引入 Scrum 作為團隊協作的框架，但並非所有狀況都適合 Scrum。
+- [矽谷推崇的新創思維 - 為何要產品需要 MVP？](https://ianlifelab.com/start-up/why-need-mvp/) (2023-12-05): 推出 MVP 來測試產品是矽谷推崇的新創思維之一，但大部分公司都已經有穩定的產品，工作上我們不太容易有執行 MVP 的經驗，究竟 MVP 對產品帶來的益處是什麼？我們又可以用什麼方法來獲取實踐 MVP 的理論呢？
+- [矽谷阿雅 - 追不到夢想就創一個!](https://ianlifelab.com/read/create-dreams/) (2023-12-02): 相信身為 PM 的人應該都聽過『矽谷阿雅』，也知道他的經歷非常的漂亮，這人人稱羨的經歷背後，可能是種種挫折堆疊而成的結果，但大家並不知道這些事情罷了。我認為書中提到幾個觀點與我個人想法滿貼近的，也有些事情是正在經歷而有所感受。
+- [誰說 sprint ticket 一定要 story point?](https://ianlifelab.com/product/does-ticket-must-need-story-point/) (2023-11-27): 有參與過敏捷開發的人一定聽過 story point，網路上也很多有關 story point 的解釋以及如了運用，他主要是協助衡量團隊的開發狀況，讓 PM 可以再有一定的基準下去跟其他部門溝通，如產品行銷或是活動銷售等等。但是不是真的有了 story point 就一定可以讓產品或專案順利進行？有沒有可能有了 story point 但還是遇到一堆狀況？
+- [數位遊牧住哪裡？90 天旅居計畫第一站 - 韓國釜山](https://ianlifelab.com/nomads/busan-digital-nomadism/) (2023-11-19): 這次旅居於擁有廣安、海雲臺等多個度假氛圍的海水浴場，也包含西面、南浦洞等熱鬧商圈的多元城市 - 釜山，同時韓國 95% 以上的咖啡豆也是從這座美麗的都市進口至韓國各地，這也讓釜山街上隨處可見咖啡廳，提供數位遊牧民族一個多元的選擇。
+- [為何交易所也推出錢包服務？](https://ianlifelab.com/exchange-and-wallet/) (2023-11-14): 『剛進入 Web3 的用戶』一直都是 Web3 錢包商或是交易所必爭的一塊，在相同競爭力的產品之下，哪個產品的進入門檻越低、使用起來越順手，就越有機會獲得用戶的青睞，以現在資訊這麼多的狀況下，停留在同一個產品的注意力並不會太久，市場又有這麼多的選擇時，如何短時間抓住用戶至關重要。
+- [人生不是只有加速鍵](https://ianlifelab.com/life/slow-down-your-life/) (2023-10-26): 在資訊爆炸的現代，就宛如一個賽場，為了不被淹沒在資訊的洪流中，大家都不斷地往前跑，看著別人一直往前進，彷彿再說『不能停下來』，但是否人生只有播放鍵甚至快轉鍵，而沒辦法放慢呢？
+- [數位遊牧住哪裡？泰國清邁開啟第一次的數位遊牧旅程](https://ianlifelab.com/nomads/Chiang-Mai-Digital-Nomadism/) (2023-09-29): 如果你想開始數位遊牧卻沒有數位遊牧的經驗，那在你腦中閃過的第一個城市可能會是清邁。
+- [為什麼產品開發一定要有 Deadline？ 注意這五點提升團隊效率](https://ianlifelab.com/product/why-need-Deadline/) (2023-08-05): Deadline 不只是發布產品的時間點，有效的利用 Deadline 不但可以提升團隊的產能，更能讓產品提早接觸市場做迭代更新。
+- [就是因為『沒時間』，才什麼都能辦到](https://ianlifelab.com/read/just-do-it/) (2022-11-27): 羅賓・夏瑪說過『不是因為某件事很難，你才不想做，而是因為你不想做，所以變得困難。』
+- [FTX 慘劇，論去中心化的重要性，錢要放哪才是你的錢？](https://ianlifelab.com/ftx-is-gone/) (2022-11-14): FTX 的慘劇，論去中心化的重要性，錢包內的錢，才是自己的錢。
+- [行為上癮，短影片是如何綁架你的時間](https://ianlifelab.com/read/behavioural-addiction/) (2022-07-27): 還在憑靠意志力來戒除壞習慣？破解行為上癮的秘密，找回時間的自主權。
+- [幣圈黑天鵝，前十大公鏈 Terra 如何從月球殞落](https://ianlifelab.com/blockchain-black-swan-terra/) (2022-05-12): 一個星期前，Terra 還是市值前十的加密貨幣，但在短短的一週 Luna 的價格卻已從 80 跌到0.00001 美金，這中間與 UST 脫鉤有著莫大的關係。
+- [畫 Wireframe 目的是什麼？](https://ianlifelab.com/product/pm101-wireframe/) (2022-05-02): wireframe 是產品開發現場的建築藍圖，不是草稿
+- [給予 - 施比受更有福，給予的力量](https://ianlifelab.com/read/give-and-take/) (2022-04-26): 給予、索取、互利是三種人際的互動模式，在生活、職場上，每個人都可能扮演不同的角色，與不同對象互動時會採取不同的互動模式。比方說，在求職談薪水時會展寫出索取者的姿態，但在指導新人的時候又會變成給予者的模式。
+- [什麼是 Blockchain Bridges，運作原理是什麼?](https://ianlifelab.com/blockchain-bridge/) (2022-03-31): Blockchain Bridge 允許了兩條不同規則、不同協議的區塊鏈將他們的數據、代幣互相傳遞。
+- [大器可以晚成](https://ianlifelab.com/read/late-bloomers/) (2022-03-29): 當世界沉迷年少得志，耐心是你成功的本事
+- [可複製的領導力：樊登的九堂商業課](https://ianlifelab.com/read/reproducible-leadership/) (2022-01-24):  成為領袖之前，成功就是讓自己成長。成為領袖之後，成功是讓別人成長。——美國商業領袖傑克-韋爾奇
+- [大人的11堂寫作課 - 複利成長自身的價值](https://ianlifelab.com/read/11-writing-lesson/) (2021-07-24): 寫一篇好文章，可以重複銷售自己的時間與價值，讓人生複利成長。
+- [讀懂一本書 - 從讀書到說書](https://ianlifelab.com/read/understand-a-book/) (2021-06-27): 說書，是將書本的知識『再傳遞』，如果有辦法有效的說書，那也代表自己可以有效的掌握了這本書。
+- [無視礦工，以太坊的倫敦硬分叉](https://ianlifelab.com/ethereum-london-hard-fork/) (2021-06-16): Ethereum London Hard Fork （倫敦硬分叉）所做的更新，包含了 EIP-1559、EIP-3198、EIP-3238 三個提案，其中 EIP-1559 也是這次比較備受關注的部分， EIP-1559 可能會改變以太坊的交易費用模型。
+- [無限賽局 - 『永續』還是『取勝』？](https://ianlifelab.com/read/game-the-infinite-game/) (2021-05-15): 跳脫勝負、平手、僵局之外，看懂自己身處的賽局，才能選對策略、創造最大價值。
+- [超速學習 - 『學習』從來不是一件輕鬆的事](https://ianlifelab.com/read/ultralearning/) (2021-03-21): 超速學習的定義為『一種獲取技能與知識的策略，兼具自主性與高強度。』
+- [複身犯 - 寫出你的名字，你是誰？](https://ianlifelab.com/movie/plurality/) (2021-03-14): 不管這個世界怎麼看你，你都要相信你自己。
+- [在 Hugo Blog 中加上 Algolia 文章搜索工具](https://ianlifelab.com/build-blog/hugo-and-algolia/) (2021-03-13): Algolia 是為你在APP或網站提供搜索功能的最佳方式之一，在 Hugo 中加入 Algolia，讓你更方便尋找以前的文章。
+- [咖啡的價值 - 是買咖啡還是買時間？](https://ianlifelab.com/life/a-cup-of-coffee/) (2021-03-12): 寧靜的下午坐在咖啡廳、喝著咖啡、看著書，思考這『這杯咖啡的價值』是什麼。
+- [為了遇見40歲更好的自己](https://ianlifelab.com/read/40-years-old/) (2021-02-21): 40歲是『夾心世代』。為了過得更好，留下對自己真正必要的東西。
+- [原子習慣 - 細微改變帶來巨大成就](https://ianlifelab.com/read/atom-habits/) (2021-01-23): 在華氏 25 度的房間內有著一塊冰塊，隨著房間溫度緩慢的增加，26、27、28 。冰塊依然在，29、30、31 直到 32 （攝氏零度）度時，冰塊開始融化。如同習慣一樣，一開始可能沒有太大的差異，但從某一刻開始就會起到巨大的變化。
+- [用Bootstrap + Masonry + magnific Popup架設個人相簿](https://ianlifelab.com/build-blog/build_photograph_in_hugo/) (2020-05-06): 剛開始架設網站時就決定要在網站內架一個相簿，這篇會分享如何用Bootstrap+Masonry+magnificPopup建構屬於你自己的相片牆
+
+- [部署Hugo個人網頁至GitHub](https://ianlifelab.com/build-blog/deploy_hugo_on_github/) (2020-05-02): 之前用Hugo架設個人網站，但架設完成後還是需要部署到一個平台，才有辦法瀏覽， 這篇就來分享如何將網頁部署到GitHub以及途中遇到的一些問題
+
+- [使用Hugo建立個人網頁](https://ianlifelab.com/build-blog/get_started_hugo/) (2020-04-30): 一直有想要寫一些文章記錄生活，身為一個工程師，難免會有想要自己架設的靈魂（？， 最近發現hugo可以快速架站，除了有template以外也可以自己更改裡面的配置 ，對於一個前端小菜鳥來說，算是一大福音ＸＤ，於是開始了這條漫漫長路～
+
